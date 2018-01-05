@@ -1,0 +1,31 @@
+uuid: 39cdb130-5ec1-4142-b5d9-b71230ad4edc
+langcode: en
+status: true
+dependencies: {  }
+id: newsletter
+label: 'Inschrijving e-mailnieuwsbrief'
+recipients:
+  - info@worldvision.nl
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p class=\"text-align-center\">We hebben uw inschrijving voor&nbsp;de e-mailnieuwsbrief van World Vision ontvangen.<br />\r\nU ontvangt maandelijks een nieuwsbrief met verhalen, foto's, nieuwtjes en andere inspiratie.&nbsp;</p>\r\n\r\n<p class=\"text-align-center\">Hartelijk bedankt voor uw betrokkenheid bij het werk van World Vision.</p>\r\n"
+  format: html
+thank_you_headline: Bedankt!
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /forms/newsletter
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: 'Inschrijven voor de nieuwsbrief'

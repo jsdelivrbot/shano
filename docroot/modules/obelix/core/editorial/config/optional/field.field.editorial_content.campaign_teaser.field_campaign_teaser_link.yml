@@ -1,0 +1,24 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_campaign_teaser_link
+  module:
+    - link
+_core:
+  default_config_hash: IPww-7IsfokH4OgzJqPWOrIBqgExecE41lveUXVNQTE
+id: editorial_content.campaign_teaser.field_campaign_teaser_link
+field_name: field_campaign_teaser_link
+entity_type: editorial_content
+bundle: campaign_teaser
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

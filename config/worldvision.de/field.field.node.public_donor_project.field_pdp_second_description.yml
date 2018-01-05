@@ -1,0 +1,21 @@
+uuid: a7c5ff90-6e68-44b9-a5ff-52a63d5b149c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_second_description
+    - node.type.public_donor_project
+_core:
+  default_config_hash: btAZWHxO3TLTrFhse1ZJHd9H0Z-xqSt1pWCqtABVgsk
+id: node.public_donor_project.field_pdp_second_description
+field_name: field_pdp_second_description
+entity_type: node
+bundle: public_donor_project
+label: 'Second description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

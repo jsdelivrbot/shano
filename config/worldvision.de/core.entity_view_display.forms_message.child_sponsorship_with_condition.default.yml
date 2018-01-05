@@ -1,0 +1,41 @@
+uuid: c499e09a-9e56-4485-982a-d0eee62463a5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_with_condition.field_child
+    - field.field.forms_message.child_sponsorship_with_condition.field_donation_amount
+    - field.field.forms_message.child_sponsorship_with_condition.field_donation_period
+    - field.field.forms_message.child_sponsorship_with_condition.field_message
+    - field.field.forms_message.child_sponsorship_with_condition.field_newsletter
+    - field.field.forms_message.child_sponsorship_with_condition.field_payment_method
+    - field.field.forms_message.child_sponsorship_with_condition.field_user_data
+    - field.field.forms_message.child_sponsorship_with_condition.field_wovi_survey
+    - field.field.forms_message.child_sponsorship_with_condition.field_yearly_donation
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.child_sponsorship_with_condition.default
+targetEntityType: forms_message
+bundle: child_sponsorship_with_condition
+mode: default
+content:
+  field_donation_period:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden:
+  field_child: true
+  field_donation_amount: true
+  field_message: true
+  field_newsletter: true
+  field_payment_method: true
+  field_user_data: true
+  field_wovi_survey: true
+  field_yearly_donation: true

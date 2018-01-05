@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.quotation
+    - field.field.editorial_content.quotation.field_quotation_alignment
+    - field.field.editorial_content.quotation.field_quotation_quote
+    - field.field.editorial_content.quotation.field_quotation_source
+id: editorial_content.quotation.default
+targetEntityType: editorial_content
+bundle: quotation
+mode: default
+content:
+  quotation:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_quotation_alignment: true
+  field_quotation_quote: true
+  field_quotation_source: true
+  name: true
+  user_id: true

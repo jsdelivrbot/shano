@@ -1,0 +1,14 @@
+{
+  "name": "drupal/ab_testing",
+  "type": "drupal-module",
+  "description": "A/B Testing",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/ab_testing",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/ab_testing",
+    "source": "http://cgit.drupalcode.org/ab_testing"
+  },
+  "require": { }
+}

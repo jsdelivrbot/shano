@@ -1,0 +1,21 @@
+uuid: 0dec3bd2-5437-4e94-b379-84ed658a1ffd
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: YS-vTQ6XNikcbdhyk9jVqJymh1xLKGAHzSMeNZ_7Rzc
+name: 'Off-Canvas Page'
+type: offcanvas_page
+description: 'This pages will allways be displayed in an Off-Cnvas context.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

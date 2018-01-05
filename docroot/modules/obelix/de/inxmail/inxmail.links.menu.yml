@@ -1,0 +1,7 @@
+inxmail.inxmail_config_form:
+  title: 'Inxmail settings'
+  route_name: inxmail.inxmail_config_form
+  description: 'Inxmail settings'
+  parent: system.admin_config_system
+  weight: 99
+

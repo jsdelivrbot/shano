@@ -1,0 +1,29 @@
+uuid: f5cc84cb-88dd-46ca-8b30-26175f50cb08
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_donation_button.field_paragraph_donation
+    - paragraphs.paragraphs_type.paragraph_donation_button
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: SMyXg_UY4G__T0sZrYV01YcD6pF_FyAkF991cN6ipHs
+id: paragraph.paragraph_donation_button.default
+targetEntityType: paragraph
+bundle: paragraph_donation_button
+mode: default
+content:
+  field_paragraph_donation:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  uid: true

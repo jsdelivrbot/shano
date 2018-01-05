@@ -1,0 +1,28 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.map.map.field_geo_object
+  module:
+    - map
+id: map.map.default
+targetEntityType: map
+bundle: map
+mode: default
+content:
+  field_geo_object:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

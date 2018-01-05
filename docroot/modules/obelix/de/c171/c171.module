@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function c171_theme($existing, $type, $theme, $path) {
+  return [
+    'c171_page' => [
+      'variables' => [
+        'base_path' => NULL,
+        'content' => NULL,
+      ],
+      'template' => 'c171-page',
+    ],
+    'c171_responsive_image' => [
+      'variables' => [
+        'src_pattern' => NULL,
+        'alt' => NULL,
+        'mime' => 'NULL'
+      ],
+      'template' => 'c171-responsive-image',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function c171_preprocess_c171_page(&$variables) {
+
+  $keywords = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'keywords',
+      'content' => 'Kinderpatenschaft, Simbabwe, Billy, Urs',
+    ],
+  ];
+  $description = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'description',
+      'content' => 'Dank meiner Hilfe kann mein Patenkind Billy spielen und muss nicht arbeiten. Wenn ich heute vom Leid in Afrika erzähle, habe ich gleich eine Lösung parat: Eine Patenschaft bei World Vision.',
+    ],
+  ];
+
+  $variables['#attached']['html_head'][] = [$keywords, 'keywords'];
+  $variables['#attached']['html_head'][] = [$description, 'description'];
+}
+
+function c171_preprocess_editorial_hero_slider(&$variables) {
+  if ($variables['id'] == 8717) {
+    $variables['#attached']['library'][] = 'c171/homeslider-tracking';
+  }
+}

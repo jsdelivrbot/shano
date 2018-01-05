@@ -1,0 +1,265 @@
+// =============================
+// Main-Navigation
+// =============================
+
+// Searchbar opened
+.searchbar-opened {
+  .main-nav-cont {
+    .navbar-searchbar {
+      max-height: 100px;
+    }
+  }
+}
+
+// Main-Nav
+// =============================
+.main-nav-cont {
+  background: $color-standard-bg;
+  border: 0;
+  margin-bottom: 0;
+  z-index: 500;
+
+  position: relative;
+  top: auto;
+
+  @include box-shadow(0 4px 8px -4px rgba(0, 0, 0, 0.3));
+
+  // Searchbar
+  .navbar-searchbar {
+    background: $color-highlight-bg;
+    position: relative;
+
+    max-height: 0;
+    overflow: hidden;
+
+    @include transition(max-height 0.5s);
+    .form-group {
+      margin-bottom: 0;
+      .input-group {
+        width: 100%;
+        display: block;
+        input.form-control {
+          border-radius: 0;
+          height: auto;
+          width: 100%;
+          padding: 25px 30px;
+          background: transparent;
+          border: 0;
+          color: $color-standard-txt;
+          font-family: $font-light;
+          font-size: 14px;
+
+          @include placeholder($color-standard-txt, $font-light, 14px);
+          &:focus {
+            @include box-shadow(none);
+          }
+        }
+        .input-group-btn {
+          position: absolute;
+          padding: 0;
+          top: 50%;
+          right: 30px;
+          margin-top: -10px;
+        }
+        button {
+          padding: 0;
+
+          background: transparent;
+          border: 0;
+          z-index: 99;
+          position: relative;
+
+          i, .icon {
+            font-size: 20px;
+            right: 30px;
+            color: $color-standard-txt;
+
+            position: initial;
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+
+            @include transition(0.3s color);
+            &:before {
+              content: "\e900";
+            }
+          }
+          &:hover {
+            .icon {
+              color: $color-highlight;
+            }
+          }
+        }
+        &:after {
+          content: ".";
+          display: block;
+          clear: both;
+          visibility: hidden;
+          line-height: 0;
+          height: 0;
+        }
+      }
+    }
+  }
+  // Mobile Navbar-Header
+  .navbar-header {
+    // Burger-Icon
+    .navbar-toggle {
+      float: left;
+      border: 0;
+      border-radius: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0;
+      height: auto;
+
+      border-right: 1px solid $color-nav-border;
+      padding: 29px 19px;
+
+      .tcon-menu__lines {
+        background-color: $color-standard-txt;
+        border-radius: 15px;
+        height: 3px;
+        width: 22px;
+        &:before,
+        &:after {
+          background-color: $color-standard-txt;
+          border-radius: 15px;
+          height: 3px;
+          width: 22px;
+        }
+        &:before {
+          top: 6px;
+        }
+        &:after {
+          top: -6px;
+        }
+      }
+      // Open Menu
+      &.tcon-transform {
+        .tcon-menu__lines {
+          background-color: transparent;
+          &:before {
+            top: 0;
+            background-color: $color-highlight;
+          }
+          &:after {
+            top: 0;
+            background-color: $color-highlight;
+          }
+        }
+      }
+      &:hover {
+        background: $color-standard-bg;
+      }
+    }
+    // Search
+    .btn-search {
+      padding: 20px 23px;
+
+      border-right: 1px solid $color-nav-border;
+
+    }
+    .brand-logo-xs {
+      float: right;
+      width: 104px;
+    }
+  }
+  .offcanvas-container {
+    display: table;
+    width: 100%;
+    .region-navigation {
+      display: table-header-group;
+      width: 100%;
+    }
+  }
+  .navbar-body {
+    width: 240px;
+    border: 0;
+    background: $color-standard-bg;
+    // Main Navigation
+    .main-nav {
+      li {
+        &.dropdown {
+          position: inherit;
+          // Standard Navi-Link
+          > a {
+            font-size: $font-size-nav-xs;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-family: $font-bold;
+            text-transform: uppercase;
+
+            background: $color-highlight;
+            color: $color-standard-bg;
+            border-bottom: 1px solid $color-standard-bg;
+            [class^="icon-"], [class*=" icon-"] {
+              font-size: 15px;
+              float: right;
+              top: 5px;
+              position: relative;
+            }
+          }
+          // Dropdown Menu
+          .dropdown-menu {
+            display: block;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            li {
+              a {
+                padding: 20px 15px;
+                color: $color-standard-txt;
+                background: $color-standard-bg;
+                border-bottom: 1px solid $color-nav-border;
+                font-family: $font-roman;
+                white-space: inherit;
+                text-transform: none;
+                font-size: $font-size-subnav-sm;
+                &:hover {
+                  color: $color-highlight;
+                }
+              }
+            }
+          }
+          // Flyout
+          .navbar-flyout-cont {
+            display: none;
+            &.open {
+              display: block;
+            }
+          }
+          // Dropdown open
+          &.open {
+            a {
+              [class^="icon-"], [class*=" icon-"] {
+                @include rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    // Sub Navigation
+    .sub-nav {
+      li {
+        a {
+          font-family: $font-roman;
+          font-size: $font-size-nav-xs;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid $color-nav-border;
+        }
+      }
+    }
+  }
+
+}

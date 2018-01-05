@@ -1,0 +1,26 @@
+uuid: 4b0aa3d8-3056-4216-a86e-32c14f5d07e9
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.child_sponsorship_child_section
+    - field.field.editorial_content.child_sponsorship_child_section.field_child_finder
+  module:
+    - child_sponsorship
+_core:
+  default_config_hash: BuSHjUHhgne0HeKC1jSy97N7AW6F6hOwGu3HNO3U_OM
+id: editorial_content.child_sponsorship_child_section.default
+targetEntityType: editorial_content
+bundle: child_sponsorship_child_section
+mode: default
+content:
+  field_child_finder:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: child_finder_widget
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true

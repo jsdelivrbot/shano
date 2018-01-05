@@ -1,0 +1,22 @@
+uuid: 27dd6a5f-df88-4445-b3a5-07ae0dfa8324
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.spende_eiswinter
+  module:
+    - forms_suite
+id: forms_message.spende_eiswinter.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: spende_eiswinter
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

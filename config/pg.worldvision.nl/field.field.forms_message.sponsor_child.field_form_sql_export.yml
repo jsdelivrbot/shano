@@ -1,0 +1,23 @@
+uuid: 91a42203-7312-4502-83d0-1d11c4940a50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_form_sql_export
+    - forms_suite.form.sponsor_child
+id: forms_message.sponsor_child.field_form_sql_export
+field_name: field_form_sql_export
+entity_type: forms_message
+bundle: sponsor_child
+label: 'Form sql export'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

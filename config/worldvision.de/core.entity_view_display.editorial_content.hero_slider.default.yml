@@ -1,0 +1,55 @@
+uuid: f9cd8fec-f36a-43e4-880c-2d92ede0cfde
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.hero_slider
+    - field.field.editorial_content.hero_slider.field_hero_slide
+    - field.field.editorial_content.hero_slider.field_preview_video
+    - field.field.editorial_content.hero_slider.field_preview_video_cta
+    - field.field.editorial_content.hero_slider.field_preview_video_image
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_hero_slide:
+      children: {  }
+      parent_name: ''
+      weight: 0
+      label: Slides
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        attributes: ''
+        classes: ''
+        id: ''
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: xQ7VjZL5wzDULTarIEzCPJgJSk1xfy6RyyJPHR0SxoA
+id: editorial_content.hero_slider.default
+targetEntityType: editorial_content
+bundle: hero_slider
+mode: default
+content:
+  hero_slide:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  hero_slider:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_hero_slide: true
+  field_preview_video: true
+  field_preview_video_cta: true
+  field_preview_video_image: true
+  name: true
+  user_id: true

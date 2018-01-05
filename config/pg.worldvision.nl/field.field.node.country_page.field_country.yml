@@ -1,0 +1,28 @@
+uuid: 8ec00a18-6c8a-483a-b2ea-83f6f2d956e1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.country_page
+_core:
+  default_config_hash: HKNaRxuD9FpUJtFYUzl73jwhiqlRYhsLybkCRLcl2FU
+id: node.country_page.field_country
+field_name: field_country
+entity_type: node
+bundle: country_page
+label: Land
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:country'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

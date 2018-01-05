@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.code_embed
+    - field.storage.editorial_content.field_code
+id: editorial_content.code_embed.field_code
+field_name: field_code
+entity_type: editorial_content
+bundle: code_embed
+label: code
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

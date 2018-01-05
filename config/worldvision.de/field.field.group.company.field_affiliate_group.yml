@@ -1,0 +1,28 @@
+uuid: 37333feb-0c57-403d-ad16-d5ffee367c2c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_affiliate_group
+    - group.type.company
+    - taxonomy.vocabulary.affiliate_groups
+id: group.company.field_affiliate_group
+field_name: field_affiliate_group
+entity_type: group
+bundle: company
+label: 'Affiliate group'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      affiliate_groups: affiliate_groups
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

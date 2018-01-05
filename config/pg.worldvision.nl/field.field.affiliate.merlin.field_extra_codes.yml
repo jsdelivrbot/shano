@@ -1,0 +1,21 @@
+uuid: 45019223-8a52-4e36-9001-f2d31c7c54db
+langcode: nl
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.storage.affiliate.field_extra_codes
+_core:
+  default_config_hash: 18m9oNWJb5A_vKnU8ezO3DJP59RRs6g7uCldYO_4GJU
+id: affiliate.merlin.field_extra_codes
+field_name: field_extra_codes
+entity_type: affiliate
+bundle: merlin
+label: 'Extra codes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

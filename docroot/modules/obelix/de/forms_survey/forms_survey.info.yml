@@ -1,0 +1,5 @@
+name: Forms survey
+type: module
+description: Survey function for forms.
+core: 8.x
+package: World Vision

@@ -1,0 +1,30 @@
+uuid: ff1ff1b0-d514-4fbf-8749-88df17b35950
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.slideshow
+    - field.storage.node.field_slideshow_slides
+    - node.type.country_page
+_core:
+  default_config_hash: Yd2dGWjLyb0jbr3PJNHuBNHfuCcxR9e8G48kbHYkths
+id: node.country_page.field_slideshow_slides
+field_name: field_slideshow_slides
+entity_type: node
+bundle: country_page
+label: Slideshow
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      slideshow: slideshow
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

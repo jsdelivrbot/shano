@@ -1,0 +1,14 @@
+{
+  "name": "drupal/country_manager",
+  "type": "drupal-module",
+  "description": "Extend the Country Module functionality",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/country_manager",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/country_manager",
+    "source": "http://cgit.drupalcode.org/country_manager"
+  },
+  "require": { }
+}

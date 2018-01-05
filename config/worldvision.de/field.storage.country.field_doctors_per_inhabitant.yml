@@ -1,0 +1,20 @@
+uuid: 56f65daf-f0cf-41f7-8b53-571f79eaacb0
+langcode: de
+status: true
+dependencies:
+  module:
+    - country
+id: country.field_doctors_per_inhabitant
+field_name: field_doctors_per_inhabitant
+entity_type: country
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

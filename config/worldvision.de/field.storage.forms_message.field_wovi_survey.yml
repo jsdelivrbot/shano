@@ -1,0 +1,20 @@
+uuid: 79a0207a-1af0-41bf-95f7-34eb445b4693
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - forms_survey
+id: forms_message.field_wovi_survey
+field_name: field_wovi_survey
+entity_type: forms_message
+type: wovi_survey_field
+settings:
+  case_sensitive: false
+module: forms_survey
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

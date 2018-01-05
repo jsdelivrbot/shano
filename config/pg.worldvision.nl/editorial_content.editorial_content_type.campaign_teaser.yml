@@ -1,0 +1,9 @@
+uuid: 6d744cc7-94d6-4b72-87b4-c6d4893e158c
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 9z0BvIImrpKjZif3faVO7Pv-G-lcVxiuRMZabJpA9_8
+id: campaign_teaser
+label: 'Campaign Teaser'
+category: 'Standard block'

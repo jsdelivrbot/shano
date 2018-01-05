@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: widescreen_16_9_sm
+label: 'Widescreen (16:9) SM'
+effects:
+  090f8506-eb4d-45ad-ab38-afa0d66a069e:
+    uuid: 090f8506-eb4d-45ad-ab38-afa0d66a069e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 405

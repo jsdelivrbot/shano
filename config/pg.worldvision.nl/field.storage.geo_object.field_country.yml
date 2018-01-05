@@ -1,0 +1,22 @@
+uuid: 0ff07773-434a-492d-b00f-cdc1bbdfad89
+langcode: nl
+status: true
+dependencies:
+  module:
+    - country
+    - map
+_core:
+  default_config_hash: sZXqelcWjPn-g2eX2z10SRy8dW4IXmbpMo3d_0G5XI4
+id: geo_object.field_country
+field_name: field_country
+entity_type: geo_object
+type: entity_reference
+settings:
+  target_type: country
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

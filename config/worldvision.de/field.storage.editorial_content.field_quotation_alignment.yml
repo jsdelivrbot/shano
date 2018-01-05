@@ -1,0 +1,27 @@
+uuid: e300576b-785d-4201-abcc-0a7130de5d57
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+id: editorial_content.field_quotation_alignment
+field_name: field_quotation_alignment
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text-left
+      label: Left
+    -
+      value: text-center
+      label: Center
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

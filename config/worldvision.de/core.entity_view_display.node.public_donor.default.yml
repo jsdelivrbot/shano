@@ -1,0 +1,59 @@
+uuid: 06dffac1-80b7-44cd-a712-877163c61966
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.public_donor.field_metatags
+    - field.field.node.public_donor.field_public_donor_description
+    - field.field.node.public_donor.field_public_donor_logo
+    - field.field.node.public_donor.field_public_donor_name
+    - node.type.public_donor
+  module:
+    - image
+    - metatag
+    - text
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: _gG4KlPl9ii1h2JpUbytTI-L-o5bJzzHTX3-44c6tFs
+id: node.public_donor.default
+targetEntityType: node
+bundle: public_donor
+mode: default
+content:
+  field_metatags:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_public_donor_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_public_donor_logo:
+    weight: 1
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_public_donor_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,13 @@
+{% if src_pattern matches '\{\{device\}\}' %}
+<picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source srcset="{{ src_pattern|replace({'{{device}}': 'mobile'}) }} 1x" media="all and (max-width: 767px)" type="{{ mime }}">
+  <source srcset="{{ src_pattern|replace({'{{device}}': 'tablet'}) }}  1x" media="all and (max-width: 991px)" type="{{ mime }}">
+  <source srcset="{{ src_pattern|replace({'{{device}}': 'desktop'}) }}  1x" media="all and (min-width: 992px)" type="{{ mime }}">
+  <!--[if IE 9]></video><![endif]-->
+  <img class="img-fullsize img-responsive" srcset="{{ src_pattern|replace({'{{device}}': 'desktop'}) }} " alt="{{ alt }}">
+</picture>
+{% else %}
+  pattern:
+  {{ src_pattern }}
+{% endif %}

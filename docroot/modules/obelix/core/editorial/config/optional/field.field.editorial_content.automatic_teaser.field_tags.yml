@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.automatic_teaser
+    - field.storage.editorial_content.field_tags
+    - taxonomy.vocabulary.tags
+id: editorial_content.automatic_teaser.field_tags
+field_name: field_tags
+entity_type: editorial_content
+bundle: automatic_teaser
+label: Tags
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

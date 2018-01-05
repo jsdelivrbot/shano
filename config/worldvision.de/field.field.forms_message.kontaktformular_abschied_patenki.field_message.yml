@@ -1,0 +1,24 @@
+uuid: 9fe19024-06e4-4421-bc76-1b5a5b30b20f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontaktformular_abschied_patenki
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_abschied_patenki.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontaktformular_abschied_patenki
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    message: ''
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

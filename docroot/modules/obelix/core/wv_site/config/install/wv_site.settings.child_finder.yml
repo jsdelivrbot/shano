@@ -1,0 +1,3 @@
+is_simple_find_process: false
+child_page_route: 'child_sponsorship.child_sponsorship_controller_ChildSponsorshipAction'
+hide_childfinder_globally: false

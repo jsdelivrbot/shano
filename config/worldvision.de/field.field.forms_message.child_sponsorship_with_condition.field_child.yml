@@ -1,0 +1,22 @@
+uuid: a9a3a150-6204-4a0b-8652-ee460d6f8b2d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_child
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - forms_suite
+id: forms_message.child_sponsorship_with_condition.field_child
+field_name: field_child
+entity_type: forms_message
+bundle: child_sponsorship_with_condition
+label: child
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_child_field

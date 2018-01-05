@@ -1,0 +1,119 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.teaser
+    - field.field.editorial_content.teaser.field_link_target
+    - field.field.editorial_content.teaser.field_teaser_headline
+    - field.field.editorial_content.teaser.field_teaser_image
+    - field.field.editorial_content.teaser.field_teaser_link
+    - field.field.editorial_content.teaser.field_teaser_subtitle
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_background
+        - group_settings
+      parent_name: ''
+      weight: 5
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_content:
+      children:
+        - field_teaser_headline
+        - field_teaser_subtitle
+        - field_teaser_link
+      parent_name: group_tabs
+      weight: 6
+      label: Content
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_background:
+      children:
+        - field_teaser_image
+      parent_name: group_tabs
+      weight: 7
+      label: Background
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_link_target
+      parent_name: group_tabs
+      weight: 8
+      label: Settings
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: editorial_content.teaser.default
+targetEntityType: editorial_content
+bundle: teaser
+mode: default
+content:
+  field_link_target:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_teaser_headline:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_teaser_image:
+    weight: 8
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+  field_teaser_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_teaser_subtitle:
+    weight: 6
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: string_textfield
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'Teaser name'
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

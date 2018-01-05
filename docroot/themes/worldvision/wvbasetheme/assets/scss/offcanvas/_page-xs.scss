@@ -1,0 +1,15 @@
+.btn-beauty.off-canvas-back {
+  padding: 25px;
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+body {
+  &.toolbar-fixed {
+    padding-top: 39px !important;
+  }
+  .main-container {
+    padding-top: 0;
+  }
+}

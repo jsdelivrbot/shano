@@ -1,0 +1,22 @@
+uuid: 21fdaf93-ee76-4612-87cd-ed20ce1b11be
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.united_volleys
+  module:
+    - forms_suite
+id: forms_message.united_volleys.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: united_volleys
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

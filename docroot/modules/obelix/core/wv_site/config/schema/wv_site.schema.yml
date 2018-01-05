@@ -1,0 +1,23 @@
+wv_site.settings:
+  type: config_object
+  label: 'Site Settings'
+
+wv_site.settings.child_finder:
+  type: config_object
+  label: 'Child Finder Settings'
+
+wv_site.settings.children:
+  type: config_object
+  label: 'Children Settings'
+
+wv_site.settings.routing:
+  type: config_object
+  label: 'Routing Settings'
+  mapping:
+    gift_type_all_gifts_url:
+      type: text
+      label: 'Link to all gifts page'
+
+    newsletter_form_url:
+      type: text
+      label: 'Newsletter form url'

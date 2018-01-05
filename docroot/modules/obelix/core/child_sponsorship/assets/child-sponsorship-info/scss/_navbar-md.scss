@@ -1,0 +1,14 @@
+// =============================
+// Child Sponsorship info navbar
+// =============================
+@media screen and (min-width: $bp-md) {
+  .child-sponsorship-info-navbar {
+    ul {
+      li {
+        &:first-child {
+          display: inline;
+        }
+      }
+    }
+  }
+}

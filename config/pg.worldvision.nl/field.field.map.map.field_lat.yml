@@ -1,0 +1,24 @@
+uuid: 973d9e5f-a61c-44e4-9cee-bf6472279e3b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.map.field_lat
+  module:
+    - map
+id: map.map.field_lat
+field_name: field_lat
+entity_type: map
+bundle: map
+label: Lat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

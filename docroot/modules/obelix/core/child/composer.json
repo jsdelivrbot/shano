@@ -1,0 +1,8 @@
+{
+  "name": "world-vision/child",
+  "type": "drupal-module",
+  "description": "Child Entity",
+  "require": {
+    "mauricesvay/php-facedetection": "dev-master"
+  }
+}

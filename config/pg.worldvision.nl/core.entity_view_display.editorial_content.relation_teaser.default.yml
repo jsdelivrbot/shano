@@ -1,0 +1,22 @@
+uuid: 6cef6206-da7d-4f5a-a1e1-421457815559
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.relation_teaser
+    - field.field.editorial_content.relation_teaser.field_entity_reference
+third_party_settings:
+  entity_test:
+    foo: bar
+id: editorial_content.relation_teaser.default
+targetEntityType: editorial_content
+bundle: relation_teaser
+mode: default
+content:
+  relation_teaser:
+    weight: 100
+    region: content
+hidden:
+  field_entity_reference: true
+  name: true
+  user_id: true

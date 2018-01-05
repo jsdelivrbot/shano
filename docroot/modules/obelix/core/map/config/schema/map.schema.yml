@@ -1,0 +1,43 @@
+map.map.*:
+  type: config_entity
+  label: 'Map config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    name:
+      type: string
+      label: 'Name'
+    uuid:
+      type: string
+    uid:
+      type: string
+      label: 'UID'
+    langcode:
+      type: string
+      label: 'Langcode'
+    status:
+      type: int
+      label: 'Status'
+
+map.geo_object.*:
+  type: config_entity
+  label: 'Geo object config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    name:
+      type: string
+      label: 'Name'
+    uuid:
+      type: string
+    uid:
+      type: string
+      label: 'UID'
+    langcode:
+      type: string
+      label: 'Langcode'
+    status:
+      type: int
+      label: 'Status'

@@ -1,0 +1,38 @@
+uuid: a0123266-f4e5-40a4-a1f4-cddd78aea307
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.team_world_vision_kontakt
+  module:
+    - forms_suite
+id: forms_message.team_world_vision_kontakt.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: team_world_vision_kontakt
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    salutation: '1'
+    jobTitleCode: ''
+    firstName: Moritz
+    surname: sdgsgdssdfhd
+    companyName: 'Artus Interactive'
+    street: 'Hanauer Landstarße'
+    houseNo: '12'
+    postCode: '60385'
+    city: 'Frankfurt am Main'
+    countryCode: DE
+    phonePrivate: '06976758820'
+    email: mnyncke@artus.com
+    birthday: '0'
+    birthmonth: '0'
+    birthyear: '0'
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

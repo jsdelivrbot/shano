@@ -1,0 +1,27 @@
+uuid: 90e6b9d2-c5d8-4a74-b276-887daafb08c0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.gewalt_im_suedsudan_kopie
+  module:
+    - fs_payment
+id: forms_message.gewalt_im_suedsudan_kopie.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: gewalt_im_suedsudan_kopie
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: 0
+field_type: wovi_donation_period_field

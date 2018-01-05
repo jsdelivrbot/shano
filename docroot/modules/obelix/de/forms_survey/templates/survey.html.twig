@@ -1,0 +1,60 @@
+{#
+/**
+ * @file child.html.twig
+ * Default theme implementation to present Child data.
+ *
+ * This template is used when viewing Child pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('child', 'container') }}>
+
+  {% if content %}
+
+    <h4>Statistic for survey field</h4>
+
+    <ul>
+      {% for form_key, form_statistics in content %}
+        <li>
+          Form ID: {{ form_key }}<br>
+          Counted: {{ form_statistics.forms_submitted|length }}
+          <table border="1" width="300">
+            <tr>
+              <th>Selected survey</th>
+              <th>Counted</th>
+              <th>Percent</th>
+            </tr>
+            {% for survey_key, survey_counted in form_statistics.counted_results %}
+              <tr>
+                {% if survey_key == 0 %}
+                  <td>
+                    No Survey
+                  </td>
+                {% else %}
+                  <td>
+                    {{ survey_key }}
+                  </td>
+                {% endif %}
+                <td>
+                  {{ survey_counted }}
+                </td>
+                <td>
+                  {{ survey_counted / form_statistics.forms_submitted|length * 100 }}%
+                </td>
+              </tr>
+            {% endfor %}
+          </table>
+        </li>
+      {% endfor %}
+    </ul>
+
+  {% endif %}
+</div>

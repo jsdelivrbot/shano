@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: low_height_16_4_xs
+label: 'Low height (16:4) XS'
+effects:
+  b40af6cc-5d46-4a7d-b00e-52e565dc5167:
+    uuid: b40af6cc-5d46-4a7d-b00e-52e565dc5167
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 160

@@ -1,0 +1,31 @@
+uuid: 3d1d9ef6-cb59-416c-b2f9-f259b12be138
+langcode: de
+status: true
+dependencies: {  }
+id: kontaktformular_ingo_guerges
+label: 'Kontaktformular Ingo Gürges'
+recipients:
+  - ingo.guerges@wveu.org
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Ich werde&nbsp;Ihr&nbsp;Anliegen baldmöglichst bearbeiten und mich mit Ihnen in Verbindung setzen.</p>\r\n"
+  format: html
+thank_you_headline: ''
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/kontakt-ingo-guerges
+headline: 'Nachricht an Ingo Gürges'
+description: 'Hier können Sie Ingo Gürges eine Nachricht schreiben'
+disclaimer: ''
+submit_button: Absenden

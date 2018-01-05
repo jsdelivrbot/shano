@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_content_block_align
+  module:
+    - options
+id: editorial_content.campaign_teaser.field_content_block_align
+field_name: field_content_block_align
+entity_type: editorial_content
+bundle: campaign_teaser
+label: 'Content alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

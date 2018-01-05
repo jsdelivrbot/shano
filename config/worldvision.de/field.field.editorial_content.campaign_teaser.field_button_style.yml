@@ -1,0 +1,25 @@
+uuid: 6fb6750e-e055-42e7-b4e1-04943c6c9079
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_button_style
+  module:
+    - options
+_core:
+  default_config_hash: PqJH-cnqdnBt2ADTLocUgOLISJilgViQvoUgR1gNKKc
+id: editorial_content.campaign_teaser.field_button_style
+field_name: field_button_style
+entity_type: editorial_content
+bundle: campaign_teaser
+label: 'Button style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: btn-beauty
+default_value_callback: ''
+settings: {  }
+field_type: list_string

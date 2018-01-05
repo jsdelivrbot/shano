@@ -1,0 +1,23 @@
+uuid: 14f6d039-eb33-4db1-af38-5f4bbde01a9c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.copy
+    - field.storage.editorial_content.field_body
+  module:
+    - text
+_core:
+  default_config_hash: zIw2rhUak3tNVuPb1GXW1q2hJnTnktY_7ZHbCmBdI6M
+id: editorial_content.copy.field_body
+field_name: field_body
+entity_type: editorial_content
+bundle: copy
+label: Textkörper
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

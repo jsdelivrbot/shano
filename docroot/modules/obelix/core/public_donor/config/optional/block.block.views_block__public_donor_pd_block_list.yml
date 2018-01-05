@@ -1,0 +1,31 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.public_donor
+  module:
+    - node
+    - views
+  theme:
+    - wovide
+id: views_block__public_donor_pd_block_list
+theme: wovide
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:public_donor-pd_block_list'
+settings:
+  id: 'views_block:public_donor-pd_block_list'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      public_donor_overview: public_donor_overview
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

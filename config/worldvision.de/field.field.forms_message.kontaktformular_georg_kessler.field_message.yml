@@ -1,0 +1,22 @@
+uuid: 435b202c-312d-413a-9709-de63c0ef63ff
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontaktformular_georg_kessler
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_georg_kessler.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontaktformular_georg_kessler
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

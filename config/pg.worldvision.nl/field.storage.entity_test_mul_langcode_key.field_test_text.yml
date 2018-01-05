@@ -1,0 +1,20 @@
+uuid: d3714bf6-be6f-4730-83f1-e5be79800d07
+langcode: nl
+status: true
+dependencies:
+  module:
+    - entity_test
+    - text
+id: entity_test_mul_langcode_key.field_test_text
+field_name: field_test_text
+entity_type: entity_test_mul_langcode_key
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

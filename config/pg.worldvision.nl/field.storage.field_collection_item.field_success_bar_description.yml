@@ -1,0 +1,21 @@
+uuid: a99c0ac8-074c-42a8-8e94-5f628806bf76
+langcode: nl
+status: true
+dependencies:
+  module:
+    - field_collection
+_core:
+  default_config_hash: ZIb5yRjgaqOUw0S6SZjUIKDNsf9C2QrVbiRHv1bo_6w
+id: field_collection_item.field_success_bar_description
+field_name: field_success_bar_description
+entity_type: field_collection_item
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

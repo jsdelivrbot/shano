@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acknowledgment_headline
+    - node.type.transition_page
+id: node.transition_page.field_acknowledgment_headline
+field_name: field_acknowledgment_headline
+entity_type: node
+bundle: transition_page
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

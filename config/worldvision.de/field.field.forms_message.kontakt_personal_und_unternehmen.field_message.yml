@@ -1,0 +1,22 @@
+uuid: 6ae4aff4-2eaf-4cab-88d9-c9e7b8d251fc
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontakt_personal_und_unternehmen
+  module:
+    - forms_suite
+id: forms_message.kontakt_personal_und_unternehmen.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontakt_personal_und_unternehmen
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

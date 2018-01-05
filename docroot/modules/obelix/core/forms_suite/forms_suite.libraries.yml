@@ -1,0 +1,10 @@
+forms_suite:
+  version: 1.x
+  js:
+    assets/js/forms_suite.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog
+    - core/drupalSettings
+    - core/drupal.ajax

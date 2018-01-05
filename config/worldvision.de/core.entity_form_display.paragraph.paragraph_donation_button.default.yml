@@ -1,0 +1,27 @@
+uuid: 9336be42-20a3-42c8-9785-b20223f25fca
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_donation_button.field_paragraph_donation
+    - paragraphs.paragraphs_type.paragraph_donation_button
+_core:
+  default_config_hash: qFPdKqygMmOHfmDBBuGdSpx4VbXd7ZMqPaV_Mbg6RP8
+id: paragraph.paragraph_donation_button.default
+targetEntityType: paragraph
+bundle: paragraph_donation_button
+mode: default
+content:
+  field_paragraph_donation:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

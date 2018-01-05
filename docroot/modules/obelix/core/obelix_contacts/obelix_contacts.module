@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function obelix_contacts_theme($existing, $type, $theme, $path) {
+  return array(
+    'obelix_contacts_contact_block' => [
+      'variables' => [
+        'global_phone' => NULL,
+        'open_hours' => NULL,
+        'contact_mail' => NULL,
+      ],
+      'template' => 'obelix-contacts-contact-block',
+    ],
+    'obelix_contacts_social_links_block' => [
+      'variables' => [
+        'ourFacebookPage' => NULL,
+        'ourTwitterPage' => NULL,
+        'ourGooglePlusPage' => NULL,
+        'ourXingPage' => NULL,
+      ],
+      'template' => 'obelix-contacts-social-links-block',
+    ],
+    'obelix_contacts_subscribe_block' => [
+      'variables' => [],
+      'template' => 'obelix-contacts-subscribe-block',
+    ],
+    'obelix_contacts_statistics_footer_block' => [
+      'variables' => [],
+      'template' => 'obelix-contacts-statistics-footer-block',
+    ],
+    'obelix_contacts_accounting_footer_block' => [
+      'variables' => [
+        'generalDonationAccount' => NULL,
+        'creditorIdNumber' => NULL,
+      ],
+      'template' => 'obelix-contacts-accounting-footer-block',
+    ],
+  );
+}

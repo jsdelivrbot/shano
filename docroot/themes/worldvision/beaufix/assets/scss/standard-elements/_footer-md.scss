@@ -1,0 +1,81 @@
+@media screen and (min-width: $bp-md) {
+
+  // =============================
+  // Breadcrumbs
+  // =============================
+  .breadcrumbs-container {
+    margin-top: 45px;
+  }
+  // =============================
+  // Footer
+  // =============================
+  footer {
+    .footer-contact {
+      .contact-block {
+        &.social-channels {
+          ul {
+            li {
+              padding: 0 15px;
+            }
+          }
+        }
+        &.newsletter{
+          padding-left: 30px;
+        }
+      }
+    }
+    //  Info/Sitemap
+    .footer-info {
+      padding-bottom: 15px;
+    }
+    .footer-prizes {
+      .transparent-prizes {
+        li {
+          padding: 0 45px;
+          &:nth-child(1) {
+            padding-left: 15px;
+            width: 25%;
+          }
+          &:nth-child(2) {
+            width: 24%;
+          }
+          &:nth-child(3) {
+            width: 14%;
+          }
+          &:nth-child(4) {
+            width: 24%;
+          }
+          &:nth-child(5){
+            padding-right: 0px;
+            width: 12%;
+          }
+        }
+      }
+      .public-donor-prizes {
+        li {
+          padding: 15px 45px 0 45px;
+          &:nth-child(1) {
+            padding-left: 15px;
+            width: 16%;
+          }
+          &:nth-child(2) {
+            width: 26%;
+          }
+          &:nth-child(3) {
+            width: 14%;
+          }
+          &:nth-child(4) {
+            width: 17%;
+          }
+          &:nth-child(5) {
+            width: 15%;
+          }
+          &:nth-child(6) {
+            padding-right: 15px;
+            width: 12%;
+          }
+        }
+      }
+    }
+  }
+}

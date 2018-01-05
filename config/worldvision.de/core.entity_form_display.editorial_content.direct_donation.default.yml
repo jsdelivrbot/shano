@@ -1,0 +1,41 @@
+uuid: ef6b90cf-4235-43f9-8c42-c596954c4042
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.direct_donation
+    - field.field.editorial_content.direct_donation.field_donation_example
+    - field.field.editorial_content.direct_donation.field_forms_reference
+  module:
+    - field_collection
+    - forms_suite
+_core:
+  default_config_hash: 72ig05OX9AzJ67z09FpAPk3iVGL7A0nY5yaoUeMQjcY
+id: editorial_content.direct_donation.default
+targetEntityType: editorial_content
+bundle: direct_donation
+mode: default
+content:
+  field_donation_example:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+    region: content
+  field_forms_reference:
+    type: forms_select_widget
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

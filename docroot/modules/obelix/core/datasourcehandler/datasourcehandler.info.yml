@@ -1,0 +1,5 @@
+name: DatasourceHandler
+type: module
+description: Handles all Datasources
+core: 8.x
+package: Obelix (Core)

@@ -1,0 +1,23 @@
+uuid: f1df92c5-5a21-4bbf-b8c8-0eb59b6d5625
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acknowledgment_copy
+    - node.type.transition_page
+  module:
+    - text
+_core:
+  default_config_hash: giBBXlkFy_h1fSAxRd47pHE2wVyF4AMTpJdbtaogH_E
+id: node.transition_page.field_acknowledgment_copy
+field_name: field_acknowledgment_copy
+entity_type: node
+bundle: transition_page
+label: Copy
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

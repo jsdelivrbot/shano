@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_share
+label: 'Social share'
+category: 'Individual block'

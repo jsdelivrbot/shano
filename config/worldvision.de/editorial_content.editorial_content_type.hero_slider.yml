@@ -1,0 +1,9 @@
+uuid: b7027a82-e3d8-4e03-b02e-a4a394085f94
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SQEBSfygzoI4Ulv-_g1LWL7iR8XbltNP4SiaoSprgU0
+id: hero_slider
+label: 'Hero slider'
+category: 'Standard block'

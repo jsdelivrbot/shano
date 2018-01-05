@@ -1,0 +1,31 @@
+uuid: 7aceae5d-c2d9-4e09-9af9-ec9c69d94610
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - file
+    - image
+_core:
+  default_config_hash: CQhs9Wwvise1YyHjV35t803xpDtFQKlPFPIRsBFqJP0
+id: editorial_content.field_teaser_image
+field_name: field_teaser_image
+entity_type: editorial_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

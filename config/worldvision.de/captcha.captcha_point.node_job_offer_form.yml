@@ -1,0 +1,7 @@
+uuid: 88d572dc-d0a2-434e-830b-a2398ac38a06
+langcode: de
+status: false
+dependencies: {  }
+formId: node_job_offer_form
+captchaType: default
+label: null

@@ -1,0 +1,7 @@
+name: World Vision - main module
+type: module
+description: Common functionality for all World Vision modules.
+core: 8.x
+package: Obelix
+interface translation project: obelix_main
+interface translation server pattern: modules/obelix_main/translations/%language.po

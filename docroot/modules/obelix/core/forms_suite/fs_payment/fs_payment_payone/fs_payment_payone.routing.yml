@@ -1,0 +1,7 @@
+forms_suite.form.external:
+  path: '/forms/{form}/external/{uuid}'
+  defaults:
+    _title: 'Forms'
+    _controller: '\Drupal\fs_payment_payone\Controller\ExternalPaymentController::handlePayment'
+  requirements:
+    _permission: 'access form-suite forms'

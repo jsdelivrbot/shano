@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?6lh8l0');
+  src:  url('fonts/icomoon.eot?6lh8l0#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.woff2?6lh8l0') format('woff2'),
+    url('fonts/icomoon.ttf?6lh8l0') format('truetype'),
+    url('fonts/icomoon.woff?6lh8l0') format('woff'),
+    url('fonts/icomoon.svg?6lh8l0#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-print-round:before {
+  content: "\e92e";
+}
+.icon-certificate-greeting-card:before {
+  content: "\e92b";
+}
+.icon-ship-with-heart:before {
+  content: "\e92c";
+}
+.icon-present-in-the-field:before {
+  content: "\e92d";
+}
+.icon-video:before {
+  content: "\e91f";
+}
+.icon-mail:before {
+  content: "\e920";
+}
+.icon-child-godfather .path1:before {
+  content: "\e921";
+  color: rgb(4, 5, 5);
+}
+.icon-child-godfather .path2:before {
+  content: "\e922";
+  margin-left: -1.34765625em;
+  color: rgb(4, 5, 5);
+}
+.icon-child-godfather .path3:before {
+  content: "\e923";
+  margin-left: -1.34765625em;
+  color: rgb(4, 5, 5);
+}
+.icon-child-godfather .path4:before {
+  content: "\e924";
+  margin-left: -1.34765625em;
+  color: rgb(4, 5, 5);
+}
+.icon-news:before {
+  content: "\e926";
+}
+.icon-hand-shake:before {
+  content: "\e927";
+}
+.icon-suitcase:before {
+  content: "\e928";
+}
+.icon-exchange:before {
+  content: "\e929";
+}
+.icon-first-aid-kit:before {
+  content: "\e917";
+}
+.icon-gift-box:before {
+  content: "\e918";
+}
+.icon-backpack:before {
+  content: "\e919";
+}
+.icon-warning-sign:before {
+  content: "\e91a";
+}
+.icon-child-sponsor:before {
+  content: "\e91b";
+}
+.icon-wrapped-baby:before {
+  content: "\e91c";
+}
+.icon-standing-baby:before {
+  content: "\e91d";
+}
+.icon-elder:before {
+  content: "\e91e";
+}
+.icon-paper-dart:before {
+  content: "\e915";
+}
+.icon-child-sponsorship-exchange:before {
+  content: "\e916";
+}
+.icon-map-mark:before {
+  content: "\e90e";
+}
+.icon-globus:before {
+  content: "\e90f";
+}
+.icon-speech-bubble:before {
+  content: "\e910";
+}
+.icon-no-contract-bond:before {
+  content: "\e911";
+}
+.icon-eye:before {
+  content: "\e90b";
+}
+.icon-ok-shield:before {
+  content: "\e90c";
+}
+.icon-calculator:before {
+  content: "\e90d";
+}
+.icon-arrow-left:before {
+  content: "\e901";
+}
+.icon-arrow-down:before {
+  content: "\e903";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-cross:before {
+  content: "\e905";
+}
+.icon-at:before {
+  content: "\e925";
+}
+.icon-circle-thin:before {
+  content: "\e904";
+}
+.icon-sphere:before {
+  content: "\e92a";
+}
+.icon-mail-round:before {
+  content: "\e914";
+}
+.icon-play:before {
+  content: "\e906";
+}
+.icon-twitter:before {
+  content: "\e90a";
+}
+.icon-xing:before {
+  content: "\e909";
+}
+.icon-google-plus:before {
+  content: "\e908";
+}
+.icon-facebook:before {
+  content: "\e907";
+}
+.icon-search:before {
+  content: "\e900";
+}
+.icon-twitter-round:before {
+  content: "\e912";
+}
+.icon-facebook-round:before {
+  content: "\e913";
+}
+

@@ -1,0 +1,23 @@
+uuid: 6e044c75-07cc-4de2-bc26-5f49bdb7fcde
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_youtube_link
+    - field_collection.field_collection.field_hero_slide
+  module:
+    - link
+id: field_collection_item.field_hero_slide.field_youtube_link
+field_name: field_youtube_link
+entity_type: field_collection_item
+bundle: field_hero_slide
+label: 'Youtube link'
+description: 'Optional field for implementing a youtube-video in a slide. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 2
+field_type: link

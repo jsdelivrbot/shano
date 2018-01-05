@@ -1,0 +1,22 @@
+uuid: 14c1ec0b-6926-4b50-be66-54858fc5cf57
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.hungersnot_in_afrika
+  module:
+    - forms_suite
+id: forms_message.hungersnot_in_afrika.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: hungersnot_in_afrika
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

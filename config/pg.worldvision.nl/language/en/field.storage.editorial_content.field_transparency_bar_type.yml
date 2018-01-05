@@ -1,0 +1,14 @@
+settings:
+  allowed_values:
+    -
+      label: 'Type 01'
+    -
+      label: 'Type 02'
+    -
+      label: 'Type 03'
+    -
+      label: 'Type 04'
+    -
+      label: 'Type 05'
+    -
+      label: 'Type 06'

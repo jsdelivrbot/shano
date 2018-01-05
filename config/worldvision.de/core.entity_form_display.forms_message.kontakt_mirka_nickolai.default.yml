@@ -1,0 +1,50 @@
+uuid: 3a2d3eb5-f6b5-45f4-8bed-1e439a3dc0df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kontakt_mirka_nickolai.field_message
+    - field.field.forms_message.kontakt_mirka_nickolai.field_newsletter
+    - field.field.forms_message.kontakt_mirka_nickolai.field_user_data
+    - forms_suite.form.kontakt_mirka_nickolai
+  module:
+    - forms_suite
+id: forms_message.kontakt_mirka_nickolai.default
+targetEntityType: forms_message
+bundle: kontakt_mirka_nickolai
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    region: content
+  name:
+    weight: -50
+    region: content
+hidden: {  }

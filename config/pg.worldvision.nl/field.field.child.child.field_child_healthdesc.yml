@@ -1,0 +1,22 @@
+uuid: a56b78c0-59d8-409e-b401-ab30b15eeae3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_healthdesc
+  module:
+    - child
+_core:
+  default_config_hash: h2NDQcnViFbE24hxl7gysLHITqA5cEas-DBgff8DXto
+id: child.child.field_child_healthdesc
+field_name: field_child_healthdesc
+entity_type: child
+bundle: child
+label: 'health description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

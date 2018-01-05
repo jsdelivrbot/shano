@@ -1,0 +1,35 @@
+uuid: 6dd050b1-4237-4727-ad6f-d311e0464412
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraph_teaser
+    - field.field.paragraph.paragraph_images.field_paragraph_image_et
+    - field.field.paragraph.paragraph_images.field_paragraph_image_image
+    - paragraphs.paragraphs_type.paragraph_images
+    - responsive_image.styles.editorial_image_photo
+  module:
+    - responsive_image
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 5eskWA_IbDdNQSsDWKPMUNbYW11ZDIpjDQI04mpWvEs
+id: paragraph.paragraph_images.paragraph_teaser
+targetEntityType: paragraph
+bundle: paragraph_images
+mode: paragraph_teaser
+content:
+  field_paragraph_image_image:
+    weight: 1
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image_photo
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden:
+  created: true
+  field_paragraph_image_et: true
+  uid: true

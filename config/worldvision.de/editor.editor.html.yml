@@ -1,0 +1,63 @@
+uuid: ec3f05be-bcdf-4336-92b5-5eb780ccc2ff
+langcode: de
+status: true
+dependencies:
+  config:
+    - filter.format.html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: neStHgXErqKBoNC1fs7Qfsmefc3x1u5ETRgouMQXweg
+format: html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Format
+            - Bold
+            - Italic
+            - '-'
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - '-'
+            - RemoveFormat
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - DrupalImage
+        -
+          name: Tools
+          items:
+            - Source
+        -
+          name: 'Custom styles'
+          items:
+            - Styles
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "span.font-size-xs|font-size-XS\r\nspan.font-size-s|font-size-S\r\nspan.font-size-m|font-size-M\r\nspan.font-size-l|font-size-L\r\nspan.font-size-xl|font-size-XL"
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

@@ -1,0 +1,9 @@
+uuid: cfaf6086-0222-4d3c-9243-e9bded15c28c
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hgT_jpar9g9XFLXzwZ2bBEGWccZQO6rVLTmU6C-Q8QU
+id: headline
+label: Headline
+category: 'Standard block'

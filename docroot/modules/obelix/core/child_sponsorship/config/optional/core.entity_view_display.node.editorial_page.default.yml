@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.editorial_page.field_autoteaser_button_label
+    - field.field.node.editorial_page.field_autoteaser_description
+    - field.field.node.editorial_page.field_autoteaser_image
+    - field.field.node.editorial_page.field_autoteaser_tags
+    - field.field.node.editorial_page.field_autoteaser_title
+    - field.field.node.editorial_page.field_child_finder
+    - field.field.node.editorial_page.field_editorial_body
+    - field.field.node.editorial_page.field_metatags
+    - node.type.editorial_page
+  module:
+    - editorialfield
+    - user
+_core:
+  default_config_hash: HtTtk2Lvn0HPX476E6bMYZuUyodlKpJT-XnQ8pKy1D0
+id: node.editorial_page.default
+targetEntityType: node
+bundle: editorial_page
+mode: default
+content:
+  field_child_finder:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+  field_editorial_body:
+    type: editorial_formatter
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_autoteaser_button_label: true
+  field_autoteaser_description: true
+  field_autoteaser_image: true
+  field_autoteaser_tags: true
+  field_autoteaser_title: true
+  field_metatags: true
+  langcode: true
+  links: true

@@ -1,0 +1,27 @@
+uuid: 08c7d476-7f03-4ac5-870a-13e178a5cd89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.sponsor_child
+  module:
+    - fs_payment
+id: forms_message.sponsor_child.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: sponsor_child
+label: 'Amount Per Month'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'BEDRAG PER MAAND'
+    subline: 'Ik machtig World Vision om maandelijks af te schrijven:'
+    single_amount: 1
+    minimal_amount: '30'
+    default_amount: '30'
+field_type: wovi_donation_amount_field

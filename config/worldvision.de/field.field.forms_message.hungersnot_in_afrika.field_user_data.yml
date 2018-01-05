@@ -1,0 +1,24 @@
+uuid: 3cbe74dd-72a9-4ad4-b354-8b47d261b002
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.hungersnot_in_afrika
+  module:
+    - forms_suite
+id: forms_message.hungersnot_in_afrika.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: hungersnot_in_afrika
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

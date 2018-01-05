@@ -1,0 +1,30 @@
+uuid: d1f304ec-6b95-4535-a4b8-d9839a211043
+langcode: de
+status: true
+dependencies: {  }
+id: test_sponsorship_en
+label: 'Test Sponsorship en'
+recipients: ''
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: ''
+  format: html
+thank_you_headline: ''
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formular/kinderpatenschaft-Test-Sponsorship-en
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: ''

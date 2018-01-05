@@ -1,0 +1,26 @@
+uuid: 684fb67e-c1c5-49f7-a2d0-e847b37b0f35
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.contact
+  module:
+    - forms_suite
+_core:
+  default_config_hash: 3uRcNelEK0axvdKi-InsGygopqEj0RvKNjkW51GTLHI
+id: forms_message.contact.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: contact
+label: newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_newsletter_field

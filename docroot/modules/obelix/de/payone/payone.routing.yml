@@ -1,0 +1,11 @@
+
+payone.pay_one_config_form:
+  path: '/admin/config/payone/payoneconfig'
+  defaults:
+    _form: '\Drupal\payone\Form\PayOneConfigForm'
+    _title: 'PayOneConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

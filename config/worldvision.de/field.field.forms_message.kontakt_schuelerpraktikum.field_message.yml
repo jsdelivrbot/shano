@@ -1,0 +1,22 @@
+uuid: f5d511c5-86e1-40d1-9cd7-a75a26e69289
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontakt_schuelerpraktikum
+  module:
+    - forms_suite
+id: forms_message.kontakt_schuelerpraktikum.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontakt_schuelerpraktikum
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

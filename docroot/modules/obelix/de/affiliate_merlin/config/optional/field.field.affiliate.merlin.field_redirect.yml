@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.storage.affiliate.field_redirect
+  module:
+    - link
+id: affiliate.merlin.field_redirect
+field_name: field_redirect
+entity_type: affiliate
+bundle: merlin
+label: Redirect
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

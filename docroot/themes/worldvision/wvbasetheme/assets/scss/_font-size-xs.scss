@@ -1,0 +1,44 @@
+// =============================
+// Font size classes
+// =============================
+
+// Breakpoint XS
+// =============================
+
+// Body
+.font-size-body {
+  font-size: $font-size-smallest;
+  line-height: $line-height-big;
+}
+
+// Headlines
+.font-size-xxs {
+  font-size: $font-size-smallest;
+  line-height: $line-height-medium;
+}
+.font-size-xs {
+  font-size: $font-size-smallest;
+  line-height: $line-height-medium;
+}
+
+.font-size-s {
+  font-size: $font-size-smallest;
+  line-height: $line-height-medium;
+}
+
+.font-size-m {
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+}
+
+.font-size-l {
+  font-size: $font-size-medium;
+  line-height: $line-height-small;
+}
+
+.font-size-xl {
+  font-size: $font-size-medium;
+  line-height: $line-height-small;
+}
+
+

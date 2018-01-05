@@ -1,0 +1,11 @@
+entity.affiliate.add_form:
+  route_name: 'affiliate.add_page'
+  title: 'Add Affiliate'
+  appears_on:
+    - entity.affiliate.collection
+entity.affiliate_type.add_form:
+  route_name: 'entity.affiliate_type.add_form'
+  title: 'Add Affiliate type'
+  appears_on:
+    - entity.affiliate_type.collection
+

@@ -1,0 +1,41 @@
+uuid: 770e216c-5bb7-42ce-95df-9dfb5627166f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kontaktformular_corinna_karrenbe.field_message
+    - field.field.forms_message.kontaktformular_corinna_karrenbe.field_newsletter
+    - field.field.forms_message.kontaktformular_corinna_karrenbe.field_user_data
+    - forms_suite.form.kontaktformular_corinna_karrenbe
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.kontaktformular_corinna_karrenbe.default
+targetEntityType: forms_message
+bundle: kontaktformular_corinna_karrenbe
+mode: default
+content:
+  field_message:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

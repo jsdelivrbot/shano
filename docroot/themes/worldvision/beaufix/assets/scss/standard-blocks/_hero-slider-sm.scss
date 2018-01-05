@@ -1,0 +1,37 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Hero-Slider
+  // =============================
+  .editorial-hero-slider {
+    padding-bottom: 0;
+
+    .slider-item {
+      min-height: 0;
+      background: none !important;
+      .editorial-content-txt-block {
+        padding-left: 75px;
+        &.col-sm-push-6 {
+          padding-left: 15px;
+          padding-right: 75px;
+        }
+      }
+      //  YouTube Video
+      &.editorial-hero-slider-youtube-video {
+        //  Play-button
+        .btn-hero-slider-yt-play-cont {
+          bottom: 70px;
+        }
+      }
+
+    }
+    // =============================
+    // Custom Slick-Slider styling for hero-slider
+    // =============================
+    .slick-dots {
+      bottom: 15px;
+      li{
+        border-color: $color-standard-bg;
+      }
+    }
+  }
+}

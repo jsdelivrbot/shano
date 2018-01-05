@@ -1,0 +1,14 @@
+uuid: 3b44a99f-d130-44d5-878c-28a2587ef800
+langcode: de
+status: true
+dependencies: {  }
+name: portrait_xs
+label: 'Portrait XS'
+effects:
+  4d757e57-b0f0-44b5-a293-26f562c4b5cf:
+    uuid: 4d757e57-b0f0-44b5-a293-26f562c4b5cf
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 640

@@ -1,0 +1,26 @@
+<div class='container form-minimal-border'>
+  <div class="row">
+    <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+      <div class="row">
+        {{ form|without('submit', 'send_email', 'send_type', 'certificate') }}
+        {% set titleClasses = 'font-book font-color-neutral' %}
+        <div class="col-xs-12 vert-offset-top-1"><h1 class="font-size-l">
+        {% trans %}
+          Your personal <span class="{{ titleClasses }}">certificate</span>
+        {% endtrans %}
+        </h1></div>
+        <div class="col-xs-12 col-sm-4">{{ form.certificate.image }}</div>
+        <div class="form-wrapper">
+          <div class="col-xs-12"><h2 class="font-size-m">{{ "Delivery method"|trans }}:</h2></div>
+          <div class="col-xs-12 col-no-padding-left-sm">{{ form.send_type }}</div>
+        </div>
+        <div class="form-wrapper">
+          <div class="col-xs-12 hl-send-email hidden"><h2 class="font-size-m">{{ "Personalize your email"|t }}:</h2></div>
+          <div class="col-xs-12 col-sm-6">{{ form.send_email.to }}</div>
+          <div class="col-xs-12 col-sm-6">{{ form.send_email.from }}</div>
+        </div>
+        <div class="col-xs-12 vert-offset-top-1 vert-offset-bottom-2">{{ form.submit }}</div>
+      </div>
+    </div>
+  </div>
+</div>

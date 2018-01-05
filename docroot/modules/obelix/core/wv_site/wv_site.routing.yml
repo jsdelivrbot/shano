@@ -1,0 +1,34 @@
+wv_site.admin_config_wv:
+  path: '/admin/config/wv'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'WV Site Configuration'
+  requirements:
+    _permission: 'access administration pages'
+
+wv_site.config_form:
+  path: '/admin/config/wv/common'
+  defaults:
+    _form: '\Drupal\wv_site\Form\ConfigForm'
+    _title: 'Site Configuration'
+  requirements:
+    _permission: 'access administration pages'
+
+wv_site.routing_config_form:
+  path: '/admin/config/wv/routing'
+  defaults:
+    _form: '\Drupal\wv_site\Form\RoutingConfigForm'
+    _title: 'Routing Configuration'
+  requirements:
+    _permission: 'access administration pages'
+
+wv_site.child_sponsorship_controller_ChildSponsorshipAction:
+  path: '/children-sponsorship'
+  defaults:
+    _controller: '\Drupal\wv_site\Controller\ChildSponsorshipController::ChildSponsorshipAction'
+    _title: 'Godfather with a child sponsorship at World Vision'
+  requirements:
+    _permission: 'access content'
+
+route_callbacks:
+  - '\Drupal\wv_site\Routing\Routes::routes'

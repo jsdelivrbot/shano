@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Install / update module related logic.
+ */
+
+use Drupal\Core\Extension;
+
+/**
+ * Implements hook_uninstall().
+ */
+function wv_simma_connector_uninstall() {
+  $config_factory = \Drupal::service('config.factory');
+
+  $config_objects = [
+    'countries',
+    'children',
+    'projects',
+  ];
+
+  foreach ($config_objects as $id) {
+    $config_factory->getEditable("migrate_plus.migration.$id")->delete();
+  }
+
+  $config_factory->getEditable('migrate_plus.migration_group.wvi')->delete();
+  $config_factory->getEditable('wv_simma_connector.settings')->delete();
+}
+
+/**
+ * Enable pathauto for migrate clean string.
+ */
+function wv_simma_connector_update_8001() {
+  \Drupal::service('module_installer')->install(['pathauto']);
+}

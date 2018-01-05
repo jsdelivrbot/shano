@@ -1,0 +1,14 @@
+uuid: f55f1ff2-93a4-410f-a067-8750e1bf80b7
+langcode: nl
+status: true
+dependencies: {  }
+name: low_height_16_4_sm
+label: 'Low height (16:4) SM'
+effects:
+  26282b0f-939f-4020-b656-9fa7cd4290e7:
+    uuid: 26282b0f-939f-4020-b656-9fa7cd4290e7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 250

@@ -1,0 +1,28 @@
+uuid: 440dc604-1d2e-44dd-8e50-01ab9688aff0
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.quotation
+    - field.storage.node.field_quotation
+    - node.type.country_page
+id: node.country_page.field_quotation
+field_name: field_quotation
+entity_type: node
+bundle: country_page
+label: Quotation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      quotation: quotation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

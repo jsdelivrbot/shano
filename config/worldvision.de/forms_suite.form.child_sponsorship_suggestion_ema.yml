@@ -1,0 +1,31 @@
+uuid: dfdba1ce-39b3-44a0-bd40-63361bf9c805
+langcode: de
+status: true
+dependencies: {  }
+id: child_sponsorship_suggestion_ema
+label: 'Kipa Vorschlag email'
+recipients:
+  - gfr-infomail-test@wvi.org
+reply: "Sehr [wovi_user_data_field:personalized_salutation] [wovi_user_data_field:surname],\r\n\r\nwir haben Ihre Nachricht erhalten und freuen uns sehr, dass Sie sich\r\nfür die Übernahme einer Kinderpatenschaft interessieren.  \r\n\r\nIn den nächsten Tagen senden wir Ihnen die Unterlagen eines\r\nKindes mit einem Bild und der persönlichen\r\nGeschichte des Kindes. Ebenfalls per Post erhalten Sie die Broschüre\r\n\"Eine Kinderpatenschaft bei World Vision\", die Sie ausführlich über\r\nIhre Patenschaft und unsere Projektarbeit informiert.\r\n\r\n----------------------------------------------------------------------\r\n\r\nSie haben folgende persönliche Daten angegeben:\r\n\r\nFirma___: [wovi_user_data_field:companyName]\r\nAnrede__: [wovi_user_data_field:salutation]\r\nVorname_: [wovi_user_data_field:firstName]\r\nNachname: [wovi_user_data_field:surname]\r\nStrasse_: [wovi_user_data_field:street]\r\nPLZ/Ort_: [wovi_user_data_field:postCode] [wovi_user_data_field:city]\r\nTelefon_: [wovi_user_data_field:phonePrivate]\r\n\r\nEine Änderung Ihrer Daten können Sie uns jederzeit über folgendes\r\nFormular mitteilen:\r\nhttp://www.worldvision.de/adressaenderung\r\n\r\n----------------------------------------------------------------------\r\n\r\nMöchten Sie mehr über unsere Arbeit erfahren?\r\nBesuchen Sie unsere Facebook-Seite unter:\r\nhttp://www.facebook.com/world.vision.deutschland\r\noder vernetzen Sie sich mit anderen Paten und Spendern auf Xing:\r\nhttps://www.xing.com/net/worldvision\r\n\r\n----------------------------------------------------------------------\r\n\r\nFür Ihre Anliegen und Wünsche steht das Team unserer Paten- und\r\nSpenderbetreuung per E-Mail und telefonisch gerne zu Ihrer Verfügung.\r\n\r\nHerzlichen Dank für Ihr Interesse! Wir würden uns freuen, Sie im\r\nKreise der Paten begrüßen zu können.\r\n\r\n----------------------------------------------------------------------\r\n\r\nMit freundlichen Grüßen\r\n\r\nIhr Team von\r\nWorld Vision Deutschland e.V.\r\nAm Zollstock 2 - 4\r\n61381 Friedrichsdorf\r\nServicetelefon: 0800 - 0 10 20 22*  \r\nE-Mail: info@worldvision.de\r\nhttp://www.worldvision.de\r\n\r\n----------------------------------------------------------------------\r\n\r\nDiese E-Mail wurde automatisch generiert.\r\n\r\n*kostenfreies Servicetelefon"
+weight: 0
+template_email: autoreply_suggestion_email
+template_thank_you: thankyou_default
+incident: 'AUTOMATISCHER MAIL-VORSCHLAG'
+subject: 'Ihre World Vision Patenschaft'
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir haben Ihnen per E-Mail einen unverbindlichen Patenschaftsvorschlag zugeschickt. Schauen Sie gleich in Ihrem Postfach nach!</p>\r\n\r\n<p>Bei weiteren Fragen und Wünschen können Sie sich jederzeit an unser Team vom Paten- und Spenderservice wenden:</p>\r\n\r\n<p><a href=\"https://www.worldvision.de/kontakt\">https://www.worldvision.de/kontakt</a></p>\r\n"
+  format: html
+thank_you_headline: 'VIELEN DANK FÜR IHR INTERESSE AN EINER WORLD VISION-KINDERPATENSCHAFT '
+designation_id: ''
+motivation_code: '401266'
+additional_tracking: ''
+alias: /formulare/patenschafts-vorschlag-email
+headline: 'PATENSCHAFTS-VORSCHLAG PER E-MAIL ODER POST'
+description: 'Bitte senden Sie mir einen unverbindlichen Vorschlag'
+disclaimer: ''
+submit_button: 'Vorschlag anfordern'

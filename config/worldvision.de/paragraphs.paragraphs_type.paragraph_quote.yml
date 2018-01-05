@@ -1,0 +1,9 @@
+uuid: abc76ff5-0b2d-4b13-a59a-dc2eae4298a3
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: utZ3oSYMSvO8N7vbY3D4L5cmTjmRRFBQjCpxAuhvygs
+id: paragraph_quote
+label: Quote
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 35fb69b7-0458-46b4-b8fe-4d01ca1b63ac
+langcode: nl
+status: true
+dependencies:
+  module:
+    - field_collection
+    - node
+_core:
+  default_config_hash: MCNsdqMtkvoBcK2s0lO8oOkpau-mdesZjIDERmiEw9o
+id: node.field_impact_bar
+field_name: field_impact_bar
+entity_type: node
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

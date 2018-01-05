@@ -1,0 +1,5 @@
+langcode: de
+status: true
+dependencies: {  }
+id: paragraph_image_16_9
+label: 'Image 16/9'

@@ -1,0 +1,23 @@
+uuid: b8a2a64b-1f52-40d0-b3b4-0d07a41e02fa
+langcode: nl
+status: true
+dependencies:
+  module:
+    - child
+_core:
+  default_config_hash: 1b3o_8f5Ha34uzOhykAE2nM6Ik5OA-kLkRt3_rxry_Q
+id: child.field_child_schoolleveldesc
+field_name: field_child_schoolleveldesc
+entity_type: child
+type: string
+settings:
+  max_length: 100
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

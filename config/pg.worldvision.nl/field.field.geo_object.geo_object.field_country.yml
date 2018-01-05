@@ -1,0 +1,29 @@
+uuid: 17331c8d-f7b1-4436-87b0-7ec9bd73c40e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.geo_object.field_country
+  module:
+    - map
+_core:
+  default_config_hash: uS7dfV1Z97pf4RX7kwCGKwRpxSSyxOkBUAMDL1GnqG8
+id: geo_object.geo_object.field_country
+field_name: field_country
+entity_type: geo_object
+bundle: geo_object
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:country'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

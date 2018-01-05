@@ -1,0 +1,107 @@
+uuid: 09af8f83-0006-4cca-b4cb-48b69808f246
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.field.editorial_content.youtube_video.field_video_headline
+    - field.field.editorial_content.youtube_video.field_video_preview_image
+    - field.field.editorial_content.youtube_video.field_video_subtitle
+    - field.field.editorial_content.youtube_video.field_youtube_link
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_video
+      parent_name: ''
+      weight: 5
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_content:
+      children:
+        - field_video_headline
+        - field_video_subtitle
+      parent_name: group_tabs
+      weight: 6
+      label: Content
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_video:
+      children:
+        - field_youtube_link
+        - field_video_preview_image
+      parent_name: group_tabs
+      weight: 7
+      label: Video
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+_core:
+  default_config_hash: mHaicekMXoxdLCs7U2-H6j6ArcRvZcR3Ku-KousCZ7M
+id: editorial_content.youtube_video.default
+targetEntityType: editorial_content
+bundle: youtube_video
+mode: default
+content:
+  field_video_headline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_video_preview_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_video_subtitle:
+    weight: 2
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_youtube_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

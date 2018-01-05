@@ -1,0 +1,49 @@
+fonts:
+  version: VERSION
+  css:
+    theme:
+      libraries/fonts/gill-sans-suomi-hand-script/style.css: {}
+      assets/css/transparency-bar/transparency-bar.css: {}
+wovide-main:
+  js:
+    assets/js/main.js: {}
+transition_page:
+  css:
+    theme:
+      assets/css/node--transition-page.css: {}
+branding_campaign:
+  css:
+    theme:
+      assets/css/sites/branding-campaign.css: {}
+  js:
+    assets/js/sites/branding-campaign.js: {}
+annual-donation-5x-multiplier:
+  css:
+    theme:
+      assets/css/forms/annual-donation-5x-multiplier.css: {}
+my-child-billy:
+  css:
+    theme:
+      assets/css/sites/my-child-billy.css: {}
+  js:
+      assets/js/sites/my-child-billy.js: {}
+content-editor:
+  css:
+    theme:
+      assets/css/content-editor/content-editor.css: {}
+  js:
+      assets/js/sites/content-editor.js: {}
+public-donor:
+  css:
+    theme:
+      assets/css/public-donor/public-donor.css: {}
+custom-kipa-forms:
+  css:
+    theme:
+      assets/css/custom-kipa-forms/custom-kipa-forms.css: {}
+  js:
+    assets/js/forms/custom-kipa-form.js: {}
+childhood-savior:
+  css:
+    theme:
+      assets/css/sites/childhood-savior.css: {}

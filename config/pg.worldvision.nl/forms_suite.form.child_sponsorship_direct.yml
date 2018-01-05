@@ -1,0 +1,31 @@
+uuid: d8eea894-de8d-430b-a93e-31447a46b41f
+langcode: nl
+status: true
+dependencies: {  }
+id: child_sponsorship_direct
+label: 'Sponsorship direct'
+recipients:
+  - info@worldvision.nl
+reply: "Dear [wovi_user_data_field:salutation] [wovi_user_data_field:surname],\r\n\r\nWe are very pleased that you have decided to take over a child sponsorship. As a godfather, you give a needy child in one of the world's poorest countries the chance of a better future. \r\n\r\nIn the next few days, you will receive your sponsorship folder with a photo and the personal story of your godchild by mail. This is also our brochure \"Hooray, now you're godfather\" with all the detailed information and tips for your sponsorship.  \r\n\r\n----------------------------------------------------------------------\r\n\r\nYou have provided the following personal information:\r\n\r\nContribution: [wovi_donation_amount_field:amount]€\r\nCompany: [wovi_user_data_field:companyName]\r\nSalutation: [wovi_user_data_field:surname]\r\nFirst name: [wovi_user_data_field:firstName]\r\nNSurname: [wovi_user_data_field:surname]\r\nStreet: [wovi_user_data_field:street] [wovi_user_data_field:houseNo]\r\nPostcode: [wovi_user_data_field:postCode] [wovi_user_data_field:city]\r\nPhone: [wovi_user_data_field:phonePrivate]\r\n\r\nIBAN: [wovi_payment_method_field:IBAN]  [wovi_payment_method_field:bankAccountNo] \r\nBIC: [wovi_payment_method_field:swiftCode] [wovi_payment_method_field:bankBranchNo]\r\n\r\nA change of your data you can inform us at any time via the following form:\r\nhttp://www.worldvision.nl\r\n\r\nYou will automatically receive a donation receipt at the beginning of each new year. \r\n----------------------------------------------------------------------\r\n\r\nWould you like to know more about our work??\r\nhttp://www.facebook.com/world.vision.netherlands\r\n\r\nPlease note: Due to a system change, the processing of your request may be delayed. We thank you for your understanding!\r\n\r\n----------------------------------------------------------------------\r\n\r\n\r\nFor your concerns and wishes, the team of our sponsoring and donor service by e-mail (info@worldvision.nl) and by phone(0800 0 10 20 22) gladly at your disposal.\r\n\r\nWe thank you for your support and wish you lots of fun with the sponsorship.\r\n\r\n----------------------------------------------------------------------\r\n\r\nBest regards\r\n\r\nYour team of World Vision Netherlands\r\n\r\n---------------------------------------------------------------------\r\n\r\nThis email was generated automatically."
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: 'Your World Vision sponsorship'
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Soon you will receive from us by mail your sponsorship folder with the personal story and a photo of your godchild as well as a detailed information booklet.</p>\r\n\r\n<p>Your first sponsorship contribution will be requested by the specified account debited. You will automatically receive a donation receipt at the beginning of the year.</p>\r\n\r\n<p>If you have further questions or requests, you can to contact our team of the sponsoring and donor service at any time.</p>\r\n"
+  format: html
+thank_you_headline: 'Thank you for your sponsorship!'
+designation_id: ''
+motivation_code: '401266'
+additional_tracking: ''
+alias: /forms/child_sponsorship_direct
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: Donate

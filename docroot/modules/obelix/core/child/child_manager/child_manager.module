@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Contains child_manager.module..
+ */
+
+use Drupal\child_manager\Controller\ChildManager;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function child_manager_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the child_manager module.
+    case 'help.page.child_manager':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Exten the Child Module function.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function child_manager_theme($existing, $type, $theme, $path) {
+  return array(
+    'child_manager' => array(
+      'variables' => array(
+        'output' => NULL,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_cron().
+ */
+function child_manager_cron() {
+  $datasource = \Drupal::service('datasource');
+  $child_manager = new ChildManager($datasource);
+  $child_manager->unblockSponsoredChildren();
+  // Coz of iVision call it breaks cron for sites that doesn't use iVision (e.g. NL uses Simma).
+  try {
+    $child_manager->updateChildDB();
+  } catch (\Exception $e) {
+    // Log error but let cron unblock children below.
+    \Drupal::logger('child_manager')->error($e->getMessage());
+  }
+
+  $child_manager->unblockChildren();
+}

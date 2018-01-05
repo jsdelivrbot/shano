@@ -1,0 +1,31 @@
+uuid: b58391e4-15af-4110-a377-4957d89955d1
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - file
+    - image
+_core:
+  default_config_hash: mTky_MuvaOuelgJZ0cGRkBcAmGjPCL9SmAEYM2wwXEk
+id: editorial_content.field_campaign_teaser_image
+field_name: field_campaign_teaser_image
+entity_type: editorial_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

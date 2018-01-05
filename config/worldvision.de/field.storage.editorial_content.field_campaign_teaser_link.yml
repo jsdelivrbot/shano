@@ -1,0 +1,21 @@
+uuid: 8c56b184-f599-49e9-8268-57e87cf464bb
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - link
+_core:
+  default_config_hash: cP_QTJzSf2p-VdR_sXU-J2U6XGSHoTL41-KZhrYwwTE
+id: editorial_content.field_campaign_teaser_link
+field_name: field_campaign_teaser_link
+entity_type: editorial_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

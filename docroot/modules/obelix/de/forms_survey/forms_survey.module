@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains forms_survey.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function forms_survey_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the forms_survey module.
+    case 'help.page.forms_survey':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Survey function for forms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function forms_survey_theme($existing, $type, $theme, $path)
+{
+  return array(
+    'survey' => array(
+      'variables' => array('content' => NULL),
+    ),
+  );
+}

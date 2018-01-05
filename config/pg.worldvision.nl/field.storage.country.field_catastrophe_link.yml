@@ -1,0 +1,19 @@
+uuid: bfc337b6-02c7-4030-91cf-00ba45ad5a44
+langcode: nl
+status: true
+dependencies:
+  module:
+    - country
+    - link
+id: country.field_catastrophe_link
+field_name: field_catastrophe_link
+entity_type: country
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,14 @@
+uuid: 24604743-c49c-4c74-8880-62f84dfdbfa5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.child_list_editor
+  module:
+    - user
+id: user_remove_role_action.child_list_editor
+label: 'Remove the Child list editor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: child_list_editor

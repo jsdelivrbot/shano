@@ -1,0 +1,52 @@
+uuid: 9b0018d0-4add-4f66-80af-b61da7ffc3c3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.contact.field_message
+    - field.field.forms_message.contact.field_newsletter
+    - field.field.forms_message.contact.field_user_data
+    - forms_suite.form.contact
+  module:
+    - forms_suite
+_core:
+  default_config_hash: UReEsNnY8wBAq6Qcjwcqf9sFm_vlCnGS9w5zVkiOrAw
+id: forms_message.contact.default
+targetEntityType: forms_message
+bundle: contact
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_user_data_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  mail:
+    weight: -40
+    region: content
+  name:
+    weight: -50
+    region: content
+hidden: {  }

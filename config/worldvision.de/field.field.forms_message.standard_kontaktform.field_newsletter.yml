@@ -1,0 +1,22 @@
+uuid: e3e02f6f-4265-45db-8394-dd63247b06ac
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.standard_kontaktform
+  module:
+    - forms_suite
+id: forms_message.standard_kontaktform.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: standard_kontaktform
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

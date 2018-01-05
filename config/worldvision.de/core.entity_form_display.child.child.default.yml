@@ -1,0 +1,304 @@
+uuid: 00ebe8b7-2968-4b0c-a905-b181151c1475
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.child.child.field_child_birthdate
+    - field.field.child.child.field_child_brothers
+    - field.field.child.child.field_child_childsequence
+    - field.field.child.child.field_child_choredesc
+    - field.field.child.child.field_child_countries_descriptio
+    - field.field.child.child.field_child_familyname
+    - field.field.child.child.field_child_fatherjobstatusdesc
+    - field.field.child.child.field_child_fatherstatusdesc
+    - field.field.child.child.field_child_favouritesubjectdesc
+    - field.field.child.child.field_child_fochildstatus
+    - field.field.child.child.field_child_genderdesc
+    - field.field.child.child.field_child_givenname
+    - field.field.child.child.field_child_gradenumber
+    - field.field.child.child.field_child_handicapdesc
+    - field.field.child.child.field_child_healthdesc
+    - field.field.child.child.field_child_image
+    - field.field.child.child.field_child_lastupdatedate
+    - field.field.child.child.field_child_liveswithdesc
+    - field.field.child.child.field_child_localchildfamilyname
+    - field.field.child.child.field_child_localchildgivenname
+    - field.field.child.child.field_child_motherjobstatusdesc
+    - field.field.child.child.field_child_motherstatusdesc
+    - field.field.child.child.field_child_noschoolreasondesc
+    - field.field.child.child.field_child_peoplegroupdesc
+    - field.field.child.child.field_child_playdesc
+    - field.field.child.child.field_child_project
+    - field.field.child.child.field_child_schoolleveldesc
+    - field.field.child.child.field_child_schoolsubjects_descr
+    - field.field.child.child.field_child_sisters
+    - field.field.child.child.field_child_status
+    - field.field.child.child.field_child_video_url
+    - image.style.thumbnail
+  module:
+    - child
+    - datetime
+    - image
+_core:
+  default_config_hash: HOeiSyvBdcIm7t-wpgM_I5WoZ8OLR0OK51WSYJ4N7i4
+id: child.child.default
+targetEntityType: child
+bundle: child
+mode: default
+content:
+  field_child_birthdate:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_child_brothers:
+    weight: 27
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_child_childsequence:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_child_choredesc:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_countries_descriptio:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_familyname:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_fatherjobstatusdesc:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_fatherstatusdesc:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_favouritesubjectdesc:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_fochildstatus:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_genderdesc:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_givenname:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_gradenumber:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_child_handicapdesc:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_healthdesc:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_child_lastupdatedate:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_liveswithdesc:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_localchildfamilyname:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_localchildgivenname:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_motherjobstatusdesc:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_motherstatusdesc:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_noschoolreasondesc:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_peoplegroupdesc:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_playdesc:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_project:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_child_schoolleveldesc:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_schoolsubjects_descr:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_sisters:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_child_status:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_child_video_url:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  ivision_id:
+    type: number
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  name: true
+  user_id: true

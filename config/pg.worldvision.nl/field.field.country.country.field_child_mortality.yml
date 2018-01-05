@@ -1,0 +1,24 @@
+uuid: c81adc3a-ef1f-4aea-9505-6e5d8be40e69
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_child_mortality
+  module:
+    - country
+id: country.country.field_child_mortality
+field_name: field_child_mortality
+entity_type: country
+bundle: country
+label: 'Child mortality'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,20 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.geo_object.field_google_geo_object
+  module:
+    - map
+id: geo_object.geo_object.field_google_geo_object
+field_name: field_google_geo_object
+entity_type: geo_object
+bundle: geo_object
+label: 'Google Geo Object'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: google_geo_object_field_type

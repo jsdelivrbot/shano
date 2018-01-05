@@ -1,0 +1,56 @@
+uuid: b0ed5d82-f67f-47bd-a0f9-1d82bc1e6e13
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.projektspende_fonds_finanz_tscha.field_donation_amount
+    - field.field.forms_message.projektspende_fonds_finanz_tscha.field_donation_period
+    - field.field.forms_message.projektspende_fonds_finanz_tscha.field_newsletter
+    - field.field.forms_message.projektspende_fonds_finanz_tscha.field_payment_method
+    - field.field.forms_message.projektspende_fonds_finanz_tscha.field_user_data
+    - forms_suite.form.projektspende_fonds_finanz_tscha
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.projektspende_fonds_finanz_tscha.default
+targetEntityType: forms_message
+bundle: projektspende_fonds_finanz_tscha
+mode: default
+content:
+  field_donation_amount:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_period:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,7 @@
+uuid: 0a9dd49c-88a3-4ed0-92ce-0d769b127162
+langcode: en
+status: true
+dependencies: {  }
+formId: company_subscribe_form
+captchaType: recaptcha/reCAPTCHA
+label: company_subscribe_form

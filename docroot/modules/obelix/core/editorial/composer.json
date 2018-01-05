@@ -1,0 +1,13 @@
+{
+    "name": "world-vision/editorial",
+    "type": "drupal-module",
+    "description": "Creates a custom content type to build layouted pages with edtiroial content pieces.",
+    "require": {
+        "drupal/inline_entity_form": "~1.0-beta1",
+        "drupal/layout_plugin": "~1.0-alpha23",
+        "drupal/styled_image": "^8.0",
+        "drupal/field_collection": "^1.0-alpha1",
+        "drupal/field_group": "^1.0-rc4",
+        "drupal/bootstrap_layouts": "^3.0"
+    }
+}

@@ -1,0 +1,4 @@
+forms:
+  css:
+    theme:
+      assets/css/forms.css: {}

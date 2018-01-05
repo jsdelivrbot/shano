@@ -1,0 +1,25 @@
+uuid: 2f474661-c89e-4513-8613-9a035c6e03f8
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.direct_donation
+    - field.storage.editorial_content.field_donation_example
+  module:
+    - field_collection
+_core:
+  default_config_hash: Z60G793LhcYRdiG7hol9BpnoySyZ9M_N_9i8nIqcH0A
+id: editorial_content.direct_donation.field_donation_example
+field_name: field_donation_example
+entity_type: editorial_content
+bundle: direct_donation
+label: 'Donation example'
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

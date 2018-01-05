@@ -1,0 +1,25 @@
+uuid: fca852aa-b996-4b58-b8f2-c3b4d41ed01c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.storage.editorial_content.field_link
+  module:
+    - link
+_core:
+  default_config_hash: NOtiCgCYP7MfxD51Fp74u4a9EIXErhC-zWGyXmF862U
+id: editorial_content.button.field_link
+field_name: field_link
+entity_type: editorial_content
+bundle: button
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,27 @@
+uuid: 0694f83c-60f2-45b5-9143-9fbcde009d18
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.gewalt_im_suedsudan_kopie
+  module:
+    - fs_payment
+id: forms_message.gewalt_im_suedsudan_kopie.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: gewalt_im_suedsudan_kopie
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '30'
+field_type: wovi_donation_amount_field

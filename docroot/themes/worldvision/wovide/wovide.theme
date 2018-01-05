@@ -1,0 +1,100 @@
+<?php
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * @file
+ * Beaufix is the beautiful default theme for the Obelix distribution.
+ */
+
+function wovide_preprocess_page(&$variables) {
+  $variables["site_logo"] = str_replace(".svg", ".jpg", $variables["site_logo"]);
+}
+
+function wovide_preprocess_node__transition_page(&$variables) {
+  if (isset($variables['content']['field_primary_image'])) {
+    foreach (\Drupal\Core\Render\Element::children($variables['content']['field_primary_image']) as $delta) {
+      $variables['content']['field_primary_image'][$delta]['#item_attributes']['class'][] = 'img-fullsize';
+    }
+  }
+
+  $variables['#attached']['library'][] = 'editorial/copy';
+  $variables['#attached']['library'][] = 'editorial/headline';
+  $variables['#attached']['library'][] = 'editorial/image';
+  $variables['#attached']['library'][] = 'wovide/transition_page';
+}
+
+
+function wovide_preprocess_editorial_content(&$variables) {
+//  @TODO Map on home - make it beautiful
+  if ($variables['elements']['#editorial_content']->id() == 5056) {
+    $map = \Drupal::entityTypeManager()
+      ->getStorage('map')
+      ->load(1);
+
+    $variables['content'] = \Drupal::entityTypeManager()
+      ->getViewBuilder('map')
+      ->view($map);
+
+    $variables['#attached']['library'][] = 'map/wovi_maps_home';
+  }
+
+//  Branding campaign styling override
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node !== NULL && $node->id() == 562) {
+    $variables['#attached']['library'][] = 'wovide/branding_campaign';
+  }
+
+//  my-child-billy campaign styling override
+  if ($node !== NULL && $node->id() == 687) {
+    $variables['#attached']['library'][] = 'wovide/my-child-billy';
+  }
+
+//  kindheitsretter campaign styling override
+  /** @var Request $request */
+  $request = \Drupal::request();
+  $request_uri = $request->getRequestUri();
+
+  if($request_uri == "/spenden/kindheitsretter"){
+    $variables['#attached']['library'][] = 'wovide/childhood-savior';
+  }
+
+//  Override branding campaign section with faq
+//  Override my child billy section with faq
+  if (($variables['elements']['#editorial_content']->id() == 5949) || $variables['elements']['#editorial_content']->id() == 7488) {
+    $section = [
+      '#theme' => "child_sponsorship_info_section_child_sponsorship",
+      '#content' => [],
+      '#content_attributes' => [],
+      '#attributes' => [
+        'class' => ['cta-sponsor-child-visible'],
+      ],
+    ];
+
+    $variables['content'] = $section;
+  }
+
+
+}
+
+/**
+ * Appends to "5x Multiplier" Badge to the "Annual Donation" Form.
+ */
+function wovide_form_forms_message_jaehrliche_spende_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'wovide/annual-donation-5x-multiplier';
+}
+
+function wovide_preprocess_node__public_donor(&$variables) {
+  $variables['#attached']['library'][] = 'wovide/public-donor';
+}
+
+function wovide_preprocess_node__public_donor_overview(&$variables) {
+  $variables['#attached']['library'][] = 'wovide/public-donor';
+}
+
+function wovide_preprocess_message_form__base(&$variables) {
+  $variables['message_form']['actions']['submit']['#attributes']['class'][] = 'btn-beauty btn btn-xl';
+  if ($variables['message_form']['#form_id'] == 'forms_message_child_sponsorship_with_condition_form'
+    || $variables['message_form']['#form_id'] == 'forms_message_child_sponsorship_direct_form') {
+    $variables['#attached']['library'][] = 'wovide/custom-kipa-forms';
+  }
+}

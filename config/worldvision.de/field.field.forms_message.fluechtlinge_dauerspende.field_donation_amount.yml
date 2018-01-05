@@ -1,0 +1,27 @@
+uuid: b238eb9e-c0db-4957-b6db-e4ac081a4dd5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.fluechtlinge_dauerspende
+  module:
+    - fs_payment
+id: forms_message.fluechtlinge_dauerspende.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: fluechtlinge_dauerspende
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr monatlicher Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '10'
+    default_amount: '10'
+field_type: wovi_donation_amount_field

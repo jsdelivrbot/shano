@@ -1,0 +1,65 @@
+uuid: e7a3ab15-4307-45d9-9ab8-d888209553d5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.contact_company_cooperation.field_company_cooperation
+    - field.field.forms_message.contact_company_cooperation.field_message
+    - field.field.forms_message.contact_company_cooperation.field_newsletter
+    - field.field.forms_message.contact_company_cooperation.field_user_data
+    - forms_suite.form.contact_company_cooperation
+  module:
+    - forms_suite
+_core:
+  default_config_hash: CUhaJxI-EOxrmRfdJdaNAQTTINecImP3WisbNj8qGi8
+id: forms_message.contact_company_cooperation.default
+targetEntityType: forms_message
+bundle: contact_company_cooperation
+mode: default
+content:
+  copy:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_company_cooperation:
+    type: wovi_company_cooperation_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_message:
+    type: wovi_message_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

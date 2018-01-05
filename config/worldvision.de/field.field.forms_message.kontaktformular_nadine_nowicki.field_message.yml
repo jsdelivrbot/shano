@@ -1,0 +1,22 @@
+uuid: 75473e4e-fd64-46ec-af56-42b5f63b4c64
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontaktformular_nadine_nowicki
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_nadine_nowicki.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontaktformular_nadine_nowicki
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

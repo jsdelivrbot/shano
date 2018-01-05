@@ -1,0 +1,10 @@
+name: Child
+type: module
+description: Child Entity
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - country
+  - project
+  - datetime
+

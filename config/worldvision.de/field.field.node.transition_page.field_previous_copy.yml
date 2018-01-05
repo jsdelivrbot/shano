@@ -1,0 +1,23 @@
+uuid: 834c3421-6cad-4ab6-88a8-432274a5de49
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previous_copy
+    - node.type.transition_page
+  module:
+    - text
+_core:
+  default_config_hash: 1FB-BB8SMnoeR9EtOSsSdvxYbOZ9gqFNuvkYO1I597U
+id: node.transition_page.field_previous_copy
+field_name: field_previous_copy
+entity_type: node
+bundle: transition_page
+label: Copy
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

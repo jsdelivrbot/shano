@@ -1,0 +1,24 @@
+uuid: c7a4af0a-c5f8-4a4a-9919-31eb36a51678
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.giftshop
+  module:
+    - forms_suite
+id: forms_message.giftshop.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: giftshop
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'BESTELLING WERELDCADEAUS'
+    subline: 'Mijn gegevens:'
+field_type: wovi_user_data_field

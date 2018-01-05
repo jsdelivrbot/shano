@@ -1,0 +1,24 @@
+uuid: c5b109d3-6eec-4b7e-b9eb-2662e49f692a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - forms_suite
+_core:
+  default_config_hash: JphWamcQ0m5rtboHjDDbFFnnU-7zzvo2f735ie7BkRY
+id: forms_message.child_sponsorship_with_condition.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: child_sponsorship_with_condition
+label: newsletter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

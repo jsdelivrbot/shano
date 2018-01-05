@@ -1,0 +1,8 @@
+<figure{{ attributes.addClass('slider-item', 'clearfix') }}>
+  {{ content.preview_image }}
+  <figcaption{{ content_attributes }}>
+    {{ content|without('preview_image') }}
+    <strong class="slick-pagination pull-right"></strong>
+  </figcaption>
+</figure>
+

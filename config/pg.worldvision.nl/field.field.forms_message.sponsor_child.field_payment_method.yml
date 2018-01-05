@@ -1,0 +1,26 @@
+uuid: cc9c9459-6d96-43ca-b4f1-65b4f06ea3c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.sponsor_child
+  module:
+    - fs_payment
+id: forms_message.sponsor_child.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: sponsor_child
+label: 'Payment Method'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    external_payment: 1
+    optional_bic: 1
+field_type: wovi_payment_method_field

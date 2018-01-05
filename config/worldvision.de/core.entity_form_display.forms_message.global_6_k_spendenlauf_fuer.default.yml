@@ -1,0 +1,49 @@
+uuid: 0fb4a99b-7b13-47ab-bc37-fedb746377bf
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.global_6_k_spendenlauf_fuer.field_newsletter
+    - field.field.forms_message.global_6_k_spendenlauf_fuer.field_shirt_size
+    - field.field.forms_message.global_6_k_spendenlauf_fuer.field_user_data
+    - forms_suite.form.global_6_k_spendenlauf_fuer
+  module:
+    - forms_suite
+id: forms_message.global_6_k_spendenlauf_fuer.default
+targetEntityType: forms_message
+bundle: global_6_k_spendenlauf_fuer
+mode: default
+content:
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_shirt_size:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 2
+    settings:
+      hide_initials: true
+      hide_middle_name: true
+      hide_first_name: false
+      hide_country: false
+      hide_title: false
+      hide_birthday: false
+      optional_bic: false
+      postal_max_length: '5'
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

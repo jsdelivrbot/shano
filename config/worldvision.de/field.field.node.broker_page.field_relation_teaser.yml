@@ -1,0 +1,25 @@
+uuid: 13479b86-3679-4873-b9ec-7784c1a2d664
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relation_teaser
+    - node.type.broker_page
+id: node.broker_page.field_relation_teaser
+field_name: field_relation_teaser
+entity_type: node
+bundle: broker_page
+label: 'Gifts List'
+description: 'Select 3 gifts from this list to show on your page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: relation_teaser_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

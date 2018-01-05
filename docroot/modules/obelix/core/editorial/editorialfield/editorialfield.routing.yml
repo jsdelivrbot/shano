@@ -1,0 +1,9 @@
+editorialfield.configuration:
+  path: '/admin/config/content/editorialfield'
+  defaults:
+    _form: '\Drupal\editorialfield\Form\ConfigurationForm'
+    _title: 'Editorial field configuration'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

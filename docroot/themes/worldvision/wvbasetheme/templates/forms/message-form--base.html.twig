@@ -1,0 +1,84 @@
+{#
+/**
+ * @file child.html.twig
+ * Default theme implementation to present Child data.
+ *
+ * This template is used when viewing Child pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('form-minimal-border') }}>
+  {% if message_form.appearance.headline %}
+    <div class="container vert-offset-sm-top-1">
+      <div class="row">
+        <div class="col-xs-12 text-center"><h1 class="font-size-l">{{ message_form.appearance.headline }}</h1>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if message_form.appearance.description %}
+    <div class="container vert-offset-sm-bottom-1">
+      <div class="row">
+        <div class="col-xs-12 text-center"><p class="font-size-xs">{{ message_form.appearance.description }}</p>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {# Info bar#}
+  <div
+    class="form-info-bar section-highlighted section-highlighted--primary navbar navbar-default navbar-fixed-top hidden-xs">
+    <div class="container txt-content text-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <ul class="list-unstyled list-inline">
+            <li><i class="icon-calculator"></i></li>
+            <li>{{ 'Tax deductible'|t }}</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="list-unstyled list-inline">
+            <li><i class="icon-eye"></i></li>
+            <li>{{ 'DZI Tested & recommended'|t }}</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul class="list-unstyled list-inline">
+            <li><i class="icon-ok-shield"></i></li>
+            <li>{{ 'Secure data transfer'|t }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Form #}
+  {{ message_form|without('actions', 'appearance') }}
+
+  {# Form submit #}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        {{ message_form.actions }}
+        <p class="font-size-xs text-center">{{ 'Fields marked with * are mandatory.'|t }}</p>
+      </div>
+    </div>
+  </div>
+
+  {% if message_form.appearance.disclaimer %}
+    <div class="container vert-offset-sm-top-1">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+          <p class="font-color-highlighted font-size-xs text-center">{{ message_form.appearance.disclaimer }}</p>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>

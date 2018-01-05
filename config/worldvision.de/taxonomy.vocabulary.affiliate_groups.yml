@@ -1,0 +1,11 @@
+uuid: 8290236d-1a4c-4e32-af1c-c1b147ed4586
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1rLsnxNBmX9E5raHF1kusvg1_T0KQArtNdjQ5rm8c-Q
+name: 'Affiliate Groups'
+vid: affiliate_groups
+description: ''
+hierarchy: 0
+weight: 0

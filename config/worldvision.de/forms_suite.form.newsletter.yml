@@ -1,0 +1,30 @@
+uuid: 39cdb130-5ec1-4142-b5d9-b71230ad4edc
+langcode: de
+status: true
+dependencies: {  }
+id: newsletter
+label: Newsletter
+recipients: ''
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: null
+subject: ''
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Vielen Dank für Ihr Interesse. Sie haben von uns eine Bestätigung-E-Mail mit einem Link erhalten. Bitte klicken Sie diesen Link an, um Ihre Newsletter-Registrierung abzuschließen. Mit der Bestätigungs-E-Mail können Sie verhindern, dass Ihre E-Mail-Adresse von Fremden missbraucht wird. Wir freuen uns, gemeinsam mit Ihnen für die Zukunft von Kindern auf der ganzen Welt zu kämpfen.</p>\r\n"
+  format: html
+thank_you_headline: 'Nur noch ein Schritt'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/newsletter
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: 'Newsletter abonnieren'

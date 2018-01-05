@@ -1,0 +1,6 @@
+uuid: null
+langcode: de
+status: true
+dependencies: {  }
+id: field_impact_bar
+label: Impact bar

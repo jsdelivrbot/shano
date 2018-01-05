@@ -1,0 +1,567 @@
+<?php
+
+/**
+ * @file
+ * Contains child_sponsorship.module..
+ */
+
+use Drupal\child\Controller\ChildController;
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\NestedArray;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * Implements hook_help().
+ */
+function child_sponsorship_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the child module.
+    case 'help.page.child':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Child sponsorship') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function child_sponsorship_theme($existing, $type, $theme, $path) {
+  return array(
+    'child_sponsorship_section_header' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+      ],
+      'template' => 'child-sponsorship/child-sponsorship-section-header',
+    ],
+    'child_sponsorship_my_child_billy_section_header' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+      ],
+      'template' => 'child-sponsorship-my-child-billy/child-sponsorship-my-child-billy-section-header',
+    ],
+    'editorial_child_sponsorship_child_section' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'sponsor_form_url' => NULL,
+        'hide_sponsor_button' => NULL,
+        'child_image' => [],
+        'child_image_src' => [],
+        'child_video_src' => [],
+        'child_info' => [],
+      ],
+      'template' => 'editorial-child-sponsorship-child-section',
+    ],
+    'child_sponsorship_section_child_finder' => [
+      'variables' => [
+        'content' => [],
+        'attributes' => [],
+      ],
+      'template' => 'child-sponsorship-section-child-finder',
+    ],
+    'child_sponsorship_section_child_finder_teaser' => [
+      'variables' => [
+        'content' => [],
+        'attributes' => [],
+      ],
+      'template' => 'child-sponsorship-section-child-finder-teaser',
+    ],
+
+//    Child country form
+    'child_sponsorship_child_country_form' => [
+      'render element' => 'form_child_country',
+      'template' => 'child-sponsorship-child-country-form',
+    ],
+//    Child birthday form
+    'child_sponsorship_child_birthday_form' => [
+      'render element' => 'form_child_birthday',
+      'template' => 'child-sponsorship-child-birthday-form',
+    ],
+//    Child sponsorship
+    'child_sponsorship_section_faq' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship/child-sponsorship-section-faq',
+    ],
+    'child_sponsorship_section_help' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship/child-sponsorship-section-help',
+    ],
+    'child_sponsorship_section_my_worldvision_preview' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship/child-sponsorship-section-my-worldvision-preview',
+    ],
+    'child_sponsorship_section_child_sponsorship_experience' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'youtube_id' => "XenWJF1X7_Q", // My WorldVision preview
+      ],
+      'template' => 'child-sponsorship/child-sponsorship-section-child-sponsorship-experience',
+    ],
+    'child_sponsorship_my_child_billy_section_child_sponsorship_experience' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'youtube_id' => "4dpSFZ-db_I", // Billy & Urs campaign video
+      ],
+      'template' => 'child-sponsorship-my-child-billy/child-sponsorship-my-child-billy-section-sponsorship-experience',
+    ],
+
+    'child_sponsorship_section_child_sponsorship_suggestion' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship/child-sponsorship-section-child-sponsorship-suggestion',
+    ],
+
+//    Child sponsorship info
+    'child_sponsorship_info_section_header' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship-info/child-sponsorship-info-section-header',
+    ],
+    'child_sponsorship_info_section_navbar' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship-info/child-sponsorship-info-section-navbar',
+    ],
+    'child_sponsorship_info_section_child_sponsorship' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship-info/child-sponsorship-info-section-child-sponsorship',
+    ],
+    'child_sponsorship_info_section_help_impact' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'settings' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship-info/child-sponsorship-info-section-help-impact',
+    ],
+    'child_sponsorship_info_section_sponsorship_experience' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+        'youtube_id' => "XenWJF1X7_Q", // My WorldVision preview
+      ],
+      'template' => 'child-sponsorship-info/child-sponsorship-info-section-sponsorship-experience',
+    ],
+    'child_sponsorship_info_section_transparency' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'child-sponsorship-info/child-sponsorship-info-section-transparency',
+    ],
+  );
+}
+
+
+/**
+ * Generates the markup for the editorial_content child sponsorship child finder section.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see child_sponsorship_editorial_content_view
+ */
+function child_sponsorship_editorial_content_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Don't use it in CLI it throws fatals.
+  if (PHP_SAPI !== 'cli' && $display->getComponent('child_sponsorship')) {
+    \Drupal::service('page_cache_kill_switch')->trigger();
+
+    $child_finder_values = $entity->get('field_child_finder')->getValue()[0];
+
+    $search_params['country'] = $child_finder_values['child_country'];
+    if ($child_finder_values['child_gender'] != FALSE) {
+      $search_params['gender'] = $child_finder_values['child_gender'];
+    }
+
+    if ($child_finder_values['child_birthday']) {
+      $search_params['birthday'] = \Drupal::service('date.formatter')
+        ->format(time(), 'custom', 'd');
+      $search_params['birthmonth'] = \Drupal::service('date.formatter')
+        ->format(time(), 'custom', 'm');
+    }
+
+    $child_controller = new ChildController();
+    $child = $child_controller->getRandomChild($search_params);
+
+    switch (TRUE) {
+      // If child wasn't set for user, e.g. if user already exceeded 4 children limit we haven't to show
+      // not session saved child, instead we would show last child from user session, so user can sponsor
+      // this child, otherwise when user clicks sponsor submit the another child will be shown from user session.
+      case !empty($child) && !$child_controller->setChildForUser($child)
+        && !($child = $child_controller->getChildFromUser()):
+      // Even if search criteria returned false let widget show last inspected child from user session, so
+      // user can sponsor the child from current page as if children available it's not good to show child
+      // was not found. But if search returns restuls & user doesn't exceed 4 children limit child will be available.
+      case empty($child) && !($child = $child_controller->getChildFromUser()):
+        $build['child_sponsorship'] = [
+            '#markup' => t('Could not find a child.'),
+            '#cache' => [
+              'max-age' => 0,
+            ],
+          ];
+        break;
+
+      default:
+        $build['child_sponsorship'] = [
+          '#theme' => 'editorial_child_sponsorship_child_section',
+          '#attributes' => $build['#attributes'] ? $build['#attributes'] : [],
+          '#content_attributes' => [],
+          '#id' => $entity->id(),
+          '#child_image' => $image = $child_controller->getChildImage($child, "square_xs"),
+          '#child_image_src' => $child_controller->getChildImageSrc($child),
+          '#child_video_src' => $child->getChildVideoUrl()->value,
+          '#child_info' => [
+            'lives_with' => $child->get('field_child_liveswithdesc')->value,
+            'age' => $child->getAge(),
+            'birthday' => \Drupal::service('date.formatter')
+              ->format(strtotime(substr($child->getBirthdate()->value, 0, 10)), 'custom', 'd.m.Y'),
+            'likes' => $child->get('field_child_playdesc')->value,
+            'country' => $child->getCountry()->getName(),
+            'name' => $child->getGivenName()->value,
+          ],
+          '#cache' => [
+            'max-age' => 0,
+          ],
+        ];
+
+        $build['#cache']['max-age'] = 0;
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function child_sponsorship_entity_extra_field_info() {
+  $extra = [];
+
+  $extra['editorial_content']['child_sponsorship_child_section']['display']['child_sponsorship'] = array(
+    'label' => t('Child sponsorship child section'),
+    'description' => t('Select a child for sponsorship with filter options.'),
+    'weight' => 101,
+    'visible' => FALSE,
+  );
+
+  return $extra;
+}
+
+/**
+ * Individual block child-select
+ */
+function template_preprocess_editorial_child_sponsorship_child_section(&$vars) {
+  $id = Html::getUniqueId('editorial-child-sponsorship-child-select--' . $vars['id']);
+
+  $vars['attributes']['id'] = $id;
+  $vars['#attached']['library'][] = 'child_sponsorship/child-select';
+
+  $vars['sponsor_form_url'] = !empty($vars['sponsor_form_url']) ? $vars['sponsor_form_url']
+    : (\Drupal::config('wv_site.settings.routing')->get('sponsor_form_url')
+    ?: '/formulare/kinderpatenschaft-uebernehmen');
+
+  if (!empty($vars['child_video_src'])) {
+    $vars['#attached']['library'][] = 'child_sponsorship/child-select-video';
+  }
+}
+
+/**
+ * Child-sponsorship info page
+ */
+function template_preprocess_child_sponsorship_info_section_header(&$variables) {
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-info-header';
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-info-automatic-teaser';
+}
+
+
+/**
+ * Child-sponsorship info navbar
+ */
+function template_preprocess_child_sponsorship_info_section_navbar(&$variables) {
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-info-navbar';
+}
+
+/**
+ * Child-sponsorship info transparency
+ */
+function template_preprocess_child_sponsorship_info_section_transparency(&$variables) {
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-info-sponsorship-transparency';
+}
+
+/**
+ * Child-sponsorship header
+ */
+function template_preprocess_child_sponsorship_section_header(&$variables) {
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-header';
+}
+
+/**
+ * Child-sponsorship header billy & urs version
+ */
+function template_preprocess_child_sponsorship_my_child_billy_section_header(&$variables) {
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-header';
+}
+
+/**
+ * Help impact
+ */
+function template_preprocess_child_sponsorship_info_section_help_impact(&$variables) {
+  $id = Html::getUniqueId('editorial-hero-slider--' . $variables['id']);
+
+//  Slider
+//  ============================
+  $variables['settings'] = NestedArray::mergeDeep([
+    'dots' => TRUE,
+    'arrows' => FALSE,
+    'mobileFirst' => TRUE,
+    'adaptiveHeight' => TRUE,
+    'slidesToShow' => 1,
+    'autoplay' => FALSE,
+    'autoplaySpeed' => 6000,
+    'speed' => 700,
+    'infinite' => TRUE,
+    'cssEase' => 'ease-out',
+    'responsive' => [],
+  ], $variables['settings']);
+
+  $variables['attributes']['id'] = $id;
+  $variables['#attached']['library'][] = 'editorial/hero-slider';
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-info-help-impact';
+  $variables['#attached']['drupalSettings']['editorial']['hero_slider'][$id] = $variables['settings'];
+
+  $variables['#attached']['drupalSettings']['editorial']['hero_slider'][$id]['responsive'][] = [
+    'breakpoint' => 767,
+    'settings' => [
+      'arrows' => TRUE,
+    ],
+  ];
+}
+
+/**
+ * Sponsorship experience section on child sponsorship info page
+ */
+function template_preprocess_child_sponsorship_info_section_sponsorship_experience(&$variables) {
+
+//  YouTube Video
+//  ============================
+  $variables['#attached']['library'][] = 'editorial/youtube-video';
+}
+
+/**
+ * Sponsorship experience section on child sponsorship page
+ */
+function template_preprocess_child_sponsorship_section_child_sponsorship_experience(&$variables) {
+//  YouTube Video
+//  ============================
+  $variables['#attached']['library'][] = 'editorial/youtube-video';
+}
+
+/**
+ * Sponsorship experience section on child sponsorship page version my-child-billy
+ */
+function template_preprocess_child_sponsorship_my_child_billy_section_child_sponsorship_experience(&$variables) {
+//  YouTube Video
+//  ============================
+  $variables['#attached']['library'][] = 'editorial/youtube-video';
+}
+
+
+// Default in child_sponsorship module
+function child_sponsorship_template_preprocess_default_variables_alter(&$variables) {
+  $variables['base_path'] = base_path();
+  $variables['module_path'] = \Drupal::moduleHandler()
+    ->getModule('child_sponsorship')
+    ->getPath();
+  $variables['theme_wovide_path'] = drupal_get_path('theme', 'wovide');
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ */
+function child_sponsorship_page_attachments(array &$attachments) {
+  /** @var Request $request */
+  $request = \Drupal::request();
+  $request_uri = $request->getRequestUri();
+
+  switch ($request_uri) {
+    case '/kinderpatenschaft' :
+      $keywords = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'keywords',
+          'content' => 'kinderpatenschaft, Pate werden, Kinder in Not helfen',
+        ],
+      ];
+      $description = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'description',
+          'content' => 'Jetzt Pate werden und zusammen mit World Vision Deutschland das Patenkind und sein Umfeld unterstützen.',
+        ],
+      ];
+      $attachments['#attached']['html_head'][] = [$keywords, 'keywords'];
+      $attachments['#attached']['html_head'][] = [$description, 'description'];
+      break;
+    case '/kinderpatenschaft-informieren' :
+      $keywords = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'keywords',
+          'content' => 'kinderpatenschaft, bedürftigen, Kind, Kinder, Tranzparenzpreis, ärmsten, Ländern, Familie, world, vision',
+        ],
+      ];
+      $description = [
+        '#tag' => 'meta',
+        '#attributes' => [
+          'name' => 'description',
+          'content' => 'Mit einer Kinderpatenschaft ermöglichen Sie Ihrem Patenkind dauerhaft Zugang zu sauberem Trinkwasser, gesunde Ernährung, medizinische Versorgung und Bildung - Mit nur 1 Euro am Tag.',
+        ],
+      ];
+      $attachments['#attached']['html_head'][] = [$keywords, 'keywords'];
+      $attachments['#attached']['html_head'][] = [$description, 'description'];
+      break;
+
+//      @TODO remove normal robots tag for child-sponsorship my-child-billy
+    case '/kinderpatenschaft-billy-und-urs' :
+      $robots = [
+        '#tag' => 'meta',
+        '#attributes' => array(
+          'name' => 'robots',
+          'content' => 'noindex, nofollow',
+        ),
+      ];
+      $attachments['#attached']['html_head'][] = [$robots, 'noindex'];
+
+      break;
+  }
+
+}
+//function child_sponsorship_preprocess_html(&$variables){
+//  $robots = [
+//    '#tag' => 'meta',
+//    '#attributes' => array(
+//      'name' => 'robots',
+//      'content' => 'noindex, nofollow',
+//    ),
+//  ];
+//  $attachments['#attached']['html_head'][] = [$robots, 'robots'];
+////  print_r($attachments);
+////
+////  exit;
+//}
+
+function page_html_head_alter(&$head_elements) {
+  $request = \Drupal::request();
+  $request_uri = $request->getRequestUri();
+
+//  if($request_uri == '/kinderpatenschaft-billy-und-urs') {
+
+    foreach ($head_elements as $key => $element) {
+
+      if (isset($element['#attributes']['noindex'])) {
+        $head_elements[$key]['#attributes']['noindex'] = 'noindex, nofollow';
+      }
+
+    }
+    exit;
+//  }
+}
+
+
+/**
+ * Implements hook_preprocess_node__editorial_page()
+ */
+function child_sponsorship_preprocess_node__editorial_page(&$variables) {
+  $hide_childfinder_globally = \Drupal::config('wv_site.settings.child_finder')->get('hide_childfinder_globally');
+
+  // Check if we disabled the childfinder globally in settings or on editorial page directly.
+  if ($variables['node']->field_child_finder[0]->value == TRUE || $hide_childfinder_globally == TRUE) {
+    $variables['content']['field_child_finder'] = [
+      '#markup' => '',
+      '#weight' => $variables['content']['field_child_finder']['#weight'],
+    ];
+  }
+  else {
+    $child_finder = [
+      '#theme' => "child_sponsorship_section_child_finder_teaser",
+      '#content' => [
+        'form_child_finder_birthday' =>
+          \Drupal::formBuilder()
+            ->getForm('Drupal\child_sponsorship\Form\ChildFinderBirthday'),
+        'form_child_finder_country' =>
+          \Drupal::formBuilder()
+            ->getForm('Drupal\child_sponsorship\Form\ChildFinderCountry'),
+      ],
+    ];
+
+    /** @var \Drupal\Core\Render\Renderer $renderer */
+    $renderer = \Drupal::service('renderer');
+    $variables['content']['field_child_finder'] = [
+      '#markup' => $renderer->render($child_finder),
+      '#weight' => $variables['content']['field_child_finder']['#weight'],
+    ];
+
+    $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-child-finder-teaser';
+  }
+}
+
+function child_sponsorship_preprocess_child_sponsorship_section_child_finder_teaser(&$variables) {
+  $variables['#attached']['library'][] = 'child_sponsorship/child-sponsorship-child-finder-teaser';
+}

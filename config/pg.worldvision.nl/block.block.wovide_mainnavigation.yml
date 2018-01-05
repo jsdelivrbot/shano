@@ -1,0 +1,26 @@
+uuid: f8e7a182-646a-42ff-a018-6ff0e4790053
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wovide
+_core:
+  default_config_hash: cOepErXSF2usG2JDQpQgZRF-2ClQpF8SKmUEVo5AOgg
+id: wovide_mainnavigation
+theme: wovide
+region: navigation
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Hauptnavigation
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

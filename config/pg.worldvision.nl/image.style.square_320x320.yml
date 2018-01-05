@@ -1,0 +1,14 @@
+uuid: 9831c9d8-74fd-4a61-bfc5-795221f91bf2
+langcode: nl
+status: true
+dependencies: {  }
+name: square_320x320
+label: 'Square (320x320)'
+effects:
+  76c9f288-4694-4bcd-a65a-96cad94c1f77:
+    uuid: 76c9f288-4694-4bcd-a65a-96cad94c1f77
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 320

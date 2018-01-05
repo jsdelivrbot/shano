@@ -1,0 +1,21 @@
+uuid: 4190747b-6119-4e65-a136-9e0eff172761
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_headline
+    - node.type.public_donor_overview
+_core:
+  default_config_hash: HO7-Mtcc0zQbsXpieA2pFh9pAg5BmrnD5GThehQrNas
+id: node.public_donor_overview.field_pdp_headline
+field_name: field_pdp_headline
+entity_type: node
+bundle: public_donor_overview
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

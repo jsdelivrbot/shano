@@ -1,0 +1,29 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.relation_teaser
+    - editorial_content.editorial_content_type.teaser
+    - field.storage.paragraph.field_paragraph_relation_teaser
+    - paragraphs.paragraphs_type.paragraph_related_teaser
+id: paragraph.paragraph_related_teaser.field_paragraph_relation_teaser
+field_name: field_paragraph_relation_teaser
+entity_type: paragraph
+bundle: paragraph_related_teaser
+label: 'Relation Teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      relation_teaser: relation_teaser
+      teaser: teaser
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: relation_teaser
+field_type: entity_reference

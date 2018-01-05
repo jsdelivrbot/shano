@@ -1,0 +1,30 @@
+<p class="h6">{{ 'Follow Us'|trans }}</p>
+<ul class="list-unstyled list-inline vert-offset-top-1">
+  {% if ourFacebookPage|render %}
+    <li>
+      <a target="_blank" class="btn-icon-round facebook"
+           href="{{ ourFacebookPage }}"><i class="icon-facebook"></i></a>
+    </li>
+  {% endif %}
+
+  {% if ourTwitterPage|render %}
+    <li>
+      <a target="_blank" class="btn-icon-round twitter" href="{{ ourTwitterPage }}"><i
+          class="icon-twitter"></i></a>
+    </li>
+  {% endif %}
+
+  {% if ourGooglePlusPage|render %}
+    <li>
+      <a target="_blank" class="btn-icon-round google-plus"
+           href="{{ ourGooglePlusPage }}"><i class="icon-google-plus"></i></a>
+    </li>
+  {% endif %}
+
+  {% if ourXingPage|render %}
+    <li>
+      <a target="_blank" class="btn-icon-round xing"
+           href="{{ ourXingPage }}"><i class="icon-xing"></i></a>
+    </li>
+  {% endif %}
+</ul>

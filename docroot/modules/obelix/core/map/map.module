@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * Contains map.module..
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\map\Controller\MapController;
+use Drupal\map\Entity\Map;
+
+/**
+ * Implements hook_help().
+ */
+function map_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the map module.
+    case 'help.page.map':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Map Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function map_theme($existing, $type, $theme, $path)
+{
+  return array(
+    'world-map' => array(
+      'variables' => array('countrys' => NULL),
+    ),
+    'map-default' => array(
+      'variables' => array('countrys' => NULL),
+    ),
+  );
+}
+
+/**
+ * Generates the markup for the editorial_content direct donation.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see direct_donation_editorial_content_view
+ */
+
+function map_map_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode)
+{
+  if ($display->getComponent('map')) {
+
+
+    // @todo set a unique id to prevent crashes with tow maps.
+    /** @var Map $entity */
+
+    $map_data = [
+      'lat' => $entity->get('field_lat')->value,
+      'lng' => $entity->get('field_lng')->value,
+      'zoom' => $entity->get('field_zoom')->value,
+    ];
+    $geo_objects = $entity->getGeoObjects();
+    $map_controller = new MapController();
+    $build['map'] = [
+      '#theme' => 'map-default',
+      '#countrys' => $map_controller->getCountryData($geo_objects),
+      '#attached' => [
+        'drupalSettings' => [
+          'map' => [
+            'map_data' => $map_data,
+            'geo_json' => $map_controller->generateGeoJson($geo_objects),
+            'countries' => $map_controller->getCountryData($geo_objects)
+          ]
+        ]
+      ]
+    ];
+
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function map_entity_extra_field_info()
+{
+  $extra = [];
+
+  $extra['map']['map']['display']['map'] = array(
+    'label' => t('Map'),
+    'description' => t('The rendered map'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}
+

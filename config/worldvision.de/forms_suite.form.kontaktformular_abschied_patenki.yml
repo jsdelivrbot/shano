@@ -1,0 +1,31 @@
+uuid: 97515ad5-3bba-4eaf-a2db-7948cdf00c51
+langcode: de
+status: true
+dependencies: {  }
+id: kontaktformular_abschied_patenki
+label: 'E-Letter to child TZA-166145'
+recipients:
+  - GFR-Sponsor-E-Letter@wvi.org
+reply: ''
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p class=\"text-align-center\">Vielen Dank für Ihre Nachricht. Wir werden Sie an Ihr Patenkind weiterleiten.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/kontakt-abschied
+headline: 'Nachricht an Ihr Patenkind'
+description: "<p>Sie möchten sich von Ihrem Patenkind verabschieden? Hier haben Sie die Möglichkeit dazu! </p>\r\n<p>Bitte verfassen Sie Ihre Nachricht auf Englisch. Nennen Sie uns im Kommentarfeld bitte auch <b>Ihre Kindernummer</b> (bspw. BOL-172919-XXXX), damit wir die Nachricht richtig zuordnen können.</p>\r\n "
+disclaimer: ''
+submit_button: Absenden

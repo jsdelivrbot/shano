@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.field.affiliate.merlin.field_extra_codes
+    - field.field.affiliate.merlin.field_group
+    - field.field.affiliate.merlin.field_redirect
+  module:
+    - link
+id: affiliate.merlin.default
+targetEntityType: affiliate
+bundle: merlin
+mode: default
+content:
+  field_extra_codes:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_group:
+    weight: 0
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_redirect:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link_separate
+  motivation_code:
+    label: above
+    type: string
+    weight: 2
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

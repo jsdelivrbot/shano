@@ -1,0 +1,75 @@
+uuid: be43b784-c555-4059-ae8a-80853cffcb71
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_suggestion.field_child_select
+    - field.field.forms_message.child_sponsorship_suggestion.field_form_sql_export
+    - field.field.forms_message.child_sponsorship_suggestion.field_suggestion
+    - field.field.forms_message.child_sponsorship_suggestion.field_user_data
+    - forms_suite.form.child_sponsorship_suggestion
+  module:
+    - child_sponsorship
+    - forms_suite
+_core:
+  default_config_hash: yHXyxXy9RiVtO5QwC7tNMmIW8-Tb4S7a_P-Iv6-i5wA
+id: forms_message.child_sponsorship_suggestion.default
+targetEntityType: forms_message
+bundle: child_sponsorship_suggestion
+mode: default
+content:
+  copy:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_child_select:
+    type: wovi_child_select_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_form_sql_export:
+    weight: 51
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_suggestion:
+    type: wovi_suggestion_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 3
+    region: content
+    settings:
+      hide_first_name: true
+      hide_title: true
+      postal_max_length: '6'
+      hide_initials: false
+      hide_middle_name: false
+      hide_country: false
+      hide_birthday: false
+      optional_bic: false
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: -50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,20 @@
+uuid: 4d3bcb47-6d7b-4de4-bef4-0d3c110e5bdc
+langcode: nl
+status: true
+dependencies:
+  module:
+    - entity_test
+    - text
+id: entity_test_mulrev.field_test_text
+field_name: field_test_text
+entity_type: entity_test_mulrev
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

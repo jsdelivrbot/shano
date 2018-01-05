@@ -1,0 +1,24 @@
+uuid: 786ca8fe-732f-4449-b163-7ce421a9f8e4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_yearly_donation
+    - forms_suite.form.test_sponsorship_en
+  module:
+    - fs_payment
+id: forms_message.test_sponsorship_en.field_yearly_donation
+field_name: field_yearly_donation
+entity_type: forms_message
+bundle: test_sponsorship_en
+label: 'yearly donation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_yearly_donation_field

@@ -1,0 +1,24 @@
+uuid: ca14269b-eba1-4492-a4fc-39a14d7def7a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user
+    - forms_suite.form.child_sponsorship_suggestion_ema
+  module:
+    - forms_suite
+id: forms_message.child_sponsorship_suggestion_ema.field_user
+field_name: field_user
+entity_type: forms_message
+bundle: child_sponsorship_suggestion_ema
+label: 'user data email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Meine Angaben'
+    subline: ''
+field_type: wovi_user_data_email_field

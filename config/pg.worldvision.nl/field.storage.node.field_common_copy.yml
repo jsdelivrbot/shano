@@ -1,0 +1,21 @@
+uuid: 27e49725-3770-472e-a5e1-5155eb90fcba
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: 5b9rgu4CdSvLEbjqggOz_YjrvrjzIPEgoVKqzaV3wKA
+id: node.field_common_copy
+field_name: field_common_copy
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

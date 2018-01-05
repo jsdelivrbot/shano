@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the search results page when editorial module is enabled.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+#}
+
+<div{{ attributes }}>
+  <div{{ content_attributes }}>
+    {{ content }}
+  </div>
+</div>

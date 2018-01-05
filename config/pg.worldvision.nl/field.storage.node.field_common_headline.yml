@@ -1,0 +1,23 @@
+uuid: 196c18cf-8d08-49a3-b6e8-42cd07705232
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lKnz3FAtsUsGqvs2DspT6M7qPov7OeGRNJKH9cDguok
+id: node.field_common_headline
+field_name: field_common_headline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

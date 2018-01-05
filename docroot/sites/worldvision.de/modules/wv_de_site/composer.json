@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/wv_de_site",
+  "type": "drupal-module",
+  "description": "Provides common features for de site.",
+  "require": { }
+}

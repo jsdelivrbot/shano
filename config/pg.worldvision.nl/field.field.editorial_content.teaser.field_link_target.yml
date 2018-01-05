@@ -1,0 +1,23 @@
+uuid: 4257a6c4-ba3f-4fb5-bbce-3af284b54372
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.teaser
+    - field.storage.editorial_content.field_link_target
+  module:
+    - options
+id: editorial_content.teaser.field_link_target
+field_name: field_link_target
+entity_type: editorial_content
+bundle: teaser
+label: Target
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

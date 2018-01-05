@@ -1,0 +1,1674 @@
+<?php
+
+/**
+ * @file
+ * Contains editorial.module..
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\NestedArray;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Field\FieldItemInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\layout_plugin\Layout;
+
+/**
+ * Implements hook_help().
+ */
+function editorial_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the editorial module.
+    case 'help.page.editorial':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Creates a custom content type to build layouted pages with edtiroial content pieces.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function editorial_theme($existing, $type, $theme, $path) {
+  return [
+    'search_results_page' => [
+      'variables' => [
+        'attributes' => [],
+        'content' => NULL,
+        'content_attributes' => [],
+      ],
+    ],
+    'editorial_button' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'title' => NULL,
+        'uri' => NULL,
+        'settings' => [],
+      ],
+      'template' => 'editorial-button',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_link' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'title' => NULL,
+        'uri' => NULL,
+        'settings' => [],
+      ],
+      'template' => 'editorial-link',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_copy' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-copy',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_campaign_teaser' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-campaign-teaser',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_headline' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'tag' => NULL,
+        'url' => NULL,
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-headline',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_hero_slider' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'slides' => [],
+        'settings' => [],
+        'preview_video_id' => NULL,
+        'preview_video_cta' => NULL,
+        'preview_video_image' => NULL,
+      ],
+      'template' => 'editorial-hero-slider',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_hero_slider_slide' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+        'youtube_id' => NULL,
+        'youtube_cta_title' => NULL,
+      ],
+      'template' => 'editorial-hero-slider-slide',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_image' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-image',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_quotation' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-quotation',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_slideshow' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'slides' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-slideshow',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_slideshow_slide' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-slideshow-slide',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_story_teaser' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'link_attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-story-teaser',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_teaser' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content_attributes' => [],
+        'content' => [],
+        'settings' => [],
+      ],
+      'template' => 'editorial-teaser',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_youtube_video' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'youtube_id' => NULL,
+        'content' => [],
+      ],
+      'template' => 'editorial-youtube-video',
+      'file' => 'editorial.theme.inc',
+    ],
+    'editorial_code_embed' => [
+      'variables' => [
+        'id' => NULL,
+        'content' => [],
+      ],
+      'template' => 'editorial-code-embed',
+      'file' => 'editorial.theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function editorial_entity_extra_field_info() {
+  $extra = [];
+
+  $extra['editorial_content']['automatic_teaser']['display']['automatic_teaser'] = array(
+    'label' => t('Automatic Teaser'),
+    'description' => t('Three rendered Story Teaser.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['button']['display']['button'] = array(
+    'label' => t('Call-To-Action'),
+    'description' => t('The rendered Call-To-Action button.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['campaign_teaser']['display']['campaign_teaser'] = array(
+    'label' => t('Campaign Teaser'),
+    'description' => t('The rendered Campaign Teaser.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['copy']['display']['copy'] = array(
+    'label' => t('Copy'),
+    'description' => t('The rendered Copy block.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['headline']['display']['headline'] = array(
+    'label' => t('Headline'),
+    'description' => t('The rendered Headline.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['hero_slider']['display']['hero_slider'] = array(
+    'label' => t('Hero Slider'),
+    'description' => t('The rendered Hero Slider.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['image']['display']['image'] = array(
+    'label' => t('Image'),
+    'description' => t('The rendered Image.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['quotation']['display']['quotation'] = array(
+    'label' => t('Quotation'),
+    'description' => t('The rendered Quotation.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['relation_teaser']['display']['relation_teaser'] = array(
+    'label' => t('Relation Teaser'),
+    'description' => t('The rendered related Teaser.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['slideshow']['display']['slideshow'] = array(
+    'label' => t('Slideshow'),
+    'description' => t('The rendered Image Slideshow.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['story_teaser']['display']['story_teaser'] = array(
+    'label' => t('Story Teaser'),
+    'description' => t('The rendered Story Teaser.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['teaser']['display']['teaser'] = array(
+    'label' => t('Teaser'),
+    'description' => t('The rendered Teaser.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['youtube_video']['display']['youtube_video'] = array(
+    'label' => t('YouTube Video'),
+    'description' => t('The rendered YouTube Video.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['field_collection_item']['field_hero_slide']['display']['hero_slider_slide'] = array(
+    'label' => t('Hero Slider - Slide'),
+    'description' => t('The rendered Hero Slider - Slide.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  $extra['editorial_content']['code_embed']['display']['code_embed'] = array(
+    'label' => t('code embed'),
+    'description' => t('The embedded javascript-code or html markup.'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}
+
+/**
+ * Implements hook__editorial_field_settings_default()
+ */
+function editorial_editorial_field_settings_default() {
+  return [
+    'highlighted_style' => NULL,
+    'container_style' => 'container',
+    'container_padding' => NULL,
+  ];
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function editorial_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  if ($context['widget']->getPluginId() == 'editorial_widget') {
+    $element['#attached']['library'][] = 'editorial/bootstrap.grid';
+  }
+}
+
+/**
+ * Implements hook_editorialfield_layout_settings_form_alter().
+ */
+function editorial_editorial_widget_layout_settings_form_alter(array &$form, FormStateInterface $formState, FieldItemInterface $item) {
+  if ($layout = Layout::layoutPluginManager()->getDefinition($item->layout)) {
+    if ($layout['provider'] == 'editorial') {
+      $form['highlighted_style'] = [
+        '#type' => 'select',
+        '#title' => t('Highlighted'),
+        '#options' => [
+          'section-highlighted--primary' => t('Orange'),
+          'section-highlighted--secondary' => t('Blue'),
+          'section-highlighted--tertiary' => t('Light grey'),
+          'section-highlighted--quaternary' => t('Anthracite'),
+        ],
+        '#empty_option' => t('None'),
+        '#default_value' => $item->settings['highlighted_style']
+      ];
+      $form['container_style'] = [
+        '#type' => 'select',
+        '#title' => t('Container'),
+        '#options' => [
+          'container' => t('Fixed'),
+          'container-fluid' => t('Fluid'),
+        ],
+        '#default_value' => $item->settings['container_style']
+      ];
+      $form['container_padding'] = [
+        '#type' => 'select',
+        '#title' => t('Container padding'),
+        '#description' => t('"Padding bottom increased" has an effect on every container-type. "No padding top", "No padding bottom" & "No padding top & bottom" has only effect on highlighted containers and containers with story teasers.'),
+        '#options' => [
+          '' => t('Standard padding'),
+          'container-padding-bottom' => t('Padding bottom increased'),
+          'container-padding-top-none' => t('No padding top'),
+          'container-padding-bottom-none' => t('No padding bottom'),
+          'container-padding-top-bottom-none' => t('No padding top & bottom'),
+        ],
+        '#default_value' => $item->settings['container_padding']
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_editorialfield_layout_view_alter().
+ */
+function editorial_editorial_formatter_layout_view_alter(array &$build, FieldItemInterface $item) {
+  if ($layout = Layout::layoutPluginManager()->getDefinition($item->layout)) {
+    if ($layout['provider'] == 'editorial') {
+      if ($class = $item->settings['container_style']) {
+        $build['#attributes']['class'][] = $class;
+      }
+
+      $wrapper_class = [];
+      $wrapper_class[] = 'editorial-section';
+
+      if ($class = $item->settings['highlighted_style']) {
+        $wrapper_class[] = 'section-highlighted';
+        $wrapper_class[] = $class;
+      }
+
+      $container_padding = isset($item->settings['container_padding']) ? $item->settings['container_padding'] : NULL;
+      if ($class = $container_padding) {
+        $build['#attributes']['class'][] = $class;
+      }
+
+      $build['#theme_wrappers'] = [
+        'container' => [
+          '#attributes' => [
+            'class' => $wrapper_class,
+          ]
+        ],
+      ];
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function editorial_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  _editorial_autoteaser_node_form_group($form, $form_state);
+}
+
+
+/**
+ * Implements hook_ENTITY_views().
+ */
+function editorial_editorial_content_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $extra_field_info = editorial_entity_extra_field_info();
+
+  // Automatically call editorial_editorial_content_view__EXTRA_FIELD_ID for all
+  // editorial content extra fields.
+  foreach ($extra_field_info['editorial_content'] as $editorial_content_type => $extra_fields) {
+    foreach (array_keys($extra_fields['display']) as $extra_field) {
+      if ($display->getComponent($extra_field)) {
+        $callback = __FUNCTION__ . '__' . $extra_field;
+        if (function_exists($callback)) {
+          $callback($build, $entity, $display, $view_mode);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Generates the markup for the editorial_content automatic teaser.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__automatic_teaser(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  // Collect all related nodes.
+  $query = \Drupal\Core\Database\Database::getConnection()
+    ->select('node', 'n')
+    ->fields('n', ['nid']);
+
+  $query->leftJoin('node_field_data', 'data', '%alias.nid = n.nid');
+
+  foreach ($entity->field_tags as $tag) {
+    $alias = $query->leftJoin('taxonomy_index', NULL, '%alias.nid = n.nid');
+    $query->condition($alias . '.' . 'tid', $tag->target_id);
+  }
+
+  $nids = $query->condition('data.status', NODE_PUBLISHED)
+    ->orderBy('data.created', 'DESC')
+    ->range(0, 3)
+    ->distinct()
+    ->execute()
+    ->fetchAllKeyed(0, 0);
+
+  // Remove the currently viewed node.
+  $path = \Drupal::request()->getPathInfo();
+  $params = Url::fromUserInput($path)->getRouteParameters();
+  if (isset($params['node'])) {
+    unset($nids[$params['node']]);
+  }
+
+  // Load nodes.
+  $nodes = \Drupal::entityTypeManager()
+    ->getStorage('node')
+    ->loadMultiple($nids);
+
+  // Get layout for output.
+  if (count($nodes) == 1) {
+    $layout = Layout::layoutPluginManager()
+      ->createInstance('editorial-12', []);
+  }
+  else {
+    if (count($nodes) == 2) {
+      $layout = Layout::layoutPluginManager()
+        ->createInstance('editorial-6-6', []);
+    }
+    else {
+      $layout = Layout::layoutPluginManager()
+        ->createInstance('editorial-4-4-4', []);
+    }
+  }
+
+  $region_names = $layout->getRegionNames();
+
+  // Display nodes if more than 3 are available
+  $countNodes = count($nodes);
+
+  if (count($nodes) == count($region_names)) {
+    $region_content = [];
+
+    foreach ($nodes as $node) {
+      $attributes = isset($build['#attributes']) ? $build['#attributes'] : [];
+      $content_attributes = [];
+
+      $inner_content = [
+        '#type' => 'container',
+        '#attributes' => [
+          'class' => ['inner-content'],
+        ],
+      ];
+
+      if ($node->field_autoteaser_title->isEmpty()) {
+        $headline = $node->title[0]->value;
+      }
+      else {
+        $headline = $node->field_autoteaser_title[0]->value;
+      }
+
+      if ($node->field_autoteaser_description->isEmpty()) {
+        $subtitle = '';
+      }
+      else {
+        $subtitle = $node->field_autoteaser_description[0]->value;
+
+      }
+
+      if ($node->field_autoteaser_button_label->isEmpty()) {
+        $button_label = t('Learn more');
+      }
+      else {
+        $button_label = $node->field_autoteaser_button_label[0]->value;
+      }
+
+      $inner_content['headline'] = [
+        '#theme' => 'editorial_headline__story_teaser__automatic_teaser',
+        '#id' => 'automatic--teaser' . $node->id(),
+        '#tag' => 'h3',
+        '#content' => $headline,
+      ];
+      $inner_content['subtitle'] = [
+        '#theme' => 'editorial_headline__subtitle__story_teaser__automatic_teaser',
+        '#id' => 'automatic-teaser--subtitle--' . $entity->id(),
+        '#tag' => 'p',
+        '#content' => $subtitle,
+      ];
+      $inner_content['button'] = [
+        '#type' => 'button',
+        '#value' => $button_label,
+        '#attributes' => [
+          'class' => [
+            // @todo move to beaufix.
+            'btn',
+            'btn-beauty',
+          ],
+        ],
+      ];
+
+      $inner_content['#prefix'] = '<a ' .
+        'href="' . $node->toUrl()->toString() . '" ' .
+        'class="content">';
+      $inner_content['#suffix'] = '</a>';
+
+      $content = [
+        '#type' => 'container',
+        '#attributes' => [],
+        'inner_content' => $inner_content,
+      ];
+
+      if (!$node->field_autoteaser_image->isEmpty() &&
+        $image = File::load($node->field_autoteaser_image[0]->target_id)
+      ) {
+        $content['#theme_wrappers']['container__mobile_image'] = [
+          '#attributes' => [
+            'style' => 'background-image: url(' .
+              _editorial_getUrlPath(ImageStyle::load('square_xs')
+                ->buildUrl($image->uri[0]->value)) . ');',
+            'class' => ['bg-mobile'],
+          ],
+        ];
+        $content['#theme_wrappers']['container__desktop_image'] = [
+          '#attributes' => [
+            'style' => 'background-image: url(' .
+              _editorial_getUrlPath(ImageStyle::load('widescreen_16_9_sm')
+                ->buildUrl($image->uri[0]->value)) . ');',
+            'class' => ['bg-desktop'],
+          ],
+        ];
+      }
+      else {
+        $content['#theme_wrappers']['container__mobile_image'] = [
+          '#attributes' => [
+            'style' => 'background-color: #ff7700;',
+            'data-debug' => 'editorial.module, editorial_editorial_content_view__automatic_teaser()',
+            'class' => ['bg-mobile'],
+          ],
+        ];
+        $content['#theme_wrappers']['container__desktop_image'] = [
+          '#attributes' => [
+            'style' => 'background-color: #ff7700;',
+            'data-debug' => 'editorial.module, editorial_editorial_content_view__automatic_teaser()',
+            'class' => ['bg-desktop'],
+          ],
+        ];
+      }
+
+      $region_content[] = [
+        '#theme' => 'editorial_story_teaser__automatic_teaser',
+        '#id' => 'automatic-teaser' . $entity->id(),
+        '#attributes' => $attributes,
+        '#content_attributes' => $content_attributes,
+        '#content' => $content,
+      ];
+    }
+
+    $region_content = array_combine(array_keys($region_names), $region_content);
+
+    $build['automatic_teaser'] = $layout->build($region_content);
+    $build['automatic_teaser']['#attributes']['class'][] = 'container-font';
+  }
+}
+
+/**
+ * Generates the markup for the editorial_content button.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__button(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['button'] = [
+    '#theme' => 'editorial_button',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#title' => $entity->field_link[0]->title,
+    '#uri' => $entity->field_link[0]->uri,
+    '#content_attributes' => [
+      'class' => [
+        $entity->field_button_style[0]->value,
+      ],
+    ],
+    '#settings' => [
+      'target' => $entity->field_link_target[0]->value,
+      'align' => $entity->field_text_align[0]->value,
+    ],
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content button.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__copy(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['copy'] = [
+    '#theme' => 'editorial_copy',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#content' => [
+      'body' => [
+        '#type' => 'processed_text',
+        '#text' => $entity->field_body[0]->value,
+        '#format' => $entity->field_body[0]->format,
+        '#langcode' => $entity->field_body[0]->getLangcode(),
+      ],
+    ],
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content campaign_teaser.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__campaign_teaser(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['campaign_teaser'] = [
+    '#theme' => 'editorial_campaign_teaser',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#content' => [
+      'preview_image' => [
+        'desktop' => [
+          '#theme' => 'responsive_image_formatter',
+          '#item' => $entity->field_campaign_teaser_image[0],
+          '#item_attributes' => [
+            'class' => [
+              'desktop-image',
+              // @todo move to beaufix.
+              'img-fullsize',
+            ],
+          ],
+          '#url' => NULL,
+          '#responsive_image_style_id' => 'campaign_teaser',
+        ],
+        'mobile' => [
+          '#theme' => 'responsive_image_formatter',
+          '#item' => $entity->field_campaign_teaser_m_image[0],
+          '#item_attributes' => [
+            'class' => [
+              'mobile-image',
+              // @todo move to beaufix.
+              'img-fullsize',
+            ],
+          ],
+          '#url' => NULL,
+          '#responsive_image_style_id' => 'campaign_teaser_mobile',
+        ],
+
+      ],
+    ],
+    '#settings' => [
+      'align' => $entity->field_content_block_align[0]->value,
+    ],
+  ];
+  if (!$entity->field_campaign_teaser_headline->isEmpty()) {
+    $build['campaign_teaser']['#content']['headline'] = [
+      '#theme' => 'editorial_headline__campaign_teaser',
+      '#id' => 'campaign-teaser--' . $entity->id(),
+      '#tag' => 'h3',
+      '#content' => $entity->field_campaign_teaser_headline[0]->value,
+    ];
+  }
+  if (!$entity->field_campaign_teaser_subtitle->isEmpty()) {
+    $build['campaign_teaser']['#content']['subtitle'] = [
+      '#theme' => 'editorial_headline__subtitle__campaign_teaser',
+      '#id' => 'campaign-teaser--' . $entity->id(),
+      '#tag' => 'p',
+      '#content' => $entity->field_campaign_teaser_subtitle[0]->value,
+    ];
+  }
+  if (!$entity->field_campaign_teaser_link->isEmpty()) {
+    $build['campaign_teaser']['#content']['button'] = [
+      '#theme' => 'editorial_button__teaser',
+      '#id' => 'campaign-teaser--' . $entity->id(),
+      '#content_attributes' => [
+        'class' => [
+          $entity->field_button_style[0]->value,
+          'text-center-xs',
+        ],
+      ],
+      '#title' => $entity->field_campaign_teaser_link[0]->title,
+      '#uri' => $entity->field_campaign_teaser_link[0]->uri,
+      '#settings' => [
+        'target' => '_self',
+      ],
+    ];
+  }
+}
+
+/**
+ * Generates the markup for the editorial_content headline.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__headline(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['headline'] = [
+    '#theme' => 'editorial_headline',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#content_attributes' => [
+      'class' => [
+        $entity->field_font_size[0]->value,
+      ],
+    ],
+    '#tag' => $entity->field_headline_markup[0]->value,
+    '#content' => $entity->field_headline[0]->value,
+    '#settings' => [
+      'align' => $entity->field_text_align[0]->value,
+    ],
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content hero_slider.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__hero_slider(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $slides = [];
+
+  foreach ($entity->field_hero_slide as $delta => $field_hero_slide) {
+    $collection = \Drupal::entityTypeManager()
+      ->getStorage('field_collection_item')
+      ->load($field_hero_slide->value);
+
+    if ($collection) {
+      $target_id = $collection->field_hero_slider_m_image[0]->target_id;
+      $background_image = File::load($target_id);
+
+      $title = isset($collection->field_hero_slider_cta[0]->title) ? $collection->field_hero_slider_cta[0]->title : '';
+      $uri = isset($collection->field_hero_slider_cta[0]->uri) ? $collection->field_hero_slider_cta[0]->uri : NULL;
+      $target = isset($collection->field_link_target[0]->value) ? $collection->field_link_target[0]->value : '_self';
+
+      $slide = [
+        '#theme' => 'editorial_hero_slider_slide',
+        '#id' => $collection->id(),
+        '#content' => [
+          'preview_image' => [
+            'desktop' => [
+              '#theme' => 'responsive_image_formatter',
+              '#item' => $collection->field_hero_slider_image[0],
+              '#item_attributes' => [
+                // @todo move to beaufix.
+                'class' => [
+                  'img-fullsize',
+                  'hidden-xs'
+                ],
+              ],
+              '#responsive_image_style_id' => 'hero_slider',
+            ],
+            'mobile' => [
+              '#theme' => 'responsive_image_formatter',
+              '#item' => $collection->field_hero_slider_m_image[0],
+              '#item_attributes' => [
+                'class' => [
+                  'mobile-image',
+                  // @todo move to beaufix.
+                  'img-fullsize',
+                  'visible-xs',
+                ],
+              ],
+              '#url' => NULL,
+              '#responsive_image_style_id' => 'hero_slider_mobile',
+            ],
+          ],
+        ],
+        '#attributes' => [
+          'class' => ['item-' . $delta],
+        ],
+        '#settings' => [
+          'align' => $collection->field_alignment[0]->value,
+//          'background' => _editorial_getUrlPath(ImageStyle::load('cinemascope_21_9_xs_portrait')
+//            ->buildUrl($background_image->uri[0]->value)),
+        ]
+      ];
+
+//      Youtube Video set
+      if (isset($collection->field_youtube_link) && !$collection->field_youtube_link->isEmpty()) {
+        $pattern = '~
+          ^(?:https?://)?              # Optional protocol
+           (?:www\.)?                  # Optional subdomain
+           (?:youtube\.com|youtu\.be)  # Mandatory domain name
+           /watch\?v=([^&]+)           # URI with video id as capture group 1
+           ~x';
+
+        preg_match($pattern, $collection->field_youtube_link[0]->uri, $matches);
+
+        $slide['#youtube_id'] = isset($matches[1]) ? $matches[1] : NULL;
+        $slide['#youtube_cta_title'] = $collection->field_youtube_link[0]->title;
+        $slide['#attributes']['class'][] = 'editorial-hero-slider-youtube-video';
+
+        $build['#attached']['library'][] = 'beaufix/loading-icons';
+        $build['#attached']['library'][] = 'editorial/hero-slider-youtube-video';
+
+        $matches = NULL;
+      }
+
+
+//      Headline set
+      if (isset($collection->field_hero_slider_headline) && !$collection->field_hero_slider_headline->isEmpty()) {
+        $slide['#content']['headline'] = [
+          '#theme' => 'editorial_headline__hero_slider',
+          '#id' => 'hero-slider-slide--' . $collection->id(),
+          '#tag' => 'h2',
+          '#content' => $collection->field_hero_slider_headline[0]->value,
+        ];
+      }
+
+//      Subtitle set
+      if (isset($collection->field_hero_slider_subtitle) && !$collection->field_hero_slider_subtitle->isEmpty()) {
+        $slide['#content']['subtitle'] = [
+          '#theme' => 'editorial_headline__subtitle__hero_slider',
+          '#id' => 'hero-slider-slide--' . $collection->id(),
+          '#tag' => 'p',
+          '#content' => $collection->field_hero_slider_subtitle[0]->value,
+        ];
+      }
+
+//      CTA set
+      if (isset($collection->field_hero_slider_cta) && !$collection->field_hero_slider_cta->isEmpty()) {
+        $slide['#content']['button'] = [
+          '#theme' => 'editorial_button__hero_slider',
+          '#id' => 'hero-slider-slide--' . $collection->id(),
+          '#title' => $collection->field_hero_slider_cta[0]->title,
+          '#uri' => $collection->field_hero_slider_cta[0]->uri,
+          '#target' => $collection->field_link_target[0]->value,
+        ];
+        //        Float text-link besides CTA
+        if (isset($collection->field_text_link) && !$collection->field_text_link->isEmpty()) {
+          $slide['#content']['button']['#attributes']['class'][] = 'float-left-md';
+        }
+      }
+//      Text link set
+      if (isset($collection->field_text_link) && !$collection->field_text_link->isEmpty()) {
+
+        $slide['#content']['text_link'] = [
+          '#theme' => 'editorial_link__hero_slider',
+          '#id' => 'hero-slider-slide--' . $collection->id(),
+          '#title' => $collection->field_text_link[0]->title,
+          '#uri' => $collection->field_text_link[0]->uri,
+          '#attributes' => [
+            'class' => ['text-center-xs', 'font-bold', 'font-color-neutral'],
+          ],
+        ];
+        //        Link target = _blank on external links
+        if ((strpos($collection->field_text_link[0]->uri, 'http') !== FALSE) && (strpos($collection->field_text_link[0]->uri, 'worldvision.de') === FALSE)) {
+          $slide['#content']['text_link']['#content_attributes']['target'] = "_blank";
+        }
+
+        //        Float text-link besides CTA
+        if (isset($collection->field_hero_slider_cta) && !$collection->field_hero_slider_cta->isEmpty()) {
+          $slide['#content']['text_link']['#attributes']['class'][] = 'float-left-md';
+        }
+//        $slide['#content']['text_link'] = [
+//          '#type' => 'link',
+//          '#title' =>  $collection->field_text_link[0]->title,
+//          '#url' => $collection->field_text_link[0]->uri,
+//        ];
+//        $slide['#content']['text_link'] = $field_text_link;
+      }
+      $slides[] = $slide;
+    }
+  }
+
+//      Preview video image set
+  if (isset($entity->field_preview_video_image) && !$entity->field_preview_video_image->isEmpty()) {
+
+    $build['#attached']['library'][] = 'beaufix/loading-icons';
+
+    $previewVideoImage[] = [
+      '#theme' => 'responsive_image_formatter',
+      '#item' => $entity->field_preview_video_image[0],
+      '#item_attributes' => [
+        // @todo move to beaufix.
+        'class' => ['img-fullsize'],
+      ],
+      '#responsive_image_style_id' => 'hero_slider',
+    ];
+  }
+
+  //      Preview video cta set
+  if (isset($entity->field_preview_video_cta) && !$entity->field_preview_video_cta->isEmpty()) {
+    $previewVideoCta = [
+      '#theme' => 'editorial_button__hero_slider',
+      '#id' => 'hero-slider-slide--' . $collection->id(),
+      '#title' => $entity->field_preview_video_cta[0]->title,
+      '#uri' => $entity->field_preview_video_cta[0]->uri,
+      '#target' => "_self",
+      '#content_attributes' => [
+        'class' => ['btn-white', 'btn-transparent']
+      ],
+    ];
+  }
+
+
+//      Preview video set
+  if (isset($entity->field_preview_video) && !$entity->field_preview_video->isEmpty()) {
+    $pattern = '~
+          ^(?:https?://)?              # Optional protocol
+           (?:www\.)?                  # Optional subdomain
+           (?:youtube\.com|youtu\.be)  # Mandatory domain name
+           /watch\?v=([^&]+)           # URI with video id as capture group 1
+           ~x';
+
+    preg_match($pattern, $entity->field_preview_video[0]->uri, $matches);
+    $build['#attached']['library'][] = 'editorial/hero-slider-preview-video';
+  }
+
+  $build['hero_slider'] = [
+    '#theme' => 'editorial_hero_slider',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#slides' => $slides,
+    '#preview_video_cta' => isset($previewVideoCta) ? $previewVideoCta : NULL,
+    '#preview_video_id' => isset($matches[1]) ? $matches[1] : NULL,
+    '#preview_video_image' => isset($previewVideoImage) ? $previewVideoImage : NULL,
+  ];
+
+  $matches = NULL;
+}
+
+/**
+ * Generates the markup for the editorial_content image.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__image(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $image = [];
+
+  switch ($entity->field_editorial_image[0]->image_style_type) {
+    case 'responsive_image_style':
+      $image = [
+        '#theme' => 'responsive_image_formatter',
+        '#item' => $entity->field_editorial_image[0],
+        '#responsive_image_style_id' => $entity->field_editorial_image[0]->image_style,
+      ];
+      break;
+    case 'responsive_image_style':
+      $image = [
+        '#theme' => 'image_formatter',
+        '#item' => $entity->field_editorial_image[0],
+        '#image_style' => $entity->field_editorial_image[0]->image_style,
+      ];
+      break;
+  }
+
+  $build['image'] = [
+    '#theme' => 'editorial_image',
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#content' => [
+      'image' => $image,
+    ],
+  ];
+  $build['image']['#attributes']['id'] = "editorial--image-".$entity->id();
+
+}
+
+/**
+ * Generates the markup for the editorial_content quotation.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__quotation(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $align = isset($entity->field_quotation_alignment[0]->value) ? $entity->field_quotation_alignment[0]->value : 'left';
+
+
+  $build['quotation'] = [
+    '#theme' => 'editorial_quotation',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#content' => [
+      'quote' => [
+        '#markup' => $entity->field_quotation_quote[0]->value,
+      ],
+      'source' => [
+        '#markup' => $entity->field_quotation_source[0]->value,
+      ],
+      'alignment' => $align,
+    ],
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content _teaser.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__relation_teaser(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($target = $entity->field_entity_reference[0]->entity) {
+
+    if ($target->field_autoteaser_title[0]) {
+      $headline = $target->field_autoteaser_title[0]->value;
+    }
+    else {
+      $headline = $target->label();
+    }
+
+    if ($target->field_autoteaser_button_label[0]) {
+      $button_label = $target->field_autoteaser_button_label[0]->value;
+    }
+    else {
+      $button_label = t('Learn more');
+    }
+
+    $build['relation_teaser'] = [
+      '#theme' => 'editorial_teaser__relation_teaser',
+      '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+      '#content_attributes' => [],
+      '#id' => $target->id(),
+      '#content' => [
+        'headline' => [
+          '#theme' => 'editorial_headline__teaser__relation_teaser',
+          '#id' => 'relation-teaser--' . $target->id(),
+          '#tag' => 'h3',
+          '#content' => $headline,
+          '#url' => $target->url(),
+        ],
+        'button' => [
+          '#theme' => 'editorial_button__teaser__relation_teaser',
+          '#id' => 'relation-teaser--' . $target->id(),
+          '#title' => $button_label,
+          '#uri' => $target->url(),
+          '#target' => '_self',
+          '#weight' => 15,
+        ],
+      ],
+    ];
+
+    if ($image = $target->field_autoteaser_image[0]) {
+      $build['relation_teaser']['#content']['preview_image'] = [
+        '#theme' => 'responsive_image_formatter',
+        '#item' => $image,
+        '#item_attributes' => [
+          // @todo move to beaufix.
+          'class' => ['img-fullsize'],
+        ],
+        '#url' => $target->url(),
+        '#responsive_image_style_id' => 'teaser',
+      ];
+    }
+
+    if ($subtitle = $target->field_autoteaser_description[0]) {
+      $build['relation_teaser']['#content']['subtitle'] = [
+        '#theme' => 'editorial_headline__subtitle__teaser__relation_teaser',
+        '#id' => 'relation-teaser--' . $target->id(),
+        '#tag' => 'p',
+        '#content' => $subtitle->value,
+      ];
+    }
+  }
+}
+
+/**
+ * Generates the markup for the editorial_content slideshow.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__slideshow(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $slides = [];
+
+  foreach ($entity->field_slideshow_slide as $field_slideshow_slide) {
+    $collection = \Drupal::entityTypeManager()
+      ->getStorage('field_collection_item')
+      ->load($field_slideshow_slide->value);
+
+    if ($collection) {
+      $slides[] = [
+        '#theme' => 'editorial_slideshow_slide',
+        '#id' => $collection->id(),
+        '#content' => [
+          'preview_image' => [
+            '#theme' => 'responsive_image_formatter',
+            '#item' => $collection->field_slideshow_image[0],
+            '#item_attributes' => [
+              // @todo move to beaufix.
+              'class' => ['img-fullsize'],
+            ],
+            '#responsive_image_style_id' => 'slideshow',
+          ],
+          'caption' => [
+            '#theme' => 'editorial_headline__subtitle__slideshow',
+            '#id' => 'slideshow-slide--' . $collection->id(),
+            '#tag' => 'p',
+            '#content' => $collection->field_slideshow_image_caption[0]->value,
+          ],
+        ],
+      ];
+    }
+  }
+
+  $build['slideshow'] = [
+    '#theme' => 'editorial_slideshow',
+    '#id' => $entity->id(),
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#slides' => $slides,
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content story_teaser.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__story_teaser(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $attributes = isset($build['#attributes']) ? $build['#attributes'] : [];
+  $content_attributes = [];
+  $link_attributes = [];
+
+  $inner_content = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['inner-content'],
+    ],
+  ];
+
+  $inner_content['headline'] = [
+    '#theme' => 'editorial_headline__story_teaser',
+    '#id' => 'story-teaser--' . $entity->id(),
+    '#tag' => 'h3',
+    '#content' => $entity->field_teaser_headline[0]->value,
+  ];
+  $inner_content['subtitle'] = [
+    '#theme' => 'editorial_headline__subtitle__story_teaser',
+    '#id' => 'story-teaser--subtitle--' . $entity->id(),
+    '#tag' => 'p',
+    '#content' => $entity->field_teaser_subtitle[0]->value,
+  ];
+  $inner_content['button'] = [
+    '#type' => 'button',
+    '#value' => $entity->field_teaser_link[0]->title,
+    '#attributes' => [
+      'class' => [
+        // @todo move to beaufix.
+        'btn',
+        'btn-beauty',
+      ],
+    ],
+  ];
+
+  if ($url = Url::fromUri(
+    $entity->field_teaser_link[0]->uri,
+    $entity->field_teaser_link[0]->options)
+  ) {
+    $inner_content['#prefix'] = '<a ' .
+      'href="' . $url->toString() . '" ' .
+      'target="' . $entity->field_link_target[0]->value . '" ' .
+      'class="content">';
+    $inner_content['#suffix'] = '</a>';
+  }
+
+  $content = [
+    '#type' => 'container',
+    '#attributes' => [],
+    'inner_content' => $inner_content,
+  ];
+
+  if ($image = File::load($entity->field_teaser_image[0]->target_id)) {
+    $content['#theme_wrappers']['container__mobile_image'] = [
+      '#attributes' => [
+        'style' => 'background-image: url(' .
+          _editorial_getUrlPath(ImageStyle::load('square_xs')
+            ->buildUrl($image->uri[0]->value)) . ');',
+        'class' => ['bg-mobile'],
+      ],
+    ];
+    $content['#theme_wrappers']['container__desktop_image'] = [
+      '#attributes' => [
+        'style' => 'background-image: url(' .
+          _editorial_getUrlPath(ImageStyle::load('widescreen_16_9_sm')
+            ->buildUrl($image->uri[0]->value)) . ');',
+        'class' => ['bg-desktop'],
+      ],
+    ];
+  }
+
+  $build['story_teaser'] = [
+    '#theme' => 'editorial_story_teaser',
+    '#id' => $entity->id(),
+    '#attributes' => $attributes,
+    '#content_attributes' => $content_attributes,
+    '#link_attributes' => $link_attributes,
+    '#content' => $content,
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content teaser.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__teaser(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['teaser'] = [
+    '#theme' => 'editorial_teaser',
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#content_attributes' => [],
+    '#id' => $entity->id(),
+    '#content' => [
+      'preview_image' => [
+        '#theme' => 'responsive_image_formatter',
+        '#item' => $entity->field_teaser_image[0],
+        '#item_attributes' => [
+          // @todo move to beaufix.
+          'class' => ['img-fullsize'],
+        ],
+        '#url' => Url::fromUri($entity->field_teaser_link[0]->uri),
+        '#responsive_image_style_id' => 'teaser',
+      ],
+      'headline' => [
+        '#theme' => 'editorial_headline__teaser',
+        '#id' => 'teaser--' . $entity->id(),
+        '#tag' => 'h3',
+        '#content' => $entity->field_teaser_headline[0]->value,
+        '#url' => Url::fromUri($entity->field_teaser_link[0]->uri)->toString(),
+      ],
+      'subtitle' => [
+        '#theme' => 'editorial_headline__subtitle__teaser',
+        '#id' => 'teaser--' . $entity->id(),
+        '#tag' => 'p',
+        '#content' => $entity->field_teaser_subtitle[0]->value,
+      ],
+      'button' => [
+        '#theme' => 'editorial_button__teaser',
+        '#id' => 'teaser--' . $entity->id(),
+        '#title' => $entity->field_teaser_link[0]->title,
+        '#uri' => $entity->field_teaser_link[0]->uri,
+        '#settings' => [
+          'target' => $entity->field_link_target[0]->value,
+        ],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Generates the markup for the editorial_content youtube_video.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+function editorial_editorial_content_view__youtube_video(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $pattern = '~
+    ^(?:https?://)?              # Optional protocol
+     (?:www\.)?                  # Optional subdomain
+     (?:youtube\.com|youtu\.be)  # Mandatory domain name
+     /watch\?v=([^&]+)           # URI with video id as capture group 1
+     ~x';
+
+  preg_match($pattern, $entity->field_youtube_link[0]->uri, $matches);
+
+  // @todo render as teaser with target _blank if youtube_id is empty.
+  $build['youtube_video'] = [
+    '#theme' => 'editorial_youtube_video',
+    '#attributes' => isset($build['#attributes']) ? $build['#attributes'] : [],
+    '#id' => $entity->id(),
+    '#youtube_id' => isset($matches[1]) ? $matches[1] : NULL,
+    '#content' => [
+      'preview_image' => [
+        '#theme' => 'responsive_image_formatter',
+        '#item' => $entity->field_video_preview_image[0],
+        '#item_attributes' => [
+          // @todo move to beaufix.
+          'class' => ['img-fullsize'],
+        ],
+        '#url' => NULL,
+        '#responsive_image_style_id' => 'youtube_video',
+      ],
+      'headline' => [
+        '#theme' => 'editorial_headline__youtube_video',
+        '#id' => 'youtube-video--' . $entity->id(),
+        '#tag' => 'h3',
+        '#content' => $entity->field_video_headline[0]->value,
+      ],
+      'subtitle' => [
+        '#theme' => 'editorial_headline__subtitle__youtube_video',
+        '#id' => 'youtube-video--' . $entity->id(),
+        '#tag' => 'p',
+        '#content' => $entity->field_video_subtitle[0]->value,
+      ],
+    ]
+  ];
+}
+
+
+/**
+ * Generates the markup for the editorial_content headline.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see editorial_editorial_content_view
+ */
+
+function editorial_editorial_content_view__code_embed(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['code_embed'] = [
+    '#theme' => 'editorial_code_embed',
+    '#id' => $entity->id(),
+    '#content' => $entity->field_code[0]->value,
+  ];
+}
+
+/**
+ * Implements hook_preprocess_editorial_content()
+ */
+function editorial_preprocess_editorial_content(&$variables) {
+  $entity = $variables['elements']['#editorial_content'];
+
+  // Append classes for wrapper element.
+  $variables = NestedArray::mergeDeep($variables, [
+    '#attributes' => [
+      'class' => [
+        'editorial-content',
+        'editorial-content--' . Html::cleanCssIdentifier($entity->bundle()),
+      ],
+    ],
+  ]);
+}
+
+function template_preprocess_bootstrap_12(&$variables) {
+  _editorial_preprocess_layout_plugin_themes($variables);
+
+  if (in_array('container-fluid', $variables['attributes']['class'])) {
+    $variables['row_attributes']->addClass('no-gutters');
+  }
+
+  $variables['main_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-12',
+      'col-md-12',
+      'col-lg-12',
+    ],
+  ]);
+}
+
+function template_preprocess_bootstrap_6_6(&$variables) {
+  _editorial_preprocess_layout_plugin_themes($variables);
+
+  $variables['left_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-6',
+      'col-lg-6',
+    ],
+  ]);
+  $variables['right_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-6',
+      'col-lg-6',
+    ],
+  ]);
+}
+
+function template_preprocess_bootstrap_8_4(&$variables) {
+  _editorial_preprocess_layout_plugin_themes($variables);
+
+  $variables['left_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-8',
+      'col-lg-8',
+    ],
+  ]);
+  $variables['right_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-4',
+      'col-lg-4',
+    ],
+  ]);
+}
+
+function template_preprocess_bootstrap_4_8(&$variables) {
+  _editorial_preprocess_layout_plugin_themes($variables);
+
+  $variables['left_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-4',
+      'col-lg-4',
+    ],
+  ]);
+  $variables['right_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-8',
+      'col-lg-8',
+    ],
+  ]);
+}
+
+function template_preprocess_bootstrap_4_4_4(&$variables) {
+  _editorial_preprocess_layout_plugin_themes($variables);
+
+  $variables['left_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-4',
+      'col-md-4',
+      'col-lg-4',
+    ],
+  ]);
+  $variables['main_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-4',
+      'col-md-4',
+      'col-lg-4',
+    ],
+  ]);
+  $variables['right_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-4',
+      'col-md-4',
+      'col-lg-4',
+    ],
+  ]);
+}
+
+function template_preprocess_bootstrap_3_3_3_3(&$variables) {
+  _editorial_preprocess_layout_plugin_themes($variables);
+
+  $variables['one_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-3',
+      'col-lg-3',
+    ],
+  ]);
+  $variables['two_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-3',
+      'col-lg-3',
+    ],
+  ]);
+  $variables['three_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-3',
+      'col-lg-3',
+    ],
+  ]);
+  $variables['four_attributes'] = new Attribute([
+    'class' => [
+      'col-xs-12',
+      'col-sm-6',
+      'col-md-3',
+      'col-lg-3',
+    ],
+  ]);
+}
+
+
+/**
+ * Helper function to assign common css classes to all editorial bootstrap
+ * layout templates.
+ *
+ * @param $variables
+ *
+ * @see template_preprocess_bootstrap_12()
+ * @see template_preprocess_bootstrap_6_6()
+ * @see template_preprocess_bootstrap_8_4()
+ * @see template_preprocess_bootstrap_4_8()
+ * @see template_preprocess_bootstrap_4_4_4()
+ * @see template_preprocess_bootstrap_3_3_3_3()
+ */
+function _editorial_preprocess_layout_plugin_themes(&$variables) {
+  $variables['attributes'] = NestedArray::mergeDeep($variables['attributes'], [
+    'class' => [],
+  ]);
+
+  // Add row classes.
+  $variables['row_attributes'] = new Attribute([
+    'class' => ['row'],
+  ]);
+}
+
+/**
+ * Helper function to group all autoteaser fields in NodeForm in a detail
+ * element which is displayed in the advanced node section.
+ *
+ * @see editorial_form_node_form_alter()
+ */
+function _editorial_autoteaser_node_form_group(&$form, FormStateInterface $form_state) {
+  $elements = [];
+
+  foreach (Element::children($form) as $delta) {
+    if (preg_match('/\_autoteaser\_/', $delta)) {
+      $elements[$delta] = $form[$delta];
+      unset($form[$delta]);
+    }
+  }
+
+
+  if ($elements) {
+    $form['autoteaser'] = [
+        '#type' => 'details',
+        '#title' => t('Automatic Teaser'),
+        '#group' => 'advanced',
+        '#tree' => FALSE,
+      ] + $elements;
+  }
+}
+
+function _editorial_getUrlPath($url) {
+  $url = NestedArray::mergeDeep([
+    'path' => '/',
+    'query' => '',
+  ], parse_url($url));
+
+  return $url['path'] . '?' . $url['query'];;
+}
+
+function editorial_search_plugin_alter(array &$definitions) {
+  if (isset($definitions['node_search'])) {
+    $definitions['node_search']['class'] = 'Drupal\editorial\Plugin\Search\NodeSearch';
+  }
+}

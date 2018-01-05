@@ -1,0 +1,24 @@
+uuid: 8d150cc6-043f-4ab7-9900-68a7af4c1e60
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.projektspende_fonds_finanz_mali_
+  module:
+    - forms_suite
+id: forms_message.projektspende_fonds_finanz_mali_.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_mali_
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

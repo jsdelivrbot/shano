@@ -1,0 +1,8 @@
+payone:
+  portal_id: '2011841'
+  portal_key: w0rldv1s10n
+  aid: '16194'
+  mode: live
+_core:
+  default_config_hash: K3QTVkzOeAY6BNKinSe_iNuk07rOpWE8cc6HTD67pzs
+langcode: de

@@ -1,0 +1,11 @@
+@media screen and (min-width: $bp-lg) {
+  .editorial-hero-slider .slider-item {
+    //  YouTube Video
+    &.editorial-hero-slider-youtube-video {
+      //  Play-button
+      .btn-hero-slider-yt-play-cont {
+        bottom: 13%;
+      }
+    }
+  }
+}

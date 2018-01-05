@@ -1,0 +1,15 @@
+editorial_content.editorial_content_type.*:
+  type: config_entity
+  label: 'Editorial content type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    category:
+      type: label
+      label: 'Category'
+    uuid:
+      type: string

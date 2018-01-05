@@ -1,0 +1,39 @@
+uuid: c43ce1d8-8cc9-41aa-9174-fc152494d9bd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_slideshow_image
+    - field_collection.field_collection.field_slideshow_slide
+  module:
+    - image
+_core:
+  default_config_hash: xT0ULRS4OsXxfMh2cTKAeEjELEp9F_kIbXAbkAQzRw8
+id: field_collection_item.field_slideshow_slide.field_slideshow_image
+field_name: field_slideshow_image
+entity_type: field_collection_item
+bundle: field_slideshow_slide
+label: Background
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'editorial/slideshow/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1400x788
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

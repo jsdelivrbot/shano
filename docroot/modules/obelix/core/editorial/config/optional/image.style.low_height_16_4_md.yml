@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: low_height_16_4_md
+label: 'Low height (16:4) MD'
+effects:
+  5931fde2-c58e-4275-b461-57ce6067af9e:
+    uuid: 5931fde2-c58e-4275-b461-57ce6067af9e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 350

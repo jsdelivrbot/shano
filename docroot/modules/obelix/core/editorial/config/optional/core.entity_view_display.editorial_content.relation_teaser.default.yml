@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.relation_teaser
+    - field.field.editorial_content.relation_teaser.field_entity_reference
+id: editorial_content.relation_teaser.default
+targetEntityType: editorial_content
+bundle: relation_teaser
+mode: default
+content:
+  relation_teaser:
+    weight: 100
+hidden:
+  field_entity_reference: true
+  name: true
+  user_id: true

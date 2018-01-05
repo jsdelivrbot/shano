@@ -1,0 +1,9 @@
+uuid: ed4a970b-df47-4af5-ab83-46aaeb5e6954
+langcode: de
+status: true
+dependencies: {  }
+id: node__editorial_page
+label: 'Content: Editorial Page'
+tags:
+  title: '[node:title]'
+  referrer: no-referrer

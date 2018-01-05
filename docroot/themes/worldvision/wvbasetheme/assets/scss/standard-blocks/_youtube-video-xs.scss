@@ -1,0 +1,32 @@
+// =============================
+// Youtube Video XS
+// =============================
+.editorial-youtube-video {
+  position: relative;
+  .yt-preview {
+    z-index: 1;
+    .yt-preview-img {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      .yt-play {
+        i {
+          display: block;
+          border-radius: 50%;
+          background: $color-highlight;
+          font-size: 30px;
+          padding: 25px;
+          color: $color-standard-bg;
+          @include transition(0.3s all);
+        }
+        &:hover {
+          i {
+            background: $color-standard-bg;
+            color: $color-highlight;
+          }
+        }
+      }
+    }
+  }
+}
+

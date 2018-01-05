@@ -1,0 +1,22 @@
+uuid: 829cb8fa-8320-47c4-98d9-9bd78a97922c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kontaktformular_politische_arbei
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_politische_arbei.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kontaktformular_politische_arbei
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,38 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 5, ../../scss/transparency-bar/_transparency-bar-xs.scss */
+.editorial-transparency-bar {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+/* line 8, ../../scss/transparency-bar/_transparency-bar-xs.scss */
+.editorial-transparency-bar a {
+  display: block;
+}
+/* line 10, ../../scss/transparency-bar/_transparency-bar-xs.scss */
+.editorial-transparency-bar a button {
+  background-color: #FFFFFF;
+}
+/* line 12, ../../scss/transparency-bar/_transparency-bar-xs.scss */
+.editorial-transparency-bar a button i {
+  font-size: 50px;
+}
+/* line 19, ../../scss/transparency-bar/_transparency-bar-xs.scss */
+.editorial-transparency-bar a:hover button:after {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 9rem;
+  margin: -4.5rem;
+}
+/* line 25, ../../scss/transparency-bar/_transparency-bar-xs.scss */
+.editorial-transparency-bar a:hover button i {
+  color: #404040 !important;
+}

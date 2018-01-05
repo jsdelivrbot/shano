@@ -1,0 +1,34 @@
+{#
+/**
+ * @file child.html.twig
+ * Default theme implementation to present Child data.
+ *
+ * This template is used when viewing Child pages.
+ *
+ *
+ * Available variables:
+ * - case could be 1-2
+ *   case 1: session parameter is missing
+ *   case 2: parameter and session parameters are different
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('thank_you_page') }}>
+  {% if case %}
+    {% if case == 1 %}
+      <h1>something went wrong with your payment.</h1>
+      <h3>It could be one of the following reasons:</h3>
+      <ul>
+        <li>Did you close the Browser between the payment process?</li>
+        <li>Did you copy the link from one Browser to another Browser?</li>
+        <li>Took you payment process more than 30 minutes?</li>
+      </ul>
+      <h3>Please contact us</h3>
+    {% elseif case == 2 %}
+      <h1>something went wrong with your payment.</h1>
+      <h3>Please contact us</h3>
+    {% endif %}
+  {% endif %}
+</div>

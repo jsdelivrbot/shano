@@ -1,0 +1,27 @@
+uuid: a52d4962-0bd5-450c-b863-677943f3ab07
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job_offer.field_job_description
+    - field.field.node.job_offer.field_job_source_url
+    - node.type.job_offer
+  module:
+    - entity_test
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+id: node.job_offer.teaser
+targetEntityType: node
+bundle: job_offer
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_job_description: true
+  field_job_source_url: true
+  langcode: true

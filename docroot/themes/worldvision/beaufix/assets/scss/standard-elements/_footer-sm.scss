@@ -1,0 +1,94 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Footer
+  // =============================
+  footer {
+    .footer-contact {
+      padding: 45px 0px;
+      .contact-block {
+        border-bottom: 0;
+        &.social-channels {
+          border-left: 1px solid $color-highlight-bg;
+          border-right: 1px solid $color-highlight-bg;
+          ul {
+            li {
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+    }
+    .footer-prizes {
+      .transparent-prizes {
+        li {
+          padding: 0 30px;
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5) {
+            margin-top: 0;
+          }
+          &:nth-child(1) {
+            width: 25%;
+          }
+          &:nth-child(2) {
+            width: 23%;
+          }
+          &:nth-child(3) {
+            width: 13%;
+          }
+          &:nth-child(4) {
+            width: 23%;
+          }
+          &:nth-child(5) {
+            width: 16%;
+          }
+        }
+      }
+      .public-donor-prizes {
+        li {
+          padding: 0 30px;
+
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6){
+            margin-top: 0px;
+          }
+
+          &:nth-child(1) {
+            width: 18%;
+          }
+          &:nth-child(2) {
+            width: 23%;
+          }
+          &:nth-child(3) {
+            width: 14%;
+          }
+          &:nth-child(4) {
+            width: 17%;
+          }
+          &:nth-child(5) {
+            width: 14%;
+          }
+          &:nth-child(6) {
+            width: 14%;
+          }
+        }
+        img {
+          margin: 0 auto;
+        }
+      }
+    //  All
+      a{
+        img{
+          @include transition(0.3s all);
+        }
+        &:hover{
+          img{
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

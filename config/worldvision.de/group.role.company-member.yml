@@ -1,0 +1,17 @@
+uuid: 8cbc437b-da74-4008-891a-a76eb90525e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.company
+id: company-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: company
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'view group_node:broker_page entity'
+  - 'view group_node:broker_page content'

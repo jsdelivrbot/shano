@@ -1,0 +1,22 @@
+uuid: 6ae3bbcd-b497-4a23-ad6f-69414cbc7053
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: S7xqjxkZV0tpissnGvt8srD5Y9eWXawnYNTHiMBKnVI
+id: node.field_gift_campaign_teaser
+field_name: field_gift_campaign_teaser
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

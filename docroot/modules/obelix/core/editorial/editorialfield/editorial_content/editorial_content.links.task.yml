@@ -1,0 +1,17 @@
+# Editorial content routing definition
+entity.editorial_content.canonical:
+  route_name: entity.editorial_content.canonical
+  base_route: entity.editorial_content.canonical
+  title: 'View'
+
+entity.editorial_content.edit_form:
+  route_name: entity.editorial_content.edit_form
+  base_route: entity.editorial_content.canonical
+  title: Edit
+
+entity.editorial_content.delete_form:
+  route_name:  entity.editorial_content.delete_form
+  base_route:  entity.editorial_content.canonical
+  title: Delete
+  weight: 10
+

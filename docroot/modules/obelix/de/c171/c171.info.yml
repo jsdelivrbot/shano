@@ -1,0 +1,5 @@
+name: Campaign - Spring 2017
+type: module
+description: Provides the pages for the spring campaign 2017.
+core: 8.x
+package: Obelix (DE)

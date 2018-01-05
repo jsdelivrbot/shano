@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Contains common multi sites tools.
+ */
+
+use \Drupal\Core\Entity\EntityFieldManager;
+
+require_once 'wv_tools.helpers.inc';
+
+/**
+ * Helper function to apply field type schema changes to existing field tables for all entities
+ * using this field type with different fields machine names etc.
+ *
+ * @param $field_type
+ * @param $property_names
+ */
+function wv_tools_update_field_type_schema($field_type, $property_names = NULL) {
+
+  $manager = \Drupal::entityDefinitionUpdateManager();
+
+  /** @var EntityFieldManager $field_manager */
+  $field_manager = \Drupal::service('entity_field.manager');
+  $field_map = $field_manager->getFieldMapByFieldType($field_type);
+
+  // Loop over all entity types using specified field type.
+  foreach ($field_map as $entity_type_id => $fields) {
+    // Single entity can use several fields of the same type. Loop through all of them.
+    foreach (array_keys($fields) as $field_name) {
+
+      // Get actual field storage definition (SQL schemas for all columns etc).
+      $field_storage_definition = $manager->getFieldStorageDefinition($field_name, $entity_type_id);
+      $storage = \Drupal::entityTypeManager()->getStorage($entity_type_id);
+
+      // We care only about SQL back ends.
+      if ($storage instanceof \Drupal\Core\Entity\Sql\SqlContentEntityStorage) {
+        $table_mapping = $storage->getTableMapping([
+          // We pass only one storage definition to make
+          // \Drupal\Core\Entity\Sql\DefaultTableMapping::getDedicatedTableNames()
+          // return only tables we need.
+          $field_name => $field_storage_definition,
+        ]);
+
+        $table_names = $table_mapping->getDedicatedTableNames();
+        $columns = $table_mapping->getColumnNames($field_name);
+
+        foreach ($table_names as $table_name) {
+
+          $field_schema = $field_storage_definition->getSchema();
+          $schema = \Drupal::database()->schema();
+
+          $table_exists = $schema->tableExists($table_name);
+
+          if (!$property_names) {
+            // If user didn't specify dedicated field name check all field type columns.
+            $property_names = array_keys($field_schema['columns']);
+          }
+
+          // Check all properties & if it doesn't exist add it to the table.
+          foreach ((array) $property_names as $property_name) {
+            $field_exists = $schema->fieldExists($table_name, $columns[$property_name]);
+
+            if (!$field_exists && $table_exists) {
+              $schema->addField($table_name, $columns[$property_name], $field_schema['columns'][$property_name]);
+            }
+          }
+        }
+      }
+    }
+  }
+}

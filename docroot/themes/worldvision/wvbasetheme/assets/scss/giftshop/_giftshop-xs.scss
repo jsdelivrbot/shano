@@ -1,0 +1,126 @@
+// =============================
+// Gift-Page individual styles
+// =============================
+
+// Slideshow
+.editorial-slideshow {
+  figure {
+    figcaption {
+      display: none;
+    }
+  }
+}
+
+// Campaign-teaser
+.field--name-field-gift-campaign-teaser {
+  .editorial--content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+// Teaser
+.editorial-teaser {
+  a.btn-beauty {
+    background: transparent;
+    color: #f70;
+    &:hover {
+      background: #f70;
+      color: #fff;
+    }
+  }
+}
+
+// =============================
+// Forms
+// =============================
+.form-minimal-border {
+  .fieldset-wrapper > div {
+    text-align: left;
+  }
+}
+
+// =============================
+// Greeting card form
+// =============================
+
+#giftshop-gift-card-form {
+  #edit-card-type {
+    > div:nth-child(1) label,
+    > div:nth-child(2) label,
+    > div:nth-child(3) label {
+      background-size: contain;
+      height: 230px;
+      width: 100%;
+      background-position: 50% 15px;
+      background-repeat: no-repeat;
+    }
+    > div:nth-child(1) {
+      label {
+        background-image: url("../../../../../../modules/obelix/core/giftshop/assets/img/das-gute-geschenk-form-motiv-waehlen-neutral.jpg");
+      }
+    }
+    > div:nth-child(2) {
+      label {
+        background-image: url("../../../../../../modules/obelix/core/giftshop/assets/img/das-gute-geschenk-form-motiv-waehlen-weihnachten.jpg");
+      }
+    }
+    > div:nth-child(3) {
+      label {
+        background-image: url("../../../../../../modules/obelix/core/giftshop/assets/img/das-gute-geschenk-form-motiv-waehlen-geburtstag.jpg");
+      }
+    }
+  }
+  #edit-delivery-address--wrapper{
+    padding-top: 0;
+  }
+}
+
+// =============================
+// Giftshop cart
+// =============================
+.giftshop-cart-item{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $color-standard-border;
+
+  h3{
+    margin-top: 0;
+  }
+  a{
+    text-decoration: underline;
+  }
+}
+
+.giftshop-cart{
+  .giftshop-cart-item:nth-child(2){
+    border-top: 1px solid $color-standard-border;
+  }
+}
+
+
+// Transparency bar
+.editorial-transparency-bar {
+  a {
+    button.btn-icon-round {
+      &:after {
+        background-color: $color-standard-txt;
+      }
+      i {
+        color: $color-standard-bg !important;
+      }
+      &:hover{
+        cursor: default;
+      }
+    }
+    p {
+      color: $color-standard-bg;
+    }
+    &:hover {
+      cursor: default;
+    }
+  }
+  button.btn-icon-round:hover:after{
+    background-color: $color-standard-txt!important;
+  }
+}

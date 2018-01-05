@@ -1,0 +1,5 @@
+services:
+  ivision_nav16.subscriber:
+    class: Drupal\ivision_nav16\IVisionNav16
+    tags:
+      - { name: event_subscriber }

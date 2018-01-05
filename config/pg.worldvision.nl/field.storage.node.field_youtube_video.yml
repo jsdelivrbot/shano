@@ -1,0 +1,22 @@
+uuid: 1b1fb8f0-58b0-4863-aed1-686f0513ec13
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: qPX7S_ScbH8hbW1D0-CVrerF1J0MAzVUFafKSSZlR48
+id: node.field_youtube_video
+field_name: field_youtube_video
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

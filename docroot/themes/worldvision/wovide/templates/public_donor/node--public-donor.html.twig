@@ -1,0 +1,46 @@
+<article{{ attributes }}>
+
+    <div class="container">
+
+        {{ title_prefix }}
+        {% if not page %}
+            <div class="row">
+                <h2{{ title_attributes }}>
+                    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                </h2>
+            </div>
+        {% endif %}
+        {{ title_suffix }}
+
+        {% if display_submitted %}
+            <div class="row">
+                <footer>
+                    {{ author_picture }}
+                    <div{{ author_attributes }}>
+                        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+                        {{ metadata }}
+                    </div>
+                </footer>
+            </div>
+        {% endif %}
+
+
+        <div{{ content_attributes }}>
+            <div class="row">
+                {{ content.field_public_donor_name }}
+            </div>
+            <div class="public-donor-divider"></div>
+            <div class="row row-flex">
+                <div class="col-xs-12 col-sm-4">
+                    {{ content.field_public_donor_logo }}
+                </div>
+                <div class="col-xs-12 col-sm-8 public-donor-description">
+                    {{ content.field_public_donor_description }}
+                </div>
+            </div>
+            <div class="public-donor-divider"></div>
+        </div>
+
+    </div>
+
+</article>

@@ -1,0 +1,29 @@
+uuid: 680e8441-d91c-45d8-91f4-b4b0590ea12e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.public_donor_projects.field_pdp_content
+    - field.field.paragraph.public_donor_projects.field_pdp_title
+    - paragraphs.paragraphs_type.public_donor_projects
+_core:
+  default_config_hash: ShwW2ExfAXiv3PiqPxZ8DK_jaB9xphh98ICQuZwEEWI
+id: paragraph.public_donor_projects.default
+targetEntityType: paragraph
+bundle: public_donor_projects
+mode: default
+content:
+  field_pdp_content:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  field_pdp_title: true
+  status: true
+  uid: true

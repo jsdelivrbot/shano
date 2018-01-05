@@ -1,0 +1,34 @@
+.editorial-social-share{
+  background: #ff7700;
+  padding: 15px;
+  position: relative;
+}
+.editorial-social-share ul{
+  float: right;
+  list-style: none;
+  padding-left: 0;
+}
+.editorial-social-share li{
+  padding-left: 7px;
+  padding-right: 7px;
+  display: inline;
+  vertical-align: middle;
+}
+.editorial-social-share li:last-child{
+  padding-right: 0;
+}
+.editorial-social-share p,
+.editorial-social-share li,
+.editorial-social-share a{
+  color: #ffffff;
+}
+.editorial-social-share p{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

@@ -1,0 +1,25 @@
+uuid: 469c63ba-6a28-44a3-84c3-107356f9b0b1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_donation_amount
+    - field_collection.field_collection.field_donation_example
+_core:
+  default_config_hash: _5dTZa5sYZrI_NbNCxyotPrK9sXiziyszIsfbvGhXOc
+id: field_collection_item.field_donation_example.field_donation_amount
+field_name: field_donation_amount
+entity_type: field_collection_item
+bundle: field_donation_example
+label: Betrag
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

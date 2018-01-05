@@ -1,0 +1,8 @@
+{
+  "name": "world-vision/ivision_nav16",
+  "type": "drupal-module",
+  "description": "Enables the iVision NAV 16 API",
+  "require": {
+    "ntlm-soap/ntlm-soap": "dev-master"
+  }
+}

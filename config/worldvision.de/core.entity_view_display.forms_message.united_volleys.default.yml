@@ -1,0 +1,41 @@
+uuid: dc91e75f-586f-4e38-a22c-349ffcfdfc25
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.united_volleys.field_message
+    - field.field.forms_message.united_volleys.field_newsletter
+    - field.field.forms_message.united_volleys.field_user_data
+    - forms_suite.form.united_volleys
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.united_volleys.default
+targetEntityType: forms_message
+bundle: united_volleys
+mode: default
+content:
+  field_message:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

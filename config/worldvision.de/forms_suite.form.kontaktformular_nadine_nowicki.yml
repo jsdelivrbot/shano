@@ -1,0 +1,31 @@
+uuid: dfcf23e9-3a6b-4e33-9070-cd9be85011ca
+langcode: de
+status: true
+dependencies: {  }
+id: kontaktformular_nadine_nowicki
+label: 'Kontaktformular Nadine Nowicki'
+recipients:
+  - nadine_nowicki@wvi.org
+reply: ''
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/kontakt-nadine-nowicki
+headline: 'Kontakt zu Nadine Nowicki'
+description: 'Hier können Sie Nadine Nowicki eine Nachricht schreiben'
+disclaimer: ''
+submit_button: Absenden

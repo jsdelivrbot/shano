@@ -1,0 +1,6 @@
+{% if content.quote %}
+  <div{{ attributes.addClass('editorial-quotation') }}>
+    <em{{ content_attributes.addClass('editorial-quotation--quote') }}>{{ content.quote }}</em>
+    <span class="editorial-quotation--source">{{ content.source }}</span>
+  </div>
+{% endif %}

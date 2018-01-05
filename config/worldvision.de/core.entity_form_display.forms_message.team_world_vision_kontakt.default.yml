@@ -1,0 +1,50 @@
+uuid: de08858f-19dc-4df6-8d7b-024293a0cf0b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.team_world_vision_kontakt.field_message
+    - field.field.forms_message.team_world_vision_kontakt.field_newsletter
+    - field.field.forms_message.team_world_vision_kontakt.field_user_data
+    - forms_suite.form.team_world_vision_kontakt
+  module:
+    - forms_suite
+id: forms_message.team_world_vision_kontakt.default
+targetEntityType: forms_message
+bundle: team_world_vision_kontakt
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    region: content
+  name:
+    weight: -50
+    region: content
+hidden: {  }

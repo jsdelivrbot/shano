@@ -1,0 +1,23 @@
+uuid: 24635285-96d5-4ce8-8b61-bea29814507e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_his_copy
+    - node.type.transition_page
+  module:
+    - text
+_core:
+  default_config_hash: fnuPIjtkXaj1hOmPNXyft5ndDzwVETyqTPeaK6Quhn8
+id: node.transition_page.field_his_copy
+field_name: field_his_copy
+entity_type: node
+bundle: transition_page
+label: Copy
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

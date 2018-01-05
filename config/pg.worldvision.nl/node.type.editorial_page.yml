@@ -1,0 +1,21 @@
+uuid: 6041159f-b0b3-41cd-9249-e7600af2ac3c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: BYPi39Tb6xpCtSsuZ7ZCI9M3It_eAhBoO_Ymc883KXo
+name: 'Editorial Page'
+type: editorial_page
+description: 'A page type which allows an author to create complex page layouts.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

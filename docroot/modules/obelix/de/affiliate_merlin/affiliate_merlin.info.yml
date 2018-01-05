@@ -1,0 +1,8 @@
+name: Merlin Affiliate
+type: module
+description: Handles old affiliate requests created in Merlin CMS.
+core: 8.x
+version: 8.x-1.0
+package: Obelix (DE)
+dependencies:
+  - affiliate

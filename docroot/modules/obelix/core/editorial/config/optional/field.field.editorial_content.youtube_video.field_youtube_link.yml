@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.storage.editorial_content.field_youtube_link
+  module:
+    - link
+id: editorial_content.youtube_video.field_youtube_link
+field_name: field_youtube_link
+entity_type: editorial_content
+bundle: youtube_video
+label: 'YouTube Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

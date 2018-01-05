@@ -1,0 +1,26 @@
+uuid: 2f103941-e758-4a5d-80f1-c210453bd00c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_to
+    - node.type.public_donor_project
+  module:
+    - datetime
+_core:
+  default_config_hash: KLdZ3F-eFfzQSNSAvO_MVMeSlkuEVkjWtcZ9wWh_jw8
+id: node.public_donor_project.field_pdp_to
+field_name: field_pdp_to
+entity_type: node
+bundle: public_donor_project
+label: To
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

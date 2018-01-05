@@ -1,0 +1,25 @@
+uuid: be00915d-b183-47fd-acff-c9bcaba0a440
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_child_select
+    - forms_suite.form.child_sponsorship_direct
+  module:
+    - child_sponsorship
+id: forms_message.child_sponsorship_direct.field_child_select
+field_name: field_child_select
+entity_type: forms_message
+bundle: child_sponsorship_direct
+label: 'child select'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    all_countries: 0
+field_type: wovi_child_select_field

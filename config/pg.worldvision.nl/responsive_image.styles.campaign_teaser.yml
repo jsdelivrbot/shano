@@ -1,0 +1,20 @@
+uuid: 4bc45f03-ff46-4568-9dc8-aa56148c3b10
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.cinemascope_21_9_sm
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: K0sP05hgqXA-c9veODQuqLKKQ1NIeYvw4dijjfjN3Is
+id: campaign_teaser
+label: 'Campaign teaser'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cinemascope_21_9_sm
+breakpoint_group: bootstrap
+fallback_image_style: '_empty image_'

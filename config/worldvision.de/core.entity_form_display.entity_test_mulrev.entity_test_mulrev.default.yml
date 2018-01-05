@@ -1,0 +1,29 @@
+uuid: 15b26f7e-9033-4515-bf04-e840a55f59a4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.entity_test_mulrev.entity_test_mulrev.field_test_text
+  module:
+    - entity_test
+    - text
+id: entity_test_mulrev.entity_test_mulrev.default
+targetEntityType: entity_test_mulrev
+bundle: entity_test_mulrev
+mode: default
+content:
+  field_test_text:
+    type: text_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

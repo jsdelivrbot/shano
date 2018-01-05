@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: campaign_teaser
+label: 'Campaign Teaser'
+category: 'Standard block'

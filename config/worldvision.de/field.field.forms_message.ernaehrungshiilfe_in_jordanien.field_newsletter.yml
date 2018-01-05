@@ -1,0 +1,22 @@
+uuid: dafa3325-512e-4af0-b957-9b2d58cde04b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.ernaehrungshiilfe_in_jordanien
+  module:
+    - forms_suite
+id: forms_message.ernaehrungshiilfe_in_jordanien.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: ernaehrungshiilfe_in_jordanien
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

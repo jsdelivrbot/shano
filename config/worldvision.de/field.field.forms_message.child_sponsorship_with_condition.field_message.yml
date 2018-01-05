@@ -1,0 +1,26 @@
+uuid: da81a54d-05d7-4e49-b9d9-0495bfc77b4d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - forms_suite
+_core:
+  default_config_hash: e2y4K0pjNih8CiXjA2pJh2ydpk-jQwpgvRJjzbuBLRU
+id: forms_message.child_sponsorship_with_condition.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: child_sponsorship_with_condition
+label: message
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_message_field

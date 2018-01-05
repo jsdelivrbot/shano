@@ -1,0 +1,20 @@
+uuid: c2408254-6ebe-4b18-86d4-44559dc734df
+langcode: nl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: Gjh9_mlm1HfjnNSQpPY5hkZYU4s1yo9Ss7VGbkSYc8I
+name: 'Transition Page'
+type: transition_page
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

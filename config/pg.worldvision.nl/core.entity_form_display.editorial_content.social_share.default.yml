@@ -1,0 +1,26 @@
+uuid: a43edfe3-60be-44af-b8ab-96b8845645ba
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.social_share
+    - field.field.editorial_content.social_share.field_share_text
+_core:
+  default_config_hash: GEltvSKEX8EXQDHFIjQ8KdiP57vSsC2IzFOCs7bTcXk
+id: editorial_content.social_share.default
+targetEntityType: editorial_content
+bundle: social_share
+mode: default
+content:
+  field_share_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  langcode: true
+  name: true
+  user_id: true

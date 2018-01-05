@@ -1,0 +1,22 @@
+uuid: 0a1f7c83-1103-4219-9444-94e194189d93
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.united_volleys
+  module:
+    - forms_suite
+id: forms_message.united_volleys.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: united_volleys
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

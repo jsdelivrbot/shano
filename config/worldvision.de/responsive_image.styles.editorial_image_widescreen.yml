@@ -1,0 +1,30 @@
+uuid: a97282d5-b206-4708-a9d0-8d78840f7cf6
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.widescreen_16_9_md
+    - image.style.widescreen_16_9_sm
+    - image.style.widescreen_16_9_xs
+  theme:
+    - bootstrap
+id: editorial_image_widescreen
+label: Widescreen
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_sm
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_md
+breakpoint_group: bootstrap
+fallback_image_style: widescreen_16_9_sm

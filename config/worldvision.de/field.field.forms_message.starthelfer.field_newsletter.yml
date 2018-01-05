@@ -1,0 +1,22 @@
+uuid: 2aaa8ed4-44fe-4bb1-b3aa-7a344d6fd202
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.starthelfer
+  module:
+    - forms_suite
+id: forms_message.starthelfer.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: starthelfer
+label: newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

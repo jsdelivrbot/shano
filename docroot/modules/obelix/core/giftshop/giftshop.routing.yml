@@ -1,0 +1,39 @@
+giftshop.cart:
+  path: '/giftshop/cart'
+  defaults:
+    _controller: '\Drupal\giftshop\Controller\CartController::viewItems'
+    _title: 'Giftshop cart'
+  requirements:
+    _permission: 'access content'
+
+giftshop.cart.add:
+  path: '/giftshop/cart/add'
+  defaults:
+    _controller: '\Drupal\giftshop\Controller\CartController::addItem'
+    _title: 'Certificate or personalized Greeting Card'
+  requirements:
+    _permission: 'access content'
+
+giftshop.cart.add.card:
+  path: '/giftshop/cart/add/card'
+  defaults:
+    _form: '\Drupal\giftshop\Form\GiftCardForm'
+    _title: 'Personalized Greeting Card'
+  requirements:
+    _permission: 'access content'
+
+giftshop.cart.add.cert:
+  path: '/giftshop/cart/add/certificate'
+  defaults:
+    _form: '\Drupal\giftshop\Form\GiftCertificateForm'
+    _title: 'Certificate'
+  requirements:
+    _permission: 'access content'
+
+giftshop.cart.remove:
+  path: '/giftshop/cart/remove/{index}'
+  defaults:
+    _controller: '\Drupal\giftshop\Controller\CartController::removeItem'
+    _title: 'Remove item from cart'
+  requirements:
+    _permission: 'access content'

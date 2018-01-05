@@ -1,0 +1,22 @@
+uuid: 21106699-7286-4aa7-a270-352635f9a487
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.nothilfe_fuer_fluechtlinge_aus_m
+  module:
+    - forms_suite
+id: forms_message.nothilfe_fuer_fluechtlinge_aus_m.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: nothilfe_fuer_fluechtlinge_aus_m
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

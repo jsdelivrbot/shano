@@ -1,0 +1,25 @@
+uuid: 20964ee1-348d-40dc-9863-552743562fd8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.e_letter_to_child_bol_172919.field_message
+    - forms_suite.form.e_letter_to_child_bol_172919
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.e_letter_to_child_bol_172919.default
+targetEntityType: forms_message
+bundle: e_letter_to_child_bol_172919
+mode: default
+content:
+  field_message:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

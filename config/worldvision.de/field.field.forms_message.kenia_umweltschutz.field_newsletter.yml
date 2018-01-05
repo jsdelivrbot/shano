@@ -1,0 +1,24 @@
+uuid: 028bd745-d06c-4149-af2d-a795fe004787
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kenia_umweltschutz
+  module:
+    - forms_suite
+id: forms_message.kenia_umweltschutz.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kenia_umweltschutz
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_newsletter_field

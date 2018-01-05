@@ -1,0 +1,22 @@
+uuid: 4241ed04-86b9-4d3a-b45d-44866e8cf39a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.global_6_k_spendenlauf_fuer_trin
+  module:
+    - fs_payment
+id: forms_message.global_6_k_spendenlauf_fuer_trin.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: global_6_k_spendenlauf_fuer_trin
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_payment_method_field

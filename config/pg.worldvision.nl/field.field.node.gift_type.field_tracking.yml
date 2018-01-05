@@ -1,0 +1,21 @@
+uuid: ffceaa2c-166c-44a4-b7a2-bd0461555533
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tracking
+    - node.type.gift_type
+  module:
+    - affiliate
+id: node.gift_type.field_tracking
+field_name: field_tracking
+entity_type: node
+bundle: gift_type
+label: 'Tracking override'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: tracking

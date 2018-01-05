@@ -1,0 +1,84 @@
+0:
+  0:
+    image:
+      alt: Become a sponsor now
+      src: assets/images/flyout-teaser/kinderpatenschaft.jpg
+    headline: The nicest gift for children: A FUTURE
+    copy: One World Vision - One sponsorship - Triple the aid and only for one euro/day
+    link:
+      href: /kinderpatenschaft
+      label: Become a sponsor now
+  1:
+    image:
+      alt: Learn about child sponsorships
+      src: assets/images/flyout-teaser/kinderpatenschaft-informieren.jpg
+    headline: A child sponsorship with World Vision
+    copy: A particular lasting and personal kind of support
+    link:
+      href: /kinderpatenschaft/informieren/
+      label: Learn more
+    attributes:
+      class: hidden-sm
+1:
+  0:
+    image:
+      alt: Jetzt Starthelfer werden
+      src: assets/images/flyout-teaser/starthelfer.jpg
+    headline: Starthelfer
+    copy: Mit kleinem Beitrag den Kleinsten helfen. Unterstützen Sie als Starthelfer Kleinkinder im Kampf gegen Mangelernährung sowie vermeidbare Krankheiten.
+    link:
+      href: /spenden/starthelfer
+      label: Jetzt Starthelfer werden
+  1:
+    image:
+      alt: Jetzt Spenden
+      src: assets/images/flyout-teaser/micro-der-gute-kredit.jpg
+    headline: Micro - Der Gute Kredit
+    copy: Durch die Kraft der Microkredite Leben verändern. Unterstützen Sie jetzt einen Existenzgründer
+    link:
+      href: http://mikrokredite.worldvision.de
+      label: Jetzt Spenden
+    attributes:
+      class: hidden-sm
+2:
+  0:
+    image:
+      alt: Jetzt Spenden Sammel Aktion Starten
+      src: assets/images/flyout-teaser/world-vision-mitmachen.jpg
+    headline: Spenden Sammeln
+    copy: Ob Spendenlauf, Flohmarkt oder Weihnachtsbasar, jede Spende zählt!
+    link:
+      href: /mitmachen/spenden-sammeln
+      label: Jetzt Aktion Starten
+  1:
+    image:
+      alt: Jungendliche engagiert bei World Vision - Hungerfree
+      src: assets/images/flyout-teaser/world-vision-hungerfree.jpg
+    headline: Jugendliche engagieren sich
+    copy: Hungerfree ist die Bewegung für alle, die sich für eine Welt ohne Hunger einsetzen.
+    link:
+      href: /mitmachen/jugendliche-engagieren-hungerfree
+      label: Mehr erfahren
+    attributes:
+      class: hidden-sm
+3:
+  0:
+    image:
+      alt: Mehr über World Vision erfahren
+      src: assets/images/flyout-teaser/ueber-world-vision.jpg
+    headline: Über World Vision
+    copy: Lernen Sie hier unsere Organisation kennen und erfahren Sie alles über Werte, Ziele und Geschichte unseres Kinderhilfswerks!
+    link:
+      href: /informieren/ueber-world-vision
+      label: Mehr erfahren
+  1:
+    image:
+      alt: Weltkarte der World Vision Projekte
+      src: assets/images/flyout-teaser/weltkarte.jpg
+    headline: Unsere Projekte weltweit
+    copy: World Vision arbeitet dort, wo die Not der Kinder und ihrer Familien am größten ist.
+    link:
+      href: /weltkarte
+      label: Zu unseren Projekten
+    attributes:
+      class: hidden-sm

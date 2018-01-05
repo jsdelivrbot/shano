@@ -1,0 +1,5 @@
+name: Public Donor
+type: module
+description: New content types for public donor pages
+core: 8.x
+package: Obelix (Core)

@@ -1,0 +1,22 @@
+uuid: fb091344-165c-4a3c-be54-dd2a6875c26f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - child
+_core:
+  default_config_hash: piWV3RbnzHnSSqRLWLRGd67YLvGfCVzTa1PqyCN_AxY
+id: child.field_child_brothers
+field_name: field_child_brothers
+entity_type: child
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

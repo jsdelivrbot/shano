@@ -1,0 +1,10 @@
+links:
+  -
+    path: /kinderpatenschaft
+    priority: '1.0'
+  -
+    path: /kinderpatenschaft/informieren
+    priority: '1.0'
+_core:
+  default_config_hash: Gp8bobHmx-DuBPQoAb8KqKZXBqnca2flPqbNerZl0xQ
+langcode: de

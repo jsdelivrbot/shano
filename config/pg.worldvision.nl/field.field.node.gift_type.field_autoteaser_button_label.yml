@@ -1,0 +1,21 @@
+uuid: 2cd38322-5eab-4b38-83dd-e5e1e9d3a3a8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_button_label
+    - node.type.gift_type
+_core:
+  default_config_hash: rU4JY9-fUQFD5WqM0PiqUlxZfOjh_dAhICvUWqaWgl0
+id: node.gift_type.field_autoteaser_button_label
+field_name: field_autoteaser_button_label
+entity_type: node
+bundle: gift_type
+label: 'Button label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,48 @@
+{#
+/**
+ * @2ile child-manager.ht2l.twig
+ * Default template to return Child manager Contetn
+ */
+#}
+<div{{ attributes.addClass('child', 'container') }}>
+  <h4>new children</h4>
+  {% if output.new %}
+  <ul>
+    {% for child in output.new %}
+      <li>{{ child.ivision_id }}, {{ child.field_child_givenname }} , {{ child.field_child_familyname }} </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    n.a.
+  {% endif %}
+  <h4>updated children</h4>
+  {% if output.updated %}
+  <ul>
+    {% for child in output.updated %}
+      <li>{{ child.ivision_id }}, {{ child.field_child_givenname }} , {{ child.field_child_familyname }} </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  n.a.
+  {% endif %}
+  <h4>deleted children</h4>
+  {% if output.deleted %}
+    <ul>
+      {% for child in output.deleted %}
+        <li>{{ child.ivision_id }}, {{ child.field_child_givenname }} , {{ child.field_child_familyname }} </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    n.a.
+  {% endif %}
+  <h4>import info</h4>
+  {% if output.info %}
+    <ul>
+      <li>Total children: {{ output.info.total }}</li>
+      <li>Imported from: {{ output.info.from }}</li>
+      <li>Imported to: {{ output.info.to }}</li>
+    </ul>
+  {% else %}
+    n.a.
+  {% endif %}
+</div>

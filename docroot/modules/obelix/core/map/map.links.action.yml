@@ -1,0 +1,10 @@
+entity.map.add_form:
+  route_name: entity.map.add_form
+  title: 'Add Map'
+  appears_on:
+    - entity.map.collection
+entity.geo_object.add_form:
+  route_name: entity.geo_object.add_form
+  title: 'Add Geo object'
+  appears_on:
+    - entity.geo_object.collection

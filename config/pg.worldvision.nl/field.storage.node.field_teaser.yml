@@ -1,0 +1,22 @@
+uuid: 57df5791-55dc-42b8-a673-f79f902b24b1
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: '-Xj6ndkI0Fz70HuSiidIe6oaFWo49eDzkQeWL3M8meM'
+id: node.field_teaser
+field_name: field_teaser
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

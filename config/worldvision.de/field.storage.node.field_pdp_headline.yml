@@ -1,0 +1,23 @@
+uuid: dd1e3852-bdc3-4f8f-8c9a-842732439e30
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: kYYxUbAMiuZhQWbO1-70lvdG8Gh6m9fvUzd7PPJFnME
+id: node.field_pdp_headline
+field_name: field_pdp_headline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

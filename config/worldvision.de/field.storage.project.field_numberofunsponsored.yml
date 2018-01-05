@@ -1,0 +1,22 @@
+uuid: bc1ba4af-ced7-479b-b1f6-fee403ef2664
+langcode: de
+status: true
+dependencies:
+  module:
+    - project
+_core:
+  default_config_hash: 0Q6Jddd50_mJJkashVfLVuPUUP91DM76eXuEmpd0dz8
+id: project.field_numberofunsponsored
+field_name: field_numberofunsponsored
+entity_type: project
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

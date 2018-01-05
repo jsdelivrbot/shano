@@ -1,0 +1,24 @@
+uuid: 01dabfd1-1ca8-4984-a06f-1a0ab33ca3d6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.cinemascope_21_9_sm
+    - image.style.cinemascope_21_9_xs
+  theme:
+    - bootstrap
+id: editorial_image
+label: 'Editorial Image'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cinemascope_21_9_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cinemascope_21_9_sm
+breakpoint_group: bootstrap
+fallback_image_style: cinemascope_21_9_sm

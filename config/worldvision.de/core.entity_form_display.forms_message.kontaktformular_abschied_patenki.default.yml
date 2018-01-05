@@ -1,0 +1,42 @@
+uuid: 2813bfd3-0d54-4fbe-8b11-5b7bd6444bde
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kontaktformular_abschied_patenki.field_message
+    - forms_suite.form.kontaktformular_abschied_patenki
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_abschied_patenki.default
+targetEntityType: forms_message
+bundle: kontaktformular_abschied_patenki
+mode: default
+content:
+  copy:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,26 @@
+uuid: 8298adc4-e501-478c-a780-eb5818c9831e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - wovide
+_core:
+  default_config_hash: yruAxrrluBG6agGW1cTQto6MhRrgV7WdNyGCHEz7lkQ
+id: wovide_footernavigation
+theme: wovide
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Fußbereichsmenü
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

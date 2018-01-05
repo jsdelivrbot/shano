@@ -1,0 +1,20 @@
+uuid: c45351dd-2e59-4087-9a7d-af87c0e4e41e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: UajccyW5NOT3FoGhutlVQFIOTDV_rdC2kbXJHt8-VsA
+id: wvbasetheme_primaryadminactions
+theme: wvbasetheme
+region: controls
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primäre Admin-Aktionen'
+  provider: core
+  label_display: '0'
+visibility: {  }

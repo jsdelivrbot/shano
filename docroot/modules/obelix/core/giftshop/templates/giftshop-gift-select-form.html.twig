@@ -1,0 +1,4 @@
+{{ form|without('quantity', 'actions') }}
+<div class="col-xs-3">{{ form.quantity }}</div>
+<div class="clearfix visible-xs"></div>
+<div class="col-xs-12 col-sm-9">{{ form.actions.submit }}</div>

@@ -1,0 +1,43 @@
+uuid: 66470a73-19bc-4b6e-a2d6-d4d5b3f5b926
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.global_6_k_spendenlauf_fuer.field_newsletter
+    - field.field.forms_message.global_6_k_spendenlauf_fuer.field_shirt_size
+    - field.field.forms_message.global_6_k_spendenlauf_fuer.field_user_data
+    - forms_suite.form.global_6_k_spendenlauf_fuer
+  module:
+    - entity_test
+    - forms_suite
+    - options
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.global_6_k_spendenlauf_fuer.default
+targetEntityType: forms_message
+bundle: global_6_k_spendenlauf_fuer
+mode: default
+content:
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_shirt_size:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

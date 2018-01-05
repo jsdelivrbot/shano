@@ -1,0 +1,38 @@
+uuid: 58b4e87d-0522-4d8f-865b-6d2bfa536fc1
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.image
+    - field.storage.editorial_content.field_editorial_image
+  module:
+    - styled_image
+id: editorial_content.image.field_editorial_image
+field_name: field_editorial_image
+entity_type: editorial_content
+bundle: image
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'editorial/image/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg gif'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1400x620
+  alt_field: 1
+  alt_field_required: 1
+  title_field: 0
+  title_field_required: 0
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: styled_image

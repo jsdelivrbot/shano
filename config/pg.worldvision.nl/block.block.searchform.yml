@@ -1,0 +1,28 @@
+uuid: 983cd50e-c320-4780-9319-65ed49e605da
+langcode: nl
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - wovide
+_core:
+  default_config_hash: VQ7INpcnbhivU3AP9IQgkPU4FEZSOtA2u5jxA_9EpdI
+id: searchform
+theme: wovide
+region: search
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Suchformular
+  provider: search
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/*'
+    negate: false
+    context_mapping: {  }

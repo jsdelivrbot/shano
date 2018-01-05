@@ -1,0 +1,27 @@
+uuid: 8af6ae7d-3868-4b1f-a222-9f83620b92d5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.child_sponsorship_direct_en
+  module:
+    - fs_payment
+id: forms_message.child_sponsorship_direct_en.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: child_sponsorship_direct_en
+label: 'donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'I WOULD LIKE TO HELP ON A MONTHLY BASIS'
+    subline: ''
+    single_amount: 0
+    minimal_amount: '30'
+    default_amount: '30'
+field_type: wovi_donation_amount_field

@@ -1,0 +1,23 @@
+uuid: f93f1fe6-94b4-4481-9ce1-db0634c5eb64
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_copy
+    - node.type.transition_page
+  module:
+    - text
+_core:
+  default_config_hash: 9E9kgU_RzNFxqwM9T4QR_dVbxZA0FUMQ7HQ4t6hHtLU
+id: node.transition_page.field_impact_copy
+field_name: field_impact_copy
+entity_type: node
+bundle: transition_page
+label: Copy
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

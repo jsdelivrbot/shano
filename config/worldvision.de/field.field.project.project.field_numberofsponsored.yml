@@ -1,0 +1,26 @@
+uuid: d57dba29-289d-4c3c-9842-6ab05a6155e2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.project.field_numberofsponsored
+  module:
+    - project
+_core:
+  default_config_hash: FmVmjFMMNj811uOG9eWE2JxTwolRLjLbjPe81JbXBfI
+id: project.project.field_numberofsponsored
+field_name: field_numberofsponsored
+entity_type: project
+bundle: project
+label: 'number of sponsored'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

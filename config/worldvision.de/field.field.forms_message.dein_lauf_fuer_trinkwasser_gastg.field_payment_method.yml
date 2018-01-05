@@ -1,0 +1,25 @@
+uuid: cb9f1f56-da7b-4e15-bdc3-24d2a19c92e2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.dein_lauf_fuer_trinkwasser_gastg
+  module:
+    - fs_payment
+id: forms_message.dein_lauf_fuer_trinkwasser_gastg.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: dein_lauf_fuer_trinkwasser_gastg
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    external_payment: 1
+field_type: wovi_payment_method_field

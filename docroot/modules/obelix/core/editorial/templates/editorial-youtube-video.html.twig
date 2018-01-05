@@ -1,0 +1,20 @@
+{% if youtube_id %}
+  <div{{ attributes.addClass('editorial-youtube-video') }}>
+    <div{{ content_attributes.addClass('embed-responsive', 'embed-responsive-16by9') }}>
+      <div id="yt-container-{{ id }}"
+           class="yt-container embed-responsive-item"
+           data-entity-id="{{ id }}"
+           data-yt-id="{{ youtube_id }}"></div>
+      <button class="btn-icon btn-close yt-close">{{ 'Close'|t }}</button>
+    </div>
+    <div class="yt-preview">
+      <div class="yt-preview-img">
+        {{ content.preview_image }}
+        <button class="btn-icon yt-play v-h-align-center-abs">{{ 'Play'|t }}</button>
+      </div>
+      <div class="yt-preview-txt">
+        {{ content|without('preview_image') }}
+      </div>
+    </div>
+  </div>
+{% endif %}

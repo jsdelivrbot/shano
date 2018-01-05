@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/facedetection",
+  "type": "drupal-module",
+  "description": "Enables a new image effect for face detetion.",
+  "require": { }
+}

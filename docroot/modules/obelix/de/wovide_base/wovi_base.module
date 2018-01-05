@@ -1,0 +1,139 @@
+<?php
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_mail().
+ */
+function wovi_base_mail_alter(&$message) {
+  if ($message['module'] == 'user') {
+    $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+    foreach ($message['body'] as &$body_part) {
+      $body_part = check_markup(nl2br($body_part), 'html');
+    }
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function wovi_base_page_attachments(array &$attachments) {
+  $containe_id = \Drupal::configFactory()
+    ->get('google_tag_manager.configuration')
+    ->get('container_id');
+
+  if ($containe_id) {
+    $gtm_data_layer = [
+      '#tag' => 'script',
+      '#value' => 'dataLayer = [{ \'website\': \'new\' }];'
+    ];
+
+    $attachments['#attached']['html_head'][] = [
+      $gtm_data_layer,
+      'gtm_data_layer'
+    ];
+  }
+
+  // attach the visual website optimizer for goldbach
+  $script = [
+    '#theme' => 'visual_website_optimizer',
+    '#content' => '',
+  ];
+
+  $attachments['#attached']['html_head'][] = [
+    0 => [
+      '#tag' => 'script',
+      '#value' => \Drupal::service('renderer')->renderPlain($script),
+    ],
+    'visual_website_optimizer',
+  ];
+
+}
+use Drupal\node\NodeInterface;
+
+
+/**
+ * Implements hook_entity_view_alter().
+ * @param array $build
+ * @param EntityInterface $entity
+ * @param EntityViewDisplayInterface $display
+ */
+function wovi_base_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
+  // Cheking view_mode for node.
+  if ($build['#view_mode'] !== 'full' && $entity Instanceof NodeInterface) {
+    return;
+  }
+  _wovi_base_remove_header_links($build);
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ * @param array $attachments
+ */
+function wovi_base_page_attachments_alter(array &$attachments) {
+  _wovi_base_remove_header_links($attachments);
+}
+
+function _wovi_base_remove_header_links(array &$attachments) {
+  // Cheking html_head_link on attached tags in head.
+  if (!isset($attachments['#attached']['html_head_link'])) {
+    return;
+  }
+
+  // Array to unset.
+  $wovi_base = [
+    'delete-form',
+    'edit-form',
+    'version-history',
+    'revision',
+    'shortlink',
+    'drupal:content-translation-overview',
+    'drupal:content-translation-add',
+    'drupal:content-translation-edit',
+    'drupal:content-translation-delete',
+  ];
+
+  // Unset loop.
+  foreach ($attachments['#attached']['html_head_link'] as $key => $value) {
+    if (isset($value[0]['rel']) && in_array($value[0]['rel'], $wovi_base)) {
+      unset($attachments['#attached']['html_head_link'][$key]);
+    }
+  }
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function wovi_base_module_implements_alter(&$implementations, $hook) {
+  if ($hook === 'page_attachments_alter') {
+    $group = $implementations['wovi_base'];
+    unset($implementations['wovi_base']);
+    $implementations['wovi_base'] = $group;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+
+function wovi_base_theme($existing, $type, $theme, $path) {
+  return array(
+    'visual_website_optimizer' => [
+      'variables' => [
+        'content' => [],
+      ],
+      'template' => 'visual-website-optimizer',
+    ],
+  );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function wovi_base_form_alter(&$form, &$form_state, $form_id) {
+  // Expand meta tags by default.
+  if (!empty($form['field_metatags']['widget'][0]['basic']['description'])) {
+    $form['field_metatags']['widget'][0]['#open'] = TRUE;
+  }
+}

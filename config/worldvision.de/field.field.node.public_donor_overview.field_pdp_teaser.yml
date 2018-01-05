@@ -1,0 +1,59 @@
+uuid: 34c887e8-3142-4780-98eb-8a968057d0c5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_teaser
+    - node.type.public_donor_overview
+    - paragraphs.paragraphs_type.public_donor_projects
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: GsXiqF3a0vqUPEOLJC-i4hdMI-9vlosONnQ5bbGBVqY
+id: node.public_donor_overview.field_pdp_teaser
+field_name: field_pdp_teaser
+entity_type: node
+bundle: public_donor_overview
+label: Teaser
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      public_donor_projects: public_donor_projects
+    target_bundles_drag_drop:
+      paragraph_additional_text:
+        weight: 11
+        enabled: false
+      paragraph_donation_button:
+        weight: 12
+        enabled: false
+      paragraph_image_16_9:
+        weight: 13
+        enabled: false
+      paragraph_image_low_height:
+        weight: 14
+        enabled: false
+      paragraph_images:
+        weight: 15
+        enabled: false
+      paragraph_quote:
+        weight: 16
+        enabled: false
+      paragraph_related_teaser:
+        weight: 17
+        enabled: false
+      paragraph_slideshow:
+        weight: 18
+        enabled: false
+      paragraphs_video:
+        weight: 19
+        enabled: false
+      public_donor_projects:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

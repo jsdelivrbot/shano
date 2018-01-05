@@ -1,0 +1,19 @@
+uuid: 652ee162-a9e9-4f87-8aa6-f6827eec0c08
+langcode: nl
+status: true
+dependencies:
+  module:
+    - country
+    - link
+id: country.field_about_the_country_link
+field_name: field_about_the_country_link
+entity_type: country
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

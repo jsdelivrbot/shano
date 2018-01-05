@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_location
+    - node.type.public_donor_project
+id: node.public_donor_project.field_pdp_location
+field_name: field_pdp_location
+entity_type: node
+bundle: public_donor_project
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

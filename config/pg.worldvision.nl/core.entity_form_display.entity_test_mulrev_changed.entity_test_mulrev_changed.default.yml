@@ -1,0 +1,29 @@
+uuid: 0b81cc07-211a-4120-bf47-3d1997b8ee9e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.entity_test_mulrev_changed.entity_test_mulrev_changed.field_test_text
+  module:
+    - entity_test
+    - text
+id: entity_test_mulrev_changed.entity_test_mulrev_changed.default
+targetEntityType: entity_test_mulrev_changed
+bundle: entity_test_mulrev_changed
+mode: default
+content:
+  field_test_text:
+    type: text_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,20 @@
+uuid: cb29cf6a-4637-4380-b965-c71af26737f3
+langcode: de
+status: true
+dependencies:
+  module:
+    - country
+    - text
+id: country.field_special_country_article
+field_name: field_special_country_article
+entity_type: country
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

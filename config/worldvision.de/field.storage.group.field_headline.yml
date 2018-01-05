@@ -1,0 +1,19 @@
+uuid: d5d2a9cb-7adc-4405-be48-2fbcb51d5cf8
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+    - text
+id: group.field_headline
+field_name: field_headline
+entity_type: group
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

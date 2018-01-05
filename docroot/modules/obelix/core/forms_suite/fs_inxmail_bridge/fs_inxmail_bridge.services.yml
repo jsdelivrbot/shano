@@ -1,0 +1,7 @@
+services:
+  fs_inxmail_bridge.send_subscriber:
+    class: Drupal\fs_inxmail_bridge\EventSubscriber\SubmissionSendSubscriber
+    arguments: ['@inxmail']
+    tags:
+      - { name: event_subscriber }
+

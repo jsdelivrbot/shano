@@ -1,0 +1,29 @@
+# Map menu items definition
+entity.map.collection:
+  title: 'Map list'
+  route_name: entity.map.collection
+  description: 'List Map entities'
+  parent: system.admin_content
+  weight: 120
+
+map.admin.structure.settings:
+  title: Map settings
+  description: 'Configure Map entities'
+  route_name: map.settings
+  parent: system.admin_structure
+  weight: 120
+
+# Geo object menu items definition
+entity.geo_object.collection:
+  title: 'Geo object list'
+  route_name: entity.geo_object.collection
+  description: 'List Geo object entities'
+  parent: system.admin_content
+  weight: 130
+
+geo_object.admin.structure.settings:
+  title: Geo object settings
+  description: 'Configure Geo object entities'
+  route_name: geo_object.settings
+  parent: system.admin_structure
+  weight: 130

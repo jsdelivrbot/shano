@@ -1,0 +1,171 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.country.country.field_about_the_country
+    - field.field.country.country.field_about_the_country_link
+    - field.field.country.country.field_catastrophe_headline
+    - field.field.country.country.field_catastrophe_link
+    - field.field.country.country.field_catastrophe_text
+    - field.field.country.country.field_child_mortality
+    - field.field.country.country.field_continent
+    - field.field.country.country.field_doctors_per_inhabitant
+    - field.field.country.country.field_enrollment_rate
+    - field.field.country.country.field_image
+    - field.field.country.country.field_life_expectancy
+    - field.field.country.country.field_special_country_article
+    - field.field.country.country.field_sponsorship_children
+    - field.field.country.country.field_success_headline
+    - field.field.country.country.field_success_link
+    - field.field.country.country.field_success_text
+    - field.field.country.country.field_without_sponsorship
+    - image.style.thumbnail
+  module:
+    - country
+    - image
+    - link
+    - text
+id: country.country.default
+targetEntityType: country
+bundle: country
+mode: default
+content:
+  field_about_the_country:
+    type: text_textarea
+    weight: 17
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_about_the_country_link:
+    type: link_default
+    weight: 16
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_catastrophe_headline:
+    type: text_textfield
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_catastrophe_link:
+    type: link_default
+    weight: 14
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_catastrophe_text:
+    type: text_textarea
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_child_mortality:
+    type: number
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_continent:
+    type: options_select
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+  field_doctors_per_inhabitant:
+    type: number
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_enrollment_rate:
+    type: number
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_life_expectancy:
+    type: number
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_special_country_article:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+  field_sponsorship_children:
+    type: number
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_success_headline:
+    type: text_textfield
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_success_link:
+    type: link_default
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_success_text:
+    type: text_textarea
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_without_sponsorship:
+    type: number
+    weight: 18
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  id:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 19
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

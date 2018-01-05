@@ -1,0 +1,7 @@
+uuid: d194a1d5-c44c-4f8e-8e24-03d6097faed9
+langcode: de
+status: true
+dependencies: {  }
+id: code_embed
+label: 'Code embed'
+category: 'Individual block'

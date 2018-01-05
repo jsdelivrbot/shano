@@ -1,0 +1,22 @@
+uuid: 54e9c551-717b-4ee6-a7dd-054549052b91
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.katastrophenvorsorge
+  module:
+    - forms_suite
+id: forms_message.katastrophenvorsorge.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: katastrophenvorsorge
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

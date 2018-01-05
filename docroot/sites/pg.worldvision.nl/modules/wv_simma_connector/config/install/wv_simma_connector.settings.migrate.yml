@@ -1,0 +1,3 @@
+media_endpoint: 'https://serviceonemedia.wvi.org:8443/media/child'
+media_endpoint_user: 'svc_RMTStgApp-AD'
+media_endpoint_pass: 'b9LM!kKPoTer'

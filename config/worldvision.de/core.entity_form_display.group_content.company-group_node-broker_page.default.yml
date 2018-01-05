@@ -1,0 +1,47 @@
+uuid: 87c12065-137c-445f-9409-491b63b653c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content.company-group_node-broker_page.field_teaser_image
+    - group.content_type.company-group_node-broker_page
+    - image.style.thumbnail
+  module:
+    - image
+    - path
+id: group_content.company-group_node-broker_page.default
+targetEntityType: group_content
+bundle: company-group_node-broker_page
+mode: default
+content:
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  field_teaser_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

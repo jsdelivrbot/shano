@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_volume
+    - node.type.public_donor_project
+id: node.public_donor_project.field_pdp_volume
+field_name: field_pdp_volume
+entity_type: node
+bundle: public_donor_project
+label: Volume
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' Euro'
+field_type: integer

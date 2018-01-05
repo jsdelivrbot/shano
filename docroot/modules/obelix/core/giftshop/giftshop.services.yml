@@ -1,0 +1,26 @@
+services:
+  giftshop.cart:
+    class: Drupal\giftshop\GiftshopCart
+    arguments: ['@user.private_tempstore', '@session_manager', '@current_user']
+  giftshop.cart.temp:
+    class: Drupal\giftshop\GiftshopCartTempItem
+    arguments: ['@user.private_tempstore', '@session_manager', '@current_user']
+  giftshop.orders:
+    class: Drupal\giftshop\GiftshopPrintData
+  giftshop.pdf_generator:
+    class: Drupal\giftshop\GiftshopPdfGenerator
+  giftshop.save_subscriber:
+    class: Drupal\giftshop\EventSubscriber\FormSaveSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+  giftshop.send_subscriber:
+    class: Drupal\giftshop\EventSubscriber\FormSendSubscriber
+    arguments: ['@giftshop.cart']
+    tags:
+      - { name: event_subscriber }
+  giftshop.mail_handler_subscriber:
+    class: Drupal\giftshop\EventSubscriber\MailHandlerSubscriber
+    arguments: ['@giftshop.pdf_generator']
+    tags:
+      - { name: event_subscriber }

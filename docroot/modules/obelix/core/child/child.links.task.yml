@@ -1,0 +1,21 @@
+# Child routing definition
+child.settings_tab:
+  route_name: child.settings
+  title: 'Settings'
+  base_route: child.settings
+entity.child.canonical:
+  route_name: entity.child.canonical
+  base_route: entity.child.canonical
+  title: 'View'
+
+entity.child.edit_form:
+  route_name: entity.child.edit_form
+  base_route: entity.child.canonical
+  title: Edit
+
+entity.child.delete_form:
+  route_name:  entity.child.delete_form
+  base_route:  entity.child.canonical
+  title: Delete
+  weight: 10
+

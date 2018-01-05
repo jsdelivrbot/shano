@@ -1,0 +1,15 @@
+uuid: be1c3e2a-e75b-413e-9ff7-ab04605d9088
+langcode: de
+status: true
+dependencies: {  }
+id: child_list_editor
+label: 'Child list editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access form-suite forms'
+  - 'delete child entities'
+  - 'view child entities'
+  - 'view published child entities'
+  - 'view the administration theme'
+  - 'view unpublished child entities'

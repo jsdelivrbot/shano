@@ -1,0 +1,6 @@
+media_endpoint: 'https://serviceonemedia.wvi.org:8443/media/child'
+media_endpoint_user: svc_RMTStgApp-AD
+media_endpoint_pass: b9LM!kKPoTer
+_core:
+  default_config_hash: nw6a4u2rT6k0_5r1Wg_ouU3E6DdnRQqGw1vtngOfS_E
+langcode: nl

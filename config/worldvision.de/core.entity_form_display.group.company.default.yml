@@ -1,0 +1,217 @@
+uuid: d51c0e47-9385-4529-b9fd-163b1019218a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.company.field_affiliate
+    - field.field.group.company.field_affiliate_group
+    - field.field.group.company.field_broker_page_text
+    - field.field.group.company.field_broker_teaser
+    - field.field.group.company.field_call_to_action
+    - field.field.group.company.field_campaign_teaser
+    - field.field.group.company.field_company_registration_text
+    - field.field.group.company.field_headline
+    - field.field.group.company.field_motivation_code
+    - field.field.group.company.field_registration_confirm_text
+    - field.field.group.company.field_relation_teaser
+    - group.type.company
+  module:
+    - field_group
+    - inline_entity_form
+    - link
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_content:
+      children:
+        - group_company_page_information
+        - group_broker_page_information
+        - group_subscribe_page_information
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Content
+    group_company_page_information:
+      children:
+        - field_campaign_teaser
+        - field_headline
+        - field_relation_teaser
+        - field_affiliate
+        - field_affiliate_group
+        - field_motivation_code
+      parent_name: group_content
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: true
+      label: 'Company page information'
+    group_broker_page_information:
+      children:
+        - field_broker_teaser
+        - field_broker_page_text
+      parent_name: group_content
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Broker page information'
+    group_subscribe_page_information:
+      children:
+        - field_call_to_action
+        - field_company_registration_text
+        - field_registration_confirm_text
+        - field_promotion_banners
+      parent_name: group_content
+      weight: 5
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Subscribe page information'
+id: group.company.default
+targetEntityType: group
+bundle: company
+mode: default
+content:
+  field_affiliate:
+    weight: 6
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_affiliate_group:
+    weight: 7
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Affiliate group'
+      label_plural: 'Affiliate groups'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_broker_page_text:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_broker_teaser:
+    weight: 13
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Broker teaser'
+      label_plural: 'Broker teasers'
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_call_to_action:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_campaign_teaser:
+    weight: 3
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Company teaser'
+      label_plural: 'Company teasers'
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+    region: content
+  field_company_registration_text:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_headline:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_motivation_code:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_registration_confirm_text:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_relation_teaser:
+    weight: 5
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: 'Gift Teaser'
+      label_plural: 'Gift Teasers'
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uid: true

@@ -1,0 +1,25 @@
+uuid: 99e5f178-b21c-45b6-b385-3a30b260a3ef
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_button
+    - node.type.public_donor_overview
+  module:
+    - link
+_core:
+  default_config_hash: xWd7jhEIjAU5oO5tVVwjvqUhKslVSj-rE02tKfoXy-w
+id: node.public_donor_overview.field_pdp_button
+field_name: field_pdp_button
+entity_type: node
+bundle: public_donor_overview
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

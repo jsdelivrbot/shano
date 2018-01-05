@@ -1,0 +1,24 @@
+uuid: 48d5a9c2-1e9c-476e-9f8e-ec287e744e38
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.global_6_k_spendenlauf_fuer_trin
+  module:
+    - forms_suite
+id: forms_message.global_6_k_spendenlauf_fuer_trin.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: global_6_k_spendenlauf_fuer_trin
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'DEINE ANGABEN'
+    subline: ''
+field_type: wovi_user_data_field

@@ -1,0 +1,41 @@
+uuid: 63fd7185-73e9-4cb9-8462-77572f3b97f4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kontaktformular_sigrid_unseld_wi.field_message
+    - field.field.forms_message.kontaktformular_sigrid_unseld_wi.field_newsletter
+    - field.field.forms_message.kontaktformular_sigrid_unseld_wi.field_user_data
+    - forms_suite.form.kontaktformular_sigrid_unseld_wi
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.kontaktformular_sigrid_unseld_wi.default
+targetEntityType: forms_message
+bundle: kontaktformular_sigrid_unseld_wi
+mode: default
+content:
+  field_message:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

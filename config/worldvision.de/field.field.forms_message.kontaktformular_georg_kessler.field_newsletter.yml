@@ -1,0 +1,22 @@
+uuid: 447334c5-8a45-4ada-af38-659bfe05b24f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kontaktformular_georg_kessler
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_georg_kessler.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kontaktformular_georg_kessler
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,26 @@
+uuid: 3617e47f-1a70-42b1-9e42-8598d916ece0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user
+    - forms_suite.form.newsletter
+  module:
+    - forms_suite
+_core:
+  default_config_hash: dhzWOv1qfZVRKox1ohjCQR7uG0mJZjLU56ekgsPnLHY
+id: forms_message.newsletter.field_user
+field_name: field_user
+entity_type: forms_message
+bundle: newsletter
+label: 'user data email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'IMMER GUT INFORMIERT - MIT DEM  WORLD VISION-NEWSLETTER!'
+    subline: 'Melden Sie sich hier für den World Vision-Newsletter an!'
+field_type: wovi_user_data_email_field

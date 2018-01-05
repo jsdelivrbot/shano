@@ -1,0 +1,25 @@
+uuid: b28b92a0-32f1-42f7-abc8-fca18fb92fde
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.jaehrliche_spende
+  module:
+    - fs_payment
+id: forms_message.jaehrliche_spende.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: jaehrliche_spende
+label: 'Payment method'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Bankdaten angeben*'
+    subline: ''
+    external_payment: 0
+field_type: wovi_payment_method_field

@@ -1,0 +1,25 @@
+uuid: 60a7c685-addc-4f2c-b51f-d706a8235f82
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_content_block_align
+  module:
+    - options
+_core:
+  default_config_hash: ejEr1ReDvNIy7NjJtDzOW8XIeSpS1HWyae5MC1DmWNQ
+id: editorial_content.campaign_teaser.field_content_block_align
+field_name: field_content_block_align
+entity_type: editorial_content
+bundle: campaign_teaser
+label: 'Content alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

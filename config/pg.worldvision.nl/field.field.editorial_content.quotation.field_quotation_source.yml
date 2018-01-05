@@ -1,0 +1,19 @@
+uuid: 45e5bd78-d376-4f04-8bec-ade178499f41
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.quotation
+    - field.storage.editorial_content.field_quotation_source
+id: editorial_content.quotation.field_quotation_source
+field_name: field_quotation_source
+entity_type: editorial_content
+bundle: quotation
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

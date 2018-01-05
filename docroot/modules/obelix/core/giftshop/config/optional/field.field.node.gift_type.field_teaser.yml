@@ -1,0 +1,28 @@
+uuid: b14ea6db-aed4-482d-9301-cc07b274a2cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.relation_teaser
+    - field.storage.node.field_teaser
+    - node.type.gift_type
+id: node.gift_type.field_teaser
+field_name: field_teaser
+entity_type: node
+bundle: gift_type
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      relation_teaser: relation_teaser
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 652bdc44-726b-4aff-b26e-2ba33f7cd623
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.automatic_teaser
+    - field.field.editorial_content.automatic_teaser.field_tags
+third_party_settings:
+  entity_test:
+    foo: bar
+id: editorial_content.automatic_teaser.default
+targetEntityType: editorial_content
+bundle: automatic_teaser
+mode: default
+content:
+  automatic_teaser:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_tags: true
+  name: true
+  user_id: true

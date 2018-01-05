@@ -1,0 +1,43 @@
+
+# In order to to create pages it is necessary to define routes for them.
+# A route maps a URL path to a controller. It defines what function
+# or method will be called when a URL is accessed.
+# If the user accesses http://drupal8.dev//kinderpatenschaft/informieren, the routing
+# system will look for a route with that path. In this case it will find a
+# match, and execute the _controller callback. In this case the callback is
+# defined as a classname
+# ("\Drupal\child_sponsorship\Controller\ChildSponsorshipInfoController")
+# and a method ("ChildSponsorshipInfoAction").
+child_sponsorship.child_sponsorship_controller_ChildSponsorshipAction:
+  path: '/kinderpatenschaft'
+  defaults:
+    _controller: '\Drupal\child_sponsorship\Controller\ChildSponsorshipController::ChildSponsorshipAction'
+    _title: 'Pate werden mit einer Kinderpatenschaft bei World Vision'
+  requirements:
+    _permission: 'access content'
+
+child_sponsorship.child_sponsorship_info_controller_ChildSponsorshipInfoAction:
+  path: '/kinderpatenschaft-informieren'
+  defaults:
+    _controller: '\Drupal\child_sponsorship\Controller\ChildSponsorshipInfoController::ChildSponsorshipInfoAction'
+    _title: 'So funktioniert eine Kinderpatenschaft bei World Vision'
+  requirements:
+    _permission: 'access content'
+
+child_sponsorship.set_child:
+  path: '/kinderpatenschaft/child/{uuid}'
+  defaults:
+    _controller: '\Drupal\child_sponsorship\Controller\SetChildController::setChild'
+    _title: 'Set Child for user'
+  requirements:
+    _permission: 'access content'
+
+
+# AB-Test Version
+child_sponsorship.child_sponsorship_controller_ChildSponsorshipMyChildBillyAction:
+  path: '/kinderpatenschaft-billy-und-urs'
+  defaults:
+    _controller: '\Drupal\child_sponsorship\Controller\ChildSponsorshipMyChildBillyController::ChildSponsorshipMyChildBillyAction'
+    _title: 'Pate werden mit einer Kinderpatenschaft bei World Vision'
+  requirements:
+    _permission: 'access content'

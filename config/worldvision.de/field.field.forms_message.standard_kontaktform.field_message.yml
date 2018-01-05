@@ -1,0 +1,22 @@
+uuid: 38dd6af3-4410-41f5-9c23-4b70c244214e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.standard_kontaktform
+  module:
+    - forms_suite
+id: forms_message.standard_kontaktform.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: standard_kontaktform
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

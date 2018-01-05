@@ -1,0 +1,22 @@
+uuid: 7b36a361-2510-4492-9d69-623bc7ed8f2d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_peoplegroupdesc
+  module:
+    - child
+_core:
+  default_config_hash: sK5sVuRCU9hHAChsnSpvnnrv64a-Y39YjUVWanncPXI
+id: child.child.field_child_peoplegroupdesc
+field_name: field_child_peoplegroupdesc
+entity_type: child
+bundle: child
+label: 'people group description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

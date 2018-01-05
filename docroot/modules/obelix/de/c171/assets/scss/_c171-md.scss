@@ -1,0 +1,31 @@
+// =============================
+// First Campaign 2017  SM
+// =============================
+
+@media screen and (min-width: $bp-md) {
+
+  .billy-and-urs-wrapper {
+    // =============================
+    // Header
+    // =============================
+    .header--img{
+      position: absolute;
+      background-image: url("/modules/obelix/de/c171/assets/images/stage_desktop.jpg");
+      background-position: top;
+      min-height: 425px;
+    }
+    .header--content{
+      .header--inner-content{
+        margin-top: 300px;
+      }
+    }
+    // =============================
+    // Content
+    // =============================
+    .container--content{
+      //padding-left: 122px;
+      //padding-right: 122px;
+
+    }
+  }
+}

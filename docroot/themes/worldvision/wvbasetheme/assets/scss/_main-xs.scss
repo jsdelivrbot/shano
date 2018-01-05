@@ -1,0 +1,872 @@
+// =============================
+// Standard Elements
+// =============================
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-roman;
+  height: 100%;
+  margin-top: 0 !important;
+}
+
+body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
+  margin-left: 0;
+  .main-content {
+    margin-left: 240px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $font-bold;
+  text-transform: uppercase;
+  color: $color-highlight;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+}
+
+h3, h4, .h3, .h4 {
+  margin-top: 15px;
+}
+
+// Beauty Button
+@mixin btn-beauty() {
+  display: inline-block;
+  background: $color-highlight;
+  color: $color-standard-bg;
+  font-size: $font-size-btn;
+  font-family: $font-bold;
+  text-transform: uppercase;
+  border: 1px solid $color-highlight;
+  border-radius: 50px;
+  margin-top: 10px;
+
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  line-height: normal;
+  @include transition(0.3s all ease);
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus {
+    text-decoration: none;
+    outline: 0;
+    background: transparent;
+    color: $color-highlight;
+    border-color: $color-highlight;
+    i {
+      color: $color-highlight;
+    }
+  }
+  &.btn-transparent {
+    background: transparent;
+    color: $color-highlight;
+    &:hover {
+      background: $color-highlight;
+      color: $color-standard-bg;
+
+      // White transparent button
+      &.btn-white {
+        border-color: $color-highlight;
+      }
+    }
+    // White transparent button
+    &.btn-white {
+      border-color: $color-standard-bg;
+      color: $color-standard-bg;
+    }
+  }
+  &.btn-xl {
+    width: 100%;
+  }
+  &.btn-fullsize {
+    width: 100%;
+  }
+  &.btn-fullsize-xs {
+    width: 100%;
+  }
+  &.btn-primary {
+    &.disabled,
+    &[disabled] {
+      &.focus,
+      &:focus,
+      &:hover {
+        background-color: $color-highlight;
+        border-color: $color-highlight;
+        color: $color-standard-bg;
+      }
+    }
+  }
+  fieldset {
+    &.disabled,
+    &[disabled] {
+      &.btn-primary {
+        &:focus,
+        &.focus {
+          background-color: $color-highlight;
+          border-color: $color-highlight;
+          color: $color-standard-bg;
+        }
+      }
+
+    }
+  }
+  i {
+    margin-right: 10px;
+    color: $color-standard-bg;
+    font-size: 16px;
+    top: 2px;
+    position: relative;
+  }
+}
+
+a, button {
+  color: $color-standard-txt;
+  text-decoration: none;
+  line-height: normal;
+  &.active,
+  &:hover {
+    color: $color-highlight;
+    text-decoration: none;
+    @include box-shadow(none);
+    outline: 0;
+  }
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+  // Custom Transparent Button
+
+  &.btn-beauty {
+    @include btn-beauty();
+  }
+  // Animated Hover on round icons
+  &.btn-icon-round {
+    border: 0;
+    background-color: $color-highlight;
+    border-radius: 4rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2.0rem;
+    height: 4rem;
+    line-height: 4rem;
+    position: relative;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 4rem;
+    &:after {
+      content: " ";
+      border-radius: 0;
+      display: block;
+      height: 0;
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      width: 0;
+    }
+    i {
+      background: none;
+      color: white;
+      height: 4rem;
+      left: 0;
+      line-height: 4rem;
+      position: absolute;
+      top: 0;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      width: 4rem;
+      z-index: 10;
+    }
+    &:hover {
+      &:after {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 4rem;
+        margin: -2rem;
+      }
+      i {
+        color: $color-standard-bg;
+      }
+    }
+    &.btn-icon-round-no-hover {
+      &:after {
+        @include transition(none);
+      }
+      &:hover {
+        cursor: default;
+        &:after {
+          background-color: $color-highlight;
+        }
+        i {
+          color: $color-standard-bg;
+        }
+      }
+    }
+    &:after {
+      background-color: $color-standard-txt;
+    }
+    &.twitter:after {
+      background-color: #4099ff;
+    }
+    &.facebook:after {
+      background-color: #3B5998;
+    }
+    &.google-plus:after {
+      background-color: #db5a3c;
+    }
+    &.xing:after {
+      background-color: #126567;
+    }
+    //  Inverted version
+    &.inverted {
+      background-color: $color-standard-txt;
+      &:after {
+        background-color: $color-standard-bg;
+      }
+      &:hover {
+        i {
+          color: $color-highlight;
+        }
+      }
+    }
+    //  XL Version
+    &.btn-icon-round-xl {
+      height: 9rem;
+      width: 9rem;
+      line-height: 9rem;
+      border-radius: 100%;
+      i {
+        height: 9rem;
+        width: 9rem;
+        line-height: 9rem;
+      }
+      &:hover:after {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 9rem;
+        margin: -4.5rem;
+      }
+    }
+    // Orange highlighted form button
+    &.btn-form-highlight {
+      border: 2px solid $color-highlight;
+      &.btn-icon-round {
+        background: $color-standard-bg;
+        i {
+          color: $color-highlight;
+          top: -2px;
+          left: -2px;
+        }
+      }
+      // Hover
+      &:hover {
+        @include box-shadow(none);
+        &.btn-icon-round {
+          i {
+            color: $color-standard-bg;
+          }
+          &:after {
+            background: $color-highlight;
+          }
+        }
+      }
+      // active
+      &.active {
+        @include box-shadow(none);
+        pointer-events: none;
+        cursor: default;
+
+        &.btn-icon-round {
+          background: $color-highlight;
+          i {
+            color: $color-standard-bg;
+          }
+        }
+        &:after {
+          @include transition(none);
+        }
+      }
+    }
+  }
+  // Circular info btn on KiPa forms
+  &.btn-round {
+    padding: 5px 12px;
+    font-size: 18px;
+    margin-top: 15px;
+    text-transform: lowercase;
+  }
+  &.btn-close {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    i {
+      display: block;
+      border-radius: 50%;
+      background: $color-highlight;
+      font-size: 30px;
+      padding: 5px;
+      color: $color-standard-bg;
+      @include transition(0.3s all);
+    }
+    &:hover {
+      i {
+        background: $color-standard-bg;
+        color: $color-highlight;
+      }
+    }
+  }
+}
+
+a {
+  &.link-underlined {
+    color: $color-highlight;
+    text-decoration: underline;
+    &:hover {
+      color: $color-standard-txt;
+    }
+  }
+}
+
+p {
+  &.highlighted {
+    color: $color-highlight;
+    font-size: $font-size-highlighted-xs;
+  }
+  //&.subtitle {
+  //  font-size: $font-size-body-xs;
+  //  line-height: normal;
+  //}
+}
+
+strong {
+  font-family: $font-bold;
+  font-weight: normal;
+}
+
+.btn-beauty {
+  a, button {
+    @include btn-beauty();
+  }
+}
+
+// Round-bg-sm
+.round-bg-sm {
+  i {
+    font-style: normal;
+  }
+}
+
+// Fonts
+.font-book {
+  font-family: $font-book;
+}
+
+.font-bold {
+  font-family: $font-bold;
+}
+
+.font-light {
+  font-family: $font-light;
+}
+
+.font-hand-script {
+  font-family: $font-hand-script;
+}
+
+.font-color-highlighted-secondary {
+  color: $color-highlight-secondary;
+}
+
+.font-color-neutral {
+  color: $color-standard-txt;
+  a {
+    color: $color-standard-txt;
+    &:hover{
+      color: $color-highlight;
+    }
+  }
+}
+a.font-color-neutral {
+  color: $color-standard-txt;
+  &:hover{
+    color: $color-highlight;
+  }
+}
+
+.font-color-highlighted {
+  color: $color-highlight;
+  a {
+    color: $color-highlight;
+  }
+}
+
+// =============================
+// Helper-Classes
+// =============================
+
+.img-fullsize {
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+/* Vertical Offset Bottom */
+.vert-offset-top-3 {
+  padding-top: 45px;
+}
+
+.vert-offset-top-2 {
+  padding-top: 30px;
+}
+
+.vert-offset-top-1 {
+  padding-top: 15px;
+}
+
+.vert-offset-top-0 {
+  padding-top: 0;
+}
+
+/* Vertical Offset Bottom */
+.vert-offset-bottom-3 {
+  padding-bottom: 45px;
+}
+
+.vert-offset-bottom-2 {
+  padding-bottom: 30px;
+}
+
+.vert-offset-bottom-1 {
+  padding-bottom: 15px;
+}
+
+.vert-offset-bottom-0 {
+  padding-bottom: 0;
+}
+
+// XS-only
+/* Vertical Offset Bottom */
+.vert-offset-xs-top-3 {
+  padding-top: 45px;
+}
+
+.vert-offset-xs-top-2 {
+  padding-top: 30px;
+}
+
+.vert-offset-xs-top-1 {
+  padding-top: 15px;
+}
+
+.vert-offset-xs-top-0 {
+  padding-top: 0;
+}
+
+/* Vertical Offset Bottom */
+.vert-offset-xs-bottom-3 {
+  padding-bottom: 45px;
+}
+
+.vert-offset-xs-bottom-2 {
+  padding-bottom: 30px;
+}
+
+.vert-offset-xs-bottom-1 {
+  padding-bottom: 15px;
+}
+
+.vert-offset-xs-bottom-0 {
+  padding-bottom: 0;
+}
+
+.text-center-xs {
+  text-align: center;
+}
+
+.text-center-xs-md {
+  text-align: center;
+}
+
+.text-center-xs-sm {
+  text-align: center;
+}
+
+.text-color-neutral {
+  color: $color-standard-txt !important;
+}
+
+.text-transform-none {
+  text-transform: none;
+}
+
+.btn-icon {
+  border: 0 none;
+  background: transparent;
+  padding: 15px;
+}
+
+.btn-center-xs {
+  margin: 0 auto;
+  display: block;
+}
+
+.col-no-padding,
+.col-no-padding-md,
+.col-no-padding-xs {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.col-no-padding-right-xs {
+  padding-right: 0;
+}
+
+.col-no-padding-right {
+  padding-right: 0;
+}
+
+.col-no-padding-left {
+  padding-left: 0;
+}
+
+.col-no-padding-left-xs {
+  padding-left: 0;
+}
+
+.v-align-center-abs {
+  @include vertical-align(absolute);
+
+}
+
+.v-h-align-center-abs {
+  @include v-h-align(absolute);
+}
+
+.anchor {
+  position: absolute;
+  top: 0;
+}
+
+i.icon-size-l {
+  font-size: 45px;
+}
+
+i.icon-size-xl {
+  font-size: 60px;
+}
+
+i.icon-round-border {
+  border-radius: 50%;
+  border: 1px solid;
+  padding: 2px;
+
+  &:before {
+    left: 1px;
+    position: relative;
+  }
+}
+
+.icon-no-transition {
+  @include transition(none);
+}
+
+.separator-bottom {
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+.position-absolute {
+  position: absolute;
+  z-index: 1;
+}
+
+.display-block {
+  display: block;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+// =============================
+// Special Sections
+// =============================
+
+// Highlighted containers
+// =============================
+.section-highlighted {
+  &.section-highlighted--primary {
+    background-color: $color-highlight; // Orange
+    .editorial-button {
+      a.btn-beauty,
+      button.btn-beauty {
+        &:hover {
+          color: $color-highlight;
+          background-color: $color-standard-bg;
+        }
+      }
+    }
+    .btn-icon-round {
+      background-color: $color-standard-txt;
+      &:hover {
+        i {
+          color: $color-highlight;
+        }
+        &:after {
+          background-color: $color-standard-bg;
+        }
+      }
+    }
+    .btn-transparent {
+      color: $color-standard-bg;
+      border-color: $color-standard-bg;
+      &:hover {
+        background-color: $color-standard-bg;
+        color: $color-highlight;
+      }
+    }
+    //  Forms
+    &.form-minimal-border .form-wrapper .form-item.form-group {
+      select.form-control {
+        background: $color-highlight;
+        border-color: $color-standard-bg;
+        color: $color-standard-bg;
+        i {
+          color: $color-standard-bg;
+        }
+      }
+      .select-wrapper:after {
+        color: $color-standard-bg;
+      }
+    }
+  }
+  &.section-highlighted--secondary {
+    background-color: $color-highlight-secondary; // Cyan
+    .editorial-button {
+      a.btn-beauty,
+      button.btn-beauty {
+        &:hover {
+          color: $color-highlight-secondary;
+          background-color: $color-standard-bg;
+        }
+      }
+    }
+    .btn-transparent {
+      color: $color-standard-bg;
+      border-color: $color-standard-bg;
+      &:hover {
+        background-color: $color-standard-bg;
+        color: $color-highlight;
+      }
+    }
+  }
+  &.section-highlighted--headline {
+    color: $color-standard-bg;
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: $color-highlight;
+    }
+    a {
+      color: $color-standard-bg;
+      &:hover {
+        color: $color-standard-txt;
+      }
+    }
+  }
+  &.section-highlighted--tertiary {
+    background: $color-highlight-bg;
+  }
+  &.section-highlighted--quaternary {
+    background: $color-standard-txt;
+  }
+  .editorial-button {
+    a.btn-beauty,
+    button.btn-beauty {
+      color: $color-standard-bg;
+      border-color: $color-standard-bg;
+    }
+  }
+
+  .txt-content {
+    color: $color-standard-bg;
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: $color-standard-bg;
+    }
+    a {
+      color: $color-standard-bg;
+      &:hover {
+        color: $color-standard-txt;
+      }
+      &.btn {
+        color: $color-standard-txt;
+        &:hover {
+          color: $color-standard-bg;
+          [class^="icon-"],
+          [class*=" icon-"] {
+            color: $color-standard-bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sec-inverted-color {
+  background: $color-highlight;
+  color: $color-standard-bg;
+  a {
+    color: $color-standard-bg;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.dark-overlay {
+  content: "\a ";
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+  display: none;
+  z-index: 99;
+  overflow: hidden;
+  position: fixed;
+  //@include transition(1.5s opacity);
+}
+
+// =============================
+// System-Messages
+// =============================
+.region > div > .alert,
+.region > .alert {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  //bottom: 0;
+  right: 0;
+  /* border: 1px solid black; */
+  overflow: hidden;
+
+  margin-left: 5px;
+  margin-right: 5px;
+
+  z-index: 12;
+
+  background: $color-highlight;
+  color: $color-highlight-bg;
+  border: 2px solid $color-standard-bg;
+  font-family: $font-bold;
+  outline: 1px solid $color-highlight;
+  margin-top: 15px;
+  border-radius: 0;
+  @include box-shadow(2px 2px 5px rgba(64, 64, 64, 0.32));
+  > ul {
+    overflow: auto;
+    max-height: 98%;
+  }
+  li {
+    list-style-type: circle;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .close {
+    top: -9px;
+    opacity: 1;
+    span {
+      color: $color-standard-bg;
+      font-size: 40px;
+      @include transition(0.5s color);
+    }
+    &:hover {
+      span {
+        color: $color-standard-txt
+      }
+    }
+  }
+}
+
+.world-map {
+  background: image-url('ajax-loader.gif') 50% 50% no-repeat;
+}
+
+ul.pagination {
+  border-radius: 0;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    a {
+      border: 0;
+      color: $color-highlight;
+      @include transition(color 0ms);
+      i, span {
+        @include transition(color 0ms);
+      }
+      &:hover,
+      &:focus {
+        background: $color-highlight;
+        color: $color-standard-bg;
+        i {
+          color: $color-standard-bg;
+        }
+      }
+    }
+    &.active a {
+      background-color: $color-highlight;
+      &:focus,
+      &:hover {
+        background: $color-highlight;
+        color: $color-standard-bg;
+      }
+    }
+    &.pager__item--first {
+      margin-right: 10px;
+    }
+    &.pager__item--last {
+      margin-left: 10px;
+    }
+  }
+  > li:first-child,
+  > li:last-child {
+    > a,
+    > a:hover,
+    > span,
+    > span:hover {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0px;
+  margin-bottom: 0;
+  > li {
+    & + li:before {
+      padding: 0 5px;
+      color: #ccc;
+      content: "›";
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: null
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ieG-n_vcMZwkTyj53Po4Do__HPT6QougvPIg_Kw2O_k
+id: field_hero_slide
+label: field_hero_slide

@@ -1,0 +1,134 @@
+<?php
+
+/**
+ * @file
+ * Contains google_tag_manager.module..
+ */
+
+use Drupal\Core\Path\CurrentPathStack;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\google_tag_manager\DataLayer;
+use Symfony\Component\EventDispatcher\Event;
+
+/**
+ * Implements hook_help().
+ */
+function google_tag_manager_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the google_tag_manager module.
+    case 'help.page.google_tag_manager':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allows your website analytics to be managed using Google Tag Manager.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function google_tag_manager_theme($existing, $type, $theme, $path) {
+  return [
+    'google_tag_manager' => [
+      'variables' => [
+        'container_id' => NULL,
+        'environment' => NULL,
+        'gtm_auth' => NULL,
+        'gtm_preview' => NULL,
+        'data_layer' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_top().
+ */
+function google_tag_manager_page_top(array &$page_top) {
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch('data_layer.set', new Event());
+  $data_layer = [];
+  /** @var CurrentPathStack $current_path */
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_url = Url::fromUserInput($current_path)->toString();
+
+  $data = DataLayer::getInitialData();
+  foreach (DataLayer::getInitialData() as $url => $gtm_data) {
+    if ($url === $current_url || DataLayer::checkOptions($gtm_data)) {
+      foreach ($gtm_data as $event) {
+        $data_layer[] = $event['data'];
+      }
+    }
+  }
+
+  /** @var \Drupal\Core\Config\ImmutableConfig $config_factory */
+  $config_factory = \Drupal::configFactory()
+    ->get('google_tag_manager.configuration');
+
+  $container_id = $config_factory->get('container_id');
+  $environment = $config_factory->get('environment') == NULL ? 2 : (int) $config_factory->get('environment');
+
+  if ($container_id) {
+    switch (TRUE) {
+      case $environment === 0:
+        $gtm_auth = $config_factory->get('dev_gtm_auth') ?: 'sxWt3IdCUygEu3Pghholzw';
+        $gtm_preview = $config_factory->get('dev_gtm_preview') ?: 'env-96';
+        break;
+
+      case $environment === 1:
+        $gtm_auth = $config_factory->get('stage_gtm_auth') ?: 'YWdhE1vYW08BA1RkvyEKhQ';
+        $gtm_preview = $config_factory->get('stage_gtm_preview') ?: 'env-97';
+        break;
+
+      default:
+        $gtm_auth = $config_factory->get('live_gtm_auth') ?: 'sMQeAR-8DwgW5oJJyexpXA';
+        $gtm_preview = $config_factory->get('live_gtm_preview') ?: 'env-5';
+        break;
+    }
+
+    $page_top['google_tag_manager'] = [
+      '#theme' => 'google_tag_manager',
+      '#container_id' => $config_factory->get('container_id'),
+      '#environment' => $environment,
+      '#data_layer' => \Drupal\Component\Serialization\Json::encode($data_layer),
+      '#gtm_auth' => $gtm_auth,
+      '#gtm_preview' => $gtm_preview,
+    ];
+  }
+
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function google_tag_manager_page_attachments_alter(&$page) {
+  $event_dispatcher = \Drupal::service('event_dispatcher');
+  $event_dispatcher->dispatch('data_layer.set', new Event());
+  $data_event_layer = [];
+  /** @var CurrentPathStack $current_path */
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_url = Url::fromUserInput($current_path);
+
+  $eventdata = DataLayer::getEventData();
+  foreach (DataLayer::getEventData() as $url => $gtm_data) {
+    $test = $current_url->toString();
+    if ($url == $current_url->toString() || DataLayer::checkOptions($gtm_data)) {
+      foreach ($gtm_data as $event) {
+
+        if (isset($event['selector'])) {
+          $data_event_layer[] = [
+            'data' => $event['data'],
+            'selector' => $event['selector'],
+          ];
+        }
+      }
+    }
+
+    $page['#attached']['drupalSettings']['google_tag_manager']['google_tag_manager_events']['events'] = $data_event_layer;
+  }
+
+  $page['#attached']['library'][] = 'google_tag_manager/google_tag_manager_events';
+}

@@ -1,0 +1,22 @@
+uuid: 3f4ab9ef-de84-4bca-91ea-1bbbce8ea367
+langcode: nl
+status: true
+dependencies:
+  module:
+    - child
+    - project
+_core:
+  default_config_hash: 3055zw9ItrsIDpT9ALssSI34Yp0mZhC0UD0xWe1VTGU
+id: child.field_child_project
+field_name: field_child_project
+entity_type: child
+type: entity_reference
+settings:
+  target_type: project
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

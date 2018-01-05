@@ -1,0 +1,143 @@
+global:
+  version: VERSION
+  js:
+    assets/js/nav.js: {}
+  css:
+    theme:
+      assets/css/bootstrap-addon.css: {}
+      assets/css/main.css: {}
+      assets/css/font-size.css: {}
+      assets/css/standard-elements/nav.css: {}
+      assets/css/standard-elements/footer.css: {}
+      assets/css/standard-elements/forms.css: {}
+      assets/css/off-canvas.css: {}
+  dependencies:
+      - core/jquery
+fonts:
+  version: VERSION
+  css:
+    theme:
+      libraries/fonts/gill-sans-suomi-hand-script/style.css: {}
+      assets/css/transparency-bar/transparency-bar.css: {}
+wvbasetheme-main:
+  js:
+    assets/js/main.js: {}
+  css:
+    theme:
+      assets/css/custom.css: {}
+transition_page:
+  css:
+    theme:
+      assets/css/node--transition-page.css: {}
+branding_campaign:
+  css:
+    theme:
+      assets/css/sites/branding-campaign.css: {}
+  js:
+    assets/js/sites/branding-campaign.js: {}
+annual-donation-5x-multiplier:
+  css:
+    theme:
+      assets/css/forms/annual-donation-5x-multiplier.css: {}
+my-child-billy:
+  css:
+    theme:
+      assets/css/sites/my-child-billy.css: {}
+  js:
+      assets/js/sites/my-child-billy.js: {}
+content-editor:
+  css:
+    theme:
+      assets/css/content-editor/content-editor.css: {}
+  js:
+      assets/js/sites/content-editor.js: {}
+public-donor:
+  css:
+    theme:
+      assets/css/public-donor/public-donor.css: {}
+custom-kipa-forms:
+  css:
+    theme:
+      assets/css/custom-kipa-forms/custom-kipa-forms.css: {}
+  js:
+    assets/js/forms/custom-kipa-form.js: {}
+childhood-savior:
+  css:
+    theme:
+      assets/css/sites/childhood-savior.css: {}
+search-results:
+  css:
+    theme:
+      assets/css/search-results.css: {}
+jasny_bootstrap:
+  version: VERSION
+  js:
+    libraries/jasny-bootstrap/dist/js/jasny-bootstrap.min.js: {}
+  css:
+    theme:
+      libraries/jasny-bootstrap/dist/css/jasny-bootstrap.min.css: {}
+  dependencies:
+      - core/jquery
+bootstrap_select:
+  version: VERSION
+  js:
+    /libraries/bootstrap-select/dist/js/bootstrap-select.js: {}
+  css:
+    theme:
+      /libraries/bootstrap-select/dist/css/bootstrap-select.css: {}
+  dependencies:
+      - core/jquery
+transformicons:
+  version: VERSION
+  js:
+    libraries/transformicons/transformicons.js: {}
+  css:
+    theme:
+      libraries/transformicons/transformicons.css: {}
+icomoon:
+  version: VERSION
+  css:
+    theme:
+      libraries/icomoon/style.css: {}
+
+slickslider.style:
+  css:
+    theme:
+      assets/css/standard-blocks/slick-custom-theme.css: {}
+
+off-canvas-child:
+  css:
+    theme:
+      assets/css/offcanvas/page.css: {}
+
+editorial-content:
+  css:
+    theme:
+      assets/css/editorial-content.css: {}
+  js:
+    # @todo move to wherever it belongs
+    assets/js/forms.js: {}
+country-page:
+  css:
+    theme:
+      assets/css/country-page.css: {}
+home:
+  css:
+    theme:
+      assets/css/sites/home.css: {}
+donation-overview:
+  css:
+    theme:
+      assets/css/sites/donation-overview.css: {}
+catastrophe-overview:
+  css:
+    theme:
+      assets/css/sites/catastrophe-overview.css: {}
+giftshop:
+  css:
+    theme:
+      assets/css/giftshop/giftshop.css: {}
+loading-icons:
+  css:
+    theme:
+      libraries/loading-icons/ring.css: {}

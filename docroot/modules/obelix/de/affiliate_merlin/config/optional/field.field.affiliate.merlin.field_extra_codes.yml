@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.storage.affiliate.field_extra_codes
+id: affiliate.merlin.field_extra_codes
+field_name: field_extra_codes
+entity_type: affiliate
+bundle: merlin
+label: 'Extra codes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

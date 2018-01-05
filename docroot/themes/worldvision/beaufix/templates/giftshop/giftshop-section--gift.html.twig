@@ -1,0 +1,12 @@
+<div{{ attributes.addClass('country-page-section--default', 'editorial-section', 'vert-offset-bottom-3') }}>
+  <div class="container">
+    <div class="row text-center">
+      <div{{ content_attributes.addClass('col-xs-6') }}>
+        {{ content.slideshow }}
+      </div>
+      <div class="col-xs-6">
+        {{ content|without('slideshow') }}
+      </div>
+    </div>
+  </div>
+</div>

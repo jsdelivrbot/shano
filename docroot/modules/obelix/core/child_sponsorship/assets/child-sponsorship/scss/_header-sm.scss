@@ -1,0 +1,29 @@
+// =============================
+// Child sponsorship header
+// =============================
+@media screen and (min-width: $bp-sm) {
+  .child-sponsorship-header {
+    .transparency-price {
+      width: 95px;
+      right: 30px;
+    }
+  }
+  // My child billy version
+  // =============================
+  .child-sponsorship-my-child-billy-header{
+    background: url("/modules/obelix/core/child_sponsorship/assets/child-sponsorship/img/my-child-billy/bg-billy-und-urs-sm.jpg");
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: 72% 58%;
+    background-color: #fbf7f4;
+
+    .txt-content {
+      @include vertical-align(absolute);
+    }
+    .transparency-price{
+      position: absolute;
+      right: 30px;
+      width: 138px;
+    }
+  }
+}

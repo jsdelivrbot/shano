@@ -1,0 +1,81 @@
+uuid: be43b784-c555-4059-ae8a-80853cffcb71
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_suggestion.field_child_select
+    - field.field.forms_message.child_sponsorship_suggestion.field_message
+    - field.field.forms_message.child_sponsorship_suggestion.field_newsletter
+    - field.field.forms_message.child_sponsorship_suggestion.field_suggestion
+    - field.field.forms_message.child_sponsorship_suggestion.field_user_data
+    - field.field.forms_message.child_sponsorship_suggestion.field_wovi_survey
+    - forms_suite.form.child_sponsorship_suggestion
+  module:
+    - child_sponsorship
+    - forms_suite
+    - forms_survey
+_core:
+  default_config_hash: yHXyxXy9RiVtO5QwC7tNMmIW8-Tb4S7a_P-Iv6-i5wA
+id: forms_message.child_sponsorship_suggestion.default
+targetEntityType: forms_message
+bundle: child_sponsorship_suggestion
+mode: default
+content:
+  copy:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_child_select:
+    type: wovi_child_select_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_message:
+    type: wovi_message_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_suggestion:
+    type: wovi_suggestion_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_wovi_survey:
+    type: wovi_survey_widget
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: -50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

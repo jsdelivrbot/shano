@@ -1,0 +1,26 @@
+uuid: a3242285-8951-4a18-88be-3c604baa5dfc
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.contact_pss
+  module:
+    - forms_suite
+_core:
+  default_config_hash: cqdvZKCf-t7BB945Ce5cwgBLf_WZSAGmtZjSHtXzXNE
+id: forms_message.contact_pss.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: contact_pss
+label: 'user data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'KONTAKT ZUM PATEN- UND SPENDERSERVICE'
+    subline: 'Hier können Sie uns eine Nachricht schreiben.'
+field_type: wovi_user_data_field

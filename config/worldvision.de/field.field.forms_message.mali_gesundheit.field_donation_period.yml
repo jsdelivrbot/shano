@@ -1,0 +1,27 @@
+uuid: 39373e2b-23cb-4340-b26d-033b1c1078ba
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.mali_gesundheit
+  module:
+    - fs_payment
+id: forms_message.mali_gesundheit.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: mali_gesundheit
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Wie oft möchten Sie spenden'
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: interval_period
+field_type: wovi_donation_period_field

@@ -1,0 +1,24 @@
+uuid: 6cbb2a3a-d5f4-4b40-a19c-80e08eb89a03
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.test_sponsorship_en
+  module:
+    - forms_suite
+id: forms_message.test_sponsorship_en.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: test_sponsorship_en
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_message_field

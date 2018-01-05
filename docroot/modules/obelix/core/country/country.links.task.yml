@@ -1,0 +1,21 @@
+# Country routing definition
+country.settings_tab:
+  route_name: country.settings
+  title: 'Settings'
+  base_route: country.settings
+entity.country.canonical:
+  route_name: entity.country.canonical
+  base_route: entity.country.canonical
+  title: 'View'
+
+entity.country.edit_form:
+  route_name: entity.country.edit_form
+  base_route: entity.country.canonical
+  title: Edit
+
+entity.country.delete_form:
+  route_name:  entity.country.delete_form
+  base_route:  entity.country.canonical
+  title: Delete
+  weight: 10
+

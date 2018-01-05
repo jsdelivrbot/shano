@@ -1,0 +1,27 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_founded_by
+    - node.type.public_donor
+    - node.type.public_donor_project
+id: node.public_donor_project.field_pdp_founded_by
+field_name: field_pdp_founded_by
+entity_type: node
+bundle: public_donor_project
+label: 'Founded by'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      public_donor: public_donor
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

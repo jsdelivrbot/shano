@@ -1,0 +1,21 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_about_the_country
+  module:
+    - country
+    - text
+id: country.country.field_about_the_country
+field_name: field_about_the_country
+entity_type: country
+bundle: country
+label: 'About the country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

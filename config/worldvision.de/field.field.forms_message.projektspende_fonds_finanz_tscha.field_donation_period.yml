@@ -1,0 +1,27 @@
+uuid: 0089dfdb-d894-43f6-a1de-47994c8066f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.projektspende_fonds_finanz_tscha
+  module:
+    - fs_payment
+id: forms_message.projektspende_fonds_finanz_tscha.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_tscha
+label: 'Donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: 0
+field_type: wovi_donation_period_field

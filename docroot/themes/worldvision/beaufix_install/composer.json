@@ -1,0 +1,12 @@
+{
+    "name": "world-vision/beaufix_install",
+    "description": "Drupal 8 installation theme for obelix.",
+    "type": "drupal-theme",
+    "authors": [
+        {
+            "name": "Michael Petri",
+            "email": "mpetri@artus.com"
+        }
+    ],
+    "require": {}
+}

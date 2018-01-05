@@ -1,0 +1,8 @@
+name: Forms suite inxmail bridge
+type: module
+description: Handles the inxmail integration in the forms suite module.
+core: 8.x
+package: Obelix (DE)
+dependencies:
+  - forms_suite
+  - inxmail

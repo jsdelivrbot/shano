@@ -1,0 +1,9 @@
+uuid: 85358ec8-46da-41e1-a91c-3506e370950b
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fHuHNMvXOpiQ5PswaZ5YXsobewOCe6wKooRq1j3-sFM
+id: paragraphs_video
+label: Video
+behavior_plugins: {  }

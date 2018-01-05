@@ -1,0 +1,146 @@
+uuid: 833e0b6e-c7df-459b-9b8b-93bb8b0e4bd5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.field.editorial_content.campaign_teaser.field_button_style
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_headline
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_image
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_link
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_m_image
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_subtitle
+    - field.field.editorial_content.campaign_teaser.field_content_block_align
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_images
+        - group_settings
+      parent_name: ''
+      weight: 1
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_content:
+      children:
+        - field_campaign_teaser_headline
+        - field_campaign_teaser_subtitle
+        - field_campaign_teaser_link
+      parent_name: group_tabs
+      weight: 1
+      label: Content
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_images:
+      children:
+        - field_campaign_teaser_image
+        - field_campaign_teaser_m_image
+      parent_name: group_tabs
+      weight: 2
+      label: Images
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_content_block_align
+        - field_button_style
+      parent_name: group_tabs
+      weight: 3
+      label: Settings
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+_core:
+  default_config_hash: EbMoOe0v1E8vZJMyPkvePrL6QuVFXYXSPgA13aHiTuQ
+id: editorial_content.campaign_teaser.default
+targetEntityType: editorial_content
+bundle: campaign_teaser
+mode: default
+content:
+  field_button_style:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_campaign_teaser_headline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_campaign_teaser_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_campaign_teaser_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_campaign_teaser_m_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_campaign_teaser_subtitle:
+    weight: 2
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content_block_align:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

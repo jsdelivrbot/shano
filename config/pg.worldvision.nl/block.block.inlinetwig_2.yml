@@ -1,0 +1,23 @@
+uuid: 70588393-1f00-4b90-9312-a46769cb9808
+langcode: nl
+status: true
+dependencies:
+  module:
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig_2
+theme: wvbasetheme
+region: footer
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: 'Footer Partners Logos'
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: ''
+    format: html
+visibility: {  }

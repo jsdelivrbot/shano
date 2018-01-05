@@ -1,0 +1,135 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.news_article.field_autoteaser_button_label
+    - field.field.node.news_article.field_autoteaser_description
+    - field.field.node.news_article.field_autoteaser_image
+    - field.field.node.news_article.field_autoteaser_tags
+    - field.field.node.news_article.field_autoteaser_title
+    - field.field.node.news_article.field_metatags
+    - field.field.node.news_article.field_na_date
+    - field.field.node.news_article.field_na_headerimage
+    - field.field.node.news_article.field_na_introduction_text
+    - field.field.node.news_article.field_na_link
+    - field.field.node.news_article.field_na_optional
+    - field.field.node.news_article.field_na_subline
+    - field.field.node.news_article.field_na_user
+    - node.type.news_article
+    - responsive_image.styles.editorial_image_cinescope
+  module:
+    - datetime
+    - entity_reference_revisions
+    - image
+    - link
+    - metatag
+    - responsive_image
+    - text
+    - user
+id: node.news_article.default
+targetEntityType: node
+bundle: news_article
+mode: default
+content:
+  field_autoteaser_button_label:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_autoteaser_description:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_autoteaser_image:
+    weight: 9
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_autoteaser_tags:
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_autoteaser_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_metatags:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+  field_na_date:
+    weight: 4
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd. F Y'
+    third_party_settings: {  }
+    type: datetime_custom
+  field_na_headerimage:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image_cinescope
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+  field_na_introduction_text:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_na_link:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_na_optional:
+    type: entity_reference_revisions_entity_view
+    weight: 14
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_na_subline:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_na_user:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

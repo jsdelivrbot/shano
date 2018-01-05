@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains payone.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function payone_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the payone module.
+    case 'help.page.payone':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Handles the Payone Login Data') . '</p>';
+      return $output;
+
+    default:
+  }
+}

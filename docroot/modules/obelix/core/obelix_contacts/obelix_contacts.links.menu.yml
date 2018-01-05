@@ -1,0 +1,6 @@
+obelix_contacts.settings_form:
+  title: 'Contact Information'
+  description: 'In this settings you can set all contact info about your company, like phone, email, donation account etc.'
+  parent: wv_site.config_menu
+  route_name: obelix_contacts.settings_form
+  weight: 1

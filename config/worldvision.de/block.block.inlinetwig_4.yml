@@ -1,0 +1,23 @@
+uuid: 64299386-b474-426a-9238-c7dfbb6d4b63
+langcode: en
+status: true
+dependencies:
+  module:
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig_4
+theme: wvbasetheme
+region: footer
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: Prizes
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: "          <div class=\"col-xs-12\">\r\n            <p class=\"h5\">Transparenz im Spendenwesen - Geprüft und empfohlen:</p>\r\n            <ul class=\"list-unstyled list-inline transparent-prizes\">\r\n\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/transparenzpreis.png\"\r\n                       alt=\"Transparenzpreis\"></li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/aktion-deutschland-hilft.png\"\r\n                       alt=\"Aktion Deutschland hilft - Das Bündnis der Hilfsorganisation\">\r\n              </li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/dzi-spendensiegel.png\"\r\n                       alt=\"DZI - Spendensiegel\"></li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/deutscher-spendenrat.png\"\r\n                       alt=\"Deutscher Spendenrat e.V.\"></li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/spiegel-online-transparenzpreis.png\"\r\n                       alt=\"Studie Spiegel Online - Platz 1 Transparenzpreis\"></li>\r\n            </ul>\r\n          </div>\r\n          <div class=\"col-xs-12 vert-offset-top-2\">\r\n            <p class=\"h5\">World Vision wird gefördert von:</p>\r\n            <ul class=\"list-unstyled list-inline public-donor-prizes\">\r\n\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/auswaertiges-amt.png\"\r\n                       alt=\"Auswärtiges Amt\"></li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/bundesministerium.png\"\r\n                       alt=\"Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung\">\r\n              </li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/wfp.png\"\r\n                       alt=\"WFP\"></li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/european-commission.png\"\r\n                       alt=\"European Commission\"></li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/unhcr.png\"\r\n                       alt=\"The UN Refugee Agency\">\r\n              </li>\r\n              <li><img class=\"img-responsive\"\r\n                       src=\"{{ base_path ~ directory }}/assets/images/unitin-against-poverty.png\"\r\n                       alt=\"Uniting against poverty\"></li>\r\n            </ul>\r\n          </div>"
+    format: html
+visibility: {  }

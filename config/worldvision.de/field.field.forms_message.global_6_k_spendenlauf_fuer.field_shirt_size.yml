@@ -1,0 +1,23 @@
+uuid: d27b80b9-15a6-48f1-9239-d653fe53e024
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_shirt_size
+    - forms_suite.form.global_6_k_spendenlauf_fuer
+  module:
+    - options
+id: forms_message.global_6_k_spendenlauf_fuer.field_shirt_size
+field_name: field_shirt_size
+entity_type: forms_message
+bundle: global_6_k_spendenlauf_fuer
+label: 'Shirt-Größe wählen'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: S
+default_value_callback: ''
+settings: {  }
+field_type: list_string

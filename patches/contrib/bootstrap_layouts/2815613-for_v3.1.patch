@@ -1,0 +1,177 @@
+diff --git a/bootstrap_layouts.layouts.yml b/bootstrap_layouts.layouts.yml
+old mode 100755
+new mode 100644
+index ac1bc38..c7c361b
+--- a/bootstrap_layouts.layouts.yml
++++ b/bootstrap_layouts.layouts.yml
+@@ -8,7 +8,7 @@ booststrap-12:
+     main:
+       label: Main content
+ booststrap-1-11:
+-  label: Bootstrap Two Column: 1-11
++  label: Bootstrap Two Column 1-11
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-1-11
+   icon: bootstrap_twocol_1_11.png
+@@ -19,7 +19,7 @@ booststrap-1-11:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-2-10:
+-  label: Bootstrap Two Column: 2-10
++  label: Bootstrap Two Column 2-10
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-2-10
+   icon: bootstrap_twocol_2_10.png
+@@ -30,7 +30,7 @@ booststrap-2-10:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-3-9:
+-  label: Bootstrap Two Column: 3-9
++  label: Bootstrap Two Column 3-9
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-3-9
+   icon: bootstrap_twocol_3_9.png
+@@ -41,7 +41,7 @@ booststrap-3-9:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-4-8:
+-  label: Bootstrap Two Column: 4-8
++  label: Bootstrap Two Column 4-8
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-4-8
+   icon: bootstrap_twocol_4_8.png
+@@ -52,7 +52,7 @@ booststrap-4-8:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-5-7:
+-  label: Bootstrap Two Column: 5-7
++  label: Bootstrap Two Column 5-7
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-5-7
+   icon: bootstrap_twocol_5_7.png
+@@ -63,7 +63,7 @@ booststrap-5-7:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-6-6:
+-  label: Bootstrap Two Column: 6-6
++  label: Bootstrap Two Column 6-6
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-6-6
+   icon: bootstrap_twocol_6_6.png
+@@ -74,7 +74,7 @@ booststrap-6-6:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-6-6-bricks:
+-  label: Bootstrap Two Column: 6-6 Bricks
++  label: Bootstrap Two Column 6-6 Bricks
+   category: Bootstrap Layouts
+   path: templates/bricks/bootstrap-6-6-bricks
+   template: bootstrap-6-6-bricks
+@@ -95,7 +95,7 @@ booststrap-6-6-bricks:
+     bottom:
+       label: Bottom
+ bootstrap-6-6-stacked:
+-  label: Bootstrap Two Column: 6-6 Stacked
++  label: Bootstrap Two Column 6-6 Stacked
+   category: Bootstrap Layouts
+   path: templates/stacked/bootstrap-6-6-stacked
+   template: bootstrap-6-6-stacked
+@@ -110,7 +110,7 @@ bootstrap-6-6-stacked:
+     bottom:
+       label: Bottom
+ booststrap-7-5:
+-  label: Bootstrap Two Column: 7-5
++  label: Bootstrap Two Column 7-5
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-7-5
+   template: bootstrap-7-5
+@@ -121,7 +121,7 @@ booststrap-7-5:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-8-4:
+-  label: Bootstrap Two Column: 8-4
++  label: Bootstrap Two Column 8-4
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-8-4
+   template: bootstrap-8-4
+@@ -132,7 +132,7 @@ booststrap-8-4:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-9-3:
+-  label: Bootstrap Two Column: 9-3
++  label: Bootstrap Two Column 9-3
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-9-3
+   template: bootstrap-9-3
+@@ -143,7 +143,7 @@ booststrap-9-3:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-10-2:
+-  label: Bootstrap Two Column: 10-2
++  label: Bootstrap Two Column 10-2
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-10-2
+   template: bootstrap-10-2
+@@ -154,7 +154,7 @@ booststrap-10-2:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-11-1:
+-  label: Bootstrap Two Column: 11-1
++  label: Bootstrap Two Column 11-1
+   category: Bootstrap Layouts
+   path: templates/two-columns/bootstrap-11-1
+   template: bootstrap-11-1
+@@ -165,7 +165,7 @@ booststrap-11-1:
+     sidebar_left:
+       label: Sidebar Left
+ booststrap-2-8-2:
+-  label: Bootstrap Three Column: 2-8-2
++  label: Bootstrap Three Column 2-8-2
+   category: Bootstrap Layouts
+   path: templates/three-columns/bootstrap-2-8-2
+   template: bootstrap-2-8-2
+@@ -178,7 +178,7 @@ booststrap-2-8-2:
+     sidebar_right:
+       label: Sidebar Right
+ booststrap-2-2-8:
+-  label: Bootstrap Three Column: 2-2-8
++  label: Bootstrap Three Column 2-2-8
+   category: Bootstrap Layouts
+   path: templates/three-columns/bootstrap-2-2-8
+   template: bootstrap-2-2-8
+@@ -191,7 +191,7 @@ booststrap-2-2-8:
+     sidebar_right:
+       label: Sidebar Right
+ booststrap-8-2-2:
+-  label: Bootstrap Three Column: 8-2-2
++  label: Bootstrap Three Column 8-2-2
+   category: Bootstrap Layouts
+   path: templates/three-columns/bootstrap-8-2-2
+   template: bootstrap-8-2-2
+@@ -204,7 +204,7 @@ booststrap-8-2-2:
+     sidebar_right:
+       label: Sidebar Right
+ booststrap-3-6-3:
+-  label: Bootstrap Three Column: 3-6-3
++  label: Bootstrap Three Column 3-6-3
+   category: Bootstrap Layouts
+   path: templates/three-columns/bootstrap-3-6-3
+   template: bootstrap-3-6-3
+@@ -217,7 +217,7 @@ booststrap-3-6-3:
+     sidebar_right:
+       label: Sidebar Right
+ booststrap-4-4-4:
+-  label: Bootstrap Three Column: 4-4-4
++  label: Bootstrap Three Column 4-4-4
+   category: Bootstrap Layouts
+   path: templates/three-columns/bootstrap-4-4-4
+   template: bootstrap-4-4-4
+@@ -230,7 +230,7 @@ booststrap-4-4-4:
+     sidebar_right:
+       label: Sidebar Right
+ booststrap-5-5-2:
+-  label: Bootstrap Three Column: 5-5-2
++  label: Bootstrap Three Column 5-5-2
+   category: Bootstrap Layouts
+   path: templates/three-columns/bootstrap-5-5-2
+   template: bootstrap-5-5-2

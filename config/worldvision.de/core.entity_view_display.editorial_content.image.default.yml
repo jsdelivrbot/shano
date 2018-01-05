@@ -1,0 +1,24 @@
+uuid: e0972ca9-9768-4940-ba35-b1872e754217
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.image
+    - field.field.editorial_content.image.field_editorial_image
+third_party_settings:
+  entity_test:
+    foo: bar
+id: editorial_content.image.default
+targetEntityType: editorial_content
+bundle: image
+mode: default
+content:
+  image:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_editorial_image: true
+  name: true
+  user_id: true

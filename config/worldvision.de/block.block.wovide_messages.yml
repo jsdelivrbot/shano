@@ -1,0 +1,22 @@
+uuid: fd4da97f-90a4-472c-b0ae-c85de3ee7d8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wovide
+_core:
+  default_config_hash: uUvLkF7ds0J20_mKSvkjqk2Pq9joyduCPvUJSCZsR6M
+id: wovide_messages
+theme: wovide
+region: controls
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Nachrichten
+  provider: system
+  label_display: '0'
+visibility: {  }

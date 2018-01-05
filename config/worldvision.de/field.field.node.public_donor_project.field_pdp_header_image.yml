@@ -1,0 +1,40 @@
+uuid: b6556449-139d-41b7-9f0d-d7bde3dbbd34
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_header_image
+    - node.type.public_donor_project
+  module:
+    - image
+_core:
+  default_config_hash: tYM2v0pqMu2PLwUWYi-y52nf5ISWM2cbUxROTHKMVLo
+id: node.public_donor_project.field_pdp_header_image
+field_name: field_pdp_header_image
+entity_type: node
+bundle: public_donor_project
+label: 'Header Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'public_donor_project/headerimage/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 300x300
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

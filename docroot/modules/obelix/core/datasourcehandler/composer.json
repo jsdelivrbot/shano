@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/datasourcehandler",
+  "type": "drupal-module",
+  "description": "Handles all Datasources",
+  "require": { }
+}

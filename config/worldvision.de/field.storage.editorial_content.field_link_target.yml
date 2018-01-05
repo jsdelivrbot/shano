@@ -1,0 +1,32 @@
+uuid: fff88cba-e291-475a-80b1-e6d256d55f35
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: he4QWzxdQINNlv6JpZC-U_NhsZqPWA_V5tceA79ns2I
+id: editorial_content.field_link_target
+field_name: field_link_target
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: _blank
+      label: 'New window'
+    -
+      value: _self
+      label: 'Same window'
+    -
+      value: offcanvas
+      label: Off-Canvas
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

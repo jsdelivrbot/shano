@@ -1,0 +1,27 @@
+uuid: 83a5b500-bf4e-491d-bf6a-db4d7e491b8a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_suggestion
+    - forms_suite.form.child_sponsorship_suggestion
+  module:
+    - child_sponsorship
+_core:
+  default_config_hash: SIJBjgTOlwOddcHjYNsSyrDSOebqflhyIpoQ47Szfn0
+id: forms_message.child_sponsorship_suggestion.field_suggestion
+field_name: field_suggestion
+entity_type: forms_message
+bundle: child_sponsorship_suggestion
+label: suggestion
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    suggestion_type: '1'
+field_type: wovi_suggestion_field

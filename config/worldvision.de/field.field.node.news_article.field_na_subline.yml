@@ -1,0 +1,21 @@
+uuid: 06ab22f0-91d8-430e-925e-50f00b36b274
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_na_subline
+    - node.type.news_article
+_core:
+  default_config_hash: grzTxA_AIJB1KB-e5xWozF_-JK3bK-8dSMn1_ApMuwg
+id: node.news_article.field_na_subline
+field_name: field_na_subline
+entity_type: node
+bundle: news_article
+label: Subline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,46 @@
+<div{{ attributes.addClass('editorial--content', 'img-content') }}>
+  <div class="editorial-child-sponsorship-child-select inner-content">
+    <div class="container container-inner">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-4 child-img">
+          <div class="child-cont">
+            {{ child_image }}
+            {% if child_video_src %}
+              <video controls preload="auto" width="100%" id="child-video-{{ id }}"
+                     class="child-video video-js vjs-sublime-skin vjs-big-play-centered" data-setup="{}"
+                     poster='{{ child_image_src }}'>
+                <source src="{{ child_video_src }}" type="video/mp4">
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a web browser
+                  that
+                  <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                    video</a>
+                </p>
+              </video>
+              <button class="btn-icon btn-close child-video-close"><i class="icon-cross"></i></button>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-md-8 col-no-padding-left-sm child-infos">
+          <h2 class="font-size-s text-center">Unser Vorschlag für Sie:</h2>
+          <h2 class="font-size-l text-center">Hallo, ich bin <span
+              class="txt-highlighted font-hand-script">{{ child_info.name }}</span> {% if child_info.special_country_article %}{{ child_info.special_country_article }}{% else %}aus{% endif %}
+            <span class="txt-highlighted font-hand-script">{{ child_info.country }}</span> und suche
+            noch einen Paten!</h2>
+          <ul class="list-unstyled text-uppercase text-center">
+            <li>Mein Alter: <span class="font-bold">{{ child_info.age }} Jahre ({{ child_info.birthday }}
+                )</span></li>
+            <li>Ich lebe bei: <span
+                class="font-bold">{{ child_info.lives_with|replace({"mit ":""}) }}</span></li>
+            <li>Ich mag: <span class="font-bold">{{ child_info.likes }}</span></li>
+          </ul>
+          <div class="text-center"><a href="/formulare/kinderpatenschaft-uebernehmen"
+                                      class="btn btn-beauty btn-fullsize-xs">Jetzt Pate
+              werden</a></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

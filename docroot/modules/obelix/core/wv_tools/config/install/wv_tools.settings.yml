@@ -1,0 +1,2 @@
+# Affects drush content delete batch operation limit.
+content_delete_items_limit: 100

@@ -1,0 +1,7 @@
+services:
+  fs_affiliate_bridge.save_subscriber:
+    class: Drupal\fs_affiliate_bridge\EventSubscriber\FormSaveSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+

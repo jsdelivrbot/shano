@@ -1,0 +1,21 @@
+uuid: 534925c3-59bf-49da-9c8e-d19e9982ac6d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_description
+    - field_collection.field_collection.field_donation_example
+_core:
+  default_config_hash: VgWsz_v-A-Vup2SwNj4omys36PNTou290Pq_eALzuEY
+id: field_collection_item.field_donation_example.field_description
+field_name: field_description
+entity_type: field_collection_item
+bundle: field_donation_example
+label: Projektbeschreibung
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

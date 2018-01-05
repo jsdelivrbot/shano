@@ -1,0 +1,48 @@
+uuid: 97b508ac-2811-4345-86b7-d557d289c944
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.geo_object.geo_object.field_country
+    - field.field.geo_object.geo_object.field_google_geo_object
+    - field.field.geo_object.geo_object.field_highlighted
+  module:
+    - map
+_core:
+  default_config_hash: '-nyQ4pbkFAYH9wNJUP06xH-2e6KtlT_awKuB_Y2oR-E'
+id: geo_object.geo_object.default
+targetEntityType: geo_object
+bundle: geo_object
+mode: default
+content:
+  field_country:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_google_geo_object:
+    type: google_geo_object_widget_type
+    weight: 3
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    region: content
+  field_highlighted:
+    weight: 1
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

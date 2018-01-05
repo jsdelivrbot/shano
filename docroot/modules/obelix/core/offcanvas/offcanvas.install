@@ -1,0 +1,78 @@
+<?php
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_requirements().
+ */
+function offcanvas_requirements($phase) {
+  $requirements = [];
+
+  if ('runtime' == $phase) {
+    $has_scotch_panels = _offcanvas_verify_library('offcanvas', 'scotch-panels');
+    $requirements['scrotch_panels'] = [
+      'title' => t('Scotch Panels library'),
+      'value' => $has_scotch_panels ? t('Enabled') : t('Not found'),
+    ];
+
+    if (!$has_scotch_panels) {
+      $requirements['scrotch_panels']['severity'] = REQUIREMENT_WARNING;
+      $d3_url = Url::fromUri('https://github.com/scotch-io/scotch-panels', ['attributes' => ['target' => '_blank']]);
+      $requirements['d3js']['description'] = [
+        '#prefix' => ' ',
+        '#markup' => t('Scotch Panels is essential to open links in an off canvas context. <a href=":d3_link">Download Scotch Panels</a> into /libraries/scotch-panels/dist/scotchPanels.min.js.', [':d3_link' => $d3_url->toUriString()])
+      ];
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Verify that the library files exist.
+ *
+ * @param string $extension
+ *   The name of the extension that registered a library.
+ * @param string $name
+ *   The name of a registered library to retrieve.
+ *
+ * @return bool
+ *   TRUE if all files of this library exists, FALSE otherwise
+ *
+ * @see https://drupal.org/node/2231385
+ */
+function _offcanvas_verify_library($extension, $name) {
+  /** @var Drupal\Core\Asset\LibraryDiscovery $library_discovery */
+  $library_discovery = \Drupal::service('library.discovery');
+  $library = $library_discovery->getLibraryByName($extension, $name);
+
+  $exist = TRUE;
+  if ($library['js']) {
+    foreach ($library['js'] as $js) {
+      if ($js['type'] == 'file') {
+        if (!file_exists(DRUPAL_ROOT . '/' . $js['data'])) {
+          $exist = FALSE;
+        }
+      }
+    }
+  }
+
+  if ($library['css']) {
+    foreach ($library['css'] as $css) {
+      if ($css['type'] == 'file') {
+        if (!file_exists(DRUPAL_ROOT . '/' . $css['data'])) {
+          $exist = FALSE;
+        }
+      }
+    }
+  }
+
+  if ($library['dependencies']) {
+    foreach ($library['dependencies'] as $dependency) {
+      $parts = explode('/', $dependency);
+      $exist = _offcanvas_verify_library($parts[0], $parts[1]);
+    }
+  }
+
+  return $exist;
+}

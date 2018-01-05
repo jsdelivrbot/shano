@@ -1,0 +1,22 @@
+uuid: 5d0be800-160b-443e-bb23-fbb146143074
+langcode: nl
+status: true
+dependencies:
+  module:
+    - project
+_core:
+  default_config_hash: g2BUAAO8dzd_HrEQ-TDxs68kF3LD8-3aeVwJwXAOfn4
+id: project.field_numberofsponsored
+field_name: field_numberofsponsored
+entity_type: project
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

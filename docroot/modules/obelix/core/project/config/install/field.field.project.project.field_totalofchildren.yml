@@ -1,0 +1,24 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.project.field_totalofchildren
+  module:
+    - project
+id: project.project.field_totalofchildren
+field_name: field_totalofchildren
+entity_type: project
+bundle: project
+label: 'total of children'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

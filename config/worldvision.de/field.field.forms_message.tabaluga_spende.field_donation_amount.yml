@@ -1,0 +1,27 @@
+uuid: 5f1f1875-79f9-4e03-a398-1d1c8d0df30b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.tabaluga_spende
+  module:
+    - fs_payment
+id: forms_message.tabaluga_spende.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: tabaluga_spende
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

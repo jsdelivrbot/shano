@@ -1,0 +1,21 @@
+uuid: a08f376e-2634-4fb2-bb43-a6a39a465df2
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: S4fQL65lHp-xydeKdkusHnVVrG8QMEzrTBYic5DvJmw
+id: node.field_his_copy
+field_name: field_his_copy
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

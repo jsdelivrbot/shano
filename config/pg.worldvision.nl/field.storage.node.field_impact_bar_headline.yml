@@ -1,0 +1,23 @@
+uuid: 7cadf129-b304-4b85-9842-ae1d02f8444c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: maxn3ecwDAgz81FauoiPvDQ-rH7XNmgAEK7mBYH3BcI
+id: node.field_impact_bar_headline
+field_name: field_impact_bar_headline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

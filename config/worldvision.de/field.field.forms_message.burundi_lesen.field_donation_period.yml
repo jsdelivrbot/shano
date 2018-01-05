@@ -1,0 +1,27 @@
+uuid: 3ad637ca-3c41-41b9-9100-80eee80e373c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.burundi_lesen
+  module:
+    - fs_payment
+id: forms_message.burundi_lesen.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: burundi_lesen
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Wie oft möchten Sie spenden'
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: interval_period
+field_type: wovi_donation_period_field

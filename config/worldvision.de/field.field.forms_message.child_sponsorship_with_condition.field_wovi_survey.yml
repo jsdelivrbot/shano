@@ -1,0 +1,26 @@
+uuid: fb91bfc1-b95f-4378-9da6-f14e54d9f35b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_wovi_survey
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - forms_survey
+id: forms_message.child_sponsorship_with_condition.field_wovi_survey
+field_name: field_wovi_survey
+entity_type: forms_message
+bundle: child_sponsorship_with_condition
+label: 'wovi survey'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    survey: '0'
+    alternative: ''
+default_value_callback: ''
+settings:
+  headline: 'Wie sind Sie auf uns Aufmerksam geworden?'
+  subline: ''
+field_type: wovi_survey_field

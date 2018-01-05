@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: photo_4_3_sm
+label: 'Photo (4:3) SM'
+effects:
+  b1891044-2cd6-4ef5-8c15-df2b1925765c:
+    uuid: b1891044-2cd6-4ef5-8c15-df2b1925765c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 992
+      height: 744

@@ -1,0 +1,14 @@
+name: Transition page
+type: module
+description: Provides a new content type.
+core: 8.x
+package: Obelix (DE)
+dependencies:
+  - editorial_content
+  - field_group
+  - field_collection
+  - image
+  - menu_ui
+  - node
+  - responsive_image
+  - text

@@ -1,0 +1,24 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_doctors_per_inhabitant
+  module:
+    - country
+id: country.country.field_doctors_per_inhabitant
+field_name: field_doctors_per_inhabitant
+entity_type: country
+bundle: country
+label: 'Doctors per inhabitant'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

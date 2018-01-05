@@ -1,0 +1,128 @@
+uuid: eb97f469-9465-480f-8856-d043fb59bbab
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.story_teaser
+    - field.field.editorial_content.story_teaser.field_link_target
+    - field.field.editorial_content.story_teaser.field_teaser_headline
+    - field.field.editorial_content.story_teaser.field_teaser_image
+    - field.field.editorial_content.story_teaser.field_teaser_link
+    - field.field.editorial_content.story_teaser.field_teaser_subtitle
+    - image.style.widescreen_16_9_md
+  module:
+    - field_group
+    - image
+    - link
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_background
+        - group_settings
+      parent_name: ''
+      weight: 6
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_content:
+      children:
+        - field_teaser_headline
+        - field_teaser_subtitle
+        - field_teaser_link
+      parent_name: group_tabs
+      weight: 9
+      label: Content
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_background:
+      children:
+        - field_teaser_image
+      parent_name: group_tabs
+      weight: 10
+      label: Background
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_link_target
+      parent_name: group_tabs
+      weight: 11
+      label: Settings
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+_core:
+  default_config_hash: 8Z_T_cColQcNq0jhQ9NrBpuBOJ81iVyiJ4FU5j2-V30
+id: editorial_content.story_teaser.default
+targetEntityType: editorial_content
+bundle: story_teaser
+mode: default
+content:
+  field_link_target:
+    type: options_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_teaser_headline:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_teaser_image:
+    weight: 4
+    settings:
+      preview_image_style: widescreen_16_9_md
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_teaser_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_teaser_subtitle:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'Teaser name'
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

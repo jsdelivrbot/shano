@@ -1,0 +1,4 @@
+settings.local.php
+sites/default/settings.php
+docroot/modules/ignore
+docroot/modules/miro

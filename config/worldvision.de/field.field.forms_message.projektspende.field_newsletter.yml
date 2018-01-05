@@ -1,0 +1,26 @@
+uuid: 2f572161-b865-4b40-aab7-9637fc7dbc17
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.projektspende
+  module:
+    - forms_suite
+id: forms_message.projektspende.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: projektspende
+label: newsletter
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    headline: ''
+    subline: ''
+    newsletter: 0
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

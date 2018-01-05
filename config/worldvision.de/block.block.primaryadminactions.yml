@@ -1,0 +1,20 @@
+uuid: 99526602-8d03-4071-adb7-624a99c8b43c
+langcode: de
+status: true
+dependencies:
+  theme:
+    - beaufix
+_core:
+  default_config_hash: UajccyW5NOT3FoGhutlVQFIOTDV_rdC2kbXJHt8-VsA
+id: primaryadminactions
+theme: beaufix
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,21 @@
+
+langcode: en
+status: true
+dependencies:
+  module:
+    - map
+id: geo_object.field_google_geo_object
+field_name: field_google_geo_object
+entity_type: geo_object
+type: google_geo_object_field_type
+settings:
+  is_ascii: false
+  max_length: 255
+  case_sensitive: false
+module: map
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

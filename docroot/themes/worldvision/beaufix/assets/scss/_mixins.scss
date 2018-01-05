@@ -1,0 +1,128 @@
+@mixin placeholder($color, $font-family, $font-size) {
+  // Placeholder
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: $color;
+    opacity: 1;
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $color;
+    opacity: 1;
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+
+  &:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+  }
+}
+
+@mixin placeholder-center() {
+  text-align: center;
+  // Placeholder
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    text-align: center;
+  }
+
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    text-align: center;
+  }
+
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    text-align: center;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    text-align: center;
+  }
+
+  &:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    text-align: center;
+  }
+}
+
+@mixin placeholder-line-height($line-height) {
+  text-align: center;
+  // Placeholder
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    line-height: $line-height;
+  }
+
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    line-height: $line-height;
+  }
+
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    line-height: $line-height;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    line-height: $line-height;
+  }
+
+  &:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    line-height: $line-height;
+  }
+}
+
+@mixin v-h-align($position){
+  position: $position;
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+}
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align($position) {
+  position: $position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+
+// =============================
+// CSS3 Animations
+// =============================
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@mixin keyframe-display-none-transition() {
+  -moz-animation: display-none-transition 0.3s both ease-out;
+  -webkit-animation: display-none-transition 0.3s both ease-out;
+  animation: display-none-transition 0.3s both ease-out;
+}
+

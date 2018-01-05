@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Tags
+vid: tags
+description: 'Allows contextual grouping of any content type.'
+hierarchy: 0
+weight: 0

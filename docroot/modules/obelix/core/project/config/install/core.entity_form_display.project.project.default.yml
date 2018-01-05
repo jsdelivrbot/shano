@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.project.project.field_country
+    - field.field.project.project.field_enddate
+    - field.field.project.project.field_numberofdropped
+    - field.field.project.project.field_numberofsponsored
+    - field.field.project.project.field_numberofunsponsored
+    - field.field.project.project.field_startdate
+    - field.field.project.project.field_totalofchildren
+  module:
+    - datetime
+    - project
+_core:
+  default_config_hash: ihAABJqB8QgelTzEZIs10aq1sca_dXHqZQRFag2KIJQ
+id: project.project.default
+targetEntityType: project
+bundle: project
+mode: default
+content:
+  field_country:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_enddate:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_numberofdropped:
+    weight: 17
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_numberofsponsored:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_numberofunsponsored:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_startdate:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_totalofchildren:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  name:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  id:
+    type: number
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

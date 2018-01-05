@@ -1,0 +1,22 @@
+uuid: d397ed06-78db-476b-8bb6-bfbe30747917
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.kontaktformular_corinna_karrenbe
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_corinna_karrenbe.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: kontaktformular_corinna_karrenbe
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

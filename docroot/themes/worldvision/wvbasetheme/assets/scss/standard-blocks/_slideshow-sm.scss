@@ -1,0 +1,25 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Slideshow
+  // =============================
+  .editorial-slideshow {
+    figure {
+      position: relative;
+      figcaption {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        left: 0px;
+
+        background: rgba(255, 255, 255, 0.75);
+        padding: 15px;
+        p {
+          margin: 0;
+        }
+        .slick-pagination {
+          bottom: 19px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_bar
+    - node.type.transition_page
+  module:
+    - field_collection
+id: node.transition_page.field_impact_bar
+field_name: field_impact_bar
+entity_type: node
+bundle: transition_page
+label: 'Impact bar'
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

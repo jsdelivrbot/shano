@@ -1,0 +1,109 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 1, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.navbar {
+  display: none;
+}
+
+/* line 6, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .main-nav-cont {
+  background: #fff;
+  opacity: 0.95;
+}
+/* line 10, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .main-nav-cont .offcanvas-container {
+  display: inline-block;
+  width: auto;
+  padding: 20px;
+}
+/* line 15, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .main-nav-cont .offcanvas-container .font-size-super-small {
+  font-size: 11px;
+}
+/* line 21, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .no-margin {
+  margin: 0;
+}
+/* line 25, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .form-info-bar {
+  background: #f2f2f2;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+/* line 31, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .form-info-bar li {
+  padding-top: 10px;
+}
+/* line 35, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.main-content-wrapper .form-info-bar .icon-no-contract-bond, .main-content-wrapper .form-info-bar .icon-calculator, .main-content-wrapper .form-info-bar .icon-eye, .main-content-wrapper .form-info-bar .icon-ok-shield {
+  font-size: 44px;
+}
+
+/* line 51, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.form-minimal-border #edit-field-yearly-donation-month13-check--wrapper {
+  padding-top: 0;
+}
+/* line 55, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.form-minimal-border #edit-field-yearly-donation-wrapper .form-item-field-yearly-donation-month13 {
+  margin-top: 62px;
+}
+/* line 59, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.form-minimal-border #edit-field-yearly-donation-wrapper #yearly-donation-info-btn {
+  margin-top: 67px;
+}
+/* line 65, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.form-minimal-border .no-contract-block {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+/* line 68, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.form-minimal-border .no-contract-block i {
+  font-size: 30px;
+  padding-right: 15px;
+}
+/* line 72, ../../scss/custom-kipa-forms/_custom-kipa-forms-xs.scss */
+.form-minimal-border .no-contract-block p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 2, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .main-content-wrapper {
+    padding-top: 100px !important;
+  }
+
+  /* line 13, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .form-minimal-border #edit-field-child-wrapper .child-info-block-data {
+    padding-left: 0;
+    padding-top: 0;
+  }
+  /* line 18, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .form-minimal-border #edit-field-child-wrapper .child-info-block h2 {
+    margin-bottom: 0;
+  }
+  /* line 27, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .form-minimal-border #edit-field-yearly-donation-wrapper .form-item-field-yearly-donation-month13 {
+    margin-top: 12.5px;
+  }
+  /* line 31, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .form-minimal-border #edit-field-yearly-donation-wrapper #yearly-donation-info-btn {
+    margin-top: 15px;
+  }
+  /* line 38, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .form-minimal-border .no-contract-block i {
+    font-size: 32px;
+  }
+  /* line 41, ../../scss/custom-kipa-forms/_custom-kipa-forms-sm.scss */
+  .form-minimal-border .no-contract-block p {
+    font-size: 18px;
+  }
+}

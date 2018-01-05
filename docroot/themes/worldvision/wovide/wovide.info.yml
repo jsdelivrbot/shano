@@ -1,0 +1,25 @@
+core: 8.x
+type: theme
+base theme: beaufix
+
+name: 'worldvision.de'
+description: 'Base Theme for World Vision Germany.'
+
+regions:
+  top_navigation: 'Top Navigation'
+  search: 'Search'
+  navigation: 'Main Navigation'
+  secondary_navigation: 'Secondary Navigation'
+  page_top: 'Page top'
+  breadcrumbs: 'Breadcrumbs'
+  controls: 'Page controls'
+  content: 'Content'
+  page_bottom: 'Page bottom'
+  footer: 'Footer'
+
+# TODO only load libraries on specific node-type
+libraries:
+  - 'wovide/fonts'
+  - 'wovide/content-editor'
+  - 'core/modernizr'
+  - 'wovide/wovide-main'

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.teaser
+    - field.field.editorial_content.teaser.field_link_target
+    - field.field.editorial_content.teaser.field_teaser_headline
+    - field.field.editorial_content.teaser.field_teaser_image
+    - field.field.editorial_content.teaser.field_teaser_link
+    - field.field.editorial_content.teaser.field_teaser_subtitle
+id: editorial_content.teaser.default
+targetEntityType: editorial_content
+bundle: teaser
+mode: default
+content:
+  teaser:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_link_target: true
+  field_teaser_headline: true
+  field_teaser_image: true
+  field_teaser_link: true
+  field_teaser_subtitle: true
+  name: true
+  user_id: true

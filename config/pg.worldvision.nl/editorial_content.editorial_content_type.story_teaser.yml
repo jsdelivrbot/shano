@@ -1,0 +1,9 @@
+uuid: 8de6ec3a-8a4e-4636-a86e-f466a14d75c1
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cCHT4ddJUSG0QgR-Hgx3--zgzzqa1Vf_9wQwym-Td4E
+id: story_teaser
+label: 'Story teaser'
+category: 'Standard block'

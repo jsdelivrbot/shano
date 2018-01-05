@@ -1,0 +1,23 @@
+uuid: b532d340-a935-4616-a44a-ae199e359a39
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_link_target
+    - field_collection.field_collection.field_hero_slide
+  module:
+    - options
+id: field_collection_item.field_hero_slide.field_link_target
+field_name: field_link_target
+entity_type: field_collection_item
+bundle: field_hero_slide
+label: 'Link target'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: 81abbe0a-ac4b-477a-8e63-0b8cc6f7fec8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kontaktformular_nadine_nowicki
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_nadine_nowicki.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kontaktformular_nadine_nowicki
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

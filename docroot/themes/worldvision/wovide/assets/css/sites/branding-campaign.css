@@ -1,0 +1,41 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 7, ../../scss/sites/_branding-campaign-xs.scss */
+#editorial-copy-5942 p,
+#editorial-copy-5859 p {
+  color: #ff7700;
+}
+
+/* line 15, ../../scss/sites/_branding-campaign-xs.scss */
+#editorial-hero-slider-5860 h2,
+#editorial-hero-slider-5941 h2 {
+  color: #FFFFFF;
+  text-transform: none;
+}
+/* line 19, ../../scss/sites/_branding-campaign-xs.scss */
+#editorial-hero-slider-5860 p,
+#editorial-hero-slider-5941 p {
+  display: none;
+}
+
+/* line 25, ../../scss/sites/_branding-campaign-xs.scss */
+#editorial-hero-slider-5941 a.btn-beauty {
+  display: none;
+}
+
+/* line 32, ../../scss/sites/_branding-campaign-xs.scss */
+.cta-sponsor-child-visible .child-sponsorship-info-child-sponsorship .cta-sponsor-child {
+  display: inline-block !important;
+}
+/* line 35, ../../scss/sites/_branding-campaign-xs.scss */
+.cta-sponsor-child-visible .child-sponsorship-info-child-sponsorship a.smooth-scroll {
+  display: none;
+}

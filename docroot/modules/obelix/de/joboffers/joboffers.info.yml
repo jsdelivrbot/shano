@@ -1,0 +1,10 @@
+name: Job offers
+type: module
+description: Provides a new content type and an overview page.
+core: 8.x
+package: Obelix (DE)
+dependencies:
+  - menu_ui
+  - node
+  - text
+  - views

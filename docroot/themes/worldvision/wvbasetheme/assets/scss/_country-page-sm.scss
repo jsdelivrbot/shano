@@ -1,0 +1,70 @@
+@media screen and (min-width: $bp-sm) {
+  .country-page-section--header {
+    position: relative;
+    > .content {
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#a6000000', GradientType=0);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      .country-name {
+        color: $color-standard-bg;
+        margin-top: 45px;
+      }
+      .label {
+        color: #000;
+        display: block;
+        font-size: 14px;
+      }
+      .value-prefix, .label {
+        color: $color-standard-bg;
+      }
+      ul {
+        //margin-bottom: 15px;
+        li {
+          border-right: 1px solid $color-standard-bg;
+          padding: 15px 0;
+          min-height: 135px;
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .country-page-section--emphases {
+    .field-collection-item--name-field-emphases-bar {
+      .field--name-field-emphases-bar-copy {
+        margin: 0 0 15px;
+        padding: 0 15px;
+      }
+    }
+    ul {
+      li:nth-child(3) {
+        clear: both;
+      }
+    }
+  }
+
+  .country-page-section--success-bar {
+    .field--name-field-success-bar-value {
+      font-size: $font-size-xxxx-large;
+    }
+    ul {
+      div:nth-child(3) {
+        clear: both;
+      }
+    }
+  }
+
+  .country-page-section--his {
+    h2 {
+      font-size: $font-size-xx-large;
+    }
+  }
+}

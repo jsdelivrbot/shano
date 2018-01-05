@@ -1,0 +1,42 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.job_offer.field_job_description
+    - field.field.node.job_offer.field_job_source_url
+    - node.type.job_offer
+  module:
+    - link
+id: node.job_offer.default
+targetEntityType: node
+bundle: job_offer
+mode: default
+content:
+  field_job_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_job_source_url:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

@@ -1,0 +1,24 @@
+uuid: 33c2f36a-39a6-41e1-ae92-970e114f0528
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_spendenquittung
+    - forms_suite.form.spendenquittung_zweitschrift
+  module:
+    - forms_suite
+id: forms_message.spendenquittung_zweitschrift.field_spendenquittung
+field_name: field_spendenquittung
+entity_type: forms_message
+bundle: spendenquittung_zweitschrift
+label: Spendenquittung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_donation_receipt_field

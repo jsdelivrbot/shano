@@ -1,0 +1,56 @@
+uuid: 94650075-73a0-4325-aef4-d08247ca923b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.hilfe_am_tschadsee.field_donation_amount
+    - field.field.forms_message.hilfe_am_tschadsee.field_donation_period
+    - field.field.forms_message.hilfe_am_tschadsee.field_newsletter
+    - field.field.forms_message.hilfe_am_tschadsee.field_payment_method
+    - field.field.forms_message.hilfe_am_tschadsee.field_user_data
+    - forms_suite.form.hilfe_am_tschadsee
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.hilfe_am_tschadsee.default
+targetEntityType: forms_message
+bundle: hilfe_am_tschadsee
+mode: default
+content:
+  field_donation_amount:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_period:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

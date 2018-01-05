@@ -1,0 +1,227 @@
+<?php
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function giftshop_theme($existing, $type, $theme, $path) {
+  return [
+    'giftshop_gift_response_type' => [
+      'variables' => [
+        'attributes' => NULL,
+        'content' => NULL,
+      ],
+    ],
+    'giftshop_cart' => [
+      'variables' => [
+        'headline' => NULL,
+        'items' => NULL,
+        'actions' => NULL,
+        'total' => NULL,
+        'transparency_bar' => NULL,
+      ],
+    ],
+    'giftshop_cart_item' => [
+      'variables' => [
+        'image' => NULL,
+        'name' => NULL,
+        'description' => NULL,
+        'quantity' => NULL,
+        'price' => NULL,
+        'actions' => NULL,
+      ],
+    ],
+    'giftshop_gift_select_form' => [
+      'render element' => 'form',
+    ],
+    'giftshop_gift_card_form' => [
+      'render element' => 'form',
+    ],
+    'giftshop_gift_certificate_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function giftshop_entity_extra_field_info() {
+  $extra = [];
+
+//  /** @var \Drupal\giftshop\GiftshopService $giftshop_service */
+//  $giftshop_service = \Drupal::service('giftshop');
+//  $giftshop_service->setGift(111);
+
+  $extra['node']['gift_type']['display']['giftshop_gift_select_form'] = array(
+    'label' => t('Giftshop select form'),
+    'description' => t('The rendered giftshop select form.'),
+    'weight' => -100,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['gift_type']['display']['giftshop_gift_form'] = array(
+    'label' => t('Giftshop select form'),
+    'description' => t('The rendered giftshop select form.'),
+    'weight' => -90,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}
+
+/**
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ */
+function giftshop_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if (!($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'gift_type')) {
+    return;
+  }
+
+  $extra_field_info = giftshop_entity_extra_field_info();
+  $country_page_display = $extra_field_info['node']['gift_type']['display'];
+  foreach (array_keys($country_page_display) as $extra_field) {
+    if ($display->getComponent($extra_field)) {
+      $callback = __FUNCTION__ . '__' . $extra_field;
+      if (function_exists($callback)) {
+        $callback($build, $entity, $display, $view_mode);
+      }
+    }
+  }
+}
+
+/**
+ * @param array $build
+ * @param EntityInterface $entity
+ * @param EntityViewDisplayInterface $display
+ * @param $view_mode
+ */
+function giftshop_node_view__giftshop_gift_select_form(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  $build['giftshop_gift_select_form'] = \Drupal::formBuilder()
+    ->getForm('Drupal\giftshop\Form\GiftSelectForm', $entity);
+}
+
+/**
+ * Extracts the country entity from a country page node
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The country_page Node.
+ *
+ * @return \Drupal\Core\Entity\EntityInterface|null
+ *   Returns the country entity if present or NULL
+ */
+function giftshop_extract_country_entity(\Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'giftshop') {
+    if (!$entity->field_country->isEmpty()) {
+      $country = \Drupal::entityTypeManager()
+        ->getStorage('giftshop')
+        ->load($entity->field_country[0]->target_id);
+      return $country;
+    }
+  }
+
+  return NULL;
+}
+
+/**
+ * Implements hook__offcanvas_valid_pathes().
+ *
+ * @return array
+ *   An array of valid offcanvas pathes.
+ */
+function giftshop_offcanvas_valid_pathes() {
+  $pathes = [];
+
+//  $pathes[] = '/giftshop/cart/add';
+//  $pathes[] = '/giftshop/cart/add/card';
+//  $pathes[] = '/giftshop/cart/add/cert';
+
+  return $pathes;
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function giftshop_block_access(\Drupal\block\Entity\Block $block, $operation, \Drupal\Core\Session\AccountInterface $account) {
+  if ($block->getPluginId() == 'system_menu_block:gift-shop-secondary-navi' && $operation == 'view') {
+    /** @var \Drupal\Core\Path\PathMatcher $pathMatcher */
+    $pathMatcher = \Drupal::service('path.matcher');
+    /** @var \Symfony\Component\HttpFoundation\Request $request */
+    $request = \Drupal::request();
+
+    if ($pathMatcher->matchPath($request->getPathInfo(), '/giftshop/*')) {
+      return \Drupal\Core\Access\AccessResult::neutral();
+    }
+
+    // Display giftshop navigation block if we're viewing a node
+    if ($node = $request->attributes->get('node')) {
+      if ($node->bundle() == 'gift_type') {
+        return \Drupal\Core\Access\AccessResult::neutral();
+      }
+    }
+
+    return \Drupal\Core\Access\AccessResult::forbidden();
+  }
+}
+
+function giftshop_preprocess_menu__gift_shop_secondary_navi(&$variables) {
+  foreach ($variables['items'] as $delta => $item) {
+    $variables['items'][$delta]['title'] = \Drupal::token()
+      ->replace($item['title']);
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function giftshop_token_info() {
+  return [
+    'types' => [
+      'giftshop' => [
+        'name' => t('Giftshop'),
+        'description' => t('Tokens related to the giftshop.'),
+      ],
+
+    ],
+    'tokens' => [
+      'giftshop' => [
+        'cart' => [
+          'name' => t('Information about the cart.'),
+        ],
+        'price' => [
+          'name' => t('The total price of all items.'),
+        ],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function giftshop_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+
+  if ($type == 'giftshop') {
+    /** @var \Drupal\giftshop\GiftshopCartInterface $cart */
+    $cart = \Drupal::service('giftshop.cart');
+
+    foreach ($tokens as $name => $token) {
+      switch ($name) {
+        case 'cart:count':
+          $replacements[$token] = count($cart->getItems());
+          break;
+        case 'cart:price':
+          $replacements[$token] = $cart->getTotalPrice();
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}

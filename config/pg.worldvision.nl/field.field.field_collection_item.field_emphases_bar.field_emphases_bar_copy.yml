@@ -1,0 +1,21 @@
+uuid: 33e62374-acb0-481a-a12b-737f9fec3fe8
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_emphases_bar_copy
+    - field_collection.field_collection.field_emphases_bar
+_core:
+  default_config_hash: vjflfae9SlIdD5CA101tFDGrZsAsX6LwyXwwNIQEfls
+id: field_collection_item.field_emphases_bar.field_emphases_bar_copy
+field_name: field_emphases_bar_copy
+entity_type: field_collection_item
+bundle: field_emphases_bar
+label: Kopieren
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

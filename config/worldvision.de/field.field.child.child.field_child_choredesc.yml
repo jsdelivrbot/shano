@@ -1,0 +1,22 @@
+uuid: 45dbcbf5-f642-4d5f-a26d-1b37172643db
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_choredesc
+  module:
+    - child
+_core:
+  default_config_hash: 0agf1O87LzHv-1AbWbkMnegwXEPFFDiF4BKzF6Qjkqo
+id: child.child.field_child_choredesc
+field_name: field_child_choredesc
+entity_type: child
+bundle: child
+label: 'chore description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: ad5ee74f-0cc0-4b38-8005-f971c0eb7233
+langcode: de
+status: true
+dependencies:
+  module:
+    - country
+    - taxonomy
+id: country.field_continent
+field_name: field_continent
+entity_type: country
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

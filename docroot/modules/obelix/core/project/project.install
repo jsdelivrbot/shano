@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Install / update logic.
+ */
+
+/**
+ * Fix project's field_counry entity reference sort settings which lead to fatal on BO pages.
+ */
+function project_update_8001($context) {
+  $field_manager = \Drupal::service('entity_field.manager');
+
+  $fields_definitions = $field_manager->getFieldDefinitions('project', 'project');
+
+  if (!empty($fields_definitions['field_country'])) {
+    /** @var \Drupal\field\Entity\FieldConfig $fc */
+    $fc = $fields_definitions['field_country'];
+
+    $handler_settings = $fc->getSetting('handler_settings');
+
+    if (!empty($handler_settings['sort']['field'])) {
+      // Country_code property was renamed to id so we need to updated stored field settings accordingly.
+      $handler_settings['sort']['field'] = 'id';
+
+      $fc->setSetting('handler_settings', $handler_settings);
+      // Store data to db.
+      $fc->save();
+    }
+  }
+}

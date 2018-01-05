@@ -1,0 +1,38 @@
+uuid: bd834418-cfd1-4f34-9d0f-c3ca537cdcd5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_broker_image
+    - node.type.broker_page
+  module:
+    - image
+id: node.broker_page.field_broker_image
+field_name: field_broker_image
+entity_type: node
+bundle: broker_page
+label: 'Broker Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: broker_images
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

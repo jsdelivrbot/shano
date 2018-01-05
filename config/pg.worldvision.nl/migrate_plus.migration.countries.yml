@@ -1,0 +1,20 @@
+uuid: 96c396ee-b20a-4904-958d-647f883d3b83
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4QDD2_vl2fFKYzerxc25CAxK_JgzYxfeJU2e0ei8Of8
+id: countries
+migration_tags:
+  - WVI
+migration_group: wvi
+label: 'Countries From Simma Platform'
+source:
+  plugin: countries
+  track_changes: true
+process:
+  id: country_code
+  name: country_description
+destination:
+  plugin: 'entity:country'
+migration_dependencies: null

@@ -1,0 +1,49 @@
+<div{{ attributes.addClass('editorial--content', 'img-content') }}>
+  <div class="editorial-child-sponsorship-child-select inner-content">
+    <div class="container container-inner">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-4 child-img">
+          <div class="child-cont">
+            {{ child_image }}
+            {% if child_video_src %}
+              <video controls preload="auto" width="100%" id="child-video-{{ id }}"
+                     class="child-video video-js vjs-sublime-skin vjs-big-play-centered" data-setup="{}"
+                     poster='{{ child_image_src }}'>
+                <source src="{{ child_video_src }}" type="video/mp4">
+                <p class="vjs-no-js">
+                  {{ 'To view this video please enable JavaScript, and consider upgrading to a web browser that'|t }}
+                  <a href="http://videojs.com/html5-video-support/" target="_blank">{{ 'supports HTML5 video'|t }}</a>
+                </p>
+              </video>
+              <button class="btn-icon btn-close child-video-close"><i class="icon-cross"></i></button>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-7 col-md-8 col-no-padding-left-sm child-infos">
+          <h2 class="font-size-s text-center">{{ 'Our suggestion for you'|t }}:</h2>
+          <h2 class="font-size-l text-center">
+          {% set spanClasses = 'txt-highlighted font-hand-script' %}
+          {% set countryPrefix = child_info.special_country_article ? child_info.special_country_article : 'from'|t %}
+          {% trans %}
+            Hello, I am <span class="{{ spanClasses }}">{{ child_info.name }}</span> {{ countryPrefix }} <span class="{{ spanClasses }}">{{ child_info.country }}</span> and I am looking for a sponsor!
+          {% endtrans %}
+          </h2>
+          <ul class="list-unstyled text-uppercase text-center">
+            <li>{{ 'My age'|t }}: <span class="font-bold">{{ child_info.age }} {{ 'years'|t }} ({{ child_info.birthday }}
+                )</span></li>
+            <li>{{ 'I live with'|t }}: <span
+                class="font-bold">{{ child_info.lives_with|replace({"mit ":""}) }}</span></li>
+            <li>{{ 'I like'|t }}: <span class="font-bold">{{ child_info.likes }}</span></li>
+          </ul>
+          {%  if hide_sponsor_button  is empty %}
+            <div class="text-center">
+              <a href="{{ sponsor_form_url }}" class="btn btn-beauty btn-fullsize-xs">{{ 'Become a godfather now'|t }}</a>
+            </div>
+          {% endif %}
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

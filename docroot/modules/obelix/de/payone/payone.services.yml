@@ -1,0 +1,5 @@
+services:
+  payone:
+    class: Drupal\payone\PayOneService
+    arguments: []
+

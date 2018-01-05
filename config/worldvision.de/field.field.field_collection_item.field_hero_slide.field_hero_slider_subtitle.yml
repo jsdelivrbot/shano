@@ -1,0 +1,21 @@
+uuid: 6f9f8498-4e5a-4b0f-92c0-866ad37898ce
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_hero_slider_subtitle
+    - field_collection.field_collection.field_hero_slide
+_core:
+  default_config_hash: NLu8MmnaqmqUs20EHaFSNpol8myjpAayEz9mBZf2x54
+id: field_collection_item.field_hero_slide.field_hero_slider_subtitle
+field_name: field_hero_slider_subtitle
+entity_type: field_collection_item
+bundle: field_hero_slide
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

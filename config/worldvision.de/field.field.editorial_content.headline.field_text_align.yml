@@ -1,0 +1,25 @@
+uuid: bd89a31b-235b-4662-870b-90b8cc707de5
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.headline
+    - field.storage.editorial_content.field_text_align
+  module:
+    - options
+_core:
+  default_config_hash: RfHZQO8lVPjObwNFljx6e9CbrK_m7EzSAYH4SjsSNPc
+id: editorial_content.headline.field_text_align
+field_name: field_text_align
+entity_type: editorial_content
+bundle: headline
+label: 'Text align'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

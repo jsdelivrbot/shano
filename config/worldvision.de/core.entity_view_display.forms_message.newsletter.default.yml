@@ -1,0 +1,35 @@
+uuid: 65431ef8-af7a-410e-8e4a-16c543f42c23
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.newsletter.field_newsletter
+    - field.field.forms_message.newsletter.field_user
+    - forms_suite.form.newsletter
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 5YZWlu1taoz3p8oDeeJPndnuxwTV3mvKAavacLuybxU
+id: forms_message.newsletter.default
+targetEntityType: forms_message
+bundle: newsletter
+mode: default
+content:
+  field_newsletter:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_user:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden: {  }

@@ -1,0 +1,79 @@
+// hide stuff
+%visually-hidden {
+  display: inline-block;
+  visibility: hidden;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+
+//
+// have it available for breakpoints
+@mixin font-bold {
+  word-wrap: break-word;
+  letter-spacing: 1px;
+  font-family: $font-family-bold;
+}
+
+// ... and 'normally'
+%font-bold {
+  @include font-bold;
+}
+
+//
+@mixin font-book {
+  letter-spacing: 1px;
+  word-wrap: break-word;
+  font-family: $font-family-book;
+}
+
+%font-book {
+  @include font-book;
+}
+
+//
+%news-arcticle-section {
+  padding: 20px 15px;
+
+  @media screen and (min-width: $break-small) {
+    padding: 30px 25px;
+  }
+}
+
+//
+@mixin inner-content-middle {
+  .field {
+    padding: 45px 170px;
+  }
+}
+
+@mixin inner-content-large {
+  .field {
+    padding: 45px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+//
+@mixin paragraph-copy-size {
+  line-height: 1.71em;
+
+  * + p {
+    margin-top: 1.8em;
+  }
+
+  @media screen and (min-width: $break-small) {
+    font-size: 1.1em;
+    line-height: 1.62em;
+  }
+
+  @media screen and (min-width: $break-medium) {
+    font-size: 1.15em;
+  }
+
+  @media screen and (min-width: $break-large) {
+  }
+}

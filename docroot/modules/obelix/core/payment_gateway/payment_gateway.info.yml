@@ -1,0 +1,5 @@
+name: Payment Gateway
+type: module
+description: 'Provides a gateway for payment providers.'
+package: Obelix (Core)
+core: 8.x

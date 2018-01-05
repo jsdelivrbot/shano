@@ -1,0 +1,25 @@
+uuid: 214f8d4f-6b59-4c5f-8462-9c8f7727d780
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.headline
+    - field.storage.editorial_content.field_font_size
+  module:
+    - options
+_core:
+  default_config_hash: S6tagmHqp5xm6J7Z9gO1Rl8kWLjLch6407-dDW5iVys
+id: editorial_content.headline.field_font_size
+field_name: field_font_size
+entity_type: editorial_content
+bundle: headline
+label: 'Font size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: font-size-l
+default_value_callback: ''
+settings: {  }
+field_type: list_string

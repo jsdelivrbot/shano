@@ -1,0 +1,36 @@
+uuid: 49b13474-543c-4766-90f0-d897dddfbe31
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.public_donor_overview.field_metatags
+    - field.field.node.public_donor_overview.field_pdp_button
+    - field.field.node.public_donor_overview.field_pdp_description
+    - field.field.node.public_donor_overview.field_pdp_headline
+    - field.field.node.public_donor_overview.field_pdp_subline
+    - field.field.node.public_donor_overview.field_pdp_teaser
+    - node.type.public_donor_overview
+  module:
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 1XN2zY9YNWNBh5wa14qsUwO6JOz9RVnrk8ZMucsp8ks
+id: node.public_donor_overview.teaser
+targetEntityType: node
+bundle: public_donor_overview
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_metatags: true
+  field_pdp_button: true
+  field_pdp_description: true
+  field_pdp_headline: true
+  field_pdp_subline: true
+  field_pdp_teaser: true
+  langcode: true

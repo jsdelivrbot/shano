@@ -1,0 +1,23 @@
+uuid: 594aad8a-4bc1-4ab2-847d-d720e7c5e973
+langcode: de
+status: true
+dependencies:
+  module:
+    - child
+_core:
+  default_config_hash: EPDFMDpv7-tZ3VxSmpV7KnXjyQ8yxpFbRc8S2VAX1GM
+id: child.field_child_liveswithdesc
+field_name: field_child_liveswithdesc
+entity_type: child
+type: string
+settings:
+  max_length: 100
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

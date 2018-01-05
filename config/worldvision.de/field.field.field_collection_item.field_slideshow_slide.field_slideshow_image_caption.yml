@@ -1,0 +1,21 @@
+uuid: 590cb98a-9946-47eb-9314-e4902e686ef1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_slideshow_image_caption
+    - field_collection.field_collection.field_slideshow_slide
+_core:
+  default_config_hash: GlrOFyCZvoQLIMO6PrKDhqrGvrutH8cSn4lJ5X2AxMY
+id: field_collection_item.field_slideshow_slide.field_slideshow_image_caption
+field_name: field_slideshow_image_caption
+entity_type: field_collection_item
+bundle: field_slideshow_slide
+label: Caption
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

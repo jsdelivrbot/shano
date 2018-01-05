@@ -1,0 +1,31 @@
+uuid: 23dcb40d-1329-44a0-9931-df330ed97c27
+langcode: de
+status: true
+dependencies: {  }
+id: anmeldung_tischgespraech
+label: 'Anmeldung Tischgespräch'
+recipients:
+  - stiftung@wveu.org
+reply: ''
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: 'Wir freuen uns über Ihre Anmeldung für das Tischgespräch "Kinder in fragilen Kontexten" am 23. November in Frankfurt.'
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir freuen uns sehr Sie am 23.November in Frankfurt zu unserem Tischgespräch \"Kinder in fragilen Kontexten\" begrüßen zu dürfen.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Anmeldung '
+designation_id: ''
+motivation_code: '404879'
+additional_tracking: ''
+alias: /formulare/anmeldung
+headline: Anmeldung
+description: ''
+disclaimer: ''
+submit_button: Absenden

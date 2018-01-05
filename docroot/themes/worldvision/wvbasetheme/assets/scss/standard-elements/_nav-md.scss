@@ -1,0 +1,34 @@
+@media screen and (min-width: $bp-md) {
+
+  // =============================
+  // Main-Navigation
+  // =============================
+  .main-nav-cont {
+    .navbar-body {
+      .main-nav {
+        li {
+          &.dropdown {
+            > a{
+              font-size: $font-size-nav-sm;
+            }
+
+            //  Flyout
+            .navbar-flyout-cont {
+
+              .dropdown-menu {
+                width: 80%;
+              }
+            }
+          }
+          // Button beauty in main-nav
+          > a.btn-beauty,
+          > button.btn-beauty{
+            font-size: 12px;
+            padding: 10px 30px;
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+  }
+}

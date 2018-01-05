@@ -1,0 +1,31 @@
+// =============================
+// Editorial content generally stylings
+// =============================
+
+// Breakpoint SM
+// =============================
+@media screen and (min-width: $bp-lg) {
+
+  // Container
+  .editorial-page{
+    .editorial-section > .container,
+    .editorial-section > .container-fluid{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      &.first{
+        .img-content.first {
+          margin-top: -20px;
+        }
+      }
+      // Less spacing (tiles)
+      // =============================
+      &.has--editorial-story-teaser{
+        &.first{
+          .img-content {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: null
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xnmb3p73qpZ1YVZyLRISKe-NRdyRKgN8vvuKYNQ4vII
+id: field_slideshow_slide
+label: field_slideshow_slide

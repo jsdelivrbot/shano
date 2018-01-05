@@ -1,0 +1,26 @@
+uuid: 19564980-d659-467d-9379-f9cbd876428e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_yearly_donation
+    - forms_suite.form.child_sponsorship_direct
+  module:
+    - fs_payment
+_core:
+  default_config_hash: 8z7FcD4d0tisF40_ZSpSAu5euJInqdRVPUejbk7dWmM
+id: forms_message.child_sponsorship_direct.field_yearly_donation
+field_name: field_yearly_donation
+entity_type: forms_message
+bundle: child_sponsorship_direct
+label: 'yearly donation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'JÄHRLICHE ZUSATZSPENDE'
+    subline: 'Ja, ich möchte eine jährliche Zusatzspende leisten.'
+field_type: wovi_yearly_donation_field

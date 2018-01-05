@@ -1,0 +1,18 @@
+uuid: dbe02101-9e7f-4d6b-b927-52041d7ccabd
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.photo_4_3_xs
+  theme:
+    - bootstrap
+id: hero_slider_mobile
+label: 'Hero slider mobile'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: photo_4_3_xs
+breakpoint_group: bootstrap
+fallback_image_style: '_empty image_'

@@ -1,0 +1,24 @@
+uuid: 8d7a35be-c467-4bb6-b6bc-79d80f0b123b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.press_distributor
+  module:
+    - forms_suite
+_core:
+  default_config_hash: 09Xl_eKplukXFZ3MUnChsf74UBuW2rA7Kt14z1RaIXQ
+id: forms_message.press_distributor.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: press_distributor
+label: message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

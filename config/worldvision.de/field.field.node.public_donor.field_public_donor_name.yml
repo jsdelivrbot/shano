@@ -1,0 +1,21 @@
+uuid: 9685c481-d9a3-4fad-8656-c22740792da5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_donor_name
+    - node.type.public_donor
+_core:
+  default_config_hash: 9L_rwSHekIJYuN11MVIan9H64rxtXQkwpf-dz1yQzok
+id: node.public_donor.field_public_donor_name
+field_name: field_public_donor_name
+entity_type: node
+bundle: public_donor
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

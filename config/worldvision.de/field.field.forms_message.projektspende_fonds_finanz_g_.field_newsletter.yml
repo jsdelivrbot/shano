@@ -1,0 +1,22 @@
+uuid: 23fcc223-8561-48b0-b8f4-cd1a2efee547
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.projektspende_fonds_finanz_g_
+  module:
+    - forms_suite
+id: forms_message.projektspende_fonds_finanz_g_.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_g_
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

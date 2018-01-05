@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains fs_inxmail_bridge.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fs_inxmail_bridge_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fs_inxmail_bridge module.
+    case 'help.page.fs_inxmail_bridge':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Handles the inxmail integration in the forms suite module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

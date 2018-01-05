@@ -1,0 +1,8 @@
+name: Forms suite datasource bridge
+type: module
+description: Establishes a connection between the Datasoource handler module and the Forms suite module.
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - forms_suite
+  - datasourcehandler

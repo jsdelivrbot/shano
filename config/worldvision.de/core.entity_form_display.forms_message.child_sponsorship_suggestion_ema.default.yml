@@ -1,0 +1,57 @@
+uuid: b7af0a8d-3a40-4d65-8f54-521858009924
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_suggestion_ema.field_child_select
+    - field.field.forms_message.child_sponsorship_suggestion_ema.field_suggestion
+    - field.field.forms_message.child_sponsorship_suggestion_ema.field_user
+    - forms_suite.form.child_sponsorship_suggestion_ema
+  module:
+    - child_sponsorship
+    - forms_suite
+id: forms_message.child_sponsorship_suggestion_ema.default
+targetEntityType: forms_message
+bundle: child_sponsorship_suggestion_ema
+mode: default
+content:
+  copy:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_child_select:
+    type: wovi_child_select_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_suggestion:
+    type: wovi_suggestion_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user:
+    type: wovi_user_data_email_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

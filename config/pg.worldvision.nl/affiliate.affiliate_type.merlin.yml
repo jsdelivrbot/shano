@@ -1,0 +1,8 @@
+uuid: 5e7121fe-6d5d-467f-8004-4b7e6b79c072
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2DTYtTiaY7qw4VPevUFRI2_cdmGTiTr4UqR4WLDXRYM
+id: merlin
+label: 'Merlin Affiliate'

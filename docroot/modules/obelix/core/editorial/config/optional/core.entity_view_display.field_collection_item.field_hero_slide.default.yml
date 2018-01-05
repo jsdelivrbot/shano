@@ -1,0 +1,44 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_hero_slide.field_alignment
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_cta
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_headline
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_image
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_m_image
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_subtitle
+    - field.field.field_collection_item.field_hero_slide.field_link_target
+    - field.field.field_collection_item.field_hero_slide.field_text_link
+    - field.field.field_collection_item.field_hero_slide.field_youtube_link
+    - field_collection.field_collection.field_hero_slide
+  module:
+    - link
+id: field_collection_item.field_hero_slide.default
+targetEntityType: field_collection_item
+bundle: field_hero_slide
+mode: default
+content:
+  field_youtube_link:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  hero_slider:
+    weight: 100
+hidden:
+  field_alignment: true
+  field_hero_slider_cta: true
+  field_hero_slider_headline: true
+  field_hero_slider_image: true
+  field_hero_slider_m_image: true
+  field_hero_slider_subtitle: true
+  field_link_target: true
+  field_text_link: true
+  hero_slider_slide: true

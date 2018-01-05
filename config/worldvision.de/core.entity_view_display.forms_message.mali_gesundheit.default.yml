@@ -1,0 +1,64 @@
+uuid: c4d9c5a2-5a85-4db2-9d6c-c89a12286858
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.mali_gesundheit.field_donation_amount
+    - field.field.forms_message.mali_gesundheit.field_donation_period
+    - field.field.forms_message.mali_gesundheit.field_newsletter
+    - field.field.forms_message.mali_gesundheit.field_payment_method
+    - field.field.forms_message.mali_gesundheit.field_user_data
+    - forms_suite.form.mali_gesundheit
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.mali_gesundheit.default
+targetEntityType: forms_message
+bundle: mali_gesundheit
+mode: default
+content:
+  field_donation_amount:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_amount_single:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_period:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

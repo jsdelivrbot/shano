@@ -1,0 +1,22 @@
+uuid: 0065d60e-d41f-4046-aa85-7e2a5f8dfa20
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_localchildgivenname
+  module:
+    - child
+_core:
+  default_config_hash: qIYekIv7XiiG5yhjMx02_y6how0PYTehm9Risk8ihsA
+id: child.child.field_child_localchildgivenname
+field_name: field_child_localchildgivenname
+entity_type: child
+bundle: child
+label: 'local child given name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

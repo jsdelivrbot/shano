@@ -1,0 +1,22 @@
+@media screen and (min-width: $bp-lg) {
+
+  // =============================
+  // Home specific
+  // =============================
+
+  // Teaser
+  .editorial-teaser {
+    p {
+      min-height: 100px;
+    }
+    .btn-beauty{
+      padding: 12px 20px;
+    }
+  }
+  //  Fourth teaser
+  #editorial-teaser-3257{
+    p{
+      min-height: 100px;
+    }
+  }
+}

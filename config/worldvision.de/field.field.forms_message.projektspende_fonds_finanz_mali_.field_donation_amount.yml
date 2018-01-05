@@ -1,0 +1,27 @@
+uuid: 5c932350-e5a6-4cff-968f-d7e9b93d041b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.projektspende_fonds_finanz_mali_
+  module:
+    - fs_payment
+id: forms_message.projektspende_fonds_finanz_mali_.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_mali_
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '15'
+    default_amount: '25'
+field_type: wovi_donation_amount_field

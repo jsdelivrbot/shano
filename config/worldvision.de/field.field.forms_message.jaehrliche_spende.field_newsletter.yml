@@ -1,0 +1,24 @@
+uuid: bb295042-d392-4309-b35b-0c80c9753d9c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.jaehrliche_spende
+  module:
+    - forms_suite
+id: forms_message.jaehrliche_spende.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: jaehrliche_spende
+label: Newsletter
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    newsletter: 0
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

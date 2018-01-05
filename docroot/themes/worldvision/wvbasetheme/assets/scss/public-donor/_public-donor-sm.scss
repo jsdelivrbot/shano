@@ -1,0 +1,52 @@
+@media screen and (min-width: $bp-sm) {
+  .page-node-type-public-donor, .page-node-type-public-donor-project {
+    h2 {
+      font-size: 30px;
+    }
+
+    .public-donor-logo {
+      width: 100%;
+
+      img {
+        margin: 0;
+
+        @include v-h-align(relative);
+      }
+    }
+
+    .row-flex, .row-flex > div[class*='col-'] {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex: 1 1 auto;
+    }
+  }
+
+  .page-node-type-public-donor-project {
+    .field--item {
+      margin-top: 40px;
+    }
+
+    .pdp-header-img {
+      img {
+        @include horizontal-align(relative);
+      }
+    }
+
+    .logo-link {
+      display: block;
+
+      @include horizontal-align(relative);
+
+      .public-donor-logo {
+        img {
+          top: auto;
+          left: auto;
+          transform: none;
+        }
+      }
+    }
+  }
+}

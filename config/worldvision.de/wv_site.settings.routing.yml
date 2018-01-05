@@ -1,0 +1,10 @@
+gift_type_all_gifts_url: /spenden/das-gute-geschenk/alle-geschenke
+newsletter_form_url: /formulare/newsletter
+_core:
+  default_config_hash: Kbx6VP7spTOlRjC40-MZRQA4UGY0Kx6kmh3RHH5ucUw
+langcode: de
+sponsor_form_url: /formulare/kinderpatenschaft-uebernehmen
+suggestion_email_form_url: /formulare/patenschafts-vorschlag-email
+suggestion_post_form_url: /formulare/patenschafts-vorschlag-post
+sponsor_child_form_url: ''
+child_sponsorship_form_in_english: /forms/child-sponsorship/direct

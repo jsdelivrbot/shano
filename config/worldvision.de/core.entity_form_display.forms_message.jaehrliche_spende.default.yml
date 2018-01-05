@@ -1,0 +1,81 @@
+uuid: 30841a3c-95fc-4b7e-be74-419936c48a71
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.jaehrliche_spende.field_donation_amount
+    - field.field.forms_message.jaehrliche_spende.field_donation_period
+    - field.field.forms_message.jaehrliche_spende.field_newsletter
+    - field.field.forms_message.jaehrliche_spende.field_payment_method
+    - field.field.forms_message.jaehrliche_spende.field_user_data
+    - forms_suite.form.jaehrliche_spende
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.jaehrliche_spende.default
+targetEntityType: forms_message
+bundle: jaehrliche_spende
+mode: default
+content:
+  copy:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_amount:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_interval:
+    weight: 55
+    settings:
+      allowed_intervals:
+        donation_interval_annual: donation_interval_annual
+        donation_interval_one_time: 0
+        donation_interval_monthly: 0
+    third_party_settings: {  }
+    type: donation_interval
+    region: content
+  field_donation_period:
+    weight: 56
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_newsletter:
+    weight: 54
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_newsletter_widget
+    region: content
+  field_payment_method:
+    weight: 53
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_payment_method_widget
+    region: content
+  field_user_data:
+    weight: 52
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_user_data_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: -50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

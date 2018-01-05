@@ -1,0 +1,17 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.job_offer
+  module:
+    - user
+id: node.job_offer.teaser
+targetEntityType: node
+bundle: job_offer
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  langcode: true

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains fs_affiliate_bridge.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fs_affiliate_bridge_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fs_affiliate_bridge module.
+    case 'help.page.fs_affiliate_bridge':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extend the Forms suite module with affiliate functionality.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

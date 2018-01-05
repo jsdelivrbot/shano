@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_campaign_teaser_headline
+id: editorial_content.campaign_teaser.field_campaign_teaser_headline
+field_name: field_campaign_teaser_headline
+entity_type: editorial_content
+bundle: campaign_teaser
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

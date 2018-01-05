@@ -1,0 +1,86 @@
+uuid: 4148b2ac-2f86-46c7-a196-5d373cf1c8c9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.broker_page.field_affiliate
+    - field.field.node.broker_page.field_broker_image
+    - field.field.node.broker_page.field_broker_logo
+    - field.field.node.broker_page.field_relation_teaser
+    - image.style.thumbnail
+    - node.type.broker_page
+  module:
+    - image
+id: node.broker_page.default
+targetEntityType: node
+bundle: broker_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_broker_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_broker_logo:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_relation_teaser:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_affiliate: true
+  path: true

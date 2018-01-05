@@ -1,0 +1,15 @@
+google_tag_manager:
+  configuration:
+    container_id: null
+_core:
+  default_config_hash: K5uS4INkhCCp2cSJ5cU828wY9Ij9eJh_9L1p4eNkSEg
+langcode: nl
+id: null
+container_id: TGJ6QDF
+environment: '2'
+dev_gtm_auth: ''
+dev_gtm_preview: ''
+stage_gtm_auth: ''
+stage_gtm_preview: ''
+live_gtm_auth: hStVh4CS0beWL03si8qq5Q
+live_gtm_preview: env-2

@@ -1,0 +1,28 @@
+uuid: 994a4609-fb8d-4d78-b4c2-ad2a5319311e
+langcode: en
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.storage.group.field_affiliate
+    - group.type.company
+id: group.company.field_affiliate
+field_name: field_affiliate
+entity_type: group
+bundle: company
+label: Affiliate
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:affiliate'
+  handler_settings:
+    target_bundles:
+      merlin: merlin
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

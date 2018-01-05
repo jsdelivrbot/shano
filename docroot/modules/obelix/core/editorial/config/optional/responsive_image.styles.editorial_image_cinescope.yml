@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.cinemascope_21_9_sm
+    - image.style.cinemascope_21_9_xs
+id: editorial_image_cinescope
+label: Cinemascope
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cinemascope_21_9_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cinemascope_21_9_sm
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: cinemascope_21_9_sm
+breakpoint_group: bootstrap
+fallback_image_style: cinemascope_21_9_sm

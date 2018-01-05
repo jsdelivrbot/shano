@@ -1,0 +1,34 @@
+uuid: 8b47f2c5-7e60-4b4c-89ee-bcf6074cdb7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - obelix_contacts
+    - system
+  theme:
+    - wvbasetheme
+id: sociallinksblock
+theme: wvbasetheme
+region: footer_top_2
+weight: 0
+provider: null
+plugin: social_links_block
+settings:
+  id: social_links_block
+  label: 'Social links block'
+  provider: obelix_contacts
+  label_display: '0'
+visibility:
+  language:
+    id: language
+    langcodes:
+      nl: nl
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+  request_path:
+    id: request_path
+    pages: "/even-voorstellen/*\r\n/forms/sponsor_child\r\n/forms/pledger\r\n/kindsponsoring/formulier\r\n/node/1111"
+    negate: true
+    context_mapping: {  }

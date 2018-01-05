@@ -1,0 +1,41 @@
+uuid: 8dca0f52-c9ae-4d35-8a51-d0cf39477b29
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: 8czn-9fAdMI_Xfal1bOpOXHSfGNJ3uvZGxpzRUPyhDg
+id: editorial_content.field_transparency_bar_type
+field_name: field_transparency_bar_type
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: type_01
+      label: 'Type 01'
+    -
+      value: type_02
+      label: 'Type 02'
+    -
+      value: type_03
+      label: 'Type 03'
+    -
+      value: type_04
+      label: 'Type 04'
+    -
+      value: type_05
+      label: 'Type 05'
+    -
+      value: type_06
+      label: 'Type 06'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

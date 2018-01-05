@@ -1,0 +1,9 @@
+uuid: 032f01a0-f589-404f-b907-25f3043bb3e1
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: IaWs3kFUXPn5ffigB-CpX8hX1OZV-546bfd_CzeKZuU
+id: paragraph_donation_button
+label: 'Donation Button'
+behavior_plugins: {  }

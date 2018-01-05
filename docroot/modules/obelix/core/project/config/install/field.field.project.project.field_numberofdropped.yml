@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.project.field_numberofdropped
+  module:
+    - project
+id: project.project.field_numberofdropped
+field_name: field_numberofdropped
+entity_type: project
+bundle: project
+label: 'number of dropped'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

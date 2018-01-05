@@ -1,0 +1,55 @@
+// =============================
+// Copy
+// =============================
+
+// Global Editorial Content Copy Stylings
+// =============================
+
+.editorial-copy {
+  p, a, li {
+    font-size: $font-size-smallest;
+    line-height: $line-height-big;
+  }
+
+  // Links
+  a {
+    font-family: $font-bold;
+    color: $color-highlight;
+    &:hover {
+      color: $color-standard-txt;
+    }
+  }
+
+  // Listings
+  ul {
+    padding-left: 10px;
+    li {
+      list-style-type: none;
+      position: relative;
+
+      padding: 7.5px 0;
+      &:before {
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e904"; // circle-thin
+
+        position: relative;
+        color: $color-highlight;
+        left: -10px;
+        font-size: 5px;
+        top: -2px;
+      }
+    }
+  }
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+  }
+}
+

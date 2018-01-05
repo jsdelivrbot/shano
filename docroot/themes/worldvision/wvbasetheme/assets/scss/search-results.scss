@@ -1,0 +1,82 @@
+@import "base";
+
+.search-result-wrapper {
+  .search-results-page--header--form {
+    .form-group {
+      margin-bottom: 0;
+    }
+    .form-item-keys {
+      background: $color-highlight-bg;
+      display: inline-block;
+      margin-bottom: 0;
+      width: 100%;
+      .input-group {
+        display: block;
+        position: relative;
+        width: 100%;
+        input.form-search {
+          background: transparent;
+          border: 0;
+          border-radius: 0;
+          color: $color-standard-txt;
+          font-family: $font-light;
+          font-size: 14px;
+          height: auto;
+          padding: 25px 30px;
+          @include placeholder($color-standard-txt, $font-light, 14px);
+          width: 100%;
+          &:focus {
+            @include box-shadow(none);
+          }
+        }
+        button {
+          background: transparent;
+          border: 0;
+          padding: 0;
+          position: absolute;
+          top: 25px;
+          right: 30px;
+          z-index: 99;
+          i, .icon {
+            color: $color-standard-txt;
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            line-height: 1;
+            position: initial;
+            speak: none;
+            @include transition(0.3s color);
+            text-transform: none;
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            &:before {
+              content: "\e900";
+            }
+          }
+          &:hover .icon {
+            color: $color-highlight;
+          }
+        }
+      }
+    }
+  }
+  .search-results-page--header--summary {
+    em {
+      font-style: normal;
+      font-weight: bold;
+    }
+  }
+  .search-results-page--body {
+    ol {
+      list-style: none;
+      padding-left: 0;
+      li {
+        border-top: 1px solid $color-standard-border;
+      }
+    }
+  }
+}

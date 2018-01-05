@@ -1,0 +1,27 @@
+uuid: 447903e6-37fa-4c7d-99fb-987b7eb67c9b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.kinderrechte_in_ind
+  module:
+    - fs_payment
+id: forms_message.kinderrechte_in_ind.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: kinderrechte_in_ind
+label: field_donation_amount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '10'
+    default_amount: '10'
+field_type: wovi_donation_amount_field

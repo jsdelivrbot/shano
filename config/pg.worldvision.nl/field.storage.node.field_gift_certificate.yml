@@ -1,0 +1,25 @@
+uuid: e94595b8-6c72-4d2e-8b13-ed7abbb6385d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - file
+    - node
+_core:
+  default_config_hash: Ny1v3X50Yp8vy4CpPDZ8cb_SG8tyPal11sWhb2ROnsc
+id: node.field_gift_certificate
+field_name: field_gift_certificate
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

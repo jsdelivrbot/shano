@@ -1,0 +1,23 @@
+uuid: d7aaa5ce-aa46-4244-8bda-433e38975115
+langcode: en
+status: true
+dependencies:
+  module:
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig
+theme: wvbasetheme
+region: footer_top_1
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: 'Contacts:left'
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: "            <p class=\"h6\">Kontakt</p>\r\n            <p class=\"highlighted\"><strong>0800 - 0 10 20 22</strong></p>\r\n            <p>Mo. - Fr. von 8:00 - 20:00 Uhr - <strong>kostenfrei</strong></p>\r\n            <p>E-Mail: <a class=\"link-underlined\" href=\"mailto:info@worldvision.de\">info&commat;worldvision.de</a></p>"
+    format: html
+visibility: {  }

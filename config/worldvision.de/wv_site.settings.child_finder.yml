@@ -1,0 +1,7 @@
+is_simple_find_process: 0
+child_page_route: child_sponsorship.child_sponsorship_controller_ChildSponsorshipAction
+_core:
+  default_config_hash: HHGxlwbxnxrtW8YJPEiTUFa5yDEdL7r_7m7WnopcOA8
+langcode: de
+sponsorship_suggestion_uri: /forms/child_sponsorship_suggestion
+sponsorship_direct_uri: /forms/child_sponsorship_direct

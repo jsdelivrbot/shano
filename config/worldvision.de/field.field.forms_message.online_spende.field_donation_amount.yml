@@ -1,0 +1,27 @@
+uuid: 86597733-ad3a-494b-8525-2cfb9573f755
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.online_spende
+  module:
+    - fs_payment
+id: forms_message.online_spende.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: online_spende
+label: 'donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

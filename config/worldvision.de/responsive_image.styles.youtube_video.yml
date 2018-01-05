@@ -1,0 +1,32 @@
+uuid: 0ed4a3a4-8619-4bf8-9afb-49cbd43cc5e5
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.widescreen_16_9_md
+    - image.style.widescreen_16_9_sm
+    - image.style.widescreen_16_9_xs
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: hIuFO_LsFUtjL0V4DLEbmUb2Ri94wn8zwbJFx_pBpGY
+id: youtube_video
+label: 'Youtube video'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_sm
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_md
+breakpoint_group: bootstrap
+fallback_image_style: widescreen_16_9_sm

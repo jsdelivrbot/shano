@@ -1,0 +1,23 @@
+uuid: ab2532e9-40ab-472c-b8f2-08a25d851b0a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_success_link
+  module:
+    - country
+    - link
+id: country.country.field_success_link
+field_name: field_success_link
+entity_type: country
+bundle: country
+label: 'Success Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

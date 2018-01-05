@@ -1,0 +1,19 @@
+// =============================
+// Child sponsorship header
+// =============================
+@media screen and (min-width: $bp-md) {
+  .child-sponsorship-header {
+    .transparency-price {
+      width: 123px;
+    }
+  }
+  // My child billy version
+  // =============================
+  .child-sponsorship-my-child-billy-header{
+    min-height: 210px;
+    background-position: 70%;
+    .transparency-price{
+      width: 180px;
+    }
+  }
+}

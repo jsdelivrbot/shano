@@ -1,0 +1,18 @@
+// =============================
+// Child Sponsorship info navbar
+// =============================
+.child-sponsorship-info-navbar {
+  background: $color-highlight-bg;
+  padding-top: 15px;
+  padding-left: 15px;
+  ul{
+    li{
+      font-family: $font-bold;
+      padding-bottom: 7.5px;
+      &:first-child{
+        font-family: $font-book;
+        display: block;
+      }
+    }
+  }
+}

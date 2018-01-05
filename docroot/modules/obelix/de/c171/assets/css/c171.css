@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 9, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .header--img {
+  background-image: url("/modules/obelix/de/c171/assets/images/stage_mobile.jpg");
+  background-size: cover;
+  min-height: 240px;
+}
+/* line 17, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+/* line 21, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .child-section h2 {
+  margin-top: 20px;
+}
+/* line 25, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+/* line 29, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .yt-preview-txt h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+/* line 34, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper p {
+  margin-bottom: 20px;
+}
+/* line 38, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper p:last-child {
+  margin-bottom: 0px;
+}
+/* line 42, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper p.last-child-with-margin {
+  margin-bottom: 30px;
+}
+/* line 46, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .quote-block {
+  font-style: italic;
+}
+/* line 49, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .quote-block .quotation:before {
+  content: "\201C";
+}
+/* line 53, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .quote-block .quotation:after {
+  content: "”";
+}
+/* line 57, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .quote-block .quote-source {
+  font-weight: bold;
+}
+/* line 61, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .quote-block .quote-source:before {
+  content: ' - ';
+}
+/* line 67, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .author > img {
+  display: block;
+  float: left;
+  margin-right: 1em;
+}
+/* line 72, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .author > div {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+/* line 80, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .separator:after {
+  border-bottom: 1px solid #000;
+  content: " ";
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+/* line 88, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .container--content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 93, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .container--image {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* line 99, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .child-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 106, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .editorial-youtube-video {
+  padding-bottom: 0;
+}
+/* line 108, ../scss/_c171-xs.scss */
+.billy-and-urs-wrapper .editorial-youtube-video .yt-preview-txt {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 11, ../scss/_c171-sm.scss */
+  .billy-and-urs-wrapper .header--img {
+    position: absolute;
+    background-image: url("/modules/obelix/de/c171/assets/images/stage_tablet.jpg");
+    min-height: 580px;
+  }
+  /* line 17, ../scss/_c171-sm.scss */
+  .billy-and-urs-wrapper .header--content .header--inner-content {
+    margin-top: 380px;
+    background-color: #ffffff;
+    position: relative;
+    margin-left: 15px;
+    padding-left: 63px;
+    margin-right: 15px;
+    padding-right: 63px;
+    padding-top: 45px;
+  }
+  /* line 31, ../scss/_c171-sm.scss */
+  .billy-and-urs-wrapper .container--content {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+  /* line 35, ../scss/_c171-sm.scss */
+  .billy-and-urs-wrapper .container--content.header--content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 11, ../scss/_c171-md.scss */
+  .billy-and-urs-wrapper .header--img {
+    position: absolute;
+    background-image: url("/modules/obelix/de/c171/assets/images/stage_desktop.jpg");
+    background-position: top;
+    min-height: 425px;
+  }
+  /* line 18, ../scss/_c171-md.scss */
+  .billy-and-urs-wrapper .header--content .header--inner-content {
+    margin-top: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 11, ../scss/_c171-lg.scss */
+  .billy-and-urs-wrapper .header--img {
+    min-height: 700px;
+  }
+  /* line 15, ../scss/_c171-lg.scss */
+  .billy-and-urs-wrapper .header--content .header--inner-content {
+    margin-top: 488px;
+    padding-left: 185px;
+    padding-right: 185px;
+  }
+  /* line 24, ../scss/_c171-lg.scss */
+  .billy-and-urs-wrapper .container--content {
+    padding-left: 213px;
+    padding-right: 213px;
+  }
+}

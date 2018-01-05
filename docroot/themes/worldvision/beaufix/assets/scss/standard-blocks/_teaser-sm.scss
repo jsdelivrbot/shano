@@ -1,0 +1,41 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Standard Teaser
+  // =============================
+
+  // ALL & 12er
+  .col-sm-12 {
+    .editorial-teaser {
+      .editorial-content-txt-block {
+        background: rgba(255, 255, 255, 0.75) none repeat scroll 0% 0%;
+        padding: 15px;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        .inner-content {
+          padding: 15px 30px 30px;
+        }
+      }
+    }
+  }
+  // 6er, 4er, 3er
+  .col-sm-6,
+  .col-sm-4,
+  .col-sm-3 {
+    .editorial-teaser {
+      .editorial-content-txt-block {
+        position: relative;
+        .inner-content {
+          padding: 0 15px 0 0;
+        }
+      }
+    }
+  }
+
+  .has--editorial-content--teaser{
+    .editorial-teaser{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

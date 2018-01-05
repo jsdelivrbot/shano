@@ -1,0 +1,23 @@
+uuid: 5b063913-4ab0-4c02-89f9-59e0a760e776
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+_core:
+  default_config_hash: HIzZR2iV_9aWx6WS94WYU6Ozn_-U-GRFx1CTz85odNw
+id: editorial_content.field_headline
+field_name: field_headline
+entity_type: editorial_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

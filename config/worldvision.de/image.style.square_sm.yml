@@ -1,0 +1,14 @@
+uuid: ae2f9fac-1c04-4452-91ff-9dc18f43c5ea
+langcode: de
+status: true
+dependencies: {  }
+name: square_sm
+label: 'Square SM'
+effects:
+  2374daf8-c15f-4a9d-8d58-878902328f4a:
+    uuid: 2374daf8-c15f-4a9d-8d58-878902328f4a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 1000

@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup templates
+ */
+#}
+{% if breadcrumb %}
+  <ol class="breadcrumb vert-offset-bottom-1 vert-offset-top-1">
+    {% for item in breadcrumb %}
+      <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" {{ item.attributes }}>
+        {% if item.url %}
+            {#<meta itemprop="url" content="{{ item.url }}">#}
+            <a itemprop="url" href="{{ item.url }}"><span itemprop="title">{{ item.text }}</span></a>
+        {% else %}
+          {#<meta itemprop="url" content="{{ url('<current>') }}">#}
+          <span itemprop="title">{{ item.text }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}

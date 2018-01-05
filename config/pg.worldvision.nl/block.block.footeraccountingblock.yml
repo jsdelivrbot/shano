@@ -1,0 +1,26 @@
+uuid: 4ed78754-fafb-416f-814a-c210ea7407d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - obelix_contacts
+    - system
+  theme:
+    - wvbasetheme
+id: footeraccountingblock
+theme: wvbasetheme
+region: footer_bottom_2
+weight: -6
+provider: null
+plugin: accounting_footer_block
+settings:
+  id: accounting_footer_block
+  label: 'Footer accounting block'
+  provider: obelix_contacts
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/kindsponsoring/formulier\r\n/node/1111"
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,25 @@
+uuid: bd4d9f0b-be2c-44af-ad79-cee33bf6b2f7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.hungersnot_in_afrika2
+  module:
+    - fs_payment
+id: forms_message.hungersnot_in_afrika2.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: hungersnot_in_afrika2
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Zahlungsart wählen'
+    subline: ''
+    external_payment: 1
+field_type: wovi_payment_method_field

@@ -1,0 +1,24 @@
+uuid: e7c00636-0701-4180-b910-429f4d0975b5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_yearly_donation
+    - forms_suite.form.pm_international_kinderpatenscha
+  module:
+    - fs_payment
+id: forms_message.pm_international_kinderpatenscha.field_yearly_donation
+field_name: field_yearly_donation
+entity_type: forms_message
+bundle: pm_international_kinderpatenscha
+label: field_yearly_donation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'ADDITIONAL YEARLY DONATION'
+    subline: 'Yes, I would like to make an additional yearly donation.'
+field_type: wovi_yearly_donation_field

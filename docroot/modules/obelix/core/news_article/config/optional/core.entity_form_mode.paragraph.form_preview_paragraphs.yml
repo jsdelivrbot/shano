@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.form_preview_paragraphs
+label: 'Form Preview Paragraphs'
+targetEntityType: paragraph
+cache: true

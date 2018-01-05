@@ -1,0 +1,14 @@
+{
+    "name": "world-vision/beaufix",
+    "description": "Beaufix is a Bootstrap 3 based theme for Obelix 8.",
+    "type": "drupal-theme",
+    "authors": [
+        {
+            "name": "Moritz Traute",
+            "email": "mtraute@artus.com"
+        }
+    ],
+    "require": {
+        "drupal/bootstrap": "^3.4"
+    }
+}

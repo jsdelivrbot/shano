@@ -1,0 +1,21 @@
+uuid: 4afb4d44-c048-47d5-8871-4207d11bfbd8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_broker_page_text
+    - group.type.company
+  module:
+    - text
+id: group.company.field_broker_page_text
+field_name: field_broker_page_text
+entity_type: group
+bundle: company
+label: 'Broker Page Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

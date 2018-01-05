@@ -1,0 +1,24 @@
+// =============================
+// Campaign teaser
+// =============================
+
+.editorial-campaign-teaser {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .editorial-content-txt-block {
+    position: relative;
+  }
+}
+
+// =============================
+// Unsupported Cols
+// =============================
+.col-sm-6, .col-md-6,
+.col-sm-4, .col-md-4,
+.col-sm-3, .col-md-3 {
+  .editorial-campaign-teaser {
+    display: none;
+  }
+}

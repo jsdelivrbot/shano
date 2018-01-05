@@ -1,0 +1,333 @@
+uuid: 5c920b13-a042-448b-a16f-82431b7d945d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.child.child.field_child_alias
+    - field.field.child.child.field_child_birthdate
+    - field.field.child.child.field_child_brothers
+    - field.field.child.child.field_child_childsequence
+    - field.field.child.child.field_child_childtext1
+    - field.field.child.child.field_child_childtext2
+    - field.field.child.child.field_child_childtext3
+    - field.field.child.child.field_child_choredesc
+    - field.field.child.child.field_child_familyname
+    - field.field.child.child.field_child_fatherjobstatusdesc
+    - field.field.child.child.field_child_fatherstatusdesc
+    - field.field.child.child.field_child_favouritesubjectdesc
+    - field.field.child.child.field_child_genderdesc
+    - field.field.child.child.field_child_givenname
+    - field.field.child.child.field_child_gradenumber
+    - field.field.child.child.field_child_handicapdesc
+    - field.field.child.child.field_child_healthdesc
+    - field.field.child.child.field_child_image
+    - field.field.child.child.field_child_liveswithdesc
+    - field.field.child.child.field_child_localchildfamilyname
+    - field.field.child.child.field_child_localchildgivenname
+    - field.field.child.child.field_child_motherjobstatusdesc
+    - field.field.child.child.field_child_motherstatusdesc
+    - field.field.child.child.field_child_noschoolreasondesc
+    - field.field.child.child.field_child_peoplegroupdesc
+    - field.field.child.child.field_child_playdesc
+    - field.field.child.child.field_child_project
+    - field.field.child.child.field_child_schoolleveldesc
+    - field.field.child.child.field_child_sisters
+    - field.field.child.child.field_child_status
+    - field.field.child.child.field_child_video_url
+    - field.field.child.child.field_reserved
+  module:
+    - child
+    - datetime
+    - entity_test
+    - image
+    - text
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: fOUOaggTYf4I041qWLhrY9gr8qJqPzaYGAERpJkMaLU
+id: child.child.default
+targetEntityType: child
+bundle: child
+mode: default
+content:
+  field_child_alias:
+    weight: 37
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_birthdate:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_child_brothers:
+    weight: 26
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_child_childsequence:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_child_childtext1:
+    weight: 34
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_child_childtext2:
+    weight: 35
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_child_childtext3:
+    weight: 36
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_child_choredesc:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_familyname:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_fatherjobstatusdesc:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_fatherstatusdesc:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_favouritesubjectdesc:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_genderdesc:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_givenname:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_gradenumber:
+    weight: 10
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_child_handicapdesc:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_healthdesc:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_image:
+    weight: 32
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_child_liveswithdesc:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_localchildfamilyname:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_localchildgivenname:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_motherjobstatusdesc:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_motherstatusdesc:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_noschoolreasondesc:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_peoplegroupdesc:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_playdesc:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_project:
+    weight: 33
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_child_schoolleveldesc:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_child_sisters:
+    weight: 27
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_child_status:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_reserved:
+    weight: 38
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  ivision_id:
+    label: hidden
+    weight: 0
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_child_video_url: true

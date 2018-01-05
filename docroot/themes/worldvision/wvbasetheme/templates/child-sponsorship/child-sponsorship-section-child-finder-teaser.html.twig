@@ -1,0 +1,29 @@
+<div {{ attributes.addClass('child-finder-teaser') }}>
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <button class="child-finder-teaser-toggle">{% trans with {'context': 'finder_button'} %}Find <strong>your</strong> child{% endtrans %}
+          <span class="icon-cont"><i class="icon-arrow-down rotated"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="section-highlighted section-highlighted--primary form-minimal-border child-teaser-toggle-sec">
+    <div class="container txt-content">
+      <div class="row">
+        <div class="col-xs-12 vert-offset-sm-bottom-1"><p class="h2 text-center font-size-l font-book">{{ 'Find <strong>your</strong> child'|t }}</p></div>
+        <div class="col-xs-12 col-sm-6 border-right-sm vert-offset-bottom-3 vert-offset-sm-bottom-1">
+          <div class="row">
+            {{ content.form_child_finder_country }}
+          </div>
+        </div>
+        <div class="separator-bottom pull-left clearfix vert-offset-top-1 visible-xs"></div>
+        <div class="col-xs-12 col-sm-6 vert-offset-xs-top-1 vert-offset-bottom-3 vert-offset-sm-bottom-1">
+          <div class="row">
+            {{ content.form_child_finder_birthday }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

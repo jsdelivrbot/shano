@@ -1,0 +1,5 @@
+services:
+  affiliate_merlin.affiliate_session_event_subscriber:
+    class: Drupal\affiliate_merlin\AffiliateSessionEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }

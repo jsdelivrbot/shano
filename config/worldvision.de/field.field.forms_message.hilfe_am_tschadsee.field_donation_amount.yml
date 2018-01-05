@@ -1,0 +1,27 @@
+uuid: ef27a70a-bea9-4fbe-b947-0bff62f66713
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.hilfe_am_tschadsee
+  module:
+    - fs_payment
+id: forms_message.hilfe_am_tschadsee.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: hilfe_am_tschadsee
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '75'
+field_type: wovi_donation_amount_field

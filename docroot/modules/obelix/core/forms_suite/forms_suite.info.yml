@@ -1,0 +1,7 @@
+name: Forms suite
+type: module
+description: 'Enables the use of Forms suite module.'
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - views

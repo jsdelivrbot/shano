@@ -1,0 +1,21 @@
+uuid: 090f8099-02ae-4511-a036-b07a991aaef9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_company_registration_text
+    - group.type.company
+  module:
+    - text
+id: group.company.field_company_registration_text
+field_name: field_company_registration_text
+entity_type: group
+bundle: company
+label: 'Company registration text'
+description: 'This text will be shown on the broker registration page for this company.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

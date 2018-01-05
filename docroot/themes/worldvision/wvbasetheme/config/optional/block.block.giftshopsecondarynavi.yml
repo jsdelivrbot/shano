@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.gift-shop-secondary-navi
+  module:
+    - system
+  theme:
+    - wvbasetheme
+id: giftshopsecondarynavi
+theme: wvbasetheme
+region: secondary_navigation
+weight: 0
+provider: null
+plugin: 'system_menu_block:gift-shop-secondary-navi'
+settings:
+  id: 'system_menu_block:gift-shop-secondary-navi'
+  label: 'Gift-shop secondary navi'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+visibility: {  }

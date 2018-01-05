@@ -1,0 +1,19 @@
+uuid: ba040531-b7e5-4e85-a42e-b769f08c115c
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fN5hk0g0TGyMGWURapNOv9X-vbY6qNBJoCEXCiCxH5g
+name: html
+format: html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<a hreflang href> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <pre> <img src alt data-entity-type data-entity-uuid> <h1 class="font-size-xs"> <element class="font-size-xs"> <span class="font-size-xs font-size-s font-size-m font-size-l font-size-xl">'
+      filter_html_help: true
+      filter_html_nofollow: false

@@ -1,0 +1,65 @@
+uuid: e7b17c08-e57d-47f6-9db5-519178e568e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.gift.field_donation_amount
+    - field.field.forms_message.gift.field_donation_period
+    - field.field.forms_message.gift.field_form_sql_export
+    - field.field.forms_message.gift.field_payment_method
+    - field.field.forms_message.gift.field_user_data
+    - forms_suite.form.gift
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.gift.default
+targetEntityType: forms_message
+bundle: gift
+mode: default
+content:
+  field_donation_amount:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_period:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_form_sql_export:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    weight: 1
+    settings:
+      hide_first_name: true
+      hide_birthday: true
+      hide_title: true
+      postal_max_length: '6'
+      hide_initials: false
+      hide_middle_name: false
+      hide_country: false
+      optional_bic: false
+    third_party_settings: {  }
+    type: wovi_user_data_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

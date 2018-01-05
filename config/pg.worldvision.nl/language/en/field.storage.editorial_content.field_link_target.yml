@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    -
+      label: 'New window'
+    -
+      label: 'Same window'
+    -
+      label: Off-Canvas

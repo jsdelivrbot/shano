@@ -1,0 +1,141 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 4, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* line 14, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  /* line 21, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 25, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .container-inner {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 31, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 35, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .container-inner {
+    width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 41, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 45, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .container-inner {
+    width: 1140px;
+  }
+}
+/* line 58, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 1, ../scss/_world-map-default-xs.scss */
+.world-map {
+  position: relative;
+  padding: 0;
+}
+/* line 5, ../scss/_world-map-default-xs.scss */
+.world-map .border-top {
+  border-top: 1px solid #f0f0f0;
+}
+/* line 9, ../scss/_world-map-default-xs.scss */
+.world-map .border-left {
+  border-left: 1px solid #f0f0f0;
+}
+/* line 13, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 22, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos {
+  display: none;
+  font-size: 10px;
+}
+/* line 27, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo {
+  text-align: center;
+  min-height: 42px;
+}
+/* line 31, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo.wrapped-baby-block {
+  padding-top: 5px;
+}
+/* line 35, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo.backpack-block {
+  padding-top: 5px;
+}
+/* line 39, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo.first-aid-kit-block {
+  padding-top: 11px;
+}
+/* line 43, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo i {
+  font-size: 34px;
+}
+/* line 46, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo i.icon-elder {
+  font-size: 40px;
+}
+/* line 50, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo i.icon-first-aid-kit {
+  font-size: 28px;
+}
+/* line 55, ../scss/_world-map-default-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo h3 {
+  display: inline;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 5, ../scss/_world-map-default-sm.scss */
+  .world-map .hover-info-block .hover-infos {
+    font-size: 14px;
+  }
+  /* line 9, ../scss/_world-map-default-sm.scss */
+  .world-map .hover-info-block .hover-infos .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

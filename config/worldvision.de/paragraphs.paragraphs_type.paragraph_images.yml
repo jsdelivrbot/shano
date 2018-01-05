@@ -1,0 +1,9 @@
+uuid: a0074e77-d44e-4ff0-9cba-3a896ba0d0e0
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: _dnxW6H3EaCPmnD7XOTQ04fXzhFpMgrqhG0XK3IBuXI
+id: paragraph_images
+label: Images
+behavior_plugins: {  }

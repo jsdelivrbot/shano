@@ -1,0 +1,22 @@
+uuid: de22fdae-6731-4771-a477-6c7ca6cc394d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: EjQUnmrWfdcQ_jnnJZHvqQQhm7j5x6Zbhw56z40qJk0
+id: node.field_gift_price
+field_name: field_gift_price
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

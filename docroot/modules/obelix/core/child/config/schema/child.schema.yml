@@ -1,0 +1,21 @@
+child.child.*:
+  type: config_entity
+  label: 'Child config'
+  mapping:
+    ivision_id:
+      type: string
+      label: 'ID'
+    uuid:
+      type: string
+    uid:
+      type: string
+      label: 'UID'
+    langcode:
+      type: string
+      label: 'Langcode'
+    status:
+      type: int
+      label: 'Status'
+    block_time:
+      type: int
+      label: 'Block time'

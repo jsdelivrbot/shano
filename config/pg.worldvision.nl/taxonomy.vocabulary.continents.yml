@@ -1,0 +1,9 @@
+uuid: 2dd8ff41-265a-4537-b788-69d5766d693b
+langcode: nl
+status: true
+dependencies: {  }
+name: Continents
+vid: continents
+description: 'List of Continents'
+hierarchy: 0
+weight: 0

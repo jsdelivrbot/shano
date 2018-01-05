@@ -1,0 +1,23 @@
+uuid: 064223b9-305c-408e-a570-83f395a18665
+langcode: de
+status: true
+dependencies:
+  module:
+    - child
+_core:
+  default_config_hash: 9rSyUZjBR8WKTky4BXEHIA9mwRw_O8NGRwjqOeCLsH4
+id: child.field_child_healthdesc
+field_name: field_child_healthdesc
+entity_type: child
+type: string
+settings:
+  max_length: 100
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

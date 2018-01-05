@@ -1,0 +1,17 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.photo_4_3_xs
+  theme:
+    - bootstrap
+id: campaign_teaser_mobile
+label: 'Campaign teaser mobile'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: photo_4_3_xs
+breakpoint_group: bootstrap
+fallback_image_style: '_empty image_'

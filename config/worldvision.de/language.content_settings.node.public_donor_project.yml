@@ -1,0 +1,13 @@
+uuid: 383ada68-d58c-4db4-8f95-ed4f7213a65a
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.public_donor_project
+_core:
+  default_config_hash: TKwXfZXmOE30N6h1jD8WUD6iMAt3xo8prm54FHeQMt0
+id: node.public_donor_project
+target_entity_type_id: node
+target_bundle: public_donor_project
+default_langcode: site_default
+language_alterable: false

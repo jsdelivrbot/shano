@@ -1,0 +1,22 @@
+uuid: 5d02521d-2381-4615-aaf4-3635ae16868e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: L7d9nIBdzqOAJk6hwUtNOy9sPBwbTu-wsAj-Qg1SDJY
+id: node.field_current_calltoaction
+field_name: field_current_calltoaction
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

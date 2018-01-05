@@ -1,0 +1,27 @@
+uuid: 6f849fed-7292-4046-a910-a00d4ffc3f2b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.test_sponsorship_en
+  module:
+    - fs_payment
+id: forms_message.test_sponsorship_en.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: test_sponsorship_en
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: 0
+      interval_period: 0
+field_type: wovi_donation_period_field

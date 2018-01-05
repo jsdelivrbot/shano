@@ -1,0 +1,24 @@
+uuid: 52ebd8e5-1c69-4015-a554-ccbf48f6eb84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.pledger
+  module:
+    - forms_suite
+id: forms_message.pledger.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: pledger
+label: 'User Data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ja, ik word donateur'
+    subline: 'Mijn gegevens:'
+field_type: wovi_user_data_field

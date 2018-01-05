@@ -1,0 +1,23 @@
+uuid: cb24859f-f971-4d93-9149-e106ade4716b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_birthdate
+  module:
+    - child
+    - datetime
+_core:
+  default_config_hash: j1UI3pJCYa5f7sk7nBJwN91NOzQgyStct9jZeUZj_Lo
+id: child.child.field_child_birthdate
+field_name: field_child_birthdate
+entity_type: child
+bundle: child
+label: 'birth date '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

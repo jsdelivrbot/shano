@@ -1,0 +1,22 @@
+uuid: 961de4c8-4d62-4b4f-a2c8-0201bff4ed7e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_schoolleveldesc
+  module:
+    - child
+_core:
+  default_config_hash: zhH8lvu_ekSKHO_IeGJ2otoT03rNBVz0c2M_eDMF0Bg
+id: child.child.field_child_schoolleveldesc
+field_name: field_child_schoolleveldesc
+entity_type: child
+bundle: child
+label: 'school level description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

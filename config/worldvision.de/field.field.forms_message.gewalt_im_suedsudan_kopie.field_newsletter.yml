@@ -1,0 +1,22 @@
+uuid: c9fd4da3-8993-4eb1-b139-11803fdec98e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.gewalt_im_suedsudan_kopie
+  module:
+    - forms_suite
+id: forms_message.gewalt_im_suedsudan_kopie.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: gewalt_im_suedsudan_kopie
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

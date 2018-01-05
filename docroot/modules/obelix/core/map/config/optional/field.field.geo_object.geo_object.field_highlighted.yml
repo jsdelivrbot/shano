@@ -1,0 +1,24 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.geo_object.field_highlighted
+  module:
+    - map
+id: geo_object.geo_object.field_highlighted
+field_name: field_highlighted
+entity_type: geo_object
+bundle: geo_object
+label: highlighted
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: highlighted
+  off_label: default
+field_type: boolean

@@ -1,0 +1,41 @@
+{%
+set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  'news-articles'
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('node__content') }}>
+    {{content.field_na_headerimage}}
+
+    {# intro #}
+    <section class="news-articles--intro">
+      <h1{{ title_attributes }}>
+        {{ label }}
+      </h1>
+      {{content.field_na_subline}}
+
+      <footer>
+        <div class="author">
+          <span>{{'Submitted by'|t}}</span>
+          {{ author_name }}
+        </div>
+
+        <div class="date">{{date}}</div>
+      </footer>
+
+      {{content.field_na_introduction_text}}
+
+      {{content.field_na_link}}
+    </section>
+
+    {# paragraphs #}
+    {{content.field_na_optional}}
+  </div>
+</article>

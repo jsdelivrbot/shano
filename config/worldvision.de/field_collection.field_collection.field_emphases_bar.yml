@@ -1,0 +1,8 @@
+uuid: b6df11ac-3d6d-4b7b-83f0-5aade340a1b5
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zyNVnwzaN1wqzMoqsfM23Xcw8_867q0vPnT9L6VR03U
+id: field_emphases_bar
+label: field_emphases_bar

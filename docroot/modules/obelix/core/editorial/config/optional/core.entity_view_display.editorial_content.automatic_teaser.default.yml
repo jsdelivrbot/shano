@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.automatic_teaser
+    - field.field.editorial_content.automatic_teaser.field_tags
+id: editorial_content.automatic_teaser.default
+targetEntityType: editorial_content
+bundle: automatic_teaser
+mode: default
+content:
+  automatic_teaser:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_tags: true
+  name: true
+  user_id: true

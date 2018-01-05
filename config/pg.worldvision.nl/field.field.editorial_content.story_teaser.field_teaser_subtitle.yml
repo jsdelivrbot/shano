@@ -1,0 +1,19 @@
+uuid: d359b484-ecc8-4fbf-a894-2a7a1b973691
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.story_teaser
+    - field.storage.editorial_content.field_teaser_subtitle
+id: editorial_content.story_teaser.field_teaser_subtitle
+field_name: field_teaser_subtitle
+entity_type: editorial_content
+bundle: story_teaser
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

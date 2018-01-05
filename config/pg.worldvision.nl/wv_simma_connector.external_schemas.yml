@@ -1,0 +1,808 @@
+forms_message_gift_form:
+  description: 'forms_message_gift_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    field_donation_amount_amount:
+      type: varchar
+      length: 50
+      'not null': false
+    field_donation_amount_amountRadio:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_paymentMethod:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_IBAN:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_swiftCode:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankBranchNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankAccountNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id
+forms_message_pledger_form:
+  description: 'forms_message_pledger_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    field_donation_amount_per_month_amount:
+      type: varchar
+      length: 50
+      'not null': false
+    field_donation_amount_per_month_amountRadio:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_paymentMethod:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_IBAN:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_swiftCode:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankBranchNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankAccountNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id
+forms_message_sponsor_form:
+  description: 'forms_message_sponsor_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    child_project_id:
+      type: varchar_ascii
+      length: 60
+    child_sequence:
+      type: varchar_ascii
+      length: 60
+    field_child_childSequenceNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_child_childCountryCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_donation_amount_amount:
+      type: varchar
+      length: 50
+      'not null': false
+    field_donation_amount_amountRadio:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_paymentMethod:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_IBAN:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_swiftCode:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankBranchNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankAccountNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id
+forms_message_giftshop_form:
+  description: 'forms_message_giftshop_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    field_giftshop_amount:
+      type: varchar
+      length: 100
+      'not null': false
+    field_giftshop_gifts:
+      type: text
+      size: big
+    field_giftshop_gift_price:
+      type: varchar
+      length: 100
+      'not null': false
+    field_payment_method_paymentMethod:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_IBAN:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_swiftCode:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankBranchNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankAccountNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id
+forms_message_child_sponsorship_suggestion_form:
+  description: 'forms_message_child_sponsorship_suggestion_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id
+forms_message_child_sponsorship_direct_form:
+  description: 'forms_message_child_sponsorship_direct_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    field_donation_amount_amount:
+      type: varchar
+      length: 50
+      'not null': false
+    field_donation_amount_amountRadio:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_paymentMethod:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_IBAN:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_swiftCode:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankBranchNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankAccountNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id
+forms_message_sponsor_child_form:
+  description: 'forms_message_sponsor_child_form table schema, it describes all form allowed fields & properties'
+  fields:
+    id:
+      type: int
+      unsigned: false
+      size: normal
+      'not null': true
+    created:
+      type: int
+    motivation_code:
+      type: int
+      unsigned: false
+      size: normal
+    designation_code:
+      type: int
+      unsigned: false
+      size: normal
+    child_project_id:
+      type: varchar_ascii
+      length: 60
+    child_sequence:
+      type: varchar_ascii
+      length: 60
+    field_child_childSequenceNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_child_childCountryCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_donation_amount_amount:
+      type: varchar
+      length: 50
+      'not null': false
+    field_donation_amount_amountRadio:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_paymentMethod:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_IBAN:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_swiftCode:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankBranchNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_payment_method_bankAccountNo:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_salutation:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_jobTitleCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_initials:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_middleName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_surname:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_companyName:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_street:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_houseNo:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_postCode:
+      type: varchar
+      length: 10
+      'not null': false
+    field_user_data_city:
+      type: varchar
+      length: 100
+      'not null': false
+    field_user_data_countryCode:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_phonePrivate:
+      type: varchar
+      length: 50
+      'not null': false
+    field_user_data_email:
+      type: varchar
+      length: 254
+      'not null': false
+    field_user_data_birthday:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthmonth:
+      type: varchar
+      length: 20
+      'not null': false
+    field_user_data_birthyear:
+      type: varchar
+      length: 20
+      'not null': false
+  'primary key':
+    - id
+  indexes:
+    entity_id:
+      - id

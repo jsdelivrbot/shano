@@ -1,0 +1,24 @@
+uuid: 6b80b8bd-316f-4cee-addf-c115a277a369
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.katastrophenvorsorge
+  module:
+    - forms_suite
+id: forms_message.katastrophenvorsorge.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: katastrophenvorsorge
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

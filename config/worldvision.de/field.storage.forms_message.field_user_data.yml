@@ -1,0 +1,21 @@
+uuid: a36999f6-2fe4-47f6-9ccf-0fd0a5ef048d
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+_core:
+  default_config_hash: 6wWiixnYPlbJU8sBe8gezt_VmTphs0Y5YTO6vn_6yzU
+id: forms_message.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+type: wovi_user_data_field
+settings:
+  case_sensitive: false
+module: forms
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

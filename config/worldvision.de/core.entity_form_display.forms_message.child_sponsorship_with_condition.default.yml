@@ -1,0 +1,86 @@
+uuid: 286ce0cd-27ed-4d0d-8cee-37749c65d095
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_with_condition.field_child
+    - field.field.forms_message.child_sponsorship_with_condition.field_donation_amount
+    - field.field.forms_message.child_sponsorship_with_condition.field_donation_period
+    - field.field.forms_message.child_sponsorship_with_condition.field_message
+    - field.field.forms_message.child_sponsorship_with_condition.field_newsletter
+    - field.field.forms_message.child_sponsorship_with_condition.field_payment_method
+    - field.field.forms_message.child_sponsorship_with_condition.field_user_data
+    - field.field.forms_message.child_sponsorship_with_condition.field_wovi_survey
+    - field.field.forms_message.child_sponsorship_with_condition.field_yearly_donation
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - child_sponsorship
+    - forms_suite
+    - forms_survey
+    - fs_payment
+id: forms_message.child_sponsorship_with_condition.default
+targetEntityType: forms_message
+bundle: child_sponsorship_with_condition
+mode: default
+content:
+  field_child:
+    type: wovi_child_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_donation_amount:
+    type: wovi_donation_amount_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_donation_period:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_wovi_survey:
+    type: wovi_survey_widget
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_yearly_donation:
+    type: wovi_yearly_donation_widget
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

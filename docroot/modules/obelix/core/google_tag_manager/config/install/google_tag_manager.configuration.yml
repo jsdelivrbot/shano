@@ -1,0 +1,5 @@
+google_tag_manager:
+  configuration:
+    container_id: null
+    gtm_auth: null
+    gtm_preview: null

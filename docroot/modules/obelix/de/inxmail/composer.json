@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/inxmail",
+  "type": "drupal-module",
+  "description": "Inxmail Newletter service",
+  "require": { }
+}

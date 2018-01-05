@@ -1,0 +1,24 @@
+<div class='container'>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 vert-offset-bottom-1">
+      <h1 class="font-size-l"><span class="font-book font-color-neutral">Select</span> personalised certificate
+        <span class="font-book font-color-neutral">or</span> greeting card</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-5 col-sm-offset-1 vert-offset-bottom-1">
+      <div class="center-block">{{ content.certificate.image }}</div>
+      <h2 class="font-size-m text-center">{{ content.certificate.headline }}</h2>
+      <p class="font-size-xs text-center">{{ content.certificate.copy }}</p>
+      <div class="text-center vert-offset-top-2">{{ content.certificate.button }}</div>
+    </div>
+    <div class="col-xs-12 col-sm-5 vert-offset-bottom-1">
+      <img class="img-responsive center-block"
+           src="{{ content.card.module_path }}/assets/img/das-gute-geschenk-format-waehlen-grusskarte.jpg"
+           alt="Grusskarte wählen">
+      <h2 class="font-size-m text-center">{{ content.card.headline }}</h2>
+      <p class="font-size-xs text-center">{{ content.card.copy }}</p>
+      <div class="text-center vert-offset-top-2">{{ content.card.button }}</div>
+    </div>
+  </div>
+</div>

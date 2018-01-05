@@ -1,0 +1,14 @@
+# Country menu items definition
+entity.country.collection:
+  title: 'Country list'
+  route_name: entity.country.collection
+  description: 'List Country entities'
+  parent: system.admin_content
+  weight: 110
+
+country.admin.structure.settings:
+  title: Country settings
+  description: 'Configure Country entities'
+  route_name: country.settings
+  parent: system.admin_structure
+  weight: 110

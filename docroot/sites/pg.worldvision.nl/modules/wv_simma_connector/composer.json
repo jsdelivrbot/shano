@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/wv_simma_connector",
+  "type": "drupal-module",
+  "description": "Provides projects & children migrations & other external connection.",
+  "require": { }
+}

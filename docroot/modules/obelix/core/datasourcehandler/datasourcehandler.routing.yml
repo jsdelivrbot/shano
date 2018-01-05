@@ -1,0 +1,11 @@
+
+datasourcehandler.config_form:
+  path: '/admin/config/services/datasourcehandler/config'
+  defaults:
+    _form: '\Drupal\datasourcehandler\Form\ConfigForm'
+    _title: 'Datasource handler'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

@@ -1,0 +1,84 @@
+0:
+  0:
+    image:
+      alt: Jetzt Pate werden
+      src: assets/images/flyout-teaser/kinderpatenschaft.jpg
+    headline: ENGLISH Das schönste Geschenk für Kinder: EINE ZUKUNFT
+    copy: ENGLISH Eine World Vision Kinderpatenschaft hilft dreifach und das für nur 1 Euro am Tag
+    link:
+      href: /kinderpatenschaft
+      label: Jetzt Pate werden
+  1:
+    image:
+      alt: Jetzt über Kinderpatenschaften Informieren
+      src: assets/images/flyout-teaser/kinderpatenschaft-informieren.jpg
+    headline: ENGLISH Eine Kinderpatenschaft bei World Vision
+    copy: ENGLISH Eine besonders nachhaltig und persönliche Form der Unterstützung
+    link:
+      href: /kinderpatenschaft/informieren/
+      label: Jetzt Informieren
+    attributes:
+      class: hidden-sm
+1:
+  0:
+    image:
+      alt: Jetzt spenden
+      src: assets/images/flyout-teaser/kindheitsretter.jpg
+    headline: ENGLISH Kindheitsretter
+    copy: ENGLISH Beenden Sie Gewalt gegen Kinder an den gefährlichsten Orten dieser Welt und werden Sie Kindheitsretter.
+    link:
+      href: /spenden/kindheitsretter
+      label: Jetzt spenden
+  1:
+    image:
+      alt: Jetzt Schenken
+      src: assets/images/flyout-teaser/das-gute-geschenk.jpg
+    headline: ENGLISH Das Gute Geschenk
+    copy: ENGLISH Machen Sie ihren Liebsten eine Freude und helfen gleichzeitig einem bedürftigen Menschen vor Ort.
+    link:
+      href: https://www.worldvision.de/spenden/das-gute-geschenk
+      label: Jetzt Schenken
+    attributes:
+      class: hidden-sm
+2:
+  0:
+    image:
+      alt: Jetzt Spenden Sammel Aktion Starten
+      src: assets/images/flyout-teaser/world-vision-mitmachen.jpg
+    headline: ENGLISH Spenden Sammeln
+    copy: ENGLISH Ob Spendenlauf, Flohmarkt oder Weihnachtsbasar, jede Spende zählt!
+    link:
+      href: /mitmachen/spenden-sammeln
+      label: Jetzt Aktion Starten
+  1:
+    image:
+      alt: Jungendliche engagiert bei World Vision - Hungerfree
+      src: assets/images/flyout-teaser/world-vision-hungerfree.jpg
+    headline: ENGLISH Jugendliche engagieren sich
+    copy: ENGLISH Hungerfree ist die Bewegung für alle, die sich für eine Welt ohne Hunger einsetzen.
+    link:
+      href: /mitmachen/jugendliche-engagieren-hungerfree
+      label: Mehr erfahren
+    attributes:
+      class: hidden-sm
+3:
+  0:
+    image:
+      alt: Mehr über World Vision erfahren
+      src: assets/images/flyout-teaser/ueber-world-vision.jpg
+    headline: ENGLISH Über World Vision
+    copy: ENGLISH Lernen Sie hier unsere Organisation kennen und erfahren Sie alles über Werte, Ziele und Geschichte unseres Kinderhilfswerks!
+    link:
+      href: /informieren/ueber-world-vision
+      label: Mehr erfahren
+  1:
+    image:
+      alt: Weltkarte der World Vision Projekte
+      src: assets/images/flyout-teaser/weltkarte.jpg
+    headline: ENGLISH Unsere Projekte weltweit
+    copy: ENGLISH World Vision arbeitet dort, wo die Not der Kinder und ihrer Familien am größten ist.
+    link:
+      href: /weltkarte
+      label: Zu unseren Projekten
+    attributes:
+      class: hidden-sm

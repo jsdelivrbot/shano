@@ -1,0 +1,22 @@
+uuid: cf99fc31-2335-49db-9dbf-803656b0942f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.tabaluga_spende
+  module:
+    - forms_suite
+id: forms_message.tabaluga_spende.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: tabaluga_spende
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_payment_method_field

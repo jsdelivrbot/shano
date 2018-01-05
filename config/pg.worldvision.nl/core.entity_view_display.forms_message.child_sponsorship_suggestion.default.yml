@@ -1,0 +1,39 @@
+uuid: aa5290ea-3dcc-4e05-a7d1-6e2a285f08ca
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_suggestion.field_child_select
+    - field.field.forms_message.child_sponsorship_suggestion.field_form_sql_export
+    - field.field.forms_message.child_sponsorship_suggestion.field_suggestion
+    - field.field.forms_message.child_sponsorship_suggestion.field_user_data
+    - forms_suite.form.child_sponsorship_suggestion
+  module:
+    - forms_suite
+_core:
+  default_config_hash: d9okna7PkpHpkVViBw0PL61W40xh8Nh04FduvCVRWjo
+id: forms_message.child_sponsorship_suggestion.default
+targetEntityType: forms_message
+bundle: child_sponsorship_suggestion
+mode: default
+content:
+  field_form_sql_export:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_user_data:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden:
+  field_child_select: true
+  field_suggestion: true

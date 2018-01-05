@@ -1,0 +1,24 @@
+uuid: d6c18c4a-75fb-46e8-9f3c-c27b93f3969b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_company_cooperation
+    - forms_suite.form.test_g6k_gutschein
+  module:
+    - forms_suite
+id: forms_message.test_g6k_gutschein.field_company_cooperation
+field_name: field_company_cooperation
+entity_type: forms_message
+bundle: test_g6k_gutschein
+label: 'company cooperation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: TEST
+    subline: ''
+field_type: wovi_company_cooperation_field

@@ -1,0 +1,65 @@
+{#
+/**
+ * @file geo_object.html.twig
+ * Default theme implementation to present Geo object data.
+ *
+ * This template is used when viewing Geo object pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_geo_object()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('world-map') }}>
+    {# TODO @Moe move library to modules file #}
+    {{ attach_library('map/wovi_maps_default') }}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <div class="hover-info-block">
+    <div class="container-fluid">
+        {% for country_id, country in countrys %}
+          <div class="hover-infos hover-infos-{{ country_id }}">
+            <div class="row">
+              <div class="col-xs-12 text-center"><h4 class="font-size-s">{{ country.name }}</h4></div>
+              <div class="countryInfo col-xs-3 col-sm-3 col-md-2 col-md-offset-2 wrapped-baby-block"><i
+                        class="icon-wrapped-baby"></i><br class="visible-xs visible-sm"/>
+                <h3>{% if country.child_mortality %}{{ country.child_mortality|round }}{% else %}0{% endif %}</h3>
+              </div>
+              <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2"><i class="icon-elder"></i><br
+                        class="visible-xs visible-sm"/>
+                <h3>{% if country.life_expectancy %}{{ country.life_expectancy|round }}{% else %}0{% endif %}</h3>
+              </div>
+              <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 backpack-block"><i class="icon-backpack"></i><br
+                        class="visible-xs visible-sm"/>
+                <h3>{% if country.enrollment_rate %}{{ country.enrollment_rate|round }}%{% else %}0{% endif %}</h3></div>
+              <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 first-aid-kit-block"><i
+                        class="icon-first-aid-kit"></i><br class="visible-xs visible-sm"/>
+                <h3>{% if country.doctors_per_inhabitant %}{{ country.doctors_per_inhabitant|round }}{% else %}0{% endif %}</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="countryInfo col-xs-3 col-sm-3 col-md-2 col-md-offset-2 vert-offset-bottom-1">{{ 'Children'|trans }}<span
+                        class="visible-xs-inline">-<br/></span>&nbsp;{{ 'mortality per 1000 newborns'|trans }}<br/><br/>
+              </div>
+              <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 vert-offset-bottom-1">{{ 'Life'|trans }}<span
+                        class="visible-xs-inline">-<br/></span>&nbsp;{{ 'expectancy'|trans }}<br/><br/>
+              </div>
+              <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 vert-offset-bottom-1">{{ 'Base education'|trans }}<span
+                        class="visible-xs-inline">-<br/></span>&nbsp;{{ 'rate'|trans }}<br/><br/></div>
+              <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 vert-offset-bottom-1">{{ 'Doctors per 100,000 inhabitants'|trans }}</div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>

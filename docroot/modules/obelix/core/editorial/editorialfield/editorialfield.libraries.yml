@@ -1,0 +1,4 @@
+admin-overlay:
+  css:
+    base:
+      css/admin-overlay.css: { }

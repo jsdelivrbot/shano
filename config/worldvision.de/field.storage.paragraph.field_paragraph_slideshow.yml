@@ -1,0 +1,22 @@
+uuid: 87aba5c6-c9dc-4f45-8af0-4feb150f9d07
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - paragraphs
+_core:
+  default_config_hash: PoNliUSn0WYPPpjs6L71fmTBcMfeRRkt9Rt_R9VP57o
+id: paragraph.field_paragraph_slideshow
+field_name: field_paragraph_slideshow
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

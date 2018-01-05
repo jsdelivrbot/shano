@@ -1,0 +1,30 @@
+uuid: 3c4881c4-09b5-4aa7-a354-53ec5d53f137
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.storage.paragraph.field_paragraph_video_url
+    - paragraphs.paragraphs_type.paragraphs_video
+_core:
+  default_config_hash: j6YHjS8oacKgWR_j7ebbokK0C7JONLOFkdBBeKs8Vec
+id: paragraph.paragraphs_video.field_paragraph_video_url
+field_name: field_paragraph_video_url
+entity_type: paragraph
+bundle: paragraphs_video
+label: 'Video URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      youtube_video: youtube_video
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

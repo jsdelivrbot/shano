@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.slideshow
+    - field.field.editorial_content.slideshow.field_slideshow_slide
+id: editorial_content.slideshow.default
+targetEntityType: editorial_content
+bundle: slideshow
+mode: default
+content:
+  slideshow:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_slideshow_slide: true
+  name: true
+  user_id: true

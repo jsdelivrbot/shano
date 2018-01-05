@@ -1,0 +1,21 @@
+uuid: 8a313764-b651-47dd-a95b-3d55cb783fb1
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gift_id
+    - node.type.gift_type
+  module:
+    - text
+id: node.gift_type.field_gift_id
+field_name: field_gift_id
+entity_type: node
+bundle: gift_type
+label: 'Gift id'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

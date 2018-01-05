@@ -1,0 +1,7 @@
+uuid: 00765344-9d8a-4067-b088-fd98c150d70d
+langcode: de
+status: false
+dependencies: {  }
+formId: node_offcanvas_page_form
+captchaType: default
+label: null

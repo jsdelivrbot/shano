@@ -1,0 +1,21 @@
+uuid: 69a3d0ea-4e13-4933-8201-86f2bd4a3337
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.social_share
+    - field.storage.editorial_content.field_share_text
+_core:
+  default_config_hash: NivK3Ox--g-NGkmZfsw7cUS31ofLcRfuonVQXRh4hCg
+id: editorial_content.social_share.field_share_text
+field_name: field_share_text
+entity_type: editorial_content
+bundle: social_share
+label: 'Share text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

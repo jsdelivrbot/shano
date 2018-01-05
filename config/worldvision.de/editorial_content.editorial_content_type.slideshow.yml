@@ -1,0 +1,9 @@
+uuid: acf7ca1e-ec94-4a19-8f6b-df6c922a785a
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pRSBmH5ubJcixGEURJ9Lh4eFhJkrhIHfshwXDV0hHwE
+id: slideshow
+label: Slideshow
+category: 'Standard block'

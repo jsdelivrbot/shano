@@ -1,0 +1,27 @@
+uuid: ecadcffb-fd26-40eb-9b09-9e5e6a77dda4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.sara_projekt
+  module:
+    - fs_payment
+id: forms_message.sara_projekt.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: sara_projekt
+label: field_donation_amount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '10'
+    default_amount: '10'
+field_type: wovi_donation_amount_field

@@ -1,0 +1,28 @@
+uuid: f599ed7e-a091-47af-871d-7f1597cc8fce
+langcode: de
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: VQ7INpcnbhivU3AP9IQgkPU4FEZSOtA2u5jxA_9EpdI
+id: wvbasetheme_searchform
+theme: wvbasetheme
+region: search
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/*'
+    negate: false
+    context_mapping: {  }

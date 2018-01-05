@@ -1,0 +1,71 @@
+uuid: bf92bd15-78db-4f06-9b83-0149c4fd16b5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.katastrophenvorsorge.field_donation_amount
+    - field.field.forms_message.katastrophenvorsorge.field_donation_period
+    - field.field.forms_message.katastrophenvorsorge.field_newsletter
+    - field.field.forms_message.katastrophenvorsorge.field_payment_method
+    - field.field.forms_message.katastrophenvorsorge.field_user_data
+    - forms_suite.form.katastrophenvorsorge
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.katastrophenvorsorge.default
+targetEntityType: forms_message
+bundle: katastrophenvorsorge
+mode: default
+content:
+  field_donation_amount:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_amount_single:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_period:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_period_single:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

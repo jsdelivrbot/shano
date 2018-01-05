@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains fs_payment.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fs_payment_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fs_payment module.
+    case 'help.page.fs_payment':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables payment functionaltiy for Forms suite.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

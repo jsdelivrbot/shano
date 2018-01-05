@@ -1,0 +1,5 @@
+services:
+  forms.mail_handler:
+    class: Drupal\forms_suite\MailHandler
+    arguments: ['@plugin.manager.mail', '@language_manager', '@entity.manager']
+

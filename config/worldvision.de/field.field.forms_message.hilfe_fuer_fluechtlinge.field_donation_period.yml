@@ -1,0 +1,27 @@
+uuid: 0fd9f24d-7285-49af-8422-62f1dce1c7ed
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.hilfe_fuer_fluechtlinge
+  module:
+    - fs_payment
+id: forms_message.hilfe_fuer_fluechtlinge.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: hilfe_fuer_fluechtlinge
+label: 'Donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: 0
+field_type: wovi_donation_period_field

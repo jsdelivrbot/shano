@@ -1,0 +1,18 @@
+uuid: acc5c1fc-acf9-437d-8f5c-95c0241391f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - child
+id: child.field_reserved
+field_name: field_reserved
+entity_type: child
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

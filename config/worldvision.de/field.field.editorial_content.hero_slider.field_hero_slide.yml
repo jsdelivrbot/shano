@@ -1,0 +1,25 @@
+uuid: 46921710-f20b-4c86-9afa-3e82575c8c57
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.hero_slider
+    - field.storage.editorial_content.field_hero_slide
+  module:
+    - field_collection
+_core:
+  default_config_hash: 0K7J2O4dxGubrNTjT1gA1kcePZhwOaGX2nPchD2Z8_E
+id: editorial_content.hero_slider.field_hero_slide
+field_name: field_hero_slide
+entity_type: editorial_content
+bundle: hero_slider
+label: 'Hero slide'
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

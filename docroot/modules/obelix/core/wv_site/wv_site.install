@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install / update logic.
+ */
+
+/**
+ * Repair corrupted config, so devs can use D8 config system for development.
+ */
+function wv_site_update_8001() {
+  $query = \Drupal::database()->delete('key_value');
+
+  $query->condition(
+    $query->orConditionGroup()
+    ->condition('name', 'field.field.deleted')
+    ->condition('name', 'field.storage.deleted')
+  );
+
+  $query->execute();
+}

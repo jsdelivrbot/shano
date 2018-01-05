@@ -1,0 +1,23 @@
+uuid: ffe1527d-0ae6-4bd3-94f7-4f165c63c3b6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_redirect
+    - node.type.offcanvas_page
+  module:
+    - link
+id: node.offcanvas_page.field_redirect
+field_name: field_redirect
+entity_type: node
+bundle: offcanvas_page
+label: Redirect
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 0
+field_type: link

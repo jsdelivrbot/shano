@@ -1,0 +1,23 @@
+uuid: 75ef0031-6484-4181-94c8-93bb0ae218f5
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - forms_suite
+_core:
+  default_config_hash: 7Hgkp1umWJgmz8kZIMSMCYNKsUSWIgTcgTWJAlk5cW0
+id: editorial_content.field_forms_reference
+field_name: field_forms_reference
+entity_type: editorial_content
+type: list_forms
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: forms
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

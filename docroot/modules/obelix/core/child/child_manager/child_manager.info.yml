@@ -1,0 +1,8 @@
+name: Child Manager
+type: module
+description: Extend the Child Module function.
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - child
+  - datasourcehandler

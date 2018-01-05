@@ -1,0 +1,7 @@
+uuid: 2f215300-89a4-4c6a-a4fc-a1323a019537
+langcode: de
+status: false
+dependencies: {  }
+formId: node_public_donor_overview_form
+captchaType: default
+label: null

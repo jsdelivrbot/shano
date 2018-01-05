@@ -1,0 +1,73 @@
+uuid: a0fe1720-4f53-4e6d-8e77-1066e256fdf0
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_direct.field_child_select
+    - field.field.forms_message.child_sponsorship_direct.field_donation_amount
+    - field.field.forms_message.child_sponsorship_direct.field_donation_period
+    - field.field.forms_message.child_sponsorship_direct.field_form_sql_export
+    - field.field.forms_message.child_sponsorship_direct.field_payment_method
+    - field.field.forms_message.child_sponsorship_direct.field_user_data
+    - forms_suite.form.child_sponsorship_direct
+  module:
+    - child_sponsorship
+    - forms_suite
+    - fs_payment
+id: forms_message.child_sponsorship_direct.default
+targetEntityType: forms_message
+bundle: child_sponsorship_direct
+mode: default
+content:
+  field_child_select:
+    type: wovi_child_select_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_donation_amount:
+    type: wovi_donation_amount_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_donation_period:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_form_sql_export:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 4
+    region: content
+    settings:
+      hide_first_name: true
+      hide_title: true
+      postal_max_length: '6'
+      hide_initials: false
+      hide_middle_name: false
+      hide_country: false
+      hide_birthday: false
+      optional_bic: false
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

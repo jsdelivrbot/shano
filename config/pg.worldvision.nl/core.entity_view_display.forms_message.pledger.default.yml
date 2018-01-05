@@ -1,0 +1,53 @@
+uuid: a55b7f64-cf84-494a-8f40-241ade76ab71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.pledger.field_donation_amount_per_month
+    - field.field.forms_message.pledger.field_form_sql_export
+    - field.field.forms_message.pledger.field_payment_method
+    - field.field.forms_message.pledger.field_user_data
+    - forms_suite.form.pledger
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.pledger.default
+targetEntityType: forms_message
+bundle: pledger
+mode: default
+content:
+  field_donation_amount_per_month:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_form_sql_export:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_donation_period: true

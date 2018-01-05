@@ -1,0 +1,27 @@
+uuid: 876a3ae4-dba4-4c25-868e-d626f8704c0a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_map
+  module:
+    - country
+id: country.country.field_map
+field_name: field_map
+entity_type: country
+bundle: country
+label: map
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:map'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

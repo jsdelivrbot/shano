@@ -1,0 +1,29 @@
+uuid: 0fca5e14-ba9a-40ec-b7bb-508b8ebc6ee3
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig
+theme: wvbasetheme
+region: footer_bottom_3
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: 'Logos CBF - ANBO - Kiwa'
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: "<p class=\"text-align-center\"><img alt=\"CBF\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"55\" src=\"https://www.worldvision.nl/sites/pg.worldvision.nl/files/styles/cinemascope_21_9_sm/public/editorial/image/2017-12/Tekengebied%201.png?itok=adbYRX_q\" width=\"121\" /><img alt=\"ANBI\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"50\" src=\"https://www.worldvision.nl/sites/pg.worldvision.nl/files/styles/cinemascope_21_9_sm/public/editorial/image/2017-10/ANBI1400x620_wit-01.png?itok=9KlZuUuO\" width=\"113\" /><img alt=\"KIWA\" data-entity-type=\"\" data-entity-uuid=\"\" height=\"42\" src=\"https://www.worldvision.nl/sites/pg.worldvision.nl/files/styles/cinemascope_21_9_sm/public/editorial/image/2017-10/Kiwa1400x620_wit-01.png?itok=nZxUAP5k\" width=\"95\" /></p>\r\n"
+    format: html
+visibility:
+  request_path:
+    id: request_path
+    pages: "/kindsponsoring/formulier\r\n/node/1111"
+    negate: true
+    context_mapping: {  }

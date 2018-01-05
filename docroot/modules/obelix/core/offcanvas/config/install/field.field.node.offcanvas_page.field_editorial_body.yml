@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editorial_body
+    - node.type.offcanvas_page
+  module:
+    - editorialfield
+id: node.offcanvas_page.field_editorial_body
+field_name: field_editorial_body
+entity_type: node
+bundle: offcanvas_page
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: editorial_field

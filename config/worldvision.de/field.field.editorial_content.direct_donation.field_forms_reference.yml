@@ -1,0 +1,23 @@
+uuid: ed2f58a6-d835-4bbc-8baa-50eaaae49530
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.direct_donation
+    - field.storage.editorial_content.field_forms_reference
+  module:
+    - forms_suite
+_core:
+  default_config_hash: wpt4HioX6wMFaW7zRCmxe3m2Nj-XfTfWn_0cDpjE5So
+id: editorial_content.direct_donation.field_forms_reference
+field_name: field_forms_reference
+entity_type: editorial_content
+bundle: direct_donation
+label: 'Destination Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_forms

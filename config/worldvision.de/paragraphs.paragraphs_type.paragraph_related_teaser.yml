@@ -1,0 +1,9 @@
+uuid: d4284c2a-aa33-478f-8dcf-51aa523b70be
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YaU39egz-6BCYu3Zu3m1X-0Dlfby4R7GbRX0qHXbQbU
+id: paragraph_related_teaser
+label: 'Related Teaser'
+behavior_plugins: {  }

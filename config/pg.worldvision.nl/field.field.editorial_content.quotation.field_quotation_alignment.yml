@@ -1,0 +1,23 @@
+uuid: b652c37a-817f-4940-a94b-8ee8747987fb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.quotation
+    - field.storage.editorial_content.field_quotation_alignment
+  module:
+    - options
+id: editorial_content.quotation.field_quotation_alignment
+field_name: field_quotation_alignment
+entity_type: editorial_content
+bundle: quotation
+label: 'Quotation alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: text-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

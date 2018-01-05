@@ -1,0 +1,8 @@
+uuid: cf83c7f6-5983-41db-91ee-dceab6740537
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0wKLfPLbSuaHg-WCf5eDfknNHlucA_2-bgla_PF_lig
+id: field_impact_bar
+label: 'Impact bar'

@@ -1,0 +1,26 @@
+uuid: 50c2a4dd-a2f5-45cc-88c3-5492892dbb3c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.child_sponsorship_suggestion
+  module:
+    - forms_suite
+_core:
+  default_config_hash: uf_z7u0vNxklaqsd0oeTDBHOEjFKdBCfAQJebhbZhPA
+id: forms_message.child_sponsorship_suggestion.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: child_sponsorship_suggestion
+label: 'user data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'My information'
+    subline: ''
+field_type: wovi_user_data_field

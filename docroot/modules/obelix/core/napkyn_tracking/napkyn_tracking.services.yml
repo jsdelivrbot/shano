@@ -1,0 +1,5 @@
+services:
+  gtm_datalayer_event.napkyn_tracking:
+    class: Drupal\napkyn_tracking\NapkynTrackingDataLayer
+    tags:
+      - { name: event_subscriber }

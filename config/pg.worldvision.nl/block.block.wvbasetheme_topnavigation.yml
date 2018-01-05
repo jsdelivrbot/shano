@@ -1,0 +1,26 @@
+uuid: b4add675-c756-42be-a943-296bb2e9d167
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.top-navigation
+  module:
+    - system
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: NZyPelz3maZVD8eZahpplFZVUmrVRpNTfW-2vdwiV7o
+id: wvbasetheme_topnavigation
+theme: wvbasetheme
+region: top_navigation
+weight: -4
+provider: null
+plugin: 'system_menu_block:top-navigation'
+settings:
+  id: 'system_menu_block:top-navigation'
+  label: 'Top Navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility: {  }

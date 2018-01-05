@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/map",
+  "type": "drupal-module",
+  "description": "Map Module",
+  "require": { }
+}

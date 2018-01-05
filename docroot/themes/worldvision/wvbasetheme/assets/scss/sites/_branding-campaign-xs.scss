@@ -1,0 +1,39 @@
+// =============================
+// Branding campaign 2016
+// =============================
+
+#editorial-copy-5942,
+#editorial-copy-5859 {
+  p {
+    color: $color-highlight;
+  }
+}
+
+// Second hero slider
+#editorial-hero-slider-5860,
+#editorial-hero-slider-5941 {
+  h2 {
+    color: $color-standard-bg;
+    text-transform: none;
+  }
+  p {
+    display: none;
+  }
+}
+
+#editorial-hero-slider-5941 {
+  a.btn-beauty {
+    display: none;
+  }
+}
+
+.cta-sponsor-child-visible {
+  .child-sponsorship-info-child-sponsorship {
+    .cta-sponsor-child {
+      display: inline-block!important;
+    }
+    a.smooth-scroll {
+      display: none;
+    }
+  }
+}

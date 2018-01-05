@@ -1,0 +1,27 @@
+uuid: a2fd1ee5-9276-4bb0-8716-1c625bfc1a77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.giftshop
+  module:
+    - fs_payment
+id: forms_message.giftshop.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: giftshop
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: 0
+field_type: wovi_donation_period_field

@@ -1,0 +1,27 @@
+uuid: 2311c407-66b6-4e1a-9928-8835610e50c5
+langcode: nl
+status: true
+dependencies:
+  module:
+    - field_collection
+    - options
+id: field_collection_item.field_alignment
+field_name: field_alignment
+entity_type: field_collection_item
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

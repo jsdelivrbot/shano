@@ -1,0 +1,38 @@
+uuid: f01cfa8f-ecb5-4f83-a1f1-b3b9053dafa5
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: NDNthNdFJ_Vn_14rMJy7EuXiRpB3ybonRDL0RsJdTyM
+id: editorial_content.field_font_size
+field_name: field_font_size
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: font-size-xs
+      label: XS
+    -
+      value: font-size-s
+      label: S
+    -
+      value: font-size-m
+      label: M
+    -
+      value: font-size-l
+      label: L
+    -
+      value: font-size-xl
+      label: XL
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

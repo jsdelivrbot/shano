@@ -1,0 +1,24 @@
+uuid: 37febf63-bf19-4439-a02a-8dfdb30bd1a8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_press_distributor
+    - forms_suite.form.press_distributor
+  module:
+    - forms_suite
+_core:
+  default_config_hash: 9Y3Q25MvtSRZJiSBJt4y3rbi2_NbqoCZMb3s2Rwsssw
+id: forms_message.press_distributor.field_press_distributor
+field_name: field_press_distributor
+entity_type: forms_message
+bundle: press_distributor
+label: 'press distributor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_press_distributor_field

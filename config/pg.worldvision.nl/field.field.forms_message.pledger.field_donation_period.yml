@@ -1,0 +1,29 @@
+uuid: 97d6bab4-e01b-4614-9440-d9444cc8d5c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.pledger
+  module:
+    - fs_payment
+id: forms_message.pledger.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: pledger
+label: 'donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      interval_period: interval_period
+      allow_quarter_period: allow_quarter_period
+      allow_yearly_period: allow_yearly_period
+      single_period: 0
+field_type: wovi_donation_period_field

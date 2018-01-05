@@ -1,0 +1,36 @@
+{#
+/**
+ * @file country.html.twig
+ * Theme implementation to present Child country data.
+ *
+ * This template is used when viewing Child pages.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('child' ,'container') }}>
+    <h2>Wie viele Kinder sind für ein Land verfügbar?</h2>
+
+    {% if content %}
+        <div class="row">
+            <div class="col-xs-3"><h3>Land</h3></div>
+            <div class="col-xs-3"><h3>Anzahl Kinder</h3></div>
+            <div class="col-xs-3"><h3>weiblich</h3></div>
+            <div class="col-xs-3"><h3>männlich</h3></div>
+        </div>
+        {% for country in content %}
+            <div class="row">
+                <div class="col-xs-3">{{ country.country_name }}</div>
+                <div class="col-xs-3">{{ country.child_amount }}</div>
+                <div class="col-xs-3">{{ country.female }}</div>
+                <div class="col-xs-3">{{ country.male }}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>

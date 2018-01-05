@@ -1,0 +1,32 @@
+uuid: b2a968b9-87c2-4ce3-aab6-4861cdbea155
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_call_to_action.field_paragraph_cta_button
+    - paragraphs.paragraphs_type.paragraph_call_to_action
+  module:
+    - link
+third_party_settings:
+  entity_test:
+    foo: bar
+id: paragraph.paragraph_call_to_action.default
+targetEntityType: paragraph
+bundle: paragraph_call_to_action
+mode: default
+content:
+  field_paragraph_cta_button:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  created: true
+  uid: true

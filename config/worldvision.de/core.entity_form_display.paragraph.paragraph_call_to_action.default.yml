@@ -1,0 +1,26 @@
+uuid: 7ed00c31-cbd8-4537-8abc-3cceab55eaf8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_call_to_action.field_paragraph_cta_button
+    - paragraphs.paragraphs_type.paragraph_call_to_action
+  module:
+    - link
+id: paragraph.paragraph_call_to_action.default
+targetEntityType: paragraph
+bundle: paragraph_call_to_action
+mode: default
+content:
+  field_paragraph_cta_button:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

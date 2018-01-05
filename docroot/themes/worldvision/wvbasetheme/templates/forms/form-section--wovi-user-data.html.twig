@@ -1,0 +1,64 @@
+{#
+/**
+ * This template is used when viewing the wovi form section.
+ *
+ * Available variables:
+ * - form: A list of all form elements.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('container') }}>
+  <div class="row">
+      {% if elements.headline %}
+        <div class="col-xs-12">
+          <h2 class="form-hl text-center font-size-m">{{ elements.headline }}</h2>
+        </div>
+      {% endif %}
+      {% if elements.subline %}
+        <div class="col-xs-12">
+          <p class="form-sl text-center font-size-s">{{ elements.subline }}</p>
+        </div>
+      {% endif %}
+      {# Wrap smaller on large BP #}
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <div class="row">
+        <div class="col-xs-12  col-sm-6">{{ elements.salutation }}</div>
+
+        {% if elements.jobTitleCode|render|striptags|trim %}
+          <div class="col-xs-12 col-sm-6">{{ elements.jobTitleCode }}</div>
+        {% endif %}
+
+        {% if elements.initials|render|striptags|trim %}
+          <div class="col-xs-12 col-sm-6 tall">{{ elements.initials }}</div>
+        {% endif %}
+
+        {% if elements.firstName|render|striptags|trim %}
+          <div class="col-xs-12 col-sm-6">{{ elements.firstName }}</div>
+        {% endif %}
+
+        {% if elements.middleName|render|striptags|trim %}
+          <div class="col-xs-12 col-sm-6">{{ elements.middleName }}</div>
+        {% endif %}
+
+        <div class="col-xs-12 col-sm-6">{{ elements.surname }}</div>
+        <div class="col-xs-12">{{ elements.companyName }}</div>
+        <div class="col-xs-12 col-sm-9">{{ elements.street }}</div>
+        <div class="col-xs-12 col-sm-3">{{ elements.houseNo }}</div>
+        <div class="col-xs-12 col-sm-3">{{ elements.postCode }}</div>
+        <div class="col-xs-12 col-sm-9">{{ elements.city }}</div>
+        <div class="col-xs-12">{{ elements.countryCode }}</div>
+        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">{{ elements.phonePrivate }}</div>
+        <div class="col-xs-12 col-sm-6 col-md-12 col-lg-6">{{ elements.email }}</div>
+        {% if elements.birthday|render|striptags|trim %}
+        <div class="col-xs-12 vert-offset-top-2">
+          <p class="font-size-xs">{{ elements.display_birthday }}</p>
+        </div>
+        <div class="col-xs-12 col-sm-4">{{ elements.birthday }}</div>
+        <div class="col-xs-12 col-sm-4">{{ elements.birthmonth }}</div>
+        <div class="col-xs-12 col-sm-4">{{ elements.birthyear }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

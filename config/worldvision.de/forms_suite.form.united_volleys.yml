@@ -1,0 +1,31 @@
+uuid: 1381dcfa-98be-4120-b9ae-8951369c394f
+langcode: de
+status: true
+dependencies: {  }
+id: united_volleys
+label: 'United Volleys'
+recipients:
+  - info@worldvision.de
+reply: "Sehr [wovi_user_data_field:personalized_salutation] [wovi_user_data_field:surname],\r\n\r\nherzlichen Glückwunsch: Sie haben sich rechtzeitig Freikarten für das Spiel der United Volleys am 26. Februar um 16 Uhr in der Fraport Arena gesichert! An der Kasse sind zwei Karten unter dem Stichwort \"World Vision\" für Sie hinterlegt. Bitte holen Sie Ihre Karten ab 15 Uhr dort ab. Informationen zum Veranstaltungsort erhalten Sie zum Beispiel unter http://unitedvolleys.de/de/tickets/einzeltickets/.\r\n\r\nWir wünschen Ihnen viel Spaß beim Spiel und den United Volleys viel Erfolg gegen den die SWD powervolleys DÜREN.\r\n\r\nHerzliche Grüße,\r\n\r\nIhr Team von\r\nWorld Vision Deutschland e.V.\r\nAm Zollstock 2 - 4\r\n61381 Friedrichsdorf\r\nServicetelefon: 0800 - 0 10 20 22*  \r\nE-Mail: info@worldvision.de\r\nhttp://www.worldvision.de\r\n\r\n----------------------------------------------------------------------\r\n\r\nDiese E-Mail wurde automatisch generiert.\r\n\r\n*kostenfreies Servicetelefon"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ' World Vision - Ihre Freikarten für die "United Volleys"'
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>World Vision und Merkurist freuen sich über Ihr Interesse am Spiel der United Volleys!</p>\r\n\r\n<p>Sollten mehr Bestellungen als Freikarten eingehen, entscheidet der Zeitpunkt der Bestellung.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Anmeldung!'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/anmeldung-united-volleys
+headline: 'Freikarten für "United Volleys"'
+description: "Für Patinnen und Paten von World Vision stellt Merkurist exklusive Eintrittskarten für die das Spiel der Volleyball Bundesliga United Volleys gegen die SWD powervolleys DÜREN  in Frankfurt zur Verfügung.<br/><br/>\r\nSeien Sie am 26.02.2017 um 16 Uhr in der Fraport Arena dabei!<br/><br/>\r\nHinweis: Zwei Eintrittskarten pro Teilnehmer."
+disclaimer: ''
+submit_button: 'Freikarten bestellen'

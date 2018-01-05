@@ -1,0 +1,21 @@
+uuid: db5ff288-4e3c-4bf8-a647-871818375de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_broker_amount_text_1
+    - node.type.broker_page
+  module:
+    - text
+id: node.broker_page.field_broker_amount_text_1
+field_name: field_broker_amount_text_1
+entity_type: node
+bundle: broker_page
+label: 'Broker amount text 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

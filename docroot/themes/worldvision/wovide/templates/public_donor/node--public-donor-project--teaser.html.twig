@@ -1,0 +1,52 @@
+<article{{ attributes }}>
+    <div class="container">
+        <div{{ content_attributes }}>
+            <div class="row pdp-teaser-block">
+                <div class="col-xs-12 col-sm-4">
+                    {{ content.field_pdp_header_image }}
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>{{ content.field_pdp_headline }}</h3>
+                            <p>{{ content.field_pdp_description['#object'].field_pdp_second_description.value }}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="pdp-label">{{ 'Project time period' |trans }}</div>
+                            <strong>{{ content.field_pdp_from['0']['#markup'] }} - {{ content.field_pdp_to['0']['#markup'] }}</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="pdp-label">{{ 'Country' |trans }}</div>
+                            <strong>
+                                {% set countries = [] %}
+
+                                {% for country in content.field_pdp_country  %}
+                                    {% if country['#plain_text'] %}
+                                        {% set countries = countries|merge([country['#plain_text']]) %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {{ countries|join(', ') }}
+                            </strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="pdp-label">{{ 'Financial amount' |trans }}</div>
+                            <strong>{{ content.field_pdp_volume['0']['#markup'] }}</strong>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a class="btn btn-beauty" href="{{ content['field_pdp_headline']['#object'].nid.value }}">{{ 'Read more' |trans }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</article>

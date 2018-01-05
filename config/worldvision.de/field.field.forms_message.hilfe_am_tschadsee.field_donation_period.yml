@@ -1,0 +1,27 @@
+uuid: b9b1ea91-f73e-4d4f-b145-c9588116520a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.hilfe_am_tschadsee
+  module:
+    - fs_payment
+id: forms_message.hilfe_am_tschadsee.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: hilfe_am_tschadsee
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: 0
+field_type: wovi_donation_period_field

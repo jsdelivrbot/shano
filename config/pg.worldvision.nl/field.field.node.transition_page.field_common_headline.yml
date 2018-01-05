@@ -1,0 +1,21 @@
+uuid: ac76ce0f-a508-4c70-a424-e9fb72446485
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_common_headline
+    - node.type.transition_page
+_core:
+  default_config_hash: HWdeAyc3lLgkYEyxaxEWHvzYgW-3_kjibwAgiJVNcHY
+id: node.transition_page.field_common_headline
+field_name: field_common_headline
+entity_type: node
+bundle: transition_page
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

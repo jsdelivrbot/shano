@@ -1,0 +1,7 @@
+install-page:
+  version: 1.x-dev
+  css:
+    theme:
+      css/install-page.css: {}
+  dependencies:
+    - seven/install-page

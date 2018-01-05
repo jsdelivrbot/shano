@@ -1,0 +1,14 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraph_teaser
+    - paragraphs.paragraphs_type.paragraph_related_teaser
+id: paragraph.paragraph_related_teaser.paragraph_teaser
+targetEntityType: paragraph
+bundle: paragraph_related_teaser
+mode: paragraph_teaser
+content: {  }
+hidden:
+  created: true
+  uid: true

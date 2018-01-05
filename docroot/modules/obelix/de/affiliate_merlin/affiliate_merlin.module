@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_page_top().
+ */
+function affiliate_merlin_page_top(array &$page_top) {
+  if ($item = \Drupal::service('affiliate_session_manager')->restoreItem()) {
+    if ($item->bundle() == 'merlin') {
+      $page_top['affiliate_merlin'] = [];
+
+      foreach ($item->field_extra_codes as $delta => $extra_code) {
+        $page_top['affiliate_merlin'][] = [
+          '#markup' => $extra_code->value,
+        ];
+      }
+
+      if ($page_top['affiliate_merlin']) {
+        $page_top['affiliate_merlin'] += [
+          '#type' => 'container',
+          '#attributes' => [
+            'class' => 'hidden',
+          ],
+        ];
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+uuid: 29d6874e-7189-424e-9f1e-419601e0bae8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.kenia_genitalverstuemmelung
+  module:
+    - fs_payment
+id: forms_message.kenia_genitalverstuemmelung.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: kenia_genitalverstuemmelung
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Wie oft möchten Sie spenden'
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: interval_period
+field_type: wovi_donation_period_field

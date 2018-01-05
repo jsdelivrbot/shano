@@ -1,0 +1,6 @@
+{
+  "name": "drupal/fs_inxmail_bridge",
+  "type": "drupal-module",
+  "description": "Handles the inxmail integration in the forms suite module.",
+  "require": { }
+}

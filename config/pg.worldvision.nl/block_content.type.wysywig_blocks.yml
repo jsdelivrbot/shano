@@ -1,0 +1,8 @@
+uuid: 173c34ec-8904-44dd-ab40-145609618611
+langcode: nl
+status: true
+dependencies: {  }
+id: wysywig_blocks
+label: 'Wysywig blocks'
+revision: 0
+description: 'Simple blocks with wysywig editor to edit it''s content'

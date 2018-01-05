@@ -1,0 +1,23 @@
+uuid: 44a1c22c-9ea6-44bc-bb37-7743d2bddc37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_form_sql_export
+    - forms_suite.form.gift
+id: forms_message.gift.field_form_sql_export
+field_name: field_form_sql_export
+entity_type: forms_message
+bundle: gift
+label: 'Form sql export'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

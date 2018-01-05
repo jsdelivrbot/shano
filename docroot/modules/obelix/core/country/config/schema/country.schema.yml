@@ -1,0 +1,21 @@
+country.country.*:
+  type: config_entity
+  label: 'Country config'
+  mapping:
+    id:
+      type: string
+      label: 'Country Code'
+    name:
+      type: string
+      label: 'Name'
+    uuid:
+      type: string
+    uid:
+      type: string
+      label: 'UID'
+    langcode:
+      type: string
+      label: 'Langcode'
+    status:
+      type: int
+      label: 'Status'

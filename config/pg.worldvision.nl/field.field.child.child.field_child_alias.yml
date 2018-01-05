@@ -1,0 +1,20 @@
+uuid: 0009fb3b-a476-4d1e-bbfd-78b90901499d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_alias
+  module:
+    - child
+id: child.child.field_child_alias
+field_name: field_child_alias
+entity_type: child
+bundle: child
+label: 'Child alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

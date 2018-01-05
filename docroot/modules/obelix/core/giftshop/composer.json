@@ -1,0 +1,9 @@
+{
+    "name": "world-vision/giftshop",
+    "type": "drupal-module",
+    "description": "Provides a simple giftshop with pdf generation.",
+    "require": {
+        "setasign/fpdi": "1.6.1",
+        "setasign/fpdf": "1.8.1"
+    }
+}

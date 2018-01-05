@@ -1,0 +1,13 @@
+name: WV Simma Connector
+type: module
+description: Provides connection with Simma platform, migrates children etc.
+core: 8.x
+package: Obelix (NL)
+
+dependencies:
+ - migrate
+ - migrate_tools
+ - migrate_plus
+ - sqlsrv
+ - wv_nl_site
+ - pathauto

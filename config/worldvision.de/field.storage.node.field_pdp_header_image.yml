@@ -1,0 +1,32 @@
+uuid: 8138e862-997c-45c4-9bf2-51cc1cccef37
+langcode: de
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: O8Jx_KTtDAnK2lvLNsJ4MIJMu60dB6aSzhN1YvlIJ-s
+id: node.field_pdp_header_image
+field_name: field_pdp_header_image
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

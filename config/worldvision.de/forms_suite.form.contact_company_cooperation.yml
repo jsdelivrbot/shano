@@ -1,0 +1,31 @@
+uuid: 6b303a81-4308-4af4-a82d-70e1cc43a462
+langcode: de
+status: true
+dependencies: {  }
+id: contact_company_cooperation
+label: 'Kontaktformular Unternehmenskooperation'
+recipients:
+  - unternehmen@worldvision.de
+reply: ''
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/unternehmen-kontakt
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: Absenden

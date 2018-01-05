@@ -1,0 +1,8 @@
+settings:
+  allowed_values:
+    3:
+      label: Links
+    4:
+      label: Zentriert
+    5:
+      label: Rechts

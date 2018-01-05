@@ -1,0 +1,46 @@
+.editorial-campaign-teaser {
+  background-size: cover;
+  background-position: bottom;
+  min-height: 420px;
+  position: relative;
+}
+
+.editorial-campaign-teaser .editorial-content-txt-block {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 15px;
+  margin-left: 50%;
+  top: 0;
+  z-index: 1;
+}
+
+.editorial-campaign-teaser img.desktop-image {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .editorial-campaign-teaser {
+    background-image: none !important;
+    min-height: 0;
+  }
+
+  .editorial-campaign-teaser .editorial-content-txt-block {
+    bottom: 0;
+    width: 50%;
+  }
+
+  .editorial-campaign-teaser .editorial-content-txt-block.align-right {
+    margin-left: 50%;
+  }
+
+
+  .editorial-campaign-teaser img.mobile-image {
+    display: none;
+  }
+
+  .editorial-campaign-teaser img.desktop-image {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+}

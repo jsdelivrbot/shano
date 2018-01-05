@@ -1,0 +1,621 @@
+// =============================
+// Forms
+// =============================
+
+.form-minimal-border {
+
+  // Form sections
+  .form-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    &.field--type-hidden{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    // Headline
+    .form-hl {
+      .form-item.form-group {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+    // Subline
+    .form-sl {
+      .form-item.form-group {
+        margin-top: 0;
+      }
+    }
+
+    &.form-actions {
+      padding-bottom: 15px;
+    }
+
+    // Exceptions: Amount-Radios
+    &#edit-field-donation-amount-amountradio--wrapper,
+    &#edit-field-payment-method-paymentmethod--wrapper {
+      padding-top: 0;
+    }
+    &#edit-field-donation-amount-amountradio--wrapper {
+      padding-bottom: 0;
+    }
+
+    // Submit
+    &.form-actions {
+      padding-top: 0;
+    }
+
+    // TODO Has to be removed after testing
+    &.field--widget-language-select {
+      padding: 0;
+    }
+    .form-item.form-group {
+      // Form-group
+      margin-top: 12.5px;
+      margin-bottom: 5px;
+      padding-top: 7.5px;
+      padding-bottom: 7.5px;
+
+      // Generally form element stylings
+      .form-control {
+        color: $color-standard-txt;
+        font-size: $font-size-smallest;
+
+        // Bootstrap reset
+        border: 0;
+        padding-left: 0;
+        @include box-shadow(none);
+        border-radius: 0;
+        &[disabled], &[readonly] {
+          background: initial;
+        }
+      }
+
+      // Input groups
+      .input-group {
+        width: 100%;
+        .input-group-addon {
+          position: absolute;
+          right: 0;
+          width: auto;
+          top: 2px;
+          padding: 6px 8px;
+          z-index: 2;
+
+          background-color: transparent;
+          border-radius: 0;
+          border: 0;
+          .glyphicon {
+            opacity: 1;
+            color: $color-highlight;
+            &.glyphicon-refresh,
+            &.glyphicon-exclamation-sign,
+            &.glyphicon-ok {
+              display: none;
+            }
+            &.glyphicon-spin {
+              display: block;
+              & + .glyphicon {
+                display: none !important;
+                & + .glyphicon {
+                  display: none !important;
+                }
+              }
+            }
+          }
+        }
+        // Valid field
+        &.valid {
+          .input-group-addon {
+            .glyphicon {
+              &.glyphicon-ok {
+                display: block;
+              }
+            }
+          }
+        }
+        &.invalid {
+          .input-group-addon {
+            .glyphicon {
+              &.glyphicon-exclamation-sign {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      // Border
+      input.form-control,
+      select.form-control {
+        border-bottom: 1px solid $color-standard-border;
+      }
+
+      // Label
+      label {
+        font-size: $font-size-smallest;
+        margin-bottom: 0;
+        font-weight: normal;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      // Input field
+      input.form-control {
+        color: $color-standard-txt;
+        &:focus {
+          outline: 0;
+          border-color: $color-highlight;
+          @include box-shadow(none);
+        }
+
+        // Browser specific stylings
+        // Hide "clear-field" IE
+        &::-ms-clear {
+          display: none;
+        }
+      }
+
+      // Input type-fields with label animation
+      &.form-type-date,
+      &.form-type-datelist,
+      &.form-type-datetime,
+      &.form-type-email,
+      &.form-type-number,
+      &.form-type-password,
+      &.form-type-tel,
+      &.form-type-textfield,
+      &.form-type-url,
+      &.form-type-textarea {
+        position: relative;
+        label {
+          position: absolute;
+          z-index: 3;
+          top: 1.3rem;
+          cursor: text;
+          // IE without animation (buggy)
+          -webkit-transition: 0.2s ease-out;
+          -moz-transition: 0.2s ease-out;
+          display: block;
+          transform: translate(0px, 0px);
+          &.active {
+            font-size: 0.8em;
+            @include transform(translate(0, -20px));
+          }
+          &.highlighted {
+            color: $color-highlight;
+          }
+        }
+      }
+
+      //  Select-Field
+      .select-wrapper {
+        // Arrow
+        &:after {
+          color: $color-standard-txt;
+        }
+        select.form-control {
+          padding-right: 18px;
+          &:first-letter {
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      // Radio Buttons
+      &.radio {
+        // TODO Better: Move radio buttons out of panels
+        margin-top: 15px;
+
+        label {
+          padding-left: 40px;
+          // Styled radio button
+          &:after {
+            content: "";
+            color: $color-standard-bg;
+            width: 0;
+            height: 0;
+            top: 19px;
+            left: 15px;
+            @include transition(0.4s all);
+          }
+          &:before {
+            content: "";
+            display: inline-block;
+            color: $color-standard-bg;
+
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+
+            position: absolute;
+            left: 0;
+            top: 4px;
+            background-color: transparent;
+            border: 1px solid $color-standard-border;
+
+            @include transition(0.4s all);
+          }
+          &.checked {
+            &:before {
+              border-color: $color-highlight;
+            }
+            &:after {
+              position: absolute;
+              color: #ff7700;
+              width: 20px;
+              height: 20px;
+              background: $color-highlight;
+              border-radius: 50px;
+              top: 9px;
+              left: 5px;
+            }
+          }
+          // Hide regular radio button
+          input[type="radio"] {
+            display: none;
+          }
+        }
+      }
+
+      // Checkboxes
+      &.checkbox {
+        label {
+          font-size: $font-size-smallest;
+          position: relative;
+          padding-left: 35px;
+
+          &:before {
+            content: "";
+            display: inline-block;
+            color: $color-standard-bg;
+
+            width: 20px;
+            height: 20px;
+
+            position: absolute;
+            left: 0;
+            top: 3px;
+            background-color: transparent;
+            border: 1px solid $color-standard-border;
+
+            @include transition(0.4s all);
+          }
+          &:after {
+            font-family: 'Glyphicons Halflings';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            content: "\e013"; // glyphicon-ok
+            font-size: 16px;
+            left: 2px;
+            color: $color-highlight;
+            top: 5px;
+            opacity: 0;
+            overflow: hidden;
+            width: 0;
+
+            @include transition(0.3s all);
+          }
+
+          &.checked {
+            &:after {
+              opacity: 1;
+              width: 16px;
+            }
+          }
+
+          // Hide regular checkbox
+          input[type="checkbox"] {
+            display: none;
+          }
+        }
+      }
+
+      //  Textarea
+      textarea.form-control {
+        min-height: 0;
+        height: auto;
+        border-bottom: 1px solid $color-standard-border;
+        &:focus {
+          border-color: 0;
+          @include box-shadow(none);
+        }
+      }
+      // Turn Off Number Input Spinners
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      // Error message
+      .error-message {
+        position: absolute;
+        bottom: 150%;
+        width: 100%;
+        z-index: 10;
+
+        .alert {
+          padding: 20px;
+          margin-bottom: 0;
+          border-radius: 0;
+          border: 0;
+          text-align: center;
+          background-color: $color-highlight;
+          color: $color-standard-bg;
+          // Triangle
+          &:after {
+            content: "";
+            bottom: -10px;
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $color-highlight;
+            left: 50%;
+            margin-left: -10px;
+          }
+          //  Close button
+          .close {
+            opacity: 1;
+            span {
+              color: $color-standard-bg
+            }
+          }
+          &.alert-dismissable,
+          &.alert-dismissible {
+            padding-right: 35px;
+          }
+        }
+      }
+
+      // Validating
+      //.validated + {
+      //
+      //}
+
+      //  Required
+      .form-required:after {
+        content: "*";
+        margin-left: 3px;
+        color: $color-highlight;
+        background: none;
+      }
+
+    //  Has error
+      &.has-error{
+        .control-label{
+          color: $color-error;
+        }
+        input.form-control{
+          border-color: $color-error;
+        }
+      }
+    }
+
+    // Less space top
+    .form-less-space-top {
+      .form-item.form-group {
+        padding-top: 0;
+        margin-top: 0;
+      }
+    }
+    // Paragraphs
+    p {
+      margin-bottom: 10px;
+    }
+
+    //  @TODO Dont render radio buttons in panels
+
+    border: 0;
+    @include box-shadow(none);
+
+    // Hide title
+    legend {
+      border: 0;
+      display: none;
+    }
+    .panel-body {
+      padding: 0;
+    }
+    // Hide ajax-throbber in radio buttons
+    .field-suffix {
+      .input-group-addon {
+        display: none;
+      }
+    }
+    #edit-field-donation-amount-amountradio {
+      .form-item-field-donation-amount-amountradio {
+        width: auto;
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 15px;
+        label {
+          font-family: $font-bold;
+        }
+        &:nth-child(4) {
+          width: auto;
+          padding-left: 0;
+          padding-right: 0;
+          label {
+            font-family: $font-book;
+          }
+          &:after {
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+  // Forms info bar
+  // =============================
+
+  // Admin toolbar hidden
+  .form-info-bar.navbar-fixed-top {
+    top: 120px;
+
+    z-index: 499;
+    border: 0;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    margin-bottom: 0;
+    @include transition(all 0.5s);
+    // Icons
+    i {
+      font-size: 30px;
+    }
+    ul {
+      margin-bottom: 0;
+      li {
+        font-size: $font-size-smallest;
+        vertical-align: middle;
+      }
+    }
+  }
+  // Payment Method Widget
+  // =============================
+  #edit-field-payment-method-wrapper {
+    .wrapper-fields {
+      min-height: 133px;
+    }
+    .bank-fields,
+    .paypal-fields,
+    .creditcard-fields {
+      display: none;
+    }
+  }
+
+  // Child block
+  // =============================
+  #edit-field-child-wrapper {
+    #edit-field-child-child-image {
+      padding: 0;
+      margin: 0;
+    }
+    .child-info-block {
+      position: relative;
+      background: none;
+      margin-top: 0;
+      padding-bottom: 30px;
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+    }
+    .child-info-block-data {
+      padding-top: 10px;
+    }
+  }
+  // Yearly Donation block
+  // =============================
+
+  #edit-field-yearly-donation-month13-check--wrapper {
+    padding-top: 0;
+  }
+  #edit-field-yearly-donation-wrapper {
+    .form-item-field-yearly-donation-month13 {
+      margin-top: 62px;
+    }
+
+    #yearly-donation-info-btn {
+      margin-top: 67px;
+    }
+  }
+
+
+  // Highlighted label
+  .label-highlighted{
+    label{
+      color: $color-highlight;
+    }
+  }
+}
+
+
+
+
+
+// Success page
+.form-success {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+// Forms info bar
+// =============================
+
+// Admin toolbar visible
+.toolbar-fixed {
+  .form-minimal-border .form-info-bar.navbar-fixed-top {
+    top: 159px;
+  }
+  // Admin toolbar visible - main navi shrinked
+  &.nav-shrinked {
+    .form-minimal-border .form-info-bar.navbar-fixed-top {
+      top: 120px;
+    }
+  }
+  // Admin toolbar visible - searchbar open
+  &.searchbar-opened {
+    .form-minimal-border .form-info-bar.navbar-fixed-top {
+      top: 244px;
+    }
+    // Admin toolbar visible - searchbar open, main navi shrinked
+    &.nav-shrinked {
+      .form-minimal-border .form-info-bar.navbar-fixed-top {
+        top: 204px;
+      }
+    }
+  }
+}
+
+// Admin toolbar hidden - main navi shrinked
+.nav-shrinked {
+  .form-minimal-border .form-info-bar.navbar-fixed-top {
+    top: 81px;
+  }
+  // Admin toolbar hidden - searchbar open, main navi shrinked
+  &.searchbar-opened {
+    .form-minimal-border .form-info-bar.navbar-fixed-top {
+      top: 165px;
+    }
+  }
+}
+
+// Admin toolbar hidden - searchbar open, main navi shrinked
+.searchbar-opened {
+  .form-minimal-border .form-info-bar.navbar-fixed-top {
+    top: 205px;
+  }
+}
+
+// =============================
+// Round Fields
+// =============================
+.form-rounded {
+  .form-group {
+    input.form-control {
+      border-radius: 50px;
+      @include placeholder($color-standard-txt, $font-book, 14px);
+      &:focus {
+        outline: 0;
+        //border: 0;
+        @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 13px rgba(117, 121, 125, 0.3));
+      }
+    }
+  }
+}
+
+

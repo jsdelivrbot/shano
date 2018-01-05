@@ -1,0 +1,9 @@
+gift_type_all_gifts_url: /node/625
+_core:
+  default_config_hash: kK-9KWJgWi0RCh4xKyV54QkCmxipbf2xh8aD91VCW-I
+langcode: nl
+newsletter_form_url: /forms/newsletter
+sponsor_form_url: /forms/sponsor
+suggestion_email_form_url: /forms/child_sponsorship_suggestion
+suggestion_post_form_url: /formulare/patenschafts-vorschlag-post
+sponsor_child_form_url: /forms/sponsor_child

@@ -1,0 +1,40 @@
+// =============================
+// Help/Impact
+// =============================
+@media screen and (min-width: $bp-sm) {
+  .child-sponsorship-info-help-impact {
+    .slide-content {
+      padding-left: 45px;
+      padding-right: 45px;
+      left: 0;
+      right: 0;
+    }
+    ul.sponsorship-statistics {
+      li {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: auto;
+      }
+    }
+    .percent-bar {
+      &.percent-bar-25 {
+        height: 74px;
+      }
+      &.percent-bar-95 {
+        height: 160px;
+      }
+      &.percent-bar-50 {
+        height: 97px;
+      }
+      &.percent-bar-19 {
+        height: 43px;
+      }
+      &.percent-bar-59 {
+        height: 74px;
+      }
+      &.percent-bar-100 {
+        height: 160px;
+      }
+    }
+  }
+}

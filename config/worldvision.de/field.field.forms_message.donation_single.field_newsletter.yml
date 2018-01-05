@@ -1,0 +1,24 @@
+uuid: bc0ef3b3-3975-470b-b4bb-2156f5c3e14f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.donation_single
+  module:
+    - forms_suite
+_core:
+  default_config_hash: o3Rnzdk5NuDd-hSAtCvPrcpIpg9gi281pSkZ7eM_gN4
+id: forms_message.donation_single.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: donation_single
+label: newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

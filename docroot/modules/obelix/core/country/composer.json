@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/country",
+  "type": "drupal-module",
+  "description": "Informations about the World Vision Countrys",
+  "require": { }
+}

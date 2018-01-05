@@ -1,0 +1,25 @@
+<div{{ attributes.addClass('editorial--content', 'img-content') }}>
+  <div class="editorial-child-sponsorship-child-select inner-content">
+    <div class="container container-inner">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-4 child-img">
+          {{ child_image }}
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-8 col-no-padding-left-sm child-infos">
+          <h2 class="font-size-l text-center">Hello; I am <span
+              class="txt-highlighted font-hand-script">{{ child_info.name }}</span> from
+            <span class="txt-highlighted font-hand-script">{{ child_info.country }}</span> and I am
+            looking for a sponsor!</h2>
+          <ul class="list-unstyled text-uppercase text-center">
+            <li>My age: <span class="font-bold">{{ child_info.age }} years ({{ child_info.birthday }})</span></li>
+            <li>I live with: <span class="font-bold">{{ child_info.lives_with|replace({"mit ":"", "with ":""}) }}</span></li>
+            <li>I like: <span class="font-bold">{{ child_info.likes }}</span></li>
+          </ul>
+          <div class="text-center"><a href="/formulare/kinderpatenschaft-uebernehmen" class="btn btn-beauty btn-fullsize-xs">Become a sponsor
+              now</a></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

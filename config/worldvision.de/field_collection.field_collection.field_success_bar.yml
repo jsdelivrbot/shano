@@ -1,0 +1,8 @@
+uuid: 914e5466-e2d2-4288-b50e-27c1059c4249
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Va6JdCvCP5KYTmXDzST9dBX2CRGAOSi52WLFke-WRaI
+id: field_success_bar
+label: field_success_bar

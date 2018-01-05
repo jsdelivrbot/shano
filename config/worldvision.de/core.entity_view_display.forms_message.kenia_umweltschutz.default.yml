@@ -1,0 +1,64 @@
+uuid: 05ab42cf-3b49-4e23-b51c-a5ff2c5db2c4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kenia_umweltschutz.field_donation_amount
+    - field.field.forms_message.kenia_umweltschutz.field_donation_period
+    - field.field.forms_message.kenia_umweltschutz.field_newsletter
+    - field.field.forms_message.kenia_umweltschutz.field_payment_method
+    - field.field.forms_message.kenia_umweltschutz.field_user_data
+    - forms_suite.form.kenia_umweltschutz
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.kenia_umweltschutz.default
+targetEntityType: forms_message
+bundle: kenia_umweltschutz
+mode: default
+content:
+  field_donation_amount:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_amount_single:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_period:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

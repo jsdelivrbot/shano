@@ -1,0 +1,5 @@
+entity.country.add_form:
+  route_name: entity.country.add_form
+  title: 'Add Country'
+  appears_on:
+    - entity.country.collection

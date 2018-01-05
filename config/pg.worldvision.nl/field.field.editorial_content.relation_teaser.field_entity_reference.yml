@@ -1,0 +1,30 @@
+uuid: 85304d77-d8bd-4a92-a7c7-9698d035ab02
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.relation_teaser
+    - field.storage.editorial_content.field_entity_reference
+    - node.type.editorial_page
+    - node.type.gift_type
+id: editorial_content.relation_teaser.field_entity_reference
+field_name: field_entity_reference
+entity_type: editorial_content
+bundle: relation_teaser
+label: Source
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      editorial_page: editorial_page
+      gift_type: gift_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: editorial_page
+field_type: entity_reference

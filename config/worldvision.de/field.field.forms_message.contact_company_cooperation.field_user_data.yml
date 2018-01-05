@@ -1,0 +1,26 @@
+uuid: 415ea2bb-8843-4277-b5be-b4e350f1b5df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.contact_company_cooperation
+  module:
+    - forms_suite
+_core:
+  default_config_hash: L0sJUHnxQw0Px0GnL90nAPxLYxqzhpbN3uhXiqGoRXY
+id: forms_message.contact_company_cooperation.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: contact_company_cooperation
+label: 'user data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'IHRE NACHRICHT AN DAS TEAM FÜR UNTERNEHMENSKOOPERATIONEN'
+    subline: 'Hier können Sie uns eine Nachricht schreiben.'
+field_type: wovi_user_data_field

@@ -1,0 +1,21 @@
+uuid: 0fc6b605-f04e-4d02-a8d4-33b1336d69b4
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - field_collection
+_core:
+  default_config_hash: '-9bhRon80MyAto8t2N5KZYs4Bz6OL5RSR1R_cWCUzvQ'
+id: editorial_content.field_hero_slide
+field_name: field_hero_slide
+entity_type: editorial_content
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

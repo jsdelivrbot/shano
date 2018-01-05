@@ -1,0 +1,28 @@
+add affiliate entities:
+  title: 'Create new Affiliate entities.'
+
+administer affiliate entities:
+  title: 'Administer Affiliate entities'
+  description: 'Allow to access the administration form to configure Affiliate entities.'
+  restrict access: true
+
+delete affiliate entities:
+  title: 'Delete Affiliate entities.'
+
+edit affiliate entities:
+  title: 'Edit Affiliate entities.'
+
+view affiliate entities:
+  title: 'View Affiliate entities.'
+
+view published affiliate entities:
+  title: 'View published Affiliate entities.'
+
+view unpublished affiliate entities:
+  title: 'View unpublished Affiliate entities.'
+
+store published affiliate entities:
+  title: 'Store published Affiliate entities in session.'
+
+store unpublished affiliate entities:
+  title: 'Store unpublished Affiliate entities in session.'

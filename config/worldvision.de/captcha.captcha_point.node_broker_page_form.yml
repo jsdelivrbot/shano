@@ -1,0 +1,7 @@
+uuid: 469af8ef-6505-4d2f-9f88-b05a8d81b079
+langcode: de
+status: false
+dependencies: {  }
+formId: node_broker_page_form
+captchaType: default
+label: null

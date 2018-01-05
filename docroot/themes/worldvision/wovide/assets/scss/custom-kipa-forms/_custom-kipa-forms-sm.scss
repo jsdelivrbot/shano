@@ -1,0 +1,21 @@
+@media screen and (min-width: $bp-sm) {
+  .main-content-wrapper {
+    padding-top: 100px !important;
+  }
+
+  // =============================
+  // Form
+  // =============================
+  .form-minimal-border {
+
+    // No Contract block above submit
+    .no-contract-block {
+      i{
+        font-size: 32px;
+      }
+     p{
+       font-size: 18px;
+     }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 87c50dc5-b2d1-448e-927e-974e950aa600
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.public_donor_project
+_core:
+  default_config_hash: a3CJgFXW0RUD24V-8w6EBje8MpoJ-qndWZmglU5drgI
+id: node.public_donor_project.title
+field_name: title
+entity_type: node
+bundle: public_donor_project
+label: Identifiyer
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

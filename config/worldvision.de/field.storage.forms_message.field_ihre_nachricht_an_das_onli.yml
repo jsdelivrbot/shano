@@ -1,0 +1,21 @@
+uuid: f16ea5d6-2bba-476b-b68c-ca73425b0d91
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+id: forms_message.field_ihre_nachricht_an_das_onli
+field_name: field_ihre_nachricht_an_das_onli
+entity_type: forms_message
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

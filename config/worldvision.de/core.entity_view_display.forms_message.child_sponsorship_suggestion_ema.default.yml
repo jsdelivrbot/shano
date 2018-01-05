@@ -1,0 +1,42 @@
+uuid: 1cabfc0c-068e-4857-8fbf-b0900c0a9db7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.child_sponsorship_suggestion_ema.field_child_select
+    - field.field.forms_message.child_sponsorship_suggestion_ema.field_suggestion
+    - field.field.forms_message.child_sponsorship_suggestion_ema.field_user
+    - forms_suite.form.child_sponsorship_suggestion_ema
+  module:
+    - entity_test
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.child_sponsorship_suggestion_ema.default
+targetEntityType: forms_message
+bundle: child_sponsorship_suggestion_ema
+mode: default
+content:
+  field_child_select:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_suggestion:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden: {  }

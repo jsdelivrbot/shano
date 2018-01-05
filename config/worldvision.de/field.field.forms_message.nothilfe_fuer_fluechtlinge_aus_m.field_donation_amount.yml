@@ -1,0 +1,27 @@
+uuid: 70606259-1c57-4639-ba0c-544d043bb93e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.nothilfe_fuer_fluechtlinge_aus_m
+  module:
+    - fs_payment
+id: forms_message.nothilfe_fuer_fluechtlinge_aus_m.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: nothilfe_fuer_fluechtlinge_aus_m
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '70'
+field_type: wovi_donation_amount_field

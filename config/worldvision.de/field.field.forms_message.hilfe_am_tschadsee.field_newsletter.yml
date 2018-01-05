@@ -1,0 +1,22 @@
+uuid: d20dda1f-ec23-47d4-bb16-f9c08b7d9be2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.hilfe_am_tschadsee
+  module:
+    - forms_suite
+id: forms_message.hilfe_am_tschadsee.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: hilfe_am_tschadsee
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

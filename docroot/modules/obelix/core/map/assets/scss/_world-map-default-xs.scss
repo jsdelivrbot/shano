@@ -1,0 +1,61 @@
+.world-map {
+  position: relative;
+  padding: 0;
+
+  .border-top {
+    border-top: 1px solid $color-highlight-bg;
+  }
+
+  .border-left {
+    border-left: 1px solid $color-highlight-bg;
+  }
+
+  .hover-info-block {
+    pointer-events: none;
+    //height: 94px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.9);
+
+    .hover-infos {
+      display: none;
+      font-size: 10px;
+      //padding-top: 10px;
+
+      .countryInfo {
+        text-align: center;
+        min-height: 42px;
+
+        &.wrapped-baby-block {
+          padding-top: 5px;
+        }
+
+        &.backpack-block {
+          padding-top: 5px;
+        }
+
+        &.first-aid-kit-block {
+          padding-top: 11px;
+        }
+
+        i {
+          font-size: 34px;
+
+          &.icon-elder {
+            font-size: 40px;
+          }
+
+          &.icon-first-aid-kit {
+            font-size: 28px;
+          }
+        }
+
+        h3 {
+          display: inline;
+        }
+      }
+    }
+  }
+}

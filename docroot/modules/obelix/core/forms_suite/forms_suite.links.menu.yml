@@ -1,0 +1,5 @@
+entity.form.collection:
+  title: 'Forms'
+  parent: system.admin_structure
+  description: 'Create and manage forms.'
+  route_name: entity.form.collection

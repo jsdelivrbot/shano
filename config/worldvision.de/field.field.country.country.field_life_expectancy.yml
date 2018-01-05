@@ -1,0 +1,24 @@
+uuid: 82938859-526a-40de-9f91-eeee067f4346
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_life_expectancy
+  module:
+    - country
+id: country.country.field_life_expectancy
+field_name: field_life_expectancy
+entity_type: country
+bundle: country
+label: 'Life expectancy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

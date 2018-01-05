@@ -1,0 +1,22 @@
+uuid: eabf71f5-6897-4245-ba5d-f75cd11dda74
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_noschoolreasondesc
+  module:
+    - child
+_core:
+  default_config_hash: jtNZ18PbeHqcAVe_xNwt09bwlZoppYFt5JhQmkP8Zm4
+id: child.child.field_child_noschoolreasondesc
+field_name: field_child_noschoolreasondesc
+entity_type: child
+bundle: child
+label: 'no school reason description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

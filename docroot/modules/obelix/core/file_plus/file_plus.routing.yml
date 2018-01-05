@@ -1,0 +1,8 @@
+file_plus.file_create_form:
+  path: '/admin/content/files/add'
+  defaults:
+    _form: '\Drupal\file_plus\Form\FileCreateForm'
+    _title: 'Add Files'
+  requirements:
+    _permission: 'add files'
+

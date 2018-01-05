@@ -1,0 +1,22 @@
+uuid: d179d414-d38c-45cb-a639-3a2c49606f72
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.6k_run
+  module:
+    - forms_suite
+id: forms_message.6k_run.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: 6k_run
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_payment_method_field

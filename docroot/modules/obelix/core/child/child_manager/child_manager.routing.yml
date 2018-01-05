@@ -1,0 +1,56 @@
+child_manager.child_manager_updateChildDB:
+  path: '/child_manager/updateChildDB'
+  defaults:
+    _controller: '\Drupal\child_manager\Controller\ChildManager::updateChildDB'
+    _title: 'Update Child Database'
+  requirements:
+    _permission: 'access content'
+
+child_manager.child_manager_clearChildDB:
+  path: '/child_manager/clearChildDB'
+  defaults:
+    _controller: '\Drupal\child_manager\Controller\ChildManager::clearChildDB'
+    _title: 'Clear Child Database'
+  requirements:
+    _permission: 'access content'
+
+child_manager.child_manager_unblockChildren:
+  path: '/child_manager/unblockChildren'
+  defaults:
+    _controller: '\Drupal\child_manager\Controller\ChildManager::unblockChildren'
+    _title: 'Unblock Children'
+  requirements:
+    _permission: 'access content'
+
+entity.child.update:
+  path: '/child_manager/updateChildDB'
+  defaults:
+    _title: 'Update Children'
+  requirements:
+    _permission: 'access content'
+
+entity.child.unblock:
+  path: '/child_manager/unblockChildren'
+  defaults:
+    _title: 'Unblock Children'
+  requirements:
+    _permission: 'access content'
+
+entity.alert_controller.countryAlert:
+  path: '/child_manager/countryAlert'
+  defaults:
+    _controller: '\Drupal\child_manager\Controller\AlertController::countryAlert'
+    _title: 'Children per country'
+  requirements:
+    _permission: 'access content'
+
+
+entity.alert_controller.birthdayAlert:
+  path: '/child_manager/birthdayAlert/{childamount}'
+  defaults:
+    _controller: '\Drupal\child_manager\Controller\AlertController::birthdayAlert'
+    _title: 'Children per birthday '
+  requirements:
+    _permission: 'access content'
+
+

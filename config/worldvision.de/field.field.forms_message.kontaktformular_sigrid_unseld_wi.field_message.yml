@@ -1,0 +1,22 @@
+uuid: 593a1f22-2db9-43dc-80f6-a08c937db448
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontaktformular_sigrid_unseld_wi
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_sigrid_unseld_wi.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontaktformular_sigrid_unseld_wi
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

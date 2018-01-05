@@ -1,0 +1,24 @@
+uuid: 710562e7-e4a0-47b0-91ae-18dd09bc38ee
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_yearly_donation
+    - forms_suite.form.child_sponsorship_direct_en
+  module:
+    - fs_payment
+id: forms_message.child_sponsorship_direct_en.field_yearly_donation
+field_name: field_yearly_donation
+entity_type: forms_message
+bundle: child_sponsorship_direct_en
+label: field_yearly_donation
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'ADDITIONAL YEARLY DONATION'
+    subline: 'Yes, I would like to make an additional yearly donation.'
+field_type: wovi_yearly_donation_field

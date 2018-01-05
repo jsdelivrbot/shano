@@ -1,0 +1,26 @@
+uuid: 76356a48-5e0d-42ad-bd17-ee3b154efb52
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.social_share
+    - field.field.editorial_content.social_share.field_share_text
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: fdIG60Z6B_8UaIdMQiEaEYG_lENtXSnb4OUD4SDIEQw
+id: editorial_content.social_share.default
+targetEntityType: editorial_content
+bundle: social_share
+mode: default
+content:
+  social_share:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_share_text: true
+  name: true
+  user_id: true

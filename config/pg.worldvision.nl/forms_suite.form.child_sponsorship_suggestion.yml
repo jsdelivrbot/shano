@@ -1,0 +1,31 @@
+uuid: 51f3c613-a14d-4300-8e1b-c94fc76d0376
+langcode: nl
+status: true
+dependencies: {  }
+id: child_sponsorship_suggestion
+label: 'Sponsorship suggestion'
+recipients:
+  - info@worldvision.nl
+reply: "Dear [wovi_user_data_field:salutation] [wovi_user_data_field:surname],\r\n\r\nWe have received your message and are very pleased that you\r\ninterested in taking over a child sponsorship.\r\n\r\nIn the next few days we will send you the documents of one\r\nChild with a picture and personal\r\nStory of the child. You will also receive the brochure by post\r\n\"A child sponsorship at World Vision\" that details you about\r\nYour sponsorship and our project work informed.\r\n\r\n----------------------------------------------------------------------\r\n\r\nYou have provided the following personal information:\r\n\r\nCompany: [wovi_user_data_field:companyName]\r\nSalutation: [wovi_user_data_field:salutation]\r\nFirst name: [wovi_user_data_field:firstName]\r\nLast name: [wovi_user_data_field:surname]\r\nStreet: [wovi_user_data_field:street]\r\nZIP/City: [wovi_user_data_field:postCode] [wovi_user_data_field:city]\r\nTelephone: [wovi_user_data_field:phonePrivate]\r\n\r\n----------------------------------------------------------------------\r\n\r\nWould you like to know more about our work?\r\nVisit our Facebook page at:\r\nhttp://www.facebook.com/world.vision.deutschland\r\n\r\n----------------------------------------------------------------------\r\n\r\nFor your concerns and wishes is the team of our sponsor and\r\nDonor support by e-mail and by phone at your disposal.\r\n\r\nThank you very much for your interest! We look forward to seeing you in the\r\nWelcome circles of godparents.\r\n\r\n----------------------------------------------------------------------\r\nBest regards\r\n\r\nE-Mail: info@worldvision.nl\r\nhttp://www.worldvision.nl\r\n\r\n----------------------------------------------------------------------\r\n\r\nThis email was generated automatically.\r\n\r\n* Free service telephone"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: 'Your World Vision sponsorship'
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Shortly you will receive from us a non-binding sponsorship proposal with the photo and the personal story of a child as well as a detailed information brochure about the sponsorship.</p>\r\n"
+  format: html
+thank_you_headline: 'THANK YOU FOR YOUR INTEREST IN A WORLD VISION CHILD PAPERY'
+designation_id: ''
+motivation_code: '401266'
+additional_tracking: ''
+alias: /forms/child_sponsorship_suggestion
+headline: 'PATENT PROPOSAL BY E-MAIL'
+description: 'Please send me a non-binding proposal'
+disclaimer: ''
+submit_button: 'Request a proposal'

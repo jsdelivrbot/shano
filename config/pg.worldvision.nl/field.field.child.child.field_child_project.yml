@@ -1,0 +1,29 @@
+uuid: 39f9d57c-023e-4b66-a05b-a20c7f79fc9e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_project
+  module:
+    - child
+_core:
+  default_config_hash: 4wbCUAs-2pDb_tm3bqcNDNVkjn5khwJ7CAC58DXnTkI
+id: child.child.field_child_project
+field_name: field_child_project
+entity_type: child
+bundle: child
+label: project
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:project'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: project_id
+      direction: ASC
+    auto_create: true
+field_type: entity_reference

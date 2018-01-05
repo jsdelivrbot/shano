@@ -1,0 +1,266 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 4, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* line 14, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  /* line 21, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 25, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .container-inner {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 31, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 35, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .container-inner {
+    width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 41, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 45, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+  .container-inner {
+    width: 1140px;
+  }
+}
+/* line 58, ../../../../../themes/worldvision/beaufix/assets/scss/_bootstrap-addon.scss */
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 1, ../scss/_world-map-xs.scss */
+.world-map {
+  position: relative;
+  padding: 0;
+}
+/* line 5, ../scss/_world-map-xs.scss */
+.world-map .border-top {
+  border-top: 1px solid #f0f0f0;
+}
+/* line 9, ../scss/_world-map-xs.scss */
+.world-map .border-left {
+  border-left: 1px solid #f0f0f0;
+}
+/* line 13, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  bottom: 69px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 24, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos {
+  display: none;
+  font-size: 10px;
+  padding-top: 10px;
+}
+/* line 29, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo {
+  text-align: center;
+  min-height: 42px;
+}
+/* line 33, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo.wrapped-baby-block {
+  padding-top: 5px;
+}
+/* line 37, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo.backpack-block {
+  padding-top: 5px;
+}
+/* line 41, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo.first-aid-kit-block {
+  padding-top: 11px;
+}
+/* line 45, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo i {
+  font-size: 34px;
+}
+/* line 49, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo i.icon-elder {
+  font-size: 40px;
+}
+/* line 53, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo i.icon-first-aid-kit {
+  font-size: 28px;
+}
+/* line 58, ../scss/_world-map-xs.scss */
+.world-map .hover-info-block .hover-infos .countryInfo h3 {
+  display: inline;
+}
+/* line 65, ../scss/_world-map-xs.scss */
+.world-map .mobile-overlay-button {
+  width: 100%;
+  z-index: 100;
+  display: none;
+  padding: 19px 11px;
+  background-color: #ff7700;
+  color: #FFFFFF;
+  font-size: 22px;
+  position: absolute;
+}
+/* line 75, ../scss/_world-map-xs.scss */
+.world-map .mobile-overlay-button .icon-arrow-down {
+  float: right;
+  transition: 1.5s;
+}
+/* line 79, ../scss/_world-map-xs.scss */
+.world-map .mobile-overlay-button .icon-arrow-down.rotateDown {
+  -webkit-transform: rotateX(0deg);
+}
+/* line 82, ../scss/_world-map-xs.scss */
+.world-map .mobile-overlay-button .icon-arrow-down.rotateUp {
+  -webkit-transform: rotateX(180deg);
+}
+/* line 88, ../scss/_world-map-xs.scss */
+.world-map .country-overlay {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  background-color: white;
+  -moz-box-shadow: -3px -18px 60px 2px #ccc;
+  -webkit-box-shadow: -3px -18px 60px 2px #ccc;
+  box-shadow: -3px -18px 60px 2px #ccc;
+}
+/* line 98, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .float-left {
+  float: left;
+}
+/* line 102, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .float-right {
+  float: right;
+}
+/* line 106, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .dark-text {
+  color: #404040;
+}
+/* line 110, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .colored-text {
+  color: #83bbbc;
+}
+/* line 114, ../scss/_world-map-xs.scss */
+.world-map .country-overlay img {
+  width: 100%;
+}
+/* line 120, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .overlay-wrapper .overlay-block {
+  position: relative;
+  padding: 20px;
+}
+/* line 124, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .overlay-wrapper .overlay-block .partial-border-left {
+  border-left: 1px solid #f0f0f0;
+  position: absolute;
+  top: 35px;
+  left: -5px;
+  height: 70px;
+}
+/* line 133, ../scss/_world-map-xs.scss */
+.world-map .country-overlay .overlay-wrapper .overlay-two-column-block {
+  min-height: 130px;
+  min-width: 305px;
+}
+/* line 141, ../scss/_world-map-xs.scss */
+.world-map .active-country, .world-map .open-country {
+  display: block;
+}
+
+/* line 146, ../scss/_world-map-xs.scss */
+footer {
+  display: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 4, ../scss/_world-map-sm.scss */
+  .world-map .overlay-close {
+    width: auto;
+    right: 0;
+    top: 0;
+    position: absolute;
+    display: none;
+    z-index: 100;
+    padding: 19px 11px;
+    background-color: #ff7700;
+    color: #FFFFFF;
+    font-size: 22px;
+  }
+  /* line 16, ../scss/_world-map-sm.scss */
+  .world-map .overlay-close:hover {
+    cursor: pointer;
+  }
+  /* line 21, ../scss/_world-map-sm.scss */
+  .world-map .hover-info-block {
+    bottom: 0;
+  }
+  /* line 24, ../scss/_world-map-sm.scss */
+  .world-map .hover-info-block .hover-infos {
+    font-size: 14px;
+    padding-top: 25px;
+  }
+  /* line 28, ../scss/_world-map-sm.scss */
+  .world-map .hover-info-block .hover-infos .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 35, ../scss/_world-map-sm.scss */
+  .world-map .country-overlay {
+    width: 320px;
+    right: -320px;
+    top: 0;
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  /* line 43, ../scss/_world-map-sm.scss */
+  .world-map .country-overlay .overlay-header {
+    position: relative;
+  }
+  /* line 46, ../scss/_world-map-sm.scss */
+  .world-map .country-overlay .overlay-header .overlay-country-name {
+    position: absolute;
+    bottom: 14px;
+    left: 22px;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+}

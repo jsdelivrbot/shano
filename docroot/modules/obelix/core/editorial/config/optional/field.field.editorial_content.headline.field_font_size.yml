@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.headline
+    - field.storage.editorial_content.field_font_size
+  module:
+    - options
+id: editorial_content.headline.field_font_size
+field_name: field_font_size
+entity_type: editorial_content
+bundle: headline
+label: 'Font size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: font-size-l
+default_value_callback: ''
+settings: {  }
+field_type: list_string

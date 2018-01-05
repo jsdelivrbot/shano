@@ -1,0 +1,23 @@
+uuid: 7c7c560f-66cb-4cde-a6db-2f883e8d4b19
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_common_copy
+    - node.type.transition_page
+  module:
+    - text
+_core:
+  default_config_hash: C950in_f2_oHXewhJGf1HGBYddPjzIUa30vbaHyOAsU
+id: node.transition_page.field_common_copy
+field_name: field_common_copy
+entity_type: node
+bundle: transition_page
+label: Copy
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

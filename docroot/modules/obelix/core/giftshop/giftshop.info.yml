@@ -1,0 +1,8 @@
+name: Giftshop
+type: module
+description: Provides a simple giftshop with pdf generation.
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - forms_suite
+  - affiliate

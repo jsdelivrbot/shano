@@ -1,0 +1,7 @@
+name: iVision
+type: module
+description: Enables the iVision API
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - datasourcehandler

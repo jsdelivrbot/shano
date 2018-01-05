@@ -1,0 +1,22 @@
+uuid: ff65402b-1a71-4c83-8f7c-610861ed48a9
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_motherjobstatusdesc
+  module:
+    - child
+_core:
+  default_config_hash: 6Zi6W6H-xzU4WBe3nW9CGHnaWTesYGlVkCQn41Bc_48
+id: child.child.field_child_motherjobstatusdesc
+field_name: field_child_motherjobstatusdesc
+entity_type: child
+bundle: child
+label: 'mother job status description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

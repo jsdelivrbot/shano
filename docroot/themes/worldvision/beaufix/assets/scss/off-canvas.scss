@@ -1,0 +1,55 @@
+@import "compass/css3";
+
+body {
+
+  /* Fix mobile scrolling */
+  #offcanvas-container {
+    -webkit-overflow-scrolling: touch!important;
+    overflow: auto!important;
+  }
+
+  &.toolbar-fixed {
+    padding-top: 39px !important;
+  }
+  .offcanvas-overlay {
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 777777;
+    @include transition(all 750ms ease);
+    @include animation-duration(750ms);
+    @include animation-fill-mode(both);
+    @include animation-name(fadeIn);
+  }
+  &.offcanvas-open {
+    overflow: hidden !important;
+    .offcanvas-overlay {
+      display: block;
+    }
+    .scotch-panel-canvas {
+      position: absolute !important;
+      .scotch-panel-right {
+        background: image-url('ajax-loader.gif') 50% 50% no-repeat;
+      }
+    }
+  }
+  .scotch-panel-wrapper {
+    min-height: 100%;
+  }
+
+}
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

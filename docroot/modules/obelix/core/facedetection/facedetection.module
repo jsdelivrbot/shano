@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains facedetection.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function facedetection_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the facedetection module.
+    case 'help.page.facedetection':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables a new image effect for face detetion.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

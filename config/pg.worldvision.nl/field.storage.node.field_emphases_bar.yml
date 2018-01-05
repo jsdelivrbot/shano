@@ -1,0 +1,21 @@
+uuid: 269d4f4e-ded9-40e2-ae9f-9bd200db606c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - field_collection
+    - node
+_core:
+  default_config_hash: yJPqub6Cn6pkA2k0vZsDkIV3kmgoZOjSVIuTDbJHm_U
+id: node.field_emphases_bar
+field_name: field_emphases_bar
+entity_type: node
+type: field_collection
+settings: {  }
+module: field_collection
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

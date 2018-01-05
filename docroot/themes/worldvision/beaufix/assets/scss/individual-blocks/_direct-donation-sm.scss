@@ -1,0 +1,16 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Direct donation SM
+  // =============================
+  .direct-donation-example {
+    .direct-donation-info {
+      .donation-amount {
+        padding-top: 0;
+      }
+    }
+    //   Form
+    button[type="submit"]{
+      margin-top: 30px;
+    }
+  }
+}

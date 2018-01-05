@@ -1,0 +1,15 @@
+company.subscribe_form:
+  path: 'company/{company_id}/subscribe'
+  defaults:
+    _controller: '\Drupal\company\Controller\CompanyController::buildCompanySubscribeForm'
+    _title: 'Company Subscribe'
+  requirements:
+    _permission: 'access content'
+
+company.subscribe_form_confirmation:
+  path: 'company/{company_id}/subscribe-confirmation'
+  defaults:
+    _controller: '\Drupal\company\Controller\CompanyController::subscribeConfirmation'
+    _title: 'Company Subscribe Confirmation'
+  requirements:
+    _permission: 'access content'

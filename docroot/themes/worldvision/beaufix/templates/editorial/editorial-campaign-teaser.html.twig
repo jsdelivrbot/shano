@@ -1,0 +1,13 @@
+<div{{ attributes.addClass('editorial--content', 'img-content') }}>
+  <div class="editorial-campaign-teaser inner-content">
+    {{ content.preview_image }}
+    <div{{ content_attributes.addClass('editorial-content-txt-block') }}>
+      <div class="vert-align-center-rel-sm">
+        <h3 class="font-size-xl text-center-xs">{{ content['headline']['#content'] |raw }}</h3>
+        <p class="font-size-s text-center-xs">{{ content['subtitle']['#content'] |raw }}</p>
+        {{ content|without('preview_image', 'subtitle', 'headline') }}
+      </div>
+    </div>
+  </div>
+</div>
+

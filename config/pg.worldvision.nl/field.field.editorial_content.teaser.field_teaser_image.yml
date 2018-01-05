@@ -1,0 +1,39 @@
+uuid: d0d85f56-8067-48de-abc8-eb583dedefb7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.teaser
+    - field.storage.editorial_content.field_teaser_image
+  module:
+    - image
+_core:
+  default_config_hash: E7UjmDG4_5fYH5_Mgbxq8mqil9lG61lr7wVndtTipng
+id: editorial_content.teaser.field_teaser_image
+field_name: field_teaser_image
+entity_type: editorial_content
+bundle: teaser
+label: Bild
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'editorial/teaser/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1400x788
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

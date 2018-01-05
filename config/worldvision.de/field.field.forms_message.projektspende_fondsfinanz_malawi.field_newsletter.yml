@@ -1,0 +1,22 @@
+uuid: 8b30dde8-ff7c-441f-a706-1ac9cf9fdee9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.projektspende_fondsfinanz_malawi
+  module:
+    - forms_suite
+id: forms_message.projektspende_fondsfinanz_malawi.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: projektspende_fondsfinanz_malawi
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,31 @@
+uuid: 416c1fb6-29ff-44a6-85b8-9909484c679d
+langcode: de
+status: true
+dependencies: {  }
+id: press_distributor
+label: 'Anmeldung Presseverteiler'
+recipients:
+  - presse@worldvision.de
+reply: ''
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Gerne nehmen wir Ihre E-Mail-Adresse in unseren Verteiler auf und werden Ihnen ab sofort regelmäßig unsere Presseinformationen zusenden.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Anmeldung in unserem Presseverteiler'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/presseverteiler
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: Absenden

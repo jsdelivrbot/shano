@@ -1,0 +1,4 @@
+label: highlighted
+settings:
+  on_label: highlighted
+  off_label: default

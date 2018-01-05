@@ -1,0 +1,9 @@
+name: Running Event Donation
+type: module
+description: Provides the donation form for runing events. (@todo export entity_form/field configs)
+core: 8.x
+version: 8.x-1.0
+package: Obelix (DE)
+
+dependencies:
+  - forms_suite

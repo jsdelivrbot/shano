@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains fs_payment_payone.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fs_payment_payone_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fs_payment_payone module.
+    case 'help.page.fs_payment_payone':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Defines the payone payment gateways.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

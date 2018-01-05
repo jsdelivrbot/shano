@@ -1,0 +1,24 @@
+uuid: 843d569d-b024-4ce8-9635-861e94360cec
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.online_spende
+  module:
+    - forms_suite
+id: forms_message.online_spende.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: online_spende
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_newsletter_field

@@ -1,0 +1,40 @@
+uuid: 685be0fe-d323-4d91-9a8f-15b824390506
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_image
+    - field_collection.field_collection.field_donation_example
+  module:
+    - image
+_core:
+  default_config_hash: Xvq6_Dm0FJZADsm1IsDkQGwQulw6FoDn3uwZe5B7loU
+id: field_collection_item.field_donation_example.field_image
+field_name: field_image
+entity_type: field_collection_item
+bundle: field_donation_example
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'editorial-content/direct-donation/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 320x320
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

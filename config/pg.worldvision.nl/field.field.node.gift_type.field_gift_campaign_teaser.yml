@@ -1,0 +1,30 @@
+uuid: e93a2f01-e84a-4bf1-9b80-9fe9acd6c069
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.node.field_gift_campaign_teaser
+    - node.type.gift_type
+_core:
+  default_config_hash: 6bpsAc9STNzrSnbCeeyljx4akHUFvd8iryhgaJi4daI
+id: node.gift_type.field_gift_campaign_teaser
+field_name: field_gift_campaign_teaser
+entity_type: node
+bundle: gift_type
+label: 'Gift campaign teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      campaign_teaser: campaign_teaser
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

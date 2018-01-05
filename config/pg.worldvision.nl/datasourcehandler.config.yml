@@ -1,0 +1,22 @@
+datasources:
+  ivision_source:
+    args:
+      uri: 'http://ivisionwebservice.demo.worldvision.de/v8/'
+      language: DEU
+      siteID: gfr
+    cache: 0
+    default: 1
+    namespace: ivision_source
+    classpath: Drupal\ivision\IVision
+  default:
+    args:
+      uri: 'http://ivisionwebservice.demo.worldvision.de/v8/'
+      language: DEU
+      siteID: gfr
+    cache: 0
+    default: 1
+    namespace: ivision_source
+    classpath: Drupal\ivision\IVision
+_core:
+  default_config_hash: Oslz7dRVx0nQn_G0NW0ejfsQqKY-9y_nTSHCHCUCWR8
+langcode: nl

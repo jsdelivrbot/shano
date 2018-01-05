@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_related_teaser.field_paragraph_relation_teaser
+    - paragraphs.paragraphs_type.paragraph_related_teaser
+id: paragraph.paragraph_related_teaser.default
+targetEntityType: paragraph
+bundle: paragraph_related_teaser
+mode: default
+content:
+  field_paragraph_relation_teaser:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

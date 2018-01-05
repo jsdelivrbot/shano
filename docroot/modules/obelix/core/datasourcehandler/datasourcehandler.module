@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains datasourcehandler.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function datasourcehandler_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the datasourcehandler module.
+    case 'help.page.datasourcehandler':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Handles all Datasources') . '</p>';
+      return $output;
+
+    default:
+  }
+}

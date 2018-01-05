@@ -1,0 +1,27 @@
+uuid: 488b4d2a-8d63-4926-972a-c268b3c0905a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.fluechtlinge_dauerspende
+  module:
+    - fs_payment
+id: forms_message.fluechtlinge_dauerspende.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: fluechtlinge_dauerspende
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      interval_period: interval_period
+      single_period: 0
+field_type: wovi_donation_period_field

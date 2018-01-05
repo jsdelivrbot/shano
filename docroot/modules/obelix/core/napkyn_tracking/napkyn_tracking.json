@@ -1,0 +1,14 @@
+{
+  "name": "drupal/napkyn_tracking",
+  "type": "drupal-module",
+  "description": "Napkyn tracking",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/napkyn_tracking",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/napkyn_tracking",
+    "source": "http://cgit.drupalcode.org/napkyn_tracking"
+  },
+  "require": { }
+}

@@ -1,0 +1,8 @@
+name: WV NL Site
+type: module
+description: Provides basic NL site related feautes, config forms, base hooks etc.
+core: 8.x
+package: Obelix (NL)
+
+dependencies:
+  - wv_site

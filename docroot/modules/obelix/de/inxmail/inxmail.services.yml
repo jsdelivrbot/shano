@@ -1,0 +1,4 @@
+services:
+  inxmail:
+    class: Drupal\inxmail\InxmailService
+    arguments: []

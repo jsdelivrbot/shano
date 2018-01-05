@@ -1,0 +1,7 @@
+forms_survey.statistics:
+  path: '/forms/forms_survey'
+  defaults:
+    _controller: '\Drupal\forms_survey\Controller\SurveyController::statisticPage'
+    _title: 'View Child'
+  requirements:
+    _permission: 'access content'

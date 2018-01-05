@@ -1,0 +1,25 @@
+<div{{ attributes.addClass('slider-item') }}>
+  {{ content.preview_image }}
+
+  <div{{ content_attributes.addClass('vert-align-center-abs-sm', 'editorial-content-txt-block') }}>
+    {{ content|without('preview_image') }}
+  </div>
+
+  {% if youtube_id %}
+    <div class="btn-hero-slider-yt-play-cont text-center">
+      <button class="btn-beauty yt-play"><i class="icon-play icon-round-border"></i>{{ youtube_cta_title }}</button>
+    </div>
+  {% endif %}
+
+  {# YouTube video set #}
+  {% if youtube_id %}
+    <div class="yt-embed-container">
+      <div id="yt-container-{{ id }}"
+           class="yt-container"
+           data-entity-id="{{ id }}"
+           data-yt-id="{{ youtube_id }}"></div>
+      <button class="btn-icon btn-close yt-close"><i class="icon-cross"></i></button>
+    </div>
+  {% endif %}
+</div>
+

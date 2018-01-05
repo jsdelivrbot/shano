@@ -1,0 +1,31 @@
+uuid: c9f8f3dc-f7a3-4e10-a415-2710fda744e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content.company-group_node-broker_page.field_teaser_image
+    - group.content_type.company-group_node-broker_page
+  module:
+    - entity_test
+    - image
+third_party_settings:
+  entity_test:
+    foo: bar
+id: group_content.company-group_node-broker_page.default
+targetEntityType: group_content
+bundle: company-group_node-broker_page
+mode: default
+content:
+  field_teaser_image:
+    weight: -4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  entity_id: true
+  langcode: true
+  uid: true

@@ -1,0 +1,86 @@
+<div class='container form-minimal-border'>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <div class="row">
+        <div class="col-xs-12 vert-offset-top-1">
+          <h1 class="font-size-l">Grusskarte <span class="font-book font-color-neutral">personalisieren</span></h1>
+
+          {{ form|without(
+          'submit',
+          'additional_delivery',
+          'card_type',
+          'card_message',
+          'delivery_address',
+          'card_from',
+          'card_to',
+          'card_to_salutation',
+          'card_from_greetings'
+          ) }}
+
+        </div>
+        <div class="form-wrapper">
+          <div class="col-xs-12">
+            <h2 class="font-size-s">{{ form.card_type["#title"] }}:</h2>
+            {{ form.card_type }}
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="col-xs-6">
+            <h2 class="font-size-s">Anrede:</h2>
+            {{ form.card_to_salutation }}
+          </div>
+        </div>
+
+
+        <div class="form-wrapper">
+          <div class="col-xs-12">
+            <h2 class="font-size-s">Name des Empfängers:</h2>
+            {{ form.card_to }}
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="col-xs-6">
+            <h2 class="font-size-s">Gruß:</h2>
+            {{ form.card_from_greetings }}
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="col-xs-12">
+            <h2 class="font-size-s">Ihr Name:</h2>
+            {{ form.card_from }}
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="col-xs-12">
+            <h2 class="font-size-s">{{ form.card_message["#title"] }}:</h2>
+            {{ form.card_message }}
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="col-xs-12 vert-offset-top-1">
+            <h2 class="font-size-s">{{ form.delivery_address["#title"] }}:</h2>
+          </div>
+
+          <div class="col-xs-12 col-no-padding-left-sm">{{ form.delivery_address }}</div>
+
+          <div class="col-xs-12 col-sm-6">{{ form.additional_delivery.salutation }}</div>
+          <div class="col-xs-12 col-sm-6">{{ form.additional_delivery.jobTitleCode }}</div>
+          <div class="col-xs-12 col-sm-6">{{ form.additional_delivery.firstName }}</div>
+          <div class="col-xs-12 col-sm-6">{{ form.additional_delivery.surname }}</div>
+          <div class="col-xs-12">{{ form.additional_delivery.companyName }}</div>
+          <div class="col-xs-12 col-sm-10">{{ form.additional_delivery.street }}</div>
+          <div class="col-xs-12 col-sm-2">{{ form.additional_delivery.houseNo }}</div>
+          <div class="col-xs-12 col-sm-3">{{ form.additional_delivery.postCode }}</div>
+          <div class="col-xs-12 col-sm-5">{{ form.additional_delivery.city }}</div>
+          <div class="col-xs-12 col-sm-4">{{ form.additional_delivery.countryCode }}</div>
+        </div>
+        <div class="col-xs-12 vert-offset-top-1">{{ form.submit }}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+name: PayOne
+type: module
+description: Handles the Payone Login Data
+core: 8.x
+package: Obelix (DE)

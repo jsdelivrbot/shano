@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Install & update related logic.
+ */
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Fix child status field definition mismatch.
+ */
+function child_update_8001() {
+  // Current node field configurations
+  $field_manager = \Drupal::getContainer()->get('entity_field.manager');
+
+  // Because the manager was already loaded before the above config was forced,
+  // it will return the old configuration that was cached
+  $field_manager->clearCachedFieldDefinitions();
+  $field_storage_configs = $field_manager->getFieldStorageDefinitions('child');
+
+  // Get the last installed manager, this is the gatekeeper that determines if
+  // an update is needed or can be done
+  $last_installed_repo = \Drupal::getContainer()->get('entity.last_installed_schema.repository');
+
+  // Get the last installed configurations for node fields
+  // These are iterative objects and need to stored as such, not just simple arrays,
+  // so reusing the previously set configs is not an option
+  $last_installed_configs = $last_installed_repo->getLastInstalledFieldStorageDefinitions('child');
+
+  // Force the last installed config to be the current for the field
+  $last_installed_configs['status'] = $field_storage_configs['status'];
+  $last_installed_repo->setLastInstalledFieldStorageDefinitions('child', $last_installed_configs);
+
+  // Update origin field definition config for status field.
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('status', 'child', 'child', $field_storage_configs['status']);
+}
+
+/**
+ * Drop old deleted column.
+ */
+function child_update_8002() {
+  try {
+    $con = Database::getConnection();
+
+    $con->schema()->dropField('child', 'child_alias');
+  } catch (\Exception $e) {
+    drush_print($e->getMessage());
+  }
+}

@@ -1,0 +1,27 @@
+uuid: fb55994e-edf8-4ef6-86fb-a0dcf33646bc
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_emphases_bar
+    - node.type.country_page
+  module:
+    - field_collection
+_core:
+  default_config_hash: CdvpiRaIkBreYHC1yZdGJBN4CPBYiGRwQyntlJdHA_Q
+id: node.country_page.field_emphases_bar
+field_name: field_emphases_bar
+entity_type: node
+bundle: country_page
+label: 'Emphases bar'
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+  - {  }
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

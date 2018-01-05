@@ -1,0 +1,9 @@
+restrict_countries_by_active_projects: 1
+langcode: nl
+donation_mail_bcc: info@worldvision.nl
+skip_default_countries: 1
+disable_children_form_block: 0
+children_form_block_timeout: '300'
+allow_post_option: 0
+children_user_limit: '0'
+allow_different_children_from_the_same_country: 0

@@ -1,0 +1,5 @@
+obelix_main.main_settings_form:
+  title: 'Buttons Settings'
+  parent: wv_site.config_menu
+  route_name: obelix_main.main_settings_form
+  weight: 1

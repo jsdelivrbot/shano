@@ -1,0 +1,21 @@
+uuid: 08d8a06a-916c-41bc-a9d8-d8549aaf4b0e
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 6bP2ITNMpkFIialBXWauMDFOkr0V3Yb6yW4oD_d8jaY
+id: node.field_gift_description
+field_name: field_gift_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

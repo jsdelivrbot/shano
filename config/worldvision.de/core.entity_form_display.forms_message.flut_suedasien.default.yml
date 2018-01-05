@@ -1,0 +1,56 @@
+uuid: 028f26f6-82e5-49d3-86a7-18f32113771a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.flut_suedasien.field_donation_amount
+    - field.field.forms_message.flut_suedasien.field_donation_period
+    - field.field.forms_message.flut_suedasien.field_newsletter
+    - field.field.forms_message.flut_suedasien.field_payment_method
+    - field.field.forms_message.flut_suedasien.field_user_data
+    - forms_suite.form.flut_suedasien
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.flut_suedasien.default
+targetEntityType: forms_message
+bundle: flut_suedasien
+mode: default
+content:
+  field_donation_amount:
+    type: wovi_donation_amount_widget
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_period:
+    type: wovi_donation_period_widget
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

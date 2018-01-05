@@ -1,0 +1,14 @@
+{
+  "name": "drupal/fs_affiliate_bridge",
+  "type": "drupal-module",
+  "description": "Extend the Forms suite module with affiliate functionality.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/fs_affiliate_bridge",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/fs_affiliate_bridge",
+    "source": "http://cgit.drupalcode.org/fs_affiliate_bridge"
+  },
+  "require": { }
+}

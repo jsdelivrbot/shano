@@ -1,0 +1,24 @@
+uuid: ba275fa0-8ad8-4c2a-bb9e-8ac2e9b2a3d3
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1OHvPJM4EdxKTH1hFUn2836tz6n6QY5h1Rah8TkIcIM
+id: projects
+migration_tags:
+  - WVI
+migration_group: wvi
+label: 'Projects From Simma Platform'
+source:
+  plugin: projects
+  track_changes: true
+process:
+  project_id: projectid
+  name: description
+  field_country: country_code
+  field_projecttext1: projecttext1
+destination:
+  plugin: 'entity:project'
+migration_dependencies:
+  optional:
+    - countries

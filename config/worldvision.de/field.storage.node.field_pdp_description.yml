@@ -1,0 +1,21 @@
+uuid: 5dff044b-2f21-45dc-90c0-bd52bd702bc0
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: 2-YzEOtsy7w3zzjMVjW_3Xs3IU0VEoGenx8BPgV9e8U
+id: node.field_pdp_description
+field_name: field_pdp_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

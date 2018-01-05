@@ -1,0 +1,27 @@
+uuid: 9ef88a12-d724-4b2d-9f93-9ec63681c9b5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_related_teaser.field_paragraph_relation_teaser
+    - paragraphs.paragraphs_type.paragraph_related_teaser
+_core:
+  default_config_hash: KY98KW7xdtzM7Mkn6_MpzlcU2w9k3agFWPiN2YFX9sI
+id: paragraph.paragraph_related_teaser.default
+targetEntityType: paragraph
+bundle: paragraph_related_teaser
+mode: default
+content:
+  field_paragraph_relation_teaser:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,27 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.slideshow
+    - field.storage.paragraph.field_paragraph_slideshow
+    - paragraphs.paragraphs_type.paragraph_slideshow
+id: paragraph.paragraph_slideshow.field_paragraph_slideshow
+field_name: field_paragraph_slideshow
+entity_type: paragraph
+bundle: paragraph_slideshow
+label: Slideshow
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      slideshow: slideshow
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 7f983d50-910e-4330-b6ae-9fe199e1a7c3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_playdesc
+  module:
+    - child
+_core:
+  default_config_hash: AqmRy-PK0ru1CrOJu_yq9o-Cl8byzXWmLuZZDiKHPRQ
+id: child.child.field_child_playdesc
+field_name: field_child_playdesc
+entity_type: child
+bundle: child
+label: 'play description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: b36bf121-33db-4a4d-b7bc-cbf9b5c603e9
+langcode: de
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: kd0DcYPkeJTyDTYfSQB0IbNmDepRWzSJvnCOxXEbIyI
+id: node.field_pdp_to
+field_name: field_pdp_to
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

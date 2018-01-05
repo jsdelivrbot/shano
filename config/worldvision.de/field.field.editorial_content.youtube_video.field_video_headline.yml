@@ -1,0 +1,21 @@
+uuid: f0cf0f9b-dd27-4b85-9091-fde94f5960f1
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.storage.editorial_content.field_video_headline
+_core:
+  default_config_hash: 43D_mhR2d-QD12lPKqkCRTETmSVDn4dCTtZKg1oAnNk
+id: editorial_content.youtube_video.field_video_headline
+field_name: field_video_headline
+entity_type: editorial_content
+bundle: youtube_video
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

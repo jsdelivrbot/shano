@@ -1,0 +1,26 @@
+uuid: 1860b996-fd7a-4689-b177-fa86be71f7e1
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_sisters
+  module:
+    - child
+_core:
+  default_config_hash: wOly87T3-Cw3Vfd6nkieZQdrmAhR4E6QyXbAsm_SxpI
+id: child.child.field_child_sisters
+field_name: field_child_sisters
+entity_type: child
+bundle: child
+label: sisters
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

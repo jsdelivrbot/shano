@@ -1,0 +1,22 @@
+uuid: ea6e4dcd-270a-47e2-865b-f17e61c40cf8
+langcode: de
+status: true
+dependencies:
+  module:
+    - child_sponsorship
+    - editorial_content
+_core:
+  default_config_hash: GZcu5XPNOZ0bw329CqesK39kL6AZn6HzWYMZne0C0Y4
+id: editorial_content.field_child_finder
+field_name: field_child_finder
+entity_type: editorial_content
+type: child_finder_item
+settings:
+  case_sensitive: false
+module: child_sponsorship
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

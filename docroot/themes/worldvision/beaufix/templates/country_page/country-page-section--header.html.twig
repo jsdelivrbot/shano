@@ -1,0 +1,18 @@
+<div{{ attributes.addClass('country-page-section--header', 'editorial-section') }}>
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <div{{ content_attributes.addClass('col-xs-12') }}>
+        {{ content.image }}
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div{{ content_attributes.addClass('text-center') }}>
+          {{ content|without('image') }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

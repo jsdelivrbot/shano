@@ -1,0 +1,62 @@
+.navbar {
+  display: none;
+}
+
+.main-content-wrapper {
+  .main-nav-cont {
+    background: #fff;
+    opacity: 0.95;
+
+    .offcanvas-container {
+      display: inline-block;
+      width: auto;
+      padding: 20px;
+
+      .font-size-super-small {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .no-margin {
+    margin: 0;
+  }
+
+  .form-info-bar {
+    background: #f2f2f2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+
+    li {
+      padding-top: 10px;
+    }
+
+    .icon-no-contract-bond, .icon-calculator, .icon-eye, .icon-ok-shield {
+      font-size: 44px;
+    }
+  }
+}
+
+
+
+// =============================
+// Form
+// =============================
+.form-minimal-border {
+
+  // No Contract block above submit
+  .no-contract-block {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    i{
+      font-size: 30px;
+      padding-right: 15px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+
+}
+

@@ -1,0 +1,16 @@
+{#
+/**
+ *
+ */
+#}
+<div{{ attributes.addClass('map') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>
+<section class="google-geo-object-field-map">
+  <h2>{{ name }}</h2>
+  <div class="map-container" data-lat="{{ lat }}" data-lon="{{ lon }}" data-zoom="{{ zoom }}">map</div>
+</section>
+
+

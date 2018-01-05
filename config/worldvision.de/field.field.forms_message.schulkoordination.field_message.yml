@@ -1,0 +1,22 @@
+uuid: 592a2d70-63d7-4ca2-a30a-c6aea5a05264
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.schulkoordination
+  module:
+    - forms_suite
+id: forms_message.schulkoordination.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: schulkoordination
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

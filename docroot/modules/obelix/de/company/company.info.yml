@@ -1,0 +1,7 @@
+name: Company
+type: module
+description: Add company functionalitites (based on Group module)
+core: 8.x
+package: Obelix (DE)
+dependencies:
+  - hook_event_dispatcher

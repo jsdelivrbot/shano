@@ -1,0 +1,8 @@
+{
+    "name": "world-vision/news_article",
+    "type": "drupal-module",
+    "description": "Provides a content type for News article pages.",
+    "require": {
+        "drupal/paragraphs": "^1.0"
+    }
+}

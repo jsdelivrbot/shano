@@ -1,0 +1,22 @@
+uuid: be5f3a93-9802-411a-923e-23a2d30e9263
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: _0jMjdivyVrgz98ShOXiWu7WVW_LQ77-pzFVuFUEiw4
+id: wvbasetheme_tabs
+theme: wvbasetheme
+region: controls
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

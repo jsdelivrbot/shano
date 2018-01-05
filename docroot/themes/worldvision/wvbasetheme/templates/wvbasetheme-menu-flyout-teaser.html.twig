@@ -1,0 +1,13 @@
+<div {{ attributes.addClass('flyout-teaser', 'col-sm-6', 'col-md-4', 'col-no-padding') }}>
+  {% if content.image is not empty %}
+    <a class="display-block" href="{{ content.link['#attributes']['href'] }}">
+      {{ content.image }}
+    </a>
+  {% endif %}
+  <div {{ content_attributes.addClass('teaser-desc') }}>
+    <a class="display-block h4" href="{{ content.link['#attributes']['href'] }}">
+      {{ content.headline }}
+    </a>
+    {{ content|without('image', 'headline') }}
+  </div>
+</div>

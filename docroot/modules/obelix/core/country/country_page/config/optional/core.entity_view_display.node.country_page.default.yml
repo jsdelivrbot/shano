@@ -1,0 +1,203 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.country_page.field_automatic_teasers
+    - field.field.node.country_page.field_common_calltoaction
+    - field.field.node.country_page.field_country
+    - field.field.node.country_page.field_emphases_bar
+    - field.field.node.country_page.field_his_copy
+    - field.field.node.country_page.field_his_headline
+    - field.field.node.country_page.field_his_image
+    - field.field.node.country_page.field_metatags
+    - field.field.node.country_page.field_quotation
+    - field.field.node.country_page.field_slideshow_slides
+    - field.field.node.country_page.field_success_bar
+    - node.type.country_page
+  module:
+    - metatag
+    - user
+id: node.country_page.default
+targetEntityType: node
+bundle: country_page
+mode: default
+content:
+  country_about_block:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  country_about_copy:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  country_about_section:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  country_catastrophe_block:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  country_catastrophe_section:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  country_child_sponsorship_section:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  country_current_issues_section:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  country_disaster:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  country_disaster_block:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  country_emphases_section:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  country_facts_bar:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  country_facts_section:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  country_header_image:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  country_header_section:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  country_his_section:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  country_map:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  country_map_section:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  country_name:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  country_section_about:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  country_section_catastrophe:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  country_section_child_sponsorship:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+  country_section_current_issues:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+  country_section_emphases:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  country_section_header:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  country_section_his:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  country_section_map:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  country_section_slideshow:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  country_section_success:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  country_section_success_bar:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  country_slideshow_section:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+  country_success:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  country_success_bar_section:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  country_success_block:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  country_success_section:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  direct_donation:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  direct_donation_section:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  field_metatags:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+  his_block:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+  his_section:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  success_bar:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+  success_section:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_automatic_teasers: true
+  field_common_calltoaction: true
+  field_country: true
+  field_emphases_bar: true
+  field_his_copy: true
+  field_his_headline: true
+  field_his_image: true
+  field_quotation: true
+  field_slideshow_slides: true
+  field_success_bar: true
+  langcode: true
+  links: true

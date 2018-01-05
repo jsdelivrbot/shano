@@ -1,0 +1,56 @@
+uuid: 75e8bef9-b804-4134-aec2-9d43187ade1d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.donation_single.field_donation_amount
+    - field.field.forms_message.donation_single.field_donation_period
+    - field.field.forms_message.donation_single.field_newsletter
+    - field.field.forms_message.donation_single.field_payment_method
+    - field.field.forms_message.donation_single.field_user_data
+    - forms_suite.form.donation_single
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.donation_single.default
+targetEntityType: forms_message
+bundle: donation_single
+mode: default
+content:
+  field_donation_amount:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_period:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

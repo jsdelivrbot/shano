@@ -1,0 +1,23 @@
+// =============================
+// Editorial content generally stylings
+// =============================
+
+// Breakpoint MD
+// =============================
+@media screen and (min-width: $bp-md) {
+  // Container
+  .editorial-page {
+    .editorial-section > .container,
+    .editorial-section > .container-fluid {
+      //  3-3-3-3 MD
+      > .row {
+        .col-sm-6.col-md-3:nth-child(3),
+        .col-sm-6.col-md-3:nth-child(4) {
+          .editorial--content.first.last {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 8e569d1a-cf0b-4ac3-98d0-3e5159e6c4c7
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.hero_slider
+    - field.storage.editorial_content.field_preview_video
+  module:
+    - link
+id: editorial_content.hero_slider.field_preview_video
+field_name: field_preview_video
+entity_type: editorial_content
+bundle: hero_slider
+label: 'Preview video'
+description: 'A preview video, which is shown in front of the hero-slider and fades out after it finishes.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

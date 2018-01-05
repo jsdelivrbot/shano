@@ -1,0 +1,21 @@
+uuid: 646b6d3c-d631-4962-acf8-14486f9eb033
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.public_donor_overview
+  module:
+    - metatag
+id: node.public_donor_overview.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: public_donor_overview
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

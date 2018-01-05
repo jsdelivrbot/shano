@@ -1,0 +1,18 @@
+uuid: 8efd65ce-e82a-4ace-a6cc-9a6386e56172
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.widescreen_16_9_md
+  theme:
+    - bootstrap
+id: news_article_headerimage
+label: 'NEWS ARTICLE Headerimage'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-lg-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_md
+breakpoint_group: bootstrap
+fallback_image_style: '_original image_'

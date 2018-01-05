@@ -1,0 +1,57 @@
+@media screen and (min-width: $bp-sm) {
+  .world-map {
+
+    .overlay-close {
+      width: auto;
+      right: 0;
+      top: 0;
+      position: absolute;
+      display: none;
+      z-index: 100;
+      padding: 19px 11px;
+      background-color: $color-highlight;
+      color: $color-standard-bg;
+      font-size: 22px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .hover-info-block {
+      bottom: 0;
+
+      .hover-infos {
+        font-size: 14px;
+        padding-top: 25px;
+
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .country-overlay {
+      width: 320px;
+      right: -320px;
+      top: 0;
+      //max-height: 500px;
+      overflow-y: scroll;
+      background-color: rgba(255, 255, 255, 0.9);
+
+      .overlay-header {
+        position: relative;
+
+        .overlay-country-name {
+          position: absolute;
+          bottom: 14px;
+          left: 22px;
+          font-size: 28px;
+          color: $color-standard-bg;
+        }
+      }
+    }
+  }
+
+}

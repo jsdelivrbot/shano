@@ -1,0 +1,23 @@
+uuid: afddd13f-8c5d-4efa-a881-b40ee8c96ee1
+langcode: de
+status: true
+dependencies:
+  module:
+    - child
+_core:
+  default_config_hash: Llg1mkXSt9Z4Yb1q3YdAcIqr3rQ97kn-elNIHsXDFZc
+id: child.field_child_countrycode
+field_name: field_child_countrycode
+entity_type: child
+type: string
+settings:
+  max_length: 4
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

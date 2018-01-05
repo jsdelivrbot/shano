@@ -1,0 +1,24 @@
+uuid: 939105a4-fa59-4d28-8016-2dea155b897f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontaktformular_presse
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_presse.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontaktformular_presse
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_message_field

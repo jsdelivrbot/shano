@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.headline
+    - field.field.editorial_content.headline.field_font_size
+    - field.field.editorial_content.headline.field_headline
+    - field.field.editorial_content.headline.field_headline_markup
+    - field.field.editorial_content.headline.field_text_align
+id: editorial_content.headline.default
+targetEntityType: editorial_content
+bundle: headline
+mode: default
+content:
+  headline:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_font_size: true
+  field_headline: true
+  field_headline_markup: true
+  field_text_align: true
+  name: true
+  user_id: true

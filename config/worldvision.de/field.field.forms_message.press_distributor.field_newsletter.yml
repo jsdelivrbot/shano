@@ -1,0 +1,24 @@
+uuid: bf5a52bb-41fb-4196-90b2-cd80a442984f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.press_distributor
+  module:
+    - forms_suite
+_core:
+  default_config_hash: IRfEKh7fCreQJyhgXjR772siPTJtT7muGA93QzKUumQ
+id: forms_message.press_distributor.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: press_distributor
+label: newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - wvbasetheme
+id: searchform
+theme: wvbasetheme
+region: search
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  provider: search
+  label_display: '0'
+visibility: {  }

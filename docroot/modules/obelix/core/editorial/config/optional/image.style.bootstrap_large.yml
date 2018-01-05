@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: bootstrap_large
+label: 'Bootstrap Large (1280xAuto)'
+effects:
+  0a89b804-337f-4217-a441-cdb5fa8ac175:
+    uuid: 0a89b804-337f-4217-a441-cdb5fa8ac175
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: false

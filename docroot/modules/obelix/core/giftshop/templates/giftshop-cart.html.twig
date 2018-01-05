@@ -1,0 +1,47 @@
+<div class="container giftshop-cart vert-offset-bottom-2">
+  <div class="row">
+    <div class="col-xs-12 col-md-5 vert-offset-top-1">
+      <h1 class="font-size-l">{{ headline }}</h1>
+    </div>
+    <div class="col-xs-12 col-md-7 vert-offset-bottom-2 vert-offset-md-top-2">
+      <div class="actions-continue-top-cont">{{ actions.continue }}</div>
+      {% if items %}
+        <div class="actions-checkout-top-cont text-right">{{ actions.checkout }}</div>
+      {% endif %}
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  {% if items %}
+    {{ items }}
+  {% else %}
+    <div class="row">
+      <div class="col-xs-12">
+        {{ "You don't have any items in your cart."|t }}
+      </div>
+    </div>
+  {% endif %}
+  <div class="row">
+    <div class="col-xs-12 vert-offset-top-1 font-size-m text-right">
+      <span>{{ "Total"|t }}: <span class="font-color-highlighted font-bold">{{ total }}&nbsp;€</span></span>
+    </div>
+    {% if items %}
+      <div class="col-xs-12 col-sm-6 col-sm-push-6 text-right vert-offset-sm-top-1">
+        {{ actions.checkout }}
+      </div>
+    {% endif %}
+    <div class="col-xs-12 col-sm-6 col-sm-pull-6 vert-offset-sm-top-1">
+      {{ actions.continue }}
+    </div>
+  </div>
+</div>
+{% if transparency_bar %}
+  <div class="section-highlighted section-highlighted--primary">
+    <div class="container">
+      <div class="row ">
+        <div class="col-xs-12 text-center vert-offset-top-1">
+          {{ transparency_bar }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

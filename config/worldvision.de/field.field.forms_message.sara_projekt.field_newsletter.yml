@@ -1,0 +1,22 @@
+uuid: adf27172-d61d-43aa-80f1-92423c8059f8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.sara_projekt
+  module:
+    - forms_suite
+id: forms_message.sara_projekt.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: sara_projekt
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

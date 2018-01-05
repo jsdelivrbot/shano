@@ -1,0 +1,21 @@
+uuid: fcd7c643-197c-4bd5-bf74-dc9abfe02354
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_success_text
+  module:
+    - country
+    - text
+id: country.country.field_success_text
+field_name: field_success_text
+entity_type: country
+bundle: country
+label: 'Success text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_emphases_bar.field_emphases_bar_copy
+    - field.field.field_collection_item.field_emphases_bar.field_emphases_bar_image
+    - field_collection.field_collection.field_emphases_bar
+    - responsive_image.styles.editorial_image_square
+  module:
+    - responsive_image
+id: field_collection_item.field_emphases_bar.default
+targetEntityType: field_collection_item
+bundle: field_emphases_bar
+mode: default
+content:
+  field_emphases_bar_copy:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_emphases_bar_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image_square
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+hidden: {  }

@@ -1,0 +1,21 @@
+uuid: 74bfdbc2-a6c5-475c-906f-02f92ec96042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_headline
+    - group.type.company
+  module:
+    - text
+id: group.company.field_headline
+field_name: field_headline
+entity_type: group
+bundle: company
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

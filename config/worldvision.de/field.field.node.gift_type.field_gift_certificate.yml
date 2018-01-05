@@ -1,0 +1,29 @@
+uuid: a8f23b76-1a61-46ac-bf3e-ffd923a182d0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gift_certificate
+    - node.type.gift_type
+  module:
+    - file
+_core:
+  default_config_hash: B6QXMvqfpxQAYLIICLxUgVYsJ1JIYOavHcmw-yegPJ8
+id: node.gift_type.field_gift_certificate
+field_name: field_gift_certificate
+entity_type: node
+bundle: gift_type
+label: 'Gift certificate'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'giftshop/pdf/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

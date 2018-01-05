@@ -1,0 +1,27 @@
+uuid: 43c39fbe-85e8-4a7c-a39b-198e6e02184b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.phillippinen_missbrauch
+  module:
+    - fs_payment
+id: forms_message.phillippinen_missbrauch.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: phillippinen_missbrauch
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '10'
+    default_amount: '10'
+field_type: wovi_donation_amount_field

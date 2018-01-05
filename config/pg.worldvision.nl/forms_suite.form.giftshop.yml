@@ -1,0 +1,31 @@
+uuid: b082fc37-d2c2-4209-9d35-9c1f488ac65a
+langcode: en
+status: true
+dependencies: {  }
+id: giftshop
+label: Wereldcadeau
+recipients:
+  - info@worldvision.nl
+reply: "Beste [wovi_user_data_field:salutation] [wovi_user_data_field:surname], \r\n\r\nHartelijk bedankt voor uw bestelling! Met het kopen van Wereldcadeaus helpt u heel concreet mee aan duurzame ontwikkeling voor de meest kwetsbare kinderen en families in afgelegen gebieden.\r\n\r\n\r\n<strong>Overzicht Wereldcadeaus en downloadlink certificaat:</strong>\r\n\r\n[wovi_giftshop:gifts_list] \r\n \r\nHet totaalbedrag van €[wovi_giftshop:gift_amount_complete] schrijven wij automatisch af van uw opgegeven IBAN-rekeningnummer. \r\n \r\n\r\n<strong>Over World Vision</strong>\r\n\r\nMeer weten over het werk van World Vision? Bekijk ook onze Facebook-pagina: www.facebook.com/worldvision.nl\r\n\r\nHeeft u vragen of opmerkingen? Wij komen graag met u in contact via telefoon (033 - 4643 444) of e-mail (info@worldvision.nl).\r\n \r\n\r\nWorld Vision Nederland\r\n \r\n"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: 'World Vision - Bedankt voor uw bestelling'
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p class=\"text-align-center\">Geweldig dat u betrokken bent bij het werk van World Vision door uw bestelling van Wereldcadeaus.<br />\r\nWe hebben uw bestelling ontvangen en zullen deze zo snel mogelijk verwerken.<br />\r\nHet bedrag wordt automatisch van uw&nbsp;IBAN-rekeningnummer afgeschreven.</p>\r\n\r\n<p class=\"text-align-center\">Het certificaat / de certificaten ontvangt u binnen enkele minuten via het opgegeven e-mailadres.</p>\r\n\r\n<p class=\"text-align-center\">Bedankt voor uw betrokkenheid.</p>\r\n"
+  format: html
+thank_you_headline: 'Hartelijk bedankt voor uw bestelling!'
+designation_id: '37'
+motivation_code: '115'
+additional_tracking: ''
+alias: /forms/giftshop
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: ''

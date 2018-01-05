@@ -1,0 +1,10 @@
+ivision.config_form:
+  path: '/admin/config/services/ivision/config'
+  defaults:
+    _form: '\Drupal\ivision\Form\ConfigForm'
+    _title: 'iVision Config'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

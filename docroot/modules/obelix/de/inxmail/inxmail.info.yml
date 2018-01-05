@@ -1,0 +1,5 @@
+name: Inxmail
+type: module
+description: Inxmail Newlstter service
+core: 8.x
+package: Obelix (DE)

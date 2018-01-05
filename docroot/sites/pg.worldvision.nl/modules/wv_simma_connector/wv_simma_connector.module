@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains Simma connector logic.
+ */
+
+require_once 'wv_simma_connector.forms.inc';
+
+/**
+ * Implements hook_giftshop_gift_checkout().
+ */
+function wv_simma_connector_giftshop_gift_checkout($message, $form_id) {
+  \Drupal::service('wv_simma_connector.entity_sql_export')->queue($message, $form_id);
+}

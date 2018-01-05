@@ -1,0 +1,10 @@
+uuid: c736eb50-97bf-4a6c-8365-ae1db4eeba14
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tglmIDugv3iKh9J-C-9-MMcCF04PYwCtT0AEInKqMxQ
+id: top-navigation
+label: 'Top Navigation'
+description: 'Small navigation at top of the page'
+locked: true

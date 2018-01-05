@@ -1,0 +1,18 @@
+uuid: 22e1908b-429a-47e9-9264-f4418d9d12ee
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.job_offer
+id: node.job_offer.title
+field_name: title
+entity_type: node
+bundle: job_offer
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,30 @@
+uuid: b2e132eb-cf55-4c85-af5b-587d282e3bfe
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.storage.node.field_current_calltoaction
+    - node.type.transition_page
+_core:
+  default_config_hash: tQYcy-ulbzW7d3loOrZ77zYpzIG-qPDe_a2NTfH3CcA
+id: node.transition_page.field_current_calltoaction
+field_name: field_current_calltoaction
+entity_type: node
+bundle: transition_page
+label: Call-To-Action
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      button: button
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

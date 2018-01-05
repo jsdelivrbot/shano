@@ -1,0 +1,8 @@
+name: Forms suite payment
+type: module
+description: Enables payment functionaltiy for Forms suite.
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - forms_suite
+  - payment_gateway

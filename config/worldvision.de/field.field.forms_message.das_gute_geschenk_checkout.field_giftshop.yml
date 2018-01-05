@@ -1,0 +1,23 @@
+uuid: 3aca5682-c803-4c2c-adb6-40b18edbf83b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_giftshop
+    - forms_suite.form.das_gute_geschenk_checkout
+  module:
+    - giftshop
+id: forms_message.das_gute_geschenk_checkout.field_giftshop
+field_name: field_giftshop
+entity_type: forms_message
+bundle: das_gute_geschenk_checkout
+label: giftshop
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  headline: null
+  subline: null
+field_type: wovi_giftshop_field

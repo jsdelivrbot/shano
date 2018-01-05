@@ -1,0 +1,71 @@
+{#
+/**
+ * @file birthday.html.twig
+ * Theme implementation to present Child birthday data.
+ *
+ * This template is used when viewing the birthday/{childamount} page.
+ *
+ * Available variables:
+ * - tps: A list of content items.
+  *
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('child' ,'container') }}>
+
+
+  {% if tps %}
+
+      <h2>Wie viele Kinder sind für einen bestimmten Geburtstag verfügbar?</h2>
+      <p><span style="background-color:red;">rot</span>: < {{ childamount }} Kinder verfuegbar.</p>
+      <p><span style="background-color:green;">gruen</span>: {{ childamount }} oder mehr Kinder verfuegbar.</p>
+      <div class="row">
+
+      {% for tp in tps %}
+         {% if tp.month == '01' and tp.day == '01' %}
+            <div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+         {% endif %}
+         {% if tp.month == '02' and tp.day == '01' %}
+            </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+         {% endif %}
+         {% if tp.month == '03' and tp.day == '01' %}
+            </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+         {% endif %}
+         {% if tp.month == '04' and tp.day == '01' %}
+            </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '05' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '06' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '07' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '08' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '09' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '10' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '11' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+          {% if tp.month == '12' and tp.day == '01' %}
+             </div><div class="col-xs-1"><h3>{{ tp.mname }}</h3>
+          {% endif %}
+
+          <p style="background-color:{{ tp.color }};">{{ tp.day }} ({{ tp.childsperday }})</p>
+
+      {% endfor %}
+          </div
+      </div>
+
+  {% endif %}
+</div>

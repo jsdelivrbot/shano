@@ -1,0 +1,29 @@
+// =============================
+// First Campaign 2017  SM
+// =============================
+
+@media screen and (min-width: $bp-lg) {
+
+  .billy-and-urs-wrapper {
+    // =============================
+    // Header
+    // =============================
+    .header--img{
+      min-height: 700px;
+    }
+    .header--content{
+      .header--inner-content{
+        margin-top: 488px;
+        padding-left: 185px;
+        padding-right: 185px;
+      }
+    }
+    // =============================
+    // Content
+    // =============================
+    .container--content{
+      padding-left: 213px;
+      padding-right: 213px;
+    }
+  }
+}

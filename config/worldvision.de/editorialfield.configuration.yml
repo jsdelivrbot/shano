@@ -1,0 +1,20 @@
+layouts:
+  editorial-12: editorial-12
+  editorial-6-6: editorial-6-6
+  editorial-4-8: editorial-4-8
+  editorial-8-4: editorial-8-4
+  editorial-4-4-4: editorial-4-4-4
+  editorial-3-3-3-3: editorial-3-3-3-3
+entities:
+  editorial_content:
+    button: button
+    campaign_teaser: campaign_teaser
+    copy: copy
+    headline: headline
+    hero_slider: hero_slider
+    image: image
+    slideshow: slideshow
+    story_teaser: story_teaser
+    teaser: teaser
+    youtube_video: youtube_video
+langcode: de

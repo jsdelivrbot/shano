@@ -1,0 +1,64 @@
+uuid: 0157056b-4809-4d45-90f7-0b575f2da5eb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.das_gute_geschenk_checkout.field_donation_period
+    - field.field.forms_message.das_gute_geschenk_checkout.field_giftshop
+    - field.field.forms_message.das_gute_geschenk_checkout.field_newsletter
+    - field.field.forms_message.das_gute_geschenk_checkout.field_payment_method
+    - field.field.forms_message.das_gute_geschenk_checkout.field_user_data
+    - forms_suite.form.das_gute_geschenk_checkout
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.das_gute_geschenk_checkout.default
+targetEntityType: forms_message
+bundle: das_gute_geschenk_checkout
+mode: default
+content:
+  field_donation_period:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_period_single:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_giftshop:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

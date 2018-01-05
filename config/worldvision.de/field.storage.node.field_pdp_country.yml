@@ -1,0 +1,22 @@
+uuid: b7168243-38a6-4eb8-8286-306bedb564ae
+langcode: de
+status: true
+dependencies:
+  module:
+    - country
+    - node
+_core:
+  default_config_hash: 0-Is9lp-iG-TwmgMoxFweSVdEev-KDWpA2ySY5zA07Y
+id: node.field_pdp_country
+field_name: field_pdp_country
+entity_type: node
+type: entity_reference
+settings:
+  target_type: country
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

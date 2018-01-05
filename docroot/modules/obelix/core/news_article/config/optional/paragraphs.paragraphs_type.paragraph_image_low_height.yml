@@ -1,0 +1,5 @@
+langcode: de
+status: true
+dependencies: {  }
+id: paragraph_image_low_height
+label: 'Image Low Height'

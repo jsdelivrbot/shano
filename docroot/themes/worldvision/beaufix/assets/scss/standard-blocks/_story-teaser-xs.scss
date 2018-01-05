@@ -1,0 +1,76 @@
+// =============================
+// Story Teaser
+// =============================
+.editorial-story-teaser {
+  position: relative;
+
+  h3, p {
+    color: $color-standard-bg;
+    //text-shadow: 1px 1px 4px rgb(134, 134, 134);
+    @include text-shadow(1px 1px 4px rgb(134, 134, 134));
+  }
+
+  // BGs
+  .bg-desktop,
+  .bg-mobile{
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-mobile::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  // Content
+  .content {
+    display: block;
+    color: $color-standard-bg;
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include transition(0.4s);
+
+    // Inner content
+    .inner-content {
+      position: absolute;
+      bottom: -30px;
+      left: 15px;
+      right: 15px;
+
+      @include transition(0.4s);
+
+      // Hover preset
+      button {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+    // Hover (cta fades in)
+    &:hover {
+      color: $color-standard-bg;
+      background: rgba(0, 0, 0, 0.7);
+      button {
+        visibility: visible;
+        opacity: 1;
+      }
+      .inner-content{
+        bottom: 15px;
+      }
+    }
+  }
+}
+
+// Hide desktop-background on mobile
+@media screen and (max-width: ($bp-sm - 1)) {
+  .editorial-story-teaser {
+    .bg-desktop {
+      background: none !important;
+    }
+  }
+}

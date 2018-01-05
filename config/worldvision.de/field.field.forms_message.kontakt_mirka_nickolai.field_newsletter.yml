@@ -1,0 +1,22 @@
+uuid: e76719ba-1c73-4929-8eea-a3cd3c88c796
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kontakt_mirka_nickolai
+  module:
+    - forms_suite
+id: forms_message.kontakt_mirka_nickolai.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kontakt_mirka_nickolai
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

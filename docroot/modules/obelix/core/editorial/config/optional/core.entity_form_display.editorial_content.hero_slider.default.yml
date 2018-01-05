@@ -1,0 +1,55 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.hero_slider
+    - field.field.editorial_content.hero_slider.field_hero_slide
+    - field.field.editorial_content.hero_slider.field_preview_video
+    - field.field.editorial_content.hero_slider.field_preview_video_cta
+    - field.field.editorial_content.hero_slider.field_preview_video_image
+    - image.style.thumbnail
+  module:
+    - field_collection
+    - image
+    - link
+id: editorial_content.hero_slider.default
+targetEntityType: editorial_content
+bundle: hero_slider
+mode: default
+content:
+  field_hero_slide:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+  field_preview_video:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_preview_video_cta:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_preview_video_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

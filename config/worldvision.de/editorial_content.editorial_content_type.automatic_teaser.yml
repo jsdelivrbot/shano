@@ -1,0 +1,7 @@
+uuid: f3d75e10-afc4-481e-a7a4-0f07b40e1358
+langcode: de
+status: true
+dependencies: {  }
+id: automatic_teaser
+label: 'Automatic Teaser'
+category: 'Standard block'

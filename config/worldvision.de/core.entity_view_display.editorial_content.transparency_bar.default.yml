@@ -1,0 +1,26 @@
+uuid: a0d5fd65-7718-42c5-8fb2-4d7e57d6977a
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.transparency_bar
+    - field.field.editorial_content.transparency_bar.field_transparency_bar_type
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: hqRuBrM9-YJ5Ghj-fz1_3PI6yi3LmAPJOYbLwyqTnBI
+id: editorial_content.transparency_bar.default
+targetEntityType: editorial_content
+bundle: transparency_bar
+mode: default
+content:
+  transparency_bar:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_transparency_bar_type: true
+  name: true
+  user_id: true

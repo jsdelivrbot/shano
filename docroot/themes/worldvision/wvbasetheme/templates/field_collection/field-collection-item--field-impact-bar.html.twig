@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Default theme implementation for field collection items.
+ *
+ * Available variables:
+ * - content: An array of comment items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {% hide(content.field_example) %} to temporarily suppress the printing
+ *   of a given element.
+ * - title: The (sanitized) field collection item label.
+ * - url: Direct url of the current entity if specified.
+ * - page: Flag for the full page state.
+ * - attributes: HTML attributes for the surrounding element.
+ *    Attributes include the 'class' information.
+ * - content_attributes: HTML attributes for the content element.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_entity()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = [
+'field-collection-item',
+'field-collection-item--name-' ~ field_collection_item.name|clean_class,
+'field-collection-item--view-mode-' ~ field_collection_item.view_mode|clean_class,
+] %}
+<div{{ attributes.addClass(classes).addClass('col-xs-12', 'col-sm-4') }}>
+  <div class="content vert-offset-xs-bottom-1"{{ content_attributes }}>
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        {{ content.field_impact_bar_image }}
+      </div>
+      <div class="col-xs-12">
+        <div class="editorial--content editorial-copy txt-content text-center">
+          <div class="font-size-xs">{{ content.field_impact_bar_description }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

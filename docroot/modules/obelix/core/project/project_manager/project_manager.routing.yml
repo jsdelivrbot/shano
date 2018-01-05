@@ -1,0 +1,7 @@
+project_manager.project_manager_updateProjects:
+  path: '/project_manager/update_projects'
+  defaults:
+    _controller: '\Drupal\project_manager\Controller\ProjectManager::updateProjects'
+    _title: 'Update Projects'
+  requirements:
+    _permission: 'access content'

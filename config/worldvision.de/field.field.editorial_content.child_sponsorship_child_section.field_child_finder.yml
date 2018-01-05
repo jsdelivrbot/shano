@@ -1,0 +1,23 @@
+uuid: 7cc40554-52c6-4269-ad94-69e2ce972a0e
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.child_sponsorship_child_section
+    - field.storage.editorial_content.field_child_finder
+  module:
+    - child_sponsorship
+_core:
+  default_config_hash: iBBlI7ySTNWq6_TbOVUWxtIBjM-w0Q7iNWS4aJfH95A
+id: editorial_content.child_sponsorship_child_section.field_child_finder
+field_name: field_child_finder
+entity_type: editorial_content
+bundle: child_sponsorship_child_section
+label: 'Child finder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: child_finder_item

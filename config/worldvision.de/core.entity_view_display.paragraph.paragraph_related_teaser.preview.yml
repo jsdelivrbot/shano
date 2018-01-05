@@ -1,0 +1,22 @@
+uuid: 3d1676a8-846d-4b9c-9956-c6a10dfcf02a
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.paragraph_related_teaser.field_paragraph_relation_teaser
+    - paragraphs.paragraphs_type.paragraph_related_teaser
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: kaXWbi5h5jqM_QjqSBmXCmwxuj-1jKJLEcrlPKP5htk
+id: paragraph.paragraph_related_teaser.preview
+targetEntityType: paragraph
+bundle: paragraph_related_teaser
+mode: preview
+content: {  }
+hidden:
+  created: true
+  field_paragraph_relation_teaser: true
+  uid: true

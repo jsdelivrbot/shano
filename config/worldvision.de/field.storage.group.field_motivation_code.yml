@@ -1,0 +1,21 @@
+uuid: 0e7308be-1954-403e-9bcf-a0ee1a677fc3
+langcode: de
+status: true
+dependencies:
+  module:
+    - group
+id: group.field_motivation_code
+field_name: field_motivation_code
+entity_type: group
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

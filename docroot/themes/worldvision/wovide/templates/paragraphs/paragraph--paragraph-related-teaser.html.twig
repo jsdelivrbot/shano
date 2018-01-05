@@ -1,0 +1,12 @@
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+  <h2>{{'Das könnte Sie auch interessieren'|t}}</h2>
+
+  {{ content }}
+</div>

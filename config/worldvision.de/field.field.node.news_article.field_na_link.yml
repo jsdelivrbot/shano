@@ -1,0 +1,25 @@
+uuid: fa0dce52-98ca-4ba0-9774-611a782851ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_na_link
+    - node.type.news_article
+  module:
+    - link
+_core:
+  default_config_hash: rcpXNBonByTDL15U1D4txGVB2E_H52SyBKYK4O9FnjU
+id: node.news_article.field_na_link
+field_name: field_na_link
+entity_type: node
+bundle: news_article
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

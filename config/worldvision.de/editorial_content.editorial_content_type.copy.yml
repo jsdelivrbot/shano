@@ -1,0 +1,9 @@
+uuid: 460be909-c694-4458-8fe9-c3c812e40905
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cFENtFMkQXbL2DM_CVpELKIt9WLPM7XwOLL-O6sg5KM
+id: copy
+label: Copy
+category: 'Standard block'

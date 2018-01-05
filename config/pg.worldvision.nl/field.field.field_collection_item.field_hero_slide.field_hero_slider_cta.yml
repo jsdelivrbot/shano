@@ -1,0 +1,25 @@
+uuid: b74690bd-0f96-4522-af6a-403dd5097e9a
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_hero_slider_cta
+    - field_collection.field_collection.field_hero_slide
+  module:
+    - link
+_core:
+  default_config_hash: ytt5g4-rw2UXQC19SIj81lgYzuo-9FlxehJcqQSa0gE
+id: field_collection_item.field_hero_slide.field_hero_slider_cta
+field_name: field_hero_slider_cta
+entity_type: field_collection_item
+bundle: field_hero_slide
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

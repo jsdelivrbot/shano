@@ -1,0 +1,31 @@
+{% if slides %}
+  <div{{ attributes.addClass('editorial--content', 'img-content') }}>
+    <div class="editorial-hero-slider">
+      {% if preview_video_id %}
+        <div class="editorial-hero-slider-preview-video hidden-xs">
+          <div class="yt-embed-container">
+            <div class="yt-control-lockout"></div>
+            <div id="yt-container-{{ id }}"
+                 class="yt-container"
+                 data-entity-id="{{ id }}"
+                 data-yt-id="{{ preview_video_id }}"></div>
+          </div>
+          <div class="yt-preview-img">
+            {{ preview_video_image }}
+            <div class="yt-loading">
+              <div class="uil-ring-css" style='transform:scale(0.49);'><div></div><i class="icon-play"></i></div>
+            </div>
+          </div>
+          <div class="yt-cta">
+            <div class="text-center">{{ preview_video_cta }}</div>
+          </div>
+        </div>
+      {% endif %}
+
+      {# @todo merge this two divs #}
+      <div{{ content_attributes.addClass('inner-content') }}>
+        {{ slides }}
+      </div>
+    </div>
+  </div>
+{% endif %}

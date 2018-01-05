@@ -1,0 +1,90 @@
+<article{{ attributes }}>
+
+    <div class="container">
+
+        {{ title_prefix }}
+        {% if not page %}
+            <div class="row">
+                <h2{{ title_attributes }}>
+                    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+                </h2>
+            </div>
+        {% endif %}
+        {{ title_suffix }}
+
+        {% if display_submitted %}
+            <div class="row">
+                <footer>
+                    {{ author_picture }}
+                    <div{{ author_attributes }}>
+                        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+                        {{ metadata }}
+                    </div>
+                </footer>
+            </div>
+        {% endif %}
+
+    </div>
+
+    {{ content.field_pdp_header_image }}
+
+    <div class="container">
+        <div{{ content_attributes }}>
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <h2>{{ content.field_pdp_headline }}</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+                    <div class="public-donor-divider"></div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="pdp-label">{{ 'Project time period' |trans }}</div>
+                            <strong>{{ content.field_pdp_from['0']['#text'] }} - {{ content.field_pdp_to['0']['#text'] }}</strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="pdp-label">{{ 'Country' |trans }}</div>
+                            <strong>
+                                {% set countries = [] %}
+
+                                {% for country in content.field_pdp_country  %}
+                                    {% if country['#country'].name[0].value %}
+                                        {% set countries = countries|merge([country['#country'].name[0].value]) %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                {{ countries|join(', ') }}
+                            </strong>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="pdp-label">{{ 'Financial amount' |trans }}</div>
+                            <strong>{{ content.field_pdp_volume['0']['#markup'] }}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="public-donor-divider"></div>
+
+                    {{ content.field_pdp_founded_by }}
+
+                    <div class="public-donor-divider"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    {{ content.field_pdp_description }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</article>

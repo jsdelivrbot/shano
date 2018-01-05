@@ -1,0 +1,26 @@
+uuid: a23559b5-7b4d-44d9-8220-75e826498114
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.geo_object.field_highlighted
+  module:
+    - map
+_core:
+  default_config_hash: rurO-leIy8tkNx2cFgAGhFHjIEVkG2LjQFaAui7T6fo
+id: geo_object.geo_object.field_highlighted
+field_name: field_highlighted
+entity_type: geo_object
+bundle: geo_object
+label: highlighted
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: highlighted
+  off_label: default
+field_type: boolean

@@ -1,0 +1,24 @@
+uuid: 4f2c1d2a-ba4c-4ce1-a83f-9d8fe7d8159b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.map.field_lng
+  module:
+    - map
+id: map.map.field_lng
+field_name: field_lng
+entity_type: map
+bundle: map
+label: Lng
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

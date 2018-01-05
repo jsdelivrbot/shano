@@ -1,0 +1,26 @@
+uuid: 6c176ba0-c498-432a-b304-71fb0d01a93f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.project.field_numberofunsponsored
+  module:
+    - project
+_core:
+  default_config_hash: iX2HE5Q9buX-zqBKLU-ci0NbPNlZ9pzy1coXcB-IO6E
+id: project.project.field_numberofunsponsored
+field_name: field_numberofunsponsored
+entity_type: project
+bundle: project
+label: 'number of unsponsored'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

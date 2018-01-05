@@ -1,0 +1,21 @@
+.editorial-quotation--quote {
+  display: block;
+  margin: 0;
+}
+.editorial-quotation--quote span{
+  line-height: 1.325em;
+}
+.editorial-quotation--quote:before {
+  content: "\201C";
+  font-size: 1.5em;
+}
+
+.editorial-quotation--quote:after {
+  content: "\201D";
+  font-size: 1.5em;
+}
+
+.editorial-quotation--source {
+  display: block;
+  padding-top: .5em;
+}

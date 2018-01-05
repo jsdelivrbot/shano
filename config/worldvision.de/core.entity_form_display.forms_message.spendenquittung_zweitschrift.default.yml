@@ -1,0 +1,49 @@
+uuid: d59ca835-016b-4453-909c-d8ee2bd1d519
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.spendenquittung_zweitschrift.field_spendenquittung
+    - field.field.forms_message.spendenquittung_zweitschrift.field_user_data
+    - forms_suite.form.spendenquittung_zweitschrift
+  module:
+    - forms_suite
+id: forms_message.spendenquittung_zweitschrift.default
+targetEntityType: forms_message
+bundle: spendenquittung_zweitschrift
+mode: default
+content:
+  copy:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_spendenquittung:
+    type: wovi_donation_receipt_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,36 @@
+.editorial-overlay-wrapper {
+  background: rgba(0, 0, 0, .75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  z-index: 15;
+}
+
+.editorial-overlay-wrapper .editorial-overlay-title {
+  margin: 0 0 1em;
+  text-transform: uppercase;
+}
+
+.editorial-overlay-wrapper .editorial-overlay-content {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 0 50px #000;
+  margin: 55px 15px 15px;
+  padding: 50px;
+  position: relative;
+}
+.editorial-overlay-wrapper .editorial-overlay-content .form-actions {
+  position: absolute;
+  bottom: 2px;
+  right: 35px;
+}
+
+body {
+  overflow: hidden !important;
+}

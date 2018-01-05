@@ -1,0 +1,24 @@
+uuid: d7433806-b27e-4aaa-a89f-9b340ea833f9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.contact_company_cooperation
+  module:
+    - forms_suite
+_core:
+  default_config_hash: flySRblF21em_0rcW9uGCzuIfJCHmSCOuv63TGz6IdQ
+id: forms_message.contact_company_cooperation.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: contact_company_cooperation
+label: message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

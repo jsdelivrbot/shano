@@ -1,0 +1,43 @@
+uuid: 7e79ef95-ae12-4f5c-8c96-bd56716698bd
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.contact.field_message
+    - field.field.forms_message.contact.field_newsletter
+    - field.field.forms_message.contact.field_user_data
+    - forms_suite.form.contact
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: Pb46Q0NFGvRXXZOlJuADR_SAY1AXyNwwJWETwbyIJLo
+id: forms_message.contact.default
+targetEntityType: forms_message
+bundle: contact
+mode: default
+content:
+  field_message:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_user_data:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden: {  }

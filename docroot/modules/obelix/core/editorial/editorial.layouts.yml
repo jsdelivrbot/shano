@@ -1,0 +1,70 @@
+editorial-12:
+  label: One Column (100)
+  category: Editorial Layouts
+  path: templates/layouts/bootstrap-12
+  icon: bootstrap-12.png
+  template: bootstrap-12
+  regions:
+    main:
+      label: Main
+editorial-6-6:
+  label: Two Column (50-50)
+  category: Editorial Layouts
+  path: templates/layouts/bootstrap-6-6
+  icon: bootstrap-6-6.png
+  template: bootstrap-6-6
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+editorial-4-8:
+  label: Two Column (33-66)
+  category: Editorial Layouts
+  path: templates/layouts/bootstrap-4-8
+  icon: bootstrap-4-8.png
+  template: bootstrap-4-8
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+editorial-8-4:
+  label: Two Column (66-33)
+  category: Editorial Layouts
+  path: templates/layouts/bootstrap-8-4
+  icon: bootstrap-8-4.png
+  template: bootstrap-8-4
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+editorial-4-4-4:
+  label: Three Column (33-33-33)
+  category: Editorial Layouts
+  path: templates/layouts/bootstrap-4-4-4
+  template: bootstrap-4-4-4
+  icon: bootstrap-4-4-4.png
+  regions:
+    left:
+      label: Left
+    main:
+      label: Main
+    right:
+      label: Right
+editorial-3-3-3-3:
+  label: Four Column (25-25-25-25)
+  category: Editorial Layouts
+  path: templates/layouts/bootstrap-3-3-3-3
+  template: bootstrap-3-3-3-3
+  icon: bootstrap-3-3-3-3.png
+  regions:
+    one:
+      label: One
+    two:
+      label: Two
+    three:
+      label: Three
+    four:
+      label: Four

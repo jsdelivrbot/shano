@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_image_low_height.field_paragraph_image_low_height
+    - paragraphs.paragraphs_type.paragraph_image_low_height
+    - responsive_image.styles.low_height
+  module:
+    - responsive_image
+id: paragraph.paragraph_image_low_height.default
+targetEntityType: paragraph
+bundle: paragraph_image_low_height
+mode: default
+content:
+  field_paragraph_image_low_height:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: low_height
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+hidden:
+  created: true
+  uid: true

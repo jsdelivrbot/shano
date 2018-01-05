@@ -1,0 +1,11 @@
+uuid: a9de3fd6-228c-470a-88d6-54a5ff9712cd
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ydpmSCtxLjO9xqkBxObkeYx0Bf2dkW-d8bB_6Q1Ggjs
+id: node
+label: Inhalt
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'

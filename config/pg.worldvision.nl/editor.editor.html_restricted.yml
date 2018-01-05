@@ -1,0 +1,56 @@
+uuid: bc7a07e6-6ae9-4170-aeba-f9e57818238b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - filter.format.html_restricted
+  module:
+    - ckeditor
+format: html_restricted
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - '-'
+            - Outdent
+            - Indent
+            - '-'
+            - RemoveFormat
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Tools
+          items:
+            - Source
+        -
+          name: Insert
+          items:
+            - PasteText
+            - PasteFromWord
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

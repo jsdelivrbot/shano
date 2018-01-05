@@ -1,0 +1,32 @@
+uuid: af9b5cac-e8e8-4aac-abad-3715c9c9b8e8
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.field.editorial_content.youtube_video.field_video_headline
+    - field.field.editorial_content.youtube_video.field_video_preview_image
+    - field.field.editorial_content.youtube_video.field_video_subtitle
+    - field.field.editorial_content.youtube_video.field_youtube_link
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: RvVuMpdXjcHr7BFZ7iNlS9u9GFMdiU_1oC4iWQVPULI
+id: editorial_content.youtube_video.default
+targetEntityType: editorial_content
+bundle: youtube_video
+mode: default
+content:
+  youtube_video:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_video_headline: true
+  field_video_preview_image: true
+  field_video_subtitle: true
+  field_youtube_link: true
+  name: true
+  user_id: true

@@ -1,0 +1,32 @@
+uuid: 6a069090-13e3-4259-8846-13c8118546fd
+langcode: nl
+status: true
+dependencies:
+  module:
+    - field_collection
+    - file
+    - image
+_core:
+  default_config_hash: FENF7lvIsgIV_GCGskUMDhXc4OMm5bITKJn9TQE4ZeU
+id: field_collection_item.field_image
+field_name: field_image
+entity_type: field_collection_item
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

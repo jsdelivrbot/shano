@@ -1,0 +1,21 @@
+uuid: e092fdbd-a785-48fc-964f-5ab7f9e4851c
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_campaign_teaser_headline
+_core:
+  default_config_hash: bsuQ5o2k4c3lGxwopkAoBEkwubeRxthAuCR-kcNLfwg
+id: editorial_content.campaign_teaser.field_campaign_teaser_headline
+field_name: field_campaign_teaser_headline
+entity_type: editorial_content
+bundle: campaign_teaser
+label: Headline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

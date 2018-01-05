@@ -1,0 +1,23 @@
+uuid: d27bf203-8999-4ed3-a3fa-a5fa2fe8106e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - map
+_core:
+  default_config_hash: 5ZBBqDQwt9fXi1mLEnQD5hkBTl-lFv-7WNar8Xo7J6I
+id: geo_object.field_google_geo_object
+field_name: field_google_geo_object
+entity_type: geo_object
+type: google_geo_object_field_type
+settings:
+  is_ascii: false
+  max_length: 255
+  case_sensitive: false
+module: map
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

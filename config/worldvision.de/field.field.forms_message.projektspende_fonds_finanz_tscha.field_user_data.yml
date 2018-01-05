@@ -1,0 +1,24 @@
+uuid: 520ce524-0cd2-42b4-a8b0-e0f31cc823a2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.projektspende_fonds_finanz_tscha
+  module:
+    - forms_suite
+id: forms_message.projektspende_fonds_finanz_tscha.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_tscha
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

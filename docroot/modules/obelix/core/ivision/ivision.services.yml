@@ -1,0 +1,5 @@
+services:
+  ivision.subscriber:
+    class: Drupal\ivision\IVision
+    tags:
+      - { name: event_subscriber }

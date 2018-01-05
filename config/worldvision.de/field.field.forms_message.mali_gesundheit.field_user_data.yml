@@ -1,0 +1,24 @@
+uuid: 67826a13-0e6c-4c11-abdd-74a8a704f495
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.mali_gesundheit
+  module:
+    - forms_suite
+id: forms_message.mali_gesundheit.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: mali_gesundheit
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

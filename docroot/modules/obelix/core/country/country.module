@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains country.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function country_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the country module.
+    case 'help.page.country':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Informations about the World Vision Countrys') . '</p>';
+      return $output;
+
+    default:
+  }
+}

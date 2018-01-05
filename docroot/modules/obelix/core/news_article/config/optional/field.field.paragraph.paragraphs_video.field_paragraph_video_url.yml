@@ -1,0 +1,27 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.storage.paragraph.field_paragraph_video_url
+    - paragraphs.paragraphs_type.paragraphs_video
+id: paragraph.paragraphs_video.field_paragraph_video_url
+field_name: field_paragraph_video_url
+entity_type: paragraph
+bundle: paragraphs_video
+label: 'Video URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      youtube_video: youtube_video
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

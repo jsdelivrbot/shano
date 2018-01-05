@@ -1,0 +1,23 @@
+uuid: 5a3f6983-9998-4224-919a-6e9f8e34b394
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_description
+    - node.type.public_donor_overview
+  module:
+    - text
+_core:
+  default_config_hash: MIuAtaR0jVzjszecPuZJRcqCoWX-cKdpXIRYGf9kh2g
+id: node.public_donor_overview.field_pdp_description
+field_name: field_pdp_description
+entity_type: node
+bundle: public_donor_overview
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

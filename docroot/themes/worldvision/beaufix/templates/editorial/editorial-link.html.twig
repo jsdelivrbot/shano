@@ -1,0 +1,4 @@
+<div{{ attributes.addClass('editorial--content', 'editorial-link', 'font-size-xs') }}>
+  <a{{ content_attributes.addClass('link-underlined') }} {% if 'http' in content.uri %}{% endif %}>{{ title }}</a>
+  {{ link_target }}
+</div>

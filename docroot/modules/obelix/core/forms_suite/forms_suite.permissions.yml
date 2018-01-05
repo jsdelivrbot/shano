@@ -1,0 +1,6 @@
+administer form-suite forms:
+  title: 'Administer forms suite forms and settings'
+access form-suite forms:
+  title: 'Use the forms suite forms'
+access form-suite submitted forms:
+  title: 'Access submitted forms'

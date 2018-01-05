@@ -1,0 +1,23 @@
+uuid: 7334691c-8930-4545-a964-ae6fb8df042e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_source_url
+    - node.type.job_offer
+  module:
+    - link
+id: node.job_offer.field_job_source_url
+field_name: field_job_source_url
+entity_type: node
+bundle: job_offer
+label: 'Source url'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

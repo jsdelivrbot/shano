@@ -1,0 +1,22 @@
+uuid: 4ad17a5f-7f67-4adb-b35e-961f66934a10
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kontaktformular_sigrid_unseld_wi
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_sigrid_unseld_wi.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kontaktformular_sigrid_unseld_wi
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

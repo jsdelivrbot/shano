@@ -1,0 +1,22 @@
+uuid: 9f2139f5-d54f-479f-ae86-95ec0d0c500d
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: Wx4aEl9iS4FWD1yB3iOK9h73tvd2eg0J3TAzXKk0c1I
+id: node.field_transparency_bar_top
+field_name: field_transparency_bar_top
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

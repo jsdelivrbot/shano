@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Contains social_share.module..
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_help().
+ */
+function social_share_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the social_share module.
+    case 'help.page.social_share':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A editorial type for social shares (Facebook, Twitter, Mail).') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function social_share_preprocess_editorial_social_share(&$element) {
+  $element['#attached']['library'][] = 'social_share/social-share';
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function social_share_theme($existing, $type, $theme, $path) {
+  return array(
+    'editorial_social_share' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'editorial-social-share',
+    ],
+  );
+}
+
+
+/**
+ * Generates the markup for the editorial_content transparency bar.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see social_share_editorial_content_view
+ */
+
+function social_share_editorial_content_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+
+  if (isset($_SERVER['HTTPS'])) {
+    $serverProtocol = "https";
+  }
+  else {
+    $serverProtocol = "http";
+  }
+
+  if ($display->getComponent('social_share')) {
+    $build['social_share'] = [
+      '#theme' => 'editorial_social_share',
+      '#attributes' => $build['#attributes'] ? $build['#attributes'] : [],
+      '#content_attributes' => [],
+      '#id' => $entity->id(),
+      '#content' => [
+        'share_text' => $entity->field_share_text[0]->value,
+        'page_title' => \Drupal::service('title_resolver')
+          ->getTitle(\Drupal::request(), \Drupal::routeMatch()
+            ->getRouteObject()),
+        'page_path' => $serverProtocol . '://' . $_SERVER['HTTP_HOST'] . \Drupal::service('path.alias_manager')
+            ->getAliasByPath(\Drupal::service('path.current')->getPath()),
+      ]
+    ];
+  }
+}
+
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function social_share_entity_extra_field_info() {
+  $extra = [];
+
+  $extra['editorial_content']['social_share']['display']['social_share'] = array(
+    'label' => t('Social share'),
+    'description' => t('The rendered social share'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}
+
+function template_preprocess_editorial_social_share(&$variables){
+  $id = Html::getUniqueId('editorial-social-share--' . $variables['id']);
+
+  $variables['attributes']['id'] = $id;
+  $variables['#attached']['library'][] = 'social_share/social-share';
+}

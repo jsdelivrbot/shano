@@ -1,0 +1,6 @@
+uuid: null
+langcode: en
+status: true
+dependencies: {  }
+id: field_success_bar
+label: field_success_bar

@@ -1,0 +1,86 @@
+uuid: cf985c79-79ee-4209-9875-1bcb561c9dde
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.public_donor_overview.field_metatags
+    - field.field.node.public_donor_overview.field_pdp_button
+    - field.field.node.public_donor_overview.field_pdp_description
+    - field.field.node.public_donor_overview.field_pdp_headline
+    - field.field.node.public_donor_overview.field_pdp_subline
+    - field.field.node.public_donor_overview.field_pdp_teaser
+    - node.type.public_donor_overview
+  module:
+    - entity_reference_revisions
+    - link
+    - metatag
+    - text
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: sbj4rPFAuoF0KbUXSGcWuxdOM7WoBYZoqnLCc47lBbk
+id: node.public_donor_overview.default
+targetEntityType: node
+bundle: public_donor_overview
+mode: default
+content:
+  field_metatags:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_pdp_button:
+    weight: 105
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_pdp_description:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_pdp_headline:
+    weight: 101
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pdp_subline:
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pdp_teaser:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

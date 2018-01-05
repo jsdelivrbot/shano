@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.social_share
+    - field.field.editorial_content.social_share.field_share_text
+id: editorial_content.social_share.default
+targetEntityType: editorial_content
+bundle: social_share
+mode: default
+content:
+  social_share:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_share_text: true
+  name: true
+  user_id: true

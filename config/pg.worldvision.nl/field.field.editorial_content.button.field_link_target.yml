@@ -1,0 +1,25 @@
+uuid: 4f4cc2ea-0c12-472f-8d1d-3ccc76316072
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.storage.editorial_content.field_link_target
+  module:
+    - options
+_core:
+  default_config_hash: w-vurWMQ6juPhMauZr3t4i2MTk-l9wow3oT5-YB2dsE
+id: editorial_content.button.field_link_target
+field_name: field_link_target
+entity_type: editorial_content
+bundle: button
+label: 'Link target'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

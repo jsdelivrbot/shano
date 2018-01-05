@@ -1,0 +1,78 @@
+id: children
+label: Children From Simma Platform
+migration_tags:
+  - WVI
+migration_group: wvi
+source:
+  plugin: children
+  track_changes: true
+destination:
+  plugin: entity:child
+process:
+  ivision_id:
+    plugin: wvi_ivision_id
+    source: id
+
+  status:
+    plugin: wvi_child_status
+
+  field_reserved: reserved
+  field_child_alias: url_alias
+
+  field_child_birthdate:
+    plugin: date
+    source: birthdate
+
+  field_child_brothers: brothers
+  field_child_childsequence: childsequence
+  field_child_video_url:
+    plugin: child_rest_video
+    source: video_url
+
+  field_child_image:
+   plugin: child_rest_image
+   source: image
+   alt_source: 'givenname'
+   path_sources:
+     - 'id'
+     - 'childsequence'
+     - 'genderdesc'
+     - 'givenname'
+     - 'familyname'
+     - 'child_project'
+
+  field_child_choredesc: choredesc
+  field_child_familyname: familyname
+  field_child_fatherjobstatusdesc: fatherjobstatusdesc
+  field_child_fatherstatusdesc: fatherstatusdesc
+  field_child_favouritesubjectdesc: favouritesubjectdesc
+  field_child_genderdesc: genderdesc
+  field_child_givenname: givenname
+  field_child_gradenumber: gradenumber
+  field_child_handicapdesc: handicapdesc
+  field_child_healthdesc: healthdesc
+  field_child_liveswithdesc: liveswithdesc
+  field_child_localchildfamilyname: localchildfamilyname
+  field_child_localchildgivenname: localchildgivenname
+  field_child_motherjobstatusdesc: motherjobstatusdesc
+  field_child_motherstatusdesc: motherstatusdesc
+  field_child_noschoolreasondesc: noschoolreasondesc
+  field_child_peoplegroupdesc: peoplegroupdesc
+  field_child_playdesc: playdesc
+  field_child_childtext1: childtext1
+  field_child_childtext2: childtext2
+  field_child_childtext2: childtext3
+
+  # Relate projects from sibling migration to fill entity reference field.
+  field_child_project:
+    plugin: migration
+    migration: projects
+    source: child_project
+
+  field_child_schoolleveldesc: schoolleveldesc
+  field_child_sisters: sisters
+  field_child_status: status
+
+migration_dependencies:
+  optional:
+    - projects

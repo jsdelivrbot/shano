@@ -1,0 +1,27 @@
+uuid: 2f3aa9d4-93d1-4622-8182-45129aad27ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_giftshop
+    - forms_suite.form.test_g6k_gutschein
+  module:
+    - giftshop
+id: forms_message.test_g6k_gutschein.field_giftshop
+field_name: field_giftshop
+entity_type: forms_message
+bundle: test_g6k_gutschein
+label: giftshop
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    amount: 0
+    gifts: 'a:0:{}'
+    gift_price: 0
+default_value_callback: ''
+settings:
+  headline: 'TEST Giftshop'
+  subline: ''
+field_type: wovi_giftshop_field

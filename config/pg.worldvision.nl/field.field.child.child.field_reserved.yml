@@ -1,0 +1,24 @@
+uuid: 89dcaac3-dda8-4b30-92ec-4ddbdce3e125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_reserved
+  module:
+    - child
+id: child.child.field_reserved
+field_name: field_reserved
+entity_type: child
+bundle: child
+label: Reserved
+description: 'If reserved child can''t be seen in site but dedicated hidden child page that is available only by link'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

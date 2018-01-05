@@ -1,0 +1,23 @@
+uuid: b54fbfc1-5e74-4012-b553-ba1e45981873
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: IC_KYx9k5RuzmDL5K0XH37zLSwodsTkrk3bjHbLVn-o
+id: node.field_pdp_subline
+field_name: field_pdp_subline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

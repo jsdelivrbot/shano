@@ -1,0 +1,7 @@
+export:
+  allowed_field_types: 'integer, boolean, created, string, wovi_child_field, wovi_donation_amount_field, wovi_payment_method_field, wovi_user_data_field, wovi_giftshop_field'
+  allowed_properties: 'id, created, motivation_code, designation_code'
+  excluded_fields: 'field_form_sql_export,field_user_data_firstName'
+_core:
+  default_config_hash: EFpLX8oWp-UUsfNHFnxSsaJ-bJQihYRtwxmcB9a8ggg
+langcode: nl

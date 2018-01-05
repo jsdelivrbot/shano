@@ -1,0 +1,11 @@
+uuid: cf358f05-6b24-4348-9be6-2534318a086f
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.offcanvas_page
+id: node.offcanvas_page
+target_entity_type_id: node
+target_bundle: offcanvas_page
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,36 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.public_donor.field_public_donor_description
+    - field.field.node.public_donor.field_public_donor_logo
+    - field.field.node.public_donor.field_public_donor_name
+    - node.type.public_donor
+  module:
+    - responsive_image
+    - text
+    - user
+id: node.public_donor.teaser
+targetEntityType: node
+bundle: public_donor
+mode: teaser
+content:
+  field_public_donor_description:
+    type: text_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_public_donor_logo:
+    type: responsive_image
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_public_donor_name: true
+  langcode: true
+  links: true

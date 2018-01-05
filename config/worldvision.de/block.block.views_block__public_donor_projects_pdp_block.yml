@@ -1,0 +1,34 @@
+uuid: bcd049c4-3a0c-41c1-b391-daeffec7dd1d
+langcode: de
+status: true
+dependencies:
+  config:
+    - views.view.public_donor_projects
+  module:
+    - node
+    - views
+  theme:
+    - wovide
+_core:
+  default_config_hash: 7b8VF5ng-wfEDzi5TutWFx-GM-7TmHky8H464WNiMAk
+id: views_block__public_donor_projects_pdp_block
+theme: wovide
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:public_donor_projects-pdp_block'
+settings:
+  id: 'views_block:public_donor_projects-pdp_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      public_donor: public_donor
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

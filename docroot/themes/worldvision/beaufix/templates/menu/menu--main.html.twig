@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *
+ * @ingroup templates
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      {% set attributes = attributes.addClass('nav', 'navbar-nav', 'main-nav') %}
+    {% endif %}
+    <ul{{ attributes }}>
+      {% if menu_level == 0 %}
+        <li class="hidden-xs">
+          <button class="btn-icon btn-search search-toggle">
+            <i class="icon-search"></i>
+            <span class="sr-only">{{ 'Toggle search'|t }}</span>
+          </button>
+        </li>
+      {% endif %}
+      {% for item in items %}
+        {% if menu_level == 0 and item.is_expanded %}
+        <li{{ item.attributes.addClass('expanded', 'dropdown') }}>
+          <a href="{{ item.url }}" class="dropdown-toggle" data-target="#"
+             data-toggle="dropdown">{{ item.title }} <i
+              class="icon-arrow-down visible-xs"></i></a>
+        {% else %}
+          <li{{ item.attributes.addClass('dropdown') }}>
+          {{ link(item.title, item.url) }}
+        {% endif %}
+        {% if item.below %}
+          {% if menu_level == 0 %}
+            <div class="navbar-flyout-cont">
+            <div class="navbar-flyout-inner-cont">
+            <div class="col-sm-6 col-md-4">
+            <button class="btn-icon navbar-flyout-close hidden-xs"><i class="icon-cross"></i></button>
+          {% endif %}
+          {{ menus.menu_links(item.below, attributes.setAttribute('class', 'dropdown-menu'), menu_level + 1) }}
+          {% if menu_level == 0 %}
+            </div>
+            {% if item.flyout_teasers %}
+              <div class="flyout-teaser-cont hidden-xs">
+                {% for teaser in item.flyout_teasers %}
+                  {{ teaser }}
+                {% endfor %}
+              </div>
+            {% endif %}
+            </div>
+            <div class="clearfix"></div>
+            </div>
+          {% endif %}
+        {% endif %}
+        </li>
+
+        {# TODO WoVi DE specific #}
+        {% if menu_level == 0 and loop.last %}
+          <li><a class="hidden-xs btn-beauty" href="/formulare/kinderpatenschaft-uebernehmen"><i
+                class="visible-md-inline visible-lg-inline icon-hand-shake"></i>Pate werden</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,32 @@
+obelix_contacts.settings:
+  type: config_object
+  label: 'WV Contacts'
+  mapping:
+    globalPhone:
+      type: label
+      label: 'Global Phone'
+    openingHours:
+      type: label
+      label: 'Opening Hours'
+    globalEmail:
+      type: label
+      label: 'Global email'
+    generalDonationAccount:
+      value:
+        type: text
+        label: 'generalDonationAccount'
+    creditorIdNumber:
+      type: label
+      label: 'creditorIdNumber'
+    ourFacebookPage:
+      type: label
+      label: 'ourFacebookPage'
+    ourTwitterPage:
+      type: label
+      label: 'ourTwitterPage'
+    ourGooglePlusPage:
+      type: label
+      label: 'ourGooglePlusPage'
+    ourXingPage:
+      type: label
+      label: 'ourXingPage'

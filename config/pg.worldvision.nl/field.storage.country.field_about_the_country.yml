@@ -1,0 +1,19 @@
+uuid: 8cce1583-373a-483f-89fc-78dc588b8d38
+langcode: nl
+status: true
+dependencies:
+  module:
+    - country
+    - text
+id: country.field_about_the_country
+field_name: field_about_the_country
+entity_type: country
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

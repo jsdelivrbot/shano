@@ -1,0 +1,7 @@
+{% if content %}
+  <div{{ attributes.addClass('editorial--content', 'img-content') }}>
+    <div{{ content_attributes.addClass('editorial-story-teaser') }}>
+      {{ content }}
+    </div>
+  </div>
+{% endif %}

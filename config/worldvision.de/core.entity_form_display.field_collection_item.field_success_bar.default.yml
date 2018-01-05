@@ -1,0 +1,32 @@
+uuid: c9277c00-fa04-4204-a68e-d195ac20439e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_success_bar.field_success_bar_description
+    - field.field.field_collection_item.field_success_bar.field_success_bar_value
+    - field_collection.field_collection.field_success_bar
+_core:
+  default_config_hash: otaA4HXB052bULzDxozSyafzXXkq7WABnfnd4eZTZwc
+id: field_collection_item.field_success_bar.default
+targetEntityType: field_collection_item
+bundle: field_success_bar
+mode: default
+content:
+  field_success_bar_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_success_bar_value:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

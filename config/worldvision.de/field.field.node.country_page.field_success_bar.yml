@@ -1,0 +1,27 @@
+uuid: bc4116d6-f1f3-4a3e-81cf-8a5620cba684
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_success_bar
+    - node.type.country_page
+  module:
+    - field_collection
+_core:
+  default_config_hash: Haq3trzWWRUx__l3FQQlN3KwW6H1tBxDu4vMp7yCAgM
+id: node.country_page.field_success_bar
+field_name: field_success_bar
+entity_type: node
+bundle: country_page
+label: 'Success bar'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+  - {  }
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

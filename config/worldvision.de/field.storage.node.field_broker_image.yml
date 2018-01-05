@@ -1,0 +1,30 @@
+uuid: cdacef27-c2a4-4006-b30c-1d696d8a8173
+langcode: de
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_broker_image
+field_name: field_broker_image
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

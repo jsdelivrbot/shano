@@ -1,0 +1,24 @@
+uuid: b7b9f84b-e681-46bf-88c6-afc0d7c989ab
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.kongo_rebound
+  module:
+    - forms_suite
+id: forms_message.kongo_rebound.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: kongo_rebound
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

@@ -1,0 +1,7 @@
+uuid: 89a1a416-7514-44ac-8051-9561d22f92c4
+langcode: de
+status: true
+dependencies: {  }
+id: quotation
+label: Quotation
+category: 'Standard block'

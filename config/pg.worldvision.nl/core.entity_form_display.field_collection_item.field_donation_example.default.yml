@@ -1,0 +1,43 @@
+uuid: 041f7a28-f937-4bef-ac03-d3e64febd5df
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_donation_example.field_description
+    - field.field.field_collection_item.field_donation_example.field_donation_amount
+    - field.field.field_collection_item.field_donation_example.field_image
+    - field_collection.field_collection.field_donation_example
+    - image.style.thumbnail
+  module:
+    - image
+_core:
+  default_config_hash: Z-bTX6A-rhBtiT8UhVy1ccn3F5tX0gyePhcNK-u1faY
+id: field_collection_item.field_donation_example.default
+targetEntityType: field_collection_item
+bundle: field_donation_example
+mode: default
+content:
+  field_description:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_donation_amount:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden: {  }

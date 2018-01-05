@@ -1,0 +1,31 @@
+uuid: fce5924c-4109-4bca-8ff4-69e3f39b4d5b
+langcode: de
+status: true
+dependencies: {  }
+id: kontakt_personal_und_unternehmen
+label: 'Kontaktformular Personal und Unternehmenskultur'
+recipients:
+  - tobias_nickel@wvi.org
+reply: "Sehr [wovi_user_data_field:personalized_salutation] [wovi_user_data_field:surname],\r\n\r\nvielen Dank für Ihre Nachricht, die wir soeben erhalten haben.  \r\n\r\nWir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen. \r\n\r\nMit freundlichem Gruß\r\n\r\nIhr Team von\r\nWorld Vision Deutschland e.V.\r\nAm Zollstock 2 - 4\r\n61381 Friedrichsdorf\r\nServicetelefon: 0800 - 0 10 20 22*  \r\nE-Mail: info@worldvision.de\r\nhttp://www.worldvision.de\r\n\r\n----------------------------------------------------------------------\r\n\r\nDiese E-Mail wurde automatisch generiert.\r\n\r\n*kostenfreies Servicetelefon"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: 'World Vision - Vielen Dank für Ihre Nachricht'
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: '401992'
+additional_tracking: ''
+alias: /formulare/jobs-kontakt
+headline: 'Kontakt zum Team Personal und Unternehmenskultur'
+description: ''
+disclaimer: ''
+submit_button: Absenden

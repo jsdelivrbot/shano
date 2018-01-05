@@ -1,0 +1,56 @@
+uuid: dae9cc22-d5fd-4020-8073-df09eb449003
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.projektspende.field_donation_amount
+    - field.field.forms_message.projektspende.field_donation_period
+    - field.field.forms_message.projektspende.field_newsletter
+    - field.field.forms_message.projektspende.field_payment_method
+    - field.field.forms_message.projektspende.field_user_data
+    - forms_suite.form.projektspende
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.projektspende.default
+targetEntityType: forms_message
+bundle: projektspende
+mode: default
+content:
+  field_donation_amount:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_period:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_payment_method:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_payment_method_widget
+    region: content
+  field_user_data:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_user_data_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

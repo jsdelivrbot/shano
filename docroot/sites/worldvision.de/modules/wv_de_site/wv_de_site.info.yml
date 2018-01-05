@@ -1,0 +1,8 @@
+name: WV DE Site
+type: module
+description: Provides basic DE site related feautes, config forms, base hooks etc.
+core: 8.x
+package: Obelix (DE)
+
+dependencies:
+  - wv_site

@@ -1,0 +1,19 @@
+uuid: 2abe9630-8614-4804-87c3-5048df4ddf74
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.story_teaser
+    - field.storage.editorial_content.field_teaser_headline
+id: editorial_content.story_teaser.field_teaser_headline
+field_name: field_teaser_headline
+entity_type: editorial_content
+bundle: story_teaser
+label: Headline
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

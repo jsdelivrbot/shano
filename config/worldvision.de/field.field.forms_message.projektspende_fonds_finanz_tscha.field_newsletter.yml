@@ -1,0 +1,22 @@
+uuid: dbd5f87c-2d3b-4df2-b860-7dbfc93eaf6d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.projektspende_fonds_finanz_tscha
+  module:
+    - forms_suite
+id: forms_message.projektspende_fonds_finanz_tscha.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_tscha
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

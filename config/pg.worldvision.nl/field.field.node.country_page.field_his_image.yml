@@ -1,0 +1,40 @@
+uuid: 3e616f44-034b-4e0a-a7d2-bdc9d1397800
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_his_image
+    - node.type.country_page
+  module:
+    - image
+_core:
+  default_config_hash: ZRzJVDYZV6Zpja8IOcGjHY-v1M3xrZPFC0AEIe9_Az4
+id: node.country_page.field_his_image
+field_name: field_his_image
+entity_type: node
+bundle: country_page
+label: 'Child image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'country-page/images/his/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

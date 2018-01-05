@@ -1,0 +1,83 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_hero_slide.field_alignment
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_cta
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_headline
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_image
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_m_image
+    - field.field.field_collection_item.field_hero_slide.field_hero_slider_subtitle
+    - field.field.field_collection_item.field_hero_slide.field_link_target
+    - field.field.field_collection_item.field_hero_slide.field_text_link
+    - field.field.field_collection_item.field_hero_slide.field_youtube_link
+    - field_collection.field_collection.field_hero_slide
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+id: field_collection_item.field_hero_slide.default
+targetEntityType: field_collection_item
+bundle: field_hero_slide
+mode: default
+content:
+  field_alignment:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_hero_slider_cta:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_hero_slider_headline:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_hero_slider_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_hero_slider_m_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_hero_slider_subtitle:
+    weight: 1
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    type: string_textfield
+  field_link_target:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_text_link:
+    type: link_default
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_youtube_link:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden: {  }

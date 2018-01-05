@@ -1,0 +1,31 @@
+uuid: 0d6cd9bb-55ce-44ff-8812-9ba169ccff2e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.code_embed
+    - field.field.editorial_content.code_embed.field_code
+id: editorial_content.code_embed.default
+targetEntityType: editorial_content
+bundle: code_embed
+mode: default
+content:
+  field_code:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

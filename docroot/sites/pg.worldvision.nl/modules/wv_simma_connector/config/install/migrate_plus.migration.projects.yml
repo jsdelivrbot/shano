@@ -1,0 +1,32 @@
+id: projects
+label: Projects From Simma Platform
+migration_tags:
+  - WVI
+migration_group: wvi
+source:
+  plugin: projects
+  track_changes: true
+destination:
+  plugin: entity:project
+process:
+  project_id: projectid
+  name: description
+  field_country: country_code
+  field_projecttext1: projecttext1
+migration_dependencies:
+  optional:
+    - countries
+
+# Country is entityreference we need to implement country import too.
+#  field_country: country
+#  field_enddate:
+#    plugin: date
+#    source: enddate
+#  field_startdate:
+#    plugin: date
+#    source: startdate
+#
+#  field_numberofdropped: numberofdropped
+#  field_numberofsponsored: numberofsponsored
+#  field_numberofunsponsored: numberofunsponsored
+#  field_totalofchildren: totalofchildren

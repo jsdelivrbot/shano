@@ -1,0 +1,20 @@
+uuid: a2f7e78b-2ceb-404c-a54a-d8615a2653c2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wovide
+_core:
+  default_config_hash: UajccyW5NOT3FoGhutlVQFIOTDV_rdC2kbXJHt8-VsA
+id: wovide_primaryadminactions
+theme: wovide
+region: controls
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primäre Admin-Aktionen'
+  provider: core
+  label_display: '0'
+visibility: {  }

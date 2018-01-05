@@ -1,0 +1,21 @@
+uuid: 299e5cd1-a6bc-4c38-b13a-e046b059a06b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.group.field_registration_confirm_text
+    - group.type.company
+  module:
+    - text
+id: group.company.field_registration_confirm_text
+field_name: field_registration_confirm_text
+entity_type: group
+bundle: company
+label: 'Registration confirm text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

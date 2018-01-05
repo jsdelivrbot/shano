@@ -1,0 +1,5 @@
+name: WV Site
+type: module
+description: Provides common features for all countries sites, e.g. forms configs.
+core: 8.x
+package: Obelix (Core)

@@ -1,0 +1,12 @@
+{% if content %}
+
+  {% if url %}
+    {% set prefix = "<a href=" ~ url ~ ">" %}
+    {% set suffix = "</a>" %}
+  {% endif %}
+
+  {{ prefix|raw }}
+    <{{ tag }}{{ content_attributes.addClass('font-size-m') }}>{{ content }}</{{ tag }}>
+  {{ suffix|raw }}
+
+{% endif %}

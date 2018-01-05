@@ -1,0 +1,9 @@
+uuid: 4ff5a735-b416-46e4-91e5-e2396e730637
+langcode: nl
+status: true
+dependencies: {  }
+id: node__offcanvas_page
+label: 'Content: Off-Canvas Page'
+tags:
+  title: '[node:title]'
+  robots: 'noindex, nofollow'

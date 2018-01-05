@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/wv_tools",
+  "type": "drupal-module",
+  "description": "Provides common tools for all multi sites, e.g. content deletion.",
+  "require": { }
+}

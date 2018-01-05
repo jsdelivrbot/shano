@@ -1,0 +1,23 @@
+uuid: 44d925b4-2de8-46c0-af9c-c8b12c7b4de5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_text
+    - paragraphs.paragraphs_type.paragraph_additional_text
+  module:
+    - text
+_core:
+  default_config_hash: TfXhjeKHRlihjBRhYpT92HUSs_rBdUyr9RQTuZ3Tigc
+id: paragraph.paragraph_additional_text.field_paragraph_text
+field_name: field_paragraph_text
+entity_type: paragraph
+bundle: paragraph_additional_text
+label: 'Additional text'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,37 @@
+uuid: a6a322a2-4770-49b0-a2f1-943dc54d7822
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.aktionsgruppen_kontaktformular_j
+  module:
+    - forms_suite
+id: forms_message.aktionsgruppen_kontaktformular_j.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: aktionsgruppen_kontaktformular_j
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    salutation: '1'
+    jobTitleCode: ''
+    firstName: Anika
+    surname: Scholz
+    companyName: ''
+    street: test
+    houseNo: '12'
+    postCode: '12345'
+    city: test
+    phonePrivate: ''
+    email: test@test.de
+    birthday: '0'
+    birthmonth: '0'
+    birthyear: '0'
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

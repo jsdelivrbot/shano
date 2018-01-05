@@ -1,0 +1,22 @@
+uuid: f750dc4b-08a2-427f-aa02-eacbc3d21752
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: '-wL2014xl2Gg5Zg_umJMUxhS_cZK9bQzkJFi07VRL3I'
+id: node.field_pdp_volume
+field_name: field_pdp_volume
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

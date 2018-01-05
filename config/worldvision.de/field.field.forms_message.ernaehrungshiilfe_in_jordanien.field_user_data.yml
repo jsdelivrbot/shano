@@ -1,0 +1,24 @@
+uuid: 6e8dbe45-f0be-4048-86b9-4ec622d1b518
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.ernaehrungshiilfe_in_jordanien
+  module:
+    - forms_suite
+id: forms_message.ernaehrungshiilfe_in_jordanien.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: ernaehrungshiilfe_in_jordanien
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

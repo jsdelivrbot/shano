@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: gift-shop-secondary-navi
+label: 'Gift-shop secondary navi'
+description: ''
+locked: false

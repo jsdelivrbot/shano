@@ -1,0 +1,4 @@
+services:
+  child.session_manager:
+    class: Drupal\child\SessionManager
+    arguments: ['@keyvalue.expirable.database']

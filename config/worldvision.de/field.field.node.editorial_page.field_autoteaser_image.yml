@@ -1,0 +1,37 @@
+uuid: 0a4d34f1-430e-45f3-be55-f6dc248aae9a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_image
+    - node.type.editorial_page
+  module:
+    - image
+id: node.editorial_page.field_autoteaser_image
+field_name: field_autoteaser_image
+entity_type: node
+bundle: editorial_page
+label: Preview
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'autoteaser/preview/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

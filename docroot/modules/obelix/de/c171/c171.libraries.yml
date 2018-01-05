@@ -1,0 +1,9 @@
+lading-styling:
+  version: VERSION
+  css:
+    base:
+      assets/css/c171.css: {}
+homeslider-tracking:
+  version: 1.0.0
+  js:
+    assets/js/tracking.js: {}

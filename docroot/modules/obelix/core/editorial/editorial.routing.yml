@@ -1,0 +1,9 @@
+editorial.editorial_field.global_configuration:
+  path: '/admin/config/content/editorial-field'
+  defaults:
+    _form: '\Drupal\editorial\Form\EditorialFieldGlobalConfigurationForm'
+    _title: 'Global editorial field configuration'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

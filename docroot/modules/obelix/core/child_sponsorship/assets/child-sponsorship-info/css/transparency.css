@@ -1,0 +1,25 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 2, ../scss/_transparency-sm.scss */
+  .world-map-bg-sm {
+    background-image: url("../img/transparency-world-map-bg-sm.jpg");
+    background-color: #ff7700;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 2, ../scss/_transparency-md.scss */
+  .world-map-bg-sm {
+    background-image: url("../img/transparency-world-map-bg-md.jpg");
+  }
+}

@@ -1,0 +1,9 @@
+uuid: 1c86daeb-7af5-43b0-ba4b-dfda06559ba6
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VX5ugob6bHHy7fcgrK2I6YfnLxPva1Qgz9g1bZX9lEo
+id: social_share
+label: 'Social share'
+category: 'Individual block'

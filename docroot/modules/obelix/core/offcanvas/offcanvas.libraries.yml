@@ -1,0 +1,22 @@
+scotch-panels:
+  remote: https://github.com/scotch-io/scotch-panels
+  version: 1.0.3
+  license:
+    name: Commercial
+    url: https://github.com/scotch-io/scotch-panels/blob/master/README.md#licenses
+    gpl-compatible: false
+  js:
+    /libraries/scotch-panels/dist/scotchPanels.min.js: {}
+off-canvas:
+  js:
+    assets/js/off-canvas.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+off-canvas-child:
+  js:
+    assets/js/off-canvas-child.js: {}
+  dependencies:
+    - offcanvas/off-canvas

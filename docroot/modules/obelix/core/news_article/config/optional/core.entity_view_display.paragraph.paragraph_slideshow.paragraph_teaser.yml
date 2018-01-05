@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraph_teaser
+    - field.field.paragraph.paragraph_slideshow.field_paragraph_slideshow
+    - paragraphs.paragraphs_type.paragraph_slideshow
+id: paragraph.paragraph_slideshow.paragraph_teaser
+targetEntityType: paragraph
+bundle: paragraph_slideshow
+mode: paragraph_teaser
+content:
+  field_paragraph_slideshow:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+hidden:
+  created: true
+  uid: true

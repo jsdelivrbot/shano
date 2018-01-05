@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.map.map.field_geo_object
+  module:
+    - map
+id: map.map.default
+targetEntityType: map
+bundle: map
+mode: default
+content: {  }
+hidden:
+  field_geo_object: true
+  name: true
+  user_id: true

@@ -1,0 +1,6 @@
+settings:
+  allowed_values:
+    2:
+      label: Links
+    3:
+      label: Rechts

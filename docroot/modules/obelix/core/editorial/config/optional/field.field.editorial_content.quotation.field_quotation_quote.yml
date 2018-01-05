@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.quotation
+    - field.storage.editorial_content.field_quotation_quote
+id: editorial_content.quotation.field_quotation_quote
+field_name: field_quotation_quote
+entity_type: editorial_content
+bundle: quotation
+label: Quote
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

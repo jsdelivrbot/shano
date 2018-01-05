@@ -1,0 +1,37 @@
+schemas:
+  bootstrap: 8000
+  wvbasetheme: 8000
+_core:
+  default_config_hash: 1uFogeFphl0Hg6oVCacZZ8mM_0wMZ7PS_RrmLbK5tf0
+langcode: nl
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'https://nl-dev.wvunite.com/themes/worldvision/wvbasetheme/favicon.ico'
+  use_default: true
+logo:
+  path: 'public://wv-logo-new-rgb-01.png'
+  url: ''
+  use_default: false
+region_wells:
+  top_navigation: ''
+  search: ''
+  navigation: ''
+  secondary_navigation: ''
+  breadcrumbs: ''
+  controls: ''
+  content: ''
+  footer_top_1: ''
+  footer_top_2: ''
+  footer_top_3: ''
+  footer: ''
+  footer_bottom_1: ''
+  footer_bottom_2: ''
+  footer_bottom_3: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+table: ''
+html_head_custom_code: '<meta name="google-site-verification" content="s0RKizGQNJLJpHe75mHP5jBUduzViZFHB1iIDMfdVug" />'

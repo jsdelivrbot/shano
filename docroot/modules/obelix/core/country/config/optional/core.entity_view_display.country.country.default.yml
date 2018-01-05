@@ -1,0 +1,188 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.country.country.field_about_the_country
+    - field.field.country.country.field_about_the_country_link
+    - field.field.country.country.field_catastrophe_headline
+    - field.field.country.country.field_catastrophe_link
+    - field.field.country.country.field_catastrophe_text
+    - field.field.country.country.field_child_mortality
+    - field.field.country.country.field_continent
+    - field.field.country.country.field_doctors_per_inhabitant
+    - field.field.country.country.field_enrollment_rate
+    - field.field.country.country.field_image
+    - field.field.country.country.field_life_expectancy
+    - field.field.country.country.field_special_country_article
+    - field.field.country.country.field_sponsorship_children
+    - field.field.country.country.field_success_headline
+    - field.field.country.country.field_success_link
+    - field.field.country.country.field_success_text
+    - field.field.country.country.field_without_sponsorship
+  module:
+    - country
+    - image
+    - link
+    - text
+    - user
+
+id: country.country.default
+targetEntityType: country
+bundle: country
+mode: default
+content:
+  field_about_the_country:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_about_the_country_link:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_catastrophe_headline:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_catastrophe_link:
+    weight: 13
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_catastrophe_text:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_child_mortality:
+    weight: 6
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_doctors_per_inhabitant:
+    weight: 9
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_enrollment_rate:
+    weight: 8
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_image:
+    weight: 10
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_life_expectancy:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_special_country_article:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_sponsorship_children:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_success_headline:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_success_link:
+    weight: 18
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_success_text:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_without_sponsorship:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  id:
+    label: above
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  name:
+    label: above
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_continent: true

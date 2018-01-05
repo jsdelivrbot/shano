@@ -1,0 +1,21 @@
+uuid: 95ddf5a5-acd7-4d71-8a03-9d214209d5e3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_description
+    - node.type.gift_type
+_core:
+  default_config_hash: tbNgltoKm1_jBbsU_CtrZrcaKUGb-Hzs4SiJ6DSixlc
+id: node.gift_type.field_autoteaser_description
+field_name: field_autoteaser_description
+entity_type: node
+bundle: gift_type
+label: Beschreibung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

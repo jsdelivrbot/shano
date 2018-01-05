@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: automatic_teaser
+label: 'Automatic Teaser'
+category: 'Standard block'

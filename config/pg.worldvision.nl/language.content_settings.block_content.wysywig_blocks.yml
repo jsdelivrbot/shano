@@ -1,0 +1,11 @@
+uuid: 7293ef8a-3169-4c59-baa6-4faeb856f952
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.wysywig_blocks
+id: block_content.wysywig_blocks
+target_entity_type_id: block_content
+target_bundle: wysywig_blocks
+default_langcode: site_default
+language_alterable: true

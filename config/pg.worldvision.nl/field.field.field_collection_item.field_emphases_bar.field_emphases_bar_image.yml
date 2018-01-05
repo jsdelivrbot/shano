@@ -1,0 +1,40 @@
+uuid: d264bc5c-ed16-496d-8095-ca4ebb624184
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_emphases_bar_image
+    - field_collection.field_collection.field_emphases_bar
+  module:
+    - image
+_core:
+  default_config_hash: uNmS3kKrC5eaFiCFBpG6QFcrgYrgalRBc0hfu6Na7rw
+id: field_collection_item.field_emphases_bar.field_emphases_bar_image
+field_name: field_emphases_bar_image
+entity_type: field_collection_item
+bundle: field_emphases_bar
+label: Bild
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'emphases-bar/images/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

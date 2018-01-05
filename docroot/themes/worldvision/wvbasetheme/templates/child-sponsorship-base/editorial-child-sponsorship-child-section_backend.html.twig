@@ -1,0 +1,15 @@
+<div class="editorial-child-sponsorship-child-select">
+  {{ child_image }}
+  <div class="child-infos">
+    <h2>Hallo, ich bin <span>{{ child_info.name }}</span>
+      aus <span>{{ child_info.country }}</span> und suche
+      noch einen Paten!</h2>
+    <ul class="list-unstyled text-uppercase text-center font-size-xs">
+      <li>Mein Alter: <span class="font-bold">{{ child_info.age }} Jahre</span></li>
+      <li>Ich lebe bei: <span class="font-bold">{{ child_info.lives_with|replace({"mit ":""}) }}</span></li>
+      <li>Ich mag: <span class="font-bold">{{ child_info.likes }}</span></li>
+    </ul>
+  </div>
+  <div style="clear: both;"></div>
+</div>
+

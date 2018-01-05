@@ -1,0 +1,44 @@
+{%
+set classes = [
+node.bundle|clean_class,
+node.isPromoted() ? 'is-promoted',
+node.isSticky() ? 'is-sticky',
+not node.isPublished() ? 'is-unpublished',
+view_mode ? view_mode|clean_class,
+'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+  <div{{ content_attributes.addClass('content', 'container') }}>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <h1 class="text-align-center">{{ content.field_pdp_headline }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <h2 class="thin-header text-align-center">{{ content.field_pdp_subline }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <p>{{ content.field_pdp_description }}</p>
+      </div>
+    </div>
+
+    <div class="public-donor-divider-light"></div>
+
+    <div class="row pdp-list">
+      <div class="col-xs-12">
+        <h2 class="text-align-center">{{ '<span class="thin-header">Actual</span> projects'|t }}</h2>
+        {{ content.field_pdp_teaser }}
+
+        <div class="text-align-center">
+          {{ content.field_pdp_button }}
+        </div>
+      </div>
+    </div>
+
+    <div class="public-donor-divider-light"></div>
+  </div>
+</article>

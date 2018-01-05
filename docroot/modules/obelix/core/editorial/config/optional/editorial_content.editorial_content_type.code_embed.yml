@@ -1,0 +1,6 @@
+langcode: de
+status: true
+dependencies: {  }
+id: code_embed
+label: 'Code embed'
+category: 'Individual block'

@@ -1,0 +1,22 @@
+uuid: dd6444e5-c289-4b9a-a618-6af1622bace8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.kinderrechte_in_ind
+  module:
+    - forms_suite
+id: forms_message.kinderrechte_in_ind.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: kinderrechte_in_ind
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

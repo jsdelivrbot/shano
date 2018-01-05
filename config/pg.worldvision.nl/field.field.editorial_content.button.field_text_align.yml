@@ -1,0 +1,25 @@
+uuid: ed87d842-6feb-41ee-a304-d57d41fd201f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.storage.editorial_content.field_text_align
+  module:
+    - options
+_core:
+  default_config_hash: vwY1FFe4vSCYvyBooQ_IEoG2gU-TBxRSvbt7quYJPPQ
+id: editorial_content.button.field_text_align
+field_name: field_text_align
+entity_type: editorial_content
+bundle: button
+label: 'Button alignment'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: text-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,7 @@
+services:
+  fs_payment.success:
+    class: Drupal\fs_payment\EventSubscriber\FormSaveSubscriber
+    arguments: ['@session']
+    tags:
+      - { name: event_subscriber }
+

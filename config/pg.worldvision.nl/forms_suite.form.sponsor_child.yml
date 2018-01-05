@@ -1,0 +1,33 @@
+uuid: d11d7ffa-20f3-462c-973c-c875f5866599
+langcode: en
+status: true
+dependencies: {  }
+id: sponsor_child
+label: 'Sponsor Child'
+recipients:
+  - willem@christal.nl
+  - jacqueline_niezink@worldvision.nl
+  - tobias_van_sijll@worldvision.nl
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p class=\"text-align-center\">Geweldig dat u betrokken bent bij het werk van World Vision door een kind te sponsoren.<br />\r\nWe hebben uw gegevens ontvangen en zullen zo snel mogelijk contact met u opnemen.</p>\r\n\r\n<p class=\"text-align-center\">Bedankt voor uw betrokkenheid.</p>\r\n"
+  format: html
+thank_you_headline: 'Hartelijk bedankt!'
+designation_id: ''
+motivation_code: '1834'
+additional_tracking: ''
+alias: /forms/sponsor_child
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: ''

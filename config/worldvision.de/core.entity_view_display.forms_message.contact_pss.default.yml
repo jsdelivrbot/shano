@@ -1,0 +1,43 @@
+uuid: a7b0980b-2481-4037-a40c-aceba6018b00
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.contact_pss.field_message
+    - field.field.forms_message.contact_pss.field_newsletter
+    - field.field.forms_message.contact_pss.field_user_data
+    - forms_suite.form.contact_pss
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: K_9AxRLPUaJuxhoNXfdkOEFmCmKLCvZNV4dK1xXsrzM
+id: forms_message.contact_pss.default
+targetEntityType: forms_message
+bundle: contact_pss
+mode: default
+content:
+  field_message:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_user_data:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden: {  }

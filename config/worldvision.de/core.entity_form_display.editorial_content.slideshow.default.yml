@@ -1,0 +1,33 @@
+uuid: 6a73040c-3388-4b0d-95b8-3f932981617c
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.slideshow
+    - field.field.editorial_content.slideshow.field_slideshow_slide
+  module:
+    - field_collection
+_core:
+  default_config_hash: 3KwWUZSi5wqMm4g9Un1kR16gNrBHVJkVMFTx-Z5lxTU
+id: editorial_content.slideshow.default
+targetEntityType: editorial_content
+bundle: slideshow
+mode: default
+content:
+  field_slideshow_slide:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

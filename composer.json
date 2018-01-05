@@ -1,0 +1,250 @@
+{
+    "name": "acquia/blt-project",
+    "description": "Project template for Drupal 8 sites built with BLT.",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "acquia/blt": "^8.3",
+        "bootstrap-select": "8.2.0",
+        "cweagans/composer-patches": ">=1.6.0 <1.6.3",
+        "desandro/imagesloaded": "3.1.8",
+        "desandro/masonry": "3.3.1",
+        "drupal/acquia_connector": "^1.5.0",
+        "drupal/admin_toolbar": "1.20",
+        "drupal/adminimal_theme": "^1.3",
+        "drupal/big_pipe_sessionless": "^1.1",
+        "drupal/bootstrap": "3.5",
+        "drupal/bootstrap_layouts": "3.1",
+        "drupal/config_inspector": "^1.0@beta",
+        "drupal/config_update_bulk": "11",
+        "drupal/core": "8.3.7",
+        "drupal/csv_serialization": "^1.0",
+        "drupal/dropguard": "^1.2",
+        "drupal/entity_reference_revisions": "^1.3",
+        "drupal/field_collection": "^1.0@alpha",
+        "drupal/field_group": "^1.0",
+        "drupal/group": "^1.0@RC",
+        "drupal/hacked": "2.x-dev",
+        "drupal/hook_event_dispatcher": "^1.10",
+        "drupal/imagemagick": "^2.2",
+        "drupal/inline_entity_form": "1.0-beta1",
+        "drupal/layout_plugin": "^1.0@alpha",
+        "drupal/mailsystem": "4.1",
+        "drupal/maxlength": "^1.0@beta",
+        "drupal/memcache": "^2.0-alpha3",
+        "drupal/menu_breadcrumb": "^1.4",
+        "drupal/metatag": "1.0",
+        "drupal/metatag_access": "^8.0",
+        "drupal/migrate_plus": "^2.0",
+        "drupal/migrate_source_csv": "^2.0",
+        "drupal/migrate_tools": "^2.0",
+        "drupal/paragraphs": "1.1",
+        "drupal/path_redirect_import": "^1.0@beta",
+        "drupal/pathauto": "^1.0",
+        "drupal/recaptcha": "^2.2",
+        "drupal/redirect": "1.0-beta1",
+        "drupal/replicate": "1.x-dev",
+        "drupal/seckit": "^1.0.0-alpha2",
+        "drupal/security_review": "*",
+        "drupal/shield": "^1.0.0",
+        "drupal/simple_sitemap": "2.8",
+        "drupal/sqlsrv": "^2.13",
+        "drupal/stage_file_proxy": "^1.0@alpha",
+        "drupal/styled_image": "^8.0",
+        "drupal/swiftmailer": "1.0-beta1",
+        "drupal/view_unpublished": "^1.0@alpha",
+        "drupal/xmlsitemap": "^1.0@alpha",
+        "drush/drush": "^8.1.15",
+        "geerlingguy/drupal-vm": "~4.3",
+        "html2text/html2text": "~4.0.1",
+        "ircmaxell/password-compat": "^1.0",
+        "mk-j/PHP_XLSXWriter": "^0.35.0",
+        "scotch-panels": "8.2.0",
+        "setasign/fpdf": "^1.8",
+        "setasign/fpdi": "^2.0"
+    },
+    "require-dev": {
+        "cweagans/composer-patches": ">=1.6.0 <1.6.3"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Core\\Composer\\": "docroot/core/lib/Drupal/Core/Composer",
+            "Drupal\\Driver\\Database\\sqlsrv\\": "docroot/modules/contrib/sqlsrv/drivers/lib/Drupal/Driver/Database/sqlsrv"
+        }
+    },
+    "repositories": {
+        "styled_image": {
+            "type": "package",
+            "package": {
+                "name": "drupal/styled_image",
+                "version": "8.0.0",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://git.drupal.org/sandbox/michaelpetri/2781765.git",
+                    "type": "git",
+                    "reference": "refs/heads/8.x-1.x"
+                }
+            }
+        },
+        "metatag_access": {
+            "type": "package",
+            "package": {
+                "name": "drupal/metatag_access",
+                "version": "8.0.2",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://git.drupal.org/sandbox/michaelpetri/2782521.git",
+                    "type": "git",
+                    "reference": "refs/heads/8.x-1.x"
+                }
+            }
+        },
+        "masonry": {
+            "type": "package",
+            "package": {
+                "name": "desandro/masonry",
+                "version": "3.3.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/masonry/archive/v3.3.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "imagesloaded": {
+            "type": "package",
+            "package": {
+                "name": "desandro/imagesloaded",
+                "version": "3.1.8",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/imagesloaded/archive/v3.1.8.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "dropzone": {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "4.2.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/enyo/dropzone",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        "bootstrap-select": {
+            "type": "package",
+            "package": {
+                "name": "bootstrap-select",
+                "version": "8.2.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/silviomoreto/bootstrap-select",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        "scotch-panels": {
+            "type": "package",
+            "package": {
+                "name": "scotch-panels",
+                "version": "8.2.0",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/scotch-io/scotch-panels",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        "config_update_bulk": {
+            "type": "package",
+            "package": {
+                "name": "drupal/config_update_bulk",
+                "version": "11",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://git.drupal.org/sandbox/michaelpetri/2783131.git",
+                    "type": "git",
+                    "reference": "refs/heads/8.x-1.x"
+                }
+            }
+        }
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "enable-patching": true,
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "merge-plugin": {
+            "require": [
+                "vendor/acquia/blt/composer.required.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true,
+            "replace": false,
+            "ignore-duplicates": true
+        },
+        "patches": {
+            "drupal/sqlsrv": {
+                "Fix wincache fatals, add Drupal cache layer & mssql third library itself": "patches/contrib/sqlsrv/add-mssql-and-fix-wincache-erros.patch"
+            },
+            "drupal/adminimal_theme": {
+                "Fix issue #2826369 comment #3": "https://www.drupal.org/files/issues/adminimal_theme-fix-toolbar-colors-28226369.patch"
+            },
+            "drupal/bootstrap_layouts": {
+                "Fix issue #2815613 on 8.x-3.1 - Uncaught exception yaml_parse()": "patches/contrib/bootstrap_layouts/2815613-for_v3.1.patch"
+            },
+            "drupal/core": {
+                "Implement a tool to delete items that are no longer existing in source #2809433": "https://www.drupal.org/files/issues/migrate-support-for-deletion-of-missing-items-2809433-29.patch"
+            },
+            "drupal/migrate_tools": {
+                "Implement a drush command for missing-from-source deletion logic @see #2809433 #2863426": "patches/contrib/migrate_tools/migrate-tools-rollback-items-missing-from-source-2863426-3.patch"
+            }
+        }
+    }
+}

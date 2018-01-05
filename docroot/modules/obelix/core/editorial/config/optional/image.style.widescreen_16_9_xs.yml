@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: widescreen_16_9_xs
+label: 'Widescreen (16:9) XS'
+effects:
+  65917504-fd9d-4e75-a919-9ac4a7e86874:
+    uuid: 65917504-fd9d-4e75-a919-9ac4a7e86874
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 360

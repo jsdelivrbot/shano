@@ -1,0 +1,26 @@
+uuid: 2ccbdd1a-acaf-4b66-926c-c18cc4f74f98
+langcode: en
+status: true
+dependencies:
+  module:
+    - obelix_contacts
+    - system
+  theme:
+    - wvbasetheme
+id: contactsblock
+theme: wvbasetheme
+region: footer_top_1
+weight: 0
+provider: null
+plugin: contacts_block
+settings:
+  id: contacts_block
+  label: Contact
+  provider: obelix_contacts
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/even-voorstellen/*\r\n/forms/sponsor_child\r\n/forms/pledger\r\n/kindsponsoring/formulier\r\n/node/1111"
+    negate: true
+    context_mapping: {  }

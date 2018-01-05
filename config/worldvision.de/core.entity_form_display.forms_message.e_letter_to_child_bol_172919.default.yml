@@ -1,0 +1,36 @@
+uuid: a3ac953a-f4f9-459f-8ebd-633ce0843508
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.e_letter_to_child_bol_172919.field_message
+    - forms_suite.form.e_letter_to_child_bol_172919
+  module:
+    - forms_suite
+id: forms_message.e_letter_to_child_bol_172919.default
+targetEntityType: forms_message
+bundle: e_letter_to_child_bol_172919
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    region: content
+  name:
+    weight: -50
+    region: content
+hidden: {  }

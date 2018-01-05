@@ -1,0 +1,39 @@
+uuid: dbfc602d-ca9e-4508-befa-04e49f228246
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.storage.editorial_content.field_video_preview_image
+  module:
+    - image
+_core:
+  default_config_hash: aUZWM8mw2Rec7vnKwKWQItcv-ScGNR9c87I7nWATUpw
+id: editorial_content.youtube_video.field_video_preview_image
+field_name: field_video_preview_image
+entity_type: editorial_content
+bundle: youtube_video
+label: 'Preview image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'editorial/youtube-video/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1400x788
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

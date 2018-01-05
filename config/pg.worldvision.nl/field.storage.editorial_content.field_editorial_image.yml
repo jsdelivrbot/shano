@@ -1,0 +1,30 @@
+uuid: a69ee8f9-1b38-4238-9704-37d0e5c78052
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - file
+    - styled_image
+id: editorial_content.field_editorial_image
+field_name: field_editorial_image
+entity_type: editorial_content
+type: styled_image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: styled_image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

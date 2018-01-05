@@ -1,0 +1,29 @@
+uuid: 8d3707b2-d9a7-4a8e-865c-8266ad73b79d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_continent
+    - taxonomy.vocabulary.continents
+  module:
+    - country
+id: country.country.field_continent
+field_name: field_continent
+entity_type: country
+bundle: country
+label: Continent
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      continents: continents
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

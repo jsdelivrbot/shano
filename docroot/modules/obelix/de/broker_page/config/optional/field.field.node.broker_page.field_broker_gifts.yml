@@ -1,0 +1,28 @@
+uuid: 8d9d8e98-7b42-4541-b824-3dd76b9e2288
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_broker_gifts
+    - node.type.broker_page
+    - node.type.gift_type
+id: node.broker_page.field_broker_gifts
+field_name: field_broker_gifts
+entity_type: node
+bundle: broker_page
+label: 'Broker gifts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      gift_type: gift_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

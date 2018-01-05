@@ -1,0 +1,14 @@
+uuid: 09f03671-70db-4893-8f06-c6f1db39f79d
+langcode: de
+status: true
+dependencies:
+  config:
+    - user.role.child_list_editor
+  module:
+    - user
+id: user_add_role_action.child_list_editor
+label: 'Add the Child list editor role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: child_list_editor

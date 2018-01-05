@@ -1,0 +1,22 @@
+uuid: 13255a29-55c1-44dc-b2c8-887c6e816ba8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.kontaktformular_politische_arbei
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_politische_arbei.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: kontaktformular_politische_arbei
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

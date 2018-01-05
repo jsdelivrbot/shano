@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains project_manager.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function project_manager_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the project_manager module.
+    case 'help.page.project_manager':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A couple of functions for the Project Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

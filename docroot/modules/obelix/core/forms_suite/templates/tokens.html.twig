@@ -1,0 +1,30 @@
+{#
+/**
+ * @file child.html.twig
+ * Default theme implementation to present Child data.
+ *
+ * This template is used when viewing Child pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('token') }}>
+  {% if content %}
+    {% for key,value in content.types %}
+      {{ value.name }}
+      <ul>
+        {% for token_key, token in content.tokens if key == token_key %}
+          {% for element_key, element in token %}
+            <li>{{ element.description }} | [{{ key }}:{{ element_key }}]</li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endif %}
+</div>

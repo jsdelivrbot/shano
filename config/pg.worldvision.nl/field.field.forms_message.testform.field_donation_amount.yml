@@ -1,0 +1,27 @@
+uuid: 248f4d46-bbde-4e7c-b332-3d5de0571d11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.testform
+  module:
+    - fs_payment
+id: forms_message.testform.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: testform
+label: 'Donation amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

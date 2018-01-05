@@ -1,0 +1,23 @@
+uuid: 2809e807-2820-48cf-9b56-c61a4abaa61f
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_his_copy
+    - node.type.country_page
+  module:
+    - text
+_core:
+  default_config_hash: k2jVdy3RPIrgpBfetr_uDcvLd61fYegg-OtHm7ibLw4
+id: node.country_page.field_his_copy
+field_name: field_his_copy
+entity_type: node
+bundle: country_page
+label: Kopieren
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

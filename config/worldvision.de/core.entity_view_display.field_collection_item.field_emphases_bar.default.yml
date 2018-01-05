@@ -1,0 +1,39 @@
+uuid: 6c47e4d6-e952-4262-935c-8ded1160830d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_emphases_bar.field_emphases_bar_copy
+    - field.field.field_collection_item.field_emphases_bar.field_emphases_bar_image
+    - field_collection.field_collection.field_emphases_bar
+    - responsive_image.styles.editorial_image_square
+  module:
+    - entity_test
+    - responsive_image
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: RK4vK_MUF3nRsn02GyQvx0NgD_9uvkiov3bbKssSims
+id: field_collection_item.field_emphases_bar.default
+targetEntityType: field_collection_item
+bundle: field_emphases_bar
+mode: default
+content:
+  field_emphases_bar_copy:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_emphases_bar_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image_square
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+hidden: {  }

@@ -1,0 +1,74 @@
+// IE Fix
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+html, body {
+  &.overflow-hidden {
+    overflow: hidden;
+  }
+}
+
+.child-finder-teaser {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 15;
+  .child-finder-teaser-toggle {
+    position: relative;
+    border: 0;
+    border-bottom: 0;
+    font-size: 12px;
+    font-family: $font-bold;
+    letter-spacing: 1px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: $color-highlight;
+    color: $color-standard-bg;
+    text-transform: uppercase;
+    @include box-shadow(0 0px 9px 3px rgba(0, 0, 0, 0.3));
+
+    &:after { // Hide box-shadow bottom
+      background-color: $color-highlight;
+      height: 13px;
+      content: "";
+      position: absolute;
+      bottom: -13px;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    .icon-cont {
+      padding-left: 15px;
+      i {
+        display: inline-block;
+        &.rotated {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .child-teaser-toggle-sec {
+    display: none;
+    @include box-shadow(rgba(66, 66, 66, 0.419608) 0px 0px 8px 3px);
+  }
+  &.opened-mobile {
+    top: 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 501;
+    overflow-y: scroll;
+    .child-teaser-toggle-sec {
+      display: block !important;
+      min-height: 100%;
+    }
+  }
+}
+
+.editorial-page .child-finder-teaser .section-highlighted>.container,
+.editorial-page .child-finder-teaser .section-highlighted>.container-fluid{
+  margin-top: 0;
+  margin-bottom: 0;
+}

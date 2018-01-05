@@ -1,0 +1,14 @@
+uuid: cdfd1458-fd28-488d-9a8f-b1a8fef4dd7a
+langcode: de
+status: true
+dependencies: {  }
+name: portrait_sm
+label: 'Portrait SM'
+effects:
+  b9ff0d71-091d-4765-b2f0-13af19a1d8c7:
+    uuid: b9ff0d71-091d-4765-b2f0-13af19a1d8c7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 1000

@@ -1,0 +1,193 @@
+{#
+/**
+ * @file geo_object.html.twig
+ * Default theme implementation to present Geo object data.
+ *
+ * This template is used when viewing Geo object pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_geo_object()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('world-map') }}>
+  {# TODO @Moe move library to modules file #}
+  {{ attach_library('map/wovi_maps') }}
+
+  {#{% for country_id, country in countrys %}
+    <li>{{ country.name }}</li>
+    <li>{{ country_id }}</li>
+    <li>{{ country.about_the_country|raw }}</li>
+    <li>{{ country.about_the_country_link.link }}{{ country.about_the_country_link.title }}</li>
+    <li>{{ country.catastrophe_headline }}</li>
+    <li>{{ country.catastrophe_link.link }}</li>
+    <li>{{ country.catastrophe_text|raw }}</li>
+    <li>{{ country.child_mortality }}</li>
+    <li>{{ country.enrollment_rate }}</li>
+    <li>{{ country.doctors_per_inhabitant }}</li>
+    <li>{{ country.image }}</li>
+    <li>{{ country.life_expectancy }}</li>
+    <li>{{ country.sponsorship_children }}</li>
+    <li>{{ country.success_headline }}</li>
+    <li>{{ country.success_text|raw }}</li>
+    <li>{{ country.without_sponsorship }}</li>
+  {% endfor %}#}
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <div class="hover-info-block">
+    <div class="container-fluid">
+      {% for country_id, country in countrys %}
+        <div class="hover-infos hover-infos-{{ country_id }}">
+          <div class="row">
+            <div class="countryInfo col-xs-3 col-sm-3 col-md-2 col-md-offset-2 wrapped-baby-block"><i
+                class="icon-wrapped-baby"></i><br class="visible-xs visible-sm"/>
+              <h3>{% if country.child_mortality %}{{ country.child_mortality|round }}{% else %}0{% endif %}</h3>
+            </div>
+            <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2"><i class="icon-elder"></i><br
+                class="visible-xs visible-sm"/>
+              <h3>{% if country.life_expectancy %}{{ country.life_expectancy|round }}{% else %}0{% endif %}</h3>
+            </div>
+            <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 backpack-block"><i class="icon-backpack"></i><br
+                class="visible-xs visible-sm"/>
+              <h3>{% if country.enrollment_rate %}{{ country.enrollment_rate|round }}%{% else %}0{% endif %}</h3>
+            </div>
+            <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 first-aid-kit-block"><i
+                class="icon-first-aid-kit"></i><br class="visible-xs visible-sm"/>
+              <h3>{% if country.doctors_per_inhabitant %}{{ country.doctors_per_inhabitant|round }}{% else %}0{% endif %}</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="countryInfo col-xs-3 col-sm-3 col-md-2 col-md-offset-2 vert-offset-bottom-1">Kinder<span
+                class="visible-xs-inline">-<br/></span>sterblichkeit je 1000 Neugeborene<br/><br/>
+            </div>
+            <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 vert-offset-bottom-1">Lebens<span class="visible-xs-inline">-<br/></span>erwartung<br/><br/>
+            </div>
+            <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 vert-offset-bottom-1">Einschulungs<span
+                class="visible-xs-inline">-<br/></span>rate<br/><br/></div>
+            <div class="border-left countryInfo col-xs-3 col-sm-3 col-md-2 vert-offset-bottom-1">Ärzte pro 100.000 Einwohner</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="overlay-close hidden-xs">
+        <i class="icon-arrow-right"></i>
+      </div>
+
+
+      {% for country_id, country in countrys %}
+        <div
+          class="mobile-overlay-button mobile-overlay-button-{{ country_id }} hidden-sm hidden-md hidden-lg overlay-closed">
+          <span class="visible-xs-inline">{% if country.name %}{{ country.name }}{% endif %}</span> <i
+            class="icon-arrow-down visible-xs rotateUp"></i>
+        </div>
+        <div class="country-overlay country-overlay-{{ country_id }}">
+          <div class="overlay-header">
+            {#<img src="/{{ directory }}/assets/images/dummy-map-country.png">#}
+            {% if country.image %}{{ country.image }}{% endif %}
+            <p class="hidden-xs overlay-country-name">{% if country.name %}{{ country.name }}{% endif %}</p>
+          </div>
+
+          <div class="overlay-wrapper">
+            {% if country.sponsorship_children and country.without_sponsorship %}
+            <div class="overlay-two-column-block">
+              {% if country.sponsorship_children %}
+              <div class="float-left overlay-block">
+                <h1
+                  class="dark-text">{{ country.sponsorship_children }}</h1>
+                <p>Patenschaftskinder</p>
+              </div>
+              {% endif %}
+              {% if country.without_sponsorship %}
+              <div class="float-right overlay-block">
+                <h1><i class="icon-standing-baby"></i> {{ country.without_sponsorship }}
+                </h1>
+                <p>ohne Paten</p>
+                <div class="partial-border-left"></div>
+              </div>
+              {% endif %}
+            </div>
+            {% endif %}
+
+            {#<div class="overlay-block border-top">#}
+              {#<a href="/index.php"><h5><i class="icon-child-sponsor"></i> Kinderpatenschaft</h5></a>#}
+            {#</div>#}
+
+            {% if country.catastrophe_headline is not null or country.catastrophe_text is not null %}
+              <div class="overlay-block border-top">
+                {% if country.catastrophe_link.link is null %}
+                  <h5><i class="icon-warning-sign"></i> Katastrophenhilfe</h5>
+                {% else %}
+                  <a href="{{ country.catastrophe_link.link }}">
+                    <h5><i class="icon-warning-sign"></i> Katastrophenhilfe</h5>
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {#<div class="overlay-block border-top">#}
+              {#<h5><i class="icon-gift-box"></i> Das Gute Geschenk</h5>#}
+            {#</div>#}
+
+            {% if country.about_the_country %}
+              <div class="overlay-block border-top">
+                <h5 class="dark-text">Über das Land</h5>
+                <p>
+                  {{ country.about_the_country|raw }}
+                </p>
+                {% if country.about_the_country_link.link %}
+                  <a class="btn btn-beauty" href="{{ country.about_the_country_link.link }}">
+                    {% if country.about_the_country_link.title %}
+                      {{ country.about_the_country_link.title }}
+                    {% else %}
+                      Mehr erfahren
+                    {% endif %}
+                  </a>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if country.catastrophe_headline or country.catastrophe_text %}
+              <div class="overlay-block border-top">
+                <h5>{{ country.catastrophe_headline }}</h5>
+                <p>
+                  {{ country.catastrophe_text|raw }}
+                </p>
+                {% if country.catastrophe_link.link %}
+                  <a class="btn btn-beauty" href="{{ country.catastrophe_link.link }}">Jetzt spenden</a>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if country.success_headline is not null or country.success_text is not null %}
+              <div class="overlay-block border-top">
+                <h5 class="colored-text">{{ country.success_headline }}</h5>
+                <p>
+                  {{ country.success_text|raw }}
+                </p>
+                {% if country.success_link.link %}
+                  <a class="btn btn-beauty" href="{{ country.success_link.link }}">Mehr erfahren</a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>

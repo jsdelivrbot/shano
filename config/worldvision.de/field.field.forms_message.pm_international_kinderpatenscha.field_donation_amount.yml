@@ -1,0 +1,27 @@
+uuid: 94a1c3a8-8eaf-4247-a8cd-651827095d87
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.pm_international_kinderpatenscha
+  module:
+    - fs_payment
+id: forms_message.pm_international_kinderpatenscha.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: pm_international_kinderpatenscha
+label: field_donation_amount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'I WOULD LIKE TO HELP ON A MONTHLY BASIS'
+    subline: ''
+    single_amount: 0
+    minimal_amount: '30'
+    default_amount: '30'
+field_type: wovi_donation_amount_field

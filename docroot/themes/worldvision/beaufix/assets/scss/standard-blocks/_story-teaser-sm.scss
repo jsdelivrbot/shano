@@ -1,0 +1,65 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Story Teaser
+  // =============================
+
+  // Container
+  .editorial-page {
+    .editorial-section {
+      > .container-fluid,
+      > .container {
+        // 12er Col (rectangular)
+        .col-xs-12 {
+          .editorial-story-teaser {
+            .bg-mobile::before {
+              padding-top: 50%;
+            }
+          }
+        }
+        [class^="col-"][class*="6"] {
+          .editorial-story-teaser {
+            .bg-mobile::before {
+              padding-top: 75%;
+            }
+          }
+        }
+        [class^="col-"][class*="4"] {
+          .editorial-story-teaser {
+            .bg-mobile::before {
+              padding-top: 100%;
+            }
+          }
+        }
+        [class^="col-"][class*="3"] {
+          .editorial-story-teaser {
+            .bg-mobile::before {
+              padding-top: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Editorial content
+  .editorial-story-teaser {
+    // Hide mobile image on desktop
+    .bg-mobile {
+      background: none !important;
+    }
+    // Content
+    .content {
+      .inner-content {
+        left: 30px;
+        right: 30px;
+        bottom: -26px;
+      }
+      // Hover (cta fades in)
+      &:hover {
+        .inner-content {
+          bottom: 30px;
+        }
+      }
+    }
+  }
+}

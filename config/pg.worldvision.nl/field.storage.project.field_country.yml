@@ -1,0 +1,22 @@
+uuid: a73818bd-7a3b-4aaf-a3a4-a20973ce5abf
+langcode: nl
+status: true
+dependencies:
+  module:
+    - country
+    - project
+_core:
+  default_config_hash: Nuktk7J-mZcM4OygiyeqHJ1w6p7AyBh03GI9epDp-GY
+id: project.field_country
+field_name: field_country
+entity_type: project
+type: entity_reference
+settings:
+  target_type: country
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

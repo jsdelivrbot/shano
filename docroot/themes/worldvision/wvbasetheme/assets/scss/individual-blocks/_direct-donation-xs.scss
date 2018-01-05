@@ -1,0 +1,82 @@
+// =============================
+// Direct donation
+// =============================
+
+.direct-donation-example {
+  margin-top: 30px;
+  .direct-donation-info {
+    padding: 15px 0;
+
+    border: 1px solid $color-standard-border;
+    border-radius: 3px;
+    .donation-amount {
+      padding-top: 25px;
+      font-size: 36px;
+    }
+    .example-img{
+      max-width: 150px;
+    }
+  }
+  // Form
+  button[type="submit"]{
+    margin-top: 20px;
+  }
+
+  // Slider-bar
+  .form-item-amount {
+    .slider {
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      .slider-track {
+        border-radius: 50px;
+        height: 30px;
+      }
+      .slider-selection {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        background: $color-highlight;
+      }
+      .slider-track-high {
+        border-radius: 50px;
+        background: rgba(64, 64, 64, 0.5);
+      }
+      .slider-handle {
+        z-index: 3;
+        top: 5px;
+        width: 30px;
+        height: 30px;
+        background: $color-standard-bg;
+        @include box-shadow(rgba(0, 0, 0, 0.298039) 0px 0px 6px);
+      }
+    }
+  }
+  // Handle arrow above
+  .slider-handle-arrow {
+    position: absolute;
+    top: -2px;
+    // Triangle
+    &:before,
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      margin-left: 6px;
+    }
+    &:before {
+      z-index: 2;
+      border-top: 15px solid #ffffff;
+      //top: -31px;
+    }
+    //  Triangle border
+    &:after {
+      top: 1px;
+      z-index: 1;
+      border-top: 15px solid $color-standard-border;
+    }
+  }
+}

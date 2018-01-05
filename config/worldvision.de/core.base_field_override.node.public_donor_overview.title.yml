@@ -1,0 +1,20 @@
+uuid: 1114be93-c24d-4fd7-ba86-4f2ef2654941
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.public_donor_overview
+_core:
+  default_config_hash: vlD8M0NkFOByh1dMsiYwOFmus4Ywgp2L5qjppu-lqSk
+id: node.public_donor_overview.title
+field_name: title
+entity_type: node
+bundle: public_donor_overview
+label: Identifyer
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

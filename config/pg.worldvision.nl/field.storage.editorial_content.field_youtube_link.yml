@@ -1,0 +1,21 @@
+uuid: 155d3c5b-76ea-4c5d-9f7b-be0f851c79a4
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - link
+_core:
+  default_config_hash: qxRLLRTBatknm0tZnAeY8PkttvE2VBestahNkEkIb-g
+id: editorial_content.field_youtube_link
+field_name: field_youtube_link
+entity_type: editorial_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

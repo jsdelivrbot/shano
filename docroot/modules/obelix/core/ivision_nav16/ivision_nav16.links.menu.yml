@@ -1,0 +1,7 @@
+ivision_nav16.config_form:
+  title: 'iVision NAV 16 Config'
+  route_name: ivision_nav16.config_form
+  description: 'Configurate iVision NAV 16'
+  parent: system.admin_config_services
+  weight: 96
+

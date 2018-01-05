@@ -1,0 +1,58 @@
+child-select:
+  css:
+    base:
+      assets/child-sponsorship-child-select/css/child-sponsorship-child-select.css: { }
+  js:
+      assets/child-sponsorship-child-select/js/tracking.js: {}
+
+child-select-video:
+  css:
+    base:
+      https://vjs.zencdn.net/5.16.0/video-js.css: {}
+      assets/child-sponsorship-child-select/css/child-video.css: { }
+  js:
+    https://vjs.zencdn.net/5.16.0/video.js: {}
+    assets/child-sponsorship-child-select/js/child-video.js: {}
+
+child-sponsorship-header:
+  css:
+    base:
+      assets/child-sponsorship/css/header.css: { }
+
+child-sponsorship-info-header:
+  css:
+    base:
+      assets/child-sponsorship-info/css/header.css: { }
+
+child-sponsorship-info-navbar:
+  css:
+    base:
+      assets/child-sponsorship-info/css/navbar.css: { }
+
+child-sponsorship-info-automatic-teaser:
+  css:
+    base:
+      assets/child-sponsorship-info/css/automatic-teaser.css: { }
+
+child-sponsorship-info-help-impact:
+  css:
+    base:
+      assets/child-sponsorship-info/css/help-impact.css: {}
+  js:
+    assets/child-sponsorship-info/js/init.js: {}
+
+child-sponsorship-info-sponsorship-transparency:
+  css:
+    base:
+      assets/child-sponsorship-info/css/transparency.css: {}
+
+child-sponsorship-child-finder-teaser:
+  css:
+    base:
+      assets/child-finder-teaser/css/child-finder-teaser.css: {}
+  js:
+    assets/child-finder-teaser/js/child-finder-teaser.js: {}
+
+
+
+

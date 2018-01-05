@@ -1,0 +1,9 @@
+@media screen and (min-width: $bp-sm) {
+  .container-fluid.has--editorial-content--story-teaser {
+
+    .editorial-story-teaser > .container-font > .row > .col-xs-12 {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

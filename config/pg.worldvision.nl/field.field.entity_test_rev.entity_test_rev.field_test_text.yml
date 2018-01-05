@@ -1,0 +1,21 @@
+uuid: 2ec561dc-d751-4301-91cb-2ecf290345da
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.entity_test_rev.field_test_text
+  module:
+    - entity_test
+    - text
+id: entity_test_rev.entity_test_rev.field_test_text
+field_name: field_test_text
+entity_type: entity_test_rev
+bundle: entity_test_rev
+label: 'Test text-field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

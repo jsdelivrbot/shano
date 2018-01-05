@@ -1,0 +1,59 @@
+uuid: 02e5f7fa-b646-4537-9493-f591ac7d2162
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.projektspende_fonds_finanz_mongo.field_donation_amount
+    - field.field.forms_message.projektspende_fonds_finanz_mongo.field_donation_period
+    - field.field.forms_message.projektspende_fonds_finanz_mongo.field_newsletter
+    - field.field.forms_message.projektspende_fonds_finanz_mongo.field_payment_method
+    - field.field.forms_message.projektspende_fonds_finanz_mongo.field_user_data
+    - forms_suite.form.projektspende_fonds_finanz_mongo
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.projektspende_fonds_finanz_mongo.default
+targetEntityType: forms_message
+bundle: projektspende_fonds_finanz_mongo
+mode: default
+content:
+  field_donation_amount:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_period:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_donation_amount_single: true
+  field_donation_period_single: true

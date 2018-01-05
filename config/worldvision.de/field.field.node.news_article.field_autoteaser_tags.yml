@@ -1,0 +1,30 @@
+uuid: 0b537343-2182-464c-b0f0-c12a72a6d350
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_tags
+    - node.type.news_article
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: hgvGc1NZxTgdGZaQ_6y8Pk7K4oPNL3aAo1hzOKJmecI
+id: node.news_article.field_autoteaser_tags
+field_name: field_autoteaser_tags
+entity_type: node
+bundle: news_article
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

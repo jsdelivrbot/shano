@@ -1,0 +1,26 @@
+uuid: 68317d0c-cd30-4b20-83b2-a71ea54f7c22
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.donation_single
+  module:
+    - forms_suite
+_core:
+  default_config_hash: KdmV1TBvf9OzUuxNkI5FvFr9dxI-9tfDOG_w2yAfvzc
+id: forms_message.donation_single.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: donation_single
+label: 'user data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

@@ -1,0 +1,14 @@
+uuid: 9d0646c8-002b-4ea1-8d8c-a44c98eb53c5
+langcode: de
+status: true
+dependencies: {  }
+name: photo_4_3_xs
+label: 'Photo (4:3) XS'
+effects:
+  e73040c6-6b96-4607-847c-4e34d8698e8f:
+    uuid: e73040c6-6b96-4607-847c-4e34d8698e8f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 480

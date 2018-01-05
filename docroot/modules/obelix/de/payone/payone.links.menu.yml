@@ -1,0 +1,7 @@
+payone.pay_one_config_form:
+  title: 'PayOne settings'
+  route_name: payone.pay_one_config_form
+  description: 'PayOne settings'
+  parent: system.admin_config_system
+  weight: 99
+

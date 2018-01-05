@@ -1,0 +1,21 @@
+uuid: 8f0afc58-9a6e-4ff2-8366-a13fd44fb827
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pdp_title
+    - paragraphs.paragraphs_type.public_donor_projects
+_core:
+  default_config_hash: iwb7FC8rGfYctc6O6aaSZg9POMBEs8BcaXctOuqVWa4
+id: paragraph.public_donor_projects.field_pdp_title
+field_name: field_pdp_title
+entity_type: paragraph
+bundle: public_donor_projects
+label: 'PDP Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

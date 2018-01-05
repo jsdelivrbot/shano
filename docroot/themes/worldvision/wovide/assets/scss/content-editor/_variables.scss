@@ -1,0 +1,20 @@
+// breakpoints
+$break-small: 768px;
+$break-medium: 1280px;
+$break-large: 1400px;
+
+// color-names
+$color-flush-orange: #f70;
+$color-white: #fff;
+$color-silver: #ccc;
+$color-mine-shaft: #333;
+
+// color usage
+$color-main: $color-flush-orange;
+$color-copy: $color-mine-shaft;
+$color-body: $color-white;
+$color-border-default: $color-silver;
+
+// font
+$font-family-bold: 'Gill Sans W04 Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-family-book: 'Gill Sans W04 Book', Helvetica Neue, Helvetica, Arial, sans-serif;

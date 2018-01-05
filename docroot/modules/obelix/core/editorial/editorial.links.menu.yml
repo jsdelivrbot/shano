@@ -1,0 +1,20 @@
+entity.editorial_content.collection:
+  title: 'Editorial'
+  route_name: entity.editorial_content.collection
+  description: 'Manage editorial content.'
+  parent: system.admin_obelix
+
+editorial.editorial_field.global_configuration:
+  title: 'Editorial'
+  route_name: editorial.editorial_field.global_configuration
+  description: 'Manage which layouts are available for content creation.'
+  parent: system.admin_config_content
+
+# @todo Move to a separated obelix core/base module.
+system.admin_obelix:
+  title: 'Obelix'
+  description: 'Administer World Vision related content.'
+  # @todo Also implement a admin overview or dashboard.
+  route_name: entity.editorial_content.collection
+  parent: system.admin
+  weight: -50

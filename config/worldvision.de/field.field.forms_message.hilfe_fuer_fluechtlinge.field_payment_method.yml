@@ -1,0 +1,25 @@
+uuid: 1e5bf20e-172f-4053-b6dd-fe42fcf8393b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.hilfe_fuer_fluechtlinge
+  module:
+    - fs_payment
+id: forms_message.hilfe_fuer_fluechtlinge.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: hilfe_fuer_fluechtlinge
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Zahlungsart wählen'
+    subline: ''
+    external_payment: 1
+field_type: wovi_payment_method_field

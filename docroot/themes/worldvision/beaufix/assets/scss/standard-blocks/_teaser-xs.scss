@@ -1,0 +1,16 @@
+// =============================
+// Standard Teaser
+// =============================
+
+.editorial-teaser {
+  position: relative;
+  .editorial-content-txt-block {
+    background: rgb(255, 255, 255);
+  }
+}
+.has--editorial-content--teaser{
+  .editorial-teaser{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

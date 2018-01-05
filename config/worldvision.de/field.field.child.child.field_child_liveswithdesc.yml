@@ -1,0 +1,22 @@
+uuid: 87dd1bbf-1df9-49d1-bfef-19d9e10ae871
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_liveswithdesc
+  module:
+    - child
+_core:
+  default_config_hash: wUvWUnk5nlCaG3qS3uuvRBTgk4bszop7jcxfGmB14NU
+id: child.child.field_child_liveswithdesc
+field_name: field_child_liveswithdesc
+entity_type: child
+bundle: child
+label: 'lives with description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

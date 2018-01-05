@@ -1,0 +1,54 @@
+uuid: 0f440c8a-baad-45db-b2e7-cdc440f30cd3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_na_optional
+    - node.type.news_article
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: SHRJko3Kp0excYrqH32GhqwWh8pAqG9Kd9Lkp19st3I
+id: node.news_article.field_na_optional
+field_name: field_na_optional
+entity_type: node
+bundle: news_article
+label: 'Optionale Felder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      paragraphs_video:
+        weight: 10
+        enabled: false
+      paragraph_additional_text:
+        weight: 11
+        enabled: false
+      paragraph_donation_button:
+        weight: 12
+        enabled: false
+      paragraph_images:
+        weight: 13
+        enabled: false
+      paragraph_image_16_9:
+        weight: 14
+        enabled: false
+      paragraph_image_low_height:
+        weight: 15
+        enabled: false
+      paragraph_quote:
+        weight: 16
+        enabled: false
+      paragraph_related_teaser:
+        weight: 17
+        enabled: false
+      paragraph_slideshow:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

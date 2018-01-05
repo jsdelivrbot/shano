@@ -1,0 +1,7 @@
+name: Map
+type: module
+description: Map Module
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - country

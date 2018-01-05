@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * Contains transparency_bar.module..
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function transparency_bar_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the transparency_bar module.
+    case 'help.page.transparency_bar':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Includes transparency bars about World Visions corporate transparency.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+//$child_entity_type = $this->entityTypeManager()->getStorage('child');
+// $child_entitys = $child_entity_type->loadMultiple();
+
+function transparency_bar_theme($existing, $type, $theme, $path) {
+  return array(
+    'editorial_transparency_bar' => [
+      'variables' => [
+        'id' => NULL,
+        'attributes' => [],
+        'content' => [],
+      ],
+      'template' => 'editorial-transparency-bar',
+    ],
+  );
+}
+
+
+/**
+ * Generates the markup for the editorial_content transparency bar.
+ *
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ *
+ * @see transparency_bar_editorial_content_view
+ */
+function transparency_bar_editorial_content_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('transparency_bar')) {
+    $build['transparency_bar'] = [
+      '#theme' => 'editorial_transparency_bar__' . $entity->field_transparency_bar_type[0]->value,
+      '#attributes' => $build['#attributes'] ? $build['#attributes'] : [],
+      '#content_attributes' => [],
+      '#id' => $entity->id(),
+      '#content' => [
+        'transparency_bar_type' => $entity->field_transparency_bar_type[0]->value
+      ],
+    ];
+  }
+}
+
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function transparency_bar_entity_extra_field_info() {
+  $extra = [];
+
+  $extra['editorial_content']['transparency_bar']['display']['transparency_bar'] = array(
+    'label' => t('Transparency bar'),
+    'description' => t('The rendered transparency bar'),
+    'weight' => 100,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}

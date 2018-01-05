@@ -1,0 +1,23 @@
+uuid: 74700e4d-8fcd-4b13-af9c-012be237e911
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: EmDOili13sw4xCd6HeA_JyZsFfBneuZjRbTHkjhOx0s
+id: node.field_na_subline
+field_name: field_na_subline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,6 @@
+forms_suite.form.add:
+  route_name: forms_suite.form.add
+  title: 'Add form'
+  weight: 1
+  appears_on:
+    - entity.form.collection

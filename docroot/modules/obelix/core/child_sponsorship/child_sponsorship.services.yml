@@ -1,0 +1,11 @@
+services:
+  child_sponsorship.save_subscriber:
+    class: Drupal\child_sponsorship\EventSubscriber\FormSaveSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+  child_sponsorship.mail_handler_subscriber:
+    class: Drupal\child_sponsorship\EventSubscriber\MailHandlerSubscriber
+    arguments: ['@renderer']
+    tags:
+      - { name: event_subscriber }

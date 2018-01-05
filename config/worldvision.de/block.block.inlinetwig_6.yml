@@ -1,0 +1,23 @@
+uuid: 239c4795-a98e-4099-a061-4f3e0c8ac1f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig_6
+theme: wvbasetheme
+region: footer_bottom_3
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: 'Info:right'
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: "            <div class=\"row\">\r\n              <div class=\"col-xs-12 col-md-7 col-md-push-5 col-lg-8 col-lg-push-4\">\r\n                <p class=\"text-uppercase\"><strong>Mittelverwendung:</strong></p>\r\n                <ul class=\"list-unstyled\">\r\n                  <li>85,4% PROJEKTAUSGABEN</li>\r\n                </ul>\r\n              </div>\r\n              <div class=\"col-xs-5 col-sm-6 col-md-5 col-md-pull-7 col-lg-4 col-lg-pull-8\">\r\n                <img class=\"img-responsive\"\r\n                     src=\"{{ base_path ~ directory }}/assets/images/mittelverwendung-statistik.png\"\r\n                     alt=\"Mittelverwendung Statistik\"></div>\r\n            </div>"
+    format: html
+visibility: {  }

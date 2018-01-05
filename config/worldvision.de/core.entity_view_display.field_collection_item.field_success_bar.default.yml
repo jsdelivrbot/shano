@@ -1,0 +1,36 @@
+uuid: 7b62b627-2f86-4920-823e-f1a0d21e97a8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_success_bar.field_success_bar_description
+    - field.field.field_collection_item.field_success_bar.field_success_bar_value
+    - field_collection.field_collection.field_success_bar
+  module:
+    - entity_test
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: R8iM__YPUQZ8aV3VOzU-DkWpyr2yVQbExB6_j_dRgTk
+id: field_collection_item.field_success_bar.default
+targetEntityType: field_collection_item
+bundle: field_success_bar
+mode: default
+content:
+  field_success_bar_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_success_bar_value:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

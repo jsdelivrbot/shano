@@ -1,0 +1,24 @@
+uuid: 83644514-f017-41e1-86f8-b3b5344a779c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_bar
+    - node.type.transition_page
+  module:
+    - field_collection
+_core:
+  default_config_hash: z7U8My5RRIh-ea-Af3NKUT_gvXGlkyPovTCuvAC5BSs
+id: node.transition_page.field_impact_bar
+field_name: field_impact_bar
+entity_type: node
+bundle: transition_page
+label: 'Impact bar'
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

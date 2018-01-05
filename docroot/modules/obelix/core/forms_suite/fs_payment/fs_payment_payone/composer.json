@@ -1,0 +1,6 @@
+{
+  "name": "drupal/fs_payment_payone",
+  "type": "drupal-module",
+  "description": "Defines the payone payment gateways",
+  "require": { }
+}

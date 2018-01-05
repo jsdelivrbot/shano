@@ -1,0 +1,22 @@
+uuid: e21d5310-ccdf-4a69-bb78-e3359cdd3c30
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+id: broker_page
+label: 'Broker page'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  85eb76fa-ab2a-4fe2-801e-94dce812ee41:
+    id: node_type
+    bundles:
+      broker_page: broker_page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 85eb76fa-ab2a-4fe2-801e-94dce812ee41
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.transparency_bar
+    - field.field.editorial_content.transparency_bar.field_transparency_bar_type
+id: editorial_content.transparency_bar.default
+targetEntityType: editorial_content
+bundle: transparency_bar
+mode: default
+content:
+  field_transparency_bar_type:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  name:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

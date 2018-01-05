@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install / update module related logic.
+ */
+
+use Drupal\Core\Extension;
+
+/**
+ * Implements hook_uninstall().
+ */
+function wv_tools_uninstall() {
+  $config_factory = \Drupal::service('config.factory');
+
+  $config_factory->getEditable("wv_tools.settings")->delete();
+}

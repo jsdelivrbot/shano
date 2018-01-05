@@ -1,0 +1,79 @@
+uuid: a146b57e-43f5-4a8b-88fe-a853eff7fe7b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.test_g6k_gutschein.field_company_cooperation
+    - field.field.forms_message.test_g6k_gutschein.field_giftshop
+    - field.field.forms_message.test_g6k_gutschein.field_newsletter
+    - field.field.forms_message.test_g6k_gutschein.field_spendenquittung
+    - field.field.forms_message.test_g6k_gutschein.field_user
+    - field.field.forms_message.test_g6k_gutschein.field_user_data
+    - field.field.forms_message.test_g6k_gutschein.field_wovi_survey
+    - forms_suite.form.test_g6k_gutschein
+  module:
+    - forms_suite
+    - forms_survey
+    - giftshop
+id: forms_message.test_g6k_gutschein.default
+targetEntityType: forms_message
+bundle: test_g6k_gutschein
+mode: default
+content:
+  field_company_cooperation:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_company_cooperation_widget
+    region: content
+  field_giftshop:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_giftshop_widget
+    region: content
+  field_newsletter:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_newsletter_widget
+    region: content
+  field_spendenquittung:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_receipt_widget
+    region: content
+  field_user:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_user_data_email_widget
+    region: content
+  field_user_data:
+    weight: 4
+    settings:
+      hide_initials: true
+      hide_middle_name: true
+      hide_first_name: false
+      hide_country: false
+      hide_title: false
+      hide_birthday: false
+      optional_bic: false
+      postal_max_length: '5'
+    third_party_settings: {  }
+    type: wovi_user_data_widget
+    region: content
+  field_wovi_survey:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_survey_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

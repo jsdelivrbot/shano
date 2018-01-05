@@ -1,0 +1,14 @@
+{
+  "name": "drupal/project_manager",
+  "type": "drupal-module",
+  "description": "A couple of functions for the Project Module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/project_manager",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/project_manager",
+    "source": "http://cgit.drupalcode.org/project_manager"
+  },
+  "require": { }
+}

@@ -1,0 +1,26 @@
+uuid: adff4c9e-c2c8-405b-8e61-389411ef5320
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - system
+  theme:
+    - adminimal_theme
+id: formssuitefilters
+theme: adminimal_theme
+region: content
+weight: 0
+provider: null
+plugin: forms_suite_filters
+settings:
+  id: forms_suite_filters
+  label: 'Forms Suite Filters'
+  provider: forms_suite
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /admin/structure/forms
+    negate: false
+    context_mapping: {  }

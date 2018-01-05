@@ -1,0 +1,23 @@
+uuid: 65b012c8-1d41-4ae3-9d60-4599e7a43e16
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.transparency_bar
+    - field.storage.editorial_content.field_transparency_bar_type
+  module:
+    - options
+_core:
+  default_config_hash: DHiWpisNgU28W8TSp-RsLocPFrGTlUl7ZLNSTSZ7TRA
+id: editorial_content.transparency_bar.field_transparency_bar_type
+field_name: field_transparency_bar_type
+entity_type: editorial_content
+bundle: transparency_bar
+label: 'Transparency bar type'
+description: "Type 01: Transparenz und Kontrolle, Verantwortungsvoller Mitteleinsatz vor Ort, In 99 Ländern vor Ort, Geprüft und ausgezeichnet mit DZI Spendensiegel\r\n<br />Type 02: Steuerlich absetzbar, Transparenz und Kontrolle, Keine vertragliche Bindung, Häufig gestellte Fragen\r\n<br />Type 03: Steuerlich absetzbar, Transparenz und Kontrolle, Verantwortungsvoller Mitteleinsatz vor Ort, Häufig gestellte Fragen \r\n<br />Type 04: Steuerlich absetzbar, Transparenz und Kontrolle, In 99 Ländern vor Ort, Häufig gestellte Fragen\r\n<br />Type 05: Steuerlich absetzbar, Transparenz und Kontrolle, Verantwortungsvoller Mitteleinsatz vor Ort, In 99 Ländern vor Ort<br />Type 06: Das Gute Geschenk"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

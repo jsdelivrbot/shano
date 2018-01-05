@@ -1,0 +1,48 @@
+uuid: 6a0ea28d-8d88-4d78-86fb-ba275ea4ac27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.giftshop.field_donation_period
+    - field.field.forms_message.giftshop.field_form_sql_export
+    - field.field.forms_message.giftshop.field_giftshop
+    - field.field.forms_message.giftshop.field_payment_method
+    - field.field.forms_message.giftshop.field_user_data
+    - forms_suite.form.giftshop
+  module:
+    - forms_suite
+id: forms_message.giftshop.default
+targetEntityType: forms_message
+bundle: giftshop
+mode: default
+content:
+  field_donation_period:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_giftshop:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_form_sql_export: true

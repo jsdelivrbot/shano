@@ -1,0 +1,21 @@
+uuid: ae89ad0b-2f65-41aa-b63a-9ee2dfe80c90
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+_core:
+  default_config_hash: L9jkUmwSvutMEyE8A4cmzz1SVlDyp3tpWlB5SHNL1A8
+id: field_collection_item.field_impact_bar_description
+field_name: field_impact_bar_description
+entity_type: field_collection_item
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

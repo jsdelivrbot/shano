@@ -1,0 +1,35 @@
+uuid: 9fd764a0-dbfc-4875-a7ad-cce9c0acc858
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_impact_bar.field_impact_bar_description
+    - field.field.field_collection_item.field_impact_bar.field_impact_bar_image
+    - field_collection.field_collection.field_impact_bar
+    - image.style.thumbnail
+  module:
+    - image
+_core:
+  default_config_hash: 6fBn-ghvPP4c5Ckik-p1Z1kuTNa9VfUedfHEDlYft1Y
+id: field_collection_item.field_impact_bar.default
+targetEntityType: field_collection_item
+bundle: field_impact_bar
+mode: default
+content:
+  field_impact_bar_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_impact_bar_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden: {  }

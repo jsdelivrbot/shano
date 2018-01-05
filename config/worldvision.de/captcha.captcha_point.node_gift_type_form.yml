@@ -1,0 +1,7 @@
+uuid: 325c49c3-e696-465d-98f4-614eb9f28d67
+langcode: de
+status: false
+dependencies: {  }
+formId: node_gift_type_form
+captchaType: default
+label: null

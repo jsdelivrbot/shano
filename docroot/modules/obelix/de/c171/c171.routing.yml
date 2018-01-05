@@ -1,0 +1,13 @@
+c171.landing:
+  path: '/campaigns/2017/1/{slideshow}/{video}'
+  defaults:
+    _controller: '\Drupal\c171\Controller\LandingController::index'
+    _title: 'Die Geschichte einer Freundschaft'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      slideshow:
+        type: entity:editorial_content
+      video:
+        type: entity:editorial_content

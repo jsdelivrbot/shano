@@ -1,0 +1,22 @@
+uuid: 67ea3641-2de9-44fe-81d0-8fb1f1f37cc6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_favouritesubjectdesc
+  module:
+    - child
+_core:
+  default_config_hash: Z2Nx2JidDQpmBC3onl2b7yrLkBZfx2GnuVs4DLD-V5E
+id: child.child.field_child_favouritesubjectdesc
+field_name: field_child_favouritesubjectdesc
+entity_type: child
+bundle: child
+label: 'favourite subject description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

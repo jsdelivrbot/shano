@@ -1,0 +1,28 @@
+uuid: a99f2090-46b8-4808-9ecc-5eabd0f07b62
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.direct_donation
+    - field.field.editorial_content.direct_donation.field_donation_example
+    - field.field.editorial_content.direct_donation.field_forms_reference
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: uvPJVE-5T1SNtVn5nMZiPlGxEuuMpq_ENCiAZpves10
+id: editorial_content.direct_donation.default
+targetEntityType: editorial_content
+bundle: direct_donation
+mode: default
+content:
+  direct_donation:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_donation_example: true
+  field_forms_reference: true
+  name: true
+  user_id: true

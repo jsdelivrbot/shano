@@ -1,0 +1,22 @@
+uuid: b324e21d-d02d-4779-bc59-1f10c3e702eb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.child_sponsorship_direct_en
+  module:
+    - forms_suite
+id: forms_message.child_sponsorship_direct_en.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: child_sponsorship_direct_en
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

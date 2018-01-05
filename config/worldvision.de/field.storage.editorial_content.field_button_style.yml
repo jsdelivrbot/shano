@@ -1,0 +1,29 @@
+uuid: 2d24c21d-3a70-4acf-87af-c881c4b141de
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: GuJhEbTkyyV9b-0msrWszt7LjbLNtmfh_LYhyr1b2xM
+id: editorial_content.field_button_style
+field_name: field_button_style
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: btn-beauty
+      label: Orange
+    -
+      value: 'btn-beauty btn-transparent'
+      label: Transparent
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

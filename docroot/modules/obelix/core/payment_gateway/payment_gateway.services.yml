@@ -1,0 +1,4 @@
+services:
+  plugin.manager.payment_gateway:
+    class: Drupal\payment_gateway\Plugin\PaymentGatewayManager
+    parent: default_plugin_manager

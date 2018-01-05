@@ -1,0 +1,12 @@
+uuid: e168709e-7185-45d9-9416-859f4c6d115a
+langcode: nl
+status: false
+dependencies:
+  module:
+    - entity_test
+_core:
+  default_config_hash: cYJkfB8B6apG18xwZt2x-bdvh6LbbGNQGtsyjig9UQs
+id: entity_test.test
+label: Test
+targetEntityType: entity_test
+cache: false

@@ -1,0 +1,57 @@
+uuid: b1945485-475f-464e-9c8c-fa7e0e72aaf2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kinderrechte_in_ind.field_donation_amount
+    - field.field.forms_message.kinderrechte_in_ind.field_donation_period
+    - field.field.forms_message.kinderrechte_in_ind.field_newsletter
+    - field.field.forms_message.kinderrechte_in_ind.field_payment_method
+    - field.field.forms_message.kinderrechte_in_ind.field_user_data
+    - forms_suite.form.kinderrechte_in_ind
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.kinderrechte_in_ind.default
+targetEntityType: forms_message
+bundle: kinderrechte_in_ind
+mode: default
+content:
+  field_donation_amount:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_period:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

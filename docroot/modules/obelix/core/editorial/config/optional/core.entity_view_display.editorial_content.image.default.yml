@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.image
+    - field.field.editorial_content.image.field_editorial_image
+id: editorial_content.image.default
+targetEntityType: editorial_content
+bundle: image
+mode: default
+content:
+  image:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_editorial_image: true
+  name: true
+  user_id: true

@@ -1,0 +1,38 @@
+uuid: 93d289e5-cad8-44df-b5b5-4774d8b23a7c
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.wysywig_blocks
+    - field.field.block_content.wysywig_blocks.body
+  module:
+    - text
+id: block_content.wysywig_blocks.default
+targetEntityType: block_content
+bundle: wysywig_blocks
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

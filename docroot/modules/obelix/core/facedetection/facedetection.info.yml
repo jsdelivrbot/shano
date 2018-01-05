@@ -1,0 +1,5 @@
+name: Face detection
+type: module
+description: Enables a new image effect for face detetion.
+core: 8.x
+package: Obelix (Core)

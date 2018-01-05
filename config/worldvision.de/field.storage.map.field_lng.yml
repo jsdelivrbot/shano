@@ -1,0 +1,18 @@
+uuid: 1fe2bfa5-75f0-4e2c-9e79-82e1d76a1191
+langcode: de
+status: true
+dependencies:
+  module:
+    - map
+id: map.field_lng
+field_name: field_lng
+entity_type: map
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

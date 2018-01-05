@@ -1,0 +1,24 @@
+uuid: e83b127e-b583-4888-967f-d3d1b2b8bace
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.flut_suedasien
+  module:
+    - forms_suite
+id: forms_message.flut_suedasien.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: flut_suedasien
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

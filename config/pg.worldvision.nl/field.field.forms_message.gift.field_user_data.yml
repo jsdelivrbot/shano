@@ -1,0 +1,24 @@
+uuid: 5fc43ebc-1388-4b20-90f3-6bea5cfbad0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.gift
+  module:
+    - forms_suite
+id: forms_message.gift.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: gift
+label: 'User data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ja, ik geef een gift voor Syrische vluchtelingen'
+    subline: 'Mijn gegevens:'
+field_type: wovi_user_data_field

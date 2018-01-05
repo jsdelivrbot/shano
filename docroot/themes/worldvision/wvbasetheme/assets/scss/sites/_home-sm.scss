@@ -1,0 +1,13 @@
+@media screen and (min-width: $bp-sm) {
+
+  // =============================
+  // Home specific
+  // =============================
+
+  // Teaser
+  .editorial-teaser {
+    p {
+      min-height: 80px;
+    }
+  }
+}

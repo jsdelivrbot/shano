@@ -1,0 +1,17 @@
+uuid: b87d925a-ff50-4e11-a2b7-996752e90faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.company
+  enforced:
+    config:
+      - user.role.child_list_editor
+id: company-d37bd3888
+label: 'Child list editor'
+weight: 3
+internal: true
+audience: outsider
+group_type: company
+permissions_ui: false
+permissions: {  }

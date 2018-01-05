@@ -1,0 +1,21 @@
+uuid: 90e54746-48e1-4c3c-b693-f6636079f959
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+_core:
+  default_config_hash: tkof_JtKcC6Ob8LgQ_IjeSrMDk3O1KwVYTaVWvtMO6M
+id: forms_message.field_company_cooperation
+field_name: field_company_cooperation
+entity_type: forms_message
+type: wovi_company_cooperation_field
+settings:
+  case_sensitive: false
+module: forms
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

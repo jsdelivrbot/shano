@@ -1,0 +1,61 @@
+// =============================
+// Social share
+// =============================
+
+.editorial-social-share {
+  background: $color-highlight;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+
+  li, p, i {
+    color: $color-standard-bg;
+  }
+  p, .social-share-text {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  a {
+    i {
+      font-size: 40px;
+    }
+    &:hover {
+      i {
+        color: $color-standard-txt;
+      }
+    }
+  }
+  ul {
+    margin-bottom: 0;
+    li {
+      padding-left: 10px;
+      padding-right: 10px;
+      &:first-child {
+        display: block;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+// Highlighted section
+// =============================
+.editorial-section.section-highlighted {
+  .container.has--editorial-content--social-share,
+  .container-fluid.has--editorial-content--social-share {
+    padding-top: 0;
+    padding-bottom: 0;
+    .editorial-social-share {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  .container.has--editorial-content--social-share{
+    .editorial-social-share {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+uuid: a9a44a20-99bb-4798-a5e7-2451a1f4f239
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.flut_suedasien
+  module:
+    - forms_suite
+id: forms_message.flut_suedasien.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: flut_suedasien
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

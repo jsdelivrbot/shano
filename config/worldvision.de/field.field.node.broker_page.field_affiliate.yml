@@ -1,0 +1,28 @@
+uuid: ca081cc5-94c4-483a-8033-01037ffe2a74
+langcode: de
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.storage.node.field_affiliate
+    - node.type.broker_page
+id: node.broker_page.field_affiliate
+field_name: field_affiliate
+entity_type: node
+bundle: broker_page
+label: Affiliate
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:affiliate'
+  handler_settings:
+    target_bundles:
+      merlin: merlin
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

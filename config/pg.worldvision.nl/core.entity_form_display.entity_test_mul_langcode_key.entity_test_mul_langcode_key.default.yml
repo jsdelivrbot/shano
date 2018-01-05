@@ -1,0 +1,29 @@
+uuid: 59e50980-4286-4858-a4d9-512f48e9fcbd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.entity_test_mul_langcode_key.entity_test_mul_langcode_key.field_test_text
+  module:
+    - entity_test
+    - text
+id: entity_test_mul_langcode_key.entity_test_mul_langcode_key.default
+targetEntityType: entity_test_mul_langcode_key
+bundle: entity_test_mul_langcode_key
+mode: default
+content:
+  custom_langcode_key:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_test_text:
+    type: text_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

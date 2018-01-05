@@ -1,0 +1,7 @@
+google_tag_manager_events:
+  version: 1.x
+  js:
+    js/google_tag_manager_event.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

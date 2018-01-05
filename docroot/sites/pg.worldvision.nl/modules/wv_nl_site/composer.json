@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/wv_nl_site",
+  "type": "drupal-module",
+  "description": "Provides common features for nl site.",
+  "require": { }
+}

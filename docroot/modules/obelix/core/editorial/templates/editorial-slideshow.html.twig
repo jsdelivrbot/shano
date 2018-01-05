@@ -1,0 +1,7 @@
+{% if slides %}
+  <div{{ attributes.addClass('editorial-slideshow', 'slider-container') }}>
+    <div{{ content_attributes.addClass('inner-content') }}>
+      {{ slides }}
+    </div>
+  </div>
+{% endif %}

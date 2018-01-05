@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the wvbasetheme theme.
+
+wvbasetheme.settings:
+  type: theme_settings
+  label: 'World Vision settings'

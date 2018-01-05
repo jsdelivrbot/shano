@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_additional_text.field_paragraph_text
+    - paragraphs.paragraphs_type.paragraph_additional_text
+  module:
+    - text
+id: paragraph.paragraph_additional_text.default
+targetEntityType: paragraph
+bundle: paragraph_additional_text
+mode: default
+content:
+  field_paragraph_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  uid: true

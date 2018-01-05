@@ -1,0 +1,31 @@
+@media screen and (min-width: $bp-sm) {
+  .child-finder-teaser {
+    .child-finder-teaser-toggle {
+      width: auto;
+      padding: 15px 30px;
+      @include transition(0.3s all);
+      .icon-cont {
+        padding-left: 15px;
+        @include transition(none);
+        i {
+          @include transition(none);
+        }
+      }
+      &:hover {
+        background: $color-standard-bg;
+        color: $color-highlight;
+        i {
+          color: $color-highlight;
+        }
+      }
+      &:after { // Hide box-shadow bottom
+        left: -10px;
+        right: -10px;
+      }
+    }
+    .btn-fullsize-lg.btn-beauty {
+      padding-left: 7.5px;
+      padding-right: 7.5px;
+    }
+  }
+}

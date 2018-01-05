@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains fs_datasource_bridge.bridge.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fs_datasource_bridge_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fs_datasource_bridge module.
+    case 'help.page.fs_datasource_bridge':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Establishes a connection between the Datasource handler module and the Forms suite module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

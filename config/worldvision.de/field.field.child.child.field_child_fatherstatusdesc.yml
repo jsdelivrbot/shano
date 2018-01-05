@@ -1,0 +1,22 @@
+uuid: 277d751c-63a5-4ed4-9c4e-aaa95543b3a8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_fatherstatusdesc
+  module:
+    - child
+_core:
+  default_config_hash: PYD-N88GwBHkWRHGUG5fJiSVInX6sRD90Lt_LFf0TCs
+id: child.child.field_child_fatherstatusdesc
+field_name: field_child_fatherstatusdesc
+entity_type: child
+bundle: child
+label: 'father status description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

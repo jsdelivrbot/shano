@@ -1,0 +1,29 @@
+uuid: 11b0bac2-69d7-4b63-b670-c30ed57ba4b7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.project.field_country
+  module:
+    - project
+_core:
+  default_config_hash: DOo9z-Z_QJW2NETPxcai9elNaTR-Z6OhwuwUzamNFos
+id: project.project.field_country
+field_name: field_country
+entity_type: project
+bundle: project
+label: country
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:country'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: id
+      direction: ASC
+    auto_create: true
+field_type: entity_reference

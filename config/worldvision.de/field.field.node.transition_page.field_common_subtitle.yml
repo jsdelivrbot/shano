@@ -1,0 +1,21 @@
+uuid: 3fedfc64-7fc2-4419-988c-4a513a7ddf83
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_common_subtitle
+    - node.type.transition_page
+_core:
+  default_config_hash: kk5EVpp0QfTylz-yD25Qdt5hhKGRjJCfRK7ENhgwBDM
+id: node.transition_page.field_common_subtitle
+field_name: field_common_subtitle
+entity_type: node
+bundle: transition_page
+label: Subtitle
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+// =============================
+// Transparency bar
+// =============================
+
+.editorial-transparency-bar {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  a {
+    display: block;
+    button {
+      background-color: $color-standard-bg;
+      i{
+        font-size: 50px;
+      }
+    }
+    // Hover
+    &:hover {
+      button {
+        &:after {
+          width: 9rem;
+          height: 9rem;
+          border-radius: 9rem;
+          margin: -4.5rem;
+        }
+        i {
+          color: $color-standard-txt!important;
+        }
+      }
+    }
+  }
+}

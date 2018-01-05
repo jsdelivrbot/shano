@@ -1,0 +1,21 @@
+project.project.*:
+  type: config_entity
+  label: 'Project config'
+  mapping:
+    id:
+      type: string
+      label: 'Project ID'
+    name:
+      type: string
+      label: 'Name'
+    uuid:
+      type: string
+    uid:
+      type: string
+      label: 'UID'
+    langcode:
+      type: string
+      label: 'Langcode'
+    status:
+      type: int
+      label: 'Status'

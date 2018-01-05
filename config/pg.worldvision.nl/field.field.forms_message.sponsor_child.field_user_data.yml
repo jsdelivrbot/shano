@@ -1,0 +1,24 @@
+uuid: 78be75e1-cffc-463d-bbc0-23af24d22f39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.sponsor_child
+  module:
+    - forms_suite
+id: forms_message.sponsor_child.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: sponsor_child
+label: 'User Data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'MIJN GEGEVENS'
+    subline: ''
+field_type: wovi_user_data_field

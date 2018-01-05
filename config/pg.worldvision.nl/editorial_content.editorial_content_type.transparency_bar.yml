@@ -1,0 +1,9 @@
+uuid: dbbb5729-99ad-4440-ae39-6ea72d6bcd29
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: riBzBeQyzo7ndAEkyJI6ZELdcBgfq7hERK0PARsDFmU
+id: transparency_bar
+label: 'Transparency bar'
+category: 'Global block'

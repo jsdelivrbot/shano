@@ -1,0 +1,6 @@
+<div{{ attributes.addClass('slider-item') }}>
+  {{ content.preview_image.desktop }}
+  <div{{ content_attributes.addClass('editorial-content-txt-block', 'vert-align-center-abs-sm') }}>
+    {{ content|without('preview_image') }}
+  </div>
+</div>

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_his_copy
+    - node.type.country_page
+  module:
+    - text
+id: node.country_page.field_his_copy
+field_name: field_his_copy
+entity_type: node
+bundle: country_page
+label: Copy
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

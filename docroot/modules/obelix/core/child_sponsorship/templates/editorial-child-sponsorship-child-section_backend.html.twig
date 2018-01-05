@@ -1,0 +1,15 @@
+<div class="editorial-child-sponsorship-child-select">
+  {{ child_image }}
+  <div class="child-infos">
+    <h2>Hello; I am <span>{{ child_info.name }}</span>
+      from <span>{{ child_info.country }}</span> and I am
+      looking for a sponsor!</h2>
+    <ul class="list-unstyled text-uppercase text-center font-size-xs">
+      <li>My age: <span class="font-bold">{{ child_info.age }} years</span></li>
+      <li>I live with: <span class="font-bold">{{ child_info.lives_with|replace({"mit ":"", "with ":""}) }}</span></li>
+      <li>I like: <span class="font-bold">{{ child_info.likes }}</span></li>
+    </ul>
+  </div>
+  <div style="clear: both;"></div>
+</div>
+

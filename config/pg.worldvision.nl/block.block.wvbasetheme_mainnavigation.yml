@@ -1,0 +1,26 @@
+uuid: 9975a581-8725-4675-a9b6-a058e766df5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: cOepErXSF2usG2JDQpQgZRF-2ClQpF8SKmUEVo5AOgg
+id: wvbasetheme_mainnavigation
+theme: wvbasetheme
+region: navigation
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: Hauptnavigation
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

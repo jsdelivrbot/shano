@@ -1,0 +1,22 @@
+uuid: 1348683c-2c8f-41dd-b5d5-5c9e4d1a0a78
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.global_6_k_spendenlauf_fuer_trin
+  module:
+    - fs_payment
+id: forms_message.global_6_k_spendenlauf_fuer_trin.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: global_6_k_spendenlauf_fuer_trin
+label: field_donation_period
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_donation_period_field

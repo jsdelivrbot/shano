@@ -1,0 +1,25 @@
+uuid: bf859a4a-c5eb-42f8-9ec9-8a57fd6c6d7d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kontaktformular_abschied_patenki.field_message
+    - forms_suite.form.kontaktformular_abschied_patenki
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.kontaktformular_abschied_patenki.default
+targetEntityType: forms_message
+bundle: kontaktformular_abschied_patenki
+mode: default
+content:
+  field_message:
+    label: visually_hidden
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,5 @@
+file_plus.add:
+  route_name: file_plus.file_create_form
+  title: 'Add File'
+  appears_on:
+    - view.files.page_1

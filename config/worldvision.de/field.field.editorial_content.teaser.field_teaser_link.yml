@@ -1,0 +1,25 @@
+uuid: 65ca2073-2cb6-4874-8048-dd176c4bb0bc
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.teaser
+    - field.storage.editorial_content.field_teaser_link
+  module:
+    - link
+_core:
+  default_config_hash: z6qgJ_1vUYdsYdBO7vRU-yGcgq3drSfnuheJlITVZds
+id: editorial_content.teaser.field_teaser_link
+field_name: field_teaser_link
+entity_type: editorial_content
+bundle: teaser
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

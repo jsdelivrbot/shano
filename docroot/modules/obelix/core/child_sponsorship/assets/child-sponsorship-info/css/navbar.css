@@ -1,0 +1,33 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 4, ../scss/_navbar-xs.scss */
+.child-sponsorship-info-navbar {
+  background: #f0f0f0;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+/* line 9, ../scss/_navbar-xs.scss */
+.child-sponsorship-info-navbar ul li {
+  font-family: "Gill Sans W04 Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-bottom: 7.5px;
+}
+/* line 12, ../scss/_navbar-xs.scss */
+.child-sponsorship-info-navbar ul li:first-child {
+  font-family: "Gill Sans W04 Book", Helvetica Neue, Helvetica, Arial, sans-serif;
+  display: block;
+}
+
+@media screen and (min-width: 992px) {
+  /* line 8, ../scss/_navbar-md.scss */
+  .child-sponsorship-info-navbar ul li:first-child {
+    display: inline;
+  }
+}

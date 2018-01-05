@@ -1,0 +1,14 @@
+<div{{ attributes.addClass('editorial--content', 'img-content') }}>
+  <div class="editorial-social-share inner-content">
+    <p class="text-uppercase vert-align-center-abs-sm hidden-xs">{{ content.page_title }}</p>
+    <ul class="list-inline list-unstyled text-center-xs">
+      <li class="text-center-xs social-share-text text-uppercase">{{ content.share_text }}:</li>
+      <li><a class="share-btn fb" data-share-url="{{ content.page_path }}" href="javascript:void(0);"><i class="icon-facebook-round"></i></a></li>
+      <li><a class="share-btn twitter" data-share-text="" data-share-url="{{ content.page_path }}" href="javascript:void(0);"><i class="icon-twitter-round"></i></a></li>
+      <li><a class="share-btn mail" href="javascript:void(0);"><i class="icon-mail-round"></i></a></li>
+      <li><a class="share-btn print" href="javascript:void(0);"><i class="icon-print-round"></i></a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</div>
+

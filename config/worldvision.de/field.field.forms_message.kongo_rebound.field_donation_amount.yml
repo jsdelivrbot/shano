@@ -1,0 +1,27 @@
+uuid: 028af0c2-15fe-4ade-8b16-8b512c04bf6b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.kongo_rebound
+  module:
+    - fs_payment
+id: forms_message.kongo_rebound.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: kongo_rebound
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

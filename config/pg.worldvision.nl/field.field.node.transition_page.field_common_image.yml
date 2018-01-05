@@ -1,0 +1,40 @@
+uuid: 1021f8ab-8a91-45d6-923f-6918aced0961
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_common_image
+    - node.type.transition_page
+  module:
+    - image
+_core:
+  default_config_hash: 0gxp5YUprz8ZWEhJq4fZitnH8RFbp6bOiO81b0w8WNA
+id: node.transition_page.field_common_image
+field_name: field_common_image
+entity_type: node
+bundle: transition_page
+label: 'Header image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'transition-page/images/header[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1400x600
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

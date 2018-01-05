@@ -1,0 +1,30 @@
+uuid: 9cc043d2-f8ff-407d-a44e-4dcc168dd15a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pdp_content
+    - node.type.public_donor_project
+    - paragraphs.paragraphs_type.public_donor_projects
+_core:
+  default_config_hash: Mub8dI7AlnuekQrGU9e3r60EsBmmvikC2xLx9VBvF1Y
+id: paragraph.public_donor_projects.field_pdp_content
+field_name: field_pdp_content
+entity_type: paragraph
+bundle: public_donor_projects
+label: 'PDP Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      public_donor_project: public_donor_project
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

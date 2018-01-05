@@ -1,0 +1,22 @@
+uuid: b18fe344-7054-4e30-bebe-d8825117fd76
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kontaktformular_corinna_karrenbe
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_corinna_karrenbe.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kontaktformular_corinna_karrenbe
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

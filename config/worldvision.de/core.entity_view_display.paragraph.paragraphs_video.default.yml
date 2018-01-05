@@ -1,0 +1,29 @@
+uuid: 200d7df4-c83d-4af5-a568-124af03c6a5a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraphs_video.field_paragraph_video_url
+    - paragraphs.paragraphs_type.paragraphs_video
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: BElBRE65crmOkUFWadVAAIHiOFrWF9Kt8teHsTC7w2Q
+id: paragraph.paragraphs_video.default
+targetEntityType: paragraph
+bundle: paragraphs_video
+mode: default
+content:
+  field_paragraph_video_url:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  uid: true

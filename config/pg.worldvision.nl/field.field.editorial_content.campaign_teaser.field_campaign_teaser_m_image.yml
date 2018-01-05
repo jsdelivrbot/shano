@@ -1,0 +1,39 @@
+uuid: be6abdb7-eaec-4f37-8500-64f416709b48
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_campaign_teaser_m_image
+  module:
+    - image
+_core:
+  default_config_hash: '-NtnLTdK1LrlJnLHuIb1HiWN1DKedkL6dh40LA5oylA'
+id: editorial_content.campaign_teaser.field_campaign_teaser_m_image
+field_name: field_campaign_teaser_m_image
+entity_type: editorial_content
+bundle: campaign_teaser
+label: 'Mobile image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'editorial/campaign-teaser/mobile/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 640x960
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,91 @@
+// =============================
+// Colors
+// =============================
+$color-standard-bg: #FFFFFF;
+$color-highlight-bg: #f0f0f0;
+$color-highlight: #ff7700;
+$color-highlight-secondary: #83bbbc;
+
+$color-standard-txt: #404040;
+
+$color-standard-border: #bfbfbf;
+
+$color-error: #ff0500;
+
+// =============================
+// Fonts
+// =============================
+$font-light: 'Gill Sans W04 Light', Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-roman: 'Gill Sans W04 Roman', Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-bold: 'Gill Sans W04 Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-book: 'Gill Sans W04 Book', Helvetica Neue, Helvetica, Arial, sans-serif;
+$font-hand-script: 'SuomiHand W01 Script', Helvetica Neue, Helvetica, Arial, sans-serif;
+
+// Font-sizes
+$font-size-nav-xs: 12px;
+
+$font-size-nav-sm: 13px;
+$font-size-subnav-sm: 14px;
+
+// TODO clean this shit
+// OLD
+$font-size-h3-xs: 20px;
+$font-size-h3-sm: 26px;
+$font-size-h3-md: 32px;
+$font-size-h3-lg: 36px;
+
+$font-size-h4-xs: 18px;
+$font-size-h5-xs: 14px;
+$font-size-h6-xs: 18px;
+
+
+$font-size-subtitle-xs: 18px;
+$font-size-subtitle-sm: 22px;
+$font-size-subtitle-md: 26px;
+$font-size-subtitle-lg: 32px;
+// OLD END
+
+$font-size-highlighted-xs: 24px;
+
+$font-size-btn: 12px;
+
+$font-size-copy-xs: 16px;
+$line-height-copy-xs: 1.375em;
+
+$font-size-copy-md: 18px;
+$line-height-copy-md: 1.375em;
+
+// New Font-sizes
+//$font-size-body-small: 16px;
+//$font-size-body-big: 18px;
+
+$font-size-smallest: 16px;
+$font-size-small: 18px;
+$font-size-medium: 20px;
+$font-size-large: 22px;
+$font-size-x-large: 24px;
+$font-size-xx-large: 26px;
+$font-size-xxx-large: 28px;
+$font-size-xxxx-large: 32px;
+$font-size-xxxxx-large: 36px;
+$font-size-xxxxxx-large: 48px;
+
+$line-height-small: 1.125em;
+$line-height-medium: 1.250em;
+$line-height-big: 1.375em;
+
+
+// =============================
+// Navbar
+// =============================
+$color-nav-border: #F2F2F2;
+
+$subnav-height: 41px;
+
+// =============================
+// Breakpoints
+// =============================
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1400px;
+

@@ -1,0 +1,21 @@
+uuid: f0d15ad7-a15e-4cde-bf28-a86f900f9003
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_title
+    - node.type.gift_type
+_core:
+  default_config_hash: 8JvWGq9B2ea3XA5zlF67p62MXGTCsBuooFA_zyzQtEo
+id: node.gift_type.field_autoteaser_title
+field_name: field_autoteaser_title
+entity_type: node
+bundle: gift_type
+label: Titel
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

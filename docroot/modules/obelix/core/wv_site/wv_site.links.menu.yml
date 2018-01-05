@@ -1,0 +1,23 @@
+wv_site.config_menu:
+  title: 'World Vision'
+  route_name: wv_site.admin_config_wv
+  menu_name: admin
+  parent: system.admin_config
+  description: 'World Vision Settings.'
+  weight: -10
+
+wv_site.config:
+  title: 'Site Config'
+  description: 'Common settings.'
+  parent: wv_site.config_menu
+  menu_name: admin
+  route_name: wv_site.config_form
+  weight: 99
+
+wv_site.routing_config:
+  title: 'Routing Config'
+  description: 'You can map some pages links to custom urls.'
+  parent: wv_site.config_menu
+  menu_name: admin
+  route_name: wv_site.routing_config_form
+  weight: 100

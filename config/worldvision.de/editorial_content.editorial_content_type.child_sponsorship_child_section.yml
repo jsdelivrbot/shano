@@ -1,0 +1,9 @@
+uuid: 1fc749e7-a2cd-4f0c-aea8-3b1ad7495c33
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UafBxQ9XoolkmGXGoQ0MDd_OxPOgchwoXgv1Y04SgxQ
+id: child_sponsorship_child_section
+label: 'Child sponsorship child section'
+category: 'Standard block'

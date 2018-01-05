@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/wv_site",
+  "type": "drupal-module",
+  "description": "Provides common features for all countries sites, e.g. forms configs.",
+  "require": { }
+}

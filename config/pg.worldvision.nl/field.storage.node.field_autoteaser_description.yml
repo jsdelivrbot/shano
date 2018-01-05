@@ -1,0 +1,19 @@
+uuid: 20e2d469-2679-4461-8b66-418c6d8d246e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_autoteaser_description
+field_name: field_autoteaser_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

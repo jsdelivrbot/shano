@@ -1,0 +1,7 @@
+obelix_contacts.settings_form:
+  path: '/admin/config/wv/contacts_settings'
+  defaults:
+    _form: '\Drupal\obelix_contacts\Form\obelixContactsSettingsForm'
+    _title: 'Contact information'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,33 @@
+datasources:
+  ivision_source:
+    args:
+      uri: 'http://ivisionwebservice.worldvision.de/v8/'
+      language: DEU
+      siteID: gfr
+    cache: 0
+    default: 0
+    namespace: ivision_source
+    classpath: Drupal\ivision\IVision
+  ivision_nav_16_source:
+    args:
+      uri: 'http://nav.wveu.org:7187/DynamicsNAV90_PRD_WS01/WS/'
+      companyName: ger_iVision
+      user: Artus
+      password: WEB$2016nav
+    cache: 0
+    default: 1
+    namespace: ivision_nav_16_source
+    classpath: Drupal\ivision_nav16\IVisionNav16
+  default:
+    args:
+      uri: 'http://nav.wveu.org:7187/DynamicsNAV90_PRD_WS01/WS/'
+      companyName: ger_iVision
+      user: Artus
+      password: WEB$2016nav
+    cache: 0
+    default: 1
+    namespace: ivision_nav_16_source
+    classpath: Drupal\ivision_nav16\IVisionNav16
+_core:
+  default_config_hash: Oslz7dRVx0nQn_G0NW0ejfsQqKY-9y_nTSHCHCUCWR8
+langcode: de

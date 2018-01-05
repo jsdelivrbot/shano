@@ -1,0 +1,193 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Main-Navigation
+  // =============================
+  .main-nav-cont {
+    background: none;
+    position: fixed;
+    top: 0;
+    // Searchbar
+    .navbar-searchbar {
+      .form-group {
+        .input-group {
+          input.form-control {
+            font-size: 24px;
+            @include placeholder($color-standard-txt, $font-light, 24px);
+          }
+        }
+      }
+    }
+    // Mobile Navbar-Header
+    .navbar-header {
+      // Burger-Icon
+      .navbar-toggle {
+        display: none;
+      }
+    }
+    .offcanvas-container {
+      display: block;
+      .region-navigation {
+        display: block;
+      }
+    }
+    .navbar-body {
+      width: auto;
+      background: #ffffff;
+      opacity: 0.95;
+      @include transition(0.3s opacity);
+      // Main Navigation
+      .main-nav {
+        .btn-search {
+          padding: 30px 33px;
+          margin-right: 30px;
+          border-right: 1px solid $color-nav-border;
+        }
+        li {
+          &.dropdown {
+            // Standard Navi-Link
+            > a{
+              padding: 10px 0;
+              margin-left: 11px;
+              margin-right: 11px;
+              border-bottom: 0;
+
+              color: $color-highlight;
+              background: $color-standard-bg;
+              font-size: 10px; // 5th Navi point
+
+              padding-top: 29px;
+              padding-bottom: 27px;
+
+              position: relative;
+              border-bottom: 4px solid $color-standard-bg;
+              @include transition(0.3s all);
+              &.is-active, &.active, &:hover {
+                border-color: $color-highlight;
+              }
+            }
+            &.open{
+              a{
+                border-color: $color-highlight;
+              }
+            }
+            // Dropdown Menu
+            .dropdown-menu {
+              display: block;
+            }
+            //  Flyout
+            .navbar-flyout-cont {
+              background: $color-highlight-bg;
+              position: absolute;
+              left: 0px;
+              right: 0px;
+              display: none;
+              border-bottom: 1px solid $color-nav-border;
+              @include box-shadow(0 4px 8px -4px rgba(0, 0, 0, 0.3));
+              .navbar-flyout-inner-cont {
+                opacity: 0;
+                @include transition(1.5s opacity);
+              }
+              h4 {
+                font-size: 18px;
+              }
+              .navbar-flyout-close {
+                float: left;
+                margin-top: 15px;
+                i {
+                  font-size: 21px;
+                }
+              }
+              .dropdown-menu {
+                padding-top: 26px;
+                margin-top: 0;
+                font-size: 16px;
+                background: none;
+                position: relative;
+                width: auto;
+                border: 0;
+                @include box-shadow(none);
+                li {
+                  a {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    background: transparent none repeat scroll 0% 0%;
+                    border: 0px none;
+                  }
+                }
+              }
+              .flyout-teaser-cont {
+                .flyout-teaser {
+                  background: $color-standard-bg;
+                  border-right: 1px solid $color-highlight-bg;
+                  border-left: 1px solid $color-highlight-bg;
+                  .teaser-desc {
+                    padding: 15px 30px 30px 30px;
+                    min-height: 210px; // @ TODO Moe: Make it flexible
+                  }
+                  &.form-group {
+                    margin-bottom: 0px;
+                  }
+                }
+              }
+              // OPEN Flyout
+              &.open {
+                z-index: 99999;
+                .navbar-flyout-inner-cont {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          // Button beauty in main-nav
+          > a.btn-beauty,
+          > button.btn-beauty{
+            color: $color-standard-bg;
+            font-size: 10px;
+            padding: 7px 7px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            &:hover,
+            &:focus{
+              color: $color-highlight;
+            }
+          }
+        }
+      }
+      // Sub Navigation
+      .sub-nav {
+        padding-left: 111px;
+        width: 100%;
+        border-bottom: 1px solid $color-nav-border;
+
+        overflow: hidden;
+        @include transition(0.5s all);
+        height: $subnav-height;
+
+        li {
+          a {
+            padding: 10px 11px;
+            color: $color-standard-txt;
+            font-size: $font-size-subnav-sm;
+            &:hover {
+              color: $color-highlight;
+            }
+          }
+          &:nth-child(2) {
+            padding-left: initial;
+          }
+        }
+        &.shrink {
+          height: 0;
+        }
+      }
+      .brand-logo-sm {
+        float: right;
+        width: 130px;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

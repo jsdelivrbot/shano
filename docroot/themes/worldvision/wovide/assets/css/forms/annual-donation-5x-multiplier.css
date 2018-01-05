@@ -1,0 +1,7 @@
+/* line 1, ../../scss/forms/annual-donation-5x-multiplier.scss */
+.field--type-wovi-donation-amount-field:after {
+  content: url('../../images/forms/annual-donation-5x-multiplier.png?1484656757');
+  text-align: center;
+  margin: 40px auto 60px;
+  display: block;
+}

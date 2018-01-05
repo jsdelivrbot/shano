@@ -1,0 +1,27 @@
+uuid: 47305975-0260-4b8f-bf68-8db2067844ae
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.code_embed
+    - field.field.editorial_content.code_embed.field_code
+third_party_settings:
+  entity_test:
+    foo: bar
+id: editorial_content.code_embed.default
+targetEntityType: editorial_content
+bundle: code_embed
+mode: default
+content:
+  code:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  code_embed:
+    weight: 100
+    region: content
+hidden:
+  field_code: true
+  name: true
+  user_id: true

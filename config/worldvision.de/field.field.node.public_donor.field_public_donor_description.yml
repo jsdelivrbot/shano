@@ -1,0 +1,23 @@
+uuid: 8469a3ee-3fdf-4283-adf1-2eaef55a7d29
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_donor_description
+    - node.type.public_donor
+  module:
+    - text
+_core:
+  default_config_hash: Dt__h7O7gpEnbprsM8756SWD15_GpXf7ipHwQmv58hk
+id: node.public_donor.field_public_donor_description
+field_name: field_public_donor_description
+entity_type: node
+bundle: public_donor
+label: Beschreibung
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

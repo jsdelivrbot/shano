@@ -1,0 +1,4 @@
+services:
+  datasource:
+    class: Drupal\datasourcehandler\DatasourceService
+    arguments: []

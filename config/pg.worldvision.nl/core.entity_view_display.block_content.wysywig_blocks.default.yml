@@ -1,0 +1,23 @@
+uuid: d7f6a090-1102-4e3d-a73e-d7075b01794e
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.wysywig_blocks
+    - field.field.block_content.wysywig_blocks.body
+  module:
+    - text
+id: block_content.wysywig_blocks.default
+targetEntityType: block_content
+bundle: wysywig_blocks
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

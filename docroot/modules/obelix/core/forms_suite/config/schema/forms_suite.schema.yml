@@ -1,0 +1,25 @@
+field.widget.settings.wovi_user_data_widget:
+  type: mapping
+  label: 'WOVI user data widget settings'
+  mapping:
+    hide_initials:
+      type: boolean
+      label: 'Hide initials'
+    hide_middle_name:
+      type: boolean
+      label: 'Hide middle name'
+    hide_first_name:
+      type: boolean
+      label: 'Hide first name'
+    hide_country:
+      type: boolean
+      label: 'Hide country'
+    hide_title:
+      type: boolean
+      label: 'Hide tile'
+    hide_birthday:
+      type: boolean
+      label: 'Hide birthday'
+    postal_max_length:
+      type: string
+      label: 'Postal code max length'

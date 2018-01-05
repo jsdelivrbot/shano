@@ -1,0 +1,9 @@
+uuid: 03e92a87-931f-4280-8a15-27b0954adcfd
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UMU5ZLFT179xyVM92WLBezYE1q12Ud4DNMujz9Qcyyg
+id: paragraph_additional_text
+label: 'Additional text'
+behavior_plugins: {  }

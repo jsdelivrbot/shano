@@ -1,0 +1,7 @@
+map.world_map:
+  path: '/map/{id}'
+  defaults:
+    _controller: '\Drupal\map\Controller\MapController::loadMap'
+    _title: 'View map'
+  requirements:
+    _permission: 'access content'

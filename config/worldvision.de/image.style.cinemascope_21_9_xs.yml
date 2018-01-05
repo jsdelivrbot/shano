@@ -1,0 +1,14 @@
+uuid: 8b5ff958-9504-44ea-b54d-0d20711e4c80
+langcode: de
+status: true
+dependencies: {  }
+name: cinemascope_21_9_xs
+label: 'Cinemascope (21:9) XS'
+effects:
+  083215a1-ed17-4005-ac7e-ad553706ed10:
+    uuid: 083215a1-ed17-4005-ac7e-ad553706ed10
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 280

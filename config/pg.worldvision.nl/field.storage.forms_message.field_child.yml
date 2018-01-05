@@ -1,0 +1,20 @@
+uuid: 2fe04dd5-882c-4c43-9452-9cb9bb5dcb4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - child_sponsorship
+    - forms_suite
+id: forms_message.field_child
+field_name: field_child
+entity_type: forms_message
+type: wovi_child_field
+settings:
+  case_sensitive: false
+module: child_sponsorship
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

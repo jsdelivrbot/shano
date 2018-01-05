@@ -1,0 +1,24 @@
+uuid: 3ffbe4c0-cc7f-4bc4-865f-2b75c8e628f3
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.jaehrliche_spende
+  module:
+    - forms_suite
+id: forms_message.jaehrliche_spende.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: jaehrliche_spende
+label: 'Personal information'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

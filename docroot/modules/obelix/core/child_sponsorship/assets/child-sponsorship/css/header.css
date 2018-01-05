@@ -1,0 +1,79 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 5, ../scss/_header-xs.scss */
+.child-sponsorship-header .transparency-price {
+  position: absolute;
+  right: 15px;
+  width: 118px;
+}
+
+/* line 15, ../scss/_header-xs.scss */
+.child-sponsorship-my-child-billy-header .txt-content {
+  position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 6, ../scss/_header-sm.scss */
+  .child-sponsorship-header .transparency-price {
+    width: 95px;
+    right: 30px;
+  }
+
+  /* line 13, ../scss/_header-sm.scss */
+  .child-sponsorship-my-child-billy-header {
+    background: url("/modules/obelix/core/child_sponsorship/assets/child-sponsorship/img/my-child-billy/bg-billy-und-urs-sm.jpg");
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: 72% 58%;
+    background-color: #fbf7f4;
+  }
+  /* line 20, ../scss/_header-sm.scss */
+  .child-sponsorship-my-child-billy-header .txt-content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  /* line 23, ../scss/_header-sm.scss */
+  .child-sponsorship-my-child-billy-header .transparency-price {
+    position: absolute;
+    right: 30px;
+    width: 138px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 6, ../scss/_header-md.scss */
+  .child-sponsorship-header .transparency-price {
+    width: 123px;
+  }
+
+  /* line 12, ../scss/_header-md.scss */
+  .child-sponsorship-my-child-billy-header {
+    min-height: 210px;
+    background-position: 70%;
+  }
+  /* line 15, ../scss/_header-md.scss */
+  .child-sponsorship-my-child-billy-header .transparency-price {
+    width: 180px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 6, ../scss/_header-lg.scss */
+  .child-sponsorship-header .transparency-price {
+    width: 160px;
+  }
+
+  /* line 12, ../scss/_header-lg.scss */
+  .child-sponsorship-my-child-billy-header {
+    background-position: right;
+  }
+}

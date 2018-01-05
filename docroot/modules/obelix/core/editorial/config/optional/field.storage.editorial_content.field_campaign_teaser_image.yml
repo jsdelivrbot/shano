@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - file
+    - image
+id: editorial_content.field_campaign_teaser_image
+field_name: field_campaign_teaser_image
+entity_type: editorial_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

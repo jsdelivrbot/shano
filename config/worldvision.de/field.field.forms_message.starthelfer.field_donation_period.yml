@@ -1,0 +1,27 @@
+uuid: a08f704c-04aa-450b-add0-da3f4e9e17df
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.starthelfer
+  module:
+    - fs_payment
+id: forms_message.starthelfer.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: starthelfer
+label: 'Donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      interval_period: interval_period
+      single_period: 0
+field_type: wovi_donation_period_field

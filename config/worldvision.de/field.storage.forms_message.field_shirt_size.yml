@@ -1,0 +1,33 @@
+uuid: 2739dc81-18ac-40b6-820f-995867f8518f
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - options
+id: forms_message.field_shirt_size
+field_name: field_shirt_size
+entity_type: forms_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: S
+      label: S
+    -
+      value: M
+      label: M
+    -
+      value: L
+      label: L
+    -
+      value: XL
+      label: XL
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

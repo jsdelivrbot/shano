@@ -1,0 +1,8 @@
+services:
+  ab_testing:
+    class: Drupal\ab_testing\ABTestingService
+    arguments: ['@user.private_tempstore', '@session_manager', '@current_user']
+  gtm_datalayer_event.ab_testing:
+    class: Drupal\ab_testing\ABTestingDataLayer
+    tags:
+      - { name: event_subscriber }

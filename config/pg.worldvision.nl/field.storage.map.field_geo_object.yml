@@ -1,0 +1,21 @@
+uuid: e17b5ec2-d754-41c6-9ad6-9958180129f7
+langcode: nl
+status: true
+dependencies:
+  module:
+    - map
+_core:
+  default_config_hash: F7A4T0ckDg-1-SpYDssfPZO9a7ADK-Hw1Sy-ledP7sQ
+id: map.field_geo_object
+field_name: field_geo_object
+entity_type: map
+type: entity_reference
+settings:
+  target_type: geo_object
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

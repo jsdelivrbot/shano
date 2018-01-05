@@ -1,0 +1,66 @@
+uuid: 0b0e8212-5efe-4933-91a8-e80aed99761b
+langcode: de
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gift_type.field_autoteaser_button_label
+    - field.field.node.gift_type.field_autoteaser_description
+    - field.field.node.gift_type.field_autoteaser_image
+    - field.field.node.gift_type.field_autoteaser_title
+    - field.field.node.gift_type.field_gift_campaign_teaser
+    - field.field.node.gift_type.field_gift_certificate
+    - field.field.node.gift_type.field_gift_certificate_preview
+    - field.field.node.gift_type.field_gift_description
+    - field.field.node.gift_type.field_gift_id
+    - field.field.node.gift_type.field_gift_price
+    - field.field.node.gift_type.field_metatags
+    - field.field.node.gift_type.field_slideshow_slides
+    - field.field.node.gift_type.field_teaser
+    - field.field.node.gift_type.field_tracking
+    - field.field.node.gift_type.field_transparency_bar_bottom
+    - field.field.node.gift_type.field_transparency_bar_top
+    - node.type.gift_type
+  module:
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+id: node.gift_type.teaser
+targetEntityType: node
+bundle: gift_type
+mode: teaser
+content:
+  giftshop_gift_form:
+    weight: -90
+    region: content
+  giftshop_gift_select_form:
+    weight: -100
+    region: content
+  giftshop_section_gift:
+    weight: -100
+    region: content
+  giftshop_section_info:
+    weight: -100
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_autoteaser_button_label: true
+  field_autoteaser_description: true
+  field_autoteaser_image: true
+  field_autoteaser_title: true
+  field_gift_campaign_teaser: true
+  field_gift_certificate: true
+  field_gift_certificate_preview: true
+  field_gift_description: true
+  field_gift_id: true
+  field_gift_price: true
+  field_metatags: true
+  field_slideshow_slides: true
+  field_teaser: true
+  field_tracking: true
+  field_transparency_bar_bottom: true
+  field_transparency_bar_top: true
+  langcode: true

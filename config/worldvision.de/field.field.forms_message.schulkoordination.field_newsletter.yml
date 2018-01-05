@@ -1,0 +1,22 @@
+uuid: 649b625d-5350-473c-a30b-cfa49f602d8c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.schulkoordination
+  module:
+    - forms_suite
+id: forms_message.schulkoordination.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: schulkoordination
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

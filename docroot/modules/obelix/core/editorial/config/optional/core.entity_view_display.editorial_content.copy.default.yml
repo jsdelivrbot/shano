@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.copy
+    - field.field.editorial_content.copy.field_body
+id: editorial_content.copy.default
+targetEntityType: editorial_content
+bundle: copy
+mode: default
+content:
+  copy:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_body: true
+  name: true
+  user_id: true

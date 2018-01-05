@@ -1,0 +1,7 @@
+langcode: de
+status: true
+dependencies: {  }
+id: node__news_article
+label: 'Content: News / Articles'
+tags:
+  title: '[node:title]'

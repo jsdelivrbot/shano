@@ -1,0 +1,23 @@
+uuid: 8cd67450-012d-45a4-8210-8539132f832e
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+_core:
+  default_config_hash: KxRMDIIlVAlmUAejZyrD5z5vutgnBvVfnxSTRMpYEAw
+id: editorial_content.field_campaign_teaser_headline
+field_name: field_campaign_teaser_headline
+entity_type: editorial_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

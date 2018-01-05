@@ -1,0 +1,30 @@
+uuid: 3a4d4fc7-5440-4e85-b892-007c5db06f0d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.youtube_video
+    - field.storage.node.field_youtube_video
+    - node.type.transition_page
+_core:
+  default_config_hash: RpvX8pix5GUr6T1n05ZVn856DEsL7BFcWkjQNbRqhFQ
+id: node.transition_page.field_youtube_video
+field_name: field_youtube_video
+entity_type: node
+bundle: transition_page
+label: 'YouTube Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      youtube_video: youtube_video
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

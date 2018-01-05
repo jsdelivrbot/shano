@@ -1,0 +1,560 @@
+<?php
+
+/**
+ * @file
+ * Enables the use of the forms suite module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\forms_suite\Controller\SubmissionProcessController;
+
+/**
+ * Implements hook_help().
+ */
+function forms_suite_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the forms_suite module.
+    case 'help.page.forms_suite':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables Forms suite module.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_mail().
+ */
+function forms_suite_mail($key, &$message, $params) {
+
+  if (isset($params['subject'])) {
+    $message['subject'] = $params['subject'];
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function forms_suite_theme($existing, $type, $theme, $path) {
+
+  $thank_you_args = [
+    'variables' => [
+      'text' => NULL,
+      'headline' => NULL,
+    ],
+    'path' => $path . '/templates/thank_you',
+  ];
+
+  return array(
+    'tokens' => array(
+      'variables' => array('content' => NULL),
+    ),
+    'thankyou_default' => $thank_you_args,
+    'external_payment' => array(
+      'variables' => array('case' => NULL),
+    ),
+    'autoreply_donation' => array(
+      'variables' => array('message' => NULL),
+      'path' => $path . '/templates/emails',
+    ),
+    'autoreply_suggestion_email' => array(
+      'variables' => array('message' => NULL),
+      'path' => $path . '/templates/emails',
+    ),
+    'autoreply_default' => array(
+      'variables' => array('message' => NULL),
+      'path' => $path . '/templates/emails',
+    ),
+    'data_mail' => array(
+      'variables' => array('message' => NULL),
+      'path' => $path . '/templates/emails',
+    ),
+    'form_section' => array(
+      'render element' => 'elements',
+    ),
+    'message_form' => array(
+      'render element' => 'message_form',
+    ),
+  );
+}
+
+/**
+ * implements hook_preprocess_hook() for views table templates.
+ */
+function forms_suite_preprocess_views_view_table(&$variables) {
+  if (isset($variables['view']) && isset($variables['rows'])) {
+    $view = $variables['view'];
+    $rows = $variables['rows'];
+    if ($view->id() == 'submitted_forms') {
+      $tempstore = \Drupal::service('user.private_tempstore')->get('forms');
+      $tempstore->set('csv', [
+        'rows' => $rows,
+      ]);
+    }
+  }
+}
+
+
+/**
+ * Implements hook_cron().
+ */
+function forms_suite_cron() {
+  $renderer = \Drupal::service('renderer');
+  $session = \Drupal::service('session');
+  $mail_handler = \Drupal::service('forms.mail_handler');
+  $submission_handler = new SubmissionProcessController($renderer, $session, $mail_handler);
+  $submission_handler->checkSubmissionsToSend();
+}
+
+
+/**
+ * Implements hook_field_widget_form_alter
+ */
+function forms_suite_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  $build_info = $form_state->getBuildInfo();
+
+  /** @var \Drupal\Core\Field\WidgetBaseInterface $widget */
+  $widget = $context['widget'];
+
+  /** @var \Drupal\Core\Field\FieldItemListInterface $items */
+  $items = $context['items'];
+
+  if (get_class($build_info['callback_object']) === 'Drupal\forms_suite\MessageForm') {
+    switch ($widget->getPluginId()) {
+      case 'options_select':
+        if (isset($element['#type'])) {
+          $element['#theme_wrappers']['form_element'] = [];
+        }
+
+        $wrapper = 'form_section__' . $widget->getPluginId() . '__' . $items->getFieldDefinition()
+            ->getName();
+        $element['#theme_wrappers'][$wrapper] = [];
+        break;
+    }
+  }
+
+}
+
+/**
+ * Implements hook_form_field_config_edit_form_alter().
+ *
+ * Deactivate default values and required field for forms suite fields.
+ */
+function forms_suite_form_field_config_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (isset($form['settings']['forms_suite_configs'])) {
+    $form['description']['#access'] = FALSE;
+    $form['description']['#weight'] = 15;
+    unset($form['required']);
+    unset($form['default_value']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function forms_suite_theme_suggestions_message_form_alter(array &$suggestions, array $variables) {
+
+  // Generates a suggestion for e.g. 'message-form--base--forms-message-child-sponsorship-with-condition-form.html.twig'
+  $suggestions[] = $variables['message_form']['#theme'] . '__' . $variables['message_form']['#form_id'];
+
+  return $suggestions;
+}
+
+
+
+/**
+ * @file
+ * Enables the use of the forms suite module.
+ */
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Implements hook_tokens().
+ */
+function forms_suite_tokens($type, $tokens, array $data, array $options, BubbleableMetadata $bubbleable_metadata) {
+
+  $replacements = [];
+
+  $wovi_fields = [
+    'wovi_user_data_field',
+    'wovi_child_select_field',
+    'wovi_child_field',
+    'wovi_yearly_donation_field',
+    'wovi_company_cooperation_field',
+    'wovi_donation_amount_single_field',
+    'wovi_donation_amount_field',
+    'wovi_donation_period_interval_field',
+    'wovi_donation_period_single_field',
+    'wovi_donation_period_field',
+    'wovi_message_field',
+    'wovi_newsletter_field',
+    'wovi_payment_method_field',
+    'wovi_press_distributor_field',
+    'wovi_suggestion_field',
+    'wovi_user_data_email_field',
+    'wovi_giftshop',
+    'forms',
+  ];
+
+  if (in_array($type, $wovi_fields)) {
+
+    // deprecated fields switched to new fields
+    if($type == 'wovi_donation_amount_single_field'){
+      $type = 'wovi_donation_amount_field';
+    }
+
+    if($type == 'wovi_donation_period_interval_field' || $type == 'wovi_donation_period_single_field'){
+      $type = 'wovi_donation_period_field';
+    }
+
+    foreach ($tokens as $field_element => $placeholder) {
+      if (isset($data[$type])) {
+        $replacements[$placeholder] = $data[$type][$field_element];
+      }
+    }
+
+    // Build the personalized salutation token.
+    $replacements['[wovi_user_data_field:personalized_salutation]'] = '[wovi_user_data_field:salutation]';
+    if (!empty($data['wovi_user_data_field']['salutation'])) {
+      if (is_object($data['wovi_user_data_field']['salutation'])) {
+        $salutation = $data['wovi_user_data_field']['salutation']->getUntranslatedString();
+        if ($salutation == 'Mr.') {
+          $personal_salutation = 'geehrter';
+        }
+        else {
+          $personal_salutation = 'geehrte';
+        }
+        $replacements['[wovi_user_data_field:personalized_salutation]'] = $personal_salutation . ' [wovi_user_data_field:salutation]';
+      }
+    }
+
+  }
+
+  return $replacements;
+}
+
+
+/**
+ * Implements hook_token_info().
+ */
+function forms_suite_token_info() {
+
+  // @todo make this less static
+  $types = [
+    'wovi_user_data_field' => [
+      'name' => t("WoVi user data field"),
+      'description' => t("User data Field section"),
+    ],
+    'wovi_child_select_field' => [
+      'name' => t("WoVi child select field"),
+      'description' => t("Child select Field section"),
+    ],
+    'wovi_child_field' => [
+      'name' => t("WoVi child field"),
+      'description' => t("Vhild Field section"),
+    ],
+    'wovi_yearly_donation_field' => [
+      'name' => t("WoVi yearly donation field"),
+      'description' => t("Yearly donation Field section"),
+    ],
+    'wovi_company_cooperation_field' => [
+      'name' => t("WoVi company cooperation field"),
+      'description' => t("Company cooperation Field section"),
+    ],
+    'wovi_donation_amount_field' => [
+      'name' => t("WoVi donation amount field"),
+      'description' => t("Donation amount Field section"),
+    ],
+    'wovi_donation_period_field' => [
+      'name' => t("WoVi donation period field"),
+      'description' => t("Donation period Field section"),
+    ],
+    'wovi_message_field' => [
+      'name' => t("WoVi message field"),
+      'description' => t("Message Field section"),
+    ],
+    'wovi_newsletter_field' => [
+      'name' => t("WoVi newsletter field"),
+      'description' => t("Newsletter Field section"),
+    ],
+    'wovi_payment_method_field' => [
+      'name' => t("WoVi payment method field"),
+      'description' => t("Payment method Field section"),
+    ],
+    'wovi_press_distributor_field' => [
+      'name' => t("WoVi press distributor field"),
+      'description' => t("Press distributor Field section"),
+    ],
+    'wovi_suggestion_field' => [
+      'name' => t("WoVi suggestion field"),
+      'description' => t("Suggestion Field section"),
+    ],
+    'wovi_user_data_email_field' => [
+      'name' => t("WoVi user data email field"),
+      'description' => t("User data email Field section"),
+    ],
+    'forms' => [
+      'name' => t("Forms"),
+      'description' => t("Data around the forms module"),
+    ],
+    'wovi_giftshop' => [
+      'name' => t("WoVi giftshop"),
+      'description' => t("WoVi giftshop"),
+    ],
+
+  ];
+
+
+  $tokens = [
+    'wovi_user_data_field' => [
+      'salutation' => [
+        'name' => t("salutation"),
+        'description' => t("The user salutation field"),
+      ],
+      'jobTitleCode' => [
+        'name' => t("jobTitleCode"),
+        'description' => t("The user jobTitleCode field"),
+      ],
+      'firstName' => [
+        'name' => t("firstName"),
+        'description' => t("The user firstName field"),
+      ],
+      'surname' => [
+        'name' => t("surname"),
+        'description' => t("The user surname field"),
+      ],
+      'companyName' => [
+        'name' => t("companyName"),
+        'description' => t("The user companyName field"),
+      ],
+      'street' => [
+        'name' => t("street"),
+        'description' => t("The user street field"),
+      ],
+      'houseNo' => [
+        'name' => t("houseNo"),
+        'description' => t("The user houseNo field"),
+      ],
+      'postCode' => [
+        'name' => t("postCode"),
+        'description' => t("The user postCode field"),
+      ],
+      'city' => [
+        'name' => t("city"),
+        'description' => t("The user city field"),
+      ],
+      'phonePrivate' => [
+        'name' => t("phonePrivate"),
+        'description' => t("The user phonePrivate field"),
+      ],
+      'email' => [
+        'name' => t("email"),
+        'description' => t("The user email field"),
+      ],
+      'birthday' => [
+        'name' => t("birthday"),
+        'description' => t("The user birthday field"),
+      ],
+      'birthmonth' => [
+        'name' => t("birthmonth"),
+        'description' => t("The user birthmonth field"),
+      ],
+      'birthyear' => [
+        'name' => t("birthyear"),
+        'description' => t("The user birthyear field"),
+      ],
+      'personalized_salutation' => [
+        'name' => t('Personalized salutation'),
+        'description' => t('Personalized salutation based on salutation field.'),
+      ],
+    ],
+    'wovi_child_select_field' => [
+      'child_gender' => [
+        'name' => t("child_gender"),
+        'description' => t("The user child_gender field"),
+      ],
+      'child_region' => [
+        'name' => t("child_region"),
+        'description' => t("The user child_region field"),
+      ],
+      'child_country' => [
+        'name' => t("child_country"),
+        'description' => t("The user child_country field"),
+      ],
+    ],
+    'wovi_child_field' => [
+      'childSequenceNo' => [
+        'name' => t("childSequenceNo"),
+        'description' => t("The childSequenceNo field"),
+      ],
+      'childCountryCode' => [
+        'name' => t("childCountryCode"),
+        'description' => t("The childCountryCode field"),
+      ],
+    ],
+    'wovi_yearly_donation_field' => [
+      'month13' => [
+        'name' => t("month13"),
+        'description' => t("The month13 field"),
+      ],
+    ],
+    'wovi_company_cooperation_field' => [
+      'companyCooperationCategory' => [
+        'name' => t("companyCooperationCategory"),
+        'description' => t("The companyCooperationCategory field"),
+      ],
+      'companyCooperationSpecial' => [
+        'name' => t("companyCooperationSpecial"),
+        'description' => t("The companyCooperationSpecial field"),
+      ],
+    ],
+    'wovi_donation_amount_field' => [
+      'amount' => [
+        'name' => t("amount"),
+        'description' => t("The user amount field"),
+      ],
+      'amountRadio' => [
+        'name' => t("amountRadio"),
+        'description' => t("The user amountRadio field"),
+      ],
+    ],
+    'wovi_donation_period_field' => [
+      'billingPeriod' => [
+        'name' => t("billingPeriod"),
+        'description' => t("The user billingPeriod field"),
+      ],
+    ],
+    'wovi_message_field' => [
+      'message' => [
+        'name' => t("message"),
+        'description' => t("The user message field"),
+      ],
+    ],
+    'wovi_newsletter_field' => [
+      'newsletter' => [
+        'name' => t("newsletter"),
+        'description' => t("The user newsletter field"),
+      ],
+    ],
+    'wovi_payment_method_field' => [
+      'paymentMethod' => [
+        'name' => t("paymentMethod"),
+        'description' => t("The user paymentMethod field"),
+      ],
+      'IBAN' => [
+        'name' => t("IBAN"),
+        'description' => t("The user IBAN field"),
+      ],
+      'swiftCode' => [
+        'name' => t("swiftCode"),
+          'description' => t("The user swiftCode field"),
+      ],
+      'bankAccountNo' => [
+        'name' => t("Bank account number"),
+        'description' => t("Bank account number"),
+      ],
+      'bankBranchNo' => [
+        'name' => t("Bank branch number"),
+        'description' => t("Bank branch number"),
+      ],
+    ],
+    'wovi_press_distributor_field' => [
+      'adressnumber' => [
+        'name' => t("adressnumber"),
+        'description' => t("The user adressnumber field"),
+      ],
+      'editorialStaff' => [
+        'name' => t("editorialStaff"),
+        'description' => t("The user editorialStaff field"),
+      ],
+      'journalist' => [
+        'name' => t("journalist"),
+        'description' => t("The user journalist field"),
+      ],
+      'shippingMethod' => [
+        'name' => t("shippingMethod"),
+        'description' => t("The user shippingMethod field"),
+      ],
+      'topics' => [
+        'name' => t("topics"),
+        'description' => t("The user topics field"),
+      ],
+      'printed' => [
+        'name' => t("printed"),
+        'description' => t("The user printed field"),
+      ],
+
+    ],
+    'wovi_suggestion_field' => [
+      'suggestion' => [
+        'name' => t("suggestion"),
+        'description' => t("The user suggestion field"),
+      ],
+    ],
+    'wovi_user_data_email_field' => [
+      'salutation' => [
+        'name' => t("salutation"),
+        'description' => t("The user salutation field"),
+      ],
+      'firstName' => [
+        'name' => t("firstName"),
+        'description' => t("The user firstName field"),
+      ],
+      'surname' => [
+        'name' => t("surname"),
+        'description' => t("The user surname field"),
+      ],
+      'email' => [
+        'name' => t("email"),
+        'description' => t("The user email field"),
+      ],
+    ],
+    'forms' => [
+      'transfer_id' => [
+        'name' => t("Transfer ID"),
+        'description' => t("The unique transfer ID"),
+      ],
+    ],
+    'wovi_giftshop' => [
+      'gifts_list' => [
+        'name' => t("Gifts list"),
+        'description' => t("List of all gifts (Table)"),
+      ],
+      'gift_amount_complete' => [
+        'name' => t("Complete gifts amount"),
+        'description' => t("Complete gifts amount"),
+      ],
+    ],
+  ];
+
+  return [
+    'types' => $types,
+    'tokens' => $tokens,
+  ];
+}
+
+/**
+ * Helper function - check if the current form is the child sponsorship en.
+ * @return bool
+ */
+function forms_suite_is_child_sponsorship_english_form() {
+  $config = \Drupal::config('wv_site.settings.routing');
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_uri = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+  return ($current_uri == $config->get('child_sponsorship_form_in_english'));
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function forms_suite_form_alter(&$form, $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-submitted-forms-page-1') {
+    $form['created']['#type'] = 'date';
+    $form['created_1']['#type'] = 'date';
+  }
+}

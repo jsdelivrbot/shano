@@ -1,0 +1,20 @@
+uuid: 96fa0b2c-a7dc-49a9-a6fe-a34a29b269e5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_video_url
+  module:
+    - child
+id: child.child.field_child_video_url
+field_name: field_child_video_url
+entity_type: child
+bundle: child
+label: 'Child video url'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

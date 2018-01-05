@@ -1,0 +1,28 @@
+uuid: 6b505b6e-5f8f-466b-9c4b-731c88f6c6db
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.relation_teaser
+    - field.storage.group.field_relation_teaser
+    - group.type.company
+id: group.company.field_relation_teaser
+field_name: field_relation_teaser
+entity_type: group
+bundle: company
+label: 'Gifts List'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      relation_teaser: relation_teaser
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

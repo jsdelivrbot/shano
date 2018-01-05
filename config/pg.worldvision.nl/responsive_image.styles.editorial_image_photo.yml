@@ -1,0 +1,30 @@
+uuid: d046926c-f658-4b6c-b9e5-49580f63ef21
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.photo_4_3_md
+    - image.style.photo_4_3_sm
+    - image.style.photo_4_3_xs
+  theme:
+    - bootstrap
+id: editorial_image_photo
+label: Photo
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: photo_4_3_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: photo_4_3_sm
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: photo_4_3_md
+breakpoint_group: bootstrap
+fallback_image_style: photo_4_3_sm

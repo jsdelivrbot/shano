@@ -1,0 +1,50 @@
+uuid: abd3eee1-747f-4e27-99cf-e4ef8d69b052
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.kontaktformular_georg_kessler.field_message
+    - field.field.forms_message.kontaktformular_georg_kessler.field_newsletter
+    - field.field.forms_message.kontaktformular_georg_kessler.field_user_data
+    - forms_suite.form.kontaktformular_georg_kessler
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_georg_kessler.default
+targetEntityType: forms_message
+bundle: kontaktformular_georg_kessler
+mode: default
+content:
+  copy:
+    weight: 50
+    region: content
+  field_message:
+    type: wovi_message_widget
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_newsletter:
+    type: wovi_newsletter_widget
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mail:
+    weight: -40
+    region: content
+  name:
+    weight: -50
+    region: content
+hidden: {  }

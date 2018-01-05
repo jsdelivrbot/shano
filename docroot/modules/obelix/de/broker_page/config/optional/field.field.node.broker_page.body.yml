@@ -1,0 +1,22 @@
+uuid: 1b5315df-f18c-432b-8a5d-c0e888639d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.broker_page
+  module:
+    - text
+id: node.broker_page.body
+field_name: body
+entity_type: node
+bundle: broker_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

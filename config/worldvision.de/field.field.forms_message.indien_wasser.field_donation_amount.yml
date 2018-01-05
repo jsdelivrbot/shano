@@ -1,0 +1,22 @@
+uuid: 13cc9b60-d8b9-452c-b8b8-f2e6bbe25aca
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.indien_wasser
+  module:
+    - fs_payment
+id: forms_message.indien_wasser.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: indien_wasser
+label: field_donation_amount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_donation_amount_field

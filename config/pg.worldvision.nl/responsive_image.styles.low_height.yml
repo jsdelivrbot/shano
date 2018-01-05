@@ -1,0 +1,30 @@
+uuid: ed6b1edf-c1e7-4c2b-be9b-c40d15d6afbd
+langcode: nl
+status: true
+dependencies:
+  config:
+    - image.style.low_height_16_4_md
+    - image.style.low_height_16_4_sm
+    - image.style.low_height_16_4_xs
+  theme:
+    - bootstrap
+id: low_height
+label: 'Low height'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: low_height_16_4_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: low_height_16_4_sm
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: low_height_16_4_md
+breakpoint_group: bootstrap
+fallback_image_style: low_height_16_4_sm

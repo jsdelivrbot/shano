@@ -1,0 +1,113 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 1, ../../scss/sites/_childhood-savior-xs.scss */
+.editorial-page .editorial-section > .container-fluid.has--editorial-content--youtube-video, .editorial--content.editorial-youtube-video {
+  padding-top: 0;
+}
+
+/* line 5, ../../scss/sites/_childhood-savior-xs.scss */
+.editorial-youtube-video .yt-preview .yt-preview-img {
+  top: 0;
+}
+
+/* line 9, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial-copy-9267, #editorial-copy-9268, #editorial-copy-9269, #editorial-copy-9270, #editorial-copy-9079, #editorial-copy-9080, #editorial-copy-9081, #editorial-copy-9082 {
+  padding-top: 0;
+  padding-bottom: 15px;
+}
+
+/* line 14, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial-copy-9528, #editorial-copy-9529, #editorial-copy-9066, #editorial-copy-9067 {
+  padding: 0;
+}
+/* line 17, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial-copy-9528 h1, #editorial-copy-9529 h1, #editorial-copy-9066 h1, #editorial-copy-9067 h1 {
+  margin-bottom: 0;
+}
+
+/* line 22, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial-copy-9532, #editorial-copy-9071 {
+  padding: 10px;
+}
+
+/* line 26, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial--image-9531, #editorial--image-9072 {
+  padding: 20px 100px;
+}
+
+/* line 30, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial-copy-9538, #editorial-copy-9092 {
+  padding: 15px;
+}
+/* line 33, ../../scss/sites/_childhood-savior-xs.scss */
+#editorial-copy-9538 .editorial-copy p, #editorial-copy-9092 .editorial-copy p {
+  font-size: 24px;
+}
+
+/* line 38, ../../scss/sites/_childhood-savior-xs.scss */
+.yt-preview-txt {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 3, ../../scss/sites/_childhood-savior-sm.scss */
+  .editorial-content-txt-block p {
+    color: #FFFFFF;
+  }
+
+  /* line 8, ../../scss/sites/_childhood-savior-sm.scss */
+  .has--editorial-content--copy.has--editorial-content--image.item-4, .has--editorial-content--copy.has--editorial-content--image.item-8 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  /* line 12, ../../scss/sites/_childhood-savior-sm.scss */
+  .has--editorial-content--copy.has--editorial-content--image.item-4 .row, .has--editorial-content--copy.has--editorial-content--image.item-8 .row {
+    display: table;
+  }
+  /* line 15, ../../scss/sites/_childhood-savior-sm.scss */
+  .has--editorial-content--copy.has--editorial-content--image.item-4 .row [class*="col-"], .has--editorial-content--copy.has--editorial-content--image.item-8 .row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  /* line 23, ../../scss/sites/_childhood-savior-sm.scss */
+  #editorial-copy-9267, #editorial-copy-9268, #editorial-copy-9269, #editorial-copy-9270, #editorial-copy-9079, #editorial-copy-9080, #editorial-copy-9081, #editorial-copy-9082 {
+    padding-bottom: 30px;
+  }
+
+  /* line 27, ../../scss/sites/_childhood-savior-sm.scss */
+  #editorial--image-9531, #editorial--image-9072 {
+    padding: 0 125px;
+  }
+
+  /* line 32, ../../scss/sites/_childhood-savior-sm.scss */
+  #editorial-copy-9532 h3, #editorial-copy-9535 h3, #editorial-copy-9071 h3, #editorial-copy-9083 h3 {
+    font-size: 15px;
+  }
+
+  /* line 37, ../../scss/sites/_childhood-savior-sm.scss */
+  #editorial-copy-9538, #editorial-copy-9092 {
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 2, ../../scss/sites/_childhood-savior-md.scss */
+  #editorial--image-9531, #editorial--image-9072 {
+    padding: 0 100px;
+  }
+
+  /* line 7, ../../scss/sites/_childhood-savior-md.scss */
+  #editorial-copy-9532 h3, #editorial-copy-9535 h3, #editorial-copy-9071 h3, #editorial-copy-9083 h3 {
+    font-size: 24px;
+  }
+}

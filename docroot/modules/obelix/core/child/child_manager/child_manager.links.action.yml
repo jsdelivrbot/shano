@@ -1,0 +1,11 @@
+entity.child.update:
+  route_name: entity.child.update
+  title: 'Update Children'
+  appears_on:
+    - entity.child.collection
+
+entity.child.unblock:
+  route_name: entity.child.unblock
+  title: 'Unblock Children'
+  appears_on:
+    - entity.child.collection

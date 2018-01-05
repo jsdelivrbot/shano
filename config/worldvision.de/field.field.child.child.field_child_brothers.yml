@@ -1,0 +1,26 @@
+uuid: 31d61481-d61f-42a4-b242-acbaab8defe8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_brothers
+  module:
+    - child
+_core:
+  default_config_hash: 1LipX5OGGacBzRSxKf6kPANrIEH0v1viGzeCwvYLp-g
+id: child.child.field_child_brothers
+field_name: field_child_brothers
+entity_type: child
+bundle: child
+label: brothers
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

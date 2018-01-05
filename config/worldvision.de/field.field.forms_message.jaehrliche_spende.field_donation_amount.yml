@@ -1,0 +1,27 @@
+uuid: 44367aba-23d6-45d5-9b95-40a472430a99
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.jaehrliche_spende
+  module:
+    - fs_payment
+id: forms_message.jaehrliche_spende.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: jaehrliche_spende
+label: Betrag
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    single_amount: 0
+    minimal_amount: '30'
+    default_amount: '30'
+field_type: wovi_donation_amount_field

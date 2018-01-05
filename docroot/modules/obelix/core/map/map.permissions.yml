@@ -1,0 +1,38 @@
+add map entities:
+  title: 'Create new Map entities'
+
+administer map entities:
+  title: 'Administer Map entities'
+  description: 'Allow to access the administration form to configure Map entities.'
+  restrict access: true
+
+delete map entities:
+  title: 'Delete Map entities'
+
+edit map entities:
+  title: 'Edit Map entities'
+
+view published map entities:
+  title: 'View published Map entities'
+
+view unpublished map entities:
+  title: 'View unpublished Map entities'
+add geo object entities:
+  title: 'Create new Geo object entities'
+
+administer geo object entities:
+  title: 'Administer Geo object entities'
+  description: 'Allow to access the administration form to configure Geo object entities.'
+  restrict access: true
+
+delete geo object entities:
+  title: 'Delete Geo object entities'
+
+edit geo object entities:
+  title: 'Edit Geo object entities'
+
+view published geo object entities:
+  title: 'View published Geo object entities'
+
+view unpublished geo object entities:
+  title: 'View unpublished Geo object entities'

@@ -1,0 +1,11 @@
+entity.editorial_content_type.collection:
+  title: 'Editorial types'
+  route_name: entity.editorial_content_type.collection
+  description: 'Create and manage custom editorial content types.'
+  parent: system.admin_structure
+
+entity.editorial_content.collection:
+  title: 'Editorial content'
+  route_name: entity.editorial_content.collection
+  description: 'Manage existing editorial content.'
+  parent: system.admin_content

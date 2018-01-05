@@ -1,0 +1,24 @@
+uuid: 498986a2-ea68-480c-a2f6-c9434b8278d8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user
+    - forms_suite.form.test_g6k_gutschein
+  module:
+    - forms_suite
+id: forms_message.test_g6k_gutschein.field_user
+field_name: field_user
+entity_type: forms_message
+bundle: test_g6k_gutschein
+label: 'user data email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Field user'
+    subline: ''
+field_type: wovi_user_data_email_field

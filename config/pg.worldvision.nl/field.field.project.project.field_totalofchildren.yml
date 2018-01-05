@@ -1,0 +1,26 @@
+uuid: 33300da5-bd34-4dc0-82fb-c22b430d1516
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.project.field_totalofchildren
+  module:
+    - project
+_core:
+  default_config_hash: mKm-32vy-VlKaub3wox3n2qTRsgQC2Tad_Azqm3pPjI
+id: project.project.field_totalofchildren
+field_name: field_totalofchildren
+entity_type: project
+bundle: project
+label: 'total of children'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

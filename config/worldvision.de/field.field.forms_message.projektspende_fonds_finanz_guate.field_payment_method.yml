@@ -1,0 +1,25 @@
+uuid: 925295f3-5f01-4339-90f2-dedae39b849f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.projektspende_fonds_finanz_guate
+  module:
+    - fs_payment
+id: forms_message.projektspende_fonds_finanz_guate.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_guate
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Zahlungsart wählen'
+    subline: ''
+    external_payment: 1
+field_type: wovi_payment_method_field

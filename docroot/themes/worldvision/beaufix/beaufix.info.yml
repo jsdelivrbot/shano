@@ -1,0 +1,96 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Beaufix'
+description: 'Beaufix is the beautiful default theme for the Obelix distribution.'
+package: 'Obelix'
+
+regions:
+  top_navigation: 'Top Navigation'
+  search: 'Search'
+  navigation: 'Main Navigation'
+  secondary_navigation: 'Secondary Navigation'
+  page_top: 'Page top'
+  breadcrumbs: 'Breadcrumbs'
+  controls: 'Page controls'
+  content: 'Content'
+  page_bottom: 'Page bottom'
+  footer: 'Footer'
+
+libraries:
+  - 'beaufix/jasny_bootstrap'
+  - 'beaufix/transformicons'
+  - 'beaufix/icomoon'
+  - 'beaufix/global'
+  # @todo move to story teaser preprocess.
+  - 'beaufix/editorial-content'
+
+libraries-override:
+  # Uodate editorial libraries.
+  editorial/campaign-teaser:
+    css:
+      base:
+        libraries/campaign-teaser/css/campaign-teaser.css: assets/css/standard-blocks/campaign-teaser.css
+  editorial/copy:
+    css:
+      base:
+        libraries/copy/css/copy.css: assets/css/standard-blocks/copy.css
+  editorial/headline:
+    css:
+      base:
+        libraries/headline/css/headline.css: assets/css/standard-blocks/headline.css
+  editorial/hero-slider:
+    css:
+      base:
+        libraries/hero-slider/css/hero-slider.css: assets/css/standard-blocks/hero-slider.css
+  editorial/slideshow:
+    css:
+      base:
+        libraries/slideshow/css/slideshow.css: assets/css/standard-blocks/slideshow.css
+  editorial/quotation:
+    css:
+      base:
+        libraries/slideshow/css/quotation.css: assets/css/standard-blocks/quotation.css
+  editorial/teaser:
+    css:
+      base:
+        libraries/teaser/css/teaser.css: assets/css/standard-blocks/teaser.css
+  editorial/story-teaser:
+    css:
+      base:
+        libraries/story-teaser/css/story-teaser.css: assets/css/standard-blocks/story-teaser.css
+  editorial/youtube-video:
+    css:
+      base:
+        libraries/youtube-video/css/youtube-video.css: assets/css/standard-blocks/youtube-video.css
+  editorial/button:
+    css:
+      base:
+        libraries/button/css/button.css: assets/css/standard-blocks/button.css
+  editorial/link:
+    css:
+      base:
+        libraries/link/css/link.css: assets/css/standard-blocks/link.css
+  direct_donation/slider-bar:
+    css:
+      base:
+        css/donation-slider-bar.css: assets/css/individual-blocks/direct-donation.css
+  child_sponsorship/child-select:
+    css:
+      base:
+        css/child-sponsorship-child-select.css: assets/css/individual-blocks/child-sponsorship-child-select.css
+  child-select:
+      css:
+        base:
+          css/child-sponsorship-child-select.css: assets/css/individual-blocks/child-sponsorship-child-select.css
+  social_share/social-share:
+    css:
+      base:
+        libraries/css/social-share.css: assets/css/individual-blocks/social-share.css
+
+libraries-extend:
+  editorial/slickslider:
+    - beaufix/slickslider.style
+  offcanvas/off-canvas-child:
+    - beaufix/off-canvas-child

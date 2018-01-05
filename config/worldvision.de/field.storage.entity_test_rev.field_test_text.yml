@@ -1,0 +1,20 @@
+uuid: d280c80f-79b4-4f84-84de-037ea36826c4
+langcode: de
+status: true
+dependencies:
+  module:
+    - entity_test
+    - text
+id: entity_test_rev.field_test_text
+field_name: field_test_text
+entity_type: entity_test_rev
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

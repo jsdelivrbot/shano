@@ -1,0 +1,20 @@
+uuid: 57cd129c-9b6b-486f-8285-c8e0018f9f14
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+type: wovi_payment_method_field
+settings:
+  case_sensitive: false
+module: fs_payment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

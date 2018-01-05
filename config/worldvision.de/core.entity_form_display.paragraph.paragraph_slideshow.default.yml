@@ -1,0 +1,35 @@
+uuid: e32f1a86-d6ae-4528-b2e4-f15f9cf5f06a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_slideshow.field_paragraph_slideshow
+    - paragraphs.paragraphs_type.paragraph_slideshow
+  module:
+    - inline_entity_form
+_core:
+  default_config_hash: Tm0BvizfiNodwED9igvKlYQB8sOc219Wk5Jmtq0tWTE
+id: paragraph.paragraph_slideshow.default
+targetEntityType: paragraph
+bundle: paragraph_slideshow
+mode: default
+content:
+  field_paragraph_slideshow:
+    weight: 0
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

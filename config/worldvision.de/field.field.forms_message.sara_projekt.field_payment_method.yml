@@ -1,0 +1,22 @@
+uuid: 511c62ce-cd2d-4066-ba39-97a4f18293be
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.sara_projekt
+  module:
+    - fs_payment
+id: forms_message.sara_projekt.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: sara_projekt
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_payment_method_field

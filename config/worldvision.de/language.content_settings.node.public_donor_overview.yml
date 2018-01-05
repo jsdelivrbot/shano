@@ -1,0 +1,13 @@
+uuid: 1a6e5e7c-e8b8-4d45-824d-ce71ea354033
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.public_donor_overview
+_core:
+  default_config_hash: 85gZj-Z4H6skYLIaf-tv6eO7N8tIfsKC1CkNT-eExe0
+id: node.public_donor_overview
+target_entity_type_id: node
+target_bundle: public_donor_overview
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Contains child.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+require_once 'child.tools.inc';
+
+/**
+ * Implements hook_help().
+ */
+function child_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the child module.
+    case 'help.page.child':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Child Entity') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function child_theme($existing, $type, $theme, $path)
+{
+  return array(
+    'child' => array(
+      'variables' => array('content' => NULL),
+    ),
+    'child_image' => array(
+      'variables' => array('child' => NULL),
+    ),
+    'child_birthday' => array(
+       'variables' => array('tps' => NULL,  'childamount' => NULL),
+    ),
+    'child_country' => array(
+       'variables' => array('content' => NULL),
+    ),
+
+  );
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function child_form_alter(&$form, $form_state, $form_id) {
+  if ($form['#id'] == 'views-exposed-form-child-list-page-2') {
+    $form['field_child_birthdate_value']['#type'] = 'date';
+    $form['field_child_birthdate_value_1']['#type'] = 'date';
+    $form['block_time']['#type'] = 'date';
+    $form['block_time_1']['#type'] = 'date';
+  }
+  if ($form['#id'] == 'views-exposed-form-child-list-page-1') {
+    $form['block_time']['#type'] = 'date';
+    $form['block_time_1']['#type'] = 'date';
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function child_views_query_alter($view, $query) {
+  if ($view->id() == 'child_list') {
+    $display_ids = array_flip([
+      'page_1',
+      'page_2',
+    ]);
+    $current_display_id = $view->getDisplay()->display['id'];
+    if (isset($display_ids[$current_display_id])) {
+      if (!empty($query->where)) {
+        foreach ($query->where as &$where) {
+          foreach ($where['conditions'] as &$condition) {
+            if ($condition['field'] == 'child.block_time') {
+              $condition['value'] = strtotime($condition['value']);
+            }
+          }
+        }
+      }
+    }
+  }
+}

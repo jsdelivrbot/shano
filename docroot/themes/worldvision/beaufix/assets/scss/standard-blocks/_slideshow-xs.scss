@@ -1,0 +1,23 @@
+// =============================
+// Slideshow
+// =============================
+.editorial-slideshow {
+  figure {
+    img {
+      position: relative;
+    }
+    figcaption {
+      padding: 20px 0;
+    }
+  }
+}
+
+// =============================
+// Unsupported Cols
+// =============================
+.col-sm-4, .col-md-4,
+.col-sm-3, .col-md-3 {
+  .editorial-content--slideshow {
+    display: none;
+  }
+}

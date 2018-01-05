@@ -1,0 +1,11 @@
+
+google_tag_manager.configuration_form:
+  path: '/admin/config/google_tag_manager/configuration'
+  defaults:
+    _form: '\Drupal\google_tag_manager\Form\ConfigurationForm'
+    _title: 'ConfigurationForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

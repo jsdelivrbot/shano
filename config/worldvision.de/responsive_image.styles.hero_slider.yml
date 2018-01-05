@@ -1,0 +1,26 @@
+uuid: 8f4103fb-cec8-4b82-bda9-5d0227af9918
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.middle_height_3_1_sm
+    - image.style.widescreen_16_9_sm
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: ZwNydDILzGPZAcl-13Dj1CqH64nO1iBeoQGrqPm8FgE
+id: hero_slider
+label: 'Hero slider'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: middle_height_3_1_sm
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_sm
+breakpoint_group: bootstrap
+fallback_image_style: '_empty image_'

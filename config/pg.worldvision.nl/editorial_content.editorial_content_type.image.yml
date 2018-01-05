@@ -1,0 +1,9 @@
+uuid: aee6c5de-6055-46e7-b289-ce92954e4c9d
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YTW_mjiEpYF-5gD2Vbdo4GOchkimn3cOQTLE8xPg6OM
+id: image
+label: Bild
+category: 'Standard block'

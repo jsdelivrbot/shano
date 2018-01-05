@@ -1,0 +1,7 @@
+datasourcehandler.config_form:
+  title: 'Datasource handler'
+  route_name: datasourcehandler.config_form
+  description: 'Configurate the Dasources'
+  parent: system.admin_config_services
+  weight: 99
+

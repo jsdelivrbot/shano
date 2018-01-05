@@ -1,0 +1,13 @@
+uuid: f6cf6cad-9497-4089-ad90-a66a3302d3e4
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.public_donor
+_core:
+  default_config_hash: oH4C1Fkq599qX-m99mSE2STrUjT-o4uRNWpQk_-Ka_M
+id: node.public_donor
+target_entity_type_id: node
+target_bundle: public_donor
+default_langcode: site_default
+language_alterable: false

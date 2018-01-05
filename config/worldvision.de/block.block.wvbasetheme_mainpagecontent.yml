@@ -1,0 +1,22 @@
+uuid: e2179424-8162-4a4e-8ea9-a3375d72a4e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: BfdRwsvX1PIRvt1DnjQq5GcNNzyG5oAr0TinPGZ3Sco
+id: wvbasetheme_mainpagecontent
+theme: wvbasetheme
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

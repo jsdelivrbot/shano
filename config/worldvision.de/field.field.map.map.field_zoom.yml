@@ -1,0 +1,24 @@
+uuid: 510aa2be-ce81-4b51-b264-07b76ee9d64b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.map.field_zoom
+  module:
+    - map
+id: map.map.field_zoom
+field_name: field_zoom
+entity_type: map
+bundle: map
+label: Zoom
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

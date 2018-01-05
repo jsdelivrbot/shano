@@ -1,0 +1,125 @@
+// =============================
+// Editorial content generally stylings
+// =============================
+
+// Breakpoint SM
+// =============================
+@media screen and (min-width: $bp-sm) {
+
+  // Container
+  .editorial-page {
+    .editorial-section > .container,
+    .editorial-section > .container-fluid {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      // First container
+      &.first {
+        .img-content.first {
+          margin-top: -15px;
+          padding-top: 0;
+        }
+
+        .txt-content.first {
+          padding-top: 20px;
+        }
+      }
+      .editorial--content {
+        // First editorial-content in container
+        &.first {
+          padding-top: 0;
+        }
+        // Last editorial-content in container
+        &.last {
+          padding-bottom: 0;
+        }
+      }
+      //  3-3-3-3 MD under SM
+      > .row {
+        .col-sm-6.col-md-3:nth-child(3),
+        .col-sm-6.col-md-3:nth-child(4) {
+          .editorial--content.first.last {
+            padding-top: 30px;
+          }
+        }
+      }
+      // Transparency bar
+      &.has--editorial-content--transparency-bar {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      // Story/automatic-teaser
+      // =============================
+      &.has--editorial-content--story-teaser,
+      &.has--editorial-content--automatic-teaser {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        > .row [class^="col-"] {
+          padding-left: 7.5px;
+          padding-right: 7.5px;
+        }
+        .editorial--content {
+          //padding-top: 0;
+          //padding-bottom: 15px;
+        }
+        &.first {
+          .img-content {
+            margin-top: 0;
+          }
+        }
+      //  No-padding settings
+        &.container-padding-bottom-none{
+          padding-bottom: 0;
+        }
+        &.container-padding-top-none{
+          padding-top: 0;
+        }
+        &.container-padding-top-bottom-none{
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+      &.has--editorial-content--automatic-teaser {
+        //padding-top: 0;
+        //padding-bottom: 0;
+        > .row [class^="col-"] {
+          padding-left: 11.5px;
+          padding-right: 11.5px;
+        }
+      }
+      //  Extra Container-Padding setting
+      &.container-padding-bottom {
+        padding-bottom: 60px;
+      }
+
+
+    }
+    // Container fluid
+    .editorial-section > .container-fluid {
+      &.has--editorial-content--story-teaser,
+      &.has--editorial-content--automatic-teaser {
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+      }
+    }
+  //  Highlighted sections
+    .section-highlighted{
+      > .container,
+      > .container-fluid {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        &.container-padding-bottom-none{
+          margin-bottom: 0;
+        }
+        &.container-padding-top-none{
+          margin-top: 0;
+        }
+        &.container-padding-top-bottom-none{
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// =============================
+// Child Sponsorship header
+// =============================
+@media screen and (min-width: $bp-sm) {
+  .child-sponsorship-info-header {
+    .header-txt {
+      @include vertical-align(absolute);
+      padding-left: 15px;
+      h1{
+        margin-top: 0;
+      }
+    }
+  }
+}

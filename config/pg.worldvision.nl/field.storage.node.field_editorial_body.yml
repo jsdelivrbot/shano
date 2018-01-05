@@ -1,0 +1,21 @@
+uuid: c4047f38-ee50-47de-a971-47688efabf20
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorialfield
+    - node
+_core:
+  default_config_hash: ZCs004iM44xrofGw46r7cyh2KN7n4ia3AU8-4C_ManY
+id: node.field_editorial_body
+field_name: field_editorial_body
+entity_type: node
+type: editorial_field
+settings: {  }
+module: editorialfield
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

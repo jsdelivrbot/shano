@@ -1,0 +1,28 @@
+name: Obelix base bundle
+type: module
+description: Bundle of base modules. Enables content and form modules.
+core: 8.x
+package: Obelix (Bundles)
+dependencies:
+  - admin_toolbar
+  - big_pipe
+  - block
+  - breakpoint
+  - ckeditor
+  - contextual
+  - dynamic_page_cache
+  - help
+  - menu_ui
+  - metatag
+  - node
+  - page_cache
+  - path
+  - responsive_image
+  - search
+  - taxonomy
+  - views
+  - xmlsitemap
+  - editorial
+  - forms_suite
+  - offcanvas
+

@@ -1,0 +1,25 @@
+uuid: a28c2f13-4062-4151-8453-bc2a92a59f8b
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.fluechtlinge_dauerspende
+  module:
+    - fs_payment
+id: forms_message.fluechtlinge_dauerspende.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: fluechtlinge_dauerspende
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre Bankverbindung'
+    subline: ''
+    external_payment: 0
+field_type: wovi_payment_method_field

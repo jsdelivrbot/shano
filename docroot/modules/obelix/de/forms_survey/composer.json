@@ -1,0 +1,14 @@
+{
+  "name": "drupal/forms_survey",
+  "type": "drupal-module",
+  "description": "Enables a new image effect for face detetion.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/forms_survey",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/forms_survey",
+    "source": "http://cgit.drupalcode.org/forms_survey"
+  },
+  "require": { }
+}

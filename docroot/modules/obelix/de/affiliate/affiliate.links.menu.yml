@@ -1,0 +1,16 @@
+# Affiliate menu items definition
+entity.affiliate.collection:
+  title: 'Affiliate Manager'
+  route_name: entity.affiliate.collection
+  description: 'List Affiliate entities'
+  parent: system.admin_content
+  weight: 100
+
+# Affiliate type menu items definition
+entity.affiliate_type.collection:
+  title: 'Affiliate Types'
+  route_name: entity.affiliate_type.collection
+  description: 'List Affiliate type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

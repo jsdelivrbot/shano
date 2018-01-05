@@ -1,0 +1,107 @@
+/**
+ * @file
+ * Installation styling.
+ *
+ */
+.install-page {
+    background-color: #ff7b00;
+    background-image: url(../images/noise-low.png),
+    -webkit-radial-gradient(circle,
+            #ff7b00 0%,
+            #FF7B00 65%,
+            #B95A03 100%
+    );
+    background-image: url(../images/noise-low.png),
+    radial-gradient(circle,
+            #ff7b00 0%,
+            #FF7B00 65%,
+            #B95A03 100%
+    );
+    background-repeat: repeat;
+    background-position: left top, 50% 50%; /* LTR */
+    min-height: 100%;
+}
+
+[dir="rtl"] .install-page {
+    background-position: right top, 50% 50%;
+}
+
+.page-title {
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #ff7b00;
+    word-wrap: break-word;
+}
+
+.button--primary {
+    border-color: #ff7b00;
+    background-color: #eb5500;
+    background-image: -webkit-linear-gradient(top, #ff7b00, #eb5500);
+    background-image: linear-gradient(to bottom, #ff7b00, #eb5500);
+    color: #fff;
+    text-shadow: 0 1px hsla(0, 0%, 0%, 0.5);
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+.button--primary:hover, .button--primary:focus {
+    background-color: #eb5500;
+    background-image: -webkit-linear-gradient(top, #eb5500, #ff7b00);
+    background-image: linear-gradient(to bottom, #eb5500, #ff7b00);
+    border-color: #eb5500;
+    color: #fff;
+}
+
+.install-page .layout-container {
+    background-image: url(../images/200px-World_Vision_Logo.svg.png);
+    background-size: 200px;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    padding-top: 12px;
+}
+
+/**
+ * Password widget
+ */
+.install-page .password-parent,
+.install-page .confirm-parent {
+    width: auto;
+}
+
+.install-page .form-item .password-suggestions {
+    float: none;
+    width: auto;
+}
+
+.install-page table td {
+    word-break: break-word;
+}
+
+.install-page .site-version {
+    vertical-align: super;
+    font-size: 0.5em;
+    color: #595959;
+}
+
+@media all and (max-width: 1010px) and (min-width: 48em) {
+    .install-page .password-strength,
+    .install-page .confirm-parent {
+        width: 100%;
+    }
+
+    .install-configure-form .form-type-password {
+        width: 100%;
+    }
+
+    .password-confirm,
+    .password-field {
+        float: none;
+    }
+
+    .password-confirm-match {
+        float: none;
+        width: auto;
+        max-width: 100%;
+    }
+
+}

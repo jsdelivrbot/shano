@@ -1,0 +1,72 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Youtube video SM
+  // =============================
+  .editorial-youtube-video {
+    .yt-preview {
+      .yt-preview-img {
+        .yt-play {
+          i {
+            font-size: 50px;
+            padding: 35px;
+          }
+        }
+      }
+
+      .yt-preview-txt {
+        background: rgba(255, 255, 255, 0.75);
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        left: 0;
+        padding: 15px;
+      }
+    }
+    .yt-close {
+      i {
+        font-size: 30px;
+      }
+    }
+    // Video is first editorial-content in container
+    // =============================
+    &.first {
+      .yt-preview .yt-preview-img {
+        top: 0px;
+      }
+    }
+  }
+  // Youtube-Video as last element in container
+  .editorial-page{
+    .editorial-section > .container,
+    .editorial-section > .container-fluid{
+      .editorial--content.last.editorial-youtube-video{
+        .yt-preview-txt{
+          bottom: 0;
+        }
+      }
+    }
+  }
+  // =============================
+  // Cols with mobile styling
+  // =============================
+  .row > .col-sm-3,
+  .row > .col-md-3,
+  .row > .col-sm-4,
+  .row > .col-md-4,
+  .row > .col-sm-6,
+  .row > .col-md-6 {
+    .editorial-youtube-video {
+      .yt-preview-txt {
+        position: relative;
+        padding: 0;
+        padding-bottom: 15px;
+      }
+      .yt-play {
+        i {
+          font-size: 30px;
+          padding: 25px;
+        }
+      }
+    }
+  }
+}

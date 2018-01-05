@@ -1,0 +1,7 @@
+uuid: e8cef466-8a98-4217-bfe3-badc38164e10
+langcode: nl
+status: true
+dependencies: {  }
+id: relation_teaser
+label: 'Relation Teaser'
+category: 'Standard block'

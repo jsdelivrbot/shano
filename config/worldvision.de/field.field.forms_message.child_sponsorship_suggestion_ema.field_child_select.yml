@@ -1,0 +1,25 @@
+uuid: 599baf59-0517-4d5b-ac48-83b107d34789
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_child_select
+    - forms_suite.form.child_sponsorship_suggestion_ema
+  module:
+    - child_sponsorship
+id: forms_message.child_sponsorship_suggestion_ema.field_child_select
+field_name: field_child_select
+entity_type: forms_message
+bundle: child_sponsorship_suggestion_ema
+label: field_child_select
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ich möchte diesem Patenkind helfen...'
+    subline: ''
+    all_countries: 0
+field_type: wovi_child_select_field

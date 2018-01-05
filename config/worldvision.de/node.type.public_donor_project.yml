@@ -1,0 +1,20 @@
+uuid: fc511b6d-5016-4ddb-9d80-61b6e104a2df
+langcode: de
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: am98RQIFxb9vVqhICdPk1phcqXN-Ba5tC6V22qDDm5I
+name: 'Public Donor Project'
+type: public_donor_project
+description: 'Contenttype for Public Donor Projects.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

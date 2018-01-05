@@ -1,0 +1,27 @@
+
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.geo_object.field_country
+  module:
+    - map
+id: geo_object.geo_object.field_country
+field_name: field_country
+entity_type: geo_object
+bundle: geo_object
+label: country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:country'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

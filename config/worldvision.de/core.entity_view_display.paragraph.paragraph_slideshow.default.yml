@@ -1,0 +1,29 @@
+uuid: 801b1364-0027-4471-91d0-5d7bcf3c0898
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_slideshow.field_paragraph_slideshow
+    - paragraphs.paragraphs_type.paragraph_slideshow
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 4bQZg8oYWHfq5myR8MyUoopsUB-3M0Y4X0mk7tccIXg
+id: paragraph.paragraph_slideshow.default
+targetEntityType: paragraph
+bundle: paragraph_slideshow
+mode: default
+content:
+  field_paragraph_slideshow:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  uid: true

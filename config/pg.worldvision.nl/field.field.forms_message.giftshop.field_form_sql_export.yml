@@ -1,0 +1,21 @@
+uuid: cc65ec16-e1da-4f7d-a4a4-63545b5b3c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_form_sql_export
+    - forms_suite.form.giftshop
+id: forms_message.giftshop.field_form_sql_export
+field_name: field_form_sql_export
+entity_type: forms_message
+bundle: giftshop
+label: field_form_sql_export
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

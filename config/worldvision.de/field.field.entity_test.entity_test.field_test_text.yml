@@ -1,0 +1,21 @@
+uuid: 4eea6a06-8e7d-4460-b62e-0b6188c747c4
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.entity_test.field_test_text
+  module:
+    - entity_test
+    - text
+id: entity_test.entity_test.field_test_text
+field_name: field_test_text
+entity_type: entity_test
+bundle: entity_test
+label: 'Test text-field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

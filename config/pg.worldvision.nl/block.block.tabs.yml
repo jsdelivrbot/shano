@@ -1,0 +1,22 @@
+uuid: 6ce81b1a-7dad-4aca-9509-65cb648a18fd
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - beaufix
+_core:
+  default_config_hash: _0jMjdivyVrgz98ShOXiWu7WVW_LQ77-pzFVuFUEiw4
+id: tabs
+theme: beaufix
+region: content
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,154 @@
+// =============================
+// Breadcrumbs
+// =============================
+.breadcrumbs-container{
+  margin-top: 30px;
+
+  border-top: 1px solid $color-highlight-bg;
+  border-bottom: 1px solid $color-highlight-bg;
+  .breadcrumb {
+    background-color: transparent;
+    padding-left: 0px;
+    margin-bottom: 0;
+
+    > li {
+      & + li:before {
+        padding: 0 5px;
+        color: #ccc;
+        content: "›";
+      }
+    }
+  }
+}
+
+// =============================
+// Footer
+// =============================
+footer {
+  background: $color-standard-bg;
+  .footer-contact {
+    .contact-block {
+      border-bottom: 1px solid $color-highlight-bg;
+      padding-top: 15px;
+      padding-bottom: 30px;
+      .h6{
+        color: $color-standard-txt;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      input.form-control{
+        @include placeholder-center();
+        @include placeholder-line-height(28px);
+      }
+      &.social-channels {
+        ul {
+          li {
+            padding: 0 15px;
+            a {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Prizes
+  .footer-prizes {
+    background: $color-highlight-bg;
+    padding: 45px 0;
+    font-size: 0;
+    .h5{
+      font-size: 12px;
+    }
+    .transparent-prizes {
+      li {
+        padding: 15px 15px 0 15px;
+        font-size: 1rem;
+        vertical-align: middle;
+        &:nth-child(1) {
+          width: 53%;
+        }
+
+        &:nth-child(2) {
+          width: 47%;
+        }
+        &:nth-child(3) {
+          width: 24%;
+        }
+        &:nth-child(4) {
+          width: 48%;
+        }
+        &:nth-child(5) {
+          width: 28%;
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5) {
+          margin-top: 30px;
+        }
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+    .public-donor-prizes {
+      li {
+        padding: 15px 15px 0 15px;
+
+        font-size: 1rem;
+        vertical-align: middle;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &:nth-child(1) {
+          width: 39%;
+        }
+        &:nth-child(2) {
+          width: 61%;
+        }
+        &:nth-child(3) {
+          width: 21%;
+        }
+        &:nth-child(4) {
+          width: 29%;
+        }
+        &:nth-child(5) {
+          width: 25%;
+        }
+        &:nth-child(6) {
+          width: 25%;
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6){
+          margin-top: 30px;
+        }
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  //  Info/Sitemap
+  .footer-info {
+    padding: 45px 0;
+    ul.sitemap {
+      padding-left: 5px;
+      li {
+        padding-right: 30px;
+        a {
+          font-size: $font-size-btn;
+          text-transform: uppercase;
+        }
+      }
+    }
+    li{
+      padding-top: 2.5px;
+      padding-bottom: 2.5px;
+    }
+    li,p{
+      font-size: 12px;
+    }
+  }
+}

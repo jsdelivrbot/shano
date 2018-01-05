@@ -1,0 +1,28 @@
+// =============================
+// Social share
+// =============================
+
+// Breakpoint SM
+// =============================
+@media screen and (min-width: $bp-sm) {
+
+  .editorial-social-share {
+    p{
+      font-family: $font-bold;
+    }
+    ul {
+      float: right;
+      li {
+        vertical-align: middle;
+        &:first-child {
+          display: inline;
+          padding-bottom: 15px;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+}

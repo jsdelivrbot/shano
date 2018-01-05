@@ -1,0 +1,19 @@
+uuid: 8e557b45-1970-406f-a5c1-0adcb834058d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.company
+    - node.type.broker_page
+  module:
+    - gnode
+    - node
+id: company-group_node-broker_page
+label: 'Company: Group node (Broker Page)'
+description: 'Adds <em class="placeholder">Broker Page</em> content to groups both publicly and privately.'
+group_type: company
+content_plugin: 'group_node:broker_page'
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  use_creation_wizard: false

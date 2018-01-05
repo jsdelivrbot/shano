@@ -1,0 +1,12 @@
+name: Editorial
+type: module
+description: Provides a custom content type which represents content pieces
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - inline_entity_form
+  - layout_plugin
+  - editorial_content
+  - field_collection
+  - field_group
+  - styled_image

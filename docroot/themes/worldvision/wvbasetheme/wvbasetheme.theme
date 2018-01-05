@@ -1,0 +1,566 @@
+<?php
+use Symfony\Component\HttpFoundation\Request;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Url;
+
+require_once 'wvbasetheme.form.inc';
+
+/**
+ * @file
+ * Wvbasetheme is the beautiful default theme for the Obelix distribution.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function wvbasetheme_theme() {
+  return [
+    'wvbasetheme_menu_flyout_teaser' => [
+      'variables' => [
+        'content' => NULL,
+        'attributes' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function wvbasetheme_preprocess_page(&$variables) {
+  $variables['site_logo'] = theme_get_setting('logo.url');
+
+  //$variables["site_logo"] = str_replace(".svg", ".jpg", $variables["site_logo"]);
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  if ($variables['site_logo'] && substr($variables['site_logo'], -8) == 'logo.svg') {
+    // Set different default logos per language, e.g. logo-de.svg, logo-fr.svg etc.
+    $variables['site_logo'] = str_replace('logo.svg', 'assets/images/logos/logo-' . $language . '.svg', $variables['site_logo']);
+  }
+
+  _wvbasetheme_preprocess_page_container($variables);
+
+  // Frontpage (Home)
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['#attached']['library'][] = 'wvbasetheme/home';
+  }
+}
+
+/**
+ * Prepares variables for HTML document templates.
+ */
+function wvbasetheme_preprocess_html(&$variables) {
+  $variables['html_head_custom_code'] = theme_get_setting('html_head_custom_code');
+}
+
+function _wvbasetheme_preprocess_page_container(&$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $pattern = [];
+
+  $pattern[] = '/user*';
+
+  $pattern = implode("\r\n", $pattern);
+
+  if (\Drupal::service('path.matcher')->matchPath($path, $pattern)) {
+    $variables['content_attributes']->addClass('container');
+  }
+}
+
+/**
+ * Theme preprocess().
+ */
+function wvbasetheme_preprocess_form_section__wovi_suggestion(&$vars) {
+  $config = \Drupal::config('wv_site.settings');
+
+  $allow_post_option = $config->get('allow_post_option');
+  $vars['allow_post_option'] = isset($allow_post_option) ? $allow_post_option : TRUE;
+
+  $config = \Drupal::config('wv_site.settings.routing');
+
+  $vars['suggestion_email_form_url'] = $config->get('suggestion_email_form_url')
+    ?: '/forms/child_sponsorship_suggestion';
+
+  $vars['suggestion_post_form_url'] = $config->get('suggestion_post_form_url')
+    ?: '/formulare/patenschafts-vorschlag-post';
+}
+
+function wvbasetheme_preprocess_node__transition_page(&$variables) {
+  if (isset($variables['content']['field_primary_image'])) {
+    foreach (\Drupal\Core\Render\Element::children($variables['content']['field_primary_image']) as $delta) {
+      $variables['content']['field_primary_image'][$delta]['#item_attributes']['class'][] = 'img-fullsize';
+    }
+  }
+
+  $variables['#attached']['library'][] = 'editorial/copy';
+  $variables['#attached']['library'][] = 'editorial/headline';
+  $variables['#attached']['library'][] = 'editorial/image';
+  $variables['#attached']['library'][] = 'wvbasetheme/transition_page';
+}
+
+
+function wvbasetheme_preprocess_editorial_content(&$variables) {
+//  @TODO Map on home - make it beautiful
+  if ($variables['elements']['#editorial_content']->id() == 5056) {
+    $map = \Drupal::entityTypeManager()
+      ->getStorage('map')
+      ->load(1);
+
+    $variables['content'] = \Drupal::entityTypeManager()
+      ->getViewBuilder('map')
+      ->view($map);
+
+    $variables['#attached']['library'][] = 'map/wovi_maps_home';
+  }
+
+//  Branding campaign styling override
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node !== NULL && $node->id() == 562) {
+    $variables['#attached']['library'][] = 'wvbasetheme/branding_campaign';
+  }
+
+//  my-child-billy campaign styling override
+  if ($node !== NULL && $node->id() == 687) {
+    $variables['#attached']['library'][] = 'wvbasetheme/my-child-billy';
+  }
+
+//  kindheitsretter campaign styling override
+  /** @var Request $request */
+  $request = \Drupal::request();
+  $request_uri = $request->getRequestUri();
+
+  if($request_uri == "/spenden/kindheitsretter"){
+    $variables['#attached']['library'][] = 'wvbasetheme/childhood-savior';
+  }
+
+//  Override branding campaign section with faq
+//  Override my child billy section with faq
+  if (($variables['elements']['#editorial_content']->id() == 5949) || $variables['elements']['#editorial_content']->id() == 7488) {
+    $section = [
+      '#theme' => "child_sponsorship_info_section_child_sponsorship",
+      '#content' => [],
+      '#content_attributes' => [],
+      '#attributes' => [
+        'class' => ['cta-sponsor-child-visible'],
+      ],
+    ];
+
+    $variables['content'] = $section;
+  }
+
+
+}
+
+/**
+ * Appends to "5x Multiplier" Badge to the "Annual Donation" Form.
+ */
+function wvbasetheme_form_forms_message_jaehrliche_spende_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'wvbasetheme/annual-donation-5x-multiplier';
+}
+
+function wvbasetheme_preprocess_node__public_donor(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/public-donor';
+}
+
+function wvbasetheme_preprocess_node__public_donor_overview(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/public-donor';
+}
+
+function wvbasetheme_preprocess_message_form__base(&$variables) {
+
+  $message_forms = array_flip([
+    'forms_message_child_sponsorship_with_condition_form',
+    'forms_message_child_sponsorship_direct_form',
+    'forms_message_child_sponsorship_direct_en_form',
+  ]);
+  $form_id = $variables['message_form']['#form_id'];
+
+  $variables['message_form']['actions']['submit']['#attributes']['class'][] = 'btn-beauty btn btn-xl';
+  if (isset($message_forms[$form_id])) {
+    $variables['#attached']['library'][] = 'wvbasetheme/custom-kipa-forms';
+  }
+}
+
+function wvbasetheme_preprocess_page__offcanvas(&$variables) {
+  $variables['offcanvas_back']['#title'] = \Drupal\Core\Render\Markup::create('<i class="icon-arrow-left"></i>');
+  $variables['offcanvas_back']['#attributes']['class'][] = 'btn-beauty';
+}
+
+function wvbasetheme_preprocess_editorial_button(&$variables) {
+  $options = $variables['uri']->getOptions();
+
+  // Editors put sometimes not aliased fragments to editorial pages, alias it.
+  if (!empty($variables['content_attributes']['href'])) {
+    $href = &$variables['content_attributes']['href'];
+
+    if (preg_match('/^#canvas=\//', $href)) {
+      if ($fragment_url = preg_replace('/^\/(?:nl|de)\//', '/', end(explode('=', $href)))) {
+        if ($alias = Url::fromUri('internal:' . $fragment_url)->toString()) {
+          $href = "#canvas=$alias";
+        }
+      }
+    }
+  }
+
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_editorial_campaign_teaser(&$variables) {
+  $variables['content_attributes']['class'][] = 'col-sm-6';
+  $variables['content']['preview_image']['desktop']['#item_attributes']['class'][] = 'hidden-xs';
+  $variables['content']['preview_image']['mobile']['#item_attributes']['class'][] = 'visible-xs';
+
+  if ($variables['settings']['align'] == 'right') {
+    $variables['content_attributes']['class'][] = 'col-sm-push-6';
+    $variables['content_attributes']['class'] = array_diff(
+      $variables['content_attributes']['class'],
+      ['align-right']);
+  }
+
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_editorial_copy(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_editorial_headline(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_editorial_hero_slider(&$variables) {
+  $id = $variables['attributes']['id'];
+
+  $variables['#attached']['drupalSettings']['editorial']['hero_slider'][$id]['responsive'][] = [
+    'breakpoint' => 767,
+    'settings' => [
+      'arrows' => TRUE,
+    ],
+  ];
+
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_editorial_hero_slider_slide(&$variables) {
+  // Use bootstrap classes.
+  $variables['content_attributes']['class'][] = 'col-xs-12';
+  $variables['content_attributes']['class'][] = 'col-sm-6';
+
+  if ($variables['settings']['align'] == 'right') {
+    $variables['content_attributes']['class'][] = 'col-sm-push-6';
+    $variables['content_attributes']['class'] = array_diff(
+      $variables['content_attributes']['class'],
+      ['align-right']);
+  }
+
+  $variables['content']['preview_image']['#item_attributes']['class'][] = 'hidden-xs';
+  $variables['content']['preview_image']['#item_attributes']['class'][] = 'img-fullsize';
+}
+
+function wvbasetheme_preprocess_editorial_image(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+//  TODO outsource in theme
+  $variables['content']['image']['#item_attributes']['class'][] = 'img-fullsize';
+}
+
+function wvbasetheme_preprocess_editorial_teaser(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_editorial_youtube_video(&$variables) {
+  $variables['content']['preview_image']['#item_attributes']['class'][] = 'img-fullsize';
+  $variables['#attached']['library'][] = 'wvbasetheme/editorial-content';
+}
+
+function wvbasetheme_preprocess_node__country_page(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/country-page';
+}
+
+// TODO: Get rid of node ids
+function wvbasetheme_preprocess_node__editorial_page(&$variables) {
+  switch ($variables['node']->id()) {
+    case 376:
+      $variables['#attached']['library'][] = 'wvbasetheme/catastrophe-overview';
+      break;
+    case 241:
+      $variables['#attached']['library'][] = 'wvbasetheme/donation-overview';
+      break;
+  }
+}
+
+function wvbasetheme_preprocess_node__gift_type(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/giftshop';
+}
+
+function wvbasetheme_preprocess_country_page_section__header(&$variables) {
+  $variables['content']['image']['#item_attributes']['class'][] = 'img-fullsize';
+
+  $variables['content']['facts_bar']['#items'][0]['value']['#prefix'] = '<i class="value-prefix icon-wrapped-baby"></i>';
+  $variables['content']['facts_bar']['#items'][1]['value']['#prefix'] = '<i class="value-prefix icon-elder"></i>';
+  $variables['content']['facts_bar']['#items'][2]['value']['#prefix'] = '<i class="value-prefix icon-backpack"></i>';
+  $variables['content']['facts_bar']['#items'][3]['value']['#prefix'] = '<i class="value-prefix icon-first-aid-kit"></i>';
+}
+
+function wvbasetheme_preprocess_menu__main(&$variables) {
+  $path = \Drupal::theme()->getActiveTheme()->getPath();
+  $name = \Drupal::theme()->getActiveTheme()->getName();
+
+  try {
+    //To get the lanuage code:
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+    // Try to load flyout-teaser.yml for current theme.
+    $config = \Symfony\Component\Yaml\Yaml::parse(file_get_contents($path . '/config/install/' . $language . '/' . $name . '.flyout-teasers.yml'));
+
+    if ($config == FALSE) return;
+
+    // Check for each top level main menu item whether a teaser is defined.
+    foreach (array_keys($variables['items']) as $menu_index => $delta) {
+      if (isset($config[$menu_index])) {
+        $menu_flyout_teasers = [];
+
+        // Collect all teasers from config.
+        foreach ($config[$menu_index] as $teaser_index => $data) {
+          $flyout_teaser = [];
+
+          // Build flyout teasers.
+          if (isset($data['image'])) {
+            if (isset($data['image']['src'])) {
+              // If relative path prepend base and theme path.
+              if (!preg_match('/^[https?\:\/\/|\/]/', $data['image']['src'])) {
+                $data['image']['src'] = base_path() . $path . '/' . $data['image']['src'];
+              }
+            }
+
+            $flyout_teaser['image'] = [
+              '#type' => 'html_tag',
+              '#tag' => 'img',
+              '#attributes' => \Drupal\Component\Utility\NestedArray::mergeDeep([
+                'class' => [
+                  'img-responsive',
+                  'img-fullsize',
+                ],
+              ], $data['image']),
+            ];
+          }
+          if (isset($data['headline'])) {
+            $flyout_teaser['headline'] = [
+              '#type' => 'html_tag',
+              '#tag' => 'p',
+              '#value' => $data['headline'],
+            ];
+          }
+          if (isset($data['copy'])) {
+            $flyout_teaser['copy'] = [
+              '#type' => 'html_tag',
+              '#tag' => 'p',
+              '#value' => $data['copy'],
+            ];
+          }
+          if (isset($data['link'])) {
+            // Get sure we've got an link label.
+            $label = t('Learn more');
+            if (isset($data['link']['label'])) {
+              $label = $data['link']['label'];
+              unset($data['link']['label']);
+            }
+
+            // Build link url.
+            if (isset($data['link']['href'])) {
+              $url = $data['link']['href'];
+              try {
+                $url = \Drupal\Core\Url::fromUserInput($url)
+                  ->toString();
+              } catch (\Exception $e) {
+              }
+              $data['link']['href'] = $url;
+            }
+
+            $flyout_teaser['link'] = [
+              '#type' => 'html_tag',
+              '#tag' => 'a',
+              '#value' => $label,
+              '#attributes' => \Drupal\Component\Utility\NestedArray::mergeDeep([
+                'class' => [
+                  'btn',
+                  'btn-beauty',
+                  'btn-transparent',
+                ],
+              ], $data['link']),
+            ];
+          }
+
+          // Append teaser if not empty.
+          if ($flyout_teaser) {
+            $menu_flyout_teasers[] = [
+              '#theme' => 'wvbasetheme_menu_flyout_teaser',
+              '#content' => $flyout_teaser,
+              '#attributes' => isset($data['attributes']) ? $data['attributes'] : [],
+            ];
+          }
+        }
+
+        // Append all teasers for current menu item if not empty.
+        if ($menu_flyout_teasers) {
+          $variables['items'][$delta]['flyout_teasers'] = $menu_flyout_teasers;
+          $variables['items'][$delta]['is_expanded'] = TRUE;
+        }
+      }
+    }
+
+    $main_config = \Drupal::config('obelix_main.settings');
+    $sponsor_url = $main_config->get('becomeGodfatherUrl') ?: '/formulare/kinderpatenschaft-uebernehmen';
+    $sponsor_url_alias = Url::fromUri('internal:' . $sponsor_url)->toString();
+
+    $variables['main_config']['becomeGodfatherUrl'] = $sponsor_url_alias;
+    //echo print_r($variables['items'], 1); die;
+    //$variables = array('#markup' => 'asdf');
+  }
+  catch (\Exception $e) {
+
+  }
+}
+
+
+function wvbasetheme_preprocess_editorial_content__story_teaser(&$variables) {
+  $variables['story_teaser_images'] = [];
+
+  $image_style_mapping = [
+    'desktop' => 'widescreen_16_9_sm',
+    'mobile' => 'square_xs'
+  ];
+
+  $fid = $variables['elements']['#editorial_content']->field_teaser_image[0]->target_id;
+  $image = \Drupal\file\Entity\File::load($fid);
+
+  foreach ($image_style_mapping as $delta => $image_style) {
+    $style = ImageStyle::load($image_style);
+    $variables['story_teaser_images'][$delta] = $style->buildUrl($image->uri[0]->value);
+  }
+}
+
+
+function wvbasetheme_preprocess_input__form_control(&$variables) {
+  if (isset($variables['element']['#ajax_processed']) && $variables['element']['#ajax_processed'] == TRUE) {
+    $variables["suffix"]["#value"] = '<i class="icon glyphicon glyphicon-refresh ajax-progress ajax-progress-throbber" aria-hidden="true"></i><i class="glyphicon glyphicon-ok"></i><i class="glyphicon glyphicon-exclamation-sign"></i>';
+  }
+}
+
+function wvbasetheme_page_attachments_alter(array &$page) {
+  _wvbasetheme_remove_html_head_items($page);
+  _wvbasetheme_remove_html_head_links($page);
+
+  _wvbasetheme_add_html_head_items($page);
+  _wvbasetheme_add_html_head_links($page);
+}
+
+function _wvbasetheme_add_html_head_items(array &$page) {
+  $theme_path = base_path() . drupal_get_path('theme', 'wvbasetheme');
+
+  $items = [
+    'theme_color' => [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'theme-color',
+        'content' => '#ffffff',
+      ],
+    ],
+    'msapplication_config' => [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'msapplication-config',
+        'content' => $theme_path . '/assets/favicons/browserconfig.xml?v=1474455610',
+      ],
+    ],
+  ];
+
+  foreach ($items as $name => $tag) {
+    $page['#attached']['html_head'][] = [$tag, $name];
+  }
+}
+
+
+function _wvbasetheme_add_html_head_links(array &$page) {
+  $theme_path = base_path() . drupal_get_path('theme', 'wvbasetheme');
+
+  $add_links = [
+    'apple_touch_icon' => [
+      'rel' => 'apple-touch-icon',
+      'sizes' => '180x180',
+      'href' => $theme_path . '/assets/favicons/apple-touch-icon.png?v=1474455610',
+    ],
+    '32x32' => [
+      'rel' => 'icon',
+      'type' => 'image/png',
+      'href' => $theme_path . '/assets/favicons/favicon-32x32.png?v=1474455610',
+      'sizes' => '32x32',
+    ],
+    '192x192' => [
+      'rel' => 'icon',
+      'type' => 'image/png',
+      'href' => $theme_path . '/assets/favicons/favicon-16x16.png?v=1474455610',
+      'sizes' => '16x16',
+    ],
+    '16x16' => [
+      'rel' => 'icon',
+      'type' => 'image/png',
+      'href' => $theme_path . '/assets/favicons/android-chrome-192x192.png?v=1474455610',
+      'sizes' => '16x16',
+    ],
+    'manifest' => [
+      'rel' => 'manifest',
+      'href' => $theme_path . '/assets/favicons/manifest.json?v=1474455610',
+    ],
+    'mask_icon' => [
+      'rel' => 'mask-icon',
+      'type' => 'image/png',
+      'href' => $theme_path . '/assets/favicons/safari-pinned-tab.svg?v=1474455610',
+      'color' => '#ff7700',
+    ],
+  ];
+
+  foreach ($add_links as $name => $attributes) {
+    $page['#attached']['html_head_link'][] = [$attributes, $name];
+  }
+
+}
+
+function _wvbasetheme_remove_html_head_items(array &$page) {
+  $items = [
+    'system_meta_generator',
+    'shortlink',
+  ];
+
+  // Remove unwanted html head tags.
+  foreach ($page['#attached']['html_head'] as $delta => $item) {
+    if (in_array($item[1], $items)) {
+      unset($page['#attached']['html_head'][$delta]);
+    }
+  }
+}
+
+function _wvbasetheme_remove_html_head_links(array &$page) {
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK()
+ */
+function wvbasetheme_preprocess_search_results_page(&$variables) {
+  $variables['#attached']['library'][] = 'wvbasetheme/search-results';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for search_form.
+ *
+ * Disables the help link and the advanced search input.
+ */
+function wvbasetheme_form_search_form_alter(array &$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['help_link']['#access'] = FALSE;
+  $form['advanced']['#access'] = FALSE;
+}
+
+function wvbasetheme_preprocess_pager(&$variables) {
+  preg_match('~page\=(\d+)~', $variables['items']['last']['href'], $matches);
+  $variables['last'] = $matches[1] + 1;
+}

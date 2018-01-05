@@ -1,0 +1,22 @@
+uuid: 0a9e874e-cc96-4715-bbd7-9bdc4b4f53aa
+langcode: nl
+status: true
+dependencies:
+  module:
+    - project
+_core:
+  default_config_hash: JwEdgsDgL4eBzeZ48jNj7DagsK4pxcun5i-blq_aAig
+id: project.field_totalofchildren
+field_name: field_totalofchildren
+entity_type: project
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

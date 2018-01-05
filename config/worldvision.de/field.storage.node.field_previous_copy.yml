@@ -1,0 +1,21 @@
+uuid: 297e1f56-2e1c-42a6-9ebf-37279bb9ef94
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: '-E9Qrq1RJxvuEDwKVC5MkzcvtsBbUwzmzaXtAwP4dOw'
+id: node.field_previous_copy
+field_name: field_previous_copy
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

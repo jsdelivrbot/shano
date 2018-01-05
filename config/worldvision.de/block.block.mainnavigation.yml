@@ -1,0 +1,26 @@
+uuid: d61f8de3-5f24-4f23-9903-f4aa849644d5
+langcode: de
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - beaufix
+_core:
+  default_config_hash: cOepErXSF2usG2JDQpQgZRF-2ClQpF8SKmUEVo5AOgg
+id: mainnavigation
+theme: beaufix
+region: navigation
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

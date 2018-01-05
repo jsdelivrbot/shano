@@ -1,0 +1,22 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_hero_slider_cta
+    - field_collection.field_collection.field_hero_slide
+  module:
+    - link
+id: field_collection_item.field_hero_slide.field_hero_slider_cta
+field_name: field_hero_slider_cta
+entity_type: field_collection_item
+bundle: field_hero_slide
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

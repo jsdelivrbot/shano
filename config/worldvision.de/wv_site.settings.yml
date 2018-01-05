@@ -1,0 +1,9 @@
+restrict_countries_by_active_projects: 0
+donation_mail_bcc: ''
+skip_default_countries: 0
+_core:
+  default_config_hash: TP1CRJowa0egqHu2dh38oSl6LtuuiIFXRCkGq4f-scA
+langcode: de
+disable_children_form_block: 0
+children_form_block_timeout: ''
+allow_post_option: 1

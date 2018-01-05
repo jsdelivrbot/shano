@@ -1,0 +1,5 @@
+name: File Plus
+type: module
+description: Enhancements for core file entity.
+core: 8.x
+package: Custom

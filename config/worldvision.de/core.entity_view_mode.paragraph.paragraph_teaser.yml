@@ -1,0 +1,12 @@
+uuid: e47f507c-f5b8-4de3-9ece-aeabe82a02d7
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: _5rK9HjlU1FquJ3M0PiI9GS35TI9UEi9ckKbUqDMplM
+id: paragraph.paragraph_teaser
+label: 'Paragraph Teaser'
+targetEntityType: paragraph
+cache: true

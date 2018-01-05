@@ -1,0 +1,93 @@
+global:
+  version: VERSION
+  js:
+    assets/js/nav.js: {}
+  css:
+    theme:
+      assets/css/bootstrap-addon.css: {}
+      assets/css/main.css: {}
+      assets/css/font-size.css: {}
+      assets/css/standard-elements/nav.css: {}
+      assets/css/standard-elements/footer.css: {}
+      assets/css/standard-elements/forms.css: {}
+      assets/css/off-canvas.css: {}
+  dependencies:
+      - core/jquery
+search-results:
+  css:
+    theme:
+      assets/css/search-results.css: {}
+jasny_bootstrap:
+  version: VERSION
+  js:
+    libraries/jasny-bootstrap/dist/js/jasny-bootstrap.min.js: {}
+  css:
+    theme:
+      libraries/jasny-bootstrap/dist/css/jasny-bootstrap.min.css: {}
+  dependencies:
+      - core/jquery
+bootstrap_select:
+  version: VERSION
+  js:
+    /libraries/bootstrap-select/dist/js/bootstrap-select.js: {}
+  css:
+    theme:
+      /libraries/bootstrap-select/dist/css/bootstrap-select.css: {}
+  dependencies:
+      - core/jquery
+transformicons:
+  version: VERSION
+  js:
+    libraries/transformicons/transformicons.js: {}
+  css:
+    theme:
+      libraries/transformicons/transformicons.css: {}
+icomoon:
+  version: VERSION
+  css:
+    theme:
+      libraries/icomoon/style.css: {}
+
+slickslider.style:
+  css:
+    theme:
+      assets/css/standard-blocks/slick-custom-theme.css: {}
+
+off-canvas-child:
+  css:
+    theme:
+      assets/css/offcanvas/page.css: {}
+
+editorial-content:
+  css:
+    theme:
+      assets/css/editorial-content.css: {}
+  js:
+    # @todo move to wherever it belongs
+    assets/js/forms.js: {}
+country-page:
+  css:
+    theme:
+      assets/css/country-page.css: {}
+home:
+  css:
+    theme:
+      assets/css/sites/home.css: {}
+donation-overview:
+  css:
+    theme:
+      assets/css/sites/donation-overview.css: {}
+catastrophe-overview:
+  css:
+    theme:
+      assets/css/sites/catastrophe-overview.css: {}
+giftshop:
+  css:
+    theme:
+      assets/css/giftshop/giftshop.css: {}
+loading-icons:
+  css:
+    theme:
+      libraries/loading-icons/ring.css: {}
+
+

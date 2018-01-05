@@ -1,0 +1,21 @@
+uuid: 9787f8ce-b73f-4740-8e60-c2889cc6ba04
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+    - link
+_core:
+  default_config_hash: dCtY4asyA8goM9QlXm1JXV3fsJdtI3GGLs9qRImJIBw
+id: field_collection_item.field_hero_slider_cta
+field_name: field_hero_slider_cta
+entity_type: field_collection_item
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

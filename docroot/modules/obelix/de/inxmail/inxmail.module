@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains inxmail.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function inxmail_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the datasourcehandler module.
+    case 'help.page.inxmail':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Inxmail newsletter service') . '</p>';
+      return $output;
+
+    default:
+  }
+}

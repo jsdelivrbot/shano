@@ -1,0 +1,27 @@
+uuid: e58253a2-91d5-465c-84b0-c9dbc446ec89
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.projektspende
+  module:
+    - fs_payment
+id: forms_message.projektspende.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: projektspende
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

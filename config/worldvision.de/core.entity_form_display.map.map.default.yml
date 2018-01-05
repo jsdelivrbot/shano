@@ -1,0 +1,56 @@
+uuid: 475e1000-e022-4fb9-8c76-ebd604f1623e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.map.map.field_geo_object
+    - field.field.map.map.field_lat
+    - field.field.map.map.field_lng
+    - field.field.map.map.field_zoom
+  module:
+    - map
+_core:
+  default_config_hash: xc-Z6bTUTOuaLMcLI1_8969ds5ZK3YENdNwVAXcS8FI
+id: map.map.default
+targetEntityType: map
+bundle: map
+mode: default
+content:
+  field_geo_object:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_lat:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_lng:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_zoom:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

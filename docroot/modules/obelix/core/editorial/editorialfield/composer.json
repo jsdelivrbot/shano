@@ -1,0 +1,16 @@
+{
+  "name": "drupal/editorialfield",
+  "type": "drupal-module",
+  "description": "Defines a field type for editorial content creation.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/editorialfield",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/editorialfield",
+    "source": "http://cgit.drupalcode.org/editorialfield"
+  },
+  "require": {
+    "drupal/inline_entity_form": "1.x-dev"
+  }
+}

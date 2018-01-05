@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/project",
+  "type": "drupal-module",
+  "description": "Handles a World Vision Project",
+  "require": { }
+}

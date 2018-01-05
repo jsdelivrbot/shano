@@ -1,0 +1,20 @@
+uuid: 6870b22f-c44d-407e-851a-3a2c335ed3fb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_countries_descriptio
+  module:
+    - child
+id: child.child.field_child_countries_descriptio
+field_name: field_child_countries_descriptio
+entity_type: child
+bundle: child
+label: child_countries_description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

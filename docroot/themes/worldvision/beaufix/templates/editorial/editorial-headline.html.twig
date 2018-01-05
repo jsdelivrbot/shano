@@ -1,0 +1,7 @@
+{% if content %}
+  <div {{ attributes.addClass('editorial--content', 'txt-content') }}>
+    <div class="editorial-headline inner-content">
+      <{{ tag }}{{ content_attributes }}>{{ content }}</{{ tag }}>
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,80 @@
+bootstrap.grid:
+  version: 3.3.5
+  css:
+    base:
+      libraries/bootstrap-grid/css/bootstrap-grid.css: { }
+slickslider:
+  version: 1.6.0
+  css:
+    base:
+      libraries/slick-1.6.0/slick/slick.css: { }
+  js:
+    libraries/slick-1.6.0/slick/slick.js: { }
+
+campaign-teaser:
+  css:
+    base:
+      libraries/campaign-teaser/css/campaign-teaser.css: { }
+copy:
+  css:
+    base:
+      libraries/copy/css/copy.css: { }
+headline:
+  css:
+    base:
+      libraries/headline/css/headline.css: { }
+hero-slider:
+  css:
+    base:
+      libraries/hero-slider/css/hero-slider.css: { }
+  js:
+    libraries/hero-slider/js/hero-slider.js: { }
+  dependencies:
+    - editorial/slickslider
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+hero-slider-youtube-video:
+  js:
+    libraries/hero-slider/js/hero-slider-youtube-video.js: { }
+hero-slider-preview-video:
+  js:
+    libraries/hero-slider/js/hero-slider-preview-video.js: { }
+
+quotation:
+  css:
+    base:
+      libraries/quotation/css/quotation.css: { }
+slideshow:
+  css:
+    base:
+      libraries/slideshow/css/slideshow.css: { }
+  js:
+    libraries/slideshow/js/slideshow.js: { }
+  dependencies:
+    - editorial/slickslider
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+story-teaser:
+  css:
+    base:
+      libraries/story-teaser/css/story-teaser.css: { }
+teaser:
+  css:
+    base:
+      libraries/teaser/css/teaser.css: { }
+button:
+  css:
+    base:
+      libraries/button/css/button.css: { }
+link:
+  css:
+    base:
+      libraries/link/css/link.css: { }
+youtube-video:
+  css:
+    base:
+      libraries/youtube-video/css/youtube-video.css: { }
+  js:
+    libraries/youtube-video/js/youtube-video.js: { }

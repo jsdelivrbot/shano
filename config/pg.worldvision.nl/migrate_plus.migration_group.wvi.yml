@@ -1,0 +1,12 @@
+uuid: e82f5d82-5ba0-43f9-9ab7-1e2253beecf8
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gPmTqcHfFvQJdAKDbfrf0xbU1eR6Kv3o2HWq7SKkyww
+id: wvi
+label: WVI
+description: 'WVI Migration.'
+source_type: null
+module: null
+shared_configuration: null

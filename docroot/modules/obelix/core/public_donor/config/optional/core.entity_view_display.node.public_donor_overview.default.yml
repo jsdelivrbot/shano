@@ -1,0 +1,65 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.public_donor_overview.field_pdp_button
+    - field.field.node.public_donor_overview.field_pdp_description
+    - field.field.node.public_donor_overview.field_pdp_headline
+    - field.field.node.public_donor_overview.field_pdp_subline
+    - field.field.node.public_donor_overview.field_pdp_teaser
+    - node.type.public_donor_overview
+  module:
+    - entity_reference_revisions
+    - link
+    - text
+    - user
+id: node.public_donor_overview.default
+targetEntityType: node
+bundle: public_donor_overview
+mode: default
+content:
+  field_pdp_button:
+    weight: 105
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_pdp_description:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_pdp_headline:
+    weight: 101
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_pdp_subline:
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_pdp_teaser:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

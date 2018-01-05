@@ -1,0 +1,19 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.code_embed
+    - field.field.editorial_content.code_embed.field_code
+id: editorial_content.code_embed.default
+targetEntityType: editorial_content
+bundle: code_embed
+mode: default
+content:
+  code:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_code: true
+  name: true
+  user_id: true

@@ -1,0 +1,9 @@
+uuid: 193dd384-14f2-4ddf-800d-bb2ae1a89644
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1wCQlGLQbOBn2BimAcOscMfkAXUOyMgmjzquGRRVlU4
+id: teaser
+label: Teaser
+category: 'Standard block'

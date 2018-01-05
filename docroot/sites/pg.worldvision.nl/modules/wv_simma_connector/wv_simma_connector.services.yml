@@ -1,0 +1,11 @@
+services:
+  # Provide custom cache bin.
+  cache.simma_connector:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin }
+    factory: cache_factory:get
+    arguments: [simma_connector]
+
+  wv_simma_connector.entity_sql_export:
+    class: Drupal\wv_simma_connector\Services\EntitySqlExport

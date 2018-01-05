@@ -1,0 +1,21 @@
+uuid: 0ac9dee3-5e08-4e7a-9128-279880b61169
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.field_collection_item.field_success_bar_description
+    - field_collection.field_collection.field_success_bar
+_core:
+  default_config_hash: mA_BwPrIuqTN-6mBnqgVOT7_XRSLt9Q4NvGKjUBx4_I
+id: field_collection_item.field_success_bar.field_success_bar_description
+field_name: field_success_bar_description
+entity_type: field_collection_item
+bundle: field_success_bar
+label: Beschreibung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

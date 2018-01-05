@@ -1,0 +1,19 @@
+uuid: ae209450-65ac-4751-98f2-320823f07dc7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_title
+    - node.type.editorial_page
+id: node.editorial_page.field_autoteaser_title
+field_name: field_autoteaser_title
+entity_type: node
+bundle: editorial_page
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

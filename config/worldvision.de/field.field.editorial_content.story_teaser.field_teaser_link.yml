@@ -1,0 +1,23 @@
+uuid: 8e1032c1-6350-4caa-809c-9e332514a844
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.story_teaser
+    - field.storage.editorial_content.field_teaser_link
+  module:
+    - link
+id: editorial_content.story_teaser.field_teaser_link
+field_name: field_teaser_link
+entity_type: editorial_content
+bundle: story_teaser
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

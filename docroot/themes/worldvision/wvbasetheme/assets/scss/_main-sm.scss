@@ -1,0 +1,238 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Standard Elements
+  // =============================
+  // Hover Transitions
+  a, [class^="icon-"], [class*=" icon-"] {
+    @include transition(0.3s color);
+  }
+
+  .main-content-wrapper {
+    padding-top: 120px;
+  }
+
+  body.path-forms .main-content-wrapper {
+    padding-top: 193px;
+  }
+
+  // Beauty Button
+  @mixin btn-beauty-sm() {
+    &.btn-xl {
+      width: auto;
+      padding: 22px 90px;
+      min-width: 290px;
+    }
+    &.btn-fullsize-xs {
+      width: auto;
+    }
+  }
+  // Icons
+  button, a {
+    &.btn-beauty {
+      @include btn-beauty-sm();
+    }
+    &:hover {
+      [class^="icon-"], [class*=" icon-"] {
+        color: $color-highlight;
+      }
+    }
+    &.btn-close {
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+  .btn-beauty {
+    a, button {
+      @include btn-beauty-sm();
+    }
+  }
+  p {
+    &.subtitle {
+      font-size: $font-size-subtitle-sm;
+    }
+  }
+  // =============================
+  // Helper Classes
+  // =============================
+  // XS-only
+  /* Vertical Offset Bottom */
+  .vert-offset-xs-top-3 {
+    padding-top: 0;
+  }
+  .vert-offset-xs-top-2 {
+    padding-top: 0;
+  }
+
+  .vert-offset-xs-top-1 {
+    padding-top: 0;
+  }
+
+  .vert-offset-xs-top-0 {
+    padding-top: 0;
+  }
+
+  /* Vertical Offset Bottom */
+  .vert-offset-xs-bottom-3 {
+    padding-bottom: 0;
+  }
+  .vert-offset-xs-bottom-2 {
+    padding-bottom: 0;
+  }
+
+  .vert-offset-xs-bottom-1 {
+    padding-bottom: 0;
+  }
+
+  .vert-offset-xs-bottom-0 {
+    padding-bottom: 0;
+  }
+
+  // SM only
+  .vert-offset-sm-top-3 {
+    padding-top: 45px;
+  }
+
+  .vert-offset-sm-top-2 {
+    padding-top: 30px;
+  }
+
+  .vert-offset-sm-top-1 {
+    padding-top: 15px;
+  }
+
+  .vert-offset-sm-top-0 {
+    padding-top: 0;
+  }
+
+  /* Vertical Offset Bottom */
+  .vert-offset-sm-bottom-3 {
+    padding-bottom: 45px;
+  }
+
+  .vert-offset-sm-bottom-2 {
+    padding-bottom: 30px;
+  }
+
+  .vert-offset-sm-bottom-1 {
+    padding-bottom: 15px;
+  }
+
+  .vert-offset-sm-bottom-0 {
+    padding-bottom: 0;
+  }
+
+  .text-center-xs {
+    text-align: inherit;
+  }
+  .text-center-xs-md {
+    text-align: inherit;
+  }
+  .btn-center-xs {
+    margin: 0;
+    display: inline-block;
+  }
+  .vert-align-center-abs-sm {
+    @include vertical-align(absolute);
+  }
+  .vert-align-center-rel-sm {
+    @include vertical-align(relative);
+  }
+  .text-center-sm {
+    text-align: center;
+  }
+  .col-no-padding-left-sm {
+    padding-left: 0;
+  }
+  .col-no-padding-xs {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-no-padding-right-xs {
+    padding-right: 15px;
+  }
+
+  .col-padding-left-sm {
+    padding-left: 15px;
+  }
+  .col-no-padding-left-xs {
+    padding-left: 0;
+  }
+  .border-right-sm {
+    border-right: 1px solid;
+  }
+
+  .round-bg-sm {
+    position: relative;
+    color: $color-standard-txt;
+    min-width: 30px;
+    min-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    i {
+      @include v-h-align(absolute);
+      font-style: normal;
+      z-index: 2;
+    }
+    &:after {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      background: $color-standard-bg;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      left: -1px;
+    }
+  }
+
+  .position-absolute-sm {
+    position: absolute;
+    z-index: 1;
+  }
+  .position-fixed-bottom-sm {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 10;
+
+    @include box-shadow(-1px -1px 5px 0px rgba(0, 0, 0, 0.15));
+  }
+  // =============================
+  // Special Sections
+  // =============================
+
+  .section-highlighted-sm {
+    color: $color-standard-bg;
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      color: $color-standard-bg;
+    }
+    a {
+      color: $color-standard-bg;
+      &:hover {
+        color: $color-standard-txt;
+      }
+    }
+    .btn-beauty {
+      &.btn-transparent {
+        color: $color-standard-bg;
+        border-color: $color-standard-bg;
+        &:hover {
+          background-color: $color-standard-bg;
+          color: $color-highlight;
+        }
+      }
+    }
+  }
+  // =============================
+  // System-Messages
+  // =============================
+  .region > div >.alert,
+  .region > .alert{
+    top: 225px;
+    max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

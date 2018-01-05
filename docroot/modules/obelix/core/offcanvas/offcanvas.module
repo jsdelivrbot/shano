@@ -1,0 +1,193 @@
+<?php
+
+/**
+ * @file
+ * Contains offcanvas.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function offcanvas_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the offcanvas module.
+    case 'help.page.offcanvas':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides the ability to load pages inside an off-canvas.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function offcanvas_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if (_offcanvas_is_valid_request()) {
+    $prepend_suggestions = [];
+
+    $prepend_suggestions[] = 'page__offcanvas';
+
+    foreach ($suggestions as $suggestion) {
+      $prepend_suggestions[] = preg_replace('/^page__(.+)$/', 'page__offcanvas__$1', $suggestion);
+    }
+
+    $suggestions = array_merge($prepend_suggestions, $suggestions);
+  }
+}
+
+/*
+ * Implements hook_page_attachments_alter().
+ */
+function offcanvas_page_attachments_alter(&$page) {
+  // Change the meta robots tag for off-canvas pages.
+  if (_offcanvas_is_valid_request()) {
+    $robots = [
+      '#type' => 'html_tag',
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'robots',
+        'content' => 'noindex,follow',
+      ],
+    ];
+    $page['#attached']['html_head'][] = [$robots, 'robots'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function offcanvas_preprocess_page(&$variables) {
+  if (_offcanvas_is_valid_request()) {
+    $url = _offcanvas_parent_destination_url();
+
+    $variables['offcanvas_back'] = [
+      '#title' => t('Back'),
+      '#type' => 'link',
+      '#url' => $url,
+      '#attributes' => [
+        'target' => '_top',
+        'class' => [
+          'off-canvas-back',
+        ],
+      ],
+    ];
+
+    $variables['#attached']['library'][] = 'offcanvas/off-canvas-child';
+    $variables['#attached']['drupalSettings'] = [
+      'offcanvas' => [
+        'parent_url' => $url->toString(),
+      ],
+    ];
+  }
+  else {
+    // This request ist for an parent page.
+    $variables['#attached']['library'][] = 'offcanvas/scotch-panels';
+    $variables['#attached']['library'][] = 'offcanvas/off-canvas';
+  }
+}
+
+
+/**
+ * Implements hook_page_top().
+ */
+function offcanvas_page_top(array &$page_top) {
+  $page_top['offcanvas'] = [
+    '#markup' => '<div id="offcanvas-container"></div>',
+  ];
+}
+
+/**
+ * @todo move to manager service.
+ */
+function _offcanvas_get_entities() {
+  return [
+    'node' => [
+      'offcanvas_page' => 'offcanvas_page',
+    ],
+  ];
+}
+
+/**
+ * @todo move to manager service.
+ */
+function _offcanvas_validate_entity(\Drupal\Core\Entity\EntityInterface $entity, $bundles) {
+  $route = \Drupal::request()->attributes->get('_route');
+  if (strpos($route, 'canonical') == -1) {
+    return FALSE;
+  }
+
+  if (!in_array($entity->bundle(), $bundles)) {
+    return FALSE;
+  }
+
+  if (isset($entity->in_preview) && $entity->in_preview == TRUE) {
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+/**
+ * @todo move to manager service.
+ */
+function _offcanvas_is_valid_request() {
+  if (_offcanvas_is_valid_entity()) {
+    return TRUE;
+  }
+  if (_offcanvas_is_valid_path()) {
+    return TRUE;
+  }
+
+  return FALSE;
+}
+
+function _offcanvas_is_valid_path() {
+  $request_path = \Drupal::request()->getPathInfo();
+  $valid_pathes = \Drupal::moduleHandler()->invokeAll('offcanvas_valid_pathes');
+
+  return in_array($request_path, $valid_pathes);
+}
+
+function _offcanvas_is_valid_entity() {
+  foreach (_offcanvas_get_entities() as $entity_type => $bundles) {
+    if ($entity = \Drupal::request()->attributes->get($entity_type, NULL)) {
+      if (_offcanvas_validate_entity($entity, $bundles)) {
+        return TRUE;
+      }
+    }
+  };
+
+  return FALSE;
+}
+
+/**
+ * @todo move to manager service.
+ *
+ * Returns the a off canvas parent destination.
+ * @return \Drupal\Core\Url|static
+ */
+function _offcanvas_parent_destination_url() {
+  $url = NULL;
+
+  if ($desination = \Drupal::request()->query->get('destination')) {
+    $url = \Drupal\Core\Url::fromUserInput($desination);
+  }
+  elseif ($node = \Drupal::request()->attributes->get('node', NULL)) {
+    if ($node->bundle() == 'offcanvas_page') {
+      if (!empty($node->field_redirect[0]->uri)) {
+        $url = \Drupal\Core\Url::fromUri($node->field_redirect[0]->uri);
+      }
+    }
+  }
+  if ($url === NULL) {
+    $url = \Drupal\Core\Url::fromRoute('<front>');
+  }
+
+  return $url;
+}

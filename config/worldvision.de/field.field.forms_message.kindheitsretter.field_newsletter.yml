@@ -1,0 +1,22 @@
+uuid: b60de335-8f11-4b3c-acb4-4e1a71e70d53
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kindheitsretter
+  module:
+    - forms_suite
+id: forms_message.kindheitsretter.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kindheitsretter
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,31 @@
+uuid: 3eb19f59-d482-4602-849c-804ceb824462
+langcode: nl
+status: true
+dependencies:
+  module:
+    - field_collection
+    - file
+    - image
+_core:
+  default_config_hash: oO3fMkktXUa25spPARbQ0SHvsxSb2iuxWlK00FrUTsw
+id: field_collection_item.field_slideshow_image
+field_name: field_slideshow_image
+entity_type: field_collection_item
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,10 @@
+@media screen and (min-width: $bp-md) {
+  // =============================
+  // Copy SM
+  // =============================
+  .editorial-copy {
+    p, a, li {
+      font-size: $font-size-small;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+name: Country
+type: module
+description: Informations about the World Vision Countrys
+core: 8.x
+package: Obelix (Core)

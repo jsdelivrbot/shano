@@ -1,0 +1,22 @@
+uuid: 40120a50-578e-4f4b-87b9-1114551912f8
+langcode: nl
+status: true
+dependencies:
+  module:
+    - affiliate
+    - taxonomy
+_core:
+  default_config_hash: NZ1N8gxy_JmKJtOQh_94NfSeCwXz-6cU0NxpLq6kA4E
+id: affiliate.field_group
+field_name: field_group
+entity_type: affiliate
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

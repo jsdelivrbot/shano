@@ -1,0 +1,58 @@
+uuid: de0ad4bb-15fd-4388-a9f8-b208cc272310
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.tschad_wasser.field_donation_amount
+    - field.field.forms_message.tschad_wasser.field_donation_period
+    - field.field.forms_message.tschad_wasser.field_newsletter
+    - field.field.forms_message.tschad_wasser.field_payment_method
+    - field.field.forms_message.tschad_wasser.field_user_data
+    - forms_suite.form.tschad_wasser
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.tschad_wasser.default
+targetEntityType: forms_message
+bundle: tschad_wasser
+mode: default
+content:
+  field_donation_amount:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_period:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_donation_amount_single: true

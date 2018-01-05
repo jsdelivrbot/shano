@@ -1,0 +1,21 @@
+uuid: de0e9e70-19db-43ea-8a99-c9d13c2e5a7e
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - link
+_core:
+  default_config_hash: XUrcdHF7H21uSCdUlSEROjuAwhyVWKA1_3B7hLCtmG0
+id: editorial_content.field_link
+field_name: field_link
+entity_type: editorial_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

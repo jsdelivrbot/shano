@@ -1,0 +1,21 @@
+uuid: dda339da-c9a7-4767-88cc-089349efd7e1
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+_core:
+  default_config_hash: QeweEXq-QKEya81RAIBpHEHo3XvGD4lE179g66eAs2Y
+id: forms_message.field_child_select
+field_name: field_child_select
+entity_type: forms_message
+type: wovi_child_select_field
+settings:
+  case_sensitive: false
+module: forms
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

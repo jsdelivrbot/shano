@@ -1,0 +1,30 @@
+uuid: e4b4ed79-01e7-49a7-afe2-780d749d8b48
+langcode: de
+status: true
+dependencies: {  }
+id: spendenquittung_zweitschrift
+label: 'Spendenquittung Zweitschrift'
+recipients: ''
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: SPENDENQUITTUNGEN
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und Ihnen die Zweitschrift Ihrer Spendenquittung zur Verfügung stellen.&nbsp;</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für die Beantragung der Zweitschrift'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /formulare/spendenquittung-zweitschrift
+headline: 'Zweitschrift Ihrer Spendenquittung'
+description: "Grundsätzlich versenden wir die Spendenbescheinigungen über alle Spenden eines Jahres bis Ende Januar des Folgejahres automatisch. Sollten Sie jedoch die Spendenbescheinigung nicht erhalten oder verlegt haben, können Sie hier einen Nachdruck beantragen.\r\n"
+disclaimer: ''
+submit_button: 'Jetzt beantragen'

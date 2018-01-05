@@ -1,0 +1,6 @@
+{
+  "name": "world-vision/payone",
+  "type": "drupal-module",
+  "description": "Handles the Payone Login Data",
+  "require": { }
+}

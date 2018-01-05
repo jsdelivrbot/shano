@@ -1,0 +1,22 @@
+uuid: 2722c85b-894b-474d-918c-9996225d32f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wvbasetheme
+_core:
+  default_config_hash: uUvLkF7ds0J20_mKSvkjqk2Pq9joyduCPvUJSCZsR6M
+id: wvbasetheme_messages
+theme: wvbasetheme
+region: controls
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Nachrichten
+  provider: system
+  label_display: '0'
+visibility: {  }

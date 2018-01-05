@@ -1,0 +1,41 @@
+# Generates additional aliases.
+
+# Migration metadata
+id: url_aliases
+label: Url Aliases
+migration_tags:
+  - url-alias
+
+source:
+  plugin: csv
+  path: sites/pg.worldvision.nl/modules/wv_nl_site/assets/csv/url_aliases.csv
+  header_row_count: 1
+  keys:
+    - origin_url
+  # Field descriptions
+  fields:
+    origin_url: 'Origin URLs.'
+    new_alias: 'New aliases.'
+# Migration destination
+#
+# Since we want to create URL aliases, we need to use the destination plugin "url_alias" provided by the "path" module.
+# Taking a quick look at the plugin source at Drupal\path\Plugin\migrate\destination\UrlAlias::fields(), we can figure
+# out the fields supported by this plugin.
+destination:
+  plugin: url_alias
+# Migration processes
+process:
+  source: origin_url
+  # Specify the alias which should point to the "source" specified above.
+  alias: new_alias
+  # All URL aliases need to specify a language.
+  #
+  # In our case, we simply hard-code it to "und" as in "Undefined". This is important! A value must be provided for
+  # this property, otherwise, you will get errors while running the migration.
+  langcode:
+    plugin: default_value
+    default_value: 'und'
+
+# Migration dependencies
+migration_dependencies:
+  required: []

@@ -1,0 +1,22 @@
+uuid: 7f06a502-4649-48a9-819d-77eb0191bcfb
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - paragraphs
+_core:
+  default_config_hash: NztjUAHEAQ9e3aLnF2EbT2A2Pl6tEU5R8_E1SanCf1I
+id: paragraph.field_paragraph_donation
+field_name: field_paragraph_donation
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

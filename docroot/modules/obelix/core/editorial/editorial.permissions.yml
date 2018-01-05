@@ -1,0 +1,32 @@
+administer editorial_content entities:
+  title: 'Administer Editorial content'
+  description: 'Allow to access the administration form to configure Editorial content.'
+  restrict access: true
+
+administer editorial_content_type entities:
+  title: 'Administer Editorial content types'
+  description: 'Allow to access the administration form to configure Editorial content types.'
+  restrict access: true
+
+view editorial_content entities:
+  title: 'View editorial content'
+
+add editorial_content entities:
+  title: 'Create new editorial content'
+
+delete editorial_content entities:
+  title: 'Delete Editorial content'
+
+edit editorial_content entities:
+  title: 'Edit Editorial content'
+
+view published editorial_content entities:
+  title: 'View published Editorial content'
+
+view unpublished editorial_content entities:
+  title: 'View unpublished Editorial content'
+
+view editorial_content entity canonical pages:
+    title: 'View editorial content canonical pages'
+
+

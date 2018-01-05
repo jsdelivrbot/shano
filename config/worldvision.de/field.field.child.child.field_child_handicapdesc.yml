@@ -1,0 +1,22 @@
+uuid: 88234da8-3157-4150-87f2-0f7a724513c9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_handicapdesc
+  module:
+    - child
+_core:
+  default_config_hash: JE2_bSEZ40i9oHOJuWQWJJbhjWb-E8ivOZjp5jiRnto
+id: child.child.field_child_handicapdesc
+field_name: field_child_handicapdesc
+entity_type: child
+bundle: child
+label: 'handicap description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

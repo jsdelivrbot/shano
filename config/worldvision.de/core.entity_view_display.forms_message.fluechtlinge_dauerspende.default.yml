@@ -1,0 +1,39 @@
+uuid: 2942b7cb-816b-40eb-a729-5d21fee43bb8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.fluechtlinge_dauerspende.field_donation_amount
+    - field.field.forms_message.fluechtlinge_dauerspende.field_donation_period
+    - field.field.forms_message.fluechtlinge_dauerspende.field_newsletter
+    - field.field.forms_message.fluechtlinge_dauerspende.field_payment_method
+    - field.field.forms_message.fluechtlinge_dauerspende.field_user_data
+    - forms_suite.form.fluechtlinge_dauerspende
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.fluechtlinge_dauerspende.default
+targetEntityType: forms_message
+bundle: fluechtlinge_dauerspende
+mode: default
+content:
+  field_donation_amount:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_period:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden:
+  field_newsletter: true
+  field_payment_method: true
+  field_user_data: true

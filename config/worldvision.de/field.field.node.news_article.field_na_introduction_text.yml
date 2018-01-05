@@ -1,0 +1,23 @@
+uuid: 4360e6a3-d1fd-4eb7-899c-6bceac75ba7e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_na_introduction_text
+    - node.type.news_article
+  module:
+    - text
+_core:
+  default_config_hash: zoV4e0Rd2IT5fEnrmoMz2mPAmVGhYiHSOXCgfpq_KgU
+id: node.news_article.field_na_introduction_text
+field_name: field_na_introduction_text
+entity_type: node
+bundle: news_article
+label: Einleitungstext
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/fs_payment",
+  "type": "drupal-module",
+  "description": "Enables payment functionaltiy for Forms suite.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/fs_payment",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/fs_payment",
+    "source": "http://cgit.drupalcode.org/fs_payment"
+  },
+  "require": { }
+}

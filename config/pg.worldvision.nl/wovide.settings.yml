@@ -1,0 +1,30 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: themes/worldvision/beaufix/favicon.ico
+  url: 'http://live.worldvision.de/sites/default/files/favicon.ico'
+  use_default: 0
+schema: '8000'
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: 1
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: 1
+cdn_jsdelivr_version: 3.3.6
+region_wells:
+  top_navigation: ''
+  search: ''
+  navigation: ''
+  controls: ''
+  content: ''
+  footer: ''
+schemas:
+  bootstrap: 8000
+  beaufix: 8000
+  wovide: 8000
+table_responsive: '-1'
+table: ''
+langcode: nl

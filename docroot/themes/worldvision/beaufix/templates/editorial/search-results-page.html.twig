@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the search results page when editorial module is enabled.
+ *
+ * Available variables:
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ *
+ * - content: All search page items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.search_form }}. Use
+ *   {{ content|without('search_form') }} to temporarily suppress the printing
+ *   of a given child element.
+ *
+ *   Available items:
+ *   - search_form: The form to perform the search query.
+ *   - search_results_title: The search title within a h2 tag.
+ *   - search_results_summary: A short summary about the search results.
+ *   - search_results: An array of search result items.
+ *   - page: A pager for the search results.
+ *
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ *
+#}
+<div class="container">
+  <div{{ attributes.addClass('row') }}>
+    <div{{ content_attributes.addClass('col-xs-12', 'col-md-8', 'col-md-offset-2') }}>
+      <div class="search-results-page--header vert-offset-top-1 vert-offset-sm-top-2">
+        <div class="search-results-page--header--title vert-offset-top-1 vert-offset-sm-top-2">
+          <h2 class="font-size-l text-center">{{ "Search results"|t }}</h2>
+        </div>
+        {#<div class="search-results-page--header--form vert-offset-top-1 vert-offset-sm-top-2">#}
+          {#{{ content.search_form }}#}
+        {#</div>#}
+        <div class="search-results-page--header--summary vert-offset-top-1 vert-offset-sm-top-2">
+          {{ content.search_results_summary }}
+        </div>
+      </div>
+      <div class="search-results-page--body vert-offset-top-1 vert-offset-sm-top-2">
+        {{ content|without('search_results_title', 'search_form', 'search_results_summary') }}
+      </div>
+    </div>
+  </div>
+</div>

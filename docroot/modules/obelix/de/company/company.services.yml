@@ -1,0 +1,5 @@
+services:
+  company.presave_member:
+    class: Drupal\company\EventSubscriber\CompanyMemberUpdate
+    tags:
+      - { name: 'event_subscriber' }

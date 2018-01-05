@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Common World Vision site logic.
+ */
+
+/**
+ * Implements hook_mail_alter().
+ */
+function wv_site_mail_alter(&$message) {
+
+  switch ($message['id']) {
+    case 'forms_suite_donation':
+      if ($bcc = \Drupal::config('wv_site.settings')->get('donation_mail_bcc')) {
+        $message['headers']['Bcc'] = $bcc;
+      }
+      break;
+  }
+}

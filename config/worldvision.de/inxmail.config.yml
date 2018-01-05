@@ -1,0 +1,5 @@
+inxmail:
+  domain: web.inxmail.com
+  return_url: /
+  error_url: /
+langcode: de

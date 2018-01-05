@@ -1,0 +1,5 @@
+obelix_contacts.settings_form:
+  title: 'WV settings'
+  base_route_name: obelix_contacts.settings_form
+  names:
+    - 'obelix_contacts.settings'

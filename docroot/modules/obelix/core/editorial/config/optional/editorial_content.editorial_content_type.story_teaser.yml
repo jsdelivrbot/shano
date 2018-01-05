@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: story_teaser
+label: 'Story teaser'
+category: 'Standard block'

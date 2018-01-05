@@ -1,0 +1,18 @@
+uuid: 20bb146e-657b-4d88-8f6e-3664b702be44
+langcode: de
+status: true
+dependencies:
+  config:
+    - group.type.company
+id: company-broker
+label: broker
+weight: 5
+internal: false
+audience: member
+group_type: company
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'update own group_node:broker_page entity'
+  - 'view group_node:broker_page entity'
+  - 'view group_node:broker_page content'

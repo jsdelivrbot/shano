@@ -1,0 +1,22 @@
+uuid: 8176586f-f75a-46ea-9196-f7eb8168eb07
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_message
+    - forms_suite.form.e_letterto_child_tza_176383
+  module:
+    - forms_suite
+id: forms_message.e_letterto_child_tza_176383.field_message
+field_name: field_message
+entity_type: forms_message
+bundle: e_letterto_child_tza_176383
+label: field_message
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_message_field

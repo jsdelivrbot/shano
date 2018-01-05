@@ -1,0 +1,18 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_headline
+    - node.type.public_donor_project
+id: node.public_donor_project.field_pdp_headline
+field_name: field_pdp_headline
+entity_type: node
+bundle: public_donor_project
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

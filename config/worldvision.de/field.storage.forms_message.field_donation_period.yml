@@ -1,0 +1,20 @@
+uuid: 892754a1-aafa-455b-b234-5cdfc74202c1
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+type: wovi_donation_period_field
+settings:
+  case_sensitive: false
+module: fs_payment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

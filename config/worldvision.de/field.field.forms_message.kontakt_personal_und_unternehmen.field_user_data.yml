@@ -1,0 +1,22 @@
+uuid: e5984213-1ffc-44bb-a9d2-0c7890a49873
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.kontakt_personal_und_unternehmen
+  module:
+    - forms_suite
+id: forms_message.kontakt_personal_und_unternehmen.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: kontakt_personal_und_unternehmen
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

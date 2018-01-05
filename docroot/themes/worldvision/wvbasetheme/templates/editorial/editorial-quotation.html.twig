@@ -1,0 +1,7 @@
+{% if content.quote %}
+  <div{{ attributes.addClass('editorial--content','editorial-quotation', content.alignment, 'col-xs-12', 'col-sm-10','col-sm-offset-1') }}>
+    <q{{ content_attributes.addClass('editorial-quotation--quote', 'font-size-m', 'font-bold') }}><span
+        class="font-color-highlighted-secondary">{{ content.quote }}</span></q>
+    <span class="font-size-s editorial-quotation--source">{{ content.source }}</span>
+  </div>
+{% endif %}

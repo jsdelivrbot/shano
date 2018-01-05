@@ -1,0 +1,26 @@
+{% if content.one or content.two or content.three or content.four %}
+  <div{{ attributes }}>
+    <div{{ row_attributes }}>
+      {% if content.one %}
+        <div{{ one_attributes }}>
+          {{ content.one }}
+        </div>
+      {% endif %}
+      {% if content.two %}
+        <div{{ two_attributes }}>
+          {{ content.two }}
+        </div>
+      {% endif %}
+      {% if content.three %}
+        <div{{ three_attributes }}>
+          {{ content.three }}
+        </div>
+      {% endif %}
+      {% if content.four %}
+        <div{{ four_attributes }}>
+          {{ content.four }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

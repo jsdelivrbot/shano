@@ -1,0 +1,23 @@
+child.child_controller_viewChild:
+  path: '/child/{ivision_id}'
+  defaults:
+    _controller: '\Drupal\child\Controller\ChildController::viewChild'
+    _title: 'View Child'
+  requirements:
+    _permission: 'access content'
+
+child.child_controller_countryPage:
+  path: '/child/country'
+  defaults:
+    _controller: '\Drupal\child\Controller\StatisticsController::countryPage'
+    _title: 'View Childs per country'
+  requirements:
+    _permission: 'view country availability'
+
+child.child_controller_birthdayPage:
+  path: '/child/birthday/{childamount}'
+  defaults:
+    _controller: '\Drupal\child\Controller\StatisticsController::birthdayPage'
+    _title: 'View Childs per day'
+  requirements:
+    _permission: 'view child availability'

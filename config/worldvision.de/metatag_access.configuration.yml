@@ -1,0 +1,4 @@
+required_elements:
+  basic:
+    description: description
+langcode: de

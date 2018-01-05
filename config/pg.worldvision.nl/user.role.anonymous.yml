@@ -1,0 +1,20 @@
+uuid: 18fbd6d5-4c37-45a7-8719-25d8d8e8ec18
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access form-suite forms'
+  - 'access site-wide forms'
+  - 'search content'
+  - 'store published affiliate entities'
+  - 'store unpublished affiliate entities'
+  - 'use advanced search'
+  - 'view any unpublished offcanvas_page content'
+  - 'view published editorial_content entities'

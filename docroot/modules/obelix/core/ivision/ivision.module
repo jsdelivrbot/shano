@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains ivision.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ivision_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the ivision module.
+        case 'help.page.ivision':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('Enables the iVision API') . '</p>';
+            return $output;
+
+        default:
+    }
+}

@@ -1,0 +1,20 @@
+uuid: 0f9809c0-cad0-4e29-aa11-3a69ab9f4864
+langcode: de
+status: true
+dependencies:
+  module:
+    - country
+id: country.field_sponsorship_children
+field_name: field_sponsorship_children
+entity_type: country
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

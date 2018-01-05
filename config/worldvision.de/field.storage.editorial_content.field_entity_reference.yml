@@ -1,0 +1,20 @@
+uuid: 5103f825-8a7c-4920-a65b-7fe4141923a1
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+id: editorial_content.field_entity_reference
+field_name: field_entity_reference
+entity_type: editorial_content
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

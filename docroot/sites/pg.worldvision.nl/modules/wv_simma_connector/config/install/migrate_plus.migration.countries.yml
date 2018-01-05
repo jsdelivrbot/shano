@@ -1,0 +1,13 @@
+id: countries
+label: Countries From Simma Platform
+migration_tags:
+  - WVI
+migration_group: wvi
+source:
+  plugin: countries
+  track_changes: true
+destination:
+  plugin: entity:country
+process:
+  id: country_code
+  name: country_description

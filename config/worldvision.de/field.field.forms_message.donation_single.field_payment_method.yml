@@ -1,0 +1,27 @@
+uuid: e8423875-f0ee-4a87-a882-918eef131355
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.donation_single
+  module:
+    - fs_payment
+_core:
+  default_config_hash: hENI4ZxSOMeQ8zKl9SFjGtLBgfHmR5t4HNpc6sF3_Wc
+id: forms_message.donation_single.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: donation_single
+label: 'payment method'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Zahlungsart wählen'
+    subline: ''
+    external_payment: 1
+field_type: wovi_payment_method_field

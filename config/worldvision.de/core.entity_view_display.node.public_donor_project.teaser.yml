@@ -1,0 +1,102 @@
+uuid: 93b48718-3b6d-4762-9106-4a974d8bea59
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.public_donor_project.field_metatags
+    - field.field.node.public_donor_project.field_pdp_country
+    - field.field.node.public_donor_project.field_pdp_description
+    - field.field.node.public_donor_project.field_pdp_founded_by
+    - field.field.node.public_donor_project.field_pdp_from
+    - field.field.node.public_donor_project.field_pdp_header_image
+    - field.field.node.public_donor_project.field_pdp_headline
+    - field.field.node.public_donor_project.field_pdp_second_description
+    - field.field.node.public_donor_project.field_pdp_to
+    - field.field.node.public_donor_project.field_pdp_volume
+    - image.style.widescreen_16_9_xs
+    - node.type.public_donor_project
+  module:
+    - datetime
+    - image
+    - text
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 19i9OJGywMai5sy_pzFWSU2dO0J1uXzIozboEA7kgbk
+id: node.public_donor_project.teaser
+targetEntityType: node
+bundle: public_donor_project
+mode: teaser
+content:
+  field_pdp_country:
+    type: entity_reference_label
+    weight: 3
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_pdp_description:
+    type: text_default
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_pdp_from:
+    type: datetime_custom
+    weight: 6
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F Y'
+    third_party_settings: {  }
+    region: content
+  field_pdp_header_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: widescreen_16_9_xs
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_pdp_headline:
+    type: string
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_pdp_to:
+    type: datetime_custom
+    weight: 5
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F Y'
+    third_party_settings: {  }
+    region: content
+  field_pdp_volume:
+    type: number_integer
+    weight: 4
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_metatags: true
+  field_pdp_founded_by: true
+  field_pdp_second_description: true
+  langcode: true

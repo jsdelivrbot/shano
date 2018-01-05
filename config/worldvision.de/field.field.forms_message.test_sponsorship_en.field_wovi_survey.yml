@@ -1,0 +1,26 @@
+uuid: a8e965e7-b777-4e86-9188-6858791b355d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_wovi_survey
+    - forms_suite.form.test_sponsorship_en
+  module:
+    - forms_survey
+id: forms_message.test_sponsorship_en.field_wovi_survey
+field_name: field_wovi_survey
+entity_type: forms_message
+bundle: test_sponsorship_en
+label: 'wovi survey'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    survey: '0'
+    alternative: ''
+default_value_callback: ''
+settings:
+  headline: ''
+  subline: ''
+field_type: wovi_survey_field

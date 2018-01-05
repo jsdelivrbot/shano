@@ -1,0 +1,22 @@
+uuid: 179d651f-fbc3-4ccd-9b8b-f7c9b9721c70
+langcode: nl
+status: true
+dependencies:
+  module:
+    - project
+_core:
+  default_config_hash: FILRSw4YZEnC9kQlc73Cr14r7ok2KFOSO1CVI_LaSXE
+id: project.field_numberofdropped
+field_name: field_numberofdropped
+entity_type: project
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

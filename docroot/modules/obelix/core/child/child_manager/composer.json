@@ -1,0 +1,14 @@
+{
+  "name": "drupal/child_manager",
+  "type": "drupal-module",
+  "description": "Extend the Child Module function.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/child_manager",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/child_manager",
+    "source": "http://cgit.drupalcode.org/child_manager"
+  },
+  "require": { }
+}

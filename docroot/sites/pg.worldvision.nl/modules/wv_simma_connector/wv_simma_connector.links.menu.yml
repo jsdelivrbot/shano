@@ -1,0 +1,7 @@
+wv_simma_connector.admin_config:
+  title: 'Simma Connector'
+  description: 'Export & migration related configs.'
+  parent: wv_site.config_menu
+  menu_name: admin
+  route_name: wv_simma_connector.admin_config_form
+  weight: 100

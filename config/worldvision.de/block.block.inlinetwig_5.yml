@@ -1,0 +1,23 @@
+uuid: f52498b6-2d00-44ec-a255-964839265d80
+langcode: en
+status: true
+dependencies:
+  module:
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig_5
+theme: wvbasetheme
+region: footer_bottom_2
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: 'Info:center'
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: "  <p class=\"text-uppercase\"><strong>ALLGEMEINES SPENDENKONTO:</strong></p>\r\n            <ul class=\"list-unstyled\">\r\n              <li class=\"text-uppercase\">Postbank Frankfurt</li>\r\n              <li>IBAN DE93 5001 0060 0000 0666 01</li>\r\n              <li>BIC PBNKDEFF</li>\r\n            </ul>\r\n            <p class=\"text-uppercase vert-offset-top-1\"><strong>GLÄUBIGER-IDENTIFIKATIONSNUMMER:</strong></p>\r\n            <ul class=\"list-unstyled\">\r\n              <li>DE19ZZZ00000150171</li>\r\n            </ul>"
+    format: html
+visibility: {  }

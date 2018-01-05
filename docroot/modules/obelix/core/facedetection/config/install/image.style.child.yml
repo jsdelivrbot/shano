@@ -1,0 +1,23 @@
+
+langcode: en
+status: true
+dependencies:
+  module:
+    - facedetection
+name: child
+label: child
+effects:
+  b50155cd-1bc9-4235-863f-2eaa81bd11ae:
+    uuid: b50155cd-1bc9-4235-863f-2eaa81bd11ae
+    id: face_detection_effect
+    weight: 1
+    data:
+      min_width: '480'
+      min_height: ''
+      margin:
+        left: '10'
+        right: '5'
+        top: '10'
+        bottom: '20'
+      width: '360'
+      height: ''

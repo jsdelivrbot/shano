@@ -1,0 +1,8 @@
+name: Project
+type: module
+description: Handles a World Vision Project
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - country
+  - datetime

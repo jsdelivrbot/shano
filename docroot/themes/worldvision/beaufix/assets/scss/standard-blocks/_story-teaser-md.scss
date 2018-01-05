@@ -1,0 +1,30 @@
+@media screen and (min-width: $bp-md) {
+  // =============================
+  // Story Teaser
+  // =============================
+
+  // Container
+  .editorial-page {
+    .editorial-section {
+      > .container-fluid,
+      > .container {
+        // 6er Col (rectangular)
+        [class*='-6'] {
+          .editorial-story-teaser {
+            .bg-mobile::before {
+              padding-top: 70%;
+            }
+          }
+        }
+        // 4er Col (rectangular)
+        .col-md-4 {
+          .editorial-story-teaser {
+            .bg-mobile::before {
+              padding-top: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

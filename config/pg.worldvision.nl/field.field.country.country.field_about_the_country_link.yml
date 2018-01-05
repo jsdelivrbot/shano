@@ -1,0 +1,23 @@
+uuid: 590d2a39-a770-417e-9412-49a3b4aadd04
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_about_the_country_link
+  module:
+    - country
+    - link
+id: country.country.field_about_the_country_link
+field_name: field_about_the_country_link
+entity_type: country
+bundle: country
+label: 'About the country link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

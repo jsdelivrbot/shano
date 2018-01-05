@@ -1,0 +1,12 @@
+transport: sendmail
+smtp_host: mailtrap.io
+smtp_port: 2525
+smtp_encryption: '0'
+smtp_username: 47c3223329bf84
+smtp_password: 06289ec64535d5
+sendmail_path: /usr/sbin/sendmail
+sendmail_mode: t
+spool_directory: ''
+_core:
+  default_config_hash: 0SeYZshzgoabDrbz-junYqeQOQ9BypPv2gaFcnqKy0M
+langcode: de

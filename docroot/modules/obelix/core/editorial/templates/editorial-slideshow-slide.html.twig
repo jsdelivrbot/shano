@@ -1,0 +1,8 @@
+<figure{{ attributes.addClass('slider-item') }}>
+  {{ content.preview_image }}
+  <figcaption{{ content_attributes.addClass('editorial-content-txt-block') }}>
+    {{ content|without('preview_image') }}
+    <strong class="slick-pagination"></strong>
+  </figcaption>
+</figure>
+

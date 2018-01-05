@@ -1,0 +1,10 @@
+inxmail.inxmail_config_form:
+  path: '/admin/config/inxmail/inxmailconfig'
+  defaults:
+    _form: '\Drupal\inxmail\Form\InxmailConfigForm'
+    _title: 'InxmailConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

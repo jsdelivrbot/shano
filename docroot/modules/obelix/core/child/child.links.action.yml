@@ -1,0 +1,5 @@
+entity.child.add_form:
+  route_name: entity.child.add_form
+  title: 'Add Child'
+  appears_on:
+    - entity.child.collection

@@ -1,0 +1,28 @@
+uuid: f7a823fb-0a66-49bf-bda9-609f13807a72
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.transparency_bar
+    - field.storage.node.field_transparency_bar_top
+    - node.type.gift_type
+id: node.gift_type.field_transparency_bar_top
+field_name: field_transparency_bar_top
+entity_type: node
+bundle: gift_type
+label: 'Transparency bar top'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      transparency_bar: transparency_bar
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

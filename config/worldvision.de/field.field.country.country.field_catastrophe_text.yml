@@ -1,0 +1,21 @@
+uuid: 4d7accae-303b-46ca-9c67-98febdd93f50
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_catastrophe_text
+  module:
+    - country
+    - text
+id: country.country.field_catastrophe_text
+field_name: field_catastrophe_text
+entity_type: country
+bundle: country
+label: 'Catastrophe Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

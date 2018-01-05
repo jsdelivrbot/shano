@@ -1,0 +1,22 @@
+uuid: 0518c95f-e50a-46ca-bc79-52059faebaff
+langcode: de
+status: true
+dependencies:
+  module:
+    - field_collection
+_core:
+  default_config_hash: 0o1sd-VFoq1QnML_wxgIqYXDIzQKTD-Pl8BCx7yftl0
+id: field_collection_item.field_donation_amount
+field_name: field_donation_amount
+entity_type: field_collection_item
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

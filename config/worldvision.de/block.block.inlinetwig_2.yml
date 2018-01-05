@@ -1,0 +1,23 @@
+uuid: aac094ab-091c-4453-8e8b-4ac78d8049b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - wv_site
+  theme:
+    - wvbasetheme
+id: inlinetwig_2
+theme: wvbasetheme
+region: footer_top_2
+weight: 0
+provider: null
+plugin: inline_twig
+settings:
+  id: inline_twig
+  label: 'Contacts:center'
+  provider: wv_site
+  label_display: '0'
+  body:
+    value: "            <p class=\"h6\">Folgen Sie uns</p>\r\n            <ul class=\"list-unstyled list-inline vert-offset-top-1\">\r\n              <li><a target=\"_blank\" class=\"btn-icon-round facebook\"\r\n                     href=\"https://www.facebook.com/world.vision.deutschland\"><i class=\"icon-facebook\"></i></a></li>\r\n              <li><a target=\"_blank\" class=\"btn-icon-round twitter\" href=\"https://twitter.com/WorldVisionDE\"><i\r\n                    class=\"icon-twitter\"></i></a></li>\r\n              <li><a target=\"_blank\" class=\"btn-icon-round google-plus\"\r\n                     href=\"https://plus.google.com/101390137686937469084/posts\"><i class=\"icon-google-plus\"></i></a>\r\n              </li>\r\n              <li><a target=\"_blank\" class=\"btn-icon-round xing\"\r\n                     href=\"https://www.xing.com/communities/groups/world-vision-1061801\"><i class=\"icon-xing\"></i></a>\r\n              </li>\r\n            </ul>"
+    format: html
+visibility: {  }

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains napkyn_tracking.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function napkyn_tracking_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.napkyn_tracking':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Napkyn tracking') . '</p>';
+      return $output;
+
+    default:
+  }
+}

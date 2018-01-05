@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_donation_button.field_paragraph_donation
+    - paragraphs.paragraphs_type.paragraph_donation_button
+id: paragraph.paragraph_donation_button.default
+targetEntityType: paragraph
+bundle: paragraph_donation_button
+mode: default
+content:
+  field_paragraph_donation:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

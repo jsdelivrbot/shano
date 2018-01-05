@@ -1,0 +1,77 @@
+
+.country-page-section--header {
+  color: #000;
+  position: relative;
+  > .content {
+    margin: 15px 0 0;
+    .country-name {
+      margin-bottom: 30px;
+    }
+    .label {
+      color: #000;
+      display: block;
+    }
+    .value-prefix {
+      margin-right: 15px;
+      font-size: $font-size-xxxx-large;
+    }
+    .value, .value-suffix {
+      font-size: $font-size-x-large;
+      color: $color-highlight;
+    }
+    .label {
+      white-space: inherit;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.country-page-section--emphases {
+  h3 {
+    color: $color-standard-bg;
+    margin-bottom: 30px;
+  }
+  .field-collection-item--name-field-emphases-bar {
+    .field--name-field-emphases-bar-image {
+      width: 90px;
+      margin: 0 auto;
+      padding-bottom: 15px;
+    }
+    .field--name-field-emphases-bar-copy {
+      color: $color-standard-bg;
+      margin: 0 0 45px;
+    }
+  }
+}
+
+.country-page-section--success-bar {
+  h3 {
+    color: $color-standard-bg;
+    margin-bottom: 30px;
+  }
+  .field--name-field-success-bar-value {
+    font-size: $font-size-xxxx-large;
+    h1,h2,h3,h4,h5{
+      font-size: $font-size-xxxx-large;
+    }
+  }
+  .field--name-field-success-bar-description {
+    color: $color-standard-bg;
+  }
+  .field-collection-item--name-field-success-bar{
+    padding-bottom: 15px;
+  }
+}
+
+.country-page-section--his {
+  h2{
+    font-size: $font-size-medium;
+    line-height: 1.125em;
+  }
+}
+
+.country-page-section--slideshow{
+  .editorial--content{
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,18 @@
+uuid: 247eab38-9632-42d3-85f5-c99e6eeb4a64
+langcode: nl
+status: true
+dependencies:
+  module:
+    - map
+id: map.field_zoom
+field_name: field_zoom
+entity_type: map
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

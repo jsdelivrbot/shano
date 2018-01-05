@@ -1,0 +1,9 @@
+uuid: 9f4ceebe-7f4c-4e1b-9fca-949e991e82fc
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: r2MKUQ_mW753i0QMVrL58yHrvepag9oHNb3j3toYpiQ
+id: direct_donation
+label: 'Direct Donation'
+category: 'Standard block'

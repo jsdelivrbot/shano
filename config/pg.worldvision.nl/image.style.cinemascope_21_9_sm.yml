@@ -1,0 +1,14 @@
+uuid: 34df17cb-9757-4e3f-b1ad-e81c386cc2dc
+langcode: nl
+status: true
+dependencies: {  }
+name: cinemascope_21_9_sm
+label: 'Cinemascope (21:9) SM'
+effects:
+  4dcc0f52-84b1-4957-9c2e-603a97895cd0:
+    uuid: 4dcc0f52-84b1-4957-9c2e-603a97895cd0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 620

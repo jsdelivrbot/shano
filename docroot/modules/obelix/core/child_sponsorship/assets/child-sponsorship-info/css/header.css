@@ -1,0 +1,30 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 4, ../scss/_header-xs.scss */
+.child-sponsorship-info-header {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 6, ../scss/_header-sm.scss */
+  .child-sponsorship-info-header .header-txt {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-left: 15px;
+  }
+  /* line 9, ../scss/_header-sm.scss */
+  .child-sponsorship-info-header .header-txt h1 {
+    margin-top: 0;
+  }
+}

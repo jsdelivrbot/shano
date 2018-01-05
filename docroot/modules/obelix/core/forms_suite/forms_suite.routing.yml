@@ -1,0 +1,83 @@
+forms_suite.form.view:
+  path: '/forms/{form}'
+  defaults:
+    _title: 'Forms'
+    _controller: '\Drupal\forms_suite\Controller\FormsController::formsSitePage'
+  requirements:
+    _permission: 'access form-suite forms'
+
+forms_suite.form.send:
+  path: '/forms/{form}/send'
+  defaults:
+    _title: 'Forms'
+    _controller: '\Drupal\forms_suite\Controller\FormsSendController::thankYouPage'
+  requirements:
+    _permission: 'access form-suite forms'
+
+
+entity.form.delete_form:
+  path: '/admin/structure/forms/manage/{form}/delete'
+  defaults:
+    _entity_form: 'form.delete'
+    _title: 'Delete'
+  requirements:
+    _permission: 'administer form-suite forms'
+
+entity.form.collection:
+  path: '/admin/structure/forms'
+  defaults:
+    _entity_list: 'form'
+    _title: 'Forms'
+  requirements:
+    _permission: 'administer form-suite forms'
+
+entity.form.edit_form:
+  path: '/admin/structure/forms/manage/{form}'
+  defaults:
+    _entity_form: 'form.edit'
+    _title: 'Edit form'
+  requirements:
+    _permission: 'administer form-suite forms'
+
+entity.form.canonical:
+  path: '/forms/{form}'
+  defaults:
+    _title: 'Forms'
+    _controller: '\Drupal\forms_suite\Controller\FormsController::formsSitePage'
+  requirements:
+    _permission: 'access form-suite forms'
+
+
+forms_suite.form.add:
+  path: '/admin/structure/forms/add'
+  defaults:
+    _entity_form: 'form.add'
+    _title: 'Add form'
+  requirements:
+    _permission: 'administer form-suite forms'
+
+forms_suite.form.copy:
+  path: '/admin/structure/forms/copy/{uuid}'
+  defaults:
+    _entity_form: 'form.copy'
+    _title: 'Copy form'
+  requirements:
+    _permission: 'administer form-suite forms'
+
+
+
+forms_suite.forms.submitted.csv_generator:
+  path: '/admin/structure/forms/submitted/xls'
+  defaults:
+    _controller: '\Drupal\forms_suite\Controller\CSVGeneratorController::generateCSV'
+    _title: 'generateCSV'
+  requirements:
+    _permission: 'access form-suite submitted forms'
+
+forms_suite.forms.submitted.process:
+  path: '/admin/structure/forms/submitted/send'
+  defaults:
+    _title: 'Check submissions to send'
+    _controller: '\Drupal\forms_suite\Controller\SubmissionProcessController::checkSubmissionsToSend'
+  requirements:
+    _permission: 'access form-suite submitted forms'

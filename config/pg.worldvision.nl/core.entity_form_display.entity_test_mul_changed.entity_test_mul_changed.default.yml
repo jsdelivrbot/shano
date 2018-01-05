@@ -1,0 +1,29 @@
+uuid: 9b1336f8-4ccc-43f9-a8f5-351f56afad0d
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.field.entity_test_mul_changed.entity_test_mul_changed.field_test_text
+  module:
+    - entity_test
+    - text
+id: entity_test_mul_changed.entity_test_mul_changed.default
+targetEntityType: entity_test_mul_changed
+bundle: entity_test_mul_changed
+mode: default
+content:
+  field_test_text:
+    type: text_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

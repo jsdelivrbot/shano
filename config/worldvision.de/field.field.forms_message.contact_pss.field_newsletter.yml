@@ -1,0 +1,24 @@
+uuid: 917dffbb-edb2-45b9-af81-311943aba583
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.contact_pss
+  module:
+    - forms_suite
+_core:
+  default_config_hash: Lt4udjMrjK6GW3E6kzNmIqII2-vW8X4hO5OfpUm7qfI
+id: forms_message.contact_pss.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: contact_pss
+label: newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,118 @@
+// =============================
+// Font size classes
+// =============================
+
+// Breakpoint MD
+// =============================
+@media screen and (min-width: $bp-lg) {
+
+  // Other
+  .font-size-xs {
+    font-size: $font-size-small;
+  }
+
+  .font-size-s {
+    font-size: $font-size-x-large;
+  }
+
+  .font-size-m {
+    font-size: $font-size-xxxx-large;
+  }
+
+  .font-size-l {
+    font-size: $font-size-xxxxx-large;
+  }
+
+  .font-size-xl {
+    font-size: $font-size-xxxxxx-large;
+  }
+
+  //  6er COL
+  // ========
+  .container,
+  .container-fluid,
+  .container-font{
+    > .row {
+      > [class^='col-'][class*='-6'] {
+        .font-size-xs {
+          font-size: $font-size-small;
+        }
+
+        .font-size-s {
+          font-size: $font-size-small;
+        }
+        .font-size-m {
+          font-size: $font-size-x-large;
+        }
+
+        .font-size-l {
+          font-size: $font-size-xxx-large;
+        }
+
+        .font-size-xl {
+          font-size: $font-size-xxxx-large;
+        }
+      }
+    }
+  }
+
+  //  4er COL
+  // ========
+  .container,
+  .container-fluid,
+  .container-font{
+    > .row {
+      > [class^='col-'][class*='-4'] {
+        .font-size-xs {
+          font-size: $font-size-small;
+        }
+
+        .font-size-s {
+          font-size: $font-size-small;
+        }
+
+        .font-size-m {
+          font-size: $font-size-medium;
+        }
+
+        .font-size-l {
+          font-size: $font-size-large;
+        }
+
+        .font-size-xl {
+          font-size: $font-size-x-large;
+        }
+      }
+    }
+  }
+
+  //  3er COL
+  // ========
+  .container,
+  .container-fluid,
+  .container-font{
+    > .row {
+      > [class^='col-'][class*='-3'] {
+        .font-size-xs {
+          font-size: $font-size-smallest;
+        }
+
+        .font-size-s {
+          font-size: $font-size-small;
+        }
+
+        .font-size-m {
+          font-size: $font-size-small;
+        }
+
+        .font-size-l {
+          font-size: $font-size-medium;
+        }
+
+        .font-size-xl {
+          font-size: $font-size-large;
+        }
+      }
+    }
+  }
+}

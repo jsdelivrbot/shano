@@ -1,0 +1,22 @@
+uuid: a2dbbcc9-27cd-4f32-b393-c4f801cef443
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wovide
+_core:
+  default_config_hash: _0jMjdivyVrgz98ShOXiWu7WVW_LQ77-pzFVuFUEiw4
+id: wovide_tabs
+theme: wovide
+region: controls
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

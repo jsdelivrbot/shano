@@ -1,0 +1,14 @@
+uuid: a69ef4b5-38d5-4dc6-a18c-4d7f37d2224c
+langcode: de
+status: true
+dependencies: {  }
+name: cinemascope_21_9_xs_portrait
+label: 'Cinemascope (21:9) XS Portrait'
+effects:
+  e28a6fb4-a94f-476a-9f90-fd1a0757e8e2:
+    uuid: e28a6fb4-a94f-476a-9f90-fd1a0757e8e2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 960

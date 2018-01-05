@@ -1,0 +1,7 @@
+uuid: a42e54bc-048c-4a5a-89bf-58b5e80b1b88
+langcode: de
+status: false
+dependencies: {  }
+formId: node_public_donor_form
+captchaType: default
+label: null

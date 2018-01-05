@@ -1,0 +1,22 @@
+uuid: e790637f-de2a-47b4-9faa-a4db148bef13
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+_core:
+  default_config_hash: jYzpPYGOBADgTOL1IQ9YwQdi2xcAyFkuUk9pAHBW4SE
+id: seven_messages
+theme: seven
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 3a763fe4-c48a-4bd0-8ca6-3aa47f210f63
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.donation_interval
+  module:
+    - fs_payment
+_core:
+  default_config_hash: z61ah92Fne3rSSweE6UFXM3S_Qlt5PCAXi-nGeqKyGw
+id: forms_message.donation_interval.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: donation_interval
+label: 'payment method'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre Bankverbindung'
+    subline: ''
+    external_payment: 0
+field_type: wovi_payment_method_field

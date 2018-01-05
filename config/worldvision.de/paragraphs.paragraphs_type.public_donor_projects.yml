@@ -1,0 +1,9 @@
+uuid: a5baaa95-080f-4907-a0bb-df26dfb4e0a2
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: l7OArBxh3uIGizjYRf63XDeLD434o8RQUpVKaAE0G1E
+id: public_donor_projects
+label: 'Public Donor Projects'
+behavior_plugins: {  }

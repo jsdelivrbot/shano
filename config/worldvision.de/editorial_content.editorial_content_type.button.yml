@@ -1,0 +1,9 @@
+uuid: 5ba4b9d5-e2f4-46ad-9db5-2eea7b48fd21
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KbiAnpTq-6iulYwvDiV_D1V3JNHMLY-F-nlLfujUSSo
+id: button
+label: Call-To-Action
+category: 'Standard block'

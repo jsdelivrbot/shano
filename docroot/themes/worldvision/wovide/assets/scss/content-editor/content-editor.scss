@@ -1,0 +1,472 @@
+@import 'variables';
+@import 'abstractions';
+
+// misc adjustment - local actions display for admins
+.page-node-type-news-articles .region-controls .tabs {
+  margin-top: 44px;
+}
+
+// general layout
+.news-articles {
+  .content {
+    overflow: hidden;
+    min-width: 100vw;
+  }
+
+  // intro section with title etc
+  &--intro {
+    @extend %news-arcticle-section;
+    padding-bottom: 25px;
+
+    @media screen and (min-width: $break-small) {
+      margin: -220px 24px 0;
+      background-color: $color-body;
+      position: relative;
+      padding: 37px 63px 30px;
+    }
+
+    @media screen and (min-width: $break-medium) {
+      margin: -240px 170px 0;
+      padding: 53px 164px 45px;
+    }
+
+    @media screen and (min-width: $break-large) {
+      margin: -245px auto 0;
+      padding: 48px 195px 60px;
+      max-width: 1140px;
+    }
+
+    // title
+    h1 {
+      @extend %font-bold;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      font-size: 24px;
+      line-height: 1.2em;
+
+      @media screen and (min-width: $break-small) {
+        font-size: 30px;
+      }
+
+      @media screen and (min-width: $break-medium) {
+        font-size: 35px;
+      }
+
+      @media screen and (min-width: $break-large) {
+        font-size: 46px;
+      }
+    }
+
+    // user & date
+    footer {
+      overflow: auto;
+      margin: 20px 0 22px;
+      text-transform: uppercase;
+      font-size: .88em;
+
+      @media screen and (min-width: $break-small) {
+        margin: 13px 0 39px;
+        font-size: 1em;
+      }
+
+      * {
+        display: inline;
+      }
+
+      > * {
+        float: left;
+
+        &:nth-child(n+2) {
+          margin-left: .25em;
+        }
+      }
+
+      //
+      .date .field {
+        display: block;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+
+        &::before {
+          content: '\0028';
+        }
+
+        &::after {
+          content: '\0029';
+        }
+      }
+    }
+  }
+
+  // fields by type
+  .field--name-field-na {
+    // header image
+    &-headerimage {
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+
+        @media screen and (min-width: $break-small) {
+          height: 575px;
+        }
+
+        @media screen and (min-width: $break-medium) {
+          height: 550px;
+        }
+
+        @media screen and (min-width: $break-large) {
+          height: 600px;
+        }
+      }
+    }
+
+    //
+    &-subline {
+      @extend %font-book;
+      margin-top: 10px;
+      color: $color-main;
+      font-size: 1.15em;
+
+      @media screen and (min-width: $break-small) {
+        font-size: 1.75em;
+        line-height: 1.3em;
+      }
+
+      @media screen and (min-width: $break-medium) {
+        font-size: 1.6em;
+      }
+    }
+
+    //
+    &-user {
+      @extend %font-bold;
+    }
+
+    //
+    &-introduction-text {
+      @include paragraph-copy-size;
+
+      &::before {
+        display: block;
+        width: 100%;
+        height: 42px;
+        border-top: 2px ridge $color-border-default;
+        content: '';
+      }
+
+      a {
+        color: $color-flush-orange !important;
+      }
+
+      @media screen and (min-width: $break-large) {
+        &::before {
+          height: 57px;
+        }
+      }
+    }
+
+    // "jetzt spenden"
+    &-link {
+      display: none;
+
+      a {
+        @extend %font-bold;
+        display: inline-block;
+        margin-top: 10px;
+        padding: 12px 30px;
+        border: 1px solid $color-main;
+        border-radius: 50px;
+        background: $color-main;
+        color: $color-body;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        line-height: normal;
+        transition: all .3s ease;
+
+        &:hover {
+          outline: 0;
+          border-color: $color-main;
+          background: transparent;
+          color: $color-main;
+          text-decoration: none;
+        }
+      }
+
+      @media screen and (min-width: $break-small) {
+        display: block;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      @media screen and (min-width: $break-medium) {
+        margin-top: 23px;
+      }
+
+      @media screen and (min-width: $break-medium) {
+        margin-top: 28px;
+      }
+    }
+
+    // paragraph-items
+    &-optional {
+      .field {
+        @extend %news-arcticle-section;
+      }
+
+      .editorial--content {
+        padding: 0;
+
+        //TODO: Remove this and add .first class to editorial--content for news_article module only (/www/web/modules/worldvision_de/news_article/news_article.theme.inc)
+        .yt-preview-img {
+          top: 0;
+        }
+      }
+
+      // ~ by type
+      .paragraph--type--paragraph {
+        //
+        &-additional-text {
+          @include paragraph-copy-size;
+
+          a {
+            color: $color-flush-orange !important;
+          }
+
+          .field {
+            @media screen and (min-width: $break-small) {
+              padding-left: 85px;
+              padding-right: 85px;
+            }
+
+            @media screen and (min-width: $break-medium) {
+              padding-right: 332px;
+              padding-left: 332px;
+            }
+
+            @media screen and (min-width: $break-large) {
+              padding-right: 0;
+              padding-left: 0;
+              max-width: 750px;
+              margin: 0 auto;
+            }
+          }
+        }
+
+        //
+        &-quote {
+          .field {
+            margin: 0 auto;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            max-width: 80%;
+            color: $color-main;
+            quotes: '\201C' '\201D';
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.3em;
+            line-height: 1.3em;
+
+            .field--label {
+              display: none;
+            }
+
+            @media screen and (min-width: $break-small) {
+              padding-left: 85px;
+              padding-right: 85px;
+              font-size: 1.65em;
+              line-height: 1.5em;
+            }
+
+            @media screen and (min-width: $break-medium) {
+              padding: 45px 332px;
+              max-width: 100%;
+              font-size: 2.2em;
+              line-height: 1.42em;
+            }
+
+            @media screen and (min-width: $break-large) {
+              padding-right: 0;
+              padding-left: 0;
+              max-width: 750px;
+              margin: 0 auto;
+              line-height: 1.3em;
+            }
+          }
+          .field--item {
+            &::before,
+            &::after {
+              color: $color-copy;
+            }
+
+            &::before {
+              content: open-quote;
+            }
+
+            &::after {
+              content: close-quote;
+            }
+          }
+          .field--name-field-paragraph-quote-source {
+            color: #000;
+            font-weight: normal;
+            padding: 0;
+            &::before,
+            &::after {
+              content: "";
+            }
+          }
+          .field--name-field-paragraph-quote-text {
+            padding-bottom: 0;
+          }
+        }
+
+        // media
+        &-images,
+        &-slideshow,
+        &s-video,
+        &-image-16-9 {
+          @media screen and (min-width: $break-medium) {
+            @include inner-content-middle;
+          }
+
+          @media screen and (min-width: $break-large) {
+            @include inner-content-large;
+          }
+        }
+
+        //
+        &-images {
+          .field--item:nth-child(n+2) {
+            margin-top: 15px;
+          }
+
+          @media screen and (min-width: $break-small) {
+            .field {
+              display: flex;
+            }
+
+            .field--item {
+              width: 1%;
+              flex-grow: 1;
+
+              &:nth-child(n+2) {
+                margin-top: 0;
+              }
+
+              &:nth-child(n+3) {
+                margin-top: 15px;
+              }
+
+              &:nth-child(even) {
+                margin-left: 30px;
+              }
+            }
+          }
+        }
+
+        // low-height
+        &-image-low-height {
+          .field {
+            padding-right: 0;
+            padding-left: 0;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        //
+        &-slideshow {
+          // empty :D
+        }
+
+        // yep, that is supposed to look like that
+        &s-video {
+          .yt-preview {
+            height: 0;
+
+            .img-fullsize {
+              object-fit: cover;
+              height: 100%;
+            }
+
+            &-img {
+              height: 100%;
+            }
+          }
+
+          .yt-preview-txt {
+            @extend %visually-hidden;
+          }
+        }
+
+        // referenced content
+        &-related-teaser {
+          h2 {
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: center;
+            font-size: 23px;
+            line-height: 1.3em;
+
+            @media screen and (min-width: $break-medium) {
+              font-size: 35px;
+              line-height: 1.1;
+            }
+          }
+
+          .field--type-entity-reference {
+            > .field--item:nth-child(n+2) {
+              margin-top: 15px;
+            }
+
+            @media screen and (min-width: $break-small) {
+              display: flex;
+              justify-content: space-between;
+
+              > .field--item {
+                width: 1%;
+                flex-grow: 1;
+
+                &:nth-child(n+2) {
+                  margin-top: 0;
+                  margin-left: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        //
+        &-donation-button {
+          .editorial--content {
+            @media screen and (min-width: $break-small) {
+              padding-left: 85px;
+              padding-right: 85px;
+            }
+
+            @media screen and (min-width: $break-medium) {
+              padding-right: 332px;
+              padding-left: 332px;
+            }
+
+            @media screen and (min-width: $break-large) {
+              padding-right: 0;
+              padding-left: 0;
+              max-width: 750px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

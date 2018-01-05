@@ -1,0 +1,21 @@
+uuid: fe73cad7-ef37-477b-95aa-6d7c456a2f62
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_button_label
+    - node.type.news_article
+_core:
+  default_config_hash: Q65VH5waGvRITYL0IKFbkmfaz9wR6vdflEi_XQ_dYS0
+id: node.news_article.field_autoteaser_button_label
+field_name: field_autoteaser_button_label
+entity_type: node
+bundle: news_article
+label: 'Button label'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,66 @@
+uuid: 897a71d9-23ba-4c84-b208-00b114cde95a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.donation.field_donation_amount
+    - field.field.forms_message.donation.field_donation_period
+    - field.field.forms_message.donation.field_newsletter
+    - field.field.forms_message.donation.field_payment_method
+    - field.field.forms_message.donation.field_user_data
+    - forms_suite.form.donation
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: nSUhsPN-uZx3ohGEfy_GUbupNOIP9BjBE-K-LwVUpPg
+id: forms_message.donation.default
+targetEntityType: forms_message
+bundle: donation
+mode: default
+content:
+  field_donation_amount:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_amount_single:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_donation_period:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_payment_method:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_user_data:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden: {  }

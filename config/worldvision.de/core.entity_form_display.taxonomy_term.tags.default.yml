@@ -1,0 +1,30 @@
+uuid: b8bdb780-fe5a-411d-b3b0-9dd2a5d1bc96
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: SPstq6nGNITLSiv9LSP8mHPWyVgbtmQ_tRbw7o4BUUA
+id: taxonomy_term.tags.default
+targetEntityType: taxonomy_term
+bundle: tags
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  description: true
+  path: true

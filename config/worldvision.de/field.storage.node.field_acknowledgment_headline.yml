@@ -1,0 +1,23 @@
+uuid: b611352d-c789-477c-aaff-bb2e5dbb695e
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: PES5OFcNYZ4suoU-yqp8bU8XQXoprpj_6HnK3sxOrho
+id: node.field_acknowledgment_headline
+field_name: field_acknowledgment_headline
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: e4e08221-5397-4830-9952-b84f2fc33539
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.kenia_umweltschutz
+  module:
+    - fs_payment
+id: forms_message.kenia_umweltschutz.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: kenia_umweltschutz
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '10'
+    default_amount: '10'
+field_type: wovi_donation_amount_field

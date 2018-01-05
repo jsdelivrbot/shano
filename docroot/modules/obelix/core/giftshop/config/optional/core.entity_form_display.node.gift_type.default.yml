@@ -1,0 +1,285 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.gift_type.field_autoteaser_button_label
+    - field.field.node.gift_type.field_autoteaser_description
+    - field.field.node.gift_type.field_autoteaser_image
+    - field.field.node.gift_type.field_autoteaser_title
+    - field.field.node.gift_type.field_gift_campaign_teaser
+    - field.field.node.gift_type.field_gift_certificate
+    - field.field.node.gift_type.field_gift_certificate_preview
+    - field.field.node.gift_type.field_gift_description
+    - field.field.node.gift_type.field_gift_id
+    - field.field.node.gift_type.field_gift_price
+    - field.field.node.gift_type.field_metatags
+    - field.field.node.gift_type.field_slideshow_slides
+    - field.field.node.gift_type.field_teaser
+    - field.field.node.gift_type.field_transparency_bar_bottom
+    - field.field.node.gift_type.field_transparency_bar_top
+    - image.style.thumbnail
+    - node.type.gift_type
+  module:
+    - field_group
+    - file
+    - image
+    - inline_entity_form
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_base:
+      children:
+        - field_gift_id
+        - field_gift_description
+        - field_gift_price
+      parent_name: group_tabs
+      weight: 11
+      label: 'Base information'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_slideshow:
+      children:
+        - field_slideshow_slides
+      parent_name: group_tabs
+      weight: 12
+      label: Slideshow
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_certificate:
+      children:
+        - field_gift_certificate
+        - field_gift_certificate_preview
+      parent_name: group_tabs
+      weight: 13
+      label: Certificate
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_teaser:
+      children:
+        - field_teaser
+      parent_name: group_tabs
+      weight: 14
+      label: Teaser
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_tabs:
+      children:
+        - group_base
+        - group_slideshow
+        - group_certificate
+        - group_teaser
+        - group_transparency_bars
+        - group_gift_campaign_teaser
+      parent_name: ''
+      weight: 11
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        label: Tabs
+        direction: horizontal
+        id: ''
+        classes: ''
+    group_transparency_bars:
+      children:
+        - field_transparency_bar_top
+        - field_transparency_bar_bottom
+      parent_name: group_tabs
+      weight: 15
+      label: 'Transparency bars'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_gift_campaign_teaser:
+      children:
+        - field_gift_campaign_teaser
+      parent_name: group_tabs
+      weight: 16
+      label: 'Gift campaign teaser'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: node.gift_type.default
+targetEntityType: node
+bundle: gift_type
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  field_autoteaser_button_label:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_autoteaser_description:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_autoteaser_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_autoteaser_title:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_gift_campaign_teaser:
+    weight: 28
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+  field_gift_certificate:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_gift_certificate_preview:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_gift_description:
+    weight: 30
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_gift_id:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+  field_gift_price:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_metatags:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+  field_slideshow_slides:
+    weight: 9
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+  field_teaser:
+    weight: 14
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+  field_transparency_bar_bottom:
+    weight: 27
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+  field_transparency_bar_top:
+    weight: 26
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+    third_party_settings: {  }
+    type: inline_entity_form_simple
+  path:
+    type: path
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 2
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true

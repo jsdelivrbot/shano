@@ -1,0 +1,22 @@
+uuid: 5c8dc9c8-2e5d-4b34-87a7-554b468d75c9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.kontakt_schuelerpraktikum
+  module:
+    - forms_suite
+id: forms_message.kontakt_schuelerpraktikum.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: kontakt_schuelerpraktikum
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

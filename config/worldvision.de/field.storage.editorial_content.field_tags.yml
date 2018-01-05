@@ -1,0 +1,20 @@
+uuid: afe86a14-5e64-40e0-8d17-ed877b8b64ad
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - taxonomy
+id: editorial_content.field_tags
+field_name: field_tags
+entity_type: editorial_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

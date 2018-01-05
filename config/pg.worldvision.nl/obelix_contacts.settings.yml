@@ -1,0 +1,15 @@
+langcode: nl
+globalPhone: '033 - 4643 444'
+openingHours: 'Maandag - vrijdag | 9.00 - 17.00 uur'
+globalEmail: info@worldvision.nl
+generalDonationAccount:
+  type: string
+  format: html
+  value: "<p>IBAN: NL98 INGB 0000 0000 99<br />\r\nT.n.v. World Vision</p>\r\n"
+creditorIdNumber: '006337429'
+ourFacebookPage: 'https://www.facebook.com/worldvision.nl'
+ourTwitterPage: 'https://twitter.com/WorldVisionNL'
+ourGooglePlusPage: ''
+ourXingPage: ''
+_core:
+  default_config_hash: BFAXjEdg-H7_RalCruJvs_s6PatfS2FeqXyF4l-29hM

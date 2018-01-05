@@ -1,0 +1,24 @@
+uuid: 02ecb667-4cc6-4ded-a9b9-2f36572efd99
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.square_xs
+    - image.style.widescreen_16_9_sm
+  theme:
+    - bootstrap
+id: story_teaser
+label: 'Story teaser'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: square_xs
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: widescreen_16_9_sm
+breakpoint_group: bootstrap
+fallback_image_style: widescreen_16_9_sm

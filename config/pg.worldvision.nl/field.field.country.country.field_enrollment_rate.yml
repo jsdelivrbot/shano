@@ -1,0 +1,24 @@
+uuid: a1e0f989-34ac-4f22-baf8-51749e222877
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.country.field_enrollment_rate
+  module:
+    - country
+id: country.country.field_enrollment_rate
+field_name: field_enrollment_rate
+entity_type: country
+bundle: country
+label: 'Enrollment rate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

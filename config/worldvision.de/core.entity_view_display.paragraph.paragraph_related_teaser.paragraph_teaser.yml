@@ -1,0 +1,22 @@
+uuid: 7aea6bfb-d5ab-4cb7-b70f-12ed3938d8f3
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraph_teaser
+    - field.field.paragraph.paragraph_related_teaser.field_paragraph_relation_teaser
+    - paragraphs.paragraphs_type.paragraph_related_teaser
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: Kws3lNfdcs-wsC3hkqtknIJI8zCIo4hqZBI2yiXhQn4
+id: paragraph.paragraph_related_teaser.paragraph_teaser
+targetEntityType: paragraph
+bundle: paragraph_related_teaser
+mode: paragraph_teaser
+content: {  }
+hidden:
+  created: true
+  field_paragraph_relation_teaser: true
+  uid: true

@@ -1,0 +1,22 @@
+uuid: 6c6394f9-f41e-4d17-8060-b599a973aa76
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.indien_wasser
+  module:
+    - forms_suite
+id: forms_message.indien_wasser.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: indien_wasser
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

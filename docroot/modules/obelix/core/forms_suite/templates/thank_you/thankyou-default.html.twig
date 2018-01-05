@@ -1,0 +1,35 @@
+{#
+/**
+ * @file default.html.twig
+ *
+ */
+#}
+<div{{ attributes.addClass('form-success', 'container') }}>
+  {% if headline %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center font-size-l">{{ headline }}</h1>
+      </div>
+    </div>
+    {% if text %}
+      <div class="row">
+        <div class="col-xs-12">
+          {{ text|raw }}
+        </div>
+      </div>
+    {% endif %}
+  {% elseif text %}
+    <div class="row">
+      <div class="col-xs-12">
+        {{ text|raw }}
+      </div>
+    </div>
+  {% else %}
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="text-center font-size-l">Thank you</h1>
+      </div>
+    </div>
+  {% endif %}
+</div>
+

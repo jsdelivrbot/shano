@@ -1,0 +1,23 @@
+uuid: a8609828-13b6-4bae-903a-b2a6c4c52606
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.transition_page
+  module:
+    - metatag
+id: node.transition_page.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: transition_page
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

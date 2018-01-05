@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Continents
+vid: continents
+description: 'List of Continents'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,23 @@
+uuid: 4d120101-c1d3-46b7-9004-260ec91243a7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gift_price
+    - node.type.gift_type
+id: node.gift_type.field_gift_price
+field_name: field_gift_price
+entity_type: node
+bundle: gift_type
+label: 'Gift price'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: €
+  suffix: ''
+field_type: decimal

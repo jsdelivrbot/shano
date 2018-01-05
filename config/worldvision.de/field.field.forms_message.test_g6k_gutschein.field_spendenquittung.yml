@@ -1,0 +1,24 @@
+uuid: d4b3b076-40df-4455-a299-aeaa9bcc803d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_spendenquittung
+    - forms_suite.form.test_g6k_gutschein
+  module:
+    - forms_suite
+id: forms_message.test_g6k_gutschein.field_spendenquittung
+field_name: field_spendenquittung
+entity_type: forms_message
+bundle: test_g6k_gutschein
+label: Spendenquittung
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: TEST
+    subline: ''
+field_type: wovi_donation_receipt_field

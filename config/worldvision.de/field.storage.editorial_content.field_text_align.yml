@@ -1,0 +1,41 @@
+uuid: 3d45ee5a-0cdf-4413-8c28-b27303ebaf71
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: vFngbqUC5Jn0027mAe0nZ_qLtokboDgzw94kZ4foiik
+id: editorial_content.field_text_align
+field_name: field_text_align
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text-left
+      label: Deprecrated!
+    -
+      value: text-center
+      label: Deprecrated!
+    -
+      value: text-right
+      label: Deprecrated!
+    -
+      value: left
+      label: Left
+    -
+      value: center
+      label: Center
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

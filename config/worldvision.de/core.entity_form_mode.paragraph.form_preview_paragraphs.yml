@@ -1,0 +1,12 @@
+uuid: 549e5228-f377-4c1c-a980-ee7021a70e99
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: cyMiLKoRTdXSiXDZTTQf04uZsM2fSHLhvcUCF1w2_rs
+id: paragraph.form_preview_paragraphs
+label: 'Form Preview Paragraphs'
+targetEntityType: paragraph
+cache: true

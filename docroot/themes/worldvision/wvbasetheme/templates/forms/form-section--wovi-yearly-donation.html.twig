@@ -1,0 +1,43 @@
+{#
+/**
+ * This template is used when viewing the wovi form section.
+ *
+ * Available variables:
+ * - form: A list of all form elements.
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('container') }}>
+    <div class="row">
+        {% if elements.headline %}
+            <div class="col-xs-12">
+                <h2 class="form-hl text-center font-size-m">{{ elements.headline }}</h2>
+            </div>
+        {% endif %}
+        {% if elements.subline %}
+            <div class="col-xs-12">
+                <p class="form-sl text-center font-size-s">{{ elements.subline }}</p>
+            </div>
+        {% endif %}
+        {# Wrap smaller on large BP #}
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="row">
+                        <div class="col-xs-7 col-sm-8 col-lg-6 col-lg-offset-1">{{ elements.month13_check }}</div>
+                        <div class="col-xs-3 col-sm-2 col-no-padding-left">{{ elements.month13 }}</div>
+                        <div class="col-xs-2 col-no-padding"><button id="yearly-donation-info-btn" class="btn-beauty btn-transparent btn-round">i</button></div>
+                    </div>
+                </div>
+                <div id="yearly-donation-info" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" style="display: none; opacity: 0;">
+                    <p class="text-center">{% trans %}
+                        Many patrons and sponsors donate a supplementary donation once a year, about their 13th month's salary.
+                        The amount you can freely pay is debited in December. With in addition to this donation, important
+                        projects can be funded to help children and families in need to pave the way for a better future!
+                    {% endtrans %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

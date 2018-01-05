@@ -1,0 +1,30 @@
+uuid: aca8aa11-178a-4a0a-9aa2-e5e5d65efac0
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - file
+    - image
+id: editorial_content.field_preview_video_image
+field_name: field_preview_video_image
+entity_type: editorial_content
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

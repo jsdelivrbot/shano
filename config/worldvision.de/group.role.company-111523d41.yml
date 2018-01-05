@@ -1,0 +1,17 @@
+uuid: bf6ff89c-bb15-4620-aba3-ae5a1afb56c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.company
+  enforced:
+    config:
+      - user.role.content_editor
+id: company-111523d41
+label: 'Content editor'
+weight: 0
+internal: true
+audience: outsider
+group_type: company
+permissions_ui: false
+permissions: {  }

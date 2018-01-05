@@ -1,0 +1,10 @@
+name: Froms suite payment payone
+type: module
+description: Defines the payone payment gateways.
+core: 8.x
+package: Obelix (DE)
+dependencies:
+  - payment_gateway
+  - payone
+  - forms_suite
+  - fs_payment

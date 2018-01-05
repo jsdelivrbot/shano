@@ -1,0 +1,7 @@
+name: iVision NAV 16
+type: module
+description: Enables the iVision NAV 16 API
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - datasourcehandler

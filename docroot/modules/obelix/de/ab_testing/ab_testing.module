@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains ab_testing.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ab_testing_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ab_testing':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A/B Testing') . '</p>';
+      return $output;
+
+    default:
+  }
+}

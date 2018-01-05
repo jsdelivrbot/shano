@@ -1,0 +1,7 @@
+wv_simma_connector.admin_config_form:
+  path: '/admin/config/wv/simma-connector'
+  defaults:
+    _form: '\Drupal\wv_simma_connector\Form\ConfigForm'
+    _title: 'Simma Connector Configuration'
+  requirements:
+    _permission: 'access administration pages'

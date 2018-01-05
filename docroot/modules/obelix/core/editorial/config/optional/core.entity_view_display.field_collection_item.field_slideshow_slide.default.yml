@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.field_collection_item.field_slideshow_slide.field_slideshow_image
+    - field.field.field_collection_item.field_slideshow_slide.field_slideshow_image_caption
+    - field_collection.field_collection.field_slideshow_slide
+  module:
+    - responsive_image
+id: field_collection_item.field_slideshow_slide.default
+targetEntityType: field_collection_item
+bundle: field_slideshow_slide
+mode: default
+content:
+  field_slideshow_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: slideshow
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+  field_slideshow_image_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+hidden: {  }

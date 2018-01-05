@@ -1,0 +1,5 @@
+name: A/B Testing
+type: module
+description: A/B Testing
+core: 8.x
+package: Obelix (DE)

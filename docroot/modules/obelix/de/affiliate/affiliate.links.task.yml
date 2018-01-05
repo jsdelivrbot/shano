@@ -1,0 +1,17 @@
+# Affiliate routing definition
+entity.affiliate.canonical:
+  route_name: entity.affiliate.canonical
+  base_route: entity.affiliate.canonical
+  title: 'View'
+
+entity.affiliate.edit_form:
+  route_name: entity.affiliate.edit_form
+  base_route: entity.affiliate.canonical
+  title: Edit
+
+entity.affiliate.delete_form:
+  route_name:  entity.affiliate.delete_form
+  base_route:  entity.affiliate.canonical
+  title: Delete
+  weight: 10
+

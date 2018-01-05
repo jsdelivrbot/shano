@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_from
+    - node.type.public_donor_project
+  module:
+    - datetime
+id: node.public_donor_project.field_pdp_from
+field_name: field_pdp_from
+entity_type: node
+bundle: public_donor_project
+label: From
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

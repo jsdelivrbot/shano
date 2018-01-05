@@ -1,0 +1,8 @@
+name: Editorial Content
+type: module
+description: Special content types for editorial fields.
+version: 8.x-0.1
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - editorialfield

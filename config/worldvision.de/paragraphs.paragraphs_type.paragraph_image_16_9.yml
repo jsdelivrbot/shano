@@ -1,0 +1,9 @@
+uuid: 710cdb17-de08-4a4a-b690-6ed5d863fe1c
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zqNFgJkXiW7waPP-eSy1jgfT7LL-RREFxEJsCfUgMKA
+id: paragraph_image_16_9
+label: 'Image 16/9'
+behavior_plugins: {  }

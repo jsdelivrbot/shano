@@ -1,0 +1,21 @@
+uuid: 96014272-1a5d-4f0d-9f58-09d532c237ac
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_current_headline
+    - node.type.transition_page
+_core:
+  default_config_hash: 1B12EWs-ZjtsKpCR1r9UGeTbTypY_stAWSq6H0Xs6mw
+id: node.transition_page.field_current_headline
+field_name: field_current_headline
+entity_type: node
+bundle: transition_page
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

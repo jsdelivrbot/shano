@@ -1,0 +1,43 @@
+// =============================
+// Child sponsorship child select
+// =============================
+.editorial-child-sponsorship-child-select {
+  // TODO Set base URL
+  background-image: url("../img/child-select-bg-xs.jpg");
+  background-size: cover;
+
+  padding-top: 45px;
+  padding-bottom: 45px;
+  h2 {
+    color: $color-standard-bg;
+    line-height: normal;
+  }
+  ul {
+    padding-top: 10px;
+    li {
+      margin: 7.5px 0;
+      span {
+        color: $color-standard-bg;
+      }
+    }
+  }
+  .txt-highlighted {
+    font-size: 40px;
+    color: $color-highlight;
+  }
+  .child-cont {
+    position: relative;
+  }
+  .child-video {
+    display: none;
+    //@include transition(0.5s opacity);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+

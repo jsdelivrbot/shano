@@ -1,0 +1,10 @@
+{% if slides %}
+  <div{{ attributes.addClass('editorial--content', 'img-content') }}>
+    <div class="editorial-slideshow">
+      {# @todo merge this two divs #}
+      <div{{ content_attributes.addClass('inner-content') }}>
+        {{ slides }}
+      </div>
+    </div>
+  </div>
+{% endif %}

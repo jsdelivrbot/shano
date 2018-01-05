@@ -1,0 +1,26 @@
+uuid: f54adac8-734c-4bb5-80c2-2486b2c4825f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_yearly_donation
+    - forms_suite.form.child_sponsorship_with_condition
+  module:
+    - fs_payment
+_core:
+  default_config_hash: Zbxs8eufKm6HpRB6OViYrYKnZBS9m_CbOXEtJWGKBTY
+id: forms_message.child_sponsorship_with_condition.field_yearly_donation
+field_name: field_yearly_donation
+entity_type: forms_message
+bundle: child_sponsorship_with_condition
+label: 'yearly donation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'JÄHRLICHE ZUSATZSPENDE'
+    subline: ''
+field_type: wovi_yearly_donation_field

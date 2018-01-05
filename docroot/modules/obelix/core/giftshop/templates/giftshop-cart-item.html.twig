@@ -1,0 +1,23 @@
+<div class="row giftshop-cart-item">
+  <div class="col-xs-4 col-sm-3">
+    {{ image }}
+  </div>
+  <div class="col-xs-8 col-sm-9">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <h3 class="font-size-m">{{ name }}</h3>
+        <p class="font-size-xs">{{ description }}</p>
+      </div>
+      <div class="item-quantity-cont col-xs-6 col-sm-3 col-md-2 vert-offset-top-1 font-size-xs">
+        <label>{{ 'Quantity'|t }}:</label>
+        {{ quantity }}
+      </div>
+      <div class="item-price-cont col-xs-6 col-sm-3 col-md-2 vert-offset-top-1  text-right font-color-highlighted font-size-m font-bold">
+        {{ price }}&nbsp;€
+      </div>
+      <div class="col-xs-12 font-color-highlighted vert-offset-top-1 font-size-xs">
+        {{ actions }}
+      </div>
+    </div>
+  </div>
+</div>

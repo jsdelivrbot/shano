@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.editorial_content.field_campaign_teaser_subtitle
+_core:
+  default_config_hash: 455GERWcLiHJ8WlxtwKecMUnig_Fgx9da4hB_tcUbBw
+id: editorial_content.campaign_teaser.field_campaign_teaser_subtitle
+field_name: field_campaign_teaser_subtitle
+entity_type: editorial_content
+bundle: campaign_teaser
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

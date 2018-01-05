@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.slideshow
+    - field.field.editorial_content.slideshow.field_slideshow_slide
+  module:
+    - field_collection
+id: editorial_content.slideshow.default
+targetEntityType: editorial_content
+bundle: slideshow
+mode: default
+content:
+  field_slideshow_slide:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_embed
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

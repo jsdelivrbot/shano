@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.field.editorial_content.campaign_teaser.field_button_style
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_headline
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_image
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_link
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_m_image
+    - field.field.editorial_content.campaign_teaser.field_campaign_teaser_subtitle
+    - field.field.editorial_content.campaign_teaser.field_content_block_align
+id: editorial_content.campaign_teaser.default
+targetEntityType: editorial_content
+bundle: campaign_teaser
+mode: default
+content:
+  campaign_teaser:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_button_style: true
+  field_campaign_teaser_headline: true
+  field_campaign_teaser_image: true
+  field_campaign_teaser_link: true
+  field_campaign_teaser_m_image: true
+  field_campaign_teaser_subtitle: true
+  field_content_block_align: true
+  name: true
+  user_id: true

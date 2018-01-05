@@ -1,0 +1,7 @@
+name: Social share
+type: module
+description: A editorial type for social shares (Facebook, Twitter, Mail).
+core: 8.x
+package: World Vision
+dependencies:
+  - editorial

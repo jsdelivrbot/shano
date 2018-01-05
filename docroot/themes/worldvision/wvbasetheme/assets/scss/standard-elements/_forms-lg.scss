@@ -1,0 +1,14 @@
+@media screen and (min-width: $bp-lg) {
+  // =============================
+  // Forms
+  // =============================
+  .form-minimal-border {
+    // Child block
+    // =============================
+    #edit-field-child-wrapper {
+      .child-info-block-data {
+        padding-top: 35px;
+      }
+    }
+  }
+}

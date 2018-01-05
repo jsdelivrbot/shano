@@ -1,0 +1,14 @@
+uuid: 90908761-2053-4f90-8df4-218ec92163cf
+langcode: nl
+status: true
+dependencies: {  }
+name: square_xs
+label: 'Square XS'
+effects:
+  21bd32b3-6512-4f43-b5d6-4a35c5f8724f:
+    uuid: 21bd32b3-6512-4f43-b5d6-4a35c5f8724f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640

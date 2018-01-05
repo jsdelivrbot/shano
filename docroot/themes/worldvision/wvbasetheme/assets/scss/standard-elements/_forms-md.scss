@@ -1,0 +1,75 @@
+@media screen and (min-width: $bp-md) {
+  // =============================
+  // Forms
+  // =============================
+  .form-minimal-border {
+    .form-wrapper {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .form-item.form-group {
+
+        // Generally form element stylings
+        .form-control{
+          font-size: $font-size-small;
+        }
+        label {
+          font-size: $font-size-small;
+        }
+
+        // Input type-fields with label animation
+        &.form-type-date,
+        &.form-type-datelist,
+        &.form-type-datetime,
+        &.form-type-email,
+        &.form-type-number,
+        &.form-type-password,
+        &.form-type-tel,
+        &.form-type-textfield,
+        &.form-type-url,
+        &.form-type-textarea {
+          label {
+            top: 1rem;
+          }
+        }
+
+        // Checkboxes
+        &.checkbox{
+          label{
+            font-size: $font-size-small;
+          }
+        }
+      }
+    }
+
+    // Forms info bar
+    // =============================
+
+    // Admin toolbar hidden
+    .form-info-bar.navbar-fixed-top {
+      padding-top: 10.5px;
+      padding-bottom: 10.5px;
+      ul{
+        li{
+          font-size: $font-size-small;
+          // Icons
+          i{
+            font-size: 37px;
+          }
+        }
+      }
+    }
+    // Child block
+    // =============================
+    #edit-field-child-wrapper {
+      .child-info-block-data {
+        padding-top: 25px;
+      }
+    }
+    //  Yearly Donation
+    // =============================
+    //  TODO @moe specific styling (has to be moved)
+    .yearly-donation-input{
+      padding-left: 0;
+    }
+  }
+}

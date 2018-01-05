@@ -1,0 +1,9 @@
+uuid: 0af59bdf-3bc3-4117-b23d-2cecacbb0a99
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 73Y09g6cRZV79yR5N4i9oCzDC3NIlFJlGBsd9jLvlaw
+id: youtube_video
+label: 'YouTube Video'
+category: 'Standard block'

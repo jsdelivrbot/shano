@@ -1,0 +1,23 @@
+uuid: 6622c2ad-1cc1-4a80-bbd2-5b0138e696e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_giftshop
+    - forms_suite.form.giftshop
+  module:
+    - giftshop
+id: forms_message.giftshop.field_giftshop
+field_name: field_giftshop
+entity_type: forms_message
+bundle: giftshop
+label: field_giftshop
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  headline: ''
+  subline: ''
+field_type: wovi_giftshop_field

@@ -1,0 +1,72 @@
+uuid: a055c592-367d-4715-9a64-4a18e24cb6fb
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.image
+    - field.field.editorial_content.image.field_editorial_image
+    - image.style.thumbnail
+  module:
+    - styled_image
+_core:
+  default_config_hash: 4F-WIdPhKFoyGvnRumO0XMBAIyuLn9eoPpBUFVpfM_Q
+id: editorial_content.image.default
+targetEntityType: editorial_content
+bundle: image
+mode: default
+content:
+  field_editorial_image:
+    weight: 1
+    settings:
+      image_style_type: responsive_image_style
+      responsive_image_styles:
+        editorial_image_cinescope: editorial_image_cinescope
+        editorial_image_photo: editorial_image_photo
+        editorial_image_square: editorial_image_square
+        editorial_image_widescreen: editorial_image_widescreen
+        low_height: low_height
+        campaign_teaser: 0
+        campaign_teaser_mobile: 0
+        editorial_image: 0
+        hero_slider: 0
+        slideshow: 0
+        story_teaser: 0
+        teaser: 0
+        youtube_video: 0
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+      image_styles:
+        bootstrap_large: 0
+        cinemascope_21_9: 0
+        cinemascope_21_9_sm: 0
+        cinemascope_21_9_xs: 0
+        cinemascope_21_9_xs_portrait: 0
+        large: 0
+        low_height_16_4_md: 0
+        low_height_16_4_sm: 0
+        low_height_16_4_xs: 0
+        medium: 0
+        photo_4_3_md: 0
+        photo_4_3_sm: 0
+        photo_4_3_xs: 0
+        square_320x320: 0
+        square_sm: 0
+        square_xs: 0
+        thumbnail: 0
+        widescreen_16_9_md: 0
+        widescreen_16_9_sm: 0
+        widescreen_16_9_xs: 0
+    third_party_settings: {  }
+    type: styled_image_widget
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

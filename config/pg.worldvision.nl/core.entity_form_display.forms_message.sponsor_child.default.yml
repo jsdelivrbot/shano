@@ -1,0 +1,73 @@
+uuid: 3xba448c-a514-42af-961e-ffcd8acbac24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.sponsor.field_child
+    - field.field.forms_message.sponsor.field_donation_amount
+    - field.field.forms_message.sponsor.field_donation_period
+    - field.field.forms_message.sponsor.field_form_sql_export
+    - field.field.forms_message.sponsor.field_payment_method
+    - field.field.forms_message.sponsor.field_user_data
+    - forms_suite.form.sponsor_child
+  module:
+    - child_sponsorship
+    - forms_suite
+    - fs_payment
+id: forms_message.sponsor_child.default
+targetEntityType: forms_message
+bundle: sponsor_child
+mode: default
+content:
+  field_child:
+    type: wovi_child_widget
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_amount:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_donation_period:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_period_widget
+    region: content
+  field_form_sql_export:
+    weight: 5
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_payment_method:
+    type: wovi_payment_method_widget
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_user_data:
+    type: wovi_user_data_widget
+    weight: 1
+    settings:
+      hide_first_name: true
+      hide_title: true
+      postal_max_length: '6'
+      hide_initials: false
+      hide_middle_name: false
+      hide_country: false
+      hide_birthday: false
+      optional_bic: false
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

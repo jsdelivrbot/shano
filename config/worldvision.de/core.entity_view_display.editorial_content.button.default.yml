@@ -1,0 +1,30 @@
+uuid: 5d70c76f-4da0-4442-b6c1-ab2b03b5f150
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.field.editorial_content.button.field_button_style
+    - field.field.editorial_content.button.field_link
+    - field.field.editorial_content.button.field_link_target
+    - field.field.editorial_content.button.field_text_align
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: dUvsGHiOfShv5WVQxWFyJlle0-22pbprzci37XvqSj0
+id: editorial_content.button.default
+targetEntityType: editorial_content
+bundle: button
+mode: default
+content:
+  button:
+    weight: 100
+    region: content
+hidden:
+  field_button_style: true
+  field_link: true
+  field_link_target: true
+  field_text_align: true
+  name: true
+  user_id: true

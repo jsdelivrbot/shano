@@ -1,0 +1,46 @@
+uuid: 581f3209-03c7-40a2-b991-f9c720f5a005
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.job_offer.field_job_description
+    - field.field.node.job_offer.field_job_source_url
+    - node.type.job_offer
+  module:
+    - link
+id: node.job_offer.default
+targetEntityType: node
+bundle: job_offer
+mode: default
+content:
+  field_job_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_source_url:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

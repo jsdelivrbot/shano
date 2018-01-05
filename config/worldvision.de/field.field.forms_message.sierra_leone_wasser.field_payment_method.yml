@@ -1,0 +1,25 @@
+uuid: 446c243a-2f4d-41b4-93d6-0af66878f5a6
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.sierra_leone_wasser
+  module:
+    - fs_payment
+id: forms_message.sierra_leone_wasser.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: sierra_leone_wasser
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Zahlungsart wählen'
+    subline: ''
+    external_payment: 1
+field_type: wovi_payment_method_field

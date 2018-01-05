@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.storage.editorial_content.field_link_target
+  module:
+    - options
+id: editorial_content.button.field_link_target
+field_name: field_link_target
+entity_type: editorial_content
+bundle: button
+label: 'Link target'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: _self
+default_value_callback: ''
+settings: {  }
+field_type: list_string

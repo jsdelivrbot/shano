@@ -1,0 +1,22 @@
+uuid: 37ebaa4f-4f5f-40be-ba8a-e54aa05211ca
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.spende_eiswinter
+  module:
+    - forms_suite
+id: forms_message.spende_eiswinter.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: spende_eiswinter
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

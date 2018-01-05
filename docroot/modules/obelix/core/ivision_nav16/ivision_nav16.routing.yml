@@ -1,0 +1,10 @@
+ivision_nav16.config_form:
+  path: '/admin/config/services/ivision_nav16/config'
+  defaults:
+    _form: '\Drupal\ivision_nav16\Form\ConfigForm'
+    _title: 'iVision NAV 16 Config'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

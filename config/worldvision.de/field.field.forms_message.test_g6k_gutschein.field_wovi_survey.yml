@@ -1,0 +1,26 @@
+uuid: 15fd1d64-6159-44f2-988d-a224a2828203
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_wovi_survey
+    - forms_suite.form.test_g6k_gutschein
+  module:
+    - forms_survey
+id: forms_message.test_g6k_gutschein.field_wovi_survey
+field_name: field_wovi_survey
+entity_type: forms_message
+bundle: test_g6k_gutschein
+label: 'wovi survey'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    survey: '0'
+    alternative: ''
+default_value_callback: ''
+settings:
+  headline: 'TEST wovi'
+  subline: ''
+field_type: wovi_survey_field

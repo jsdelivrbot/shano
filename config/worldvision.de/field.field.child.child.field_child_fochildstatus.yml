@@ -1,0 +1,20 @@
+uuid: 0e589adf-0a94-42a9-9afd-221009ae4292
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_fochildstatus
+  module:
+    - child
+id: child.child.field_child_fochildstatus
+field_name: field_child_fochildstatus
+entity_type: child
+bundle: child
+label: child_fochildstatus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

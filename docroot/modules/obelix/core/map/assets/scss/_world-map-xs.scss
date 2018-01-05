@@ -1,0 +1,148 @@
+.world-map {
+  position: relative;
+  padding: 0;
+
+  .border-top {
+    border-top: 1px solid $color-highlight-bg;
+  }
+
+  .border-left {
+    border-left: 1px solid $color-highlight-bg;
+  }
+
+  .hover-info-block {
+    pointer-events: none;
+    //height: 94px;
+    //margin-left: -15px;
+    //margin-right: -15px;
+    position: absolute;
+    width: 100%;
+    bottom: 69px;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+
+    .hover-infos {
+      display: none;
+      font-size: 10px;
+      padding-top: 10px;
+
+      .countryInfo {
+        text-align: center;
+        min-height: 42px;
+
+        &.wrapped-baby-block {
+          padding-top: 5px;
+        }
+
+        &.backpack-block {
+          padding-top: 5px;
+        }
+
+        &.first-aid-kit-block {
+          padding-top: 11px;
+        }
+
+        i {
+          font-size: 34px;
+          //margin-right: 5px;
+
+          &.icon-elder {
+            font-size: 40px;
+          }
+
+          &.icon-first-aid-kit {
+            font-size: 28px;
+          }
+        }
+
+        h3 {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .mobile-overlay-button {
+    width: 100%;
+    z-index: 100;
+    display: none;
+    padding: 19px 11px;
+    background-color: $color-highlight;
+    color: $color-standard-bg;
+    font-size: 22px;
+    position: absolute;
+
+    .icon-arrow-down {
+      float: right;
+      transition: 1.5s;
+
+      &.rotateDown {
+        -webkit-transform: rotateX(0deg);
+      }
+      &.rotateUp {
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+  }
+
+  .country-overlay {
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    -moz-box-shadow: -3px -18px 60px 2px #ccc;
+    -webkit-box-shadow: -3px -18px 60px 2px #ccc;
+    box-shadow: -3px -18px 60px 2px #ccc;
+
+    .float-left {
+      float: left;
+    }
+
+    .float-right {
+      float: right;
+    }
+
+    .dark-text {
+      color: $color-standard-txt;
+    }
+
+    .colored-text {
+      color: $color-highlight-secondary;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .overlay-wrapper {
+
+      .overlay-block {
+        position: relative;
+        padding: 20px;
+
+        .partial-border-left {
+          border-left: 1px solid $color-highlight-bg;
+          position: absolute;
+          top: 35px;
+          left: -5px;
+          height: 70px;
+        }
+      }
+
+      .overlay-two-column-block {
+        min-height: 130px;
+        min-width: 305px;
+      }
+    }
+
+  }
+
+  .active-country, .open-country {
+    display: block;
+  }
+}
+
+footer {
+  display: none !important;
+}

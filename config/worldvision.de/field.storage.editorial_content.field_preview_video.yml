@@ -1,0 +1,19 @@
+uuid: 1c9d6ba8-3b67-4cdc-b5c5-45309d1146be
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - link
+id: editorial_content.field_preview_video
+field_name: field_preview_video
+entity_type: editorial_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

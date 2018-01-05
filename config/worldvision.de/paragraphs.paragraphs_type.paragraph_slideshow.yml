@@ -1,0 +1,9 @@
+uuid: ea126e7d-c5b2-4dd5-8f41-3bdc3b32d69c
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xY3f-wgpHCufJlxv7Bj-CB2IUEWBPbsjH_Z2crE1OBo
+id: paragraph_slideshow
+label: Slideshow
+behavior_plugins: {  }

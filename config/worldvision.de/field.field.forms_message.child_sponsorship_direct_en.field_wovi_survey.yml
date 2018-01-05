@@ -1,0 +1,26 @@
+uuid: f468520f-188d-4f16-ab24-f021ee089a50
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_wovi_survey
+    - forms_suite.form.child_sponsorship_direct_en
+  module:
+    - forms_survey
+id: forms_message.child_sponsorship_direct_en.field_wovi_survey
+field_name: field_wovi_survey
+entity_type: forms_message
+bundle: child_sponsorship_direct_en
+label: 'wovi survey'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    survey: '0'
+    alternative: ''
+default_value_callback: ''
+settings:
+  headline: 'How did you find out about us?'
+  subline: ''
+field_type: wovi_survey_field

@@ -1,0 +1,20 @@
+uuid: b19ddf1f-d2cc-4e9e-8bb3-5181e1b55e21
+langcode: en
+status: true
+dependencies:
+  module:
+    - child
+    - text
+id: child.field_child_childtext2
+field_name: field_child_childtext2
+entity_type: child
+type: text
+settings:
+  max_length: 10240
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

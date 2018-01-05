@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.editorial_page.field_autoteaser_button_label
+    - field.field.node.editorial_page.field_autoteaser_description
+    - field.field.node.editorial_page.field_autoteaser_image
+    - field.field.node.editorial_page.field_autoteaser_tags
+    - field.field.node.editorial_page.field_autoteaser_title
+    - field.field.node.editorial_page.field_editorial_body
+    - field.field.node.editorial_page.field_metatags
+    - image.style.thumbnail
+    - node.type.editorial_page
+  module:
+    - editorialfield
+    - image
+    - metatag
+    - path
+id: node.editorial_page.default
+targetEntityType: node
+bundle: editorial_page
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  field_autoteaser_button_label:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_autoteaser_description:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_autoteaser_image:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_autoteaser_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_editorial_body:
+    type: editorial_widget
+    weight: 1
+    settings:
+      layouts: {  }
+      entities: {  }
+    third_party_settings: {  }
+  field_metatags:
+    type: metatag_firehose
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_autoteaser_tags: true

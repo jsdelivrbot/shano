@@ -1,0 +1,21 @@
+uuid: 9b1bddb4-8b0c-401a-9c37-91b4bf71d259
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autoteaser_title
+    - node.type.news_article
+_core:
+  default_config_hash: vieVZwB0cxKnpUlNLzXxe__iugVrLw78N76gzqDYBvY
+id: node.news_article.field_autoteaser_title
+field_name: field_autoteaser_title
+entity_type: node
+bundle: news_article
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+uuid: 7d99607b-366c-4767-a56c-34005a8013d9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.dein_lauf_fuer_trinkwasser_gastg
+  module:
+    - forms_suite
+id: forms_message.dein_lauf_fuer_trinkwasser_gastg.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: dein_lauf_fuer_trinkwasser_gastg
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Deine Angaben'
+    subline: ''
+field_type: wovi_user_data_field

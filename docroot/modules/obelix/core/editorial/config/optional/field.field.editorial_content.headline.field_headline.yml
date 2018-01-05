@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.headline
+    - field.storage.editorial_content.field_headline
+id: editorial_content.headline.field_headline
+field_name: field_headline
+entity_type: editorial_content
+bundle: headline
+label: Headline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

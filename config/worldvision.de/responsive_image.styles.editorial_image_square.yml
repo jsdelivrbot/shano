@@ -1,0 +1,24 @@
+uuid: 162cf383-281b-49ed-822a-bc1b042ed95f
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.square_sm
+    - image.style.square_xs
+  theme:
+    - bootstrap
+id: editorial_image_square
+label: Square
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: square_sm
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: square_xs
+breakpoint_group: bootstrap
+fallback_image_style: square_xs

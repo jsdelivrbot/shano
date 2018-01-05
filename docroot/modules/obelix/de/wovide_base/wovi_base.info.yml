@@ -1,0 +1,5 @@
+name: World Vision - Base logic
+type: module
+description: All german related development.
+core: 8.x
+package: Obelix (DE)

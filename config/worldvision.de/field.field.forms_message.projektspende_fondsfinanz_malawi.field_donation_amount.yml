@@ -1,0 +1,27 @@
+uuid: bde6980b-e58a-4d23-884c-c5ff8f31559c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.projektspende_fondsfinanz_malawi
+  module:
+    - fs_payment
+id: forms_message.projektspende_fondsfinanz_malawi.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: projektspende_fondsfinanz_malawi
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '15'
+    default_amount: '25'
+field_type: wovi_donation_amount_field

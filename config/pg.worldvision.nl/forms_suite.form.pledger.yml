@@ -1,0 +1,30 @@
+uuid: c26197a4-d31e-4018-9e4f-89f819614cba
+langcode: en
+status: true
+dependencies: {  }
+id: pledger
+label: Pledger
+recipients: ''
+reply: ''
+weight: 0
+template_email: '0'
+template_thank_you: thankyou_default
+incident: ''
+subject: ''
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p class=\"text-align-center\">Geweldig dat u betrokken bent bij het werk van World Vision door donateur te worden.<br />\r\nWe hebben uw gegevens ontvangen en zullen zo snel mogelijk contact met u opnemen.</p>\r\n\r\n<p class=\"text-align-center\">Bedankt voor uw betrokkenheid.</p>\r\n"
+  format: html
+thank_you_headline: 'Hartelijk bedankt!'
+designation_id: '12'
+motivation_code: '21'
+additional_tracking: ''
+alias: /forms/pledger
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: ''

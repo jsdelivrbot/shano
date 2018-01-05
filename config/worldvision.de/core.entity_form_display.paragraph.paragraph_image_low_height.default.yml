@@ -1,0 +1,31 @@
+uuid: f007fcb4-5f79-4bab-b3dc-8b2ebd2fb251
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_image_low_height.field_paragraph_image_low_height
+    - field.field.paragraph.paragraph_image_low_height.field_paragraph_image_low_high
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_image_low_height
+  module:
+    - image
+_core:
+  default_config_hash: zHAn4sZTYYPd5FBPEGgAkICwT_AOHELhJtrA0rlNJGU
+id: paragraph.paragraph_image_low_height.default
+targetEntityType: paragraph
+bundle: paragraph_image_low_height
+mode: default
+content:
+  field_paragraph_image_low_height:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  field_paragraph_image_low_high: true
+  status: true
+  uid: true

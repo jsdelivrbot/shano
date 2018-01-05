@@ -1,0 +1,20 @@
+uuid: f0a70a92-367c-4814-bc69-a74702d76d1c
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - group
+id: group.field_campaign_teaser
+field_name: field_campaign_teaser
+entity_type: group
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

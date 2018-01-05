@@ -1,0 +1,21 @@
+uuid: cd9220c6-d8ab-4f03-acad-59656a09d143
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+_core:
+  default_config_hash: UYQVE-Fmv78K83LnJ7G3_cmdsP91qjtONbr1d1IiMVQ
+id: editorial_content.field_video_subtitle
+field_name: field_video_subtitle
+entity_type: editorial_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

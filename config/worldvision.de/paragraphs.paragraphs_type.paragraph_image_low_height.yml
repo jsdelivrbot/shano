@@ -1,0 +1,9 @@
+uuid: 53a9951c-639e-4eda-9dd0-cc98020eb328
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: qXrIzDskkV_cr7MEsL-WCyazgHS6ny1FR9MRkOIq330
+id: paragraph_image_low_height
+label: 'Image Low Height'
+behavior_plugins: {  }

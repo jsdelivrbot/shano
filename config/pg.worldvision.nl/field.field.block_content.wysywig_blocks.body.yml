@@ -1,0 +1,22 @@
+uuid: 1e30f7fe-b03c-4c32-b9b5-7680f6707616
+langcode: nl
+status: true
+dependencies:
+  config:
+    - block_content.type.wysywig_blocks
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.wysywig_blocks.body
+field_name: body
+entity_type: block_content
+bundle: wysywig_blocks
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

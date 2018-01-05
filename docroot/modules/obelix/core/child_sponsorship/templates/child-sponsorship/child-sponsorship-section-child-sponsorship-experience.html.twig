@@ -1,0 +1,160 @@
+<div class="position-container editorial-page vert-offset-top-1 vert-offset-sm-top-2 vert-offset-md-top-3">
+  {# My Worldvision Video #}
+  <div class="container vert-offset-top-1 vert-offset-sm-top-2 vert-offset-md-top-3">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="img-content">
+          <div class="item-1 editorial--content editorial-youtube-video" id="editorial-youtube-video-1">
+            <div{{ content_attributes.addClass('embed-responsive', 'embed-responsive-16by9') }}>
+              <div id="yt-container-{{ id }}"
+                   class="yt-container embed-responsive-item"
+                   data-entity-id="{{ id }}"
+                   data-yt-id="{{ youtube_id }}"></div>
+              <button class="btn-icon btn-close yt-close"><i class="icon-cross"></i></button>
+            </div>
+            <div class="yt-preview">
+              <div class="yt-preview-img">
+                <picture>
+                  <source media="(max-width: 767px)"
+                          srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-video-xs.jpg">
+                  <source media="(min-width: 768px) and (max-width: 991px)"
+                          srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-video-sm.jpg">
+                  <source media="(min-width: 992px)"
+                          srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-video-md.jpg">
+                  <!---Fallback--->
+                  <img class="img-responsive img-fullsize"
+                       src="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-video-sm.jpg"
+                       srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-video-sm.jpg"
+                       alt="">
+                </picture>
+
+
+                <button class="btn-icon yt-play v-h-align-center-abs"><i class="icon-play"></i></button>
+              </div>
+              <div class="yt-preview-txt">
+                <h3 class="font-size-l">My sponsor experience</h3>
+                <p class="font-size-xs">My World Vision - Sponsorship up close and personal.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {# Godparents quotes #}
+  <div
+    class="vert-offset-top-2 vert-offset-bottom-2 vert-offset-sm-top-3 vert-offset-sm-bottom-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 text-center">
+          <h3 class="font-size-xs text-color-neutral">Statements from our sponsors</h3>
+          <h2 class="font-size-xl">„Every letter from my sponsored child brings a smile to my face“</h2>
+        </div>
+        {# Godparent 01 #}
+        <div class="col-xs-12 col-sm-6 vert-offset-bottom-1 vert-offset-top-1">
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 col-md-offset-0 vert-offset-md-top-1">
+              <picture>
+                <source media="(max-width: 767px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-uwe-dahlhaus-xs.png">
+                <source media="(min-width: 768px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-uwe-dahlhaus-sm.png">
+                <!---Fallback--->
+                <img class="img-responsive img-fullsize"
+                     src="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-uwe-dahlhaus-sm.png"
+                     srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-uwe-dahlhaus-sm.png"
+                     alt="Uwe Dahlhaus">
+              </picture>
+            </div>
+            <div class="col-xs-12 col-md-8 vert-offset-top-1">
+              <p class="font-size-xs">„I am a sponsor because I am able to contribute a little towards a fairer world.
+                Especially important to me is that World Vision utilises my money with lasting effects.“
+              </p>
+              <p class="font-size-xs"><strong>Uwe Dahlhaus</strong>, sponsor since 2013</p>
+            </div>
+          </div>
+        </div>
+
+        {# Godparent 02 #}
+        <div class="col-xs-12 col-sm-6 vert-offset-bottom-1 vert-offset-top-1">
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 col-md-offset-0 vert-offset-md-top-1">
+              <picture>
+                <source media="(max-width: 767px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-vanessa-gloehde-xs.png">
+                <source media="(min-width: 768px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-vanessa-gloehde-sm.png">
+                <!---Fallback--->
+                <img class="img-responsive img-fullsize"
+                     src="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-vanessa-gloehde-sm.png"
+                     srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-vanessa-gloehde-sm.png"
+                     alt="Uwe Dahlhaus">
+              </picture>
+            </div>
+            <div class="col-xs-12 col-md-8 vert-offset-top-1">
+              <p class="font-size-xs">„I share in my sponsored child's life and her culture and learn a lot. The contact
+                between us is very warm.“
+              </p>
+              <p class="font-size-xs"><strong>Vanessa Glöhde</strong>, sponsor since 2011</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        {# Godparent 03 #}
+        <div class="col-xs-12 col-sm-6 vert-offset-bottom-1 vert-offset-top-1">
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 col-md-offset-0 vert-offset-md-top-1">
+              <picture>
+                <source media="(max-width: 767px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-sky-du-mont-xs.png">
+                <source media="(min-width: 768px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-sky-du-mont-sm.png">
+                <!---Fallback--->
+                <img class="img-responsive img-fullsize"
+                     src="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-sky-du-mont-sm.png"
+                     srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-sky-du-mont-sm.png"
+                     alt="Uwe Dahlhaus">
+              </picture>
+            </div>
+            <div class="col-xs-12 col-md-8 vert-offset-top-1">
+              <p class="font-size-xs">„A few years ago I became the sponsor of a girl in Mauritania. I am glad that she
+                can go to school, has enough food, and receives medical care. Visiting the project was an overwhelming
+                experience I shall never forget.“
+              </p>
+              <p class="font-size-xs"><strong>Sky du Mont</strong>, actor, sponsor since 2002</p>
+            </div>
+          </div>
+        </div>
+
+        {# Godparent 04 #}
+        <div class="col-xs-12 col-sm-6 vert-offset-bottom-1 vert-offset-top-1">
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 col-md-offset-0 vert-offset-md-top-1">
+              <picture>
+                <source media="(max-width: 767px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-janine-kunze-xs.png">
+                <source media="(min-width: 768px)"
+                        srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-janine-kunze-sm.png">
+                <!---Fallback--->
+                <img class="img-responsive img-fullsize"
+                     src="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-janine-kunze-sm.png"
+                     srcset="{{ base_path ~ module_path }}/assets/child-sponsorship-info/img/sponsorship-experience-janine-kunze-sm.png"
+                     alt="Uwe Dahlhaus">
+              </picture>
+            </div>
+            <div class="col-xs-12 col-md-8 vert-offset-top-1">
+              <p class="font-size-xs">„My sponsored child Junisa lives in Sierra Leone. I am very pleased with the
+                regular exchange of letters between my kids and Junisa. As a mother it is nice to see that my own kids
+                understand that others need our help.“</p>
+              <p class="font-size-xs"><strong>Janine Kunze</strong>, sponsor since 2009
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

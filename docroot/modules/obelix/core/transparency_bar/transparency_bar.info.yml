@@ -1,0 +1,7 @@
+name: Transparency bar
+type: module
+description: Includes transparency bars about World Visions corporate transparency.
+core: 8.x
+package: Obelix (Core)
+dependencies:
+  - editorial

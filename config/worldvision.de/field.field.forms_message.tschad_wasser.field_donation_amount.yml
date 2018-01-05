@@ -1,0 +1,27 @@
+uuid: d6f07842-0533-4c87-ac5b-3aaeed2acd0f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.tschad_wasser
+  module:
+    - fs_payment
+id: forms_message.tschad_wasser.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: tschad_wasser
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

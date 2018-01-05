@@ -1,0 +1,21 @@
+{% if content.left or content.main or content.right %}
+  <div{{ attributes }}>
+    <div{{ row_attributes }}>
+      {% if content.left %}
+        <div{{ left_attributes }}>
+          {{ content.left }}
+        </div>
+      {% endif %}
+      {% if content.main %}
+        <div{{ main_attributes }}>
+          {{ content.main }}
+        </div>
+      {% endif %}
+      {% if content.right %}
+        <div{{ right_attributes }}>
+          {{ content.right }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

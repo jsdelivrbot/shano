@@ -1,0 +1,35 @@
+uuid: 704a05f1-d571-4230-a462-90677f36b439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.testform.field_donation_amount
+    - field.field.forms_message.testform.field_user_data
+    - forms_suite.form.testform
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.testform.default
+targetEntityType: forms_message
+bundle: testform
+mode: default
+content:
+  field_donation_amount:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_donation_amount_widget
+    region: content
+  field_user_data:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_user_data_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

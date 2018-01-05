@@ -1,0 +1,56 @@
+{#
+/**
+ * @file autoreply-donation.html.twig
+ * This template is used as email auto replys.
+ *
+ * Available variables:
+ * - message: the message entity
+ *
+ * @see template_preprocess_child()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Submitted data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h2>Submitted data:</h2>
+    {% for key, value in message.params.values %}
+
+        <strong>{{ key }}</strong>
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th width="20%">Key</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item_key, item_value in value %}
+
+                <tr>
+                    <td>
+                        {{ item_key }}
+                    </td>
+                    <td>
+                        {{ item_value }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+</div>
+</body>
+</html>

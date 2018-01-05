@@ -1,0 +1,22 @@
+uuid: 17d711f5-50ae-46fe-b8b3-5180fbdfa1b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.testform
+  module:
+    - forms_suite
+id: forms_message.testform.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: testform
+label: 'User data'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

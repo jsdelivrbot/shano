@@ -1,0 +1,21 @@
+uuid: 7182c1a7-b165-4eec-a651-bc8d096760d3
+langcode: nl
+status: true
+dependencies:
+  module:
+    - affiliate
+_core:
+  default_config_hash: 63UkjdWt5fBsrnHVoVZzX9TpxiDAIl8RHzwszQjSkX8
+id: affiliate.field_extra_codes
+field_name: field_extra_codes
+entity_type: affiliate
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

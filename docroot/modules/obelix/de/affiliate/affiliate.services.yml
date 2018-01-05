@@ -1,0 +1,8 @@
+services:
+  affiliate_session_manager:
+    class: Drupal\affiliate\AffiliateSessionManager
+    arguments: ['@event_dispatcher']
+  affiliate.event_subscriber:
+    class: Drupal\affiliate\AffiliateEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }

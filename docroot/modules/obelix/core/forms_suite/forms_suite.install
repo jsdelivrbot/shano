@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Install & update logic.
+ */
+
+/**
+ * Adds 'designation code' and 'additional tracking' base fields to Message entity
+ */
+function forms_suite_update_8101() {
+  $designation_code_storage_definition = \Drupal\Core\Field\BaseFieldDefinition::create('integer')
+    ->setLabel(t('Designation code'))
+    ->setDescription(t('designation code of the form submit.'));
+
+  $additional_tracking_storage_definition = \Drupal\Core\Field\BaseFieldDefinition::create('text')
+    ->setLabel(t('additional tracking'))
+    ->setDescription(t('Additional tracking of the form submit.'));
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('designation_code', 'forms_message', 'forms_message', $designation_code_storage_definition);
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition('additional_tracking', 'forms_message', 'forms_message', $additional_tracking_storage_definition);
+}
+
+/**
+ * Enable tools module for field schema update.
+ */
+function forms_suite_update_8102() {
+  \Drupal::service('module_installer')->install(['wv_tools']);
+}
+
+/**
+ * Add new columns to field_user_data.
+ */
+function forms_suite_update_8103() {
+  wv_tools_update_field_type_schema('wovi_user_data_field');
+}

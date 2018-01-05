@@ -1,0 +1,110 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.public_donor_project.field_pdp_country
+    - field.field.node.public_donor_project.field_pdp_description
+    - field.field.node.public_donor_project.field_pdp_founded_by
+    - field.field.node.public_donor_project.field_pdp_from
+    - field.field.node.public_donor_project.field_pdp_header_image
+    - field.field.node.public_donor_project.field_pdp_headline
+    - field.field.node.public_donor_project.field_pdp_location
+    - field.field.node.public_donor_project.field_pdp_project_type
+    - field.field.node.public_donor_project.field_pdp_second_description
+    - field.field.node.public_donor_project.field_pdp_to
+    - field.field.node.public_donor_project.field_pdp_volume
+    - node.type.public_donor_project
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.public_donor_project.default
+targetEntityType: node
+bundle: public_donor_project
+mode: default
+content:
+  field_pdp_country:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_pdp_description:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_pdp_founded_by:
+    weight: 9
+    label: above
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_pdp_from:
+    weight: 3
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: year_and_month
+    third_party_settings: {  }
+    type: datetime_default
+  field_pdp_header_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_pdp_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_pdp_location:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_pdp_project_type:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_pdp_second_description:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_pdp_to:
+    weight: 4
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: year_and_month
+    third_party_settings: {  }
+    type: datetime_default
+  field_pdp_volume:
+    weight: 8
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+hidden:
+  langcode: true
+  links: true

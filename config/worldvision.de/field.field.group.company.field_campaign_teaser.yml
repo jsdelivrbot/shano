@@ -1,0 +1,28 @@
+uuid: 862fe977-f73f-463f-bba3-4b06b3eb0c95
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.campaign_teaser
+    - field.storage.group.field_campaign_teaser
+    - group.type.company
+id: group.company.field_campaign_teaser
+field_name: field_campaign_teaser
+entity_type: group
+bundle: company
+label: 'Campaign Teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      campaign_teaser: campaign_teaser
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

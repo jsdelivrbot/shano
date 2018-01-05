@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content editor'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access contextual links'
+  - 'administer editorial_content entities'
+  - 'use text format html'
+  - 'access content overview'
+  - 'administer nodes'
+  - 'create editorial_page content'
+  - 'delete own editorial_page content'
+  - 'edit own editorial_page content'
+  - 'search content'
+  - 'access administration pages'
+  - 'view the administration theme'
+  - 'access toolbar'
+  - 'administer menu'
+  - 'access content'
+  - 'delete any editorial_page content'
+  - 'edit any editorial_page content'
+  - 'view any unpublished editorial_page content'
+  - 'access metatag field basic__description'
+  - 'access metatag field basic__keywords'
+  - 'access metatag field basic__title'
+  - 'access metatag tag basic__description'
+  - 'access metatag tag basic__keywords'
+  - 'access metatag tag basic__title'

@@ -1,0 +1,101 @@
+uuid: dc79ab73-64cd-450c-bef8-7646f2ec0b35
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.button
+    - field.field.editorial_content.button.field_button_style
+    - field.field.editorial_content.button.field_link
+    - field.field.editorial_content.button.field_link_target
+    - field.field.editorial_content.button.field_text_align
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      parent_name: ''
+      weight: 1
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        label: Tabs
+        direction: vertical
+        id: ''
+        classes: ''
+    group_content:
+      children:
+        - field_link
+      parent_name: group_tabs
+      weight: 3
+      label: Content
+      format_type: tab
+      format_settings:
+        label: Content
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+    group_settings:
+      children:
+        - field_link_target
+        - field_button_style
+        - field_text_align
+      parent_name: group_tabs
+      weight: 4
+      label: Serttings
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+_core:
+  default_config_hash: hoGELHjuxSucpfSs4W6d12pGdxC2oSZ5mZ9VUBkSAuM
+id: editorial_content.button.default
+targetEntityType: editorial_content
+bundle: button
+mode: default
+content:
+  field_button_style:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_link_target:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_align:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

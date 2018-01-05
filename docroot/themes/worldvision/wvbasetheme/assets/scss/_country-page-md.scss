@@ -1,0 +1,34 @@
+@media screen and (min-width: $bp-md) {
+  .country-page-section--header {
+    > .content {
+      .label {
+        font-size: 16px;
+      }
+      ul {
+        li {
+          min-height: 125px;
+        }
+      }
+    }
+  }
+  .country-page-section--emphases {
+    ul {
+      li:nth-child(3) {
+        clear: none;
+      }
+    }
+  }
+  .country-page-section--success-bar {
+    ul {
+      div:nth-child(3) {
+        clear: none;
+      }
+    }
+  }
+  .country-page-section--his {
+    h2{
+      font-size: $font-size-xxxx-large;
+    }
+  }
+}
+

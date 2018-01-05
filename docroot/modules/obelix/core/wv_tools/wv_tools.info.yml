@@ -1,0 +1,5 @@
+name: WV Tools
+type: module
+description: Provides common tools for all multi sites.
+core: 8.x
+package: Obelix (Core)

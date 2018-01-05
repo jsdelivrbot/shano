@@ -1,0 +1,22 @@
+uuid: bba213ce-8a7a-460f-a604-0ff4f738735d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_status
+  module:
+    - child
+_core:
+  default_config_hash: x2A5y-tEExp0VvkkB3kRFZToFoxohpQRyYwprsrxLx0
+id: child.child.field_child_status
+field_name: field_child_status
+entity_type: child
+bundle: child
+label: status
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

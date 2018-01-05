@@ -1,0 +1,61 @@
+// =============================
+// Editorial content generally stylings
+// =============================
+
+.editorial--content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &.txt-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &.no-padding-bottom {
+    padding-bottom: 0;
+  }
+}
+.container,
+.container-fluid{
+  &.no-padding-bottom {
+    padding-bottom: 0!important;
+  }
+}
+
+// Less spacing (tiles)
+// =============================
+// Container
+.editorial-page {
+  .editorial-section > .container,
+  .editorial-section > .container-fluid {
+
+    &.has--editorial-content--story-teaser,
+    &.has--editorial-content--automatic-teaser {
+      .editorial--content {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+      }
+    }
+    &.first {
+      &.has--editorial-content--story-teaser,
+      &.has--editorial-content--automatic-teaser {
+
+        &.first {
+          padding-top: 0;
+          .img-content.first {
+            padding-top: 0;
+          }
+        }
+      }
+      .img-content.first {
+        padding-top: 0;
+      }
+    }
+  //  Extra Container-Padding setting
+    &.container-padding-bottom{
+      padding-bottom: 30px;
+      // @TODO AUF DAS LETZTE ELEMENT IN DER ROW BEZIEHEN! TU ES!
+      //.editorial-content{
+      //  padding-bottom: 0;
+      //}
+    }
+  }
+}

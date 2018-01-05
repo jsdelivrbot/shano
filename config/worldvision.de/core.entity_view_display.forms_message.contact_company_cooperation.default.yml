@@ -1,0 +1,51 @@
+uuid: ec889049-a3d5-49d9-9fe0-d22c65f0e7c0
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.contact_company_cooperation.field_company_cooperation
+    - field.field.forms_message.contact_company_cooperation.field_message
+    - field.field.forms_message.contact_company_cooperation.field_newsletter
+    - field.field.forms_message.contact_company_cooperation.field_user_data
+    - forms_suite.form.contact_company_cooperation
+  module:
+    - forms_suite
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: fFHhpQyhYta08_SHLCHdukXvazCSjISsoe2iPJhrpSs
+id: forms_message.contact_company_cooperation.default
+targetEntityType: forms_message
+bundle: contact_company_cooperation
+mode: default
+content:
+  field_company_cooperation:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_message:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_user_data:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+hidden: {  }

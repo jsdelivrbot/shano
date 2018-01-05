@@ -1,0 +1,24 @@
+uuid: f3892ae7-8b3a-4b28-a74a-c31284dc625c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user
+    - forms_suite.form.test_sponsorship_en
+  module:
+    - forms_suite
+id: forms_message.test_sponsorship_en.field_user
+field_name: field_user
+entity_type: forms_message
+bundle: test_sponsorship_en
+label: 'user data email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_user_data_email_field

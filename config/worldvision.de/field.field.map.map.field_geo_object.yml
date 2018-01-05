@@ -1,0 +1,29 @@
+uuid: 4f5651a2-81c3-4abf-bc4e-ea790fa14446
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.map.field_geo_object
+  module:
+    - map
+_core:
+  default_config_hash: KaXi_kNQT7zvsASrqQHC5z5m6oqyFDDoAabgXN04cVk
+id: map.map.field_geo_object
+field_name: field_geo_object
+entity_type: map
+bundle: map
+label: 'geo object'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:geo_object'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: true
+field_type: entity_reference

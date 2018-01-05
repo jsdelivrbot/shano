@@ -1,0 +1,13 @@
+langcode: de
+status: true
+dependencies: {  }
+name: middle_height_3_1_sm
+label: 'Middle height (3:1) SM'
+effects:
+  f9bb3450-9e18-4beb-a4d8-77b85a04ef02:
+    uuid: f9bb3450-9e18-4beb-a4d8-77b85a04ef02
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 466

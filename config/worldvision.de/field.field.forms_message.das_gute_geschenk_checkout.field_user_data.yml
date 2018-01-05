@@ -1,0 +1,24 @@
+uuid: 2998bc32-935f-4b58-98a9-0acb7c23b450
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.das_gute_geschenk_checkout
+  module:
+    - forms_suite
+id: forms_message.das_gute_geschenk_checkout.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: das_gute_geschenk_checkout
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

@@ -1,0 +1,48 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Child sponsorship child select
+  // =============================
+  .editorial-child-sponsorship-child-select {
+    // TODO Set base URL
+    background-image: url("../img/child-select-bg-sm.jpg");
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .child-img {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 0;
+    }
+    .child-infos {
+      padding-top: 15px;
+    }
+    h2 {
+      line-height: 28px;
+    }
+    ul {
+      li {
+        font-size: 11px;
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 25px;
+        &:first-child {
+          border-right: 1px solid $color-standard-bg;
+        }
+        &:last-child {
+          border-left: 1px solid $color-standard-bg;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  #child-sponsorship-child-finder-country-form,
+  #child-sponsorship-child-finder-birthday-form {
+    .form-wrapper {
+      padding-top: 15px;
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+uuid: e0c6c356-fc6c-4377-809a-a353bbaa2707
+langcode: nl
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - beaufix
+_core:
+  default_config_hash: yruAxrrluBG6agGW1cTQto6MhRrgV7WdNyGCHEz7lkQ
+id: footernavigation
+theme: beaufix
+region: top_navigation
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

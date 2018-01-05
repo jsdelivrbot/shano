@@ -1,0 +1,8 @@
+uuid: null
+langcode: nl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2KFKN3jdR8aHw0cxQPHFciTSp75kjazVbmhkFCzKadU
+id: field_donation_example
+label: field_donation_example

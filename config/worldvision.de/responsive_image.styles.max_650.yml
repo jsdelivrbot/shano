@@ -1,0 +1,23 @@
+uuid: 83ccbf69-6ec2-495d-8416-b469f49492f2
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.max_650x650
+  theme:
+    - bootstrap
+id: max_650
+label: 'Max 650'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: max_650x650
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: max_650x650
+breakpoint_group: bootstrap
+fallback_image_style: max_650x650

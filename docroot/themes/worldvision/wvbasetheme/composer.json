@@ -1,0 +1,8 @@
+{
+    "name": "world-vision/wvbasetheme",
+    "description": "Wvbasetheme is a Bootstrap 3 based theme for World Vision multilangual websites.",
+    "type": "drupal-theme",
+    "require": {
+        "drupal/bootstrap": "^3.4"
+    }
+}

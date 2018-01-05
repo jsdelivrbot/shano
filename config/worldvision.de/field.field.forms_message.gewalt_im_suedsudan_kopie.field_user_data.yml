@@ -1,0 +1,24 @@
+uuid: 5b76da78-3c6b-43c0-bb09-f840d6999292
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.gewalt_im_suedsudan_kopie
+  module:
+    - forms_suite
+id: forms_message.gewalt_im_suedsudan_kopie.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: gewalt_im_suedsudan_kopie
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihre persönlichen Angaben'
+    subline: ''
+field_type: wovi_user_data_field

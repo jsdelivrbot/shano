@@ -1,0 +1,30 @@
+uuid: 904f4222-fdd3-4c0f-84b2-745bbc43f7b6
+langcode: de
+status: true
+dependencies: {  }
+id: standard_kontaktform
+label: '(TEMPLATE) Standard Kontaktform'
+recipients: ''
+reply: "Sehr [wovi_user_data_field:personalized_salutation] [wovi_user_data_field:surname],\r\n\r\nvielen Dank für Ihre Nachricht, die wir soeben erhalten haben.  \r\n\r\nMit freundlichem Gruß\r\n\r\nIhr Team von\r\nWorld Vision Deutschland e.V.\r\nAm Zollstock 2 - 4\r\n61381 Friedrichsdorf\r\nServicetelefon: 0800 - 0 10 20 22*  \r\nE-Mail: info@worldvision.de\r\nhttp://www.worldvision.de\r\n\r\n----------------------------------------------------------------------\r\n\r\nDiese E-Mail wurde automatisch generiert.\r\n\r\n*kostenfreies Servicetelefon"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ' World Vision - Vielen Dank für Ihre Nachricht'
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: ''
+headline: ''
+description: ''
+disclaimer: ''
+submit_button: Absenden

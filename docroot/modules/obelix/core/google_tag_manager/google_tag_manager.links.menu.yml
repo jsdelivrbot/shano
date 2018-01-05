@@ -1,0 +1,7 @@
+google_tag_manager.configuration_form:
+  title: 'Google Tag Manager'
+  route_name: google_tag_manager.configuration_form
+  description: 'Configure your Google Tag Manager settings.'
+  parent: system.admin_config_system
+  weight: 99
+

@@ -1,0 +1,9 @@
+langcode: de
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.paragraph_teaser
+label: 'Paragraph Teaser'
+targetEntityType: paragraph
+cache: true

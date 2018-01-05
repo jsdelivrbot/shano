@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.offcanvas_page.field_editorial_body
+    - field.field.node.offcanvas_page.field_metatags
+    - node.type.offcanvas_page
+  module:
+    - editorialfield
+    - user
+id: node.offcanvas_page.default
+targetEntityType: node
+bundle: offcanvas_page
+mode: default
+content:
+  field_editorial_body:
+    type: editorial_formatter
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

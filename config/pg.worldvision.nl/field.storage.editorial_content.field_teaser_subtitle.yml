@@ -1,0 +1,21 @@
+uuid: f3f42e73-6c0d-4197-ba2b-b13163b2f0d7
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+_core:
+  default_config_hash: DBOeICVrIEUviQHPsCEO8jdmPMxmfDFzytvDLXwCg_Q
+id: editorial_content.field_teaser_subtitle
+field_name: field_teaser_subtitle
+entity_type: editorial_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

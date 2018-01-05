@@ -1,0 +1,22 @@
+uuid: 11c9d39f-da6e-445f-9808-36e1dc428733
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.child.field_child_fatherjobstatusdesc
+  module:
+    - child
+_core:
+  default_config_hash: 3cxWnVs-tZvRBYCSVbQ_6Q_QbNiAUlmEXY-rpPiXyqQ
+id: child.child.field_child_fatherjobstatusdesc
+field_name: field_child_fatherjobstatusdesc
+entity_type: child
+bundle: child
+label: 'father job status description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

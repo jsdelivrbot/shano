@@ -1,0 +1,25 @@
+uuid: 6b5d5000-3cf8-45b2-a568-76f2dfb33c5b
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.slideshow
+    - field.storage.editorial_content.field_slideshow_slide
+  module:
+    - field_collection
+_core:
+  default_config_hash: 4wKJzXBb0W3yqoyvjciKune4Z-4cDDS-QqYVUGbfjFs
+id: editorial_content.slideshow.field_slideshow_slide
+field_name: field_slideshow_slide
+entity_type: editorial_content
+bundle: slideshow
+label: Slide
+description: ''
+required: true
+translatable: false
+default_value:
+  - {  }
+  - {  }
+default_value_callback: ''
+settings: {  }
+field_type: field_collection

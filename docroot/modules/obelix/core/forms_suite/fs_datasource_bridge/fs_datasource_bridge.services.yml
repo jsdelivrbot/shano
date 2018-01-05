@@ -1,0 +1,13 @@
+services:
+  fs_datasource_bridge.submission_send:
+    class: Drupal\fs_datasource_bridge\EventSubscriber\SubmissionSendSubscriber
+    arguments: ['@datasource']
+    tags:
+      - { name: event_subscriber }
+  fs_datasource_bridge.form_edit:
+    class: Drupal\fs_datasource_bridge\EventSubscriber\FormEditSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
+
+

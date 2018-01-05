@@ -1,0 +1,26 @@
+uuid: 94814bee-0175-4c91-bffd-5e5b662d7170
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.contact
+  module:
+    - forms_suite
+_core:
+  default_config_hash: _mYSs4_KHuAV3deG89VmJAGHXvIUGChwVHJMDfxrX94
+id: forms_message.contact.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: contact
+label: 'user data'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+field_type: wovi_user_data_field

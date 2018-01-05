@@ -1,0 +1,22 @@
+uuid: 1caa9397-3500-4122-90ea-6b978a556eeb
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.nothilfe_fuer_fluechtlinge_aus_m
+  module:
+    - forms_suite
+id: forms_message.nothilfe_fuer_fluechtlinge_aus_m.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: nothilfe_fuer_fluechtlinge_aus_m
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

@@ -1,0 +1,41 @@
+uuid: 604568b6-ec42-48b3-ad02-a1ae3a18d570
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: 8GXhfqd9F7S1fvEun3wWBFiBjbFv0_S1JowJtJrNMdw
+id: editorial_content.field_headline_markup
+field_name: field_headline_markup
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: h1
+      label: H1
+    -
+      value: h2
+      label: H2
+    -
+      value: h3
+      label: H3
+    -
+      value: h4
+      label: H4
+    -
+      value: h5
+      label: H5
+    -
+      value: h6
+      label: H6
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,47 @@
+uuid: 9df84c8b-03dc-4bf0-9213-1a3686a0036b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.quotation
+    - field.field.editorial_content.quotation.field_quotation_alignment
+    - field.field.editorial_content.quotation.field_quotation_quote
+    - field.field.editorial_content.quotation.field_quotation_source
+id: editorial_content.quotation.default
+targetEntityType: editorial_content
+bundle: quotation
+mode: default
+content:
+  field_quotation_alignment:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_quotation_quote:
+    type: string_textarea
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_quotation_source:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

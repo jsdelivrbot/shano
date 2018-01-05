@@ -1,0 +1,20 @@
+uuid: 7fcc395c-da19-4802-86d1-10f0a1a3ca52
+langcode: en
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+id: node.field_transparency_bar_bottom
+field_name: field_transparency_bar_bottom
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

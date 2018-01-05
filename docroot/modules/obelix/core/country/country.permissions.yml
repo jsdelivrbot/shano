@@ -1,0 +1,22 @@
+add country entities:
+  title: 'Create new Country entities'
+
+administer country entities:
+  title: 'Administer Country entities'
+  description: 'Allow to access the administration form to configure Country entities.'
+  restrict access: true
+
+delete country entities:
+  title: 'Delete Country entities'
+
+edit country entities:
+  title: 'Edit Country entities'
+
+view country entities:
+  title: 'View Country entities'
+
+view published country entities:
+  title: 'View published Country entities'
+
+view unpublished country entities:
+  title: 'View unpublished Country entities'

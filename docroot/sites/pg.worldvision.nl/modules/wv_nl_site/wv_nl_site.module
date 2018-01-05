@@ -1,0 +1,26 @@
+<?php
+
+/***
+ * @file
+ * Core place for all related WV NL dependencies & hook_updates.
+ */
+
+use Drupal\Core\Url;
+
+require_once 'wv_nl_site.forms.inc';
+
+/**
+ * Implements hook_cart_build_alter().
+ */
+function wv_nl_site_cart_build_alter(&$build) {
+  $build['#actions']['checkout']['#url'] = Url::fromUri('internal:/forms/giftshop');
+}
+
+/**
+ * Implements hook_child_gender_options_alter().
+ */
+function wv_nl_site_child_gender_options_alter(array &$options, array $original_options) {
+  foreach (array_keys(array_diff_key($options, $original_options)) as $key) {
+    unset($options[$key]);
+  }
+}

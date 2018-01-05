@@ -1,0 +1,35 @@
+uuid: 20d2e839-2969-406d-84c8-ba78ec84ee99
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.copy
+    - field.field.editorial_content.copy.field_body
+  module:
+    - text
+_core:
+  default_config_hash: AhEj9R9OF5zydLBHjVSKNyccaMc50nWXs4BESwinZpU
+id: editorial_content.copy.default
+targetEntityType: editorial_content
+bundle: copy
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  user_id: true

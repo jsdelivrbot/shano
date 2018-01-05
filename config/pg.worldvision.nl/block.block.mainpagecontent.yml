@@ -1,0 +1,22 @@
+uuid: a1a84979-6ac7-433b-b88b-986a7373575c
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - beaufix
+_core:
+  default_config_hash: BfdRwsvX1PIRvt1DnjQq5GcNNzyG5oAr0TinPGZ3Sco
+id: mainpagecontent
+theme: beaufix
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

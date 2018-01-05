@@ -1,0 +1,26 @@
+uuid: 394cc8ce-e300-48dc-97b7-7c1916be0bdf
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_company_cooperation
+    - forms_suite.form.contact_company_cooperation
+  module:
+    - forms_suite
+_core:
+  default_config_hash: 7e7cjlOMX1mrt8o7jv76hvaN2ij1jNC3tup-AY0AR8Q
+id: forms_message.contact_company_cooperation.field_company_cooperation
+field_name: field_company_cooperation
+entity_type: forms_message
+bundle: contact_company_cooperation
+label: 'company cooperation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Anliegen'
+    subline: ''
+field_type: wovi_company_cooperation_field

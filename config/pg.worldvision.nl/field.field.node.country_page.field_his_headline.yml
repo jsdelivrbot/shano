@@ -1,0 +1,21 @@
+uuid: 87d4a948-315d-4395-a996-5f3a6ad899a3
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_his_headline
+    - node.type.country_page
+_core:
+  default_config_hash: qr7gKj8xNCAqTTCzJT_qBoLcauCNCaBeVqJgfpCNFUE
+id: node.country_page.field_his_headline
+field_name: field_his_headline
+entity_type: node
+bundle: country_page
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: ba3a4cd9-8665-4f45-9f83-7a69dd9e2a2f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.hungersnot_in_afrika
+  module:
+    - fs_payment
+id: forms_message.hungersnot_in_afrika.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: hungersnot_in_afrika
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '5'
+    default_amount: '5'
+field_type: wovi_donation_amount_field

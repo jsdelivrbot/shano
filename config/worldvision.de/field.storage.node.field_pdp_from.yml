@@ -1,0 +1,22 @@
+uuid: a01c728a-cfe6-4c11-9edf-ee2d0871abf5
+langcode: de
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: _hvS_MLMr6wLklHAsLYPIoRuNu_P_RAoeBp9hMR8iDY
+id: node.field_pdp_from
+field_name: field_pdp_from
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+@media screen and (min-width: $bp-sm) {
+  .world-map {
+
+    .hover-info-block {
+      .hover-infos {
+        font-size: 14px;
+        //padding-top: 25px;
+
+        .row {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+}

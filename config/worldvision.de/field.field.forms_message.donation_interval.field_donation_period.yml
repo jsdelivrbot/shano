@@ -1,0 +1,27 @@
+uuid: f427f6a7-95f0-4ce9-b2ad-637f7fe22a4e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.donation_interval
+  module:
+    - fs_payment
+id: forms_message.donation_interval.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: donation_interval
+label: 'Donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      interval_period: interval_period
+      single_period: 0
+field_type: wovi_donation_period_field

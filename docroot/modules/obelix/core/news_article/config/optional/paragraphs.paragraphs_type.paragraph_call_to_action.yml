@@ -1,0 +1,5 @@
+langcode: de
+status: true
+dependencies: {  }
+id: paragraph_call_to_action
+label: 'Call to action'

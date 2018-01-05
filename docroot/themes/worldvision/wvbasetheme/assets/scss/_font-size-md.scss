@@ -1,0 +1,133 @@
+// =============================
+// Font size classes
+// =============================
+
+// Breakpoint MD
+// =============================
+@media screen and (min-width: $bp-md) {
+
+  // Other
+  .font-size-xxs {
+    font-size: $font-size-small;
+  }
+  .font-size-xs {
+    font-size: $font-size-small;
+  }
+
+  .font-size-s {
+    font-size: $font-size-x-large;
+  }
+
+  .font-size-m {
+    font-size: $font-size-xxx-large;
+  }
+
+  .font-size-l {
+    font-size: $font-size-xxxx-large;
+  }
+
+  .font-size-xl {
+    font-size: $font-size-xxxxx-large;
+  }
+
+  //  6er COL
+  // ========
+  .container,
+  .container-fluid,
+  .container-font{
+    > .row {
+      > .col-sm-6,
+      > .col-md-6{
+        .font-size-xxs {
+          font-size: $font-size-small;
+        }
+        .font-size-xs {
+          font-size: $font-size-small;
+        }
+
+        .font-size-s {
+          font-size: $font-size-small;
+        }
+        .font-size-m {
+          font-size: $font-size-x-large;
+        }
+
+        .font-size-l {
+          font-size: $font-size-x-large;
+        }
+
+        .font-size-xl {
+          font-size: $font-size-xxx-large;
+        }
+      }
+    }
+  }
+
+  //  4er COL
+  // ========
+  .container,
+  .container-fluid,
+  .container-font{
+    > .row {
+      > .col-sm-4,
+      > .col-md-4{
+        .font-size-xxs {
+          font-size: $font-size-small;
+        }
+        .font-size-xs {
+          font-size: $font-size-small;
+        }
+
+        .font-size-s {
+          font-size: $font-size-small;
+        }
+
+        .font-size-m {
+          font-size: $font-size-small;
+        }
+
+        .font-size-l {
+          font-size: $font-size-medium;
+        }
+
+        .font-size-xl {
+          font-size: $font-size-large;
+        }
+      }
+    }
+  }
+
+  //  3er COL
+  // ========
+  .container,
+  .container-fluid,
+  .container-font{
+    > .row {
+      > .col-sm-3,
+      > .col-md-3 {
+        .font-size-xxs {
+          font-size: $font-size-smallest;
+        }
+        .font-size-xs {
+          font-size: $font-size-smallest;
+        }
+
+        .font-size-s {
+          font-size: $font-size-small;
+        }
+
+        .font-size-m {
+          font-size: $font-size-small;
+        }
+
+        .font-size-l {
+          font-size: $font-size-medium;
+        }
+
+        .font-size-xl {
+          font-size: $font-size-medium;
+        }
+      }
+    }
+  }
+}

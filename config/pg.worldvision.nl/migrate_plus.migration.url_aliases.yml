@@ -1,0 +1,30 @@
+uuid: 73916061-8265-435d-bba3-2e210c1e4549
+langcode: nl
+status: true
+dependencies: {  }
+id: url_aliases
+migration_tags:
+  - url-alias
+migration_group: null
+label: 'Url Aliases'
+source:
+  plugin: csv
+  path: sites/pg.worldvision.nl/modules/wv_nl_site/assets/csv/url_aliases.csv
+  header_row_count: 1
+  keys:
+    - origin_url
+  fields:
+    origin_url: 'Origin URLs.'
+    new_alias: 'New aliases.'
+  constants:
+    und: und
+process:
+  source: origin_url
+  alias: new_alias
+  langcode:
+    plugin: default_value
+    default_value: und
+destination:
+  plugin: url_alias
+migration_dependencies:
+  required: {  }

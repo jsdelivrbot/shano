@@ -1,0 +1,8 @@
+{
+  "name": "world-vision/offcanvas",
+  "type": "drupal-module",
+  "description": "Provides the ability to load pages inside an off-canvas.",
+  "require": {
+      "drupal/metatag": "1.x-dev"
+  }
+}

@@ -1,0 +1,20 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_description
+    - node.type.public_donor_project
+  module:
+    - text
+id: node.public_donor_project.field_pdp_description
+field_name: field_pdp_description
+entity_type: node
+bundle: public_donor_project
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

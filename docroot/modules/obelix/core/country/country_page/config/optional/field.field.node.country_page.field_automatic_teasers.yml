@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.automatic_teaser
+    - field.storage.node.field_automatic_teasers
+    - node.type.country_page
+id: node.country_page.field_automatic_teasers
+field_name: field_automatic_teasers
+entity_type: node
+bundle: country_page
+label: 'Automatic teasers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:editorial_content'
+  handler_settings:
+    target_bundles:
+      automatic_teaser: automatic_teaser
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

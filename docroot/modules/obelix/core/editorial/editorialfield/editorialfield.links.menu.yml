@@ -1,0 +1,5 @@
+editorialfield.configuration:
+  title: 'Editorial field'
+  route_name: editorialfield.configuration
+  description: 'Manage which layouts are available for content creation.'
+  parent: system.admin_config_content

@@ -1,0 +1,59 @@
+uuid: 6e01b933-71f5-4005-8b42-abafabfaa30f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group.company.field_affiliate
+    - field.field.group.company.field_affiliate_group
+    - field.field.group.company.field_broker_page_text
+    - field.field.group.company.field_broker_teaser
+    - field.field.group.company.field_call_to_action
+    - field.field.group.company.field_campaign_teaser
+    - field.field.group.company.field_company_registration_text
+    - field.field.group.company.field_headline
+    - field.field.group.company.field_motivation_code
+    - field.field.group.company.field_registration_confirm_text
+    - field.field.group.company.field_relation_teaser
+    - group.type.company
+  module:
+    - entity_test
+third_party_settings:
+  entity_test:
+    foo: bar
+id: group.company.default
+targetEntityType: group
+bundle: company
+mode: default
+content:
+  company_gifts:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  company_header:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  company_information:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  changed: true
+  created: true
+  field_affiliate: true
+  field_affiliate_group: true
+  field_broker_page_text: true
+  field_broker_teaser: true
+  field_call_to_action: true
+  field_campaign_teaser: true
+  field_company_registration_text: true
+  field_headline: true
+  field_motivation_code: true
+  field_registration_confirm_text: true
+  field_relation_teaser: true
+  label: true
+  langcode: true
+  uid: true

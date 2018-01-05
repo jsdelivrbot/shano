@@ -1,0 +1,75 @@
+uuid: b80275fa-acac-45fd-9f6f-54e92f35c47e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_donation_amount
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_donation_period
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_message
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_newsletter
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_payment_method
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_shirt_size
+    - field.field.forms_message.global_6_k_spendenlauf_fuer_trin.field_user_data
+    - forms_suite.form.global_6_k_spendenlauf_fuer_trin
+  module:
+    - entity_test
+    - forms_suite
+    - options
+third_party_settings:
+  entity_test:
+    foo: bar
+id: forms_message.global_6_k_spendenlauf_fuer_trin.default
+targetEntityType: forms_message
+bundle: global_6_k_spendenlauf_fuer_trin
+mode: default
+content:
+  field_donation_amount:
+    label: above
+    type: wovi_formatter
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_donation_period:
+    label: above
+    type: wovi_formatter
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_message:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: wovi_formatter
+    region: content
+  field_newsletter:
+    label: above
+    type: wovi_formatter
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment_method:
+    label: above
+    type: wovi_formatter
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_shirt_size:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_user_data:
+    label: above
+    type: wovi_formatter
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

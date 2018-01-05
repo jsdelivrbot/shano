@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains file_plus.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function file_plus_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the file_plus module.
+    case 'help.page.file_plus':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enhancements for core file entity.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

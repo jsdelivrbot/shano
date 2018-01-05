@@ -1,0 +1,670 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function country_page_theme($existing, $type, $theme, $path) {
+  return [
+    'country_page_section' => [
+      'variables' => [
+        'attributes' => NULL,
+        'content' => NULL,
+      ],
+      'file' => 'country_page.theme.inc',
+    ]
+  ];
+}
+
+function country_page_preprocess_node(&$variables) {
+  if ($country = country_page_extract_country_entity($variables['node'])) {
+    $variables['country'] = $country;
+    $variables['country_name'] = $country->label();
+    $variables['#attached']['library'][] = 'country_page/global';
+  }
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+ */
+function country_page_entity_extra_field_info() {
+  $extra = [];
+
+  $extra['node']['country_page']['display']['country_section_header'] = array(
+    'label' => t('Header section'),
+    'description' => t('The rendered header section.'),
+    'weight' => -100,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_about'] = array(
+    'label' => t('About section'),
+    'description' => t('The rendered about section.'),
+    'weight' => -90,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_map'] = array(
+    'label' => t('Map section'),
+    'description' => t('The rendered map section.'),
+    'weight' => -80,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_catastrophe'] = array(
+    'label' => t('Catastrophe section'),
+    'description' => t('The rendered catastrophe section.'),
+    'weight' => -70,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_emphases'] = array(
+    'label' => t('Emphases section'),
+    'description' => t('The rendered Emphases section.'),
+    'weight' => -60,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_success'] = array(
+    'label' => t('Success section'),
+    'description' => t('The rendered success section.'),
+    'weight' => -50,
+    'visible' => TRUE,
+  );
+  $extra['node']['country_page']['display']['country_section_current_issues'] = array(
+    'label' => t('Current issues section'),
+    'description' => t('The rendered current issues section.'),
+    'weight' => -40,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_child_sponsorship'] = array(
+    'label' => t('Child sponsorship section'),
+    'description' => t('The rendered child sponsorship section.'),
+    'weight' => -30,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_his'] = array(
+    'label' => t('Human Interest Story section'),
+    'description' => t('The rendered human interest story section.'),
+    'weight' => -20,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_slideshow'] = array(
+    'label' => t('Slideshow section'),
+    'description' => t('The rendered slideshow section.'),
+    'weight' => -10,
+    'visible' => TRUE,
+  );
+
+  $extra['node']['country_page']['display']['country_section_success_bar'] = array(
+    'label' => t('Success bar section'),
+    'description' => t('The rendered success bar section.'),
+    'weight' => -5,
+    'visible' => TRUE,
+  );
+
+  return $extra;
+}
+
+/**
+ * @param array $build
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ * @param \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display
+ * @param $view_mode
+ */
+function country_page_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (!($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'country_page')) {
+    return;
+  }
+
+  $extra_field_info = country_page_entity_extra_field_info();
+  $country_page_display = $extra_field_info['node']['country_page']['display'];
+  foreach (array_keys($country_page_display) as $extra_field) {
+    if ($display->getComponent($extra_field)) {
+      $callback = __FUNCTION__ . '__' . $extra_field;
+      if (function_exists($callback)) {
+        $callback($build, $entity, $display, $view_mode);
+      }
+    }
+  }
+}
+
+function country_page_node_view__country_section_header(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_header')) {
+    $content = [];
+
+    if (!$country->field_image->isEmpty()) {
+      $content['image'] = [
+        '#theme' => 'responsive_image_formatter',
+        '#item' => $country->field_image[0],
+        '#url' => NULL,
+        '#responsive_image_style_id' => 'editorial_image_cinescope',
+      ];
+    }
+
+    $content['name'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'h1',
+      '#attributes' => [
+        'class' => [
+          'country-name',
+          'font-size-xl'
+        ],
+      ],
+      '#value' => $country->label(),
+    ];
+
+    $items = [];
+
+    if (!$country->field_child_mortality->isEmpty()) {
+      $items[] = [
+        'value' => [
+          '#type' => 'html_tag',
+          '#tag' => 'strong',
+          '#attributes' => [
+            'class' => ['value']
+          ],
+          '#value' => country_page_format_facts_number($country->field_child_mortality[0]->value),
+        ],
+        'label' => [
+          '#type' => 'html_tag',
+          '#tag' => 'span',
+          '#attributes' => [
+            'class' => ['label']
+          ],
+          '#value' => t('Child mortality'),
+          '#value' => 'Kinder<span class="visible-sm-inline">-<br/></span>sterblichkeit je 1000 Neugeborene',
+        ],
+      ];
+    }
+
+    if (!$country->field_life_expectancy->isEmpty()) {
+      $items[] = [
+        'value' => [
+          '#type' => 'html_tag',
+          '#tag' => 'strong',
+          '#attributes' => [
+            'class' => ['value']
+          ],
+          '#value' => country_page_format_facts_number($country->field_life_expectancy[0]->value),
+        ],
+        'label' => [
+          '#type' => 'html_tag',
+          '#tag' => 'span',
+          '#attributes' => [
+            'class' => ['label']
+          ],
+          '#value' => t('Life expectancy'),
+          '#value' => 'Lebens<span class="visible-xs-inline">-<br/></span>erwartung',
+        ],
+
+      ];
+    }
+
+    if (!$country->field_enrollment_rate->isEmpty()) {
+      $items[] = [
+        'value' => [
+          '#type' => 'html_tag',
+          '#tag' => 'strong',
+          '#attributes' => [
+            'class' => ['value']
+          ],
+          '#value' => country_page_format_facts_number($country->field_enrollment_rate[0]->value),
+          '#suffix' => '<span class="value-suffix">%</span>',
+        ],
+        'label' => [
+          '#type' => 'html_tag',
+          '#tag' => 'span',
+          '#attributes' => [
+            'class' => ['label']
+          ],
+          '#value' => t('Enrollment rate'),
+          '#value' => 'Einschulungs<span class="visible-xs-inline">-<br/></span>rate',
+        ],
+
+      ];
+    }
+
+    if (!$country->field_doctors_per_inhabitant->isEmpty()) {
+      $items[] = [
+        'value' => [
+          '#type' => 'html_tag',
+          '#tag' => 'strong',
+          '#attributes' => [
+            'class' => ['value']
+          ],
+          '#value' => country_page_format_facts_number($country->field_doctors_per_inhabitant[0]->value),
+        ],
+        'label' => [
+          '#type' => 'html_tag',
+          '#tag' => 'span',
+          '#attributes' => [
+            'class' => ['label'],
+          ],
+          '#value' => t('Doctors per inhabitant'),
+          '#value' => 'Ärzte pro 100.000 Einwohner',
+        ],
+      ];
+    }
+
+    if ($items) {
+      $content['facts_bar'] = [
+        '#theme' => 'item_list__facts_bar',
+        '#attributes' => [
+          'class' => [
+            'list-inline',
+            'list-unstyled',
+          ],
+        ],
+        '#items' => $items,
+      ];
+    }
+
+    if ($content) {
+      $build['country_section_header'] = [
+        '#theme' => 'country_page_section__header',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_about(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_about')) {
+    $content = [];
+
+    if (!$country->field_about_the_country->isEmpty()) {
+      $content['copy'] = [
+        '#type' => 'processed_text',
+        '#text' => $country->field_about_the_country->value,
+        '#format' => $country->field_about_the_country->format,
+        '#langcode' => $country->field_about_the_country->getLangcode(),
+      ];
+
+      if (!$entity->field_common_calltoaction->isEmpty()) {
+        $calltoaction = \Drupal::entityTypeManager()
+          ->getStorage('editorial_content')
+          ->load($entity->field_common_calltoaction[0]->target_id);
+
+        $content['call_to_action'] = \Drupal::entityTypeManager()
+          ->getViewBuilder('editorial_content')
+          ->view($calltoaction);
+      }
+
+      if (!$entity->field_quotation->isEmpty()) {
+        $quotation = \Drupal::entityTypeManager()
+          ->getStorage('editorial_content')
+          ->load($entity->field_quotation[0]->target_id);
+
+        $content['quotation'] = \Drupal::entityTypeManager()
+          ->getViewBuilder('editorial_content')
+          ->view($quotation);
+      }
+    }
+
+
+    if ($content) {
+      $build['country_section_about'] = [
+        '#theme' => 'country_page_section__about',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_map(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_map')) {
+    $content = [];
+
+    if (!$country->field_map->isEmpty()) {
+      $map = \Drupal::entityTypeManager()
+        ->getStorage('map')
+        ->load($country->field_map[0]->target_id);
+
+      $content['map'] = \Drupal::entityTypeManager()
+        ->getViewBuilder('map')
+        ->view($map);
+    }
+
+    if ($content) {
+      $build['country_section_map'] = [
+        '#theme' => 'country_page_section__map',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_catastrophe(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_catastrophe')) {
+    $content = [];
+
+    if (!$country->field_catastrophe_headline->isEmpty()) {
+      $content['headline'] = [
+        '#theme' => 'editorial_headline',
+        '#tag' => 'h2',
+        '#content' => $country->field_catastrophe_headline[0]->value,
+        '#settings' => [
+          'align' => 'center',
+        ],
+      ];
+    }
+
+    if (!$country->field_catastrophe_text->isEmpty()) {
+      $content['copy'] = [
+        '#type' => 'processed_text',
+        '#text' => $country->field_catastrophe_text[0]->value,
+        '#format' => $country->field_catastrophe_text[0]->format,
+        '#langcode' => $country->field_catastrophe_text[0]->getLangcode(),
+      ];
+    }
+
+    if (!$country->field_catastrophe_link->isEmpty()) {
+      $content['call_to_action'] = [
+        '#theme' => 'editorial_button',
+        '#title' => $country->field_catastrophe_link[0]->title,
+        '#uri' => $country->field_catastrophe_link[0]->uri,
+        '#target' => $country->field_catastrophe_link[0]->value,
+      ];
+    }
+
+    if ($content) {
+      $build['country_section_catastrophe'] = [
+        '#theme' => 'country_page_section__catastrophe',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_emphases(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_emphases')) {
+    $content = [];
+
+    if (!$entity->field_emphases_bar->isEmpty()) {
+      $items = [];
+
+      foreach ($entity->field_emphases_bar as $item) {
+        $field_collection_item = \Drupal::entityTypeManager()
+          ->getStorage('field_collection_item')
+          ->load($item->value);
+
+        $items[] = \Drupal::entityTypeManager()
+          ->getViewBuilder('field_collection_item')
+          ->view($field_collection_item);
+      }
+
+      if ($items) {
+        $content['emphases_bar'] = [
+          '#theme' => 'item_list__emphases_bar',
+          '#attributes' => [
+            'class' => [
+              'list-inline',
+              'list-unstyled',
+            ],
+          ],
+          '#items' => $items,
+        ];
+      }
+    }
+
+    if ($content) {
+      $build['country_section_emphases'] = [
+        '#theme' => 'country_page_section__emphases',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_success(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_success')) {
+    $content = [];
+
+    if (!$country->field_success_headline->isEmpty()) {
+      $content['headline'] = [
+        '#theme' => 'editorial_headline',
+        '#tag' => 'h2',
+        '#content' => $country->field_success_headline[0]->value,
+        '#settings' => [
+          'align' => 'center',
+        ],
+      ];
+    }
+
+    if (!$country->field_success_text->isEmpty()) {
+      $content['copy'] = [
+        '#type' => 'processed_text',
+        '#text' => $country->field_success_text->value,
+        '#format' => $country->field_success_text->format,
+        '#langcode' => $country->field_success_text->getLangcode(),
+      ];
+    }
+
+    if (!$country->field_success_link->isEmpty()) {
+      $content['call_to_action'] = [
+        '#theme' => 'editorial_button',
+        '#title' => $country->field_success_link[0]->title,
+        '#uri' => $country->field_success_link[0]->uri,
+        '#target' => $country->field_success_link[0]->value,
+      ];
+    }
+
+    if ($content) {
+      $build['country_section_success'] = [
+        '#theme' => 'country_page_section__success',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_current_issues(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_current_issues')) {
+    $content = [];
+
+    if (!$entity->field_automatic_teasers->isEmpty()) {
+      $editorial_content = \Drupal::entityTypeManager()
+        ->getStorage('editorial_content')
+        ->load($entity->field_automatic_teasers[0]->target_id);
+
+      $content['automatic_teasers'] = \Drupal::entityTypeManager()
+        ->getViewBuilder('editorial_content')
+        ->view($editorial_content);
+    }
+
+    if ($content) {
+      $build['country_section_current_issues'] = [
+        '#theme' => 'country_page_section__current_issues',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_child_sponsorship(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_child_sponsorship')) {
+    $content = [];
+
+    $child_controller = new \Drupal\child\Controller\ChildController();
+    $child = $child_controller->getRandomChild([
+      'country' => $country->getCountryCode(),
+    ]);
+
+    if ($child) {
+
+      if ($child_controller->setChildForUser($child)) {
+        $content['child_sponsorship'] = [
+          '#theme' => 'editorial_child_sponsorship_child_section',
+          '#attributes' => [],
+          '#content_attributes' => [],
+          '#child_image' => $child_controller->getChildImage($child, "square_xs"),
+          '#child_info' => [
+            'lives_with' => $child->get('field_child_liveswithdesc')->value,
+            'age' => $child->getAge(),
+            'birthday' => \Drupal::service('date.formatter')
+              ->format(strtotime(substr($child->getBirthdate()->value, 0, 10)), 'custom', 'd.m.Y'),
+            'likes' => $child->get('field_child_playdesc')->value,
+            'country' => $child->getCountry()->getName(),
+            'special_country_article' => $child->getCountry()->getSpecialCountryArticle(),
+            'name' => $child->getGivenName()->value,
+          ],
+          '#cache' => [
+            'max-age' => 0,
+          ],
+        ];
+      }
+    }
+
+    if ($content) {
+      $build['country_section_child_sponsorship'] = [
+        '#theme' => 'country_page_section__child_sponsorship',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_his(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_his')) {
+    $content = [];
+
+    if (!$entity->field_his_headline->isEmpty()) {
+      $content['headline'] = [
+        '#theme' => 'editorial_headline',
+        '#tag' => 'h2',
+        '#content' => $entity->field_his_headline[0]->value,
+      ];
+    }
+
+    if (!$entity->field_his_copy->isEmpty()) {
+      $content['copy'] = [
+        '#type' => 'processed_text',
+        '#text' => $entity->field_his_copy->value,
+        '#format' => $entity->field_his_copy->format,
+        '#langcode' => $entity->field_his_copy->getLangcode(),
+      ];
+    }
+
+    if (!$entity->field_his_image->isEmpty()) {
+      $content['image'] = [
+        '#theme' => 'responsive_image_formatter',
+        '#item' => $entity->field_his_image[0],
+        '#url' => NULL,
+        '#responsive_image_style_id' => 'editorial_image_square',
+      ];
+    }
+
+    if ($content) {
+      $build['country_section_his'] = [
+        '#theme' => 'country_page_section__his',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_slideshow(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_his')) {
+    $content = [];
+
+    if (!$entity->field_slideshow_slides->isEmpty()) {
+      $editorial_content = \Drupal::entityTypeManager()
+        ->getStorage('editorial_content')
+        ->load($entity->field_slideshow_slides[0]->target_id);
+
+      $content['slideshow'] = \Drupal::entityTypeManager()
+        ->getViewBuilder('editorial_content')
+        ->view($editorial_content);
+    }
+
+    if ($content) {
+      $build['country_section_slideshow'] = [
+        '#theme' => 'country_page_section__slideshow',
+        '#attributes' => [
+          'class' => 'country-page-section--slideshow'
+        ],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+function country_page_node_view__country_section_success_bar(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if (($country = country_page_extract_country_entity($entity)) && $display->getComponent('country_section_success_bar')) {
+    $content = [];
+
+    if (!$entity->field_success_bar->isEmpty()) {
+      $items = [];
+
+      foreach ($entity->field_success_bar as $item) {
+        $field_collection_item = \Drupal::entityTypeManager()
+          ->getStorage('field_collection_item')
+          ->load($item->value);
+
+        $items[] = \Drupal::entityTypeManager()
+          ->getViewBuilder('field_collection_item')
+          ->view($field_collection_item);
+      }
+
+      if ($items) {
+        $content['success_bar'] = [
+          '#theme' => 'item_list__success_bar',
+          '#attributes' => [
+            'class' => [
+              'list-inline',
+              'list-unstyled',
+            ],
+          ],
+          '#items' => $items,
+        ];
+      }
+    }
+
+    if ($content) {
+      $build['country_section_success_bar'] = [
+        '#theme' => 'country_page_section__success_bar',
+        '#attributes' => [],
+        '#content' => $content,
+      ];
+    }
+  }
+}
+
+/**
+ * Extracts the country entity from a country page node
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ *   The country_page Node.
+ *
+ * @return \Drupal\Core\Entity\EntityInterface|null
+ *   Returns the country entity if present or NULL
+ */
+function country_page_extract_country_entity(\Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'country_page') {
+    if (!$entity->field_country->isEmpty()) {
+      $country = \Drupal::entityTypeManager()
+        ->getStorage('country')
+        ->load($entity->field_country[0]->target_id);
+      return $country;
+    }
+  }
+
+  return NULL;
+}
+
+
+function country_page_format_facts_number($number) {
+  return preg_replace('/\.0{1,2}$/', '', $number);
+}

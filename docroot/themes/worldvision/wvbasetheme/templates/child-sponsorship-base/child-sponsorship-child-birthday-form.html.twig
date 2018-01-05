@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ *
+ * @ingroup themeable
+ */
+#}
+<form{{ attributes }}>
+  <div class="form-wrapper">
+    <div class="col-xs-12"><p class=" font-size-xxs text-center-xs">
+    {% trans %}
+      Search for child <br class="visible-xs"/>by <strong>birthdate</strong>
+    {% endtrans %}:</p></div>
+    <div
+      class="col-xs-12 col-md-6 form-less-space-top">{{ form_child_birthday.birthday }}</div>
+    <div
+      class="col-xs-12 col-md-6 form-less-space-top">{{ form_child_birthday.birthmonth }}</div>
+    <div class="col-xs-12 text-center-xs">{{ form_child_birthday.submit }}</div>
+    <div class="col-xs-12">
+      <p class="h2 font-size-xxs text-center-xs" id="birthday-child-finder-error"></p>
+    </div>
+  </div>
+  {{ form_child_birthday.form_build_id }}
+  {{ form_child_birthday.form_token }}
+  {{ form_child_birthday.form_id }}
+  {{ form_child_birthday.actions }}
+</form>

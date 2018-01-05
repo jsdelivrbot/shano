@@ -1,0 +1,20 @@
+uuid: c5c0d592-46fd-415c-91b3-45c22701495a
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - fs_payment
+id: forms_message.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+type: wovi_donation_amount_field
+settings:
+  case_sensitive: false
+module: fs_payment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

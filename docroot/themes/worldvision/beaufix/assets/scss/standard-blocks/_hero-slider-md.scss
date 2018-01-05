@@ -1,0 +1,32 @@
+@media screen and (min-width: $bp-md) {
+  // =============================
+  // Hero-Slider
+  // =============================
+  .editorial-hero-slider {
+    .editorial-hero-slider-preview-video {
+      .yt-cta {
+        bottom: 20%;
+      }
+    }
+    // =============================
+    // Custom Slick-Slider styling for hero-slider
+    // =============================
+    .slick-dots {
+      bottom: 0;
+    }
+    .editorial-button{
+      &.float-left-md{
+        margin-right: 15px;
+      }
+    }
+  }
+  .editorial-hero-slider .slider-item {
+    //  YouTube Video
+    &.editorial-hero-slider-youtube-video {
+      //  Play-button
+      .btn-hero-slider-yt-play-cont {
+        bottom: 20%;
+      }
+    }
+  }
+}

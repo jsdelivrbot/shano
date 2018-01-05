@@ -1,0 +1,84 @@
+0:
+  0:
+    image:
+      alt: JSponsor een kind
+      src: assets/images/flyout-teaser/sponsor-een-kind.jpg
+    headline: Het mooiste cadeau voor een kind: Een toekomst
+    copy: Voor slechts 1 euro per dag ondersteunt u een kind, de familie, én de omgeving.
+    link:
+      href: /node/748
+      label: Sponsor een kind
+  1:
+    image:
+      alt: Sponsorkinderen aan het woord
+      src: assets/images/flyout-teaser/sponsorkinderen-aan-het-woord.jpg
+    headline: Sponsorkinderen aan het woord
+    copy: Verschillende (voormalige) sponsorkinderen vertellen hoe sponsoring hun leven heeft veranderd.
+    link:
+      href: /node/198
+      label: Lees meer
+    attributes:
+      class: hidden-sm
+1:
+  0:
+    image:
+      alt: Word donateur
+      src: assets/images/flyout-teaser/word-donateur.jpg
+    headline: Word donateur
+    copy: Help de meest kwetsbare kinderen in de meest afgelegen gebieden.
+    link:
+      href: /node/781
+      label: Lees meer
+  1:
+    image:
+      alt: Geef een wereldcadeau
+      src: assets/images/flyout-teaser/geef-een-wereldcadeau.jpg
+    headline: Geef een wereldcadeau
+    copy: Op zoek naar een origineel cadeau voor een verjaardag, bruiloft of andere bijzondere gelegenheid?
+    link:
+      href: /node/81
+      label: Kies een cadeau
+    attributes:
+      class: hidden-sm
+2:
+  0:
+    image:
+      alt: Uw kerk in actie
+      src: assets/images/flyout-teaser/uw-kerk-in-actie.jpg
+    headline: Uw kerk in actie
+    copy: World Vision heeft passie om samen met kerken op te komen voor kwetsbare kinderen en gezinnen.
+    link:
+      href: /node/761
+      label: Bekijk de mogelijkheden
+  1:
+    image:
+      alt: ZIP YOUR LIP: DE LEUKSTE JONGERENACTIE
+      src: assets/images/flyout-teaser/zip-your-lip.jpg
+    headline: ZIP YOUR LIP: DE LEUKSTE JONGERENACTIE
+    copy: Samen met andere jongeren 24 uur niets eten om kinderen in ontwikkelingslanden te helpen.
+    link:
+      href: https://zipyourlip.worldvision.nl/
+      label: Ga naar de Zip-site
+    attributes:
+      class: hidden-sm
+3:
+  0:
+    image:
+      alt: Hoe wij werken
+      src: assets/images/flyout-teaser/hoe-wij-werken.jpg
+    headline: Hoe wij werken
+    copy: In 100 verschillende landen bereiken we jaarlijks miljoenen mensen met noodhulp en duurzame ontwikkeling.
+    link:
+      href: /node/230
+      label: Lees meer
+  1:
+    image:
+      alt: Onze wereldwijde projecten
+      src: assets/images/flyout-teaser/weltkarte.jpg
+    headline: Onze wereldwijde projecten
+    copy: World Vision werkt waar kinderen en families in nood zijn.
+    link:
+      href: /node/768
+      label: Bekijk onze projecten
+    attributes:
+      class: hidden-sm

@@ -1,0 +1,60 @@
+google_geo_object_widget:
+  version: 1.x
+  css:
+    theme:
+      assets/css/google_geo_object_widget.css: {}
+  js:
+    assets/js/google_geo_object_widget.js: {}
+    //maps.googleapis.com/maps/api/js?key=AIzaSyC5GBoqH2Jvk3jvevN7un2Etzf_rqkA49k&libraries=drawing: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog
+    - core/drupalSettings
+wovi_maps:
+  version: 1.x
+  css:
+    theme:
+      assets/css/google_geo_object_widget.css: {}
+    base:
+      assets/css/world-map.css: {}
+  js:
+    assets/js/wovi_maps.js: {}
+    //maps.googleapis.com/maps/api/js?key=AIzaSyC5GBoqH2Jvk3jvevN7un2Etzf_rqkA49k: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog
+    - core/drupalSettings
+
+wovi_maps_default:
+  version: 1.x
+  css:
+    theme:
+      assets/css/google_geo_object_widget.css: {}
+    base:
+      assets/css/world-map-default.css: {}
+  js:
+    assets/js/wovi_maps_default.js: {}
+    //maps.googleapis.com/maps/api/js?key=AIzaSyC5GBoqH2Jvk3jvevN7un2Etzf_rqkA49k: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog
+    - core/drupalSettings
+
+wovi_maps_home:
+  version: 1.x
+  css:
+    theme:
+      assets/css/google_geo_object_widget.css: {}
+    base:
+      assets/css/world-map-default.css: {}
+  js:
+    assets/js/wovi_maps_home.js: {}
+    //maps.googleapis.com/maps/api/js?key=AIzaSyC5GBoqH2Jvk3jvevN7un2Etzf_rqkA49k: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupal.dialog
+    - core/drupalSettings

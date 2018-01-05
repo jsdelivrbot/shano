@@ -1,0 +1,31 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraphs_video.field_paragraph_video_url
+    - paragraphs.paragraphs_type.paragraphs_video
+  module:
+    - inline_entity_form
+id: paragraph.paragraphs_video.default
+targetEntityType: paragraph
+bundle: paragraphs_video
+mode: default
+content:
+  field_paragraph_video_url:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+hidden:
+  created: true
+  status: true
+  uid: true

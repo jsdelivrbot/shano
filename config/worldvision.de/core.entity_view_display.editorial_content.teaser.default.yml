@@ -1,0 +1,34 @@
+uuid: 26fbc84d-c608-419c-87b4-688f43a08557
+langcode: de
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.teaser
+    - field.field.editorial_content.teaser.field_link_target
+    - field.field.editorial_content.teaser.field_teaser_headline
+    - field.field.editorial_content.teaser.field_teaser_image
+    - field.field.editorial_content.teaser.field_teaser_link
+    - field.field.editorial_content.teaser.field_teaser_subtitle
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: nNOPmQYewVGg4rCske0oUpLcOlhFQFgB3-xCfCtpyjA
+id: editorial_content.teaser.default
+targetEntityType: editorial_content
+bundle: teaser
+mode: default
+content:
+  teaser:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link_target: true
+  field_teaser_headline: true
+  field_teaser_image: true
+  field_teaser_link: true
+  field_teaser_subtitle: true
+  name: true
+  user_id: true

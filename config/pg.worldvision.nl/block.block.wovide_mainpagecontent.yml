@@ -1,0 +1,22 @@
+uuid: 9b1fd20c-db1d-4703-afa8-5b16dca12f8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wovide
+_core:
+  default_config_hash: BfdRwsvX1PIRvt1DnjQq5GcNNzyG5oAr0TinPGZ3Sco
+id: wovide_mainpagecontent
+theme: wovide
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 326446ce-aaac-4ccb-9021-31ce752f2120
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.global_6_k_spendenlauf_fuer_trin
+  module:
+    - fs_payment
+id: forms_message.global_6_k_spendenlauf_fuer_trin.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: global_6_k_spendenlauf_fuer_trin
+label: field_donation_amount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    single_amount: 1
+    minimal_amount: '30'
+    default_amount: '30'
+field_type: wovi_donation_amount_field

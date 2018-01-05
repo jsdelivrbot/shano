@@ -1,0 +1,31 @@
+uuid: e39cbb46-f6da-4929-afb0-9176a194db78
+langcode: de
+status: true
+dependencies: {  }
+id: kontaktformular_presse
+label: 'Kontaktformular Presse'
+recipients:
+  - presse@worldvision.de
+reply: "Sehr [wovi_user_data_field:personalized_salutation] [wovi_user_data_field:surname],\r\n\r\nvielen Dank für Ihre Nachricht, die wir soeben erhalten haben. Wir werden Ihre Anfrage in Kürze beantworten.\r\n\r\nMit freundlichem Gruß\r\n\r\nPressestelle World Vision Deutschland e.V.\r\n\r\n----------------------------------------------------------------------\r\n\r\nDiese E-Mail wurde automatisch generiert.\r\n\r\n"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ' World Vision - Vielen Dank für Ihre Nachricht'
+alternative_template_email: autoreply_default
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen.</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: ''
+additional_tracking: ''
+alias: /forms/kontakt-presse
+headline: 'Kontakt zur Pressestelle'
+description: ''
+disclaimer: ''
+submit_button: Absenden

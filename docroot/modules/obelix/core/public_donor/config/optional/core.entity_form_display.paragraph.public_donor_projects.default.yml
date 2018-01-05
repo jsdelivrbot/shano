@@ -1,0 +1,23 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.public_donor_projects.field_pdp_content
+    - paragraphs.paragraphs_type.public_donor_projects
+id: paragraph.public_donor_projects.default
+targetEntityType: paragraph
+bundle: public_donor_projects
+mode: default
+content:
+  field_pdp_content:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

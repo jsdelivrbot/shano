@@ -1,0 +1,29 @@
+uuid: 0f92746c-f08d-488e-817c-36016863fc9e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.donation
+  module:
+    - fs_payment
+_core:
+  default_config_hash: UVdwjLJVdsjQs6G0jptNV4iBcbxLADpRA7chDcEzgvg
+id: forms_message.donation.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: donation
+label: 'donation period'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Wie oft möchten Sie spenden'
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: interval_period
+field_type: wovi_donation_period_field

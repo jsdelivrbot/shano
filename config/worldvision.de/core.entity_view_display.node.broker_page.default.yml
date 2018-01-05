@@ -1,0 +1,43 @@
+uuid: 35dafa5d-dbad-4a41-a416-34f550930eb8
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.broker_page.field_affiliate
+    - field.field.node.broker_page.field_broker_image
+    - field.field.node.broker_page.field_broker_logo
+    - field.field.node.broker_page.field_relation_teaser
+    - node.type.broker_page
+  module:
+    - entity_test
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+id: node.broker_page.default
+targetEntityType: node
+bundle: broker_page
+mode: default
+content:
+  broker_page_gifts:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  broker_page_header:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  broker_page_information:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_affiliate: true
+  field_broker_image: true
+  field_broker_logo: true
+  field_relation_teaser: true
+  langcode: true
+  links: true

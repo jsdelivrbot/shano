@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - editorial_content.editorial_content_type.automatic_teaser
+    - field.field.editorial_content.automatic_teaser.field_tags
+id: editorial_content.automatic_teaser.default
+targetEntityType: editorial_content
+bundle: automatic_teaser
+mode: default
+content:
+  field_tags:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  name:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  user_id: true

@@ -1,0 +1,35 @@
+uuid: 447643bf-13f3-4988-b98d-276cd51adb5c
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - options
+_core:
+  default_config_hash: 5pA9ewQ_j-gD2nWMjMnv6qg5y87IcSslyZBfIYCQ4kU
+id: editorial_content.field_content_block_align
+field_name: field_content_block_align
+entity_type: editorial_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Deprecrated!
+    -
+      value: col-sm-push-6
+      label: Deprecrated!
+    -
+      value: left
+      label: Left
+    -
+      value: right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

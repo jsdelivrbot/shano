@@ -1,0 +1,30 @@
+uuid: b1958a53-e100-4f5d-8039-665e160d214e
+langcode: de
+status: true
+dependencies: {  }
+id: contact
+label: 'Kontaktformular Allgemein'
+recipients: ''
+reply: ''
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: 'PATENPOST VERSCHIEDENES'
+subject: ''
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>Wir werden Ihr Anliegen baldmöglichst bearbeiten und uns mit Ihnen in Verbindung setzen.</p>\r\n\r\n<p>Bitte beachten Sie: Aufgrund einer Systemumstellung kann sich die Bearbeitung Ihrer Anfrage derzeit etwas verzögern. Wir danken Ihnen herzlich für Ihr Verständnis!</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Nachricht'
+designation_id: ''
+motivation_code: '401266'
+additional_tracking: ''
+alias: /formulare/kontakt
+headline: 'Nachricht an World Vision'
+description: ''
+disclaimer: ''
+submit_button: Absenden

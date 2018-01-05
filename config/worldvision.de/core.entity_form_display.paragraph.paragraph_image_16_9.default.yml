@@ -1,0 +1,29 @@
+uuid: 326f624f-aa2f-47f7-a8b4-2731dd6217ee
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_image_16_9.field_paragraph_image_16_9
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_image_16_9
+  module:
+    - image
+_core:
+  default_config_hash: ZjIrPzS6FFp1sL8O5nvR8EhY7M_Mb3gOELJSxJ50sMc
+id: paragraph.paragraph_image_16_9.default
+targetEntityType: paragraph
+bundle: paragraph_image_16_9
+mode: default
+content:
+  field_paragraph_image_16_9:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

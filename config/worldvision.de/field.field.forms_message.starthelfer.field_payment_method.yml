@@ -1,0 +1,25 @@
+uuid: 4d332b70-a107-4c08-8232-f5d962ecdd51
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.starthelfer
+  module:
+    - fs_payment
+id: forms_message.starthelfer.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: starthelfer
+label: 'payment method'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Zahlungsart wählen'
+    subline: ''
+    external_payment: 0
+field_type: wovi_payment_method_field

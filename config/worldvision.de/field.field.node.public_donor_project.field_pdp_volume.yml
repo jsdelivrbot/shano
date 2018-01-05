@@ -1,0 +1,25 @@
+uuid: 5f8f4714-f830-471f-801f-32ad45015f01
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pdp_volume
+    - node.type.public_donor_project
+_core:
+  default_config_hash: MZnlc2Gm_RBH1joULc7RBLMGxU1S0HANeNmax3xbOts
+id: node.public_donor_project.field_pdp_volume
+field_name: field_pdp_volume
+entity_type: node
+bundle: public_donor_project
+label: Volume
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' Euro'
+field_type: integer

@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Appends special css for decrease padding between amount and options field.
+ *
+ * Implements hook_form_FORM_ID_alter().
+ */
+function runningeventdonation_form_forms_message_6k_run_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'runningeventdonation/forms';
+}
+
+/**
+ * Appends special css for decrease padding between amount and options field.
+ *
+ * Implements hook_form_FORM_ID_alter().
+ */
+function runningeventdonation_form_forms_message_dein_lauf_fuer_trinkwasser_gastg_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['#attached']['library'][] = 'runningeventdonation/forms';
+}

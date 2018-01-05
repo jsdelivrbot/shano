@@ -1,0 +1,27 @@
+uuid: 48e9d5aa-daa8-49a2-acf0-2bb80a66fb7d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.sierra_leone_wasser
+  module:
+    - fs_payment
+id: forms_message.sierra_leone_wasser.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: sierra_leone_wasser
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '10'
+    default_amount: '10'
+field_type: wovi_donation_amount_field

@@ -1,0 +1,7 @@
+ivision.config_form:
+  title: 'iVision Config'
+  route_name: ivision.config_form
+  description: 'Configurate iVision'
+  parent: system.admin_config_services
+  weight: 98
+

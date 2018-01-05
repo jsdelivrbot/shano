@@ -1,0 +1,38 @@
+uuid: 275a76bf-1438-4630-b14e-449a065ade4f
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_user_data
+    - forms_suite.form.kontaktformular_nicol_hartl_teix
+  module:
+    - forms_suite
+id: forms_message.kontaktformular_nicol_hartl_teix.field_user_data
+field_name: field_user_data
+entity_type: forms_message
+bundle: kontaktformular_nicol_hartl_teix
+label: field_user_data
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    salutation: '1'
+    jobTitleCode: ''
+    firstName: anika
+    surname: test
+    companyName: ''
+    street: test
+    houseNo: '1'
+    postCode: '12344'
+    city: test
+    countryCode: DE
+    phonePrivate: ''
+    email: test@test.de
+    birthday: '0'
+    birthmonth: '0'
+    birthyear: '0'
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_user_data_field

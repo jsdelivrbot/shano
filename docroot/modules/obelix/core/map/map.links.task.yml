@@ -1,0 +1,42 @@
+# Map routing definition
+map.settings_tab:
+  route_name: map.settings
+  title: 'Settings'
+  base_route: map.settings
+entity.map.canonical:
+  route_name: entity.map.canonical
+  base_route: entity.map.canonical
+  title: 'View'
+
+entity.map.edit_form:
+  route_name: entity.map.edit_form
+  base_route: entity.map.canonical
+  title: Edit
+
+entity.map.delete_form:
+  route_name:  entity.map.delete_form
+  base_route:  entity.map.canonical
+  title: Delete
+  weight: 10
+
+# Geo object routing definition
+geo_object.settings_tab:
+  route_name: geo_object.settings
+  title: 'Settings'
+  base_route: geo_object.settings
+entity.geo_object.canonical:
+  route_name: entity.geo_object.canonical
+  base_route: entity.geo_object.canonical
+  title: 'View'
+
+entity.geo_object.edit_form:
+  route_name: entity.geo_object.edit_form
+  base_route: entity.geo_object.canonical
+  title: Edit
+
+entity.geo_object.delete_form:
+  route_name:  entity.geo_object.delete_form
+  base_route:  entity.geo_object.canonical
+  title: Delete
+  weight: 10
+

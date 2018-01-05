@@ -1,0 +1,27 @@
+uuid: b0064373-126e-4cd0-861a-646f4a29262d
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.jaehrliche_spende
+  module:
+    - fs_payment
+id: forms_message.jaehrliche_spende.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: jaehrliche_spende
+label: 'Donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      interval_period: interval_period
+      single_period: 0
+field_type: wovi_donation_period_field

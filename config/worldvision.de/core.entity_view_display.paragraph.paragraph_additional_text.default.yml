@@ -1,0 +1,29 @@
+uuid: 57a014ec-9227-4506-83cd-b5211d2dba19
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_additional_text.field_paragraph_text
+    - paragraphs.paragraphs_type.paragraph_additional_text
+  module:
+    - text
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 07WMNktN28PxDZ-n7exuUy15Rsw8WuPBCPPSGA-YCms
+id: paragraph.paragraph_additional_text.default
+targetEntityType: paragraph
+bundle: paragraph_additional_text
+mode: default
+content:
+  field_paragraph_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  created: true
+  uid: true

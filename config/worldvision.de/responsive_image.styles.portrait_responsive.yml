@@ -1,0 +1,24 @@
+uuid: dbab9a30-dae7-4a51-969c-1d12dd889cbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.portrait_sm
+    - image.style.portrait_xs
+  theme:
+    - bootstrap
+id: portrait_responsive
+label: 'Portrait Responsive'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: portrait_sm
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: portrait_xs
+breakpoint_group: bootstrap
+fallback_image_style: portrait_xs

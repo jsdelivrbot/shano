@@ -1,0 +1,17 @@
+uuid: b47dc56d-b676-4238-b70c-8c51d8671ead
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.company
+id: company-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: company
+permissions_ui: true
+permissions:
+  - 'view group'
+  - 'view group_node:broker_page entity'
+  - 'view group_node:broker_page content'

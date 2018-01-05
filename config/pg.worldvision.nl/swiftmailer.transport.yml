@@ -1,0 +1,12 @@
+transport: smtp
+smtp_host: smtp.sparkpostmail.com
+smtp_port: 587
+smtp_encryption: tls
+smtp_username: SMTP_Injection
+smtp_password: cdc63077c806aea9654bf499aa0fa21070f2dcae
+sendmail_path: /usr/sbin/sendmail
+sendmail_mode: bs
+spool_directory: ''
+_core:
+  default_config_hash: 0SeYZshzgoabDrbz-junYqeQOQ9BypPv2gaFcnqKy0M
+langcode: nl

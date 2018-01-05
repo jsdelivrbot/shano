@@ -1,0 +1,6 @@
+is_simple_find_process: 1
+child_page_route: wv_site.child_sponsorship_controller_ChildSponsorshipAction
+sponsorship_suggestion_uri: /forms/child_sponsorship_suggestion
+sponsorship_direct_uri: /forms/child_sponsorship_direct
+hide_childfinder_globally: 1
+langcode: nl

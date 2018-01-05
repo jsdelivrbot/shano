@@ -1,0 +1,113 @@
+// =============================
+// First Campaign 2017  XS
+// =============================
+
+.billy-and-urs-wrapper {
+  // =============================
+  // Header
+  // =============================
+  .header--img{
+    background-image: url("/modules/obelix/de/c171/assets/images/stage_mobile.jpg");
+    background-size:cover;
+    min-height: 240px;
+  }
+  // =============================
+  // Content
+  // =============================
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .child-section h2 {
+    margin-top: 20px;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .yt-preview-txt h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  p:last-child {
+    margin-bottom: 0px;
+  }
+
+  p.last-child-with-margin {
+    margin-bottom: 30px;
+  }
+
+  .quote-block {
+    font-style: italic;
+
+    .quotation:before {
+      content: "\201C";
+    }
+
+    .quotation:after {
+      content: "\201D"
+    }
+
+    .quote-source {
+      font-weight: bold;
+    }
+
+    .quote-source:before {
+      content: ' - ';
+    }
+  }
+
+  .author {
+    > img {
+      display: block;
+      float: left;
+      margin-right: 1em;
+    }
+    > div {
+      display: inline-block;
+      height: 60px;
+      line-height: 60px;
+      text-transform: uppercase;
+    }
+  }
+
+  .separator:after {
+    border-bottom: 1px solid #000;
+    content: " ";
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .container--content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .container--image {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
+
+  .child-section {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  // =============================
+  // Video
+  // =============================
+  .editorial-youtube-video{
+    padding-bottom: 0;
+    .yt-preview-txt{
+      display: none!important;
+    }
+  }
+}
+

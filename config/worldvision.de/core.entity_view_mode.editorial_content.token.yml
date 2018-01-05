@@ -1,0 +1,10 @@
+uuid: d76d0fa2-6adf-4a94-b36c-5f301e3d101d
+langcode: de
+status: true
+dependencies:
+  module:
+    - editorial_content
+id: editorial_content.token
+label: Token
+targetEntityType: editorial_content
+cache: true

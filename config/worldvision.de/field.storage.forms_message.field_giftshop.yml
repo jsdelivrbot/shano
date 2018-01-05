@@ -1,0 +1,21 @@
+uuid: f5859bb5-b937-4d98-b9d9-f507c5a0776d
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+    - giftshop
+id: forms_message.field_giftshop
+field_name: field_giftshop
+entity_type: forms_message
+type: wovi_giftshop_field
+settings:
+  is_ascii: false
+  case_sensitive: false
+module: giftshop
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

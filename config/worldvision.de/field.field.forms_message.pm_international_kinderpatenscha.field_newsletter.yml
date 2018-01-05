@@ -1,0 +1,22 @@
+uuid: 321974f7-f680-47fb-b43d-698377587904
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.pm_international_kinderpatenscha
+  module:
+    - forms_suite
+id: forms_message.pm_international_kinderpatenscha.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: pm_international_kinderpatenscha
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

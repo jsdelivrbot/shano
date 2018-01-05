@@ -1,0 +1,233 @@
+uuid: 63e8a203-3380-4ef2-a23c-a1f6bb69e591
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.transition_page.field_acknowledgment_copy
+    - field.field.node.transition_page.field_acknowledgment_headline
+    - field.field.node.transition_page.field_common_copy
+    - field.field.node.transition_page.field_common_headline
+    - field.field.node.transition_page.field_common_image
+    - field.field.node.transition_page.field_common_subtitle
+    - field.field.node.transition_page.field_current_calltoaction
+    - field.field.node.transition_page.field_current_copy
+    - field.field.node.transition_page.field_current_headline
+    - field.field.node.transition_page.field_his_copy
+    - field.field.node.transition_page.field_his_headline
+    - field.field.node.transition_page.field_his_image
+    - field.field.node.transition_page.field_impact_bar
+    - field.field.node.transition_page.field_impact_bar_headline
+    - field.field.node.transition_page.field_impact_calltoaction
+    - field.field.node.transition_page.field_impact_copy
+    - field.field.node.transition_page.field_impact_headline
+    - field.field.node.transition_page.field_metatags
+    - field.field.node.transition_page.field_previous_copy
+    - field.field.node.transition_page.field_previous_headline
+    - field.field.node.transition_page.field_previous_image
+    - field.field.node.transition_page.field_slideshow_slides
+    - field.field.node.transition_page.field_youtube_video
+    - node.type.transition_page
+    - responsive_image.styles.editorial_image
+  module:
+    - entity_test
+    - field_collection
+    - metatag
+    - responsive_image
+    - text
+    - user
+third_party_settings:
+  entity_test:
+    foo: bar
+_core:
+  default_config_hash: 31_MnzAZLdJ4mxiVBWWkhnvVm-dpnjya9LM3IF3_ydM
+id: node.transition_page.default
+targetEntityType: node
+bundle: transition_page
+mode: default
+content:
+  field_acknowledgment_copy:
+    weight: 18
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_acknowledgment_headline:
+    weight: 17
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_common_copy:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_common_headline:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_common_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_common_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_current_calltoaction:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_current_copy:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_current_headline:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_his_copy:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_his_headline:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_his_image:
+    weight: 15
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image_square
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_impact_bar:
+    weight: 19
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: field_collection_items
+    region: content
+  field_impact_bar_headline:
+    weight: 20
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_impact_calltoaction:
+    weight: 12
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_impact_copy:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_impact_headline:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_metatags:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_previous_copy:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_previous_headline:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_previous_image:
+    weight: 21
+    label: hidden
+    settings:
+      responsive_image_style: editorial_image
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  field_slideshow_slides:
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_youtube_video:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  langcode: true
+  links: true

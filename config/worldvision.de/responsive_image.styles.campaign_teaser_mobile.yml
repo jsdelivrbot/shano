@@ -1,0 +1,20 @@
+uuid: fc336ded-d1af-41cd-a072-b0e4677b3e9e
+langcode: de
+status: true
+dependencies:
+  config:
+    - image.style.photo_4_3_xs
+  theme:
+    - bootstrap
+_core:
+  default_config_hash: j5I3WPfgHbIuvnzPdc7OHlkZbGvMgICFaMFj_lLBHwU
+id: campaign_teaser_mobile
+label: 'Campaign teaser mobile'
+image_style_mappings:
+  -
+    breakpoint_id: bootstrap.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: photo_4_3_xs
+breakpoint_group: bootstrap
+fallback_image_style: '_empty image_'

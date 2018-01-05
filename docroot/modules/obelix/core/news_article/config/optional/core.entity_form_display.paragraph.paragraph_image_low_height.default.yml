@@ -1,0 +1,25 @@
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_image_low_height.field_paragraph_image_low_height
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.paragraph_image_low_height
+  module:
+    - image
+id: paragraph.paragraph_image_low_height.default
+targetEntityType: paragraph
+bundle: paragraph_image_low_height
+mode: default
+content:
+  field_paragraph_image_low_height:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,9 @@
+social-share:
+  css:
+    base:
+      libraries/css/social-share.css: {}
+  js:
+    libraries/js/social-share.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

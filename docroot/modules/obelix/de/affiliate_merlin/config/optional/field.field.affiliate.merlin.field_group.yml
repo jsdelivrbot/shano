@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - affiliate.affiliate_type.merlin
+    - field.storage.affiliate.field_group
+    - taxonomy.vocabulary.affiliate_groups
+id: affiliate.merlin.field_group
+field_name: field_group
+entity_type: affiliate
+bundle: merlin
+label: Group
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      affiliate_groups: affiliate_groups
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

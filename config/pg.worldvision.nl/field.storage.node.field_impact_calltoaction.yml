@@ -1,0 +1,22 @@
+uuid: 33b806ee-f759-4591-8660-de31d4b8be5f
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: 9KfHqEl1YXkKXJJHDHrldvpYfz7MCWYYFD4BT9cbtYY
+id: node.field_impact_calltoaction
+field_name: field_impact_calltoaction
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,150 @@
+@-webkit-keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes display-none-transition {
+  0% {
+    opacity: 0;
+  }
+}
+/* line 2, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor h2, .page-node-type-public-donor-project h2, .public-donor-overview h2, .block-views-blockpublic-donor-pd-block-list h2 {
+  font-size: 24px;
+}
+/* line 6, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .public-donor-divider, .page-node-type-public-donor-project .public-donor-divider, .public-donor-overview .public-donor-divider, .block-views-blockpublic-donor-pd-block-list .public-donor-divider {
+  height: 25px;
+  border-bottom: 2px solid #bfbfbf;
+  margin-bottom: 25px;
+}
+/* line 12, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .public-donor-divider-light, .page-node-type-public-donor-project .public-donor-divider-light, .public-donor-overview .public-donor-divider-light, .block-views-blockpublic-donor-pd-block-list .public-donor-divider-light {
+  height: 50px;
+  border-bottom: 1px solid #f3f3f3;
+  margin-bottom: 30px;
+}
+/* line 18, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .thin-header, .page-node-type-public-donor-project .thin-header, .public-donor-overview .thin-header, .block-views-blockpublic-donor-pd-block-list .thin-header {
+  color: #333;
+  font-family: "Gill Sans W04 Light", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+/* line 23, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .public-donor-logo, .page-node-type-public-donor-project .public-donor-logo, .public-donor-overview .public-donor-logo, .block-views-blockpublic-donor-pd-block-list .public-donor-logo {
+  position: relative;
+}
+/* line 26, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .public-donor-logo img, .page-node-type-public-donor-project .public-donor-logo img, .public-donor-overview .public-donor-logo img, .block-views-blockpublic-donor-pd-block-list .public-donor-logo img {
+  margin: 10px 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* line 32, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .pdp-label, .page-node-type-public-donor-project .pdp-label, .public-donor-overview .pdp-label, .block-views-blockpublic-donor-pd-block-list .pdp-label {
+  color: #ff7700;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+/* line 37, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .pdp-label::after, .page-node-type-public-donor-project .pdp-label::after, .public-donor-overview .pdp-label::after, .block-views-blockpublic-donor-pd-block-list .pdp-label::after {
+  content: ':';
+}
+/* line 41, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .pdp-label.pdp-section-label, .page-node-type-public-donor-project .pdp-label.pdp-section-label, .public-donor-overview .pdp-label.pdp-section-label, .block-views-blockpublic-donor-pd-block-list .pdp-label.pdp-section-label {
+  margin-bottom: 20px;
+}
+
+/* line 49, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .pdp-list .pdp-teaser-block, .public-donor-overview .pdp-list .pdp-teaser-block {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* line 53, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .pdp-list .pdp-teaser-block .pdp-header-img, .public-donor-overview .pdp-list .pdp-teaser-block .pdp-header-img {
+  margin-top: 20px;
+}
+/* line 63, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .btn-transparent a, .public-donor-overview .btn-transparent a {
+  background: transparent;
+  color: #ff7700;
+}
+/* line 66, ../../scss/public-donor/_public-donor-xs.scss */
+.page-node-type-public-donor .btn-transparent a:hover, .public-donor-overview .btn-transparent a:hover {
+  background: #ff7700;
+  color: #FFFFFF;
+}
+
+/* line 75, ../../scss/public-donor/_public-donor-xs.scss */
+.block-views-blockpublic-donor-pd-block-list .field-content {
+  margin-top: 40px;
+}
+/* line 79, ../../scss/public-donor/_public-donor-xs.scss */
+.block-views-blockpublic-donor-pd-block-list .field-content a img {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  /* line 3, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor h2, .page-node-type-public-donor-project h2 {
+    font-size: 30px;
+  }
+  /* line 7, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor .public-donor-logo, .page-node-type-public-donor-project .public-donor-logo {
+    width: 100%;
+  }
+  /* line 10, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor .public-donor-logo img, .page-node-type-public-donor-project .public-donor-logo img {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+  }
+  /* line 17, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor .row-flex, .page-node-type-public-donor .row-flex > div[class*='col-'], .page-node-type-public-donor-project .row-flex, .page-node-type-public-donor-project .row-flex > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+  /* line 28, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor-project .field--item {
+    margin-top: 40px;
+  }
+  /* line 33, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor-project .pdp-header-img img {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  /* line 38, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor-project .logo-link {
+    display: block;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  /* line 44, ../../scss/public-donor/_public-donor-sm.scss */
+  .page-node-type-public-donor-project .logo-link .public-donor-logo img {
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+}

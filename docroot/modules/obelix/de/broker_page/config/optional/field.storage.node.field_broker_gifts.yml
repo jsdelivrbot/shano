@@ -1,0 +1,19 @@
+uuid: 5501263f-e32e-4840-816b-f151158c194f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_broker_gifts
+field_name: field_broker_gifts
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

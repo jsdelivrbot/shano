@@ -1,0 +1,7 @@
+uuid: 0511302c-75ec-4b4c-9fa8-a6ac3120d569
+langcode: de
+status: true
+dependencies: {  }
+id: paragraph_call_to_action
+label: 'Call to action'
+behavior_plugins: {  }

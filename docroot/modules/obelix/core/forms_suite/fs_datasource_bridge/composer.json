@@ -1,0 +1,6 @@
+{
+  "name": "drupal/fs_datasource_bridge",
+  "type": "drupal-module",
+  "description": "Establishes a connection between the Datasource handler module and the Forms suite module.",
+  "require": { }
+}

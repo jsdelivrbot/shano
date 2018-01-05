@@ -1,0 +1,15 @@
+// =============================
+// Campaign teaser
+// =============================
+
+@media screen and (min-width: $bp-sm) {
+  .editorial-campaign-teaser {
+    .editorial-content-txt-block {
+      padding-left: 30px;
+      padding-right: 30px;
+      height: 100%;
+      top: 0px;
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+uuid: f8652592-1dd6-4a6c-be33-dcdda8ac4ca7
+langcode: de
+status: true
+dependencies: {  }
+id: tabaluga_anmeldung
+label: 'Tabaluga Anmeldung'
+recipients:
+  - info@worldvision.de
+  - anika_scholz@wvi.org
+reply: "Sehr [wovi_user_data_field:personalized_salutation] [wovi_user_data_field:surname],\r\n\r\nWorld Vision und die Peter Maffay Stiftung freuen sich über Ihr Interesse an der Show \"Tabaluga\" \r\nam 04.11.2016  um 15 Uhr in der Festhalle Frankfurt. \r\n\r\nSollten mehr Bestellungen als Freikarten eingehen, entscheidet der Zeitpunkt der Bestellung. Wir benachrichtigen Sie am Donnerstag, den 27.10 bezüglich Ihrer Freikarten.  \r\n\r\nWenn Sie die Arbeit der Peter Maffay Stiftung unterstützen möchten, können Sie hier gerne eine Spende tätigen:\r\nhttps://www.worldvision.de/formulare/tabaluga-spende\r\n\r\nMit freundlichem Gruß\r\n\r\nIhr Team von\r\nWorld Vision Deutschland e.V.\r\nAm Zollstock 2 - 4\r\n61381 Friedrichsdorf\r\nServicetelefon: 0800 - 0 10 20 22*  \r\nE-Mail: info@worldvision.de\r\nhttp://www.worldvision.de\r\n\r\n----------------------------------------------------------------------\r\n\r\nDiese E-Mail wurde automatisch generiert.\r\n\r\n*kostenfreies Servicetelefon"
+weight: 0
+template_email: autoreply_default
+template_thank_you: thankyou_default
+incident: ''
+subject: ' World Vision - Ihre Anmeldung zu "Tabaluga"'
+alternative_template_email: '0'
+alternative_reply: ''
+alternative_condition_var: ''
+alternative_condition_result: ''
+redirect_link: ''
+thank_you_text:
+  value: "<p>World Vision und die Peter Maffay Stiftung freuen sich über Ihr Interesse an der Show \"Tabaluga\"&nbsp;<br />\r\nam 04.11.2016 &nbsp;um 15 Uhr in der Festhalle Frankfurt.&nbsp;</p>\r\n\r\n<p>Sollten mehr Bestellungen als Freikarten eingehen, entscheidet der Zeitpunkt der Bestellung. Wir benachrichtigen Sie am Donnerstag, den 27.10 bezüglich Ihrer Freikarten. &nbsp;&nbsp;</p>\r\n\r\n<p>Wenn Sie zusätzlich die Arbeit der Peter Maffay Stiftung unterstützen möchten, <a href=\"/formulare/tabaluga-spende\">klicken Sie hier.</a></p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: html
+thank_you_headline: 'Vielen Dank für Ihre Anmeldung!'
+designation_id: ''
+motivation_code: '404595'
+additional_tracking: ''
+alias: /formulare/anmeldung-tabaluga
+headline: 'Freikarten für "Tabaluga"'
+description: "Für Patinnen und Paten von World Vision stellt die Peter Maffay Stiftung exklusive Eintrittskarten für die Show \"Tabaluga\" in Frankfurt zur Verfügung.<br/><br/>\r\nSeien Sie am 04.11.2016 um 15 Uhr in der Festhalle Frankfurt dabei!<br/><br/>\r\nHinweis: Zwei Eintrittskarten pro Person"
+disclaimer: ''
+submit_button: 'Freikarten bestellen'

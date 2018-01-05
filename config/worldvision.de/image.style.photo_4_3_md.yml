@@ -1,0 +1,14 @@
+uuid: be5a63a4-d931-4b19-be8b-e9c01b32fc6f
+langcode: de
+status: true
+dependencies: {  }
+name: photo_4_3_md
+label: 'Photo (4:3) MD'
+effects:
+  185bbd57-280c-40f0-8d95-5129537a06c7:
+    uuid: 185bbd57-280c-40f0-8d95-5129537a06c7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1400
+      height: 1050

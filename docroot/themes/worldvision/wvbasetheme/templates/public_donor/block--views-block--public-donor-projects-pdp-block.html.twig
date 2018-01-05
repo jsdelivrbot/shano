@@ -1,0 +1,22 @@
+{% set classes = [
+'block',
+'block-' ~ configuration.provider|clean_class,
+'block-' ~ plugin_id|clean_class,
+'container'
+] %}
+<div{{ attributes.addClass(classes) }}>
+    {% block content %}
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-align-center">{{ content.view_build['#view'].build_info.substitutions['{{ arguments.nid }}'] }}
+                    <span class="thin-header">{{ 'supports the following projects' |trans }}:</span></h2>
+            </div>
+        </div>
+
+        <div class="row pdp-list">
+            <div class="col-xs-12">
+                {{ content }}
+            </div>
+        </div>
+    {% endblock %}
+</div>

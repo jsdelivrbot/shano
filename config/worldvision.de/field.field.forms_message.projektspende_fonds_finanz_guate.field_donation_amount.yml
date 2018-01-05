@@ -1,0 +1,27 @@
+uuid: 9cb33189-ec54-426a-9952-b0d507099f78
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_amount
+    - forms_suite.form.projektspende_fonds_finanz_guate
+  module:
+    - fs_payment
+id: forms_message.projektspende_fonds_finanz_guate.field_donation_amount
+field_name: field_donation_amount
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_guate
+label: 'Donation amount'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: 'Ihr Spendenbetrag'
+    subline: ''
+    single_amount: 1
+    minimal_amount: '15'
+    default_amount: '25'
+field_type: wovi_donation_amount_field

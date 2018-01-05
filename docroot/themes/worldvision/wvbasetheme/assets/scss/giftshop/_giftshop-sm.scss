@@ -1,0 +1,48 @@
+@media screen and (min-width: $bp-sm) {
+  // =============================
+  // Greeting card form
+  // =============================
+  #giftshop-gift-card-form {
+    #edit-card-type {
+      > div:nth-child(1),
+      > div:nth-child(2),
+      > div:nth-child(3) {
+        width: 32%;
+        margin-left: 0;
+        margin-right: 0;
+        label {
+          text-align: left;
+          background-position: 0 30px;
+          background-size: 90%;
+          height: 210px;
+        }
+      }
+    }
+  }
+  // =============================
+  // Giftshop cart
+  // =============================
+  .giftshop-cart {
+    .actions-continue-top-cont {
+      float: left;
+    }
+    .actions-checkout-top-cont {
+      float: right;
+    }
+    .item-quantity-cont,
+    .item-price-cont{
+        padding-top: 0;
+    }
+    .item-quantity-cont{
+      text-align: right;
+    }
+    .item-price-cont{
+      margin-top: -5px;
+    }
+  }
+  .giftshop-cart-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+

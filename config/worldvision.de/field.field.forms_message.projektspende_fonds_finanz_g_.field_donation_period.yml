@@ -1,0 +1,27 @@
+uuid: b96dd6f4-9715-4863-ac89-cefd97d398f5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_donation_period
+    - forms_suite.form.projektspende_fonds_finanz_g_
+  module:
+    - fs_payment
+id: forms_message.projektspende_fonds_finanz_g_.field_donation_period
+field_name: field_donation_period
+entity_type: forms_message
+bundle: projektspende_fonds_finanz_g_
+label: 'Donation period'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs:
+    headline: ''
+    subline: ''
+    period_method:
+      single_period: single_period
+      interval_period: 0
+field_type: wovi_donation_period_field

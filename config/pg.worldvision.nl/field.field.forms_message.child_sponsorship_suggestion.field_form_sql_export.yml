@@ -1,0 +1,23 @@
+uuid: 5ccac45f-5ec7-4195-9225-34463673cd1b
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_form_sql_export
+    - forms_suite.form.child_sponsorship_suggestion
+id: forms_message.child_sponsorship_suggestion.field_form_sql_export
+field_name: field_form_sql_export
+entity_type: forms_message
+bundle: child_sponsorship_suggestion
+label: 'Form sql export'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: An
+  off_label: Aus
+field_type: boolean

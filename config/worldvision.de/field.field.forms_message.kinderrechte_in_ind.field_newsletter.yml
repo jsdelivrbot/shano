@@ -1,0 +1,22 @@
+uuid: 2b1d58ef-d968-464b-9724-ad6e67f26fd5
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter
+    - forms_suite.form.kinderrechte_in_ind
+  module:
+    - forms_suite
+id: forms_message.kinderrechte_in_ind.field_newsletter
+field_name: field_newsletter
+entity_type: forms_message
+bundle: kinderrechte_in_ind
+label: field_newsletter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_newsletter_field

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: youtube_video
+label: 'YouTube Video'
+category: 'Standard block'

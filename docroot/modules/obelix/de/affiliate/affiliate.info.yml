@@ -1,0 +1,5 @@
+name: Affiliate
+type: module
+description: Affiliate manager and service.
+core: 8.x
+package: Obelix (DE)

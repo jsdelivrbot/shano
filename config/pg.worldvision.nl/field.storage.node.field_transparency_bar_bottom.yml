@@ -1,0 +1,22 @@
+uuid: 7fcc395c-da19-4802-86d1-10f0a1a3ca52
+langcode: nl
+status: true
+dependencies:
+  module:
+    - editorial_content
+    - node
+_core:
+  default_config_hash: H4lF3RZ5lg9Y7IIpvPQr4j5ex8rDPn1j-Xu9LpJDY_4
+id: node.field_transparency_bar_bottom
+field_name: field_transparency_bar_bottom
+entity_type: node
+type: entity_reference
+settings:
+  target_type: editorial_content
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

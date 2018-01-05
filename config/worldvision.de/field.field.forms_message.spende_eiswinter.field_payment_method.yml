@@ -1,0 +1,22 @@
+uuid: 8ec88401-118f-4fe3-992e-b9f1c048da0a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_payment_method
+    - forms_suite.form.spende_eiswinter
+  module:
+    - forms_suite
+id: forms_message.spende_eiswinter.field_payment_method
+field_name: field_payment_method
+entity_type: forms_message
+bundle: spende_eiswinter
+label: field_payment_method
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  forms_suite_configs: null
+field_type: wovi_payment_method_field

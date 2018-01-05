@@ -1,0 +1,139 @@
+{% extends "@beaufix/system/page.html.twig" %}
+
+{% block footer %}
+  <footer>
+    <div class="footer-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 text-center contact-block">
+            <p class="h6">Kontakt</p>
+            <p class="highlighted"><strong>0800 - 0 10 20 22</strong></p>
+            <p>Mo. - Fr. von 8:00 - 20:00 Uhr - <strong>kostenfrei</strong></p>
+            <p>E-Mail: <a class="link-underlined" href="mailto:info@worldvision.de">info&commat;worldvision.de</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-center contact-block social-channels">
+            <p class="h6">Folgen Sie uns</p>
+            <ul class="list-unstyled list-inline vert-offset-top-1">
+              <li><a target="_blank" class="btn-icon-round facebook"
+                     href="https://www.facebook.com/world.vision.deutschland"><i class="icon-facebook"></i></a></li>
+              <li><a target="_blank" class="btn-icon-round twitter" href="https://twitter.com/WorldVisionDE"><i
+                    class="icon-twitter"></i></a></li>
+              <li><a target="_blank" class="btn-icon-round google-plus"
+                     href="https://plus.google.com/101390137686937469084/posts"><i class="icon-google-plus"></i></a>
+              </li>
+              <li><a target="_blank" class="btn-icon-round xing"
+                     href="https://www.xing.com/communities/groups/world-vision-1061801"><i class="icon-xing"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-center contact-block newsletter form-rounded">
+            <form method="POST" action="/formulare/newsletter">
+              <p class="h6">Newsletter</p>
+              <p class="text-center">Den World Vision Newsletter abonnieren</p>
+              <div class="col-xs-9 col-no-padding">
+                <div class="form-group"><input id="email" name="email" placeholder="E-Mail Adresse" class="form-control"
+                                               type="text">
+                </div>
+              </div>
+              <div class="col-xs-3">
+                <button class="btn-icon-round"><i class="icon-arrow-right"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-prizes">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p class="h5">Transparenz im Spendenwesen - Geprüft und empfohlen:</p>
+            <ul class="list-unstyled list-inline transparent-prizes">
+
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/transparenzpreis.png"
+                       alt="Transparenzpreis"></li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/aktion-deutschland-hilft.png"
+                       alt="Aktion Deutschland hilft - Das Bündnis der Hilfsorganisation">
+              </li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/dzi-spendensiegel.png"
+                       alt="DZI - Spendensiegel"></li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/deutscher-spendenrat.png"
+                       alt="Deutscher Spendenrat e.V."></li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/spiegel-online-transparenzpreis.png"
+                       alt="Studie Spiegel Online - Platz 1 Transparenzpreis"></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 vert-offset-top-2">
+            <p class="h5">World Vision wird gefördert von:</p>
+            <ul class="list-unstyled list-inline public-donor-prizes">
+
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/auswaertiges-amt.png"
+                       alt="Auswärtiges Amt"></li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/bundesministerium.png"
+                       alt="Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung">
+              </li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/wfp.png"
+                       alt="WFP"></li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/european-commission.png"
+                       alt="European Commission"></li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/unhcr.png"
+                       alt="The UN Refugee Agency">
+              </li>
+              <li><img class="img-responsive"
+                       src="{{ base_path ~ directory }}/assets/images/unitin-against-poverty.png"
+                       alt="Uniting against poverty"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-info sec-inverted-color">
+      <div class="container">
+        <div class="row">
+          {% if page.footer %}
+            <div class="col-xs-12 col-sm-4">
+              {{ page.footer }}
+            </div>
+          {% endif %}
+          <div class="col-xs-12 col-sm-4 vert-offset-xs-top-1">
+            <p class="text-uppercase"><strong>ALLGEMEINES SPENDENKONTO:</strong></p>
+            <ul class="list-unstyled">
+              <li class="text-uppercase">Postbank Frankfurt</li>
+              <li>IBAN DE93 5001 0060 0000 0666 01</li>
+              <li>BIC PBNKDEFF</li>
+            </ul>
+            <p class="text-uppercase vert-offset-top-1"><strong>GLÄUBIGER-IDENTIFIKATIONSNUMMER:</strong></p>
+            <ul class="list-unstyled">
+              <li>DE19ZZZ00000150171</li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 vert-offset-xs-top-1">
+            <div class="row">
+              <div class="col-xs-12 col-md-7 col-md-push-5 col-lg-8 col-lg-push-4">
+                <p class="text-uppercase"><strong>Mittelverwendung:</strong></p>
+                <ul class="list-unstyled">
+                  <li>85,4% PROJEKTAUSGABEN</li>
+                </ul>
+              </div>
+              <div class="col-xs-5 col-sm-6 col-md-5 col-md-pull-7 col-lg-4 col-lg-pull-8">
+                <img class="img-responsive"
+                     src="{{ base_path ~ directory }}/assets/images/mittelverwendung-statistik.png"
+                     alt="Mittelverwendung Statistik"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}
