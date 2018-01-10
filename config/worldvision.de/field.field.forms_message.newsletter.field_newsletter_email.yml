@@ -1,0 +1,19 @@
+uuid: 48f212e4-eaee-4c61-adc1-e342c4433e65
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.forms_message.field_newsletter_email
+    - forms_suite.form.newsletter
+id: forms_message.newsletter.field_newsletter_email
+field_name: field_newsletter_email
+entity_type: forms_message
+bundle: newsletter
+label: Email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

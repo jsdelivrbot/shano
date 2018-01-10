@@ -3,11 +3,10 @@ langcode: de
 status: true
 dependencies:
   config:
-    - field.field.forms_message.newsletter.field_newsletter
-    - field.field.forms_message.newsletter.field_user
+    - field.field.forms_message.newsletter.field_newsletter_email
     - forms_suite.form.newsletter
   module:
-    - forms_suite
+    - entity_test
 third_party_settings:
   entity_test:
     foo: bar
@@ -18,18 +17,11 @@ targetEntityType: forms_message
 bundle: newsletter
 mode: default
 content:
-  field_newsletter:
-    weight: 1
-    label: above
+  field_newsletter_email:
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: wovi_formatter
-    region: content
-  field_user:
-    weight: 0
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: wovi_formatter
+    type: email_mailto
     region: content
 hidden: {  }

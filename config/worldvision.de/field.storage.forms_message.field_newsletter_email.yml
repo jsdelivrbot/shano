@@ -1,0 +1,18 @@
+uuid: a08e617e-ade4-4923-b7d1-98ee3776d240
+langcode: de
+status: true
+dependencies:
+  module:
+    - forms_suite
+id: forms_message.field_newsletter_email
+field_name: field_newsletter_email
+entity_type: forms_message
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

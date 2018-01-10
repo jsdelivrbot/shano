@@ -9,7 +9,7 @@ reply: ''
 weight: 0
 template_email: '0'
 template_thank_you: thankyou_default
-incident: null
+incident: ''
 subject: ''
 alternative_template_email: autoreply_default
 alternative_reply: ''
@@ -24,7 +24,7 @@ designation_id: ''
 motivation_code: ''
 additional_tracking: ''
 alias: /formulare/newsletter
-headline: ''
-description: ''
+headline: NEWSLETTER
+description: 'Den World Vision Newsletter abonnieren'
 disclaimer: ''
-submit_button: 'Newsletter abonnieren'
+submit_button: ''
