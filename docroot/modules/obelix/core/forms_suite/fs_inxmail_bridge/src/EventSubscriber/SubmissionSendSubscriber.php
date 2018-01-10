@@ -49,7 +49,7 @@ class SubmissionSendSubscriber implements EventSubscriberInterface
       $values[$field_name] = $field->getValue()[0];
     }
 
-    // send newsletter mail if required
+    // Send newsletter mail if required.
     if ($event->getForm()->id() == 'newsletter' && !empty($values['field_newsletter_email']['value'])) {
       $this->inxmail->send([
         'email' => $values['field_newsletter_email']['value'],
