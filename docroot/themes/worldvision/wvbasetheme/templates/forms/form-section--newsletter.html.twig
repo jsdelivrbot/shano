@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Default theme implementation for a 'form' element.
+ *
+ * Available variables
+ * - element: A list of HTML attributes for the wrapper element.
+ *
+ * @see template_preprocess_form()
+ *
+ */
+<form{{ attributes.addClass('newsletter-form') }}>
+    {{ element.form_build_id }}
+    {{ element.form_token }}
+    {{ element.form_id }}
+    <p class="h6"> {{ element.appearance.headline }}</p>
+    <p class="text-center">{{ element.appearance.description }}</p>
+    <div class="col-xs-9 col-no-padding">
+        <div class="form-group">{{ element.field_newsletter_email.widget.0.value|without('#title') }}</div>
+    </div>
+    <div class="col-xs-3">
+        <button class="btn-icon-round" id="{{ element.actions.submit['#id'] }}"><i class="icon-arrow-right"></i></button>
+    </div>
+</form>
