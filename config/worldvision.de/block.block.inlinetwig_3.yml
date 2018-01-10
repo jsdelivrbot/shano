@@ -1,6 +1,6 @@
 uuid: 72fad9da-760c-4b3d-8a8d-ed6451d06e89
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - wv_site
@@ -18,6 +18,6 @@ settings:
   provider: wv_site
   label_display: '0'
   body:
-    value: "            <form method=\"POST\" action=\"/formulare/newsletter\">\r\n              <p class=\"h6\">Newsletter</p>\r\n              <p class=\"text-center\">Den World Vision Newsletter abonnieren</p>\r\n              <div class=\"col-xs-9 col-no-padding\">\r\n                <div class=\"form-group\"><input id=\"email\" name=\"email\" placeholder=\"E-Mail Adresse\" class=\"form-control\"\r\n                                               type=\"text\">\r\n                </div>\r\n              </div>\r\n              <div class=\"col-xs-3\">\r\n                <button class=\"btn-icon-round\"><i class=\"icon-arrow-right\"></i></button>\r\n              </div>\r\n            </form>"
+    value: "<form method=\"POST\" action=\"/formulare/newsletter\">\r\n              <p class=\"h6\">Newsletter</p>\r\n              <p class=\"text-center\">Den World Vision Newsletter abonnieren</p>\r\n              <div class=\"col-xs-9 col-no-padding\">\r\n                <div class=\"form-group\"><input id=\"email\" name=\"email\" placeholder=\"E-Mail Adresse\" class=\"form-control\" type=\"text\">\r\n                </div>\r\n              </div>\r\n              <div class=\"col-xs-3\">\r\n                <button class=\"btn-icon-round\"><i class=\"icon-arrow-right\"></i></button>\r\n              </div>\r\n            </form>"
     format: html
 visibility: {  }
