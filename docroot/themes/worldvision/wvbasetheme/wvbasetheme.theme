@@ -564,3 +564,12 @@ function wvbasetheme_preprocess_pager(&$variables) {
   preg_match('~page\=(\d+)~', $variables['items']['last']['href'], $matches);
   $variables['last'] = $matches[1] + 1;
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function wvbasetheme_theme_suggestions_form_alter(array &$suggestions, array $vars) {
+  if ($vars['element']['#form_id'] === 'forms_message_newsletter_form') {
+    $suggestions[] = 'form_section__newsletter';
+  }
+}
