@@ -242,6 +242,9 @@ class NapkynTrackingDataLayer extends DataLayer {
     /** @var Node $node */
     if ($node = \Drupal::routeMatch()->getParameter('node')) {
 
+      if (!is_object($node)) {
+        $node = Node::load($node);
+      }
       if ($node->hasField('field_teaser')) {
 
         /** @var EntityReferenceFieldItemList $teaser */

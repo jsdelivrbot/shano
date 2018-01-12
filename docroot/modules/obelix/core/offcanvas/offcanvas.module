@@ -157,6 +157,9 @@ function _offcanvas_is_valid_path() {
 function _offcanvas_is_valid_entity() {
   foreach (_offcanvas_get_entities() as $entity_type => $bundles) {
     if ($entity = \Drupal::request()->attributes->get($entity_type, NULL)) {
+      if (!is_object($entity)) {
+        return FALSE;
+      }
       if (_offcanvas_validate_entity($entity, $bundles)) {
         return TRUE;
       }

@@ -9,6 +9,7 @@ namespace Drupal\google_tag_manager;
 
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
 use Symfony\Component\EventDispatcher\Event;
 
 /**
@@ -144,6 +145,9 @@ class DataLayer implements DataLayerInterface {
         switch ($option) {
           case 'content_type':
             if ($node = \Drupal::routeMatch()->getParameter('node')) {
+              if (!is_object($node)) {
+                $node = Node::load($node);
+              }
               if ($option_value == $node->bundle()) {
                 $result = TRUE;
               }
