@@ -98,6 +98,7 @@ module:
   replicate: 0
   responsive_image: 0
   runningeventdonation: 0
+  scheduler: 0
   search: 0
   serialization: 0
   simple_sitemap: 0
