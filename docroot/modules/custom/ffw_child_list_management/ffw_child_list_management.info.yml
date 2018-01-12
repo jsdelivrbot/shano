@@ -1,0 +1,6 @@
+name: FFW - Child list management
+type: module
+description: Module name is enough self explanatory.
+core: 8.x
+package: FFW
+configure: ffw_child_list_management.content

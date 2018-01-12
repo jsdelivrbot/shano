@@ -1,0 +1,12 @@
+system.admin_config.ffw:
+  title: 'FFW Extras'
+  description: 'Manage how this module works.'
+  parent: system.admin_config
+  route_name: ffw_child_list_management.main
+  weight: 100
+ffw_child_list_management.admin:
+  title: 'FFW Child list management'
+  description: 'Manage how this module works.'
+  parent: system.admin_config.ffw
+  route_name: ffw_child_list_management.export_options_form
+  weight: 100

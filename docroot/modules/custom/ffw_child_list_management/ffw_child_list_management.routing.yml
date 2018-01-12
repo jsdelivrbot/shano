@@ -1,0 +1,17 @@
+ffw_child_list_management.main:
+  path: '/admin/ffw'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Child list management'
+  requirements:
+    _permission: 'access content'
+
+ffw_child_list_management.export_options_form:
+  path: '/form/export_options'
+  defaults:
+    _form: '\Drupal\ffw_child_list_management\Form\ExportOptionsForm'
+    _title: 'Export Options Form'
+  requirements:
+    _access: 'TRUE'
+  options:
+    _admin_route: TRUE
