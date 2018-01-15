@@ -66,19 +66,23 @@ class GiftCardForm extends FormBase {
     $form = [];
     $form['#theme'] = 'giftshop_gift_card_form';
     $form['#attached']['library'][] = 'beaufix/giftshop';
-
+    // Check whether we are in the correct section of the website.
     if ($node_id = $this->giftshopCartTempItem->getNodeId()) {
+      // Get terms data.
+      $gift_cards_data = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree("gift_cards");
+      // Empty array to store the data from the foreach.
+      $options = [];
+      // Foreach the terms data to get human readable names.
+      foreach ($gift_cards_data as $gift_cards_data_item) {
+        $options[] = $gift_cards_data_item->name;
+      }
 
       $form['card_type'] = [
         '#type' => 'radios',
         '#title' => $this->t('Select theme'),
-        '#options' => [
-          $this->t('Neutral'),
-          $this->t('All the best'),
-          $this->t('Birthday'),
-        ],
+        '#options' => $options,
         '#default_value' => 0
-      ];
+        ];
 
       // @todo set as taxonomy
       $form['card_from_greetings'] = [

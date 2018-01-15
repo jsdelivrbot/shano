@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a form element label.
+ *
+ * Available variables:
+ * - element: an input element.
+ * - title: The label's text.
+ * - title_display: Elements title_display setting.
+ * - description: element description.
+ * - required: An indicator for whether the associated form element is required.
+ * - is_checkbox: Whether the label is outputted in checkbox context.
+ * - is_radio: Whether the label is outputted in radio button context.
+ * - attributes: A list of HTML attributes for the label.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_form_element_label()
+ */
+#}
+
+{%-
+set classes = [
+'control-label',
+element['#title_display'] == 'after' ? 'option',
+element['#title_display'] == 'invisible' and not (element['#is_checkbox'] or element['#is_radio']) ? 'sr-only',
+element['#required'] ? 'js-form-required',
+element['#required'] ? 'form-required',
+]
+-%}
+{#{{ devel_breakpoint() }}#}
+{% if element['#title'] is not empty and element['#title_display'] == 'invisible' and (element['#is_checkbox'] or element['#is_radio']) -%}
+    {#
+    Clear but preserve label text as attribute (e.g. for screen readers) for
+    checkboxes/radio buttons when it actually should be invisible.
+    #}
+    {%- set attributes = attributes.setAttribute('title', title) -%}
+    {%- set title = null -%}
+{%- endif -%}
+{#
+Labels for single checkboxes/radios contain the element itself and thus have
+always to be rendered regardless of whether they have a title or not.
+#}
+{%- if element['#title'] is not empty or element['#is_checkbox'] or element['#is_radio'] -%}
+    <label{{ attributes.addClass(classes) }} style="background-image:url({{ element.card_image }});">{{ element }}{{ element['#title'] }}
+        {%- if element['#description'] -%}
+            <p class="help-block">{{ element['#description'] }}</p>
+        {%- endif -%}
+    </label>
+{%- endif -%}

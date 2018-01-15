@@ -1,4 +1,6 @@
 <?php
+use Drupal\file\Entity\File;
+use Drupal\taxonomy\Entity\Term;
 use Symfony\Component\HttpFoundation\Request;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Url;
@@ -571,5 +573,42 @@ function wvbasetheme_preprocess_pager(&$variables) {
 function wvbasetheme_theme_suggestions_form_alter(array &$suggestions, array $vars) {
   if ($vars['element']['#form_id'] === 'forms_message_newsletter_form') {
     $suggestions[] = 'form_section__newsletter';
+  }
+}
+
+/**
+ * Implements hook_preprocess_field__label_giftcard().
+ */
+
+function wvbasetheme_preprocess_field__label_giftcard(&$variables) {
+  // Find the element for preprocessing using strpos.
+  if (strpos($variables['element']['#id'], 'edit-card-type-') !== FALSE){
+   // Get term data.
+   $gift_cards_data = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree("gift_cards");
+   // Fragmenting the element name for later use(getting the id of the term).
+   $id_name_fragments = explode('-', $variables['element']['#id']);
+   // Get the element id from $id_name_fragments.
+   $id_last_element = end($id_name_fragments);
+   // Substitute the term id with corresponding id of the element to match them.
+   $term_id = $gift_cards_data[$id_last_element]->tid;
+   // Load the term by the id obtained from $id_last_element.
+   $term = Term::load($term_id);
+   // Get uri of the term image.
+   $image_field = $term->get('field_image')->first()->get('target_id')->getValue();
+   // Load the file and get his url.
+   $image_url = File::load($image_field)->url();
+   // Add url to variable 'card_image' for later use in the template file.
+   $variables['element']['card_image'] = $image_url;
+ }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function wvbasetheme_theme_suggestions_form_element_label_alter(array &$suggestions, array $vars) {
+  // Find the element for preprocessing using strpos.
+  if (strpos($vars['element']['#id'], 'edit-card-type-') !== FALSE){
+    // Assign new template.
+    $suggestions[] = 'field__label_giftcard';
   }
 }
