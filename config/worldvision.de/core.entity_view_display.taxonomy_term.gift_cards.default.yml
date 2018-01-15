@@ -1,0 +1,36 @@
+uuid: 82a9477e-c01e-4ad1-93c7-e7688000e210
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.gift_cards.field_image
+    - taxonomy.vocabulary.gift_cards
+  module:
+    - image
+    - text
+third_party_settings:
+  entity_test:
+    foo: bar
+id: taxonomy_term.gift_cards.default
+targetEntityType: taxonomy_term
+bundle: gift_cards
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true

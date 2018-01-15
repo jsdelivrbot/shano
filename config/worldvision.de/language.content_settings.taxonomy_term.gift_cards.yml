@@ -1,0 +1,11 @@
+uuid: 4a28aa36-7a95-48c0-8fb8-498062e2df96
+langcode: de
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.gift_cards
+id: taxonomy_term.gift_cards
+target_entity_type_id: taxonomy_term
+target_bundle: gift_cards
+default_langcode: site_default
+language_alterable: false

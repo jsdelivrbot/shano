@@ -1,0 +1,9 @@
+uuid: 27f02ce0-7698-4677-9d9e-0ccd4f57861e
+langcode: de
+status: true
+dependencies: {  }
+name: 'Gift cards'
+vid: gift_cards
+description: ''
+hierarchy: 0
+weight: 0
