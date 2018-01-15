@@ -16,6 +16,13 @@ child_sponsorship.child_sponsorship_controller_ChildSponsorshipAction:
   requirements:
     _permission: 'access content'
 
+child_sponsorship.child_sponsorship_controller_SetChildById:
+  path: '/kinderpatenschaft/kinder/{id}'
+  defaults:
+    _controller: '\Drupal\child_sponsorship\Controller\ChildSponsorshipController::SetChildById'
+  requirements:
+    _permission: 'access content'
+
 child_sponsorship.child_sponsorship_info_controller_ChildSponsorshipInfoAction:
   path: '/kinderpatenschaft-informieren'
   defaults:

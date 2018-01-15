@@ -194,6 +194,22 @@ class ChildSponsorshipController extends ControllerBase
     return $build;
   }
 
+  /**
+   * Callback for child direct link.
+   *
+   * @param $id
+   *
+   * @return \Symfony\Component\HttpFoundation\RedirectResponse
+   */
+  public function SetChildById($id) {
+    // Get all data for current child.
+    $child_data = Child::load($id);
+    // Check that we have object with needed data.
+    if (is_object($child_data)) {
+      // Set current child ID in session for default displaying.
+      $child_controller = new ChildController();
+      $child_controller->setChildForUser($child_data, TRUE);
+    }
+    return $this->redirect('child_sponsorship.child_sponsorship_controller_ChildSponsorshipAction');
+  }
 }
-
-
