@@ -1,3 +1,3 @@
 videojs-youtube:
   js:
-    https://cdn.rawgit.com/videojs/videojs-youtube/master/src/Youtube.js: {}
+    https://cdn.jsdelivr.net/gh/videojs/videojs-youtube/src/Youtube.js: {}
